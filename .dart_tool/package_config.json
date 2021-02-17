@@ -310,10 +310,11 @@
     {
       "name": "swagger",
       "rootUri": "../",
-      "packageUri": "lib/"
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-02-17T20:57:17.293728Z",
+  "generated": "2021-02-17T21:02:34.140939Z",
   "generator": "pub",
   "generatorVersion": "2.10.5"
 }
