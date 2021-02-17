@@ -1,0 +1,77 @@
+# yes4track_mobile_api_client.model.BsonNull
+
+## Load the model package
+```dart
+import 'package:yes4track_mobile_api_client/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**asBoolean** | **bool** |  | [optional] 
+**asBsonArray** | [**BuiltList<BsonValue>**](BsonValue.md) |  | [optional] 
+**asBsonBinaryData** | [**BsonBinaryData**](BsonBinaryData.md) |  | [optional] 
+**asBsonDateTime** | [**BsonDateTime**](BsonDateTime.md) |  | [optional] 
+**asBsonDocument** | [**BuiltList<BsonElement>**](BsonElement.md) |  | [optional] 
+**asBsonJavaScript** | [**BsonJavaScript**](BsonJavaScript.md) |  | [optional] 
+**asBsonJavaScriptWithScope** | [**BsonJavaScriptWithScope**](BsonJavaScriptWithScope.md) |  | [optional] 
+**asBsonMaxKey** | [**BsonMaxKey**](BsonMaxKey.md) |  | [optional] 
+**asBsonMinKey** | [**BsonMinKey**](BsonMinKey.md) |  | [optional] 
+**asBsonNull** | [**BsonNull**](BsonNull.md) |  | [optional] 
+**asBsonRegularExpression** | [**BsonRegularExpression**](BsonRegularExpression.md) |  | [optional] 
+**asBsonSymbol** | [**BsonSymbol**](BsonSymbol.md) |  | [optional] 
+**asBsonTimestamp** | [**BsonTimestamp**](BsonTimestamp.md) |  | [optional] 
+**asBsonUndefined** | [**BsonUndefined**](BsonUndefined.md) |  | [optional] 
+**asBsonValue** | [**BsonValue**](BsonValue.md) |  | [optional] 
+**asByteArray** | **String** |  | [optional] 
+**asDateTime** | [**DateTime**](DateTime.md) |  | [optional] 
+**asDecimal** | **double** |  | [optional] 
+**asDecimal128** | [**JsonObject**](.md) |  | [optional] 
+**asDouble** | **double** |  | [optional] 
+**asGuid** | **String** |  | [optional] 
+**asInt32** | **int** |  | [optional] 
+**asLocalTime** | [**DateTime**](DateTime.md) |  | [optional] 
+**asInt64** | **int** |  | [optional] 
+**asNullableBoolean** | **bool** |  | [optional] 
+**asNullableDateTime** | [**DateTime**](DateTime.md) |  | [optional] 
+**asNullableDecimal** | **double** |  | [optional] 
+**asNullableDecimal128** | [**JsonObject**](.md) |  | [optional] 
+**asNullableDouble** | **double** |  | [optional] 
+**asNullableGuid** | **String** |  | [optional] 
+**asNullableInt32** | **int** |  | [optional] 
+**asNullableInt64** | **int** |  | [optional] 
+**asNullableObjectId** | [**ObjectId**](ObjectId.md) |  | [optional] 
+**asObjectId** | [**ObjectId**](ObjectId.md) |  | [optional] 
+**asRegex** | [**Regex**](Regex.md) |  | [optional] 
+**asString** | **String** |  | [optional] 
+**asUniversalTime** | [**DateTime**](DateTime.md) |  | [optional] 
+**isBoolean** | **bool** |  | [optional] 
+**isBsonArray** | **bool** |  | [optional] 
+**isBsonBinaryData** | **bool** |  | [optional] 
+**isBsonDateTime** | **bool** |  | [optional] 
+**isBsonDocument** | **bool** |  | [optional] 
+**isBsonJavaScript** | **bool** |  | [optional] 
+**isBsonJavaScriptWithScope** | **bool** |  | [optional] 
+**isBsonMaxKey** | **bool** |  | [optional] 
+**isBsonMinKey** | **bool** |  | [optional] 
+**isBsonNull** | **bool** |  | [optional] 
+**isBsonRegularExpression** | **bool** |  | [optional] 
+**isBsonSymbol** | **bool** |  | [optional] 
+**isBsonTimestamp** | **bool** |  | [optional] 
+**isBsonUndefined** | **bool** |  | [optional] 
+**isDateTime** | **bool** |  | [optional] 
+**isDecimal128** | **bool** |  | [optional] 
+**isDouble** | **bool** |  | [optional] 
+**isGuid** | **bool** |  | [optional] 
+**isInt32** | **bool** |  | [optional] 
+**isInt64** | **bool** |  | [optional] 
+**isNumeric** | **bool** |  | [optional] 
+**isObjectId** | **bool** |  | [optional] 
+**isString** | **bool** |  | [optional] 
+**isValidDateTime** | **bool** |  | [optional] 
+**rawValue** | [**JsonObject**](.md) |  | [optional] 
+**bsonType** | [**BsonType**](BsonType.md) |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
