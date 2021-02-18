@@ -105,6 +105,12 @@ class _$GetAllExperienceResponseSerializer
         ..add(serializers.serialize(object.codeRequired,
             specifiedType: const FullType(bool)));
     }
+    if (object.isActive != null) {
+      result
+        ..add('isActive')
+        ..add(serializers.serialize(object.isActive,
+            specifiedType: const FullType(bool)));
+    }
     return result;
   }
 
@@ -176,6 +182,10 @@ class _$GetAllExperienceResponseSerializer
           result.codeRequired = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'isActive':
+          result.isActive = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
       }
     }
 
@@ -210,6 +220,8 @@ class _$GetAllExperienceResponse extends GetAllExperienceResponse {
   final BuiltList<VideoUrl> videosUrl;
   @override
   final bool codeRequired;
+  @override
+  final bool isActive;
 
   factory _$GetAllExperienceResponse(
           [void Function(GetAllExperienceResponseBuilder) updates]) =>
@@ -228,7 +240,8 @@ class _$GetAllExperienceResponse extends GetAllExperienceResponse {
       this.id,
       this.imagesUrl,
       this.videosUrl,
-      this.codeRequired})
+      this.codeRequired,
+      this.isActive})
       : super._();
 
   @override
@@ -256,7 +269,8 @@ class _$GetAllExperienceResponse extends GetAllExperienceResponse {
         id == other.id &&
         imagesUrl == other.imagesUrl &&
         videosUrl == other.videosUrl &&
-        codeRequired == other.codeRequired;
+        codeRequired == other.codeRequired &&
+        isActive == other.isActive;
   }
 
   @override
@@ -272,19 +286,23 @@ class _$GetAllExperienceResponse extends GetAllExperienceResponse {
                                     $jc(
                                         $jc(
                                             $jc(
-                                                $jc($jc(0, createdAt.hashCode),
-                                                    updatedAt.hashCode),
-                                                userCreated.hashCode),
-                                            userUpdated.hashCode),
-                                        companyId.hashCode),
-                                    name.hashCode),
-                                description.hashCode),
-                            effectiveStartDate.hashCode),
-                        effectiveEndDate.hashCode),
-                    id.hashCode),
-                imagesUrl.hashCode),
-            videosUrl.hashCode),
-        codeRequired.hashCode));
+                                                $jc(
+                                                    $jc(
+                                                        $jc(0,
+                                                            createdAt.hashCode),
+                                                        updatedAt.hashCode),
+                                                    userCreated.hashCode),
+                                                userUpdated.hashCode),
+                                            companyId.hashCode),
+                                        name.hashCode),
+                                    description.hashCode),
+                                effectiveStartDate.hashCode),
+                            effectiveEndDate.hashCode),
+                        id.hashCode),
+                    imagesUrl.hashCode),
+                videosUrl.hashCode),
+            codeRequired.hashCode),
+        isActive.hashCode));
   }
 
   @override
@@ -302,7 +320,8 @@ class _$GetAllExperienceResponse extends GetAllExperienceResponse {
           ..add('id', id)
           ..add('imagesUrl', imagesUrl)
           ..add('videosUrl', videosUrl)
-          ..add('codeRequired', codeRequired))
+          ..add('codeRequired', codeRequired)
+          ..add('isActive', isActive))
         .toString();
   }
 }
@@ -370,6 +389,10 @@ class GetAllExperienceResponseBuilder
   bool get codeRequired => _$this._codeRequired;
   set codeRequired(bool codeRequired) => _$this._codeRequired = codeRequired;
 
+  bool _isActive;
+  bool get isActive => _$this._isActive;
+  set isActive(bool isActive) => _$this._isActive = isActive;
+
   GetAllExperienceResponseBuilder() {
     GetAllExperienceResponse._initializeBuilder(this);
   }
@@ -389,6 +412,7 @@ class GetAllExperienceResponseBuilder
       _imagesUrl = _$v.imagesUrl?.toBuilder();
       _videosUrl = _$v.videosUrl?.toBuilder();
       _codeRequired = _$v.codeRequired;
+      _isActive = _$v.isActive;
       _$v = null;
     }
     return this;
@@ -425,7 +449,8 @@ class GetAllExperienceResponseBuilder
               id: id,
               imagesUrl: _imagesUrl?.build(),
               videosUrl: _videosUrl?.build(),
-              codeRequired: codeRequired);
+              codeRequired: codeRequired,
+              isActive: isActive);
     } catch (_) {
       String _$failedField;
       try {

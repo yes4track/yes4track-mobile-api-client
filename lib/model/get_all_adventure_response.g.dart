@@ -117,6 +117,19 @@ class _$GetAllAdventureResponseSerializer
         ..add(serializers.serialize(object.codeRequired,
             specifiedType: const FullType(bool)));
     }
+    if (object.isActive != null) {
+      result
+        ..add('isActive')
+        ..add(serializers.serialize(object.isActive,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.experiences != null) {
+      result
+        ..add('experiences')
+        ..add(serializers.serialize(object.experiences,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(String)])));
+    }
     return result;
   }
 
@@ -196,6 +209,16 @@ class _$GetAllAdventureResponseSerializer
           result.codeRequired = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'isActive':
+          result.isActive = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'experiences':
+          result.experiences.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(BuiltList, const [const FullType(String)]))
+              as BuiltList<Object>);
+          break;
       }
     }
 
@@ -234,6 +257,10 @@ class _$GetAllAdventureResponse extends GetAllAdventureResponse {
   final BuiltList<VideoUrl> videosUrl;
   @override
   final bool codeRequired;
+  @override
+  final bool isActive;
+  @override
+  final BuiltList<String> experiences;
 
   factory _$GetAllAdventureResponse(
           [void Function(GetAllAdventureResponseBuilder) updates]) =>
@@ -254,7 +281,9 @@ class _$GetAllAdventureResponse extends GetAllAdventureResponse {
       this.likes,
       this.imagesUrl,
       this.videosUrl,
-      this.codeRequired})
+      this.codeRequired,
+      this.isActive,
+      this.experiences})
       : super._();
 
   @override
@@ -284,7 +313,9 @@ class _$GetAllAdventureResponse extends GetAllAdventureResponse {
         likes == other.likes &&
         imagesUrl == other.imagesUrl &&
         videosUrl == other.videosUrl &&
-        codeRequired == other.codeRequired;
+        codeRequired == other.codeRequired &&
+        isActive == other.isActive &&
+        experiences == other.experiences;
   }
 
   @override
@@ -304,23 +335,30 @@ class _$GetAllAdventureResponse extends GetAllAdventureResponse {
                                                     $jc(
                                                         $jc(
                                                             $jc(
-                                                                0,
-                                                                createdAt
+                                                                $jc(
+                                                                    $jc(
+                                                                        0,
+                                                                        createdAt
+                                                                            .hashCode),
+                                                                    updatedAt
+                                                                        .hashCode),
+                                                                userCreated
                                                                     .hashCode),
-                                                            updatedAt.hashCode),
-                                                        userCreated.hashCode),
-                                                    userUpdated.hashCode),
-                                                companyId.hashCode),
-                                            name.hashCode),
-                                        description.hashCode),
-                                    level.hashCode),
-                                effectiveStartDate.hashCode),
-                            effectiveEndDate.hashCode),
-                        id.hashCode),
-                    likes.hashCode),
-                imagesUrl.hashCode),
-            videosUrl.hashCode),
-        codeRequired.hashCode));
+                                                            userUpdated
+                                                                .hashCode),
+                                                        companyId.hashCode),
+                                                    name.hashCode),
+                                                description.hashCode),
+                                            level.hashCode),
+                                        effectiveStartDate.hashCode),
+                                    effectiveEndDate.hashCode),
+                                id.hashCode),
+                            likes.hashCode),
+                        imagesUrl.hashCode),
+                    videosUrl.hashCode),
+                codeRequired.hashCode),
+            isActive.hashCode),
+        experiences.hashCode));
   }
 
   @override
@@ -340,7 +378,9 @@ class _$GetAllAdventureResponse extends GetAllAdventureResponse {
           ..add('likes', likes)
           ..add('imagesUrl', imagesUrl)
           ..add('videosUrl', videosUrl)
-          ..add('codeRequired', codeRequired))
+          ..add('codeRequired', codeRequired)
+          ..add('isActive', isActive)
+          ..add('experiences', experiences))
         .toString();
   }
 }
@@ -416,6 +456,16 @@ class GetAllAdventureResponseBuilder
   bool get codeRequired => _$this._codeRequired;
   set codeRequired(bool codeRequired) => _$this._codeRequired = codeRequired;
 
+  bool _isActive;
+  bool get isActive => _$this._isActive;
+  set isActive(bool isActive) => _$this._isActive = isActive;
+
+  ListBuilder<String> _experiences;
+  ListBuilder<String> get experiences =>
+      _$this._experiences ??= new ListBuilder<String>();
+  set experiences(ListBuilder<String> experiences) =>
+      _$this._experiences = experiences;
+
   GetAllAdventureResponseBuilder() {
     GetAllAdventureResponse._initializeBuilder(this);
   }
@@ -437,6 +487,8 @@ class GetAllAdventureResponseBuilder
       _imagesUrl = _$v.imagesUrl?.toBuilder();
       _videosUrl = _$v.videosUrl?.toBuilder();
       _codeRequired = _$v.codeRequired;
+      _isActive = _$v.isActive;
+      _experiences = _$v.experiences?.toBuilder();
       _$v = null;
     }
     return this;
@@ -475,7 +527,9 @@ class GetAllAdventureResponseBuilder
               likes: likes,
               imagesUrl: _imagesUrl?.build(),
               videosUrl: _videosUrl?.build(),
-              codeRequired: codeRequired);
+              codeRequired: codeRequired,
+              isActive: isActive,
+              experiences: _experiences?.build());
     } catch (_) {
       String _$failedField;
       try {
@@ -483,6 +537,9 @@ class GetAllAdventureResponseBuilder
         _imagesUrl?.build();
         _$failedField = 'videosUrl';
         _videosUrl?.build();
+
+        _$failedField = 'experiences';
+        _experiences?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'GetAllAdventureResponse', _$failedField, e.toString());

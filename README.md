@@ -17,7 +17,7 @@ Dart 1.20.0 or later OR Flutter 0.0.20 or later
 If this Dart package is published to Github, please include the following in pubspec.yaml
 ```
 name: yes4track_mobile_api_client
-version: 0.0.1
+version: 0.0.2
 description: Yes4track Mobile API Client
 dependencies:
   yes4track_mobile_api_client:
@@ -68,6 +68,8 @@ Class | Method | HTTP request | Description
 *AdventureApi* | [**yes4trackV1AdventuresIdActivatePost**](doc\/AdventureApi.md#yes4trackv1adventuresidactivatepost) | **post** /yes4track/v1/adventures/{id}/activate | Activate Adventure
 *AdventureApi* | [**yes4trackV1AdventuresIdCodeCodeCheckPost**](doc\/AdventureApi.md#yes4trackv1adventuresidcodecodecheckpost) | **post** /yes4track/v1/adventures/{id}/code/{code}/check | Check Adventure Code
 *AdventureApi* | [**yes4trackV1AdventuresIdDelete**](doc\/AdventureApi.md#yes4trackv1adventuresiddelete) | **delete** /yes4track/v1/adventures/{id} | Delete Adventure by Id
+*AdventureApi* | [**yes4trackV1AdventuresIdExperiencesExperienceIdDelete**](doc\/AdventureApi.md#yes4trackv1adventuresidexperiencesexperienceiddelete) | **delete** /yes4track/v1/adventures/{id}/experiences/{experienceId} | Delete Adventure Experience
+*AdventureApi* | [**yes4trackV1AdventuresIdExperiencesExperienceIdPost**](doc\/AdventureApi.md#yes4trackv1adventuresidexperiencesexperienceidpost) | **post** /yes4track/v1/adventures/{id}/experiences/{experienceId} | Add Adventure Experience
 *AdventureApi* | [**yes4trackV1AdventuresIdImagesImageIdDelete**](doc\/AdventureApi.md#yes4trackv1adventuresidimagesimageiddelete) | **delete** /yes4track/v1/adventures/{id}/images/{imageId} | Delete Adventure by Id
 *AdventureApi* | [**yes4trackV1AdventuresIdImagesPost**](doc\/AdventureApi.md#yes4trackv1adventuresidimagespost) | **post** /yes4track/v1/adventures/{id}/images | Add images in adventure
 *AdventureApi* | [**yes4trackV1AdventuresIdLikesDelete**](doc\/AdventureApi.md#yes4trackv1adventuresidlikesdelete) | **delete** /yes4track/v1/adventures/{id}/likes | Delete Adventure Likes by Id

@@ -527,6 +527,120 @@ class AdventureApi {
         );
     }
 
+    /// Delete Adventure Experience
+    ///
+    /// 
+    Future<Response<void>> yes4trackV1AdventuresIdExperiencesExperienceIdDelete(
+        String id,
+        String experienceId, { 
+        String xApiKey,
+        String xCsrfToken,
+        CancelToken cancelToken,
+        Map<String, dynamic> headers,
+        Map<String, dynamic> extra,
+        ValidateStatus validateStatus,
+        ProgressCallback onSendProgress,
+        ProgressCallback onReceiveProgress,
+    }) async {
+        final String _path = '/yes4track/v1/adventures/{id}/experiences/{experienceId}'.replaceAll('{' r'id' '}', id.toString()).replaceAll('{' r'experienceId' '}', experienceId.toString());
+
+        final queryParams = <String, dynamic>{};
+        final headerParams = <String, dynamic>{ 
+            if (headers != null) ...headers,
+        };
+        dynamic bodyData;
+
+        headerParams[r'x-api-key'] = xApiKey;
+        headerParams[r'x-csrf-token'] = xCsrfToken;
+        queryParams.removeWhere((key, dynamic value) => value == null);
+        headerParams.removeWhere((key, dynamic value) => value == null);
+
+        final contentTypes = <String>[];
+
+        return _dio.request<dynamic>(
+            _path,
+            queryParameters: queryParams,
+            data: bodyData,
+            options: Options(
+                method: 'delete'.toUpperCase(),
+                headers: headerParams,
+                extra: <String, dynamic>{
+                    'secure': <Map<String, String>>[
+                        {
+                            'type': 'apiKey',
+                            'name': 'Bearer',
+                            'keyName': 'Authorization',
+                            'where': 'header',
+                        },
+                    ],
+                    if (extra != null) ...extra,
+                },
+                validateStatus: validateStatus,
+                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            ),
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+        );
+    }
+
+    /// Add Adventure Experience
+    ///
+    /// 
+    Future<Response<void>> yes4trackV1AdventuresIdExperiencesExperienceIdPost(
+        String id,
+        String experienceId, { 
+        String xApiKey,
+        String xCsrfToken,
+        CancelToken cancelToken,
+        Map<String, dynamic> headers,
+        Map<String, dynamic> extra,
+        ValidateStatus validateStatus,
+        ProgressCallback onSendProgress,
+        ProgressCallback onReceiveProgress,
+    }) async {
+        final String _path = '/yes4track/v1/adventures/{id}/experiences/{experienceId}'.replaceAll('{' r'id' '}', id.toString()).replaceAll('{' r'experienceId' '}', experienceId.toString());
+
+        final queryParams = <String, dynamic>{};
+        final headerParams = <String, dynamic>{ 
+            if (headers != null) ...headers,
+        };
+        dynamic bodyData;
+
+        headerParams[r'x-api-key'] = xApiKey;
+        headerParams[r'x-csrf-token'] = xCsrfToken;
+        queryParams.removeWhere((key, dynamic value) => value == null);
+        headerParams.removeWhere((key, dynamic value) => value == null);
+
+        final contentTypes = <String>[];
+
+        return _dio.request<dynamic>(
+            _path,
+            queryParameters: queryParams,
+            data: bodyData,
+            options: Options(
+                method: 'post'.toUpperCase(),
+                headers: headerParams,
+                extra: <String, dynamic>{
+                    'secure': <Map<String, String>>[
+                        {
+                            'type': 'apiKey',
+                            'name': 'Bearer',
+                            'keyName': 'Authorization',
+                            'where': 'header',
+                        },
+                    ],
+                    if (extra != null) ...extra,
+                },
+                validateStatus: validateStatus,
+                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            ),
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+        );
+    }
+
     /// Delete Adventure by Id
     ///
     /// 

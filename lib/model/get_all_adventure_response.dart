@@ -77,6 +77,14 @@ abstract class GetAllAdventureResponse implements Built<GetAllAdventureResponse,
     @BuiltValueField(wireName: r'codeRequired')
     bool get codeRequired;
 
+    @nullable
+    @BuiltValueField(wireName: r'isActive')
+    bool get isActive;
+
+    @nullable
+    @BuiltValueField(wireName: r'experiences')
+    BuiltList<String> get experiences;
+
     // Boilerplate code needed to wire-up generated code
     GetAllAdventureResponse._();
 

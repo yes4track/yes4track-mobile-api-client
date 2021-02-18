@@ -23,6 +23,8 @@ Name | Type | Description | Notes
 **imagesUrl** | [**BuiltList<ImageUrl>**](ImageUrl.md) |  | [optional] 
 **videosUrl** | [**BuiltList<VideoUrl>**](VideoUrl.md) |  | [optional] 
 **codeRequired** | **bool** |  | [optional] 
+**isActive** | **bool** |  | [optional] 
+**experiences** | **BuiltList<String>** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

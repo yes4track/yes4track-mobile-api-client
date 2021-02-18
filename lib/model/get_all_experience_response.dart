@@ -67,6 +67,10 @@ abstract class GetAllExperienceResponse implements Built<GetAllExperienceRespons
     @BuiltValueField(wireName: r'codeRequired')
     bool get codeRequired;
 
+    @nullable
+    @BuiltValueField(wireName: r'isActive')
+    bool get isActive;
+
     // Boilerplate code needed to wire-up generated code
     GetAllExperienceResponse._();
 
