@@ -67,6 +67,12 @@ class _$GetAllAuditResponseSerializer
         ..add(serializers.serialize(object.action,
             specifiedType: const FullType(ActionType)));
     }
+    if (object.data != null) {
+      result
+        ..add('data')
+        ..add(serializers.serialize(object.data,
+            specifiedType: const FullType(String)));
+    }
     if (object.id != null) {
       result
         ..add('id')
@@ -116,6 +122,10 @@ class _$GetAllAuditResponseSerializer
           result.action = serializers.deserialize(value,
               specifiedType: const FullType(ActionType)) as ActionType;
           break;
+        case 'data':
+          result.data = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'id':
           result.id = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -143,6 +153,8 @@ class _$GetAllAuditResponse extends GetAllAuditResponse {
   @override
   final ActionType action;
   @override
+  final String data;
+  @override
   final String id;
 
   factory _$GetAllAuditResponse(
@@ -157,6 +169,7 @@ class _$GetAllAuditResponse extends GetAllAuditResponse {
       this.parentId,
       this.entity,
       this.action,
+      this.data,
       this.id})
       : super._();
 
@@ -180,6 +193,7 @@ class _$GetAllAuditResponse extends GetAllAuditResponse {
         parentId == other.parentId &&
         entity == other.entity &&
         action == other.action &&
+        data == other.data &&
         id == other.id;
   }
 
@@ -190,12 +204,16 @@ class _$GetAllAuditResponse extends GetAllAuditResponse {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, createdAt.hashCode), updatedAt.hashCode),
-                            userCreated.hashCode),
-                        userUpdated.hashCode),
-                    parentId.hashCode),
-                entity.hashCode),
-            action.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, createdAt.hashCode),
+                                    updatedAt.hashCode),
+                                userCreated.hashCode),
+                            userUpdated.hashCode),
+                        parentId.hashCode),
+                    entity.hashCode),
+                action.hashCode),
+            data.hashCode),
         id.hashCode));
   }
 
@@ -209,6 +227,7 @@ class _$GetAllAuditResponse extends GetAllAuditResponse {
           ..add('parentId', parentId)
           ..add('entity', entity)
           ..add('action', action)
+          ..add('data', data)
           ..add('id', id))
         .toString();
   }
@@ -246,6 +265,10 @@ class GetAllAuditResponseBuilder
   ActionType get action => _$this._action;
   set action(ActionType action) => _$this._action = action;
 
+  String _data;
+  String get data => _$this._data;
+  set data(String data) => _$this._data = data;
+
   String _id;
   String get id => _$this._id;
   set id(String id) => _$this._id = id;
@@ -263,6 +286,7 @@ class GetAllAuditResponseBuilder
       _parentId = _$v.parentId;
       _entity = _$v.entity;
       _action = _$v.action;
+      _data = _$v.data;
       _id = _$v.id;
       _$v = null;
     }
@@ -293,6 +317,7 @@ class GetAllAuditResponseBuilder
             parentId: parentId,
             entity: entity,
             action: action,
+            data: data,
             id: id);
     replace(_$result);
     return _$result;

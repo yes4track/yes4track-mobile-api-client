@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Card id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5798cdee-4163-4bba-ae41-a403552be1e2']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '29373e15-2f2f-4499-8bb8-3bbfc5b11908']
 
 ### Return type
 
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd77f5c04-80e3-4005-97b2-d3846a834c3f']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8320106b-e335-47cc-971c-969fb7ec3d7c']
 
 ### Return type
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Card id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f50c975b-f528-4a95-ad98-09dfd71ac456']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3c4387a9-0178-45b0-bf23-17ae0916a8dc']
 
 ### Return type
 
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Card id | 
  **operation** | [**BuiltList<Operation>**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ae193937-2c05-47c3-bf8c-793c07e0bff6']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a9889e4e-2061-42ca-a41d-6ab78f5bc218']
 
 ### Return type
 
@@ -257,7 +257,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Card Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3ba68854-3311-437c-a6e9-fefabbf331b7']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ef43e19a-40af-4d5c-a767-2d10efaf70f8']
  **putCardRequest** | [**PutCardRequest**](PutCardRequest.md)| Card to update | [optional] 
 
 ### Return type
@@ -306,7 +306,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '55c4e8b5-0b08-4a9c-9802-843935ea5c0a']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'dd582f82-bf67-4caa-b170-4aa569779e64']
  **postCardRequest** | [**PostCardRequest**](PostCardRequest.md)| Card to create | [optional] 
 
 ### Return type

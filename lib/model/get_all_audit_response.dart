@@ -43,6 +43,10 @@ abstract class GetAllAuditResponse implements Built<GetAllAuditResponse, GetAllA
     // enum actionEnum {  1,  2,  3,  };
 
     @nullable
+    @BuiltValueField(wireName: r'data')
+    String get data;
+
+    @nullable
     @BuiltValueField(wireName: r'id')
     String get id;
 

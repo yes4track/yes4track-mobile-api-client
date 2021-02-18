@@ -110,7 +110,7 @@ class UserApi {
     /// User SignIn
     ///
     /// 
-    Future<Response<void>> yes4trackV1UsersAccesstokenPost({ 
+    Future<Response<PostUserAccessTokenResponse>> yes4trackV1UsersAccesstokenPost({ 
         String xApiKey,
         String xCsrfToken,
         PostUserAccessTokenRequest postUserAccessTokenRequest,
@@ -167,7 +167,24 @@ class UserApi {
             cancelToken: cancelToken,
             onSendProgress: onSendProgress,
             onReceiveProgress: onReceiveProgress,
-        );
+        ).then((response) {
+            final serializer = _serializers.serializerForType(PostUserAccessTokenResponse) as Serializer<PostUserAccessTokenResponse>;
+            final data = _serializers.deserializeWith<PostUserAccessTokenResponse>(
+                serializer,
+                response.data is String ? jsonDecode(response.data as String) : response.data,
+            );
+
+            return Response<PostUserAccessTokenResponse>(
+                data: data,
+                headers: response.headers,
+                isRedirect: response.isRedirect,
+                request: response.request,
+                redirects: response.redirects,
+                statusCode: response.statusCode,
+                statusMessage: response.statusMessage,
+                extra: response.extra,
+            );
+        });
     }
 
     /// Get All User by filter with pagination
