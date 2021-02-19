@@ -5,8 +5,8 @@
 
 // ignore_for_file: unused_import
 
-import 'package:yes4track_mobile_api_client/model/estatistic.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:yes4track_mobile_api_client/model/statistic.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -51,8 +51,8 @@ abstract class GetAllTrailResponse implements Built<GetAllTrailResponse, GetAllT
     String get id;
 
     @nullable
-    @BuiltValueField(wireName: r'estatistic')
-    Estatistic get estatistic;
+    @BuiltValueField(wireName: r'statistic')
+    Statistic get statistic;
 
     @nullable
     @BuiltValueField(wireName: r'sponsors')

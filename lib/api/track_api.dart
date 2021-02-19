@@ -13,11 +13,11 @@ import 'package:built_value/serializer.dart';
 import 'package:yes4track_mobile_api_client/model/track_source.dart';
 import 'package:yes4track_mobile_api_client/model/post_track_request.dart';
 import 'package:yes4track_mobile_api_client/model/post_track_response.dart';
-import 'package:yes4track_mobile_api_client/model/put_track_estatistic_request.dart';
 import 'package:yes4track_mobile_api_client/model/post_track_geo_data_response.dart';
 import 'package:yes4track_mobile_api_client/model/error_details.dart';
 import 'package:yes4track_mobile_api_client/model/get_all_track_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_all_paged_track_response.dart';
+import 'package:yes4track_mobile_api_client/model/put_track_statistic_request.dart';
 import 'package:yes4track_mobile_api_client/model/put_track_request.dart';
 import 'package:yes4track_mobile_api_client/model/operation.dart';
 import 'package:built_collection/built_collection.dart';
@@ -299,70 +299,6 @@ class TrackApi {
         );
     }
 
-    /// Update Track Estatistic
-    ///
-    /// 
-    Future<Response<void>> yes4trackV1TracksIdEstatisticPut(
-        String id, { 
-        String xApiKey,
-        String xCsrfToken,
-        PutTrackEstatisticRequest putTrackEstatisticRequest,
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/yes4track/v1/tracks/{id}/estatistic'.replaceAll('{' r'id' '}', id.toString());
-
-        final queryParams = <String, dynamic>{};
-        final headerParams = <String, dynamic>{ 
-            if (headers != null) ...headers,
-        };
-        dynamic bodyData;
-
-        headerParams[r'x-api-key'] = xApiKey;
-        headerParams[r'x-csrf-token'] = xCsrfToken;
-        queryParams.removeWhere((key, dynamic value) => value == null);
-        headerParams.removeWhere((key, dynamic value) => value == null);
-
-        final contentTypes = <String>[
-            'application/json',
-        ];
-
-        final bodySerializer = _serializers.serializerForType(PutTrackEstatisticRequest) as Serializer<PutTrackEstatisticRequest>;
-        final serializedBody = _serializers.serializeWith(bodySerializer, putTrackEstatisticRequest);
-        final jsonputTrackEstatisticRequest = json.encode(serializedBody);
-        bodyData = jsonputTrackEstatisticRequest;
-
-        return _dio.request<dynamic>(
-            _path,
-            queryParameters: queryParams,
-            data: bodyData,
-            options: Options(
-                method: 'put'.toUpperCase(),
-                headers: headerParams,
-                extra: <String, dynamic>{
-                    'secure': <Map<String, String>>[
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
-            ),
-            cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        );
-    }
-
     /// Create Track GeoData
     ///
     /// 
@@ -536,6 +472,70 @@ class TrackApi {
         final serializedBody = _serializers.serializeWith(bodySerializer, putTrackRequest);
         final jsonputTrackRequest = json.encode(serializedBody);
         bodyData = jsonputTrackRequest;
+
+        return _dio.request<dynamic>(
+            _path,
+            queryParameters: queryParams,
+            data: bodyData,
+            options: Options(
+                method: 'put'.toUpperCase(),
+                headers: headerParams,
+                extra: <String, dynamic>{
+                    'secure': <Map<String, String>>[
+                        {
+                            'type': 'apiKey',
+                            'name': 'Bearer',
+                            'keyName': 'Authorization',
+                            'where': 'header',
+                        },
+                    ],
+                    if (extra != null) ...extra,
+                },
+                validateStatus: validateStatus,
+                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            ),
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+        );
+    }
+
+    /// Update Track Statistic
+    ///
+    /// 
+    Future<Response<void>> yes4trackV1TracksIdStatisticPut(
+        String id, { 
+        String xApiKey,
+        String xCsrfToken,
+        PutTrackStatisticRequest putTrackStatisticRequest,
+        CancelToken cancelToken,
+        Map<String, dynamic> headers,
+        Map<String, dynamic> extra,
+        ValidateStatus validateStatus,
+        ProgressCallback onSendProgress,
+        ProgressCallback onReceiveProgress,
+    }) async {
+        final String _path = '/yes4track/v1/tracks/{id}/statistic'.replaceAll('{' r'id' '}', id.toString());
+
+        final queryParams = <String, dynamic>{};
+        final headerParams = <String, dynamic>{ 
+            if (headers != null) ...headers,
+        };
+        dynamic bodyData;
+
+        headerParams[r'x-api-key'] = xApiKey;
+        headerParams[r'x-csrf-token'] = xCsrfToken;
+        queryParams.removeWhere((key, dynamic value) => value == null);
+        headerParams.removeWhere((key, dynamic value) => value == null);
+
+        final contentTypes = <String>[
+            'application/json',
+        ];
+
+        final bodySerializer = _serializers.serializerForType(PutTrackStatisticRequest) as Serializer<PutTrackStatisticRequest>;
+        final serializedBody = _serializers.serializeWith(bodySerializer, putTrackStatisticRequest);
+        final jsonputTrackStatisticRequest = json.encode(serializedBody);
+        bodyData = jsonputTrackStatisticRequest;
 
         return _dio.request<dynamic>(
             _path,

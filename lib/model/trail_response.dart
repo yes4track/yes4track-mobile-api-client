@@ -5,7 +5,7 @@
 
 // ignore_for_file: unused_import
 
-import 'package:yes4track_mobile_api_client/model/estatistic.dart';
+import 'package:yes4track_mobile_api_client/model/statistic.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -30,8 +30,8 @@ abstract class TrailResponse implements Built<TrailResponse, TrailResponseBuilde
     DateTime get startDate;
 
     @nullable
-    @BuiltValueField(wireName: r'estatistic')
-    Estatistic get estatistic;
+    @BuiltValueField(wireName: r'statistic')
+    Statistic get statistic;
 
     // Boilerplate code needed to wire-up generated code
     TrailResponse._();

@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **startDate** | [**DateTime**](DateTime.md) |  | [optional] 
 **endDate** | [**DateTime**](DateTime.md) |  | [optional] 
 **id** | **String** |  | [optional] 
-**estatistic** | [**Estatistic**](Estatistic.md) |  | [optional] 
+**statistic** | [**Statistic**](Statistic.md) |  | [optional] 
 **sponsors** | **BuiltList<String>** |  | [optional] 
 **angels** | **BuiltList<String>** |  | [optional] 
 

@@ -85,11 +85,11 @@ class _$GetAllTrackResponseSerializer
         ..add(serializers.serialize(object.id,
             specifiedType: const FullType(String)));
     }
-    if (object.estatistic != null) {
+    if (object.statistic != null) {
       result
-        ..add('estatistic')
-        ..add(serializers.serialize(object.estatistic,
-            specifiedType: const FullType(Estatistic)));
+        ..add('statistic')
+        ..add(serializers.serialize(object.statistic,
+            specifiedType: const FullType(Statistic)));
     }
     if (object.mapCoordinate != null) {
       result
@@ -152,9 +152,9 @@ class _$GetAllTrackResponseSerializer
           result.id = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
-        case 'estatistic':
-          result.estatistic.replace(serializers.deserialize(value,
-              specifiedType: const FullType(Estatistic)) as Estatistic);
+        case 'statistic':
+          result.statistic.replace(serializers.deserialize(value,
+              specifiedType: const FullType(Statistic)) as Statistic);
           break;
         case 'mapCoordinate':
           result.mapCoordinate.replace(serializers.deserialize(value,
@@ -189,7 +189,7 @@ class _$GetAllTrackResponse extends GetAllTrackResponse {
   @override
   final String id;
   @override
-  final Estatistic estatistic;
+  final Statistic statistic;
   @override
   final MapCoordinate mapCoordinate;
 
@@ -208,7 +208,7 @@ class _$GetAllTrackResponse extends GetAllTrackResponse {
       this.startDate,
       this.endDate,
       this.id,
-      this.estatistic,
+      this.statistic,
       this.mapCoordinate})
       : super._();
 
@@ -235,7 +235,7 @@ class _$GetAllTrackResponse extends GetAllTrackResponse {
         startDate == other.startDate &&
         endDate == other.endDate &&
         id == other.id &&
-        estatistic == other.estatistic &&
+        statistic == other.statistic &&
         mapCoordinate == other.mapCoordinate;
   }
 
@@ -261,7 +261,7 @@ class _$GetAllTrackResponse extends GetAllTrackResponse {
                         startDate.hashCode),
                     endDate.hashCode),
                 id.hashCode),
-            estatistic.hashCode),
+            statistic.hashCode),
         mapCoordinate.hashCode));
   }
 
@@ -278,7 +278,7 @@ class _$GetAllTrackResponse extends GetAllTrackResponse {
           ..add('startDate', startDate)
           ..add('endDate', endDate)
           ..add('id', id)
-          ..add('estatistic', estatistic)
+          ..add('statistic', statistic)
           ..add('mapCoordinate', mapCoordinate))
         .toString();
   }
@@ -328,11 +328,10 @@ class GetAllTrackResponseBuilder
   String get id => _$this._id;
   set id(String id) => _$this._id = id;
 
-  EstatisticBuilder _estatistic;
-  EstatisticBuilder get estatistic =>
-      _$this._estatistic ??= new EstatisticBuilder();
-  set estatistic(EstatisticBuilder estatistic) =>
-      _$this._estatistic = estatistic;
+  StatisticBuilder _statistic;
+  StatisticBuilder get statistic =>
+      _$this._statistic ??= new StatisticBuilder();
+  set statistic(StatisticBuilder statistic) => _$this._statistic = statistic;
 
   MapCoordinateBuilder _mapCoordinate;
   MapCoordinateBuilder get mapCoordinate =>
@@ -356,7 +355,7 @@ class GetAllTrackResponseBuilder
       _startDate = _$v.startDate;
       _endDate = _$v.endDate;
       _id = _$v.id;
-      _estatistic = _$v.estatistic?.toBuilder();
+      _statistic = _$v.statistic?.toBuilder();
       _mapCoordinate = _$v.mapCoordinate?.toBuilder();
       _$v = null;
     }
@@ -392,13 +391,13 @@ class GetAllTrackResponseBuilder
               startDate: startDate,
               endDate: endDate,
               id: id,
-              estatistic: _estatistic?.build(),
+              statistic: _statistic?.build(),
               mapCoordinate: _mapCoordinate?.build());
     } catch (_) {
       String _$failedField;
       try {
-        _$failedField = 'estatistic';
-        _estatistic?.build();
+        _$failedField = 'statistic';
+        _statistic?.build();
         _$failedField = 'mapCoordinate';
         _mapCoordinate?.build();
       } catch (e) {

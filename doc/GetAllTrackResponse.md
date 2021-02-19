@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **startDate** | [**DateTime**](DateTime.md) |  | [optional] 
 **endDate** | [**DateTime**](DateTime.md) |  | [optional] 
 **id** | **String** |  | [optional] 
-**estatistic** | [**Estatistic**](Estatistic.md) |  | [optional] 
+**statistic** | [**Statistic**](Statistic.md) |  | [optional] 
 **mapCoordinate** | [**MapCoordinate**](MapCoordinate.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

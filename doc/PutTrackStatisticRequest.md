@@ -1,4 +1,4 @@
-# yes4track_mobile_api_client.model.TrailResponse
+# yes4track_mobile_api_client.model.PutTrackStatisticRequest
 
 ## Load the model package
 ```dart
@@ -8,11 +8,11 @@ import 'package:yes4track_mobile_api_client/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | [optional] 
-**adventureId** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
-**startDate** | [**DateTime**](DateTime.md) |  | [optional] 
-**statistic** | [**Statistic**](Statistic.md) |  | [optional] 
+**totalTime** | **double** |  | [optional] 
+**totalMovingTime** | **double** |  | [optional] 
+**totalDistance** | **double** |  | [optional] 
+**elevationGain** | **double** |  | [optional] 
+**speed** | **double** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

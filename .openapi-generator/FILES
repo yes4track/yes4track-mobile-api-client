@@ -25,7 +25,6 @@ doc/CardApi.md
 doc/CardType.md
 doc/CompanyApi.md
 doc/ErrorDetails.md
-doc/Estatistic.md
 doc/ExperienceApi.md
 doc/GeoJson2DGeographicCoordinates.md
 doc/GeoJson2DGeographicCoordinatesGeoJsonBoundingBox.md
@@ -101,8 +100,8 @@ doc/PutCompanyRequest.md
 doc/PutExperienceRequest.md
 doc/PutSponsorRequest.md
 doc/PutTemplateRequest.md
-doc/PutTrackEstatisticRequest.md
 doc/PutTrackRequest.md
+doc/PutTrackStatisticRequest.md
 doc/PutTrailRequest.md
 doc/PutUserLocationRequest.md
 doc/PutUserRequest.md
@@ -110,6 +109,7 @@ doc/Regex.md
 doc/RegexOptions.md
 doc/SponsorApi.md
 doc/SponsorContact.md
+doc/Statistic.md
 doc/TemplateApi.md
 doc/TimeSpan.md
 doc/TrackApi.md
@@ -157,7 +157,6 @@ lib/model/bson_undefined.dart
 lib/model/bson_value.dart
 lib/model/card_type.dart
 lib/model/error_details.dart
-lib/model/estatistic.dart
 lib/model/geo_json2_d_geographic_coordinates.dart
 lib/model/geo_json2_d_geographic_coordinates_geo_json_bounding_box.dart
 lib/model/geo_json2_d_geographic_coordinates_geo_json_point.dart
@@ -232,14 +231,15 @@ lib/model/put_company_request.dart
 lib/model/put_experience_request.dart
 lib/model/put_sponsor_request.dart
 lib/model/put_template_request.dart
-lib/model/put_track_estatistic_request.dart
 lib/model/put_track_request.dart
+lib/model/put_track_statistic_request.dart
 lib/model/put_trail_request.dart
 lib/model/put_user_location_request.dart
 lib/model/put_user_request.dart
 lib/model/regex.dart
 lib/model/regex_options.dart
 lib/model/sponsor_contact.dart
+lib/model/statistic.dart
 lib/model/time_span.dart
 lib/model/track_source.dart
 lib/model/trail_geo_data_request.dart

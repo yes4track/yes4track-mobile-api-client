@@ -13,10 +13,10 @@ Method | HTTP request | Description
 [**getByIdTrackGeoData**](TrackApi.md#getByIdTrackGeoData) | **get** /yes4track/v1/tracks/{id}/geodata | Get Track Geo Data by id
 [**yes4trackV1TracksGet**](TrackApi.md#yes4trackV1TracksGet) | **get** /yes4track/v1/tracks | Get All Track by filter with pagination
 [**yes4trackV1TracksIdDelete**](TrackApi.md#yes4trackV1TracksIdDelete) | **delete** /yes4track/v1/tracks/{id} | Delete Track by Id
-[**yes4trackV1TracksIdEstatisticPut**](TrackApi.md#yes4trackV1TracksIdEstatisticPut) | **put** /yes4track/v1/tracks/{id}/estatistic | Update Track Estatistic
 [**yes4trackV1TracksIdGeodataPost**](TrackApi.md#yes4trackV1TracksIdGeodataPost) | **post** /yes4track/v1/tracks/{id}/geodata | Create Track GeoData
 [**yes4trackV1TracksIdPatch**](TrackApi.md#yes4trackV1TracksIdPatch) | **patch** /yes4track/v1/tracks/{id} | Update part of Track
 [**yes4trackV1TracksIdPut**](TrackApi.md#yes4trackV1TracksIdPut) | **put** /yes4track/v1/tracks/{id} | Update Track
+[**yes4trackV1TracksIdStatisticPut**](TrackApi.md#yes4trackV1TracksIdStatisticPut) | **put** /yes4track/v1/tracks/{id}/statistic | Update Track Statistic
 [**yes4trackV1TracksPost**](TrackApi.md#yes4trackV1TracksPost) | **post** /yes4track/v1/tracks | Create Track
 
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Track id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5a266bde-8952-4248-943d-263f4e434a53']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '058c954d-0d56-4241-a6fd-63290a1fa774']
 
 ### Return type
 
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Track id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f06fc324-e97b-4ea3-b69b-3352d672d629']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '12d36cae-4dfc-4117-a50e-16f08b1fb86c']
 
 ### Return type
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '9adc751d-e820-4659-8c9a-5d69fb23e0ef']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1dd5d00f-5901-4f52-99b4-50da3b51ed7a']
 
 ### Return type
 
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Track id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '80d0013e-3a7b-4d97-8944-f4c2da89d4fb']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1e0a19fa-b7eb-40fb-a560-f296a903d1e5']
 
 ### Return type
 
@@ -220,56 +220,6 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **yes4trackV1TracksIdEstatisticPut**
-> yes4trackV1TracksIdEstatisticPut(id, xApiKey, xCsrfToken, putTrackEstatisticRequest)
-
-Update Track Estatistic
-
-### Example 
-```dart
-import 'package:yes4track_mobile_api_client/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
-
-var api_instance = new TrackApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Track Id
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-var putTrackEstatisticRequest = new PutTrackEstatisticRequest(); // PutTrackEstatisticRequest | Track to update
-
-try { 
-    api_instance.yes4trackV1TracksIdEstatisticPut(id, xApiKey, xCsrfToken, putTrackEstatisticRequest);
-} catch (e) {
-    print('Exception when calling TrackApi->yes4trackV1TracksIdEstatisticPut: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Track Id | 
- **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '95b9f4cd-e20f-4729-be4b-a780c476ba9a']
- **putTrackEstatisticRequest** | [**PutTrackEstatisticRequest**](PutTrackEstatisticRequest.md)| Track to update | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -306,7 +256,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Track Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0ab27f88-f7ee-41b6-a01a-6317996f170d']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '14310c63-aa63-4385-a43a-3bf2467e75b9']
 
 ### Return type
 
@@ -358,7 +308,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Track id | 
  **operation** | [**BuiltList<Operation>**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1b5f3b51-378b-4921-9628-66fbfa60f75d']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '102f7219-8cd2-452b-a803-4c1ea4995792']
 
 ### Return type
 
@@ -407,8 +357,58 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Track Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '121c5573-67dd-47d5-8dc6-db40d58335b2']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2b99f9d8-6187-463e-8839-1fe15df35a2d']
  **putTrackRequest** | [**PutTrackRequest**](PutTrackRequest.md)| Track to update | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **yes4trackV1TracksIdStatisticPut**
+> yes4trackV1TracksIdStatisticPut(id, xApiKey, xCsrfToken, putTrackStatisticRequest)
+
+Update Track Statistic
+
+### Example 
+```dart
+import 'package:yes4track_mobile_api_client/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+var api_instance = new TrackApi();
+var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Track Id
+var xApiKey = xApiKey_example; // String | Your Api Key
+var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+var putTrackStatisticRequest = new PutTrackStatisticRequest(); // PutTrackStatisticRequest | Track to update
+
+try { 
+    api_instance.yes4trackV1TracksIdStatisticPut(id, xApiKey, xCsrfToken, putTrackStatisticRequest);
+} catch (e) {
+    print('Exception when calling TrackApi->yes4trackV1TracksIdStatisticPut: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)| Track Id | 
+ **xApiKey** | **String**| Your Api Key | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4f7b5602-13da-4d7b-940e-5372d36afe49']
+ **putTrackStatisticRequest** | [**PutTrackStatisticRequest**](PutTrackStatisticRequest.md)| Track to update | [optional] 
 
 ### Return type
 
@@ -456,7 +456,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c1a79f27-98fb-4f39-8f93-4bc01890ca88']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '40c35308-cb74-48cb-92ab-0873a455587f']
  **postTrackRequest** | [**PostTrackRequest**](PostTrackRequest.md)| Track to create | [optional] 
 
 ### Return type

@@ -44,11 +44,11 @@ class _$TrailResponseSerializer implements StructuredSerializer<TrailResponse> {
         ..add(serializers.serialize(object.startDate,
             specifiedType: const FullType(DateTime)));
     }
-    if (object.estatistic != null) {
+    if (object.statistic != null) {
       result
-        ..add('estatistic')
-        ..add(serializers.serialize(object.estatistic,
-            specifiedType: const FullType(Estatistic)));
+        ..add('statistic')
+        ..add(serializers.serialize(object.statistic,
+            specifiedType: const FullType(Statistic)));
     }
     return result;
   }
@@ -81,9 +81,9 @@ class _$TrailResponseSerializer implements StructuredSerializer<TrailResponse> {
           result.startDate = serializers.deserialize(value,
               specifiedType: const FullType(DateTime)) as DateTime;
           break;
-        case 'estatistic':
-          result.estatistic.replace(serializers.deserialize(value,
-              specifiedType: const FullType(Estatistic)) as Estatistic);
+        case 'statistic':
+          result.statistic.replace(serializers.deserialize(value,
+              specifiedType: const FullType(Statistic)) as Statistic);
           break;
       }
     }
@@ -102,13 +102,13 @@ class _$TrailResponse extends TrailResponse {
   @override
   final DateTime startDate;
   @override
-  final Estatistic estatistic;
+  final Statistic statistic;
 
   factory _$TrailResponse([void Function(TrailResponseBuilder) updates]) =>
       (new TrailResponseBuilder()..update(updates)).build();
 
   _$TrailResponse._(
-      {this.id, this.adventureId, this.name, this.startDate, this.estatistic})
+      {this.id, this.adventureId, this.name, this.startDate, this.statistic})
       : super._();
 
   @override
@@ -126,7 +126,7 @@ class _$TrailResponse extends TrailResponse {
         adventureId == other.adventureId &&
         name == other.name &&
         startDate == other.startDate &&
-        estatistic == other.estatistic;
+        statistic == other.statistic;
   }
 
   @override
@@ -134,7 +134,7 @@ class _$TrailResponse extends TrailResponse {
     return $jf($jc(
         $jc($jc($jc($jc(0, id.hashCode), adventureId.hashCode), name.hashCode),
             startDate.hashCode),
-        estatistic.hashCode));
+        statistic.hashCode));
   }
 
   @override
@@ -144,7 +144,7 @@ class _$TrailResponse extends TrailResponse {
           ..add('adventureId', adventureId)
           ..add('name', name)
           ..add('startDate', startDate)
-          ..add('estatistic', estatistic))
+          ..add('statistic', statistic))
         .toString();
   }
 }
@@ -169,11 +169,10 @@ class TrailResponseBuilder
   DateTime get startDate => _$this._startDate;
   set startDate(DateTime startDate) => _$this._startDate = startDate;
 
-  EstatisticBuilder _estatistic;
-  EstatisticBuilder get estatistic =>
-      _$this._estatistic ??= new EstatisticBuilder();
-  set estatistic(EstatisticBuilder estatistic) =>
-      _$this._estatistic = estatistic;
+  StatisticBuilder _statistic;
+  StatisticBuilder get statistic =>
+      _$this._statistic ??= new StatisticBuilder();
+  set statistic(StatisticBuilder statistic) => _$this._statistic = statistic;
 
   TrailResponseBuilder() {
     TrailResponse._initializeBuilder(this);
@@ -185,7 +184,7 @@ class TrailResponseBuilder
       _adventureId = _$v.adventureId;
       _name = _$v.name;
       _startDate = _$v.startDate;
-      _estatistic = _$v.estatistic?.toBuilder();
+      _statistic = _$v.statistic?.toBuilder();
       _$v = null;
     }
     return this;
@@ -214,12 +213,12 @@ class TrailResponseBuilder
               adventureId: adventureId,
               name: name,
               startDate: startDate,
-              estatistic: _estatistic?.build());
+              statistic: _statistic?.build());
     } catch (_) {
       String _$failedField;
       try {
-        _$failedField = 'estatistic';
-        _estatistic?.build();
+        _$failedField = 'statistic';
+        _statistic?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'TrailResponse', _$failedField, e.toString());

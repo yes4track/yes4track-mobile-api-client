@@ -17,7 +17,7 @@ Dart 1.20.0 or later OR Flutter 0.0.20 or later
 If this Dart package is published to Github, please include the following in pubspec.yaml
 ```
 name: yes4track_mobile_api_client
-version: 0.0.2
+version: 0.0.4
 description: Yes4track Mobile API Client
 dependencies:
   yes4track_mobile_api_client:
@@ -123,10 +123,10 @@ Class | Method | HTTP request | Description
 *TrackApi* | [**getByIdTrackGeoData**](doc\/TrackApi.md#getbyidtrackgeodata) | **get** /yes4track/v1/tracks/{id}/geodata | Get Track Geo Data by id
 *TrackApi* | [**yes4trackV1TracksGet**](doc\/TrackApi.md#yes4trackv1tracksget) | **get** /yes4track/v1/tracks | Get All Track by filter with pagination
 *TrackApi* | [**yes4trackV1TracksIdDelete**](doc\/TrackApi.md#yes4trackv1tracksiddelete) | **delete** /yes4track/v1/tracks/{id} | Delete Track by Id
-*TrackApi* | [**yes4trackV1TracksIdEstatisticPut**](doc\/TrackApi.md#yes4trackv1tracksidestatisticput) | **put** /yes4track/v1/tracks/{id}/estatistic | Update Track Estatistic
 *TrackApi* | [**yes4trackV1TracksIdGeodataPost**](doc\/TrackApi.md#yes4trackv1tracksidgeodatapost) | **post** /yes4track/v1/tracks/{id}/geodata | Create Track GeoData
 *TrackApi* | [**yes4trackV1TracksIdPatch**](doc\/TrackApi.md#yes4trackv1tracksidpatch) | **patch** /yes4track/v1/tracks/{id} | Update part of Track
 *TrackApi* | [**yes4trackV1TracksIdPut**](doc\/TrackApi.md#yes4trackv1tracksidput) | **put** /yes4track/v1/tracks/{id} | Update Track
+*TrackApi* | [**yes4trackV1TracksIdStatisticPut**](doc\/TrackApi.md#yes4trackv1tracksidstatisticput) | **put** /yes4track/v1/tracks/{id}/statistic | Update Track Statistic
 *TrackApi* | [**yes4trackV1TracksPost**](doc\/TrackApi.md#yes4trackv1trackspost) | **post** /yes4track/v1/tracks | Create Track
 *TrailApi* | [**getByIdTrail**](doc\/TrailApi.md#getbyidtrail) | **get** /yes4track/v1/trails/{id} | Get Trail by id
 *TrailApi* | [**getByIdTrailGeoData**](doc\/TrailApi.md#getbyidtrailgeodata) | **get** /yes4track/v1/trails/{id}/geodata | Get Trail Geo Data by id
@@ -181,7 +181,6 @@ Class | Method | HTTP request | Description
  - [BsonValue](doc\/BsonValue.md)
  - [CardType](doc\/CardType.md)
  - [ErrorDetails](doc\/ErrorDetails.md)
- - [Estatistic](doc\/Estatistic.md)
  - [GeoJson2DGeographicCoordinates](doc\/GeoJson2DGeographicCoordinates.md)
  - [GeoJson2DGeographicCoordinatesGeoJsonBoundingBox](doc\/GeoJson2DGeographicCoordinatesGeoJsonBoundingBox.md)
  - [GeoJson2DGeographicCoordinatesGeoJsonPoint](doc\/GeoJson2DGeographicCoordinatesGeoJsonPoint.md)
@@ -256,14 +255,15 @@ Class | Method | HTTP request | Description
  - [PutExperienceRequest](doc\/PutExperienceRequest.md)
  - [PutSponsorRequest](doc\/PutSponsorRequest.md)
  - [PutTemplateRequest](doc\/PutTemplateRequest.md)
- - [PutTrackEstatisticRequest](doc\/PutTrackEstatisticRequest.md)
  - [PutTrackRequest](doc\/PutTrackRequest.md)
+ - [PutTrackStatisticRequest](doc\/PutTrackStatisticRequest.md)
  - [PutTrailRequest](doc\/PutTrailRequest.md)
  - [PutUserLocationRequest](doc\/PutUserLocationRequest.md)
  - [PutUserRequest](doc\/PutUserRequest.md)
  - [Regex](doc\/Regex.md)
  - [RegexOptions](doc\/RegexOptions.md)
  - [SponsorContact](doc\/SponsorContact.md)
+ - [Statistic](doc\/Statistic.md)
  - [TimeSpan](doc\/TimeSpan.md)
  - [TrackSource](doc\/TrackSource.md)
  - [TrailGeoDataRequest](doc\/TrailGeoDataRequest.md)

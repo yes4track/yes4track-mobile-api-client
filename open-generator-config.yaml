@@ -1,4 +1,4 @@
 # Opções de configuração para o gerador dart-dio 
 pubName: yes4track_mobile_api_client 
-pubVersion: 0.0.2 
+pubVersion: 0.0.4 
 pubDescription: "Yes4track Mobile API Client"

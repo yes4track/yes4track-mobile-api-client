@@ -79,11 +79,11 @@ class _$GetAllTrailResponseSerializer
         ..add(serializers.serialize(object.id,
             specifiedType: const FullType(String)));
     }
-    if (object.estatistic != null) {
+    if (object.statistic != null) {
       result
-        ..add('estatistic')
-        ..add(serializers.serialize(object.estatistic,
-            specifiedType: const FullType(Estatistic)));
+        ..add('statistic')
+        ..add(serializers.serialize(object.statistic,
+            specifiedType: const FullType(Statistic)));
     }
     if (object.sponsors != null) {
       result
@@ -150,9 +150,9 @@ class _$GetAllTrailResponseSerializer
           result.id = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
-        case 'estatistic':
-          result.estatistic.replace(serializers.deserialize(value,
-              specifiedType: const FullType(Estatistic)) as Estatistic);
+        case 'statistic':
+          result.statistic.replace(serializers.deserialize(value,
+              specifiedType: const FullType(Statistic)) as Statistic);
           break;
         case 'sponsors':
           result.sponsors.replace(serializers.deserialize(value,
@@ -193,7 +193,7 @@ class _$GetAllTrailResponse extends GetAllTrailResponse {
   @override
   final String id;
   @override
-  final Estatistic estatistic;
+  final Statistic statistic;
   @override
   final BuiltList<String> sponsors;
   @override
@@ -213,7 +213,7 @@ class _$GetAllTrailResponse extends GetAllTrailResponse {
       this.startDate,
       this.endDate,
       this.id,
-      this.estatistic,
+      this.statistic,
       this.sponsors,
       this.angels})
       : super._();
@@ -240,7 +240,7 @@ class _$GetAllTrailResponse extends GetAllTrailResponse {
         startDate == other.startDate &&
         endDate == other.endDate &&
         id == other.id &&
-        estatistic == other.estatistic &&
+        statistic == other.statistic &&
         sponsors == other.sponsors &&
         angels == other.angels;
   }
@@ -266,7 +266,7 @@ class _$GetAllTrailResponse extends GetAllTrailResponse {
                             startDate.hashCode),
                         endDate.hashCode),
                     id.hashCode),
-                estatistic.hashCode),
+                statistic.hashCode),
             sponsors.hashCode),
         angels.hashCode));
   }
@@ -283,7 +283,7 @@ class _$GetAllTrailResponse extends GetAllTrailResponse {
           ..add('startDate', startDate)
           ..add('endDate', endDate)
           ..add('id', id)
-          ..add('estatistic', estatistic)
+          ..add('statistic', statistic)
           ..add('sponsors', sponsors)
           ..add('angels', angels))
         .toString();
@@ -330,11 +330,10 @@ class GetAllTrailResponseBuilder
   String get id => _$this._id;
   set id(String id) => _$this._id = id;
 
-  EstatisticBuilder _estatistic;
-  EstatisticBuilder get estatistic =>
-      _$this._estatistic ??= new EstatisticBuilder();
-  set estatistic(EstatisticBuilder estatistic) =>
-      _$this._estatistic = estatistic;
+  StatisticBuilder _statistic;
+  StatisticBuilder get statistic =>
+      _$this._statistic ??= new StatisticBuilder();
+  set statistic(StatisticBuilder statistic) => _$this._statistic = statistic;
 
   ListBuilder<String> _sponsors;
   ListBuilder<String> get sponsors =>
@@ -361,7 +360,7 @@ class GetAllTrailResponseBuilder
       _startDate = _$v.startDate;
       _endDate = _$v.endDate;
       _id = _$v.id;
-      _estatistic = _$v.estatistic?.toBuilder();
+      _statistic = _$v.statistic?.toBuilder();
       _sponsors = _$v.sponsors?.toBuilder();
       _angels = _$v.angels?.toBuilder();
       _$v = null;
@@ -397,14 +396,14 @@ class GetAllTrailResponseBuilder
               startDate: startDate,
               endDate: endDate,
               id: id,
-              estatistic: _estatistic?.build(),
+              statistic: _statistic?.build(),
               sponsors: _sponsors?.build(),
               angels: _angels?.build());
     } catch (_) {
       String _$failedField;
       try {
-        _$failedField = 'estatistic';
-        _estatistic?.build();
+        _$failedField = 'statistic';
+        _statistic?.build();
         _$failedField = 'sponsors';
         _sponsors?.build();
         _$failedField = 'angels';

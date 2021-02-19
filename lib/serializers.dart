@@ -33,7 +33,6 @@ import 'package:yes4track_mobile_api_client/model/bson_undefined.dart';
 import 'package:yes4track_mobile_api_client/model/bson_value.dart';
 import 'package:yes4track_mobile_api_client/model/card_type.dart';
 import 'package:yes4track_mobile_api_client/model/error_details.dart';
-import 'package:yes4track_mobile_api_client/model/estatistic.dart';
 import 'package:yes4track_mobile_api_client/model/geo_json2_d_geographic_coordinates.dart';
 import 'package:yes4track_mobile_api_client/model/geo_json2_d_geographic_coordinates_geo_json_bounding_box.dart';
 import 'package:yes4track_mobile_api_client/model/geo_json2_d_geographic_coordinates_geo_json_point.dart';
@@ -108,14 +107,15 @@ import 'package:yes4track_mobile_api_client/model/put_company_request.dart';
 import 'package:yes4track_mobile_api_client/model/put_experience_request.dart';
 import 'package:yes4track_mobile_api_client/model/put_sponsor_request.dart';
 import 'package:yes4track_mobile_api_client/model/put_template_request.dart';
-import 'package:yes4track_mobile_api_client/model/put_track_estatistic_request.dart';
 import 'package:yes4track_mobile_api_client/model/put_track_request.dart';
+import 'package:yes4track_mobile_api_client/model/put_track_statistic_request.dart';
 import 'package:yes4track_mobile_api_client/model/put_trail_request.dart';
 import 'package:yes4track_mobile_api_client/model/put_user_location_request.dart';
 import 'package:yes4track_mobile_api_client/model/put_user_request.dart';
 import 'package:yes4track_mobile_api_client/model/regex.dart';
 import 'package:yes4track_mobile_api_client/model/regex_options.dart';
 import 'package:yes4track_mobile_api_client/model/sponsor_contact.dart';
+import 'package:yes4track_mobile_api_client/model/statistic.dart';
 import 'package:yes4track_mobile_api_client/model/time_span.dart';
 import 'package:yes4track_mobile_api_client/model/track_source.dart';
 import 'package:yes4track_mobile_api_client/model/trail_geo_data_request.dart';
@@ -147,7 +147,6 @@ part 'serializers.g.dart';
   BsonValue,
   CardType,
   ErrorDetails,
-  Estatistic,
   GeoJson2DGeographicCoordinates,
   GeoJson2DGeographicCoordinatesGeoJsonBoundingBox,
   GeoJson2DGeographicCoordinatesGeoJsonPoint,
@@ -222,14 +221,15 @@ part 'serializers.g.dart';
   PutExperienceRequest,
   PutSponsorRequest,
   PutTemplateRequest,
-  PutTrackEstatisticRequest,
   PutTrackRequest,
+  PutTrackStatisticRequest,
   PutTrailRequest,
   PutUserLocationRequest,
   PutUserRequest,
   Regex,
   RegexOptions,
   SponsorContact,
+  Statistic,
   TimeSpan,
   TrackSource,
   TrailGeoDataRequest,
