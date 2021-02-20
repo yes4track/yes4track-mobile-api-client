@@ -15,6 +15,10 @@ part 'track_geo_location_dto.g.dart';
 abstract class TrackGeoLocationDto implements Built<TrackGeoLocationDto, TrackGeoLocationDtoBuilder> {
 
     @nullable
+    @BuiltValueField(wireName: r'experiences')
+    BuiltList<String> get experiences;
+
+    @nullable
     @BuiltValueField(wireName: r'trackId')
     String get trackId;
 

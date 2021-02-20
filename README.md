@@ -17,7 +17,7 @@ Dart 1.20.0 or later OR Flutter 0.0.20 or later
 If this Dart package is published to Github, please include the following in pubspec.yaml
 ```
 name: yes4track_mobile_api_client
-version: 0.0.5
+version: 0.0.6
 description: Yes4track Mobile API Client
 dependencies:
   yes4track_mobile_api_client:
@@ -121,7 +121,7 @@ Class | Method | HTTP request | Description
 *TemplateApi* | [**yes4trackV1TemplatesPost**](doc\/TemplateApi.md#yes4trackv1templatespost) | **post** /yes4track/v1/templates | Create Template
 *TrackApi* | [**getByIdTrack**](doc\/TrackApi.md#getbyidtrack) | **get** /yes4track/v1/tracks/{id} | Get Track by id
 *TrackApi* | [**getByIdTrackGeoData**](doc\/TrackApi.md#getbyidtrackgeodata) | **get** /yes4track/v1/tracks/{id}/geodata | Get Track Geo Data by id
-*TrackApi* | [**getByIdTrackGeoLocation**](doc\/TrackApi.md#getbyidtrackgeolocation) | **get** /yes4track/v1/tracks/{id}/geolocation | Get Track Geo Location by id
+*TrackApi* | [**getByIdTrackGeoLocation**](doc\/TrackApi.md#getbyidtrackgeolocation) | **get** /yes4track/v1/tracks/geolocation | Get Track Geo Location by id
 *TrackApi* | [**yes4trackV1TracksGet**](doc\/TrackApi.md#yes4trackv1tracksget) | **get** /yes4track/v1/tracks | Get All Track by filter with pagination
 *TrackApi* | [**yes4trackV1TracksIdDelete**](doc\/TrackApi.md#yes4trackv1tracksiddelete) | **delete** /yes4track/v1/tracks/{id} | Delete Track by Id
 *TrackApi* | [**yes4trackV1TracksIdGeodataPost**](doc\/TrackApi.md#yes4trackv1tracksidgeodatapost) | **post** /yes4track/v1/tracks/{id}/geodata | Create Track GeoData

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getByIdTrack**](TrackApi.md#getByIdTrack) | **get** /yes4track/v1/tracks/{id} | Get Track by id
 [**getByIdTrackGeoData**](TrackApi.md#getByIdTrackGeoData) | **get** /yes4track/v1/tracks/{id}/geodata | Get Track Geo Data by id
-[**getByIdTrackGeoLocation**](TrackApi.md#getByIdTrackGeoLocation) | **get** /yes4track/v1/tracks/{id}/geolocation | Get Track Geo Location by id
+[**getByIdTrackGeoLocation**](TrackApi.md#getByIdTrackGeoLocation) | **get** /yes4track/v1/tracks/geolocation | Get Track Geo Location by id
 [**yes4trackV1TracksGet**](TrackApi.md#yes4trackV1TracksGet) | **get** /yes4track/v1/tracks | Get All Track by filter with pagination
 [**yes4trackV1TracksIdDelete**](TrackApi.md#yes4trackV1TracksIdDelete) | **delete** /yes4track/v1/tracks/{id} | Delete Track by Id
 [**yes4trackV1TracksIdGeodataPost**](TrackApi.md#yes4trackV1TracksIdGeodataPost) | **post** /yes4track/v1/tracks/{id}/geodata | Create Track GeoData
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Track id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '09ecf733-f980-4766-b7fd-67d0047aba55']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '247c8900-64e4-4db4-a38d-4fc2e3a28ca8']
 
 ### Return type
 
@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Track id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '187d8dbe-30f5-42b2-a9b3-a74c8d451295']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f6d0ab6c-17d0-49db-87a2-d9d413fecd86']
 
 ### Return type
 
@@ -119,7 +119,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getByIdTrackGeoLocation**
-> TrackGeoLocationDto getByIdTrackGeoLocation(id, xApiKey, xCsrfToken)
+> BuiltList<TrackGeoLocationDto> getByIdTrackGeoLocation(trackId, adventureId, experienceId, xApiKey, xCsrfToken)
 
 Get Track Geo Location by id
 
@@ -132,12 +132,14 @@ import 'package:yes4track_mobile_api_client/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new TrackApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Track id
+var trackId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Track id
+var adventureId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Track id
+var experienceId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Track id
 var xApiKey = xApiKey_example; // String | Your Api Key
 var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    var result = api_instance.getByIdTrackGeoLocation(id, xApiKey, xCsrfToken);
+    var result = api_instance.getByIdTrackGeoLocation(trackId, adventureId, experienceId, xApiKey, xCsrfToken);
     print(result);
 } catch (e) {
     print('Exception when calling TrackApi->getByIdTrackGeoLocation: $e\n');
@@ -148,13 +150,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Track id | 
+ **trackId** | [**String**](.md)| Track id | [optional] 
+ **adventureId** | [**String**](.md)| Track id | [optional] 
+ **experienceId** | [**String**](.md)| Track id | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3fcd52bc-bde7-43bd-ab8b-05f165111408']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd6e6f61b-3d8b-4afa-a123-781b374a5e28']
 
 ### Return type
 
-[**TrackGeoLocationDto**](TrackGeoLocationDto.md)
+[**BuiltList<TrackGeoLocationDto>**](TrackGeoLocationDto.md)
 
 ### Authorization
 
@@ -209,7 +213,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '13b94301-27e0-41cc-a8d6-b41162e107e9']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '924d5031-6400-400f-b11f-02e486fe1023']
 
 ### Return type
 
@@ -257,7 +261,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Track id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e67ab540-f61d-4429-9278-13ce5c155152']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7de0cecc-ca0f-4d99-bcaa-1c441720342f']
 
 ### Return type
 
@@ -306,7 +310,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Track Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '9eb469c3-b9d9-4d1b-8ee1-e56be3ed341f']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '102f636c-f7da-468e-a410-88f158946ee3']
 
 ### Return type
 
@@ -358,7 +362,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Track id | 
  **operation** | [**BuiltList<Operation>**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'dcddb30f-4de8-4496-97a2-d8d1c2a293ad']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '098a006d-3a28-4a96-a579-f60730f9ffb1']
 
 ### Return type
 
@@ -407,7 +411,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Track Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '30cba5d0-89c9-4272-8a1d-598683a01be4']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4e4d1862-5778-4eed-94f2-231f7313a4f9']
  **putTrackRequest** | [**PutTrackRequest**](PutTrackRequest.md)| Track to update | [optional] 
 
 ### Return type
@@ -457,7 +461,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Track Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0ca339f9-eab9-4a5a-aa76-f47bbe49dcc7']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '9a678139-fb1a-4a2d-9a90-87163cbdb610']
  **putTrackStatisticRequest** | [**PutTrackStatisticRequest**](PutTrackStatisticRequest.md)| Track to update | [optional] 
 
 ### Return type
@@ -506,7 +510,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '49354b7f-71f2-4547-8a3e-72f24b1c4b79']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a2fa896e-2c96-4879-b6d0-9c90f4149444']
  **postTrackRequest** | [**PostTrackRequest**](PostTrackRequest.md)| Track to create | [optional] 
 
 ### Return type

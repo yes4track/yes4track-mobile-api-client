@@ -282,6 +282,10 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<Operation>(),
       )
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(TrackGeoLocationDto)]),
+        () => ListBuilder<TrackGeoLocationDto>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(Operation)]),
         () => ListBuilder<Operation>(),
       )

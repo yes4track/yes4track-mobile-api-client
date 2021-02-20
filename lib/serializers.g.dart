@@ -200,15 +200,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(BsonElement)]),
           () => new ListBuilder<BsonElement>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(BuiltList, const [const FullType(double)])
-          ]),
-          () => new ListBuilder<BuiltList<double>>())
-      ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(TrackGeoLocationWaypointDto)]),
-          () => new ListBuilder<TrackGeoLocationWaypointDto>())
-      ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(GetAllAdventureLikesResponse)]),
           () => new ListBuilder<GetAllAdventureLikesResponse>())
@@ -283,6 +274,18 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(BuiltList, const [const FullType(double)])
+          ]),
+          () => new ListBuilder<BuiltList<double>>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(TrackGeoLocationWaypointDto)]),
+          () => new ListBuilder<TrackGeoLocationWaypointDto>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())

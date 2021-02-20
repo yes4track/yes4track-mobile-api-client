@@ -25,6 +25,13 @@ class _$TrackGeoLocationDtoSerializer
       Serializers serializers, TrackGeoLocationDto object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[];
+    if (object.experiences != null) {
+      result
+        ..add('experiences')
+        ..add(serializers.serialize(object.experiences,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(String)])));
+    }
     if (object.trackId != null) {
       result
         ..add('trackId')
@@ -67,6 +74,12 @@ class _$TrackGeoLocationDtoSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'experiences':
+          result.experiences.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(BuiltList, const [const FullType(String)]))
+              as BuiltList<Object>);
+          break;
         case 'trackId':
           result.trackId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -96,6 +109,8 @@ class _$TrackGeoLocationDtoSerializer
 
 class _$TrackGeoLocationDto extends TrackGeoLocationDto {
   @override
+  final BuiltList<String> experiences;
+  @override
   final String trackId;
   @override
   final String adventureId;
@@ -109,7 +124,11 @@ class _$TrackGeoLocationDto extends TrackGeoLocationDto {
       (new TrackGeoLocationDtoBuilder()..update(updates)).build();
 
   _$TrackGeoLocationDto._(
-      {this.trackId, this.adventureId, this.lines, this.waypoints})
+      {this.experiences,
+      this.trackId,
+      this.adventureId,
+      this.lines,
+      this.waypoints})
       : super._();
 
   @override
@@ -125,6 +144,7 @@ class _$TrackGeoLocationDto extends TrackGeoLocationDto {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is TrackGeoLocationDto &&
+        experiences == other.experiences &&
         trackId == other.trackId &&
         adventureId == other.adventureId &&
         lines == other.lines &&
@@ -134,7 +154,9 @@ class _$TrackGeoLocationDto extends TrackGeoLocationDto {
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, trackId.hashCode), adventureId.hashCode),
+        $jc(
+            $jc($jc($jc(0, experiences.hashCode), trackId.hashCode),
+                adventureId.hashCode),
             lines.hashCode),
         waypoints.hashCode));
   }
@@ -142,6 +164,7 @@ class _$TrackGeoLocationDto extends TrackGeoLocationDto {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('TrackGeoLocationDto')
+          ..add('experiences', experiences)
           ..add('trackId', trackId)
           ..add('adventureId', adventureId)
           ..add('lines', lines)
@@ -153,6 +176,12 @@ class _$TrackGeoLocationDto extends TrackGeoLocationDto {
 class TrackGeoLocationDtoBuilder
     implements Builder<TrackGeoLocationDto, TrackGeoLocationDtoBuilder> {
   _$TrackGeoLocationDto _$v;
+
+  ListBuilder<String> _experiences;
+  ListBuilder<String> get experiences =>
+      _$this._experiences ??= new ListBuilder<String>();
+  set experiences(ListBuilder<String> experiences) =>
+      _$this._experiences = experiences;
 
   String _trackId;
   String get trackId => _$this._trackId;
@@ -179,6 +208,7 @@ class TrackGeoLocationDtoBuilder
 
   TrackGeoLocationDtoBuilder get _$this {
     if (_$v != null) {
+      _experiences = _$v.experiences?.toBuilder();
       _trackId = _$v.trackId;
       _adventureId = _$v.adventureId;
       _lines = _$v.lines?.toBuilder();
@@ -207,6 +237,7 @@ class TrackGeoLocationDtoBuilder
     try {
       _$result = _$v ??
           new _$TrackGeoLocationDto._(
+              experiences: _experiences?.build(),
               trackId: trackId,
               adventureId: adventureId,
               lines: _lines?.build(),
@@ -214,6 +245,9 @@ class TrackGeoLocationDtoBuilder
     } catch (_) {
       String _$failedField;
       try {
+        _$failedField = 'experiences';
+        _experiences?.build();
+
         _$failedField = 'lines';
         _lines?.build();
         _$failedField = 'waypoints';

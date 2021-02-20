@@ -8,6 +8,7 @@ import 'package:yes4track_mobile_api_client/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**experiences** | **BuiltList<String>** |  | [optional] 
 **trackId** | **String** |  | [optional] 
 **adventureId** | **String** |  | [optional] 
 **lines** | [**BuiltList<BuiltList<double>>**](BuiltList.md) |  | [optional] 

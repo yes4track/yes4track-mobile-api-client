@@ -163,8 +163,10 @@ class TrackApi {
     /// Get Track Geo Location by id
     ///
     /// 
-    Future<Response<TrackGeoLocationDto>> getByIdTrackGeoLocation(
-        String id, { 
+    Future<Response<BuiltList<TrackGeoLocationDto>>> getByIdTrackGeoLocation({ 
+        String trackId,
+        String adventureId,
+        String experienceId,
         String xApiKey,
         String xCsrfToken,
         CancelToken cancelToken,
@@ -174,7 +176,7 @@ class TrackApi {
         ProgressCallback onSendProgress,
         ProgressCallback onReceiveProgress,
     }) async {
-        final String _path = '/yes4track/v1/tracks/{id}/geolocation'.replaceAll('{' r'id' '}', id.toString());
+        final String _path = '/yes4track/v1/tracks/geolocation';
 
         final queryParams = <String, dynamic>{};
         final headerParams = <String, dynamic>{ 
@@ -184,6 +186,9 @@ class TrackApi {
 
         headerParams[r'x-api-key'] = xApiKey;
         headerParams[r'x-csrf-token'] = xCsrfToken;
+        queryParams[r'trackId'] = trackId;
+        queryParams[r'adventureId'] = adventureId;
+        queryParams[r'experienceId'] = experienceId;
         queryParams.removeWhere((key, dynamic value) => value == null);
         headerParams.removeWhere((key, dynamic value) => value == null);
 
@@ -214,13 +219,15 @@ class TrackApi {
             onSendProgress: onSendProgress,
             onReceiveProgress: onReceiveProgress,
         ).then((response) {
-            final serializer = _serializers.serializerForType(TrackGeoLocationDto) as Serializer<TrackGeoLocationDto>;
-            final data = _serializers.deserializeWith<TrackGeoLocationDto>(
-                serializer,
-                response.data is String ? jsonDecode(response.data as String) : response.data,
-            );
+            const type = FullType(BuiltList, [FullType(TrackGeoLocationDto)]);
+            final data = _serializers.deserialize(
+                response.data is String
+                ? jsonDecode(response.data as String)
+                : response.data,
+                specifiedType: type,
+            ) as BuiltList<TrackGeoLocationDto>;
 
-            return Response<TrackGeoLocationDto>(
+            return Response<BuiltList<TrackGeoLocationDto>>(
                 data: data,
                 headers: response.headers,
                 isRedirect: response.isRedirect,

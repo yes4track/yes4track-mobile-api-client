@@ -255,6 +255,3 @@ lib/model/video_url.dart
 lib/model/waypoint_type.dart
 lib/serializers.dart
 pubspec.yaml
-test/track_geo_location_dto_test.dart
-test/track_geo_location_waypoint_dto_test.dart
-test/waypoint_type_test.dart
