@@ -113,6 +113,8 @@ doc/Statistic.md
 doc/TemplateApi.md
 doc/TimeSpan.md
 doc/TrackApi.md
+doc/TrackGeoLocationDto.md
+doc/TrackGeoLocationWaypointDto.md
 doc/TrackSource.md
 doc/TrailApi.md
 doc/TrailGeoDataRequest.md
@@ -121,6 +123,7 @@ doc/UserApi.md
 doc/UserResponse.md
 doc/UserTrailStatusResponse.md
 doc/VideoUrl.md
+doc/WaypointType.md
 lib/api.dart
 lib/api/adventure_api.dart
 lib/api/audit_api.dart
@@ -241,11 +244,17 @@ lib/model/regex_options.dart
 lib/model/sponsor_contact.dart
 lib/model/statistic.dart
 lib/model/time_span.dart
+lib/model/track_geo_location_dto.dart
+lib/model/track_geo_location_waypoint_dto.dart
 lib/model/track_source.dart
 lib/model/trail_geo_data_request.dart
 lib/model/trail_response.dart
 lib/model/user_response.dart
 lib/model/user_trail_status_response.dart
 lib/model/video_url.dart
+lib/model/waypoint_type.dart
 lib/serializers.dart
 pubspec.yaml
+test/track_geo_location_dto_test.dart
+test/track_geo_location_waypoint_dto_test.dart
+test/waypoint_type_test.dart

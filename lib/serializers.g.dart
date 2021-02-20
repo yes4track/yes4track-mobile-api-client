@@ -112,12 +112,15 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(SponsorContact.serializer)
       ..add(Statistic.serializer)
       ..add(TimeSpan.serializer)
+      ..add(TrackGeoLocationDto.serializer)
+      ..add(TrackGeoLocationWaypointDto.serializer)
       ..add(TrackSource.serializer)
       ..add(TrailGeoDataRequest.serializer)
       ..add(TrailResponse.serializer)
       ..add(UserResponse.serializer)
       ..add(UserTrailStatusResponse.serializer)
       ..add(VideoUrl.serializer)
+      ..add(WaypointType.serializer)
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(BsonElement)]),
           () => new ListBuilder<BsonElement>())
@@ -196,6 +199,15 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(BsonElement)]),
           () => new ListBuilder<BsonElement>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(BuiltList, const [const FullType(double)])
+          ]),
+          () => new ListBuilder<BuiltList<double>>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(TrackGeoLocationWaypointDto)]),
+          () => new ListBuilder<TrackGeoLocationWaypointDto>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(GetAllAdventureLikesResponse)]),
@@ -287,6 +299,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(TrailGeoDataRequest)]),
           () => new ListBuilder<TrailGeoDataRequest>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(double)]),
+          () => new ListBuilder<double>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(double)]),
           () => new ListBuilder<double>()))

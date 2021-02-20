@@ -12,6 +12,7 @@ import 'package:built_value/serializer.dart';
 
 import 'package:yes4track_mobile_api_client/model/track_source.dart';
 import 'package:yes4track_mobile_api_client/model/post_track_request.dart';
+import 'package:yes4track_mobile_api_client/model/track_geo_location_dto.dart';
 import 'package:yes4track_mobile_api_client/model/post_track_response.dart';
 import 'package:yes4track_mobile_api_client/model/post_track_geo_data_response.dart';
 import 'package:yes4track_mobile_api_client/model/error_details.dart';
@@ -157,6 +158,79 @@ class TrackApi {
             onSendProgress: onSendProgress,
             onReceiveProgress: onReceiveProgress,
         );
+    }
+
+    /// Get Track Geo Location by id
+    ///
+    /// 
+    Future<Response<TrackGeoLocationDto>> getByIdTrackGeoLocation(
+        String id, { 
+        String xApiKey,
+        String xCsrfToken,
+        CancelToken cancelToken,
+        Map<String, dynamic> headers,
+        Map<String, dynamic> extra,
+        ValidateStatus validateStatus,
+        ProgressCallback onSendProgress,
+        ProgressCallback onReceiveProgress,
+    }) async {
+        final String _path = '/yes4track/v1/tracks/{id}/geolocation'.replaceAll('{' r'id' '}', id.toString());
+
+        final queryParams = <String, dynamic>{};
+        final headerParams = <String, dynamic>{ 
+            if (headers != null) ...headers,
+        };
+        dynamic bodyData;
+
+        headerParams[r'x-api-key'] = xApiKey;
+        headerParams[r'x-csrf-token'] = xCsrfToken;
+        queryParams.removeWhere((key, dynamic value) => value == null);
+        headerParams.removeWhere((key, dynamic value) => value == null);
+
+        final contentTypes = <String>[];
+
+        return _dio.request<dynamic>(
+            _path,
+            queryParameters: queryParams,
+            data: bodyData,
+            options: Options(
+                method: 'get'.toUpperCase(),
+                headers: headerParams,
+                extra: <String, dynamic>{
+                    'secure': <Map<String, String>>[
+                        {
+                            'type': 'apiKey',
+                            'name': 'Bearer',
+                            'keyName': 'Authorization',
+                            'where': 'header',
+                        },
+                    ],
+                    if (extra != null) ...extra,
+                },
+                validateStatus: validateStatus,
+                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            ),
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+        ).then((response) {
+            final serializer = _serializers.serializerForType(TrackGeoLocationDto) as Serializer<TrackGeoLocationDto>;
+            final data = _serializers.deserializeWith<TrackGeoLocationDto>(
+                serializer,
+                response.data is String ? jsonDecode(response.data as String) : response.data,
+            );
+
+            return Response<TrackGeoLocationDto>(
+                data: data,
+                headers: response.headers,
+                isRedirect: response.isRedirect,
+                request: response.request,
+                redirects: response.redirects,
+                statusCode: response.statusCode,
+                statusMessage: response.statusMessage,
+                extra: response.extra,
+            );
+        });
     }
 
     /// Get All Track by filter with pagination

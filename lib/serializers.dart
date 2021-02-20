@@ -117,12 +117,15 @@ import 'package:yes4track_mobile_api_client/model/regex_options.dart';
 import 'package:yes4track_mobile_api_client/model/sponsor_contact.dart';
 import 'package:yes4track_mobile_api_client/model/statistic.dart';
 import 'package:yes4track_mobile_api_client/model/time_span.dart';
+import 'package:yes4track_mobile_api_client/model/track_geo_location_dto.dart';
+import 'package:yes4track_mobile_api_client/model/track_geo_location_waypoint_dto.dart';
 import 'package:yes4track_mobile_api_client/model/track_source.dart';
 import 'package:yes4track_mobile_api_client/model/trail_geo_data_request.dart';
 import 'package:yes4track_mobile_api_client/model/trail_response.dart';
 import 'package:yes4track_mobile_api_client/model/user_response.dart';
 import 'package:yes4track_mobile_api_client/model/user_trail_status_response.dart';
 import 'package:yes4track_mobile_api_client/model/video_url.dart';
+import 'package:yes4track_mobile_api_client/model/waypoint_type.dart';
 
 part 'serializers.g.dart';
 
@@ -231,12 +234,15 @@ part 'serializers.g.dart';
   SponsorContact,
   Statistic,
   TimeSpan,
+  TrackGeoLocationDto,
+  TrackGeoLocationWaypointDto,
   TrackSource,
   TrailGeoDataRequest,
   TrailResponse,
   UserResponse,
   UserTrailStatusResponse,
   VideoUrl,
+  WaypointType,
 ])
 Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
