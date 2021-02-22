@@ -14,6 +14,7 @@ import 'package:yes4track_mobile_api_client/model/post_user_sign_in_request.dart
 import 'package:yes4track_mobile_api_client/model/post_user_response.dart';
 import 'package:yes4track_mobile_api_client/model/post_user_request.dart';
 import 'package:yes4track_mobile_api_client/model/post_user_access_token_request.dart';
+import 'package:yes4track_mobile_api_client/model/profile_photo_request.dart';
 import 'package:yes4track_mobile_api_client/model/post_user_setup_angel_request.dart';
 import 'package:yes4track_mobile_api_client/model/put_user_location_request.dart';
 import 'package:yes4track_mobile_api_client/model/post_post_user_resend_code_request.dart';
@@ -554,6 +555,70 @@ class UserApi {
             data: bodyData,
             options: Options(
                 method: 'patch'.toUpperCase(),
+                headers: headerParams,
+                extra: <String, dynamic>{
+                    'secure': <Map<String, String>>[
+                        {
+                            'type': 'apiKey',
+                            'name': 'Bearer',
+                            'keyName': 'Authorization',
+                            'where': 'header',
+                        },
+                    ],
+                    if (extra != null) ...extra,
+                },
+                validateStatus: validateStatus,
+                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            ),
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+        );
+    }
+
+    /// Update User Photo
+    ///
+    /// 
+    Future<Response<void>> yes4trackV1UsersIdPhotoPut(
+        String id, { 
+        String xApiKey,
+        String xCsrfToken,
+        ProfilePhotoRequest profilePhotoRequest,
+        CancelToken cancelToken,
+        Map<String, dynamic> headers,
+        Map<String, dynamic> extra,
+        ValidateStatus validateStatus,
+        ProgressCallback onSendProgress,
+        ProgressCallback onReceiveProgress,
+    }) async {
+        final String _path = '/yes4track/v1/users/{id}/photo'.replaceAll('{' r'id' '}', id.toString());
+
+        final queryParams = <String, dynamic>{};
+        final headerParams = <String, dynamic>{ 
+            if (headers != null) ...headers,
+        };
+        dynamic bodyData;
+
+        headerParams[r'x-api-key'] = xApiKey;
+        headerParams[r'x-csrf-token'] = xCsrfToken;
+        queryParams.removeWhere((key, dynamic value) => value == null);
+        headerParams.removeWhere((key, dynamic value) => value == null);
+
+        final contentTypes = <String>[
+            'application/json',
+        ];
+
+        final bodySerializer = _serializers.serializerForType(ProfilePhotoRequest) as Serializer<ProfilePhotoRequest>;
+        final serializedBody = _serializers.serializeWith(bodySerializer, profilePhotoRequest);
+        final jsonprofilePhotoRequest = json.encode(serializedBody);
+        bodyData = jsonprofilePhotoRequest;
+
+        return _dio.request<dynamic>(
+            _path,
+            queryParameters: queryParams,
+            data: bodyData,
+            options: Options(
+                method: 'put'.toUpperCase(),
                 headers: headerParams,
                 extra: <String, dynamic>{
                     'secure': <Map<String, String>>[
