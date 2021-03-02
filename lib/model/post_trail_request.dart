@@ -44,6 +44,10 @@ abstract class PostTrailRequest implements Built<PostTrailRequest, PostTrailRequ
     @BuiltValueField(wireName: r'endDate')
     DateTime get endDate;
 
+    @nullable
+    @BuiltValueField(wireName: r'id')
+    String get id;
+
     // Boilerplate code needed to wire-up generated code
     PostTrailRequest._();
 

@@ -1,5 +1,5 @@
 name: yes4track_mobile_api_client
-version: 0.0.7
+version: 0.0.8
 description: Yes4track Mobile API Client
 environment:
     sdk: ">=2.6.0 <3.0.0"

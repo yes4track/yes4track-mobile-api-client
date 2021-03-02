@@ -69,6 +69,12 @@ class _$PostTrailRequestSerializer
         ..add(serializers.serialize(object.endDate,
             specifiedType: const FullType(DateTime)));
     }
+    if (object.id != null) {
+      result
+        ..add('id')
+        ..add(serializers.serialize(object.id,
+            specifiedType: const FullType(String)));
+    }
     return result;
   }
 
@@ -116,6 +122,10 @@ class _$PostTrailRequestSerializer
           result.endDate = serializers.deserialize(value,
               specifiedType: const FullType(DateTime)) as DateTime;
           break;
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -140,6 +150,8 @@ class _$PostTrailRequest extends PostTrailRequest {
   final DateTime startDate;
   @override
   final DateTime endDate;
+  @override
+  final String id;
 
   factory _$PostTrailRequest(
           [void Function(PostTrailRequestBuilder) updates]) =>
@@ -153,7 +165,8 @@ class _$PostTrailRequest extends PostTrailRequest {
       this.adventureId,
       this.name,
       this.startDate,
-      this.endDate})
+      this.endDate,
+      this.id})
       : super._();
 
   @override
@@ -175,7 +188,8 @@ class _$PostTrailRequest extends PostTrailRequest {
         adventureId == other.adventureId &&
         name == other.name &&
         startDate == other.startDate &&
-        endDate == other.endDate;
+        endDate == other.endDate &&
+        id == other.id;
   }
 
   @override
@@ -185,13 +199,17 @@ class _$PostTrailRequest extends PostTrailRequest {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, createdAt.hashCode), updatedAt.hashCode),
-                            userCreated.hashCode),
-                        userUpdated.hashCode),
-                    adventureId.hashCode),
-                name.hashCode),
-            startDate.hashCode),
-        endDate.hashCode));
+                        $jc(
+                            $jc(
+                                $jc($jc(0, createdAt.hashCode),
+                                    updatedAt.hashCode),
+                                userCreated.hashCode),
+                            userUpdated.hashCode),
+                        adventureId.hashCode),
+                    name.hashCode),
+                startDate.hashCode),
+            endDate.hashCode),
+        id.hashCode));
   }
 
   @override
@@ -204,7 +222,8 @@ class _$PostTrailRequest extends PostTrailRequest {
           ..add('adventureId', adventureId)
           ..add('name', name)
           ..add('startDate', startDate)
-          ..add('endDate', endDate))
+          ..add('endDate', endDate)
+          ..add('id', id))
         .toString();
   }
 }
@@ -245,6 +264,10 @@ class PostTrailRequestBuilder
   DateTime get endDate => _$this._endDate;
   set endDate(DateTime endDate) => _$this._endDate = endDate;
 
+  String _id;
+  String get id => _$this._id;
+  set id(String id) => _$this._id = id;
+
   PostTrailRequestBuilder() {
     PostTrailRequest._initializeBuilder(this);
   }
@@ -259,6 +282,7 @@ class PostTrailRequestBuilder
       _name = _$v.name;
       _startDate = _$v.startDate;
       _endDate = _$v.endDate;
+      _id = _$v.id;
       _$v = null;
     }
     return this;
@@ -288,7 +312,8 @@ class PostTrailRequestBuilder
             adventureId: adventureId,
             name: name,
             startDate: startDate,
-            endDate: endDate);
+            endDate: endDate,
+            id: id);
     replace(_$result);
     return _$result;
   }

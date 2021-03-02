@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Adventure id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'b49e04c2-530f-4685-a9de-a9fd801aee0b']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'db2cd695-8d74-43a2-9e36-3d36ad71111b']
 
 ### Return type
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Adventure id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0658e53d-628c-431c-9a50-40751e598ac3']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '78a2cd7c-e57e-4be6-b0ce-e1af7f2597ec']
 
 ### Return type
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Adventure Id | 
  **likeId** | [**String**](.md)| Adventure Like Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '34efd7e6-3d0b-4a58-bca2-1678b564f22e']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7b3be10f-f120-409e-81aa-67832e7d0495']
 
 ### Return type
 
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e59ceb7b-2c81-4a00-9c87-806d50c67d54']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7384e966-7a3a-4204-b051-e09ce6b0a29a']
 
 ### Return type
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Adventure id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8f0fc24b-657c-4e75-ae6e-37050a80ffe1']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '061bef7a-1f16-4997-8117-fa28250bdb79']
 
 ### Return type
 
@@ -324,7 +324,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Adventure id | 
  **code** | **String**| Adventure Code | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6e92829d-34c7-4c1d-be7e-b482ae1f6a12']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3883f9d2-fed2-45a0-8562-a8ba1e03ddd0']
 
 ### Return type
 
@@ -372,7 +372,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Adventure id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c4eb2620-a2d5-471f-9823-e6e60657f6eb']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7021b12a-5573-49e4-a2b3-ef8315e55db1']
 
 ### Return type
 
@@ -422,7 +422,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Id Adventure | 
  **experienceId** | [**String**](.md)| Id Experience | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '446e6e84-cd47-486a-87f0-64f4dd2d8e70']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'cfb1d19f-bc50-4b79-a3ec-fdeba208f2eb']
 
 ### Return type
 
@@ -472,7 +472,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Id Adventure | 
  **experienceId** | [**String**](.md)| Id Experience | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a6d1d34d-a5cd-4348-9c0a-3aae5822330d']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1ec063ed-d12c-4caf-9769-744eb155c525']
 
 ### Return type
 
@@ -522,7 +522,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Adventure id | 
  **imageId** | [**String**](.md)| Adventure Image id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '15aca22d-963b-4db7-bd8b-3210dcfec546']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '27884a5b-89b0-42da-9ca1-da9cab45086b']
 
 ### Return type
 
@@ -571,7 +571,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Adventure Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5196f97a-c400-4294-bbcb-6ba449cb5db1']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'b11c2d07-18b2-4759-817d-e230b410f426']
 
 ### Return type
 
@@ -619,7 +619,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Adventure Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'aabe4864-1946-4023-8de3-d128f843e825']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a3e59ee9-f703-49ef-85cd-38ca77fc1418']
 
 ### Return type
 
@@ -674,7 +674,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'dc4dd9ae-ed55-4782-9ce1-5f0db1310077']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e1ca23e3-b94c-431f-8b19-189df09fce2a']
 
 ### Return type
 
@@ -723,7 +723,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Adventure Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8026daa3-5dc7-47cc-8cea-b44f0f3a8b26']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '79f18d8e-cfcf-408a-8a67-0c782756e115']
 
 ### Return type
 
@@ -775,7 +775,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Adventure id | 
  **operation** | [**BuiltList<Operation>**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2de401fc-9644-45c1-b20d-8707c01aa210']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a4e4d65a-0859-4be7-940d-1673018869f0']
 
 ### Return type
 
@@ -824,7 +824,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Adventure Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '967d658a-1be6-4bdf-a888-653fb85ea57f']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4f2de0e9-6024-4a7e-8396-5179aae31e31']
  **putAdventureRequest** | [**PutAdventureRequest**](PutAdventureRequest.md)| Adventure to update | [optional] 
 
 ### Return type
@@ -874,7 +874,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Adventure Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4cec334e-f413-4e0d-8115-cb94b4f5e65d']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '17952c55-38fb-4468-8f19-2cffda152cf3']
 
 ### Return type
 
@@ -924,7 +924,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Adventure id | 
  **videoId** | [**String**](.md)| Adventure Video id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'cb686552-1c82-471d-96b9-529b3d5e3aeb']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'eddd00df-97a8-4aef-9fa1-0a0f02849e10']
 
 ### Return type
 
@@ -972,7 +972,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd304cd5d-24a5-43f6-8128-b2b16c00d680']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4204e2dc-40ca-4d90-83ed-f84f865e8da1']
  **postAdventureRequest** | [**PostAdventureRequest**](PostAdventureRequest.md)| Adventure to create | [optional] 
 
 ### Return type
