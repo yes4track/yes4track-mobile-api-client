@@ -49,6 +49,12 @@ class _$ImageUrlSerializer implements StructuredSerializer<ImageUrl> {
         ..add(serializers.serialize(object.userUpdated,
             specifiedType: const FullType(String)));
     }
+    if (object.version != null) {
+      result
+        ..add('version')
+        ..add(serializers.serialize(object.version,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.fileName != null) {
       result
         ..add('fileName')
@@ -101,6 +107,10 @@ class _$ImageUrlSerializer implements StructuredSerializer<ImageUrl> {
           result.userUpdated = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'version':
+          result.version = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'fileName':
           result.fileName = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -132,6 +142,8 @@ class _$ImageUrl extends ImageUrl {
   @override
   final String userUpdated;
   @override
+  final JsonObject version;
+  @override
   final String fileName;
   @override
   final String url;
@@ -147,6 +159,7 @@ class _$ImageUrl extends ImageUrl {
       this.updatedAt,
       this.userCreated,
       this.userUpdated,
+      this.version,
       this.fileName,
       this.url,
       this.sequence})
@@ -168,6 +181,7 @@ class _$ImageUrl extends ImageUrl {
         updatedAt == other.updatedAt &&
         userCreated == other.userCreated &&
         userUpdated == other.userUpdated &&
+        version == other.version &&
         fileName == other.fileName &&
         url == other.url &&
         sequence == other.sequence;
@@ -180,10 +194,12 @@ class _$ImageUrl extends ImageUrl {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, id.hashCode), createdAt.hashCode),
-                            updatedAt.hashCode),
-                        userCreated.hashCode),
-                    userUpdated.hashCode),
+                        $jc(
+                            $jc($jc($jc(0, id.hashCode), createdAt.hashCode),
+                                updatedAt.hashCode),
+                            userCreated.hashCode),
+                        userUpdated.hashCode),
+                    version.hashCode),
                 fileName.hashCode),
             url.hashCode),
         sequence.hashCode));
@@ -197,6 +213,7 @@ class _$ImageUrl extends ImageUrl {
           ..add('updatedAt', updatedAt)
           ..add('userCreated', userCreated)
           ..add('userUpdated', userUpdated)
+          ..add('version', version)
           ..add('fileName', fileName)
           ..add('url', url)
           ..add('sequence', sequence))
@@ -227,6 +244,10 @@ class ImageUrlBuilder implements Builder<ImageUrl, ImageUrlBuilder> {
   String get userUpdated => _$this._userUpdated;
   set userUpdated(String userUpdated) => _$this._userUpdated = userUpdated;
 
+  JsonObject _version;
+  JsonObject get version => _$this._version;
+  set version(JsonObject version) => _$this._version = version;
+
   String _fileName;
   String get fileName => _$this._fileName;
   set fileName(String fileName) => _$this._fileName = fileName;
@@ -250,6 +271,7 @@ class ImageUrlBuilder implements Builder<ImageUrl, ImageUrlBuilder> {
       _updatedAt = _$v.updatedAt;
       _userCreated = _$v.userCreated;
       _userUpdated = _$v.userUpdated;
+      _version = _$v.version;
       _fileName = _$v.fileName;
       _url = _$v.url;
       _sequence = _$v.sequence;
@@ -280,6 +302,7 @@ class ImageUrlBuilder implements Builder<ImageUrl, ImageUrlBuilder> {
             updatedAt: updatedAt,
             userCreated: userCreated,
             userUpdated: userUpdated,
+            version: version,
             fileName: fileName,
             url: url,
             sequence: sequence);

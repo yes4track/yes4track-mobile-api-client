@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **updatedAt** | [**DateTime**](DateTime.md) |  | [optional] 
 **userCreated** | **String** |  | [optional] 
 **userUpdated** | **String** |  | [optional] 
+**version** | [**JsonObject**](.md) |  | [optional] 
 **fileName** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 
 **sequence** | **int** |  | [optional] 

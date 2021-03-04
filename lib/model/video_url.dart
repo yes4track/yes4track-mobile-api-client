@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_import
 
+import 'package:built_value/json_object.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -31,6 +32,10 @@ abstract class VideoUrl implements Built<VideoUrl, VideoUrlBuilder> {
     @nullable
     @BuiltValueField(wireName: r'userUpdated')
     String get userUpdated;
+
+    @nullable
+    @BuiltValueField(wireName: r'version')
+    JsonObject get version;
 
     @nullable
     @BuiltValueField(wireName: r'fileName')

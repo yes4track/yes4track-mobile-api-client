@@ -492,7 +492,7 @@ class TrailApi {
     /// Add Chunck Trail GeoData
     ///
     /// 
-    Future<Response<PostTrailGeoDataResponse>> yes4trackV1TrailsIdGeodataChunckPost(
+    Future<Response<void>> yes4trackV1TrailsIdGeodataChunckPost(
         String id,
         PostTrailChunckGeoDataRequest postTrailChunckGeoDataRequest, { 
         String xApiKey,
@@ -550,24 +550,7 @@ class TrailApi {
             cancelToken: cancelToken,
             onSendProgress: onSendProgress,
             onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final serializer = _serializers.serializerForType(PostTrailGeoDataResponse) as Serializer<PostTrailGeoDataResponse>;
-            final data = _serializers.deserializeWith<PostTrailGeoDataResponse>(
-                serializer,
-                response.data is String ? jsonDecode(response.data as String) : response.data,
-            );
-
-            return Response<PostTrailGeoDataResponse>(
-                data: data,
-                headers: response.headers,
-                isRedirect: response.isRedirect,
-                request: response.request,
-                redirects: response.redirects,
-                statusCode: response.statusCode,
-                statusMessage: response.statusMessage,
-                extra: response.extra,
-            );
-        });
+        );
     }
 
     /// Create Trail GeoData

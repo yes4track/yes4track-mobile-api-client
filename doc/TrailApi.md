@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Trail id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0562a49e-822c-42f5-9be8-f5126c584fcd']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3dbd8c84-d17e-4dd9-b423-69a96d1ff173']
 
 ### Return type
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Trail id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd83b0d27-855b-41d0-91f6-6725031f9da5']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8dd5ca19-16f2-4787-acd4-b40c9de2743b']
 
 ### Return type
 
@@ -152,7 +152,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a3e29dac-4b0c-49e6-a3f8-328c4f027bb0']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8656dc73-6427-4efc-a027-f35f513ecc82']
 
 ### Return type
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e66f5417-a430-42c2-8b5a-dd1d84a6b79c']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '52b29fe2-6e1b-4d8c-b4ed-fe8dabc626c4']
 
 ### Return type
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Trail id | 
  **angelId** | [**String**](.md)| Angel id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '76a5502d-64da-4233-a25b-88bb14121866']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8c22417e-1652-4842-84b6-cc0e2159f7b5']
 
 ### Return type
 
@@ -313,7 +313,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Trail id | 
  **angelId** | [**String**](.md)| Angel id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4fe68168-8801-412c-ad29-3686bff9e378']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '68d088e9-f273-431e-b874-1820fc82a6b3']
 
 ### Return type
 
@@ -361,7 +361,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Trail id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '39e985ea-5c20-48d6-b6bb-b395f59a7d85']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '48f092d6-6547-4095-bb02-adc3edb03f6d']
 
 ### Return type
 
@@ -379,7 +379,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **yes4trackV1TrailsIdGeodataChunckPost**
-> PostTrailGeoDataResponse yes4trackV1TrailsIdGeodataChunckPost(id, postTrailChunckGeoDataRequest, xApiKey, xCsrfToken)
+> yes4trackV1TrailsIdGeodataChunckPost(id, postTrailChunckGeoDataRequest, xApiKey, xCsrfToken)
 
 Add Chunck Trail GeoData
 
@@ -398,8 +398,7 @@ var xApiKey = xApiKey_example; // String | Your Api Key
 var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    var result = api_instance.yes4trackV1TrailsIdGeodataChunckPost(id, postTrailChunckGeoDataRequest, xApiKey, xCsrfToken);
-    print(result);
+    api_instance.yes4trackV1TrailsIdGeodataChunckPost(id, postTrailChunckGeoDataRequest, xApiKey, xCsrfToken);
 } catch (e) {
     print('Exception when calling TrailApi->yes4trackV1TrailsIdGeodataChunckPost: $e\n');
 }
@@ -412,11 +411,11 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Trail Id | 
  **postTrailChunckGeoDataRequest** | [**PostTrailChunckGeoDataRequest**](PostTrailChunckGeoDataRequest.md)| Object Request | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '98864fad-fdab-40b8-ade3-293b0f4f77a5']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e75a8368-a827-4f6f-853a-f472877e4ece']
 
 ### Return type
 
-[**PostTrailGeoDataResponse**](PostTrailGeoDataResponse.md)
+void (empty response body)
 
 ### Authorization
 
@@ -461,7 +460,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Trail Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6d0f7984-0546-4bce-8c53-7e4abf3203c2']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '003bb528-f524-4df5-9179-77667f6d0e5c']
 
 ### Return type
 
@@ -513,7 +512,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Trail id | 
  **operation** | [**BuiltList<Operation>**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'b02b128a-74fb-4033-92c6-3c0e906b8fce']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '535e01d0-58fb-47d4-8008-0e6fdc24b802']
 
 ### Return type
 
@@ -562,7 +561,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Trail Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8cd03584-769e-4627-ae70-19b0452868ef']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '63dc3a28-0070-4b87-9c33-087018541033']
  **putTrailRequest** | [**PutTrailRequest**](PutTrailRequest.md)| Trail to update | [optional] 
 
 ### Return type
@@ -613,7 +612,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Trail id | 
  **sponsorId** | [**String**](.md)| Sponsor id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5013f696-c0e3-491c-aea6-c920aa939982']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'bea6ac2a-b3b0-4e0e-9269-ea70e8f13d69']
 
 ### Return type
 
@@ -663,7 +662,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Trail id | 
  **sponsorId** | [**String**](.md)| Sponsor id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'fae7059a-4795-467d-a233-51f0c9203cd6']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '53b780fc-9f33-42e9-b21a-444daf1ab6b9']
 
 ### Return type
 
@@ -711,7 +710,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'abf5e112-5be2-450d-9456-5322f8231c41']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '879c2291-e4e1-4f1e-92b6-74e5ec9d0533']
  **postTrailRequest** | [**PostTrailRequest**](PostTrailRequest.md)| Trail to create | [optional] 
 
 ### Return type
