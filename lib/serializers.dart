@@ -14,6 +14,7 @@ import 'package:built_value/json_object.dart';
 import 'package:built_value/standard_json_plugin.dart';
 
 import 'package:yes4track_mobile_api_client/model/action_type.dart';
+import 'package:yes4track_mobile_api_client/model/active_trail_response.dart';
 import 'package:yes4track_mobile_api_client/model/address.dart';
 import 'package:yes4track_mobile_api_client/model/adventure_response.dart';
 import 'package:yes4track_mobile_api_client/model/bson_binary_data.dart';
@@ -131,6 +132,7 @@ part 'serializers.g.dart';
 
 @SerializersFor(const [
   ActionType,
+  ActiveTrailResponse,
   Address,
   AdventureResponse,
   BsonBinaryData,
@@ -288,10 +290,6 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(Operation)]),
         () => ListBuilder<Operation>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(GetAllActiveTrailByAngelResponse)]),
-        () => ListBuilder<GetAllActiveTrailByAngelResponse>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(Operation)]),

@@ -2,6 +2,7 @@
 README.md
 analysis_options.yaml
 doc/ActionType.md
+doc/ActiveTrailResponse.md
 doc/Address.md
 doc/AdventureApi.md
 doc/AdventureResponse.md
@@ -141,6 +142,7 @@ lib/auth/auth.dart
 lib/auth/basic_auth.dart
 lib/auth/oauth.dart
 lib/model/action_type.dart
+lib/model/active_trail_response.dart
 lib/model/address.dart
 lib/model/adventure_response.dart
 lib/model/bson_binary_data.dart

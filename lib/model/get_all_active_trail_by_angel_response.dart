@@ -5,10 +5,9 @@
 
 // ignore_for_file: unused_import
 
-import 'package:yes4track_mobile_api_client/model/user_trail_status_response.dart';
-import 'package:yes4track_mobile_api_client/model/user_response.dart';
-import 'package:yes4track_mobile_api_client/model/trail_response.dart';
-import 'package:yes4track_mobile_api_client/model/adventure_response.dart';
+import 'package:yes4track_mobile_api_client/model/map_coordinate.dart';
+import 'package:built_collection/built_collection.dart';
+import 'package:yes4track_mobile_api_client/model/active_trail_response.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -17,21 +16,12 @@ part 'get_all_active_trail_by_angel_response.g.dart';
 abstract class GetAllActiveTrailByAngelResponse implements Built<GetAllActiveTrailByAngelResponse, GetAllActiveTrailByAngelResponseBuilder> {
 
     @nullable
-    @BuiltValueField(wireName: r'trail')
-    TrailResponse get trail;
+    @BuiltValueField(wireName: r'trails')
+    BuiltList<ActiveTrailResponse> get trails;
 
     @nullable
-    @BuiltValueField(wireName: r'user')
-    UserResponse get user;
-
-    @nullable
-    @BuiltValueField(wireName: r'adventure')
-    AdventureResponse get adventure;
-
-    @nullable
-    @BuiltValueField(wireName: r'status')
-    UserTrailStatusResponse get status;
-    // enum statusEnum {  1,  2,  3,  };
+    @BuiltValueField(wireName: r'mapCoordinate')
+    MapCoordinate get mapCoordinate;
 
     // Boilerplate code needed to wire-up generated code
     GetAllActiveTrailByAngelResponse._();

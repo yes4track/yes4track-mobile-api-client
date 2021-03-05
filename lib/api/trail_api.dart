@@ -162,7 +162,7 @@ class TrailApi {
     /// Get All Active Trail by Angel
     ///
     /// 
-    Future<Response<BuiltList<GetAllActiveTrailByAngelResponse>>> yes4trackV1TrailsActiveByAngelGet({ 
+    Future<Response<GetAllActiveTrailByAngelResponse>> yes4trackV1TrailsActiveByAngelGet({ 
         String xApiKey,
         String xCsrfToken,
         CancelToken cancelToken,
@@ -212,15 +212,13 @@ class TrailApi {
             onSendProgress: onSendProgress,
             onReceiveProgress: onReceiveProgress,
         ).then((response) {
-            const type = FullType(BuiltList, [FullType(GetAllActiveTrailByAngelResponse)]);
-            final data = _serializers.deserialize(
-                response.data is String
-                ? jsonDecode(response.data as String)
-                : response.data,
-                specifiedType: type,
-            ) as BuiltList<GetAllActiveTrailByAngelResponse>;
+            final serializer = _serializers.serializerForType(GetAllActiveTrailByAngelResponse) as Serializer<GetAllActiveTrailByAngelResponse>;
+            final data = _serializers.deserializeWith<GetAllActiveTrailByAngelResponse>(
+                serializer,
+                response.data is String ? jsonDecode(response.data as String) : response.data,
+            );
 
-            return Response<BuiltList<GetAllActiveTrailByAngelResponse>>(
+            return Response<GetAllActiveTrailByAngelResponse>(
                 data: data,
                 headers: response.headers,
                 isRedirect: response.isRedirect,

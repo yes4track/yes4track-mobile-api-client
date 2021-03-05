@@ -9,6 +9,7 @@ part of serializers;
 
 Serializers _$serializers = (new Serializers().toBuilder()
       ..add(ActionType.serializer)
+      ..add(ActiveTrailResponse.serializer)
       ..add(Address.serializer)
       ..add(AdventureResponse.serializer)
       ..add(BsonBinaryData.serializer)
@@ -121,6 +122,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(UserTrailStatusResponse.serializer)
       ..add(VideoUrl.serializer)
       ..add(WaypointType.serializer)
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(ActiveTrailResponse)]),
+          () => new ListBuilder<ActiveTrailResponse>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(BsonElement)]),
           () => new ListBuilder<BsonElement>())
