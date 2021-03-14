@@ -17,6 +17,10 @@ Name | Type | Description | Notes
 **email** | **String** |  | [optional] 
 **id** | **String** |  | [optional] 
 **profilePhoto** | [**ProfilePhotoRequest**](ProfilePhotoRequest.md) |  | [optional] 
+**isActive** | **bool** |  | [optional] 
+**isAdmin** | **bool** |  | [optional] 
+**isSuperAdmin** | **bool** |  | [optional] 
+**isAngel** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

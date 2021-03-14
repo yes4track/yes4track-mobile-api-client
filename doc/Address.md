@@ -16,7 +16,8 @@ Name | Type | Description | Notes
 **city** | **String** |  | [optional] 
 **state** | **String** |  | [optional] 
 **country** | **String** |  | [optional] 
-**location** | [**GeoJson2DGeographicCoordinatesGeoJsonPoint**](GeoJson2DGeographicCoordinatesGeoJsonPoint.md) |  | [optional] 
+**latitude** | **double** |  | [optional] 
+**longitude** | **double** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

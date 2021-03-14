@@ -52,6 +52,14 @@ abstract class PutExperienceRequest implements Built<PutExperienceRequest, PutEx
     @BuiltValueField(wireName: r'id')
     String get id;
 
+    @nullable
+    @BuiltValueField(wireName: r'isActive')
+    bool get isActive;
+
+    @nullable
+    @BuiltValueField(wireName: r'codeRequired')
+    bool get codeRequired;
+
     // Boilerplate code needed to wire-up generated code
     PutExperienceRequest._();
 

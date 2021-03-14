@@ -17,28 +17,8 @@ import 'package:yes4track_mobile_api_client/model/action_type.dart';
 import 'package:yes4track_mobile_api_client/model/active_trail_response.dart';
 import 'package:yes4track_mobile_api_client/model/address.dart';
 import 'package:yes4track_mobile_api_client/model/adventure_response.dart';
-import 'package:yes4track_mobile_api_client/model/bson_binary_data.dart';
-import 'package:yes4track_mobile_api_client/model/bson_binary_sub_type.dart';
-import 'package:yes4track_mobile_api_client/model/bson_date_time.dart';
-import 'package:yes4track_mobile_api_client/model/bson_element.dart';
-import 'package:yes4track_mobile_api_client/model/bson_java_script.dart';
-import 'package:yes4track_mobile_api_client/model/bson_java_script_with_scope.dart';
-import 'package:yes4track_mobile_api_client/model/bson_max_key.dart';
-import 'package:yes4track_mobile_api_client/model/bson_min_key.dart';
-import 'package:yes4track_mobile_api_client/model/bson_null.dart';
-import 'package:yes4track_mobile_api_client/model/bson_regular_expression.dart';
-import 'package:yes4track_mobile_api_client/model/bson_symbol.dart';
-import 'package:yes4track_mobile_api_client/model/bson_timestamp.dart';
-import 'package:yes4track_mobile_api_client/model/bson_type.dart';
-import 'package:yes4track_mobile_api_client/model/bson_undefined.dart';
-import 'package:yes4track_mobile_api_client/model/bson_value.dart';
 import 'package:yes4track_mobile_api_client/model/card_type.dart';
 import 'package:yes4track_mobile_api_client/model/error_details.dart';
-import 'package:yes4track_mobile_api_client/model/geo_json2_d_geographic_coordinates.dart';
-import 'package:yes4track_mobile_api_client/model/geo_json2_d_geographic_coordinates_geo_json_bounding_box.dart';
-import 'package:yes4track_mobile_api_client/model/geo_json2_d_geographic_coordinates_geo_json_point.dart';
-import 'package:yes4track_mobile_api_client/model/geo_json_coordinate_reference_system.dart';
-import 'package:yes4track_mobile_api_client/model/geo_json_object_type.dart';
 import 'package:yes4track_mobile_api_client/model/geo_location.dart';
 import 'package:yes4track_mobile_api_client/model/get_all_active_trail_by_angel_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_all_adventure_likes_response.dart';
@@ -65,11 +45,9 @@ import 'package:yes4track_mobile_api_client/model/get_all_trail_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_all_user_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_by_id_adventure_code_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_by_id_experience_code_response.dart';
-import 'package:yes4track_mobile_api_client/model/guid_representation.dart';
 import 'package:yes4track_mobile_api_client/model/image_url.dart';
 import 'package:yes4track_mobile_api_client/model/level_type.dart';
 import 'package:yes4track_mobile_api_client/model/map_coordinate.dart';
-import 'package:yes4track_mobile_api_client/model/object_id.dart';
 import 'package:yes4track_mobile_api_client/model/operation.dart';
 import 'package:yes4track_mobile_api_client/model/operation_type.dart';
 import 'package:yes4track_mobile_api_client/model/post_adventure_likes_response.dart';
@@ -113,11 +91,8 @@ import 'package:yes4track_mobile_api_client/model/put_track_statistic_request.da
 import 'package:yes4track_mobile_api_client/model/put_trail_request.dart';
 import 'package:yes4track_mobile_api_client/model/put_user_location_request.dart';
 import 'package:yes4track_mobile_api_client/model/put_user_request.dart';
-import 'package:yes4track_mobile_api_client/model/regex.dart';
-import 'package:yes4track_mobile_api_client/model/regex_options.dart';
 import 'package:yes4track_mobile_api_client/model/sponsor_contact.dart';
 import 'package:yes4track_mobile_api_client/model/statistic.dart';
-import 'package:yes4track_mobile_api_client/model/time_span.dart';
 import 'package:yes4track_mobile_api_client/model/track_geo_location_dto.dart';
 import 'package:yes4track_mobile_api_client/model/track_geo_location_waypoint_dto.dart';
 import 'package:yes4track_mobile_api_client/model/track_source.dart';
@@ -135,28 +110,8 @@ part 'serializers.g.dart';
   ActiveTrailResponse,
   Address,
   AdventureResponse,
-  BsonBinaryData,
-  BsonBinarySubType,
-  BsonDateTime,
-  BsonElement,
-  BsonJavaScript,
-  BsonJavaScriptWithScope,
-  BsonMaxKey,
-  BsonMinKey,
-  BsonNull,
-  BsonRegularExpression,
-  BsonSymbol,
-  BsonTimestamp,
-  BsonType,
-  BsonUndefined,
-  BsonValue,
   CardType,
   ErrorDetails,
-  GeoJson2DGeographicCoordinates,
-  GeoJson2DGeographicCoordinatesGeoJsonBoundingBox,
-  GeoJson2DGeographicCoordinatesGeoJsonPoint,
-  GeoJsonCoordinateReferenceSystem,
-  GeoJsonObjectType,
   GeoLocation,
   GetAllActiveTrailByAngelResponse,
   GetAllAdventureLikesResponse,
@@ -183,11 +138,9 @@ part 'serializers.g.dart';
   GetAllUserResponse,
   GetByIdAdventureCodeResponse,
   GetByIdExperienceCodeResponse,
-  GuidRepresentation,
   ImageUrl,
   LevelType,
   MapCoordinate,
-  ObjectId,
   Operation,
   OperationType,
   PostAdventureLikesResponse,
@@ -231,11 +184,8 @@ part 'serializers.g.dart';
   PutTrailRequest,
   PutUserLocationRequest,
   PutUserRequest,
-  Regex,
-  RegexOptions,
   SponsorContact,
   Statistic,
-  TimeSpan,
   TrackGeoLocationDto,
   TrackGeoLocationWaypointDto,
   TrackSource,

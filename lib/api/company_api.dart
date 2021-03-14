@@ -108,6 +108,7 @@ class CompanyApi {
         String fantasyName,
         String registrationNumber,
         String contactEmail,
+        String contactPhone,
         int page,
         int pageSize,
         String sort,
@@ -134,6 +135,7 @@ class CompanyApi {
         queryParams[r'fantasyName'] = fantasyName;
         queryParams[r'registrationNumber'] = registrationNumber;
         queryParams[r'contactEmail'] = contactEmail;
+        queryParams[r'contactPhone'] = contactPhone;
         queryParams[r'page'] = page;
         queryParams[r'pageSize'] = pageSize;
         queryParams[r'sort'] = sort;

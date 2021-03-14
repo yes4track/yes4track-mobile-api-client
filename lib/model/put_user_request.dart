@@ -49,6 +49,22 @@ abstract class PutUserRequest implements Built<PutUserRequest, PutUserRequestBui
     @BuiltValueField(wireName: r'profilePhoto')
     ProfilePhotoRequest get profilePhoto;
 
+    @nullable
+    @BuiltValueField(wireName: r'isActive')
+    bool get isActive;
+
+    @nullable
+    @BuiltValueField(wireName: r'isAdmin')
+    bool get isAdmin;
+
+    @nullable
+    @BuiltValueField(wireName: r'isSuperAdmin')
+    bool get isSuperAdmin;
+
+    @nullable
+    @BuiltValueField(wireName: r'isAngel')
+    bool get isAngel;
+
     // Boilerplate code needed to wire-up generated code
     PutUserRequest._();
 

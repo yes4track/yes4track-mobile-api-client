@@ -58,6 +58,14 @@ abstract class PutAdventureRequest implements Built<PutAdventureRequest, PutAdve
     @BuiltValueField(wireName: r'id')
     String get id;
 
+    @nullable
+    @BuiltValueField(wireName: r'codeRequired')
+    bool get codeRequired;
+
+    @nullable
+    @BuiltValueField(wireName: r'isActive')
+    bool get isActive;
+
     // Boilerplate code needed to wire-up generated code
     PutAdventureRequest._();
 

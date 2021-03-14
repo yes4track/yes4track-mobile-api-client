@@ -5,7 +5,6 @@
 
 // ignore_for_file: unused_import
 
-import 'package:yes4track_mobile_api_client/model/geo_json2_d_geographic_coordinates_geo_json_point.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -46,8 +45,12 @@ abstract class Address implements Built<Address, AddressBuilder> {
     String get country;
 
     @nullable
-    @BuiltValueField(wireName: r'location')
-    GeoJson2DGeographicCoordinatesGeoJsonPoint get location;
+    @BuiltValueField(wireName: r'latitude')
+    double get latitude;
+
+    @nullable
+    @BuiltValueField(wireName: r'longitude')
+    double get longitude;
 
     // Boilerplate code needed to wire-up generated code
     Address._();

@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Company id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '61faaad7-cbf9-4b47-a4c6-7242c0328531']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '300f2e4a-1b84-400b-bd0f-f897a63aa724']
 
 ### Return type
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **yes4trackV1CompaniesGet**
-> GetAllPagedCompanyResponse yes4trackV1CompaniesGet(legalName, fantasyName, registrationNumber, contactEmail, page, pageSize, sort, xApiKey, xCsrfToken)
+> GetAllPagedCompanyResponse yes4trackV1CompaniesGet(legalName, fantasyName, registrationNumber, contactEmail, contactPhone, page, pageSize, sort, xApiKey, xCsrfToken)
 
 Get All Company by filter with pagination
 
@@ -84,6 +84,7 @@ var legalName = legalName_example; // String |
 var fantasyName = fantasyName_example; // String | 
 var registrationNumber = registrationNumber_example; // String | 
 var contactEmail = contactEmail_example; // String | 
+var contactPhone = contactPhone_example; // String | 
 var page = 56; // int | 
 var pageSize = 56; // int | 
 var sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
@@ -91,7 +92,7 @@ var xApiKey = xApiKey_example; // String | Your Api Key
 var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    var result = api_instance.yes4trackV1CompaniesGet(legalName, fantasyName, registrationNumber, contactEmail, page, pageSize, sort, xApiKey, xCsrfToken);
+    var result = api_instance.yes4trackV1CompaniesGet(legalName, fantasyName, registrationNumber, contactEmail, contactPhone, page, pageSize, sort, xApiKey, xCsrfToken);
     print(result);
 } catch (e) {
     print('Exception when calling CompanyApi->yes4trackV1CompaniesGet: $e\n');
@@ -106,11 +107,12 @@ Name | Type | Description  | Notes
  **fantasyName** | **String**|  | [optional] 
  **registrationNumber** | **String**|  | [optional] 
  **contactEmail** | **String**|  | [optional] 
+ **contactPhone** | **String**|  | [optional] 
  **page** | **int**|  | [optional] 
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ef50fd54-8810-4a2e-b6ca-c59b042b9ed8']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6ccfe453-331e-45ce-8e70-cff989283a9c']
 
 ### Return type
 
@@ -158,7 +160,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Company id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '25a56b43-1d1e-4d31-b73c-51a5430ace8e']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '85917ae9-9e81-4025-a870-a2a73b270c20']
 
 ### Return type
 
@@ -208,7 +210,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Company id | 
  **operation** | [**BuiltList<Operation>**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '07bfcdf1-8b86-46d4-9e02-24e365f1cf8c']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '9b304765-04e2-4bf9-9e7c-d5d3852f1d59']
 
 ### Return type
 
@@ -257,7 +259,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Company Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '62f48031-a9f2-4212-a495-ae9bb9eca88e']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '10589767-97fa-4b2b-be3b-e6eb38aea9a7']
  **putCompanyRequest** | [**PutCompanyRequest**](PutCompanyRequest.md)| Company to update | [optional] 
 
 ### Return type
@@ -306,7 +308,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f1a6ef55-7af6-4ce9-a538-08d638577875']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6b68d6fd-ff4b-434c-969e-81103395a801']
  **postCompanyRequest** | [**PostCompanyRequest**](PostCompanyRequest.md)| Company to create | [optional] 
 
 ### Return type
