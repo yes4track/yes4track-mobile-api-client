@@ -91,6 +91,18 @@ class _$PutAdventureRequestSerializer
         ..add(serializers.serialize(object.id,
             specifiedType: const FullType(String)));
     }
+    if (object.codeRequired != null) {
+      result
+        ..add('codeRequired')
+        ..add(serializers.serialize(object.codeRequired,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.isActive != null) {
+      result
+        ..add('isActive')
+        ..add(serializers.serialize(object.isActive,
+            specifiedType: const FullType(bool)));
+    }
     return result;
   }
 
@@ -150,6 +162,14 @@ class _$PutAdventureRequestSerializer
           result.id = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'codeRequired':
+          result.codeRequired = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'isActive':
+          result.isActive = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
       }
     }
 
@@ -180,6 +200,10 @@ class _$PutAdventureRequest extends PutAdventureRequest {
   final DateTime effectiveEndDate;
   @override
   final String id;
+  @override
+  final bool codeRequired;
+  @override
+  final bool isActive;
 
   factory _$PutAdventureRequest(
           [void Function(PutAdventureRequestBuilder) updates]) =>
@@ -196,7 +220,9 @@ class _$PutAdventureRequest extends PutAdventureRequest {
       this.level,
       this.effectiveStartDate,
       this.effectiveEndDate,
-      this.id})
+      this.id,
+      this.codeRequired,
+      this.isActive})
       : super._();
 
   @override
@@ -222,7 +248,9 @@ class _$PutAdventureRequest extends PutAdventureRequest {
         level == other.level &&
         effectiveStartDate == other.effectiveStartDate &&
         effectiveEndDate == other.effectiveEndDate &&
-        id == other.id;
+        id == other.id &&
+        codeRequired == other.codeRequired &&
+        isActive == other.isActive;
   }
 
   @override
@@ -236,17 +264,21 @@ class _$PutAdventureRequest extends PutAdventureRequest {
                             $jc(
                                 $jc(
                                     $jc(
-                                        $jc($jc(0, createdAt.hashCode),
-                                            updatedAt.hashCode),
-                                        userCreated.hashCode),
-                                    userUpdated.hashCode),
-                                companyId.hashCode),
-                            name.hashCode),
-                        description.hashCode),
-                    level.hashCode),
-                effectiveStartDate.hashCode),
-            effectiveEndDate.hashCode),
-        id.hashCode));
+                                        $jc(
+                                            $jc(
+                                                $jc($jc(0, createdAt.hashCode),
+                                                    updatedAt.hashCode),
+                                                userCreated.hashCode),
+                                            userUpdated.hashCode),
+                                        companyId.hashCode),
+                                    name.hashCode),
+                                description.hashCode),
+                            level.hashCode),
+                        effectiveStartDate.hashCode),
+                    effectiveEndDate.hashCode),
+                id.hashCode),
+            codeRequired.hashCode),
+        isActive.hashCode));
   }
 
   @override
@@ -262,7 +294,9 @@ class _$PutAdventureRequest extends PutAdventureRequest {
           ..add('level', level)
           ..add('effectiveStartDate', effectiveStartDate)
           ..add('effectiveEndDate', effectiveEndDate)
-          ..add('id', id))
+          ..add('id', id)
+          ..add('codeRequired', codeRequired)
+          ..add('isActive', isActive))
         .toString();
   }
 }
@@ -317,6 +351,14 @@ class PutAdventureRequestBuilder
   String get id => _$this._id;
   set id(String id) => _$this._id = id;
 
+  bool _codeRequired;
+  bool get codeRequired => _$this._codeRequired;
+  set codeRequired(bool codeRequired) => _$this._codeRequired = codeRequired;
+
+  bool _isActive;
+  bool get isActive => _$this._isActive;
+  set isActive(bool isActive) => _$this._isActive = isActive;
+
   PutAdventureRequestBuilder() {
     PutAdventureRequest._initializeBuilder(this);
   }
@@ -334,6 +376,8 @@ class PutAdventureRequestBuilder
       _effectiveStartDate = _$v.effectiveStartDate;
       _effectiveEndDate = _$v.effectiveEndDate;
       _id = _$v.id;
+      _codeRequired = _$v.codeRequired;
+      _isActive = _$v.isActive;
       _$v = null;
     }
     return this;
@@ -366,7 +410,9 @@ class PutAdventureRequestBuilder
             level: level,
             effectiveStartDate: effectiveStartDate,
             effectiveEndDate: effectiveEndDate,
-            id: id);
+            id: id,
+            codeRequired: codeRequired,
+            isActive: isActive);
     replace(_$result);
     return _$result;
   }

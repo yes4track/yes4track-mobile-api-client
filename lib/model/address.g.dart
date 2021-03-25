@@ -67,12 +67,17 @@ class _$AddressSerializer implements StructuredSerializer<Address> {
         ..add(serializers.serialize(object.country,
             specifiedType: const FullType(String)));
     }
-    if (object.location != null) {
+    if (object.latitude != null) {
       result
-        ..add('location')
-        ..add(serializers.serialize(object.location,
-            specifiedType:
-                const FullType(GeoJson2DGeographicCoordinatesGeoJsonPoint)));
+        ..add('latitude')
+        ..add(serializers.serialize(object.latitude,
+            specifiedType: const FullType(double)));
+    }
+    if (object.longitude != null) {
+      result
+        ..add('longitude')
+        ..add(serializers.serialize(object.longitude,
+            specifiedType: const FullType(double)));
     }
     return result;
   }
@@ -120,11 +125,13 @@ class _$AddressSerializer implements StructuredSerializer<Address> {
           result.country = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
-        case 'location':
-          result.location.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      GeoJson2DGeographicCoordinatesGeoJsonPoint))
-              as GeoJson2DGeographicCoordinatesGeoJsonPoint);
+        case 'latitude':
+          result.latitude = serializers.deserialize(value,
+              specifiedType: const FullType(double)) as double;
+          break;
+        case 'longitude':
+          result.longitude = serializers.deserialize(value,
+              specifiedType: const FullType(double)) as double;
           break;
       }
     }
@@ -151,7 +158,9 @@ class _$Address extends Address {
   @override
   final String country;
   @override
-  final GeoJson2DGeographicCoordinatesGeoJsonPoint location;
+  final double latitude;
+  @override
+  final double longitude;
 
   factory _$Address([void Function(AddressBuilder) updates]) =>
       (new AddressBuilder()..update(updates)).build();
@@ -165,7 +174,8 @@ class _$Address extends Address {
       this.city,
       this.state,
       this.country,
-      this.location})
+      this.latitude,
+      this.longitude})
       : super._();
 
   @override
@@ -187,7 +197,8 @@ class _$Address extends Address {
         city == other.city &&
         state == other.state &&
         country == other.country &&
-        location == other.location;
+        latitude == other.latitude &&
+        longitude == other.longitude;
   }
 
   @override
@@ -198,14 +209,18 @@ class _$Address extends Address {
                 $jc(
                     $jc(
                         $jc(
-                            $jc($jc($jc(0, zipCode.hashCode), street.hashCode),
-                                number.hashCode),
-                            complement.hashCode),
-                        neighborhood.hashCode),
-                    city.hashCode),
-                state.hashCode),
-            country.hashCode),
-        location.hashCode));
+                            $jc(
+                                $jc(
+                                    $jc($jc(0, zipCode.hashCode),
+                                        street.hashCode),
+                                    number.hashCode),
+                                complement.hashCode),
+                            neighborhood.hashCode),
+                        city.hashCode),
+                    state.hashCode),
+                country.hashCode),
+            latitude.hashCode),
+        longitude.hashCode));
   }
 
   @override
@@ -219,7 +234,8 @@ class _$Address extends Address {
           ..add('city', city)
           ..add('state', state)
           ..add('country', country)
-          ..add('location', location))
+          ..add('latitude', latitude)
+          ..add('longitude', longitude))
         .toString();
   }
 }
@@ -259,12 +275,13 @@ class AddressBuilder implements Builder<Address, AddressBuilder> {
   String get country => _$this._country;
   set country(String country) => _$this._country = country;
 
-  GeoJson2DGeographicCoordinatesGeoJsonPointBuilder _location;
-  GeoJson2DGeographicCoordinatesGeoJsonPointBuilder get location =>
-      _$this._location ??=
-          new GeoJson2DGeographicCoordinatesGeoJsonPointBuilder();
-  set location(GeoJson2DGeographicCoordinatesGeoJsonPointBuilder location) =>
-      _$this._location = location;
+  double _latitude;
+  double get latitude => _$this._latitude;
+  set latitude(double latitude) => _$this._latitude = latitude;
+
+  double _longitude;
+  double get longitude => _$this._longitude;
+  set longitude(double longitude) => _$this._longitude = longitude;
 
   AddressBuilder() {
     Address._initializeBuilder(this);
@@ -280,7 +297,8 @@ class AddressBuilder implements Builder<Address, AddressBuilder> {
       _city = _$v.city;
       _state = _$v.state;
       _country = _$v.country;
-      _location = _$v.location?.toBuilder();
+      _latitude = _$v.latitude;
+      _longitude = _$v.longitude;
       _$v = null;
     }
     return this;
@@ -301,30 +319,18 @@ class AddressBuilder implements Builder<Address, AddressBuilder> {
 
   @override
   _$Address build() {
-    _$Address _$result;
-    try {
-      _$result = _$v ??
-          new _$Address._(
-              zipCode: zipCode,
-              street: street,
-              number: number,
-              complement: complement,
-              neighborhood: neighborhood,
-              city: city,
-              state: state,
-              country: country,
-              location: _location?.build());
-    } catch (_) {
-      String _$failedField;
-      try {
-        _$failedField = 'location';
-        _location?.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            'Address', _$failedField, e.toString());
-      }
-      rethrow;
-    }
+    final _$result = _$v ??
+        new _$Address._(
+            zipCode: zipCode,
+            street: street,
+            number: number,
+            complement: complement,
+            neighborhood: neighborhood,
+            city: city,
+            state: state,
+            country: country,
+            latitude: latitude,
+            longitude: longitude);
     replace(_$result);
     return _$result;
   }

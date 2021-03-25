@@ -75,6 +75,30 @@ class _$PutUserRequestSerializer
         ..add(serializers.serialize(object.profilePhoto,
             specifiedType: const FullType(ProfilePhotoRequest)));
     }
+    if (object.isActive != null) {
+      result
+        ..add('isActive')
+        ..add(serializers.serialize(object.isActive,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.isAdmin != null) {
+      result
+        ..add('isAdmin')
+        ..add(serializers.serialize(object.isAdmin,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.isSuperAdmin != null) {
+      result
+        ..add('isSuperAdmin')
+        ..add(serializers.serialize(object.isSuperAdmin,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.isAngel != null) {
+      result
+        ..add('isAngel')
+        ..add(serializers.serialize(object.isAngel,
+            specifiedType: const FullType(bool)));
+    }
     return result;
   }
 
@@ -127,6 +151,22 @@ class _$PutUserRequestSerializer
                   specifiedType: const FullType(ProfilePhotoRequest))
               as ProfilePhotoRequest);
           break;
+        case 'isActive':
+          result.isActive = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'isAdmin':
+          result.isAdmin = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'isSuperAdmin':
+          result.isSuperAdmin = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'isAngel':
+          result.isAngel = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
       }
     }
 
@@ -153,6 +193,14 @@ class _$PutUserRequest extends PutUserRequest {
   final String id;
   @override
   final ProfilePhotoRequest profilePhoto;
+  @override
+  final bool isActive;
+  @override
+  final bool isAdmin;
+  @override
+  final bool isSuperAdmin;
+  @override
+  final bool isAngel;
 
   factory _$PutUserRequest([void Function(PutUserRequestBuilder) updates]) =>
       (new PutUserRequestBuilder()..update(updates)).build();
@@ -166,7 +214,11 @@ class _$PutUserRequest extends PutUserRequest {
       this.phone,
       this.email,
       this.id,
-      this.profilePhoto})
+      this.profilePhoto,
+      this.isActive,
+      this.isAdmin,
+      this.isSuperAdmin,
+      this.isAngel})
       : super._();
 
   @override
@@ -189,7 +241,11 @@ class _$PutUserRequest extends PutUserRequest {
         phone == other.phone &&
         email == other.email &&
         id == other.id &&
-        profilePhoto == other.profilePhoto;
+        profilePhoto == other.profilePhoto &&
+        isActive == other.isActive &&
+        isAdmin == other.isAdmin &&
+        isSuperAdmin == other.isSuperAdmin &&
+        isAngel == other.isAngel;
   }
 
   @override
@@ -201,15 +257,23 @@ class _$PutUserRequest extends PutUserRequest {
                     $jc(
                         $jc(
                             $jc(
-                                $jc($jc(0, createdAt.hashCode),
-                                    updatedAt.hashCode),
-                                userCreated.hashCode),
-                            userUpdated.hashCode),
-                        name.hashCode),
-                    phone.hashCode),
-                email.hashCode),
-            id.hashCode),
-        profilePhoto.hashCode));
+                                $jc(
+                                    $jc(
+                                        $jc(
+                                            $jc(
+                                                $jc($jc(0, createdAt.hashCode),
+                                                    updatedAt.hashCode),
+                                                userCreated.hashCode),
+                                            userUpdated.hashCode),
+                                        name.hashCode),
+                                    phone.hashCode),
+                                email.hashCode),
+                            id.hashCode),
+                        profilePhoto.hashCode),
+                    isActive.hashCode),
+                isAdmin.hashCode),
+            isSuperAdmin.hashCode),
+        isAngel.hashCode));
   }
 
   @override
@@ -223,7 +287,11 @@ class _$PutUserRequest extends PutUserRequest {
           ..add('phone', phone)
           ..add('email', email)
           ..add('id', id)
-          ..add('profilePhoto', profilePhoto))
+          ..add('profilePhoto', profilePhoto)
+          ..add('isActive', isActive)
+          ..add('isAdmin', isAdmin)
+          ..add('isSuperAdmin', isSuperAdmin)
+          ..add('isAngel', isAngel))
         .toString();
   }
 }
@@ -270,6 +338,22 @@ class PutUserRequestBuilder
   set profilePhoto(ProfilePhotoRequestBuilder profilePhoto) =>
       _$this._profilePhoto = profilePhoto;
 
+  bool _isActive;
+  bool get isActive => _$this._isActive;
+  set isActive(bool isActive) => _$this._isActive = isActive;
+
+  bool _isAdmin;
+  bool get isAdmin => _$this._isAdmin;
+  set isAdmin(bool isAdmin) => _$this._isAdmin = isAdmin;
+
+  bool _isSuperAdmin;
+  bool get isSuperAdmin => _$this._isSuperAdmin;
+  set isSuperAdmin(bool isSuperAdmin) => _$this._isSuperAdmin = isSuperAdmin;
+
+  bool _isAngel;
+  bool get isAngel => _$this._isAngel;
+  set isAngel(bool isAngel) => _$this._isAngel = isAngel;
+
   PutUserRequestBuilder() {
     PutUserRequest._initializeBuilder(this);
   }
@@ -285,6 +369,10 @@ class PutUserRequestBuilder
       _email = _$v.email;
       _id = _$v.id;
       _profilePhoto = _$v.profilePhoto?.toBuilder();
+      _isActive = _$v.isActive;
+      _isAdmin = _$v.isAdmin;
+      _isSuperAdmin = _$v.isSuperAdmin;
+      _isAngel = _$v.isAngel;
       _$v = null;
     }
     return this;
@@ -317,7 +405,11 @@ class PutUserRequestBuilder
               phone: phone,
               email: email,
               id: id,
-              profilePhoto: _profilePhoto?.build());
+              profilePhoto: _profilePhoto?.build(),
+              isActive: isActive,
+              isAdmin: isAdmin,
+              isSuperAdmin: isSuperAdmin,
+              isAngel: isAngel);
     } catch (_) {
       String _$failedField;
       try {

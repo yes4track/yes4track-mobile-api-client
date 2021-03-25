@@ -85,6 +85,18 @@ class _$PutExperienceRequestSerializer
         ..add(serializers.serialize(object.id,
             specifiedType: const FullType(String)));
     }
+    if (object.isActive != null) {
+      result
+        ..add('isActive')
+        ..add(serializers.serialize(object.isActive,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.codeRequired != null) {
+      result
+        ..add('codeRequired')
+        ..add(serializers.serialize(object.codeRequired,
+            specifiedType: const FullType(bool)));
+    }
     return result;
   }
 
@@ -140,6 +152,14 @@ class _$PutExperienceRequestSerializer
           result.id = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'isActive':
+          result.isActive = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'codeRequired':
+          result.codeRequired = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
       }
     }
 
@@ -168,6 +188,10 @@ class _$PutExperienceRequest extends PutExperienceRequest {
   final DateTime effectiveEndDate;
   @override
   final String id;
+  @override
+  final bool isActive;
+  @override
+  final bool codeRequired;
 
   factory _$PutExperienceRequest(
           [void Function(PutExperienceRequestBuilder) updates]) =>
@@ -183,7 +207,9 @@ class _$PutExperienceRequest extends PutExperienceRequest {
       this.description,
       this.effectiveStartDate,
       this.effectiveEndDate,
-      this.id})
+      this.id,
+      this.isActive,
+      this.codeRequired})
       : super._();
 
   @override
@@ -208,7 +234,9 @@ class _$PutExperienceRequest extends PutExperienceRequest {
         description == other.description &&
         effectiveStartDate == other.effectiveStartDate &&
         effectiveEndDate == other.effectiveEndDate &&
-        id == other.id;
+        id == other.id &&
+        isActive == other.isActive &&
+        codeRequired == other.codeRequired;
   }
 
   @override
@@ -221,16 +249,20 @@ class _$PutExperienceRequest extends PutExperienceRequest {
                         $jc(
                             $jc(
                                 $jc(
-                                    $jc($jc(0, createdAt.hashCode),
-                                        updatedAt.hashCode),
-                                    userCreated.hashCode),
-                                userUpdated.hashCode),
-                            companyId.hashCode),
-                        name.hashCode),
-                    description.hashCode),
-                effectiveStartDate.hashCode),
-            effectiveEndDate.hashCode),
-        id.hashCode));
+                                    $jc(
+                                        $jc(
+                                            $jc($jc(0, createdAt.hashCode),
+                                                updatedAt.hashCode),
+                                            userCreated.hashCode),
+                                        userUpdated.hashCode),
+                                    companyId.hashCode),
+                                name.hashCode),
+                            description.hashCode),
+                        effectiveStartDate.hashCode),
+                    effectiveEndDate.hashCode),
+                id.hashCode),
+            isActive.hashCode),
+        codeRequired.hashCode));
   }
 
   @override
@@ -245,7 +277,9 @@ class _$PutExperienceRequest extends PutExperienceRequest {
           ..add('description', description)
           ..add('effectiveStartDate', effectiveStartDate)
           ..add('effectiveEndDate', effectiveEndDate)
-          ..add('id', id))
+          ..add('id', id)
+          ..add('isActive', isActive)
+          ..add('codeRequired', codeRequired))
         .toString();
   }
 }
@@ -296,6 +330,14 @@ class PutExperienceRequestBuilder
   String get id => _$this._id;
   set id(String id) => _$this._id = id;
 
+  bool _isActive;
+  bool get isActive => _$this._isActive;
+  set isActive(bool isActive) => _$this._isActive = isActive;
+
+  bool _codeRequired;
+  bool get codeRequired => _$this._codeRequired;
+  set codeRequired(bool codeRequired) => _$this._codeRequired = codeRequired;
+
   PutExperienceRequestBuilder() {
     PutExperienceRequest._initializeBuilder(this);
   }
@@ -312,6 +354,8 @@ class PutExperienceRequestBuilder
       _effectiveStartDate = _$v.effectiveStartDate;
       _effectiveEndDate = _$v.effectiveEndDate;
       _id = _$v.id;
+      _isActive = _$v.isActive;
+      _codeRequired = _$v.codeRequired;
       _$v = null;
     }
     return this;
@@ -343,7 +387,9 @@ class PutExperienceRequestBuilder
             description: description,
             effectiveStartDate: effectiveStartDate,
             effectiveEndDate: effectiveEndDate,
-            id: id);
+            id: id,
+            isActive: isActive,
+            codeRequired: codeRequired);
     replace(_$result);
     return _$result;
   }

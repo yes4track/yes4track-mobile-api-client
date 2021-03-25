@@ -12,28 +12,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(ActiveTrailResponse.serializer)
       ..add(Address.serializer)
       ..add(AdventureResponse.serializer)
-      ..add(BsonBinaryData.serializer)
-      ..add(BsonBinarySubType.serializer)
-      ..add(BsonDateTime.serializer)
-      ..add(BsonElement.serializer)
-      ..add(BsonJavaScript.serializer)
-      ..add(BsonJavaScriptWithScope.serializer)
-      ..add(BsonMaxKey.serializer)
-      ..add(BsonMinKey.serializer)
-      ..add(BsonNull.serializer)
-      ..add(BsonRegularExpression.serializer)
-      ..add(BsonSymbol.serializer)
-      ..add(BsonTimestamp.serializer)
-      ..add(BsonType.serializer)
-      ..add(BsonUndefined.serializer)
-      ..add(BsonValue.serializer)
       ..add(CardType.serializer)
       ..add(ErrorDetails.serializer)
-      ..add(GeoJson2DGeographicCoordinates.serializer)
-      ..add(GeoJson2DGeographicCoordinatesGeoJsonBoundingBox.serializer)
-      ..add(GeoJson2DGeographicCoordinatesGeoJsonPoint.serializer)
-      ..add(GeoJsonCoordinateReferenceSystem.serializer)
-      ..add(GeoJsonObjectType.serializer)
       ..add(GeoLocation.serializer)
       ..add(GetAllActiveTrailByAngelResponse.serializer)
       ..add(GetAllAdventureLikesResponse.serializer)
@@ -60,11 +40,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GetAllUserResponse.serializer)
       ..add(GetByIdAdventureCodeResponse.serializer)
       ..add(GetByIdExperienceCodeResponse.serializer)
-      ..add(GuidRepresentation.serializer)
       ..add(ImageUrl.serializer)
       ..add(LevelType.serializer)
       ..add(MapCoordinate.serializer)
-      ..add(ObjectId.serializer)
       ..add(Operation.serializer)
       ..add(OperationType.serializer)
       ..add(PostAdventureLikesResponse.serializer)
@@ -108,11 +86,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(PutTrailRequest.serializer)
       ..add(PutUserLocationRequest.serializer)
       ..add(PutUserRequest.serializer)
-      ..add(Regex.serializer)
-      ..add(RegexOptions.serializer)
       ..add(SponsorContact.serializer)
       ..add(Statistic.serializer)
-      ..add(TimeSpan.serializer)
       ..add(TrackGeoLocationDto.serializer)
       ..add(TrackGeoLocationWaypointDto.serializer)
       ..add(TrackSource.serializer)
@@ -126,84 +101,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(ActiveTrailResponse)]),
           () => new ListBuilder<ActiveTrailResponse>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BsonElement)]),
-          () => new ListBuilder<BsonElement>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BsonValue)]),
-          () => new ListBuilder<BsonValue>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BsonElement)]),
-          () => new ListBuilder<BsonElement>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BsonValue)]),
-          () => new ListBuilder<BsonValue>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BsonElement)]),
-          () => new ListBuilder<BsonElement>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BsonValue)]),
-          () => new ListBuilder<BsonValue>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BsonElement)]),
-          () => new ListBuilder<BsonElement>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BsonValue)]),
-          () => new ListBuilder<BsonValue>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BsonElement)]),
-          () => new ListBuilder<BsonElement>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BsonValue)]),
-          () => new ListBuilder<BsonValue>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BsonElement)]),
-          () => new ListBuilder<BsonElement>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BsonValue)]),
-          () => new ListBuilder<BsonValue>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BsonElement)]),
-          () => new ListBuilder<BsonElement>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BsonValue)]),
-          () => new ListBuilder<BsonValue>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BsonElement)]),
-          () => new ListBuilder<BsonElement>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BsonValue)]),
-          () => new ListBuilder<BsonValue>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BsonElement)]),
-          () => new ListBuilder<BsonElement>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BsonValue)]),
-          () => new ListBuilder<BsonValue>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BsonElement)]),
-          () => new ListBuilder<BsonElement>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BsonValue)]),
-          () => new ListBuilder<BsonValue>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BsonElement)]),
-          () => new ListBuilder<BsonElement>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BsonValue)]),
-          () => new ListBuilder<BsonValue>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BsonElement)]),
-          () => new ListBuilder<BsonElement>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BsonValue)]),
-          () => new ListBuilder<BsonValue>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BsonElement)]),
-          () => new ListBuilder<BsonElement>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BsonElement)]),
-          () => new ListBuilder<BsonElement>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(GetAllAdventureLikesResponse)]),
@@ -307,9 +204,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(TrailGeoDataRequest)]),
           () => new ListBuilder<TrailGeoDataRequest>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(double)]),
-          () => new ListBuilder<double>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(double)]),
           () => new ListBuilder<double>()))
