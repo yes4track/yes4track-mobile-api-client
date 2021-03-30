@@ -19,6 +19,42 @@ class _$AddressSerializer implements StructuredSerializer<Address> {
   Iterable<Object> serialize(Serializers serializers, Address object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[];
+    if (object.id != null) {
+      result
+        ..add('id')
+        ..add(serializers.serialize(object.id,
+            specifiedType: const FullType(String)));
+    }
+    if (object.createdAt != null) {
+      result
+        ..add('createdAt')
+        ..add(serializers.serialize(object.createdAt,
+            specifiedType: const FullType(DateTime)));
+    }
+    if (object.updatedAt != null) {
+      result
+        ..add('updatedAt')
+        ..add(serializers.serialize(object.updatedAt,
+            specifiedType: const FullType(DateTime)));
+    }
+    if (object.userCreated != null) {
+      result
+        ..add('userCreated')
+        ..add(serializers.serialize(object.userCreated,
+            specifiedType: const FullType(String)));
+    }
+    if (object.userUpdated != null) {
+      result
+        ..add('userUpdated')
+        ..add(serializers.serialize(object.userUpdated,
+            specifiedType: const FullType(String)));
+    }
+    if (object.version != null) {
+      result
+        ..add('version')
+        ..add(serializers.serialize(object.version,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.zipCode != null) {
       result
         ..add('zipCode')
@@ -93,6 +129,30 @@ class _$AddressSerializer implements StructuredSerializer<Address> {
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'createdAt':
+          result.createdAt = serializers.deserialize(value,
+              specifiedType: const FullType(DateTime)) as DateTime;
+          break;
+        case 'updatedAt':
+          result.updatedAt = serializers.deserialize(value,
+              specifiedType: const FullType(DateTime)) as DateTime;
+          break;
+        case 'userCreated':
+          result.userCreated = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'userUpdated':
+          result.userUpdated = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'version':
+          result.version = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'zipCode':
           result.zipCode = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -142,6 +202,18 @@ class _$AddressSerializer implements StructuredSerializer<Address> {
 
 class _$Address extends Address {
   @override
+  final String id;
+  @override
+  final DateTime createdAt;
+  @override
+  final DateTime updatedAt;
+  @override
+  final String userCreated;
+  @override
+  final String userUpdated;
+  @override
+  final JsonObject version;
+  @override
   final String zipCode;
   @override
   final String street;
@@ -166,7 +238,13 @@ class _$Address extends Address {
       (new AddressBuilder()..update(updates)).build();
 
   _$Address._(
-      {this.zipCode,
+      {this.id,
+      this.createdAt,
+      this.updatedAt,
+      this.userCreated,
+      this.userUpdated,
+      this.version,
+      this.zipCode,
       this.street,
       this.number,
       this.complement,
@@ -189,6 +267,12 @@ class _$Address extends Address {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is Address &&
+        id == other.id &&
+        createdAt == other.createdAt &&
+        updatedAt == other.updatedAt &&
+        userCreated == other.userCreated &&
+        userUpdated == other.userUpdated &&
+        version == other.version &&
         zipCode == other.zipCode &&
         street == other.street &&
         number == other.number &&
@@ -211,7 +295,24 @@ class _$Address extends Address {
                         $jc(
                             $jc(
                                 $jc(
-                                    $jc($jc(0, zipCode.hashCode),
+                                    $jc(
+                                        $jc(
+                                            $jc(
+                                                $jc(
+                                                    $jc(
+                                                        $jc(
+                                                            $jc(
+                                                                $jc(
+                                                                    0,
+                                                                    id
+                                                                        .hashCode),
+                                                                createdAt
+                                                                    .hashCode),
+                                                            updatedAt.hashCode),
+                                                        userCreated.hashCode),
+                                                    userUpdated.hashCode),
+                                                version.hashCode),
+                                            zipCode.hashCode),
                                         street.hashCode),
                                     number.hashCode),
                                 complement.hashCode),
@@ -226,6 +327,12 @@ class _$Address extends Address {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('Address')
+          ..add('id', id)
+          ..add('createdAt', createdAt)
+          ..add('updatedAt', updatedAt)
+          ..add('userCreated', userCreated)
+          ..add('userUpdated', userUpdated)
+          ..add('version', version)
           ..add('zipCode', zipCode)
           ..add('street', street)
           ..add('number', number)
@@ -242,6 +349,30 @@ class _$Address extends Address {
 
 class AddressBuilder implements Builder<Address, AddressBuilder> {
   _$Address _$v;
+
+  String _id;
+  String get id => _$this._id;
+  set id(String id) => _$this._id = id;
+
+  DateTime _createdAt;
+  DateTime get createdAt => _$this._createdAt;
+  set createdAt(DateTime createdAt) => _$this._createdAt = createdAt;
+
+  DateTime _updatedAt;
+  DateTime get updatedAt => _$this._updatedAt;
+  set updatedAt(DateTime updatedAt) => _$this._updatedAt = updatedAt;
+
+  String _userCreated;
+  String get userCreated => _$this._userCreated;
+  set userCreated(String userCreated) => _$this._userCreated = userCreated;
+
+  String _userUpdated;
+  String get userUpdated => _$this._userUpdated;
+  set userUpdated(String userUpdated) => _$this._userUpdated = userUpdated;
+
+  JsonObject _version;
+  JsonObject get version => _$this._version;
+  set version(JsonObject version) => _$this._version = version;
 
   String _zipCode;
   String get zipCode => _$this._zipCode;
@@ -289,6 +420,12 @@ class AddressBuilder implements Builder<Address, AddressBuilder> {
 
   AddressBuilder get _$this {
     if (_$v != null) {
+      _id = _$v.id;
+      _createdAt = _$v.createdAt;
+      _updatedAt = _$v.updatedAt;
+      _userCreated = _$v.userCreated;
+      _userUpdated = _$v.userUpdated;
+      _version = _$v.version;
       _zipCode = _$v.zipCode;
       _street = _$v.street;
       _number = _$v.number;
@@ -321,6 +458,12 @@ class AddressBuilder implements Builder<Address, AddressBuilder> {
   _$Address build() {
     final _$result = _$v ??
         new _$Address._(
+            id: id,
+            createdAt: createdAt,
+            updatedAt: updatedAt,
+            userCreated: userCreated,
+            userUpdated: userUpdated,
+            version: version,
             zipCode: zipCode,
             street: street,
             number: number,

@@ -89,6 +89,24 @@ class _$PostTrailResponseSerializer
             specifiedType:
                 const FullType(BuiltList, const [const FullType(String)])));
     }
+    if (object.adventureName != null) {
+      result
+        ..add('adventureName')
+        ..add(serializers.serialize(object.adventureName,
+            specifiedType: const FullType(String)));
+    }
+    if (object.adventureLevel != null) {
+      result
+        ..add('adventureLevel')
+        ..add(serializers.serialize(object.adventureLevel,
+            specifiedType: const FullType(LevelType)));
+    }
+    if (object.photoUrl != null) {
+      result
+        ..add('photoUrl')
+        ..add(serializers.serialize(object.photoUrl,
+            specifiedType: const FullType(String)));
+    }
     return result;
   }
 
@@ -152,6 +170,18 @@ class _$PostTrailResponseSerializer
                       const FullType(BuiltList, const [const FullType(String)]))
               as BuiltList<Object>);
           break;
+        case 'adventureName':
+          result.adventureName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'adventureLevel':
+          result.adventureLevel = serializers.deserialize(value,
+              specifiedType: const FullType(LevelType)) as LevelType;
+          break;
+        case 'photoUrl':
+          result.photoUrl = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -182,6 +212,12 @@ class _$PostTrailResponse extends PostTrailResponse {
   final BuiltList<String> sponsors;
   @override
   final BuiltList<String> angels;
+  @override
+  final String adventureName;
+  @override
+  final LevelType adventureLevel;
+  @override
+  final String photoUrl;
 
   factory _$PostTrailResponse(
           [void Function(PostTrailResponseBuilder) updates]) =>
@@ -198,7 +234,10 @@ class _$PostTrailResponse extends PostTrailResponse {
       this.endDate,
       this.id,
       this.sponsors,
-      this.angels})
+      this.angels,
+      this.adventureName,
+      this.adventureLevel,
+      this.photoUrl})
       : super._();
 
   @override
@@ -223,7 +262,10 @@ class _$PostTrailResponse extends PostTrailResponse {
         endDate == other.endDate &&
         id == other.id &&
         sponsors == other.sponsors &&
-        angels == other.angels;
+        angels == other.angels &&
+        adventureName == other.adventureName &&
+        adventureLevel == other.adventureLevel &&
+        photoUrl == other.photoUrl;
   }
 
   @override
@@ -237,17 +279,25 @@ class _$PostTrailResponse extends PostTrailResponse {
                             $jc(
                                 $jc(
                                     $jc(
-                                        $jc($jc(0, createdAt.hashCode),
-                                            updatedAt.hashCode),
-                                        userCreated.hashCode),
-                                    userUpdated.hashCode),
-                                adventureId.hashCode),
-                            name.hashCode),
-                        startDate.hashCode),
-                    endDate.hashCode),
-                id.hashCode),
-            sponsors.hashCode),
-        angels.hashCode));
+                                        $jc(
+                                            $jc(
+                                                $jc(
+                                                    $jc(
+                                                        $jc(0,
+                                                            createdAt.hashCode),
+                                                        updatedAt.hashCode),
+                                                    userCreated.hashCode),
+                                                userUpdated.hashCode),
+                                            adventureId.hashCode),
+                                        name.hashCode),
+                                    startDate.hashCode),
+                                endDate.hashCode),
+                            id.hashCode),
+                        sponsors.hashCode),
+                    angels.hashCode),
+                adventureName.hashCode),
+            adventureLevel.hashCode),
+        photoUrl.hashCode));
   }
 
   @override
@@ -263,7 +313,10 @@ class _$PostTrailResponse extends PostTrailResponse {
           ..add('endDate', endDate)
           ..add('id', id)
           ..add('sponsors', sponsors)
-          ..add('angels', angels))
+          ..add('angels', angels)
+          ..add('adventureName', adventureName)
+          ..add('adventureLevel', adventureLevel)
+          ..add('photoUrl', photoUrl))
         .toString();
   }
 }
@@ -318,6 +371,20 @@ class PostTrailResponseBuilder
       _$this._angels ??= new ListBuilder<String>();
   set angels(ListBuilder<String> angels) => _$this._angels = angels;
 
+  String _adventureName;
+  String get adventureName => _$this._adventureName;
+  set adventureName(String adventureName) =>
+      _$this._adventureName = adventureName;
+
+  LevelType _adventureLevel;
+  LevelType get adventureLevel => _$this._adventureLevel;
+  set adventureLevel(LevelType adventureLevel) =>
+      _$this._adventureLevel = adventureLevel;
+
+  String _photoUrl;
+  String get photoUrl => _$this._photoUrl;
+  set photoUrl(String photoUrl) => _$this._photoUrl = photoUrl;
+
   PostTrailResponseBuilder() {
     PostTrailResponse._initializeBuilder(this);
   }
@@ -335,6 +402,9 @@ class PostTrailResponseBuilder
       _id = _$v.id;
       _sponsors = _$v.sponsors?.toBuilder();
       _angels = _$v.angels?.toBuilder();
+      _adventureName = _$v.adventureName;
+      _adventureLevel = _$v.adventureLevel;
+      _photoUrl = _$v.photoUrl;
       _$v = null;
     }
     return this;
@@ -369,7 +439,10 @@ class PostTrailResponseBuilder
               endDate: endDate,
               id: id,
               sponsors: _sponsors?.build(),
-              angels: _angels?.build());
+              angels: _angels?.build(),
+              adventureName: adventureName,
+              adventureLevel: adventureLevel,
+              photoUrl: photoUrl);
     } catch (_) {
       String _$failedField;
       try {

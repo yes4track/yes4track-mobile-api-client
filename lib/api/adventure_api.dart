@@ -262,6 +262,7 @@ class AdventureApi {
         String description,
         LevelType level,
         bool codeRequired,
+        bool isActive,
         int page,
         int pageSize,
         String sort,
@@ -289,6 +290,7 @@ class AdventureApi {
         queryParams[r'description'] = description;
         queryParams[r'level'] = level;
         queryParams[r'codeRequired'] = codeRequired;
+        queryParams[r'isActive'] = isActive;
         queryParams[r'page'] = page;
         queryParams[r'pageSize'] = pageSize;
         queryParams[r'sort'] = sort;

@@ -8,6 +8,7 @@
 import 'package:yes4track_mobile_api_client/model/video_url.dart';
 import 'package:yes4track_mobile_api_client/model/image_url.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:yes4track_mobile_api_client/model/address.dart';
 import 'package:yes4track_mobile_api_client/model/level_type.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -84,6 +85,10 @@ abstract class GetAllAdventureResponse implements Built<GetAllAdventureResponse,
     @nullable
     @BuiltValueField(wireName: r'experiences')
     BuiltList<String> get experiences;
+
+    @nullable
+    @BuiltValueField(wireName: r'address')
+    Address get address;
 
     // Boilerplate code needed to wire-up generated code
     GetAllAdventureResponse._();

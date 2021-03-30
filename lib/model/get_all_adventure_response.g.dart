@@ -130,6 +130,12 @@ class _$GetAllAdventureResponseSerializer
             specifiedType:
                 const FullType(BuiltList, const [const FullType(String)])));
     }
+    if (object.address != null) {
+      result
+        ..add('address')
+        ..add(serializers.serialize(object.address,
+            specifiedType: const FullType(Address)));
+    }
     return result;
   }
 
@@ -219,6 +225,10 @@ class _$GetAllAdventureResponseSerializer
                       const FullType(BuiltList, const [const FullType(String)]))
               as BuiltList<Object>);
           break;
+        case 'address':
+          result.address.replace(serializers.deserialize(value,
+              specifiedType: const FullType(Address)) as Address);
+          break;
       }
     }
 
@@ -261,6 +271,8 @@ class _$GetAllAdventureResponse extends GetAllAdventureResponse {
   final bool isActive;
   @override
   final BuiltList<String> experiences;
+  @override
+  final Address address;
 
   factory _$GetAllAdventureResponse(
           [void Function(GetAllAdventureResponseBuilder) updates]) =>
@@ -283,7 +295,8 @@ class _$GetAllAdventureResponse extends GetAllAdventureResponse {
       this.videosUrl,
       this.codeRequired,
       this.isActive,
-      this.experiences})
+      this.experiences,
+      this.address})
       : super._();
 
   @override
@@ -315,7 +328,8 @@ class _$GetAllAdventureResponse extends GetAllAdventureResponse {
         videosUrl == other.videosUrl &&
         codeRequired == other.codeRequired &&
         isActive == other.isActive &&
-        experiences == other.experiences;
+        experiences == other.experiences &&
+        address == other.address;
   }
 
   @override
@@ -337,28 +351,30 @@ class _$GetAllAdventureResponse extends GetAllAdventureResponse {
                                                             $jc(
                                                                 $jc(
                                                                     $jc(
-                                                                        0,
-                                                                        createdAt
+                                                                        $jc(
+                                                                            0,
+                                                                            createdAt
+                                                                                .hashCode),
+                                                                        updatedAt
                                                                             .hashCode),
-                                                                    updatedAt
+                                                                    userCreated
                                                                         .hashCode),
-                                                                userCreated
+                                                                userUpdated
                                                                     .hashCode),
-                                                            userUpdated
-                                                                .hashCode),
-                                                        companyId.hashCode),
-                                                    name.hashCode),
-                                                description.hashCode),
-                                            level.hashCode),
-                                        effectiveStartDate.hashCode),
-                                    effectiveEndDate.hashCode),
-                                id.hashCode),
-                            likes.hashCode),
-                        imagesUrl.hashCode),
-                    videosUrl.hashCode),
-                codeRequired.hashCode),
-            isActive.hashCode),
-        experiences.hashCode));
+                                                            companyId.hashCode),
+                                                        name.hashCode),
+                                                    description.hashCode),
+                                                level.hashCode),
+                                            effectiveStartDate.hashCode),
+                                        effectiveEndDate.hashCode),
+                                    id.hashCode),
+                                likes.hashCode),
+                            imagesUrl.hashCode),
+                        videosUrl.hashCode),
+                    codeRequired.hashCode),
+                isActive.hashCode),
+            experiences.hashCode),
+        address.hashCode));
   }
 
   @override
@@ -380,7 +396,8 @@ class _$GetAllAdventureResponse extends GetAllAdventureResponse {
           ..add('videosUrl', videosUrl)
           ..add('codeRequired', codeRequired)
           ..add('isActive', isActive)
-          ..add('experiences', experiences))
+          ..add('experiences', experiences)
+          ..add('address', address))
         .toString();
   }
 }
@@ -466,6 +483,10 @@ class GetAllAdventureResponseBuilder
   set experiences(ListBuilder<String> experiences) =>
       _$this._experiences = experiences;
 
+  AddressBuilder _address;
+  AddressBuilder get address => _$this._address ??= new AddressBuilder();
+  set address(AddressBuilder address) => _$this._address = address;
+
   GetAllAdventureResponseBuilder() {
     GetAllAdventureResponse._initializeBuilder(this);
   }
@@ -489,6 +510,7 @@ class GetAllAdventureResponseBuilder
       _codeRequired = _$v.codeRequired;
       _isActive = _$v.isActive;
       _experiences = _$v.experiences?.toBuilder();
+      _address = _$v.address?.toBuilder();
       _$v = null;
     }
     return this;
@@ -529,7 +551,8 @@ class GetAllAdventureResponseBuilder
               videosUrl: _videosUrl?.build(),
               codeRequired: codeRequired,
               isActive: isActive,
-              experiences: _experiences?.build());
+              experiences: _experiences?.build(),
+              address: _address?.build());
     } catch (_) {
       String _$failedField;
       try {
@@ -540,6 +563,8 @@ class GetAllAdventureResponseBuilder
 
         _$failedField = 'experiences';
         _experiences?.build();
+        _$failedField = 'address';
+        _address?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'GetAllAdventureResponse', _$failedField, e.toString());

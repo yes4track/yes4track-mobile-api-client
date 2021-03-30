@@ -21,11 +21,11 @@ import 'package:yes4track_mobile_api_client/model/post_post_user_resend_code_req
 import 'package:yes4track_mobile_api_client/model/get_all_user_response.dart';
 import 'package:yes4track_mobile_api_client/model/error_details.dart';
 import 'package:yes4track_mobile_api_client/model/get_all_paged_user_response.dart';
+import 'package:yes4track_mobile_api_client/model/post_user_sign_in_response.dart';
 import 'package:yes4track_mobile_api_client/model/operation.dart';
 import 'package:yes4track_mobile_api_client/model/post_user_access_token_response.dart';
 import 'package:yes4track_mobile_api_client/model/put_user_request.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:built_value/json_object.dart';
 
 class UserApi {
 

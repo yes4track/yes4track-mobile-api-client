@@ -50,6 +50,24 @@ class _$TrailResponseSerializer implements StructuredSerializer<TrailResponse> {
         ..add(serializers.serialize(object.statistic,
             specifiedType: const FullType(Statistic)));
     }
+    if (object.adventureName != null) {
+      result
+        ..add('adventureName')
+        ..add(serializers.serialize(object.adventureName,
+            specifiedType: const FullType(String)));
+    }
+    if (object.adventureLevel != null) {
+      result
+        ..add('adventureLevel')
+        ..add(serializers.serialize(object.adventureLevel,
+            specifiedType: const FullType(LevelType)));
+    }
+    if (object.photoUrl != null) {
+      result
+        ..add('photoUrl')
+        ..add(serializers.serialize(object.photoUrl,
+            specifiedType: const FullType(String)));
+    }
     return result;
   }
 
@@ -85,6 +103,18 @@ class _$TrailResponseSerializer implements StructuredSerializer<TrailResponse> {
           result.statistic.replace(serializers.deserialize(value,
               specifiedType: const FullType(Statistic)) as Statistic);
           break;
+        case 'adventureName':
+          result.adventureName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'adventureLevel':
+          result.adventureLevel = serializers.deserialize(value,
+              specifiedType: const FullType(LevelType)) as LevelType;
+          break;
+        case 'photoUrl':
+          result.photoUrl = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -103,12 +133,25 @@ class _$TrailResponse extends TrailResponse {
   final DateTime startDate;
   @override
   final Statistic statistic;
+  @override
+  final String adventureName;
+  @override
+  final LevelType adventureLevel;
+  @override
+  final String photoUrl;
 
   factory _$TrailResponse([void Function(TrailResponseBuilder) updates]) =>
       (new TrailResponseBuilder()..update(updates)).build();
 
   _$TrailResponse._(
-      {this.id, this.adventureId, this.name, this.startDate, this.statistic})
+      {this.id,
+      this.adventureId,
+      this.name,
+      this.startDate,
+      this.statistic,
+      this.adventureName,
+      this.adventureLevel,
+      this.photoUrl})
       : super._();
 
   @override
@@ -126,15 +169,26 @@ class _$TrailResponse extends TrailResponse {
         adventureId == other.adventureId &&
         name == other.name &&
         startDate == other.startDate &&
-        statistic == other.statistic;
+        statistic == other.statistic &&
+        adventureName == other.adventureName &&
+        adventureLevel == other.adventureLevel &&
+        photoUrl == other.photoUrl;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc($jc(0, id.hashCode), adventureId.hashCode), name.hashCode),
-            startDate.hashCode),
-        statistic.hashCode));
+        $jc(
+            $jc(
+                $jc(
+                    $jc(
+                        $jc($jc($jc(0, id.hashCode), adventureId.hashCode),
+                            name.hashCode),
+                        startDate.hashCode),
+                    statistic.hashCode),
+                adventureName.hashCode),
+            adventureLevel.hashCode),
+        photoUrl.hashCode));
   }
 
   @override
@@ -144,7 +198,10 @@ class _$TrailResponse extends TrailResponse {
           ..add('adventureId', adventureId)
           ..add('name', name)
           ..add('startDate', startDate)
-          ..add('statistic', statistic))
+          ..add('statistic', statistic)
+          ..add('adventureName', adventureName)
+          ..add('adventureLevel', adventureLevel)
+          ..add('photoUrl', photoUrl))
         .toString();
   }
 }
@@ -174,6 +231,20 @@ class TrailResponseBuilder
       _$this._statistic ??= new StatisticBuilder();
   set statistic(StatisticBuilder statistic) => _$this._statistic = statistic;
 
+  String _adventureName;
+  String get adventureName => _$this._adventureName;
+  set adventureName(String adventureName) =>
+      _$this._adventureName = adventureName;
+
+  LevelType _adventureLevel;
+  LevelType get adventureLevel => _$this._adventureLevel;
+  set adventureLevel(LevelType adventureLevel) =>
+      _$this._adventureLevel = adventureLevel;
+
+  String _photoUrl;
+  String get photoUrl => _$this._photoUrl;
+  set photoUrl(String photoUrl) => _$this._photoUrl = photoUrl;
+
   TrailResponseBuilder() {
     TrailResponse._initializeBuilder(this);
   }
@@ -185,6 +256,9 @@ class TrailResponseBuilder
       _name = _$v.name;
       _startDate = _$v.startDate;
       _statistic = _$v.statistic?.toBuilder();
+      _adventureName = _$v.adventureName;
+      _adventureLevel = _$v.adventureLevel;
+      _photoUrl = _$v.photoUrl;
       _$v = null;
     }
     return this;
@@ -213,7 +287,10 @@ class TrailResponseBuilder
               adventureId: adventureId,
               name: name,
               startDate: startDate,
-              statistic: _statistic?.build());
+              statistic: _statistic?.build(),
+              adventureName: adventureName,
+              adventureLevel: adventureLevel,
+              photoUrl: photoUrl);
     } catch (_) {
       String _$failedField;
       try {

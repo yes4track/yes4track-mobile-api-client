@@ -79,6 +79,7 @@ import 'package:yes4track_mobile_api_client/model/post_user_request.dart';
 import 'package:yes4track_mobile_api_client/model/post_user_response.dart';
 import 'package:yes4track_mobile_api_client/model/post_user_setup_angel_request.dart';
 import 'package:yes4track_mobile_api_client/model/post_user_sign_in_request.dart';
+import 'package:yes4track_mobile_api_client/model/post_user_sign_in_response.dart';
 import 'package:yes4track_mobile_api_client/model/profile_photo_request.dart';
 import 'package:yes4track_mobile_api_client/model/put_adventure_request.dart';
 import 'package:yes4track_mobile_api_client/model/put_card_request.dart';
@@ -172,6 +173,7 @@ part 'serializers.g.dart';
   PostUserResponse,
   PostUserSetupAngelRequest,
   PostUserSignInRequest,
+  PostUserSignInResponse,
   ProfilePhotoRequest,
   PutAdventureRequest,
   PutCardRequest,

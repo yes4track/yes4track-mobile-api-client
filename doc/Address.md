@@ -8,6 +8,12 @@ import 'package:yes4track_mobile_api_client/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **String** |  | [optional] 
+**createdAt** | [**DateTime**](DateTime.md) |  | [optional] 
+**updatedAt** | [**DateTime**](DateTime.md) |  | [optional] 
+**userCreated** | **String** |  | [optional] 
+**userUpdated** | **String** |  | [optional] 
+**version** | [**JsonObject**](.md) |  | [optional] 
 **zipCode** | **String** |  | [optional] 
 **street** | **String** |  | [optional] 
 **number** | **String** |  | [optional] 

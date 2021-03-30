@@ -13,6 +13,9 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **startDate** | [**DateTime**](DateTime.md) |  | [optional] 
 **statistic** | [**Statistic**](Statistic.md) |  | [optional] 
+**adventureName** | **String** |  | [optional] 
+**adventureLevel** | [**LevelType**](LevelType.md) |  | [optional] 
+**photoUrl** | **String** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

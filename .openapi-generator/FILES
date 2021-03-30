@@ -72,6 +72,7 @@ doc/PostUserRequest.md
 doc/PostUserResponse.md
 doc/PostUserSetupAngelRequest.md
 doc/PostUserSignInRequest.md
+doc/PostUserSignInResponse.md
 doc/ProfilePhotoRequest.md
 doc/PutAdventureRequest.md
 doc/PutCardRequest.md
@@ -182,6 +183,7 @@ lib/model/post_user_request.dart
 lib/model/post_user_response.dart
 lib/model/post_user_setup_angel_request.dart
 lib/model/post_user_sign_in_request.dart
+lib/model/post_user_sign_in_response.dart
 lib/model/profile_photo_request.dart
 lib/model/put_adventure_request.dart
 lib/model/put_card_request.dart

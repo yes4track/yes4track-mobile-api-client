@@ -6,6 +6,7 @@
 // ignore_for_file: unused_import
 
 import 'package:built_collection/built_collection.dart';
+import 'package:yes4track_mobile_api_client/model/level_type.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -56,6 +57,19 @@ abstract class PostTrailResponse implements Built<PostTrailResponse, PostTrailRe
     @nullable
     @BuiltValueField(wireName: r'angels')
     BuiltList<String> get angels;
+
+    @nullable
+    @BuiltValueField(wireName: r'adventureName')
+    String get adventureName;
+
+    @nullable
+    @BuiltValueField(wireName: r'adventureLevel')
+    LevelType get adventureLevel;
+    // enum adventureLevelEnum {  1,  2,  3,  };
+
+    @nullable
+    @BuiltValueField(wireName: r'photoUrl')
+    String get photoUrl;
 
     // Boilerplate code needed to wire-up generated code
     PostTrailResponse._();

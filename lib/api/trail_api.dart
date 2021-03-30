@@ -239,6 +239,8 @@ class TrailApi {
         String name,
         DateTime startDate,
         DateTime endDate,
+        String adventureName,
+        String userCreated,
         int page,
         int pageSize,
         String sort,
@@ -265,6 +267,8 @@ class TrailApi {
         queryParams[r'name'] = name;
         queryParams[r'startDate'] = startDate;
         queryParams[r'endDate'] = endDate;
+        queryParams[r'adventureName'] = adventureName;
+        queryParams[r'userCreated'] = userCreated;
         queryParams[r'page'] = page;
         queryParams[r'pageSize'] = pageSize;
         queryParams[r'sort'] = sort;

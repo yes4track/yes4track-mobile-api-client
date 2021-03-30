@@ -109,6 +109,7 @@ class CompanyApi {
         String registrationNumber,
         String contactEmail,
         String contactPhone,
+        String companies,
         int page,
         int pageSize,
         String sort,
@@ -136,6 +137,7 @@ class CompanyApi {
         queryParams[r'registrationNumber'] = registrationNumber;
         queryParams[r'contactEmail'] = contactEmail;
         queryParams[r'contactPhone'] = contactPhone;
+        queryParams[r'companies'] = companies;
         queryParams[r'page'] = page;
         queryParams[r'pageSize'] = pageSize;
         queryParams[r'sort'] = sort;

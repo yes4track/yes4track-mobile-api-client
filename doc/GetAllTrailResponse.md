@@ -20,6 +20,9 @@ Name | Type | Description | Notes
 **statistic** | [**Statistic**](Statistic.md) |  | [optional] 
 **sponsors** | **BuiltList<String>** |  | [optional] 
 **angels** | **BuiltList<String>** |  | [optional] 
+**adventureName** | **String** |  | [optional] 
+**adventureLevel** | [**LevelType**](LevelType.md) |  | [optional] 
+**photoUrl** | **String** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
