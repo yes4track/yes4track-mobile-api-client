@@ -969,7 +969,7 @@ class UserApi {
     /// User SignIn
     ///
     /// 
-    Future<Response<void>> yes4trackV1UsersSigninPost({ 
+    Future<Response<PostUserSignInResponse>> yes4trackV1UsersSigninPost({ 
         String xApiKey,
         String xCsrfToken,
         PostUserSignInRequest postUserSignInRequest,
@@ -1026,7 +1026,24 @@ class UserApi {
             cancelToken: cancelToken,
             onSendProgress: onSendProgress,
             onReceiveProgress: onReceiveProgress,
-        );
+        ).then((response) {
+            final serializer = _serializers.serializerForType(PostUserSignInResponse) as Serializer<PostUserSignInResponse>;
+            final data = _serializers.deserializeWith<PostUserSignInResponse>(
+                serializer,
+                response.data is String ? jsonDecode(response.data as String) : response.data,
+            );
+
+            return Response<PostUserSignInResponse>(
+                data: data,
+                headers: response.headers,
+                isRedirect: response.isRedirect,
+                request: response.request,
+                redirects: response.redirects,
+                statusCode: response.statusCode,
+                statusMessage: response.statusMessage,
+                extra: response.extra,
+            );
+        });
     }
 
     /// User SignUp
