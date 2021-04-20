@@ -15,9 +15,9 @@ import 'package:yes4track_mobile_api_client/auth/basic_auth.dart';
 import 'package:yes4track_mobile_api_client/auth/oauth.dart';
 import 'package:yes4track_mobile_api_client/api/adventure_api.dart';
 import 'package:yes4track_mobile_api_client/api/audit_api.dart';
-import 'package:yes4track_mobile_api_client/api/card_api.dart';
 import 'package:yes4track_mobile_api_client/api/company_api.dart';
 import 'package:yes4track_mobile_api_client/api/experience_api.dart';
+import 'package:yes4track_mobile_api_client/api/notification_api.dart';
 import 'package:yes4track_mobile_api_client/api/sponsor_api.dart';
 import 'package:yes4track_mobile_api_client/api/template_api.dart';
 import 'package:yes4track_mobile_api_client/api/track_api.dart';
@@ -90,15 +90,6 @@ class Yes4trackMobileApiClient {
 
 
     /**
-    * Get CardApi instance, base route and serializer can be overridden by a given but be careful,
-    * by doing that all interceptors will not be executed
-    */
-    CardApi getCardApi() {
-    return CardApi(dio, serializers);
-    }
-
-
-    /**
     * Get CompanyApi instance, base route and serializer can be overridden by a given but be careful,
     * by doing that all interceptors will not be executed
     */
@@ -113,6 +104,15 @@ class Yes4trackMobileApiClient {
     */
     ExperienceApi getExperienceApi() {
     return ExperienceApi(dio, serializers);
+    }
+
+
+    /**
+    * Get NotificationApi instance, base route and serializer can be overridden by a given but be careful,
+    * by doing that all interceptors will not be executed
+    */
+    NotificationApi getNotificationApi() {
+    return NotificationApi(dio, serializers);
     }
 
 

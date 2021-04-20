@@ -48,7 +48,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "9519a0af-a3ff-4674-8b9e-4b402ab4852d"
+              "default": "fdee7209-6284-44de-8be0-fccf907e46bc"
             }
           }
         ],
@@ -112,7 +112,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "1b3c5601-831f-4d63-b412-ac78494bb60f"
+              "default": "e7f2053d-4836-4c50-87eb-59ca484548d6"
             }
           }
         ],
@@ -183,7 +183,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "05859d18-4683-4b5b-9e1a-7ba5ec3e020c"
+              "default": "bf560dc5-0929-4d54-aa5e-f2161725ffb5"
             }
           }
         ],
@@ -281,7 +281,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f026ef68-5ef0-4054-b0e7-993aad48c70b"
+              "default": "c75000cb-6fab-4fd3-8355-a46d40343e2e"
             }
           }
         ],
@@ -387,7 +387,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "65498bdb-f436-4b5f-a244-df65f5c8f04b"
+              "default": "ff91010d-31da-4b04-82d3-1e895744eba8"
             }
           }
         ],
@@ -478,7 +478,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "17aec5bd-12e9-4d12-a957-0122cb833cc0"
+              "default": "7ed0b65e-70ee-46db-a071-c5e9c3b70d3c"
             }
           }
         ],
@@ -571,7 +571,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "09fc3353-4289-4bdd-aeb4-718ddb5084e9"
+              "default": "3957cffb-154c-44f5-b5ab-e85366954d81"
             }
           }
         ],
@@ -636,7 +636,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "e1c76ee0-be91-4442-acd1-a57426e56657"
+              "default": "56369c53-5601-4a6a-a9f5-e044463b48d8"
             }
           }
         ],
@@ -725,7 +725,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "6803e016-f95d-4986-9b5c-24460e9c57d7"
+              "default": "ad7bf4e3-b9f1-4fec-9eda-46871a81ba7f"
             }
           }
         ],
@@ -792,7 +792,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "e11217a7-f041-427c-b761-b300c9cbbf70"
+              "default": "38cb9e64-e6ef-476c-8c78-8d4e1bc7c3b7"
             }
           }
         ],
@@ -892,7 +892,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "0a7d22c1-01f9-4496-914f-778e837ecee4"
+              "default": "c065f2a1-d571-4b97-a02f-4cad7a99d5a6"
             }
           }
         ],
@@ -1020,7 +1020,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "edd331bb-a99f-4a6a-b31d-75931d5f985d"
+              "default": "70956a1d-f7d0-42a5-8ea4-6771433744db"
             }
           }
         ],
@@ -1076,7 +1076,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "709e1bcc-3940-4759-9bd8-29600838c7c9"
+              "default": "88ddd05f-029f-403f-8484-a463b890c1dc"
             }
           }
         ],
@@ -1176,7 +1176,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "0f2eceb7-014d-45ea-ad5f-dcc075402f09"
+              "default": "80e5c7cb-042f-4060-92f8-60cf13252e59"
             }
           }
         ],
@@ -1260,7 +1260,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "9759eea7-45a4-4a95-abcc-621535a2ff7d"
+              "default": "0dd69e31-4b45-4e03-bbcc-da0db6a3f167"
             }
           }
         ],
@@ -1271,6 +1271,79 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GetAllAdventureLikesResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the usr isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          },
+          "404": {
+            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existene of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
+          }
+        }
+      }
+    },
+    "/yes4track/v1/adventures/{id}/likes/userLiked": {
+      "get": {
+        "tags": [
+          "Adventure"
+        ],
+        "summary": "Get User Liked Adventure",
+        "operationId": "GetUserLikedAdventure",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Adventure Id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Adventure Id",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "fb7265a7-a544-4b45-b508-86c7192adcf3"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok - The request has succeeded.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetUserLikedAdventureResponse"
                 }
               }
             }
@@ -1332,7 +1405,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c53a5976-7a46-4450-af20-7504235ced02"
+              "default": "a6ccb177-a0c0-4619-8a04-41e39e46f207"
             }
           }
         ],
@@ -1398,7 +1471,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "8096e660-597b-401b-9ec9-4375dd99332c"
+              "default": "a9efcc64-3379-475b-9229-691e893109fa"
             }
           }
         ],
@@ -1490,7 +1563,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "cc0ab351-51ed-404f-b804-5a9ae9dd726b"
+              "default": "5a442389-f931-4f1b-8697-8373484f7317"
             }
           }
         ],
@@ -1592,7 +1665,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "8f580da4-94d4-41e7-8fc3-25c0cc0b5d92"
+              "default": "f4f710de-5a58-4222-89a4-fd8508d929e7"
             }
           }
         ],
@@ -1737,7 +1810,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "041109d3-54ea-4b6c-a6d1-e126794e466c"
+              "default": "3d02389b-3272-42f7-b094-a45610189a83"
             }
           }
         ],
@@ -1748,526 +1821,6 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GetAllPagedAuditResponse"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request – This means that client-side input fails validation."
-          },
-          "401": {
-            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
-          },
-          "403": {
-            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
-          }
-        }
-      }
-    },
-    "/yes4track/v1/cards/{id}": {
-      "delete": {
-        "tags": [
-          "Card"
-        ],
-        "summary": "Delete Card by Id",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Card id",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "description": "Card id",
-              "format": "uuid"
-            }
-          },
-          {
-            "name": "x-api-key",
-            "in": "header",
-            "description": "Your Api Key",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "x-csrf-token",
-            "in": "header",
-            "description": "CSRF Protection",
-            "schema": {
-              "type": "string",
-              "default": "05545c0e-a4ff-40b4-8b4f-4035ad0b2406"
-            }
-          }
-        ],
-        "responses": {
-          "500": {
-            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "204": {
-            "description": "No Content - There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
-          },
-          "400": {
-            "description": "Bad Request – This means that client-side input fails validation."
-          },
-          "401": {
-            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
-          },
-          "403": {
-            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
-          },
-          "404": {
-            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "Card"
-        ],
-        "summary": "Get Card by id",
-        "operationId": "GetByIdCard",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Card id",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "description": "Card id",
-              "format": "uuid"
-            }
-          },
-          {
-            "name": "x-api-key",
-            "in": "header",
-            "description": "Your Api Key",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "x-csrf-token",
-            "in": "header",
-            "description": "CSRF Protection",
-            "schema": {
-              "type": "string",
-              "default": "b1e5467c-9c31-4754-8bb6-acfd7aa285dc"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok - The request has succeeded.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetAllCardResponse"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request – This means that client-side input fails validation."
-          },
-          "401": {
-            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
-          },
-          "403": {
-            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
-          },
-          "404": {
-            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
-          }
-        }
-      },
-      "patch": {
-        "tags": [
-          "Card"
-        ],
-        "summary": "Update part of Card",
-        "description": "Sample request:\r\n            \r\n    PATCH /yes4track/v1/Card/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Card id",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "description": "Card id",
-              "format": "uuid"
-            }
-          },
-          {
-            "name": "x-api-key",
-            "in": "header",
-            "description": "Your Api Key",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "x-csrf-token",
-            "in": "header",
-            "description": "CSRF Protection",
-            "schema": {
-              "type": "string",
-              "default": "c0812eb6-2df3-403e-a124-13ba7dc72362"
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "Atributes values",
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Operation"
-                },
-                "description": "Atributes values"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "412": {
-            "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "204": {
-            "description": "No Content - There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
-          },
-          "400": {
-            "description": "Bad Request – This means that client-side input fails validation."
-          },
-          "401": {
-            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
-          },
-          "403": {
-            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
-          },
-          "404": {
-            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Card"
-        ],
-        "summary": "Update Card",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Card Id",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "description": "Card Id",
-              "format": "uuid"
-            }
-          },
-          {
-            "name": "x-api-key",
-            "in": "header",
-            "description": "Your Api Key",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "x-csrf-token",
-            "in": "header",
-            "description": "CSRF Protection",
-            "schema": {
-              "type": "string",
-              "default": "f7ba41d8-3912-4caf-b0e7-db68ff460317"
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "Card to update",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PutCardRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "412": {
-            "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "204": {
-            "description": "No Content - There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
-          },
-          "400": {
-            "description": "Bad Request – This means that client-side input fails validation."
-          },
-          "401": {
-            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
-          },
-          "403": {
-            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
-          },
-          "404": {
-            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
-          }
-        }
-      }
-    },
-    "/yes4track/v1/cards": {
-      "get": {
-        "tags": [
-          "Card"
-        ],
-        "summary": "Get All Card by filter with pagination",
-        "parameters": [
-          {
-            "name": "name",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "nullable": true
-            }
-          },
-          {
-            "name": "type",
-            "in": "query",
-            "schema": {
-              "$ref": "#/components/schemas/CardType"
-            }
-          },
-          {
-            "name": "active",
-            "in": "query",
-            "schema": {
-              "type": "boolean"
-            }
-          },
-          {
-            "name": "page",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "sort",
-            "in": "query",
-            "description": "Sorting atributes, sample: id.desc,name.asc",
-            "schema": {
-              "type": "string",
-              "description": "Sorting atributes, sample: id.desc,name.asc",
-              "nullable": true
-            }
-          },
-          {
-            "name": "x-api-key",
-            "in": "header",
-            "description": "Your Api Key",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "x-csrf-token",
-            "in": "header",
-            "description": "CSRF Protection",
-            "schema": {
-              "type": "string",
-              "default": "5f18e888-9413-4aa9-b7f8-d97213ee3859"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok - The request has succeeded.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetAllPagedCardResponse"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request – This means that client-side input fails validation."
-          },
-          "401": {
-            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
-          },
-          "403": {
-            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "Card"
-        ],
-        "summary": "Create Card",
-        "parameters": [
-          {
-            "name": "x-api-key",
-            "in": "header",
-            "description": "Your Api Key",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "x-csrf-token",
-            "in": "header",
-            "description": "CSRF Protection",
-            "schema": {
-              "type": "string",
-              "default": "e5244e2d-5df6-4c8c-bb7f-94755d89344f"
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "Card to create",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PostCardRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created - The request has succeeded and a new resource has been created as a result of it. This is typically the response sent after a POST request, or after some PUT requests.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/PostCardResponse"
-                }
-              }
-            }
-          },
-          "412": {
-            "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
                 }
               }
             }
@@ -2326,7 +1879,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "0b62dc0b-dbe5-41e8-b2da-a58905aba593"
+              "default": "8c9c3a87-5f08-46a5-ab91-71ec0661fd54"
             }
           }
         ],
@@ -2390,7 +1943,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "5e23555b-b112-4a12-b928-14c82ec9fdcb"
+              "default": "58adc51f-a74b-4a71-bc72-ebe1a20fd9cf"
             }
           }
         ],
@@ -2460,7 +2013,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "950a405e-f08c-43e7-9a51-553d11766a25"
+              "default": "feb98b6b-8d32-47a9-9321-c032b595942a"
             }
           }
         ],
@@ -2558,7 +2111,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "d17cd885-5bc7-47e9-bd58-1fab74f8824e"
+              "default": "4528cc57-934a-427b-86ae-2bc4479a0832"
             }
           }
         ],
@@ -2716,7 +2269,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f2e5b1fd-8cf9-4d8f-af3a-fc02475b8472"
+              "default": "b69ae09d-46c9-472b-8c70-6055217b0e11"
             }
           }
         ],
@@ -2772,7 +2325,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "bc6ca2e7-0bd9-467f-a875-467ecedb9494"
+              "default": "e6e3ef36-4bc2-4102-823f-8fb8a92fb0ec"
             }
           }
         ],
@@ -2871,7 +2424,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "17ad2e28-2df4-44b2-bcbe-19fe005b09b9"
+              "default": "0aef44c7-3f40-432c-bf1f-6087f0b07ce5"
             }
           }
         ],
@@ -2935,7 +2488,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "ebde5278-e58d-491c-8f08-25ba3beda903"
+              "default": "eda19d64-f7f9-46ac-b067-94a88f18a406"
             }
           }
         ],
@@ -3006,7 +2559,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f24d17dc-fb53-4f9d-9538-03b645e967eb"
+              "default": "a1ffcb48-6eee-466a-a05f-3912425f7c17"
             }
           }
         ],
@@ -3104,7 +2657,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "e55b8ff3-e4cf-4ad1-b4eb-56ea0c7d66ca"
+              "default": "3cdbe070-a444-4439-bf0a-89c25b10f0d9"
             }
           }
         ],
@@ -3210,7 +2763,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "6195fda2-23ad-4393-ab64-05f5e5dc2bf6"
+              "default": "7a6fb4ad-bb8b-438f-8159-1ceab5eff280"
             }
           }
         ],
@@ -3286,7 +2839,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "66e21e09-af4d-4cbd-85b3-cd04409fdf21"
+              "default": "f0d681ad-d7ee-47c5-a3a9-9918ce8d09f6"
             }
           }
         ],
@@ -3399,7 +2952,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "a6b5d4c9-b360-4f1a-bbad-796afc3b893f"
+              "default": "8454f997-7ae5-445b-8dce-335c3c5fca9a"
             }
           }
         ],
@@ -3455,7 +3008,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f7a3dbbd-9e7c-4fb5-a984-c4553899b0d1"
+              "default": "07d35988-a67b-4d0f-9173-b211aadcf5d1"
             }
           }
         ],
@@ -3555,7 +3108,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "a267f034-838c-44f8-acc1-ea7ab886186d"
+              "default": "3f2522e3-0147-4bf2-994a-4a67d8408543"
             }
           }
         ],
@@ -3627,7 +3180,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "5ba985c1-ffa8-4278-8b93-8885ca41cd18"
+              "default": "d9f9ee42-82e5-4bec-b6c3-d866da3ee01a"
             }
           }
         ],
@@ -3702,7 +3255,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "adc51ede-956b-4d28-a823-16dae7bc4efc"
+              "default": "641fb376-dda7-49e1-a115-037e7f79b30d"
             }
           }
         ],
@@ -3774,7 +3327,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "6d1b55a2-39b7-45c7-80a2-e29ad78f9d67"
+              "default": "caca4757-4092-4787-991c-deb096843c01"
             }
           }
         ],
@@ -3866,7 +3419,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f5960af8-ba92-4c1d-be21-df8f399ec7c0"
+              "default": "1a671910-14fb-4f6a-862f-25d3416d971d"
             }
           }
         ],
@@ -3880,6 +3433,552 @@
                   "items": {
                     "type": "string"
                   }
+                }
+              }
+            }
+          },
+          "412": {
+            "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          }
+        }
+      }
+    },
+    "/yes4track/v1/notifications/{id}": {
+      "delete": {
+        "tags": [
+          "Notification"
+        ],
+        "summary": "Delete Notification by Id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Notification id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Notification id",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "cf1fec67-b8a8-4858-8477-06a19b0e6333"
+            }
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content - There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          },
+          "404": {
+            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Notification"
+        ],
+        "summary": "Get Notification by id",
+        "operationId": "GetByIdNotification",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Notification id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Notification id",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "2b2373df-285b-4b4b-9621-310598086765"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok - The request has succeeded.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAllNotificationResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          },
+          "404": {
+            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Notification"
+        ],
+        "summary": "Update part of Notification",
+        "description": "Sample request:\r\n            \r\n    PATCH /yes4track/v1/Notification/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Notification id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Notification id",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "3fc7e71f-6cf6-4e78-a9cf-fb053352ec27"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Atributes values",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                },
+                "description": "Atributes values"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "412": {
+            "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content - There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          },
+          "404": {
+            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Notification"
+        ],
+        "summary": "Update Notification",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Notification Id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Notification Id",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "ff42bcf5-7cfd-4244-a0e7-dea3a60d7ce1"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Notification to update",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PutNotificationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "412": {
+            "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content - There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          },
+          "404": {
+            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
+          }
+        }
+      }
+    },
+    "/yes4track/v1/notifications": {
+      "get": {
+        "tags": [
+          "Notification"
+        ],
+        "summary": "Get All Notification by filter with pagination",
+        "parameters": [
+          {
+            "name": "message",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/NotificationType"
+            }
+          },
+          {
+            "name": "userPhone",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "userName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "userEmail",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "userId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "nullable": true
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sorting atributes, sample: id.desc,name.asc",
+            "schema": {
+              "type": "string",
+              "description": "Sorting atributes, sample: id.desc,name.asc",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "ed684aeb-cae1-4244-a099-816b070f1e19"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok - The request has succeeded.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAllPagedNotificationResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Notification"
+        ],
+        "summary": "Create Notification",
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "9c8297d8-f60a-41c2-a431-407d7ea3b838"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Notification to create",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostNotificationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created - The request has succeeded and a new resource has been created as a result of it. This is typically the response sent after a POST request, or after some PUT requests.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostNotificationResponse"
                 }
               }
             }
@@ -3958,7 +4057,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "496e7bd9-5944-4dff-bc9e-1e219763f449"
+              "default": "c3a45e03-9ba3-423d-a658-6513711fddb6"
             }
           }
         ],
@@ -4022,7 +4121,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "1c259b8f-e7b9-4857-967e-90f5e21587d5"
+              "default": "0b055d8c-ab91-4b17-93f3-5413b6d9fb09"
             }
           }
         ],
@@ -4093,7 +4192,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c591f9b2-9bc6-4555-8528-a9280508ef12"
+              "default": "579c5c7a-a03b-48a5-aa5f-e1757908327d"
             }
           }
         ],
@@ -4191,7 +4290,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "7fd871f1-55b2-470e-840c-0eae16118f8c"
+              "default": "881777b2-c80c-4936-b2fe-2dc75bc0c29f"
             }
           }
         ],
@@ -4350,7 +4449,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "838ae974-8137-4cc1-8869-ee752296c36f"
+              "default": "5406516c-720a-44b1-841b-36b274ebf089"
             }
           }
         ],
@@ -4406,7 +4505,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "8f71636e-1a31-4957-b9e8-3bbfa657765d"
+              "default": "a6f66e7e-0151-4baf-b933-5423ece76689"
             }
           }
         ],
@@ -4505,7 +4604,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "97b41bf5-388e-4213-b07d-cd33b520908d"
+              "default": "5de70dca-e89e-45c5-9da2-fa6984ccc250"
             }
           }
         ],
@@ -4569,7 +4668,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "ee6213aa-ee38-4d2f-bec9-a33a1cd25ba6"
+              "default": "1d0a4e6d-050f-482c-97aa-437db45e7e43"
             }
           }
         ],
@@ -4640,7 +4739,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "96a2da86-107e-4037-a2d3-f6cb839e3655"
+              "default": "bed80e2a-dac0-4e4d-914a-1e014e1994df"
             }
           }
         ],
@@ -4738,7 +4837,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "279436f9-08ec-4ec0-9518-ca3a09137fac"
+              "default": "76c09ccb-c27c-4c5c-8f2d-57ccdb180307"
             }
           }
         ],
@@ -4856,7 +4955,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "1967ef83-5720-4dde-aad3-43684fb08705"
+              "default": "b532261a-0f35-4c6c-ad07-86b3e53b5755"
             }
           }
         ],
@@ -4912,7 +5011,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "3b19b902-5806-4ddf-bf32-333209ce641c"
+              "default": "f9b18cd3-c5eb-460e-8105-fa4cb48fba81"
             }
           }
         ],
@@ -5011,7 +5110,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "870d4e3b-e90f-4427-b204-13df3ac8e8b5"
+              "default": "b829e384-7f94-42d2-b055-eea445e191b6"
             }
           }
         ],
@@ -5103,7 +5202,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "2160687b-dac4-4fca-9ce8-46e03d72e170"
+              "default": "0c97c43a-9253-4268-aea6-7c4c53a5a130"
             }
           }
         ],
@@ -5167,7 +5266,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "daf468d2-8cc5-44de-a7fa-d10743f5f25a"
+              "default": "3e15ba32-aa5b-41dc-9058-b39e656c9ddf"
             }
           }
         ],
@@ -5238,7 +5337,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "634f3ef0-4e14-447b-80d1-381cf5f14df0"
+              "default": "e82c18ec-5599-45cb-98e2-64b0dd07acf1"
             }
           }
         ],
@@ -5336,7 +5435,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "e7046710-35d0-4a03-a0ea-fc52978b8439"
+              "default": "b779711e-d2ec-4c3c-ae1c-d71b7efde3e8"
             }
           }
         ],
@@ -5470,7 +5569,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "28575c67-ae4f-4a2e-b403-5c7ebd5f3343"
+              "default": "4d7e1820-22fa-4ede-97c7-ca04936af61e"
             }
           }
         ],
@@ -5526,7 +5625,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "d7c27a6e-e1d7-470c-a349-37adb1f5f223"
+              "default": "07e7cfca-614b-4fc9-991f-b56bb09840a8"
             }
           }
         ],
@@ -5626,7 +5725,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "041dbf3c-e63e-48ee-b4f4-f567d02e27df"
+              "default": "bea3fa52-0f92-4408-801c-0a335f7d9b0d"
             }
           }
         ],
@@ -5689,7 +5788,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c7e52a0f-5651-4360-aa40-171c08aaf1f4"
+              "default": "e2cf99f6-7763-4300-b4bb-795bdd575242"
             }
           }
         ],
@@ -5801,7 +5900,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "90dbe957-79de-431d-aaf3-f586a464da15"
+              "default": "a2a4b47f-11d2-43d7-9e53-7cbad12da762"
             }
           }
         ],
@@ -5876,7 +5975,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "2812498a-0528-4c4f-b553-a0b5f5f8fa83"
+              "default": "c4ea7cf7-6a9c-426f-b44e-c06813e409c4"
             }
           }
         ],
@@ -5982,7 +6081,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "6238b98e-4b26-4947-90ee-61fa19d56eef"
+              "default": "b68b3692-30fe-4f63-9b87-02c60e837e8f"
             }
           }
         ],
@@ -6056,7 +6155,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "9517c71a-359e-4158-988f-e519136aa57c"
+              "default": "19f6656b-c943-4d65-8405-d1c63c0ff849"
             }
           }
         ],
@@ -6121,7 +6220,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "e3dd6628-1a36-4cae-b927-54a3b14efdbb"
+              "default": "1c101507-2ec5-44fb-b6c3-e1d9377d6aa7"
             }
           }
         ],
@@ -6185,7 +6284,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "54b492f1-c512-4185-b593-491493539e94"
+              "default": "4922904b-7672-4b6f-a367-699b425b8f99"
             }
           }
         ],
@@ -6256,7 +6355,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "751add51-3215-4670-a261-a989c4420ed9"
+              "default": "3bab434b-5aa2-4dfb-b9d3-e7dd0e2c1e89"
             }
           }
         ],
@@ -6354,7 +6453,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "78b225c5-7d48-492e-b9de-4d4f88fe9b3b"
+              "default": "d3934e96-2f54-4b7f-b547-d40068e7ea26"
             }
           }
         ],
@@ -6460,7 +6559,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "fdc751e0-07d1-4114-989f-bf233d422860"
+              "default": "a00b6815-3be3-4fef-8843-ca606efb277f"
             }
           }
         ],
@@ -6534,7 +6633,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "d045f86c-f4a0-4bc7-827c-d180e42fdc27"
+              "default": "5b4056f0-b61a-4d2a-8b7f-1f4537a281bb"
             }
           }
         ],
@@ -6588,7 +6687,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "6f616037-bbce-4a8b-865b-990866781e5b"
+              "default": "09a62d2f-9a64-4a99-a3a5-517843246673"
             }
           }
         ],
@@ -6724,7 +6823,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "390d15f5-3f6a-4f68-a0e3-fc513a07e3fb"
+              "default": "e2c3f489-4312-40b6-a4c2-b6a089ef1473"
             }
           }
         ],
@@ -6780,7 +6879,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "925aae8b-83eb-43b9-8093-9335fc5b5e76"
+              "default": "c6ebd9c8-2b64-4f80-933f-bf95f549cba7"
             }
           }
         ],
@@ -6880,7 +6979,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "aed9da68-5315-4b96-9c73-800dbabe616e"
+              "default": "0c571f32-8e58-47e3-a6b3-cbcbe4326d3b"
             }
           }
         ],
@@ -6943,7 +7042,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "44e2f7e0-0e95-48d8-a1ec-43adb158f15f"
+              "default": "d782767e-6448-49d0-98de-369d74255583"
             }
           }
         ],
@@ -7032,7 +7131,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "69a5a43e-2639-4bd2-a26c-81cf19d63e4e"
+              "default": "a0f62b6b-f5f5-4319-90aa-f5c94d9aa6bd"
             }
           }
         ],
@@ -7136,7 +7235,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "561300a5-c52c-49d6-8d8c-5159ae86225c"
+              "default": "93cb11ca-7e58-4943-a2ed-6d27c4978133"
             }
           }
         ],
@@ -7227,7 +7326,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "5d4f9aa3-01c4-4f3f-a569-071344ff129c"
+              "default": "a7939f3a-615e-4128-b099-74fb6d73d22f"
             }
           }
         ],
@@ -7309,7 +7408,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "d28634ff-a6ce-4599-9113-4dcfce8342ef"
+              "default": "2d1a5355-80d0-4593-8199-80fe66b4ed79"
             }
           }
         ],
@@ -7373,7 +7472,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "79c7af80-1b05-411a-b219-874caf6912aa"
+              "default": "49ea29b7-5c3b-4215-b98f-1e379c3c723e"
             }
           }
         ],
@@ -7443,7 +7542,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "ac596d0c-aa75-495a-a94c-baba61791e59"
+              "default": "2b40f32c-afca-4e8b-9b1a-6ac8b5841bf8"
             }
           }
         ],
@@ -7541,7 +7640,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "a2266f5b-af73-4c3b-8bdf-6eb21e4295ec"
+              "default": "cc6ff924-9d07-49ef-86f9-493624415a4f"
             }
           }
         ],
@@ -7700,7 +7799,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "ce317ffa-6e32-4dc4-94ea-a84330e3970e"
+              "default": "ab63f215-a533-4e11-a84c-d7c0ca9c4a4c"
             }
           }
         ],
@@ -7756,7 +7855,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "16f0a96a-b6b9-4919-8e8e-65b77bd5f109"
+              "default": "b11ceb4a-eb85-4920-8d6b-7dd9f6f6b8d3"
             }
           }
         ],
@@ -7844,7 +7943,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "bd9084c1-e17d-458d-945c-173579d62fb2"
+              "default": "b6aa2b7b-ffea-413c-a6ea-96a7db4fe6e7"
             }
           }
         ],
@@ -7935,7 +8034,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "870959bd-e25c-41ab-8877-7f4fb4d80cd1"
+              "default": "dc1897ad-15aa-4e18-ba49-cf8eeec9211e"
             }
           }
         ],
@@ -8019,7 +8118,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "7bfb7e68-5fbb-4f72-af98-36aeaed5f04e"
+              "default": "894fa450-7431-4d02-8e51-cb8ba69fd45e"
             }
           }
         ],
@@ -8111,7 +8210,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f46042e7-1546-4aee-b940-04a4ec63c3eb"
+              "default": "fd54c2ef-b65d-4249-98be-143f6e97f569"
             }
           }
         ],
@@ -8182,7 +8281,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "d96c850a-547f-4be8-9705-914881393acf"
+              "default": "d664f0ac-b588-49f0-aa61-173ad76bbec8"
             }
           }
         ],
@@ -8280,7 +8379,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "b5292a23-7c78-4d5a-ae44-ccfa913085dc"
+              "default": "46fb1ca0-cc5d-4201-9a6c-a4c21b7c384b"
             }
           }
         ],
@@ -8379,7 +8478,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "82a1551f-7549-43dc-8b35-f1f86ca6847b"
+              "default": "91ef2cc1-1292-41e3-93d8-6fd97a27be3c"
             }
           }
         ],
@@ -8474,7 +8573,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "d832b9a9-4018-4582-b766-ef41e61977f9"
+              "default": "fc6210ed-12f4-41b8-994f-bee71b52cedb"
             }
           }
         ],
@@ -9193,6 +9292,15 @@
         },
         "additionalProperties": false
       },
+      "GetUserLikedAdventureResponse": {
+        "type": "object",
+        "properties": {
+          "userLiked": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "PostCheckAdventureCodeResponse": {
         "type": "object",
         "properties": {
@@ -9286,236 +9394,6 @@
             "items": {
               "$ref": "#/components/schemas/GetAllAuditResponse"
             },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "CardType": {
-        "enum": [
-          0,
-          1,
-          2
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
-      "GetAllCardResponse": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "text": {
-            "type": "string",
-            "nullable": true
-          },
-          "imageUrl": {
-            "type": "string",
-            "nullable": true
-          },
-          "businessId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "order": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "type": {
-            "$ref": "#/components/schemas/CardType"
-          },
-          "active": {
-            "type": "boolean"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "PutCardRequest": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "text": {
-            "type": "string",
-            "nullable": true
-          },
-          "imageUrl": {
-            "type": "string",
-            "nullable": true
-          },
-          "businessId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "order": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "type": {
-            "$ref": "#/components/schemas/CardType"
-          },
-          "active": {
-            "type": "boolean"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "GetAllPagedCardResponse": {
-        "type": "object",
-        "properties": {
-          "currentPage": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "pageCount": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "pageSize": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "rowCount": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "firstRowOnPage": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "lastRowOnPage": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "results": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GetAllCardResponse"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "PostCardRequest": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "text": {
-            "type": "string",
-            "nullable": true
-          },
-          "imageUrl": {
-            "type": "string",
-            "nullable": true
-          },
-          "businessId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "order": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "type": {
-            "$ref": "#/components/schemas/CardType"
-          },
-          "active": {
-            "type": "boolean"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "PostCardResponse": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "text": {
-            "type": "string",
-            "nullable": true
-          },
-          "imageUrl": {
-            "type": "string",
-            "nullable": true
-          },
-          "businessId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "order": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "type": {
-            "$ref": "#/components/schemas/CardType"
-          },
-          "active": {
-            "type": "boolean"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
             "nullable": true
           }
         },
@@ -10026,6 +9904,371 @@
         "properties": {
           "isSuccess": {
             "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "NotificationType": {
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "NotificationChannel": {
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "GeoLocation": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "latitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "longitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "elevation": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "User": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "userCreated": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "userUpdated": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "version": {
+            "$ref": "#/components/schemas/DocumentVersion"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "photoUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "isAdmin": {
+            "type": "boolean"
+          },
+          "isSuperAdmin": {
+            "type": "boolean"
+          },
+          "isAngel": {
+            "type": "boolean"
+          },
+          "defaultAngel": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "defaultSponsor": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "companies": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "nullable": true
+          },
+          "location": {
+            "$ref": "#/components/schemas/GeoLocation"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAllNotificationResponse": {
+        "type": "object",
+        "properties": {
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "userCreated": {
+            "type": "string",
+            "nullable": true
+          },
+          "userUpdated": {
+            "type": "string",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "$ref": "#/components/schemas/NotificationType"
+          },
+          "channels": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NotificationChannel"
+            },
+            "nullable": true
+          },
+          "attributes": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PutNotificationRequest": {
+        "type": "object",
+        "properties": {
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "userCreated": {
+            "type": "string",
+            "nullable": true
+          },
+          "userUpdated": {
+            "type": "string",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "$ref": "#/components/schemas/NotificationType"
+          },
+          "channels": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NotificationChannel"
+            },
+            "nullable": true
+          },
+          "attributes": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAllPagedNotificationResponse": {
+        "type": "object",
+        "properties": {
+          "currentPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rowCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firstRowOnPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lastRowOnPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetAllNotificationResponse"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostNotificationRequest": {
+        "type": "object",
+        "properties": {
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "userCreated": {
+            "type": "string",
+            "nullable": true
+          },
+          "userUpdated": {
+            "type": "string",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "$ref": "#/components/schemas/NotificationType"
+          },
+          "channels": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NotificationChannel"
+            },
+            "nullable": true
+          },
+          "attributes": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostNotificationResponse": {
+        "type": "object",
+        "properties": {
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "userCreated": {
+            "type": "string",
+            "nullable": true
+          },
+          "userUpdated": {
+            "type": "string",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "$ref": "#/components/schemas/NotificationType"
+          },
+          "channels": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NotificationChannel"
+            },
+            "nullable": true
+          },
+          "attributes": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
           }
         },
         "additionalProperties": false
@@ -11045,29 +11288,6 @@
           },
           "photoUrl": {
             "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "GeoLocation": {
-        "type": "object",
-        "properties": {
-          "date": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "latitude": {
-            "type": "number",
-            "format": "double"
-          },
-          "longitude": {
-            "type": "number",
-            "format": "double"
-          },
-          "elevation": {
-            "type": "number",
-            "format": "double",
             "nullable": true
           }
         },

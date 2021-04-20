@@ -17,22 +17,21 @@ import 'package:yes4track_mobile_api_client/model/action_type.dart';
 import 'package:yes4track_mobile_api_client/model/active_trail_response.dart';
 import 'package:yes4track_mobile_api_client/model/address.dart';
 import 'package:yes4track_mobile_api_client/model/adventure_response.dart';
-import 'package:yes4track_mobile_api_client/model/card_type.dart';
 import 'package:yes4track_mobile_api_client/model/error_details.dart';
 import 'package:yes4track_mobile_api_client/model/geo_location.dart';
 import 'package:yes4track_mobile_api_client/model/get_all_active_trail_by_angel_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_all_adventure_likes_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_all_adventure_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_all_audit_response.dart';
-import 'package:yes4track_mobile_api_client/model/get_all_card_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_all_company_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_all_experience_response.dart';
+import 'package:yes4track_mobile_api_client/model/get_all_notification_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_all_paged_adventure_likes_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_all_paged_adventure_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_all_paged_audit_response.dart';
-import 'package:yes4track_mobile_api_client/model/get_all_paged_card_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_all_paged_company_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_all_paged_experience_response.dart';
+import 'package:yes4track_mobile_api_client/model/get_all_paged_notification_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_all_paged_sponsor_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_all_paged_template_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_all_paged_track_response.dart';
@@ -45,22 +44,25 @@ import 'package:yes4track_mobile_api_client/model/get_all_trail_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_all_user_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_by_id_adventure_code_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_by_id_experience_code_response.dart';
+import 'package:yes4track_mobile_api_client/model/get_user_liked_adventure_response.dart';
 import 'package:yes4track_mobile_api_client/model/image_url.dart';
 import 'package:yes4track_mobile_api_client/model/level_type.dart';
 import 'package:yes4track_mobile_api_client/model/map_coordinate.dart';
+import 'package:yes4track_mobile_api_client/model/notification_channel.dart';
+import 'package:yes4track_mobile_api_client/model/notification_type.dart';
 import 'package:yes4track_mobile_api_client/model/operation.dart';
 import 'package:yes4track_mobile_api_client/model/operation_type.dart';
 import 'package:yes4track_mobile_api_client/model/post_adventure_likes_response.dart';
 import 'package:yes4track_mobile_api_client/model/post_adventure_request.dart';
 import 'package:yes4track_mobile_api_client/model/post_adventure_response.dart';
-import 'package:yes4track_mobile_api_client/model/post_card_request.dart';
-import 'package:yes4track_mobile_api_client/model/post_card_response.dart';
 import 'package:yes4track_mobile_api_client/model/post_check_adventure_code_response.dart';
 import 'package:yes4track_mobile_api_client/model/post_check_experience_code_response.dart';
 import 'package:yes4track_mobile_api_client/model/post_company_request.dart';
 import 'package:yes4track_mobile_api_client/model/post_company_response.dart';
 import 'package:yes4track_mobile_api_client/model/post_experience_request.dart';
 import 'package:yes4track_mobile_api_client/model/post_experience_response.dart';
+import 'package:yes4track_mobile_api_client/model/post_notification_request.dart';
+import 'package:yes4track_mobile_api_client/model/post_notification_response.dart';
 import 'package:yes4track_mobile_api_client/model/post_post_user_resend_code_request.dart';
 import 'package:yes4track_mobile_api_client/model/post_sponsor_request.dart';
 import 'package:yes4track_mobile_api_client/model/post_sponsor_response.dart';
@@ -82,9 +84,9 @@ import 'package:yes4track_mobile_api_client/model/post_user_sign_in_request.dart
 import 'package:yes4track_mobile_api_client/model/post_user_sign_in_response.dart';
 import 'package:yes4track_mobile_api_client/model/profile_photo_request.dart';
 import 'package:yes4track_mobile_api_client/model/put_adventure_request.dart';
-import 'package:yes4track_mobile_api_client/model/put_card_request.dart';
 import 'package:yes4track_mobile_api_client/model/put_company_request.dart';
 import 'package:yes4track_mobile_api_client/model/put_experience_request.dart';
+import 'package:yes4track_mobile_api_client/model/put_notification_request.dart';
 import 'package:yes4track_mobile_api_client/model/put_sponsor_request.dart';
 import 'package:yes4track_mobile_api_client/model/put_template_request.dart';
 import 'package:yes4track_mobile_api_client/model/put_track_request.dart';
@@ -99,6 +101,7 @@ import 'package:yes4track_mobile_api_client/model/track_geo_location_waypoint_dt
 import 'package:yes4track_mobile_api_client/model/track_source.dart';
 import 'package:yes4track_mobile_api_client/model/trail_geo_data_request.dart';
 import 'package:yes4track_mobile_api_client/model/trail_response.dart';
+import 'package:yes4track_mobile_api_client/model/user.dart';
 import 'package:yes4track_mobile_api_client/model/user_response.dart';
 import 'package:yes4track_mobile_api_client/model/user_trail_status_response.dart';
 import 'package:yes4track_mobile_api_client/model/video_url.dart';
@@ -111,22 +114,21 @@ part 'serializers.g.dart';
   ActiveTrailResponse,
   Address,
   AdventureResponse,
-  CardType,
   ErrorDetails,
   GeoLocation,
   GetAllActiveTrailByAngelResponse,
   GetAllAdventureLikesResponse,
   GetAllAdventureResponse,
   GetAllAuditResponse,
-  GetAllCardResponse,
   GetAllCompanyResponse,
   GetAllExperienceResponse,
+  GetAllNotificationResponse,
   GetAllPagedAdventureLikesResponse,
   GetAllPagedAdventureResponse,
   GetAllPagedAuditResponse,
-  GetAllPagedCardResponse,
   GetAllPagedCompanyResponse,
   GetAllPagedExperienceResponse,
+  GetAllPagedNotificationResponse,
   GetAllPagedSponsorResponse,
   GetAllPagedTemplateResponse,
   GetAllPagedTrackResponse,
@@ -139,22 +141,25 @@ part 'serializers.g.dart';
   GetAllUserResponse,
   GetByIdAdventureCodeResponse,
   GetByIdExperienceCodeResponse,
+  GetUserLikedAdventureResponse,
   ImageUrl,
   LevelType,
   MapCoordinate,
+  NotificationChannel,
+  NotificationType,
   Operation,
   OperationType,
   PostAdventureLikesResponse,
   PostAdventureRequest,
   PostAdventureResponse,
-  PostCardRequest,
-  PostCardResponse,
   PostCheckAdventureCodeResponse,
   PostCheckExperienceCodeResponse,
   PostCompanyRequest,
   PostCompanyResponse,
   PostExperienceRequest,
   PostExperienceResponse,
+  PostNotificationRequest,
+  PostNotificationResponse,
   PostPostUserResendCodeRequest,
   PostSponsorRequest,
   PostSponsorResponse,
@@ -176,9 +181,9 @@ part 'serializers.g.dart';
   PostUserSignInResponse,
   ProfilePhotoRequest,
   PutAdventureRequest,
-  PutCardRequest,
   PutCompanyRequest,
   PutExperienceRequest,
+  PutNotificationRequest,
   PutSponsorRequest,
   PutTemplateRequest,
   PutTrackRequest,
@@ -193,6 +198,7 @@ part 'serializers.g.dart';
   TrackSource,
   TrailGeoDataRequest,
   TrailResponse,
+  User,
   UserResponse,
   UserTrailStatusResponse,
   VideoUrl,
@@ -212,12 +218,12 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<Operation>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(Operation)]),
-        () => ListBuilder<Operation>(),
-      )
-      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(String)]),
         () => ListBuilder<String>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(Operation)]),
+        () => ListBuilder<Operation>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(Operation)]),

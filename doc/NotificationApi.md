@@ -1,4 +1,4 @@
-# yes4track_mobile_api_client.api.CompanyApi
+# yes4track_mobile_api_client.api.NotificationApi
 
 ## Load the API package
 ```dart
@@ -9,18 +9,18 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getByIdCompany**](CompanyApi.md#getByIdCompany) | **get** /yes4track/v1/companies/{id} | Get Company by id
-[**yes4trackV1CompaniesGet**](CompanyApi.md#yes4trackV1CompaniesGet) | **get** /yes4track/v1/companies | Get All Company by filter with pagination
-[**yes4trackV1CompaniesIdDelete**](CompanyApi.md#yes4trackV1CompaniesIdDelete) | **delete** /yes4track/v1/companies/{id} | Delete Company by Id
-[**yes4trackV1CompaniesIdPatch**](CompanyApi.md#yes4trackV1CompaniesIdPatch) | **patch** /yes4track/v1/companies/{id} | Update part of Company
-[**yes4trackV1CompaniesIdPut**](CompanyApi.md#yes4trackV1CompaniesIdPut) | **put** /yes4track/v1/companies/{id} | Update Company
-[**yes4trackV1CompaniesPost**](CompanyApi.md#yes4trackV1CompaniesPost) | **post** /yes4track/v1/companies | Create Company
+[**getByIdNotification**](NotificationApi.md#getByIdNotification) | **get** /yes4track/v1/notifications/{id} | Get Notification by id
+[**yes4trackV1NotificationsGet**](NotificationApi.md#yes4trackV1NotificationsGet) | **get** /yes4track/v1/notifications | Get All Notification by filter with pagination
+[**yes4trackV1NotificationsIdDelete**](NotificationApi.md#yes4trackV1NotificationsIdDelete) | **delete** /yes4track/v1/notifications/{id} | Delete Notification by Id
+[**yes4trackV1NotificationsIdPatch**](NotificationApi.md#yes4trackV1NotificationsIdPatch) | **patch** /yes4track/v1/notifications/{id} | Update part of Notification
+[**yes4trackV1NotificationsIdPut**](NotificationApi.md#yes4trackV1NotificationsIdPut) | **put** /yes4track/v1/notifications/{id} | Update Notification
+[**yes4trackV1NotificationsPost**](NotificationApi.md#yes4trackV1NotificationsPost) | **post** /yes4track/v1/notifications | Create Notification
 
 
-# **getByIdCompany**
-> GetAllCompanyResponse getByIdCompany(id, xApiKey, xCsrfToken)
+# **getByIdNotification**
+> GetAllNotificationResponse getByIdNotification(id, xApiKey, xCsrfToken)
 
-Get Company by id
+Get Notification by id
 
 ### Example 
 ```dart
@@ -30,16 +30,16 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CompanyApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Company id
+var api_instance = new NotificationApi();
+var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification id
 var xApiKey = xApiKey_example; // String | Your Api Key
 var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    var result = api_instance.getByIdCompany(id, xApiKey, xCsrfToken);
+    var result = api_instance.getByIdNotification(id, xApiKey, xCsrfToken);
     print(result);
 } catch (e) {
-    print('Exception when calling CompanyApi->getByIdCompany: $e\n');
+    print('Exception when calling NotificationApi->getByIdNotification: $e\n');
 }
 ```
 
@@ -47,13 +47,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Company id | 
+ **id** | [**String**](.md)| Notification id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '58adc51f-a74b-4a71-bc72-ebe1a20fd9cf']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2b2373df-285b-4b4b-9621-310598086765']
 
 ### Return type
 
-[**GetAllCompanyResponse**](GetAllCompanyResponse.md)
+[**GetAllNotificationResponse**](GetAllNotificationResponse.md)
 
 ### Authorization
 
@@ -66,10 +66,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **yes4trackV1CompaniesGet**
-> GetAllPagedCompanyResponse yes4trackV1CompaniesGet(legalName, fantasyName, registrationNumber, contactEmail, contactPhone, companies, page, pageSize, sort, xApiKey, xCsrfToken)
+# **yes4trackV1NotificationsGet**
+> GetAllPagedNotificationResponse yes4trackV1NotificationsGet(message, type, userPhone, userName, userEmail, userId, page, pageSize, sort, xApiKey, xCsrfToken)
 
-Get All Company by filter with pagination
+Get All Notification by filter with pagination
 
 ### Example 
 ```dart
@@ -79,13 +79,13 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CompanyApi();
-var legalName = legalName_example; // String | 
-var fantasyName = fantasyName_example; // String | 
-var registrationNumber = registrationNumber_example; // String | 
-var contactEmail = contactEmail_example; // String | 
-var contactPhone = contactPhone_example; // String | 
-var companies = companies_example; // String | 
+var api_instance = new NotificationApi();
+var message = message_example; // String | 
+var type = ; // NotificationType | 
+var userPhone = userPhone_example; // String | 
+var userName = userName_example; // String | 
+var userEmail = userEmail_example; // String | 
+var userId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 var page = 56; // int | 
 var pageSize = 56; // int | 
 var sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
@@ -93,10 +93,10 @@ var xApiKey = xApiKey_example; // String | Your Api Key
 var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    var result = api_instance.yes4trackV1CompaniesGet(legalName, fantasyName, registrationNumber, contactEmail, contactPhone, companies, page, pageSize, sort, xApiKey, xCsrfToken);
+    var result = api_instance.yes4trackV1NotificationsGet(message, type, userPhone, userName, userEmail, userId, page, pageSize, sort, xApiKey, xCsrfToken);
     print(result);
 } catch (e) {
-    print('Exception when calling CompanyApi->yes4trackV1CompaniesGet: $e\n');
+    print('Exception when calling NotificationApi->yes4trackV1NotificationsGet: $e\n');
 }
 ```
 
@@ -104,21 +104,21 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **legalName** | **String**|  | [optional] 
- **fantasyName** | **String**|  | [optional] 
- **registrationNumber** | **String**|  | [optional] 
- **contactEmail** | **String**|  | [optional] 
- **contactPhone** | **String**|  | [optional] 
- **companies** | **String**|  | [optional] 
+ **message** | **String**|  | [optional] 
+ **type** | [**NotificationType**](.md)|  | [optional] 
+ **userPhone** | **String**|  | [optional] 
+ **userName** | **String**|  | [optional] 
+ **userEmail** | **String**|  | [optional] 
+ **userId** | [**String**](.md)|  | [optional] 
  **page** | **int**|  | [optional] 
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'b69ae09d-46c9-472b-8c70-6055217b0e11']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ed684aeb-cae1-4244-a099-816b070f1e19']
 
 ### Return type
 
-[**GetAllPagedCompanyResponse**](GetAllPagedCompanyResponse.md)
+[**GetAllPagedNotificationResponse**](GetAllPagedNotificationResponse.md)
 
 ### Authorization
 
@@ -131,10 +131,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **yes4trackV1CompaniesIdDelete**
-> yes4trackV1CompaniesIdDelete(id, xApiKey, xCsrfToken)
+# **yes4trackV1NotificationsIdDelete**
+> yes4trackV1NotificationsIdDelete(id, xApiKey, xCsrfToken)
 
-Delete Company by Id
+Delete Notification by Id
 
 ### Example 
 ```dart
@@ -144,15 +144,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CompanyApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Company id
+var api_instance = new NotificationApi();
+var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification id
 var xApiKey = xApiKey_example; // String | Your Api Key
 var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    api_instance.yes4trackV1CompaniesIdDelete(id, xApiKey, xCsrfToken);
+    api_instance.yes4trackV1NotificationsIdDelete(id, xApiKey, xCsrfToken);
 } catch (e) {
-    print('Exception when calling CompanyApi->yes4trackV1CompaniesIdDelete: $e\n');
+    print('Exception when calling NotificationApi->yes4trackV1NotificationsIdDelete: $e\n');
 }
 ```
 
@@ -160,9 +160,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Company id | 
+ **id** | [**String**](.md)| Notification id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8c9c3a87-5f08-46a5-ab91-71ec0661fd54']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'cf1fec67-b8a8-4858-8477-06a19b0e6333']
 
 ### Return type
 
@@ -179,10 +179,12 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **yes4trackV1CompaniesIdPatch**
-> yes4trackV1CompaniesIdPatch(id, operation, xApiKey, xCsrfToken)
+# **yes4trackV1NotificationsIdPatch**
+> yes4trackV1NotificationsIdPatch(id, operation, xApiKey, xCsrfToken)
 
-Update part of Company
+Update part of Notification
+
+Sample request:                    PATCH /yes4track/v1/Notification/{id}      [          {              \"op\": \"replace\",              \"path\": \"/atribute_name\",              \"value\": \"new value\"          }      ]
 
 ### Example 
 ```dart
@@ -192,16 +194,16 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CompanyApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Company id
+var api_instance = new NotificationApi();
+var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification id
 var operation = [new BuiltList<Operation>()]; // BuiltList<Operation> | Atributes values
 var xApiKey = xApiKey_example; // String | Your Api Key
 var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    api_instance.yes4trackV1CompaniesIdPatch(id, operation, xApiKey, xCsrfToken);
+    api_instance.yes4trackV1NotificationsIdPatch(id, operation, xApiKey, xCsrfToken);
 } catch (e) {
-    print('Exception when calling CompanyApi->yes4trackV1CompaniesIdPatch: $e\n');
+    print('Exception when calling NotificationApi->yes4trackV1NotificationsIdPatch: $e\n');
 }
 ```
 
@@ -209,10 +211,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Company id | 
+ **id** | [**String**](.md)| Notification id | 
  **operation** | [**BuiltList<Operation>**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'feb98b6b-8d32-47a9-9321-c032b595942a']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3fc7e71f-6cf6-4e78-a9cf-fb053352ec27']
 
 ### Return type
 
@@ -229,10 +231,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **yes4trackV1CompaniesIdPut**
-> yes4trackV1CompaniesIdPut(id, xApiKey, xCsrfToken, putCompanyRequest)
+# **yes4trackV1NotificationsIdPut**
+> yes4trackV1NotificationsIdPut(id, xApiKey, xCsrfToken, putNotificationRequest)
 
-Update Company
+Update Notification
 
 ### Example 
 ```dart
@@ -242,16 +244,16 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CompanyApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Company Id
+var api_instance = new NotificationApi();
+var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification Id
 var xApiKey = xApiKey_example; // String | Your Api Key
 var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-var putCompanyRequest = new PutCompanyRequest(); // PutCompanyRequest | Company to update
+var putNotificationRequest = new PutNotificationRequest(); // PutNotificationRequest | Notification to update
 
 try { 
-    api_instance.yes4trackV1CompaniesIdPut(id, xApiKey, xCsrfToken, putCompanyRequest);
+    api_instance.yes4trackV1NotificationsIdPut(id, xApiKey, xCsrfToken, putNotificationRequest);
 } catch (e) {
-    print('Exception when calling CompanyApi->yes4trackV1CompaniesIdPut: $e\n');
+    print('Exception when calling NotificationApi->yes4trackV1NotificationsIdPut: $e\n');
 }
 ```
 
@@ -259,10 +261,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Company Id | 
+ **id** | [**String**](.md)| Notification Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4528cc57-934a-427b-86ae-2bc4479a0832']
- **putCompanyRequest** | [**PutCompanyRequest**](PutCompanyRequest.md)| Company to update | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ff42bcf5-7cfd-4244-a0e7-dea3a60d7ce1']
+ **putNotificationRequest** | [**PutNotificationRequest**](PutNotificationRequest.md)| Notification to update | [optional] 
 
 ### Return type
 
@@ -279,10 +281,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **yes4trackV1CompaniesPost**
-> PostCompanyResponse yes4trackV1CompaniesPost(xApiKey, xCsrfToken, postCompanyRequest)
+# **yes4trackV1NotificationsPost**
+> PostNotificationResponse yes4trackV1NotificationsPost(xApiKey, xCsrfToken, postNotificationRequest)
 
-Create Company
+Create Notification
 
 ### Example 
 ```dart
@@ -292,16 +294,16 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CompanyApi();
+var api_instance = new NotificationApi();
 var xApiKey = xApiKey_example; // String | Your Api Key
 var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-var postCompanyRequest = new PostCompanyRequest(); // PostCompanyRequest | Company to create
+var postNotificationRequest = new PostNotificationRequest(); // PostNotificationRequest | Notification to create
 
 try { 
-    var result = api_instance.yes4trackV1CompaniesPost(xApiKey, xCsrfToken, postCompanyRequest);
+    var result = api_instance.yes4trackV1NotificationsPost(xApiKey, xCsrfToken, postNotificationRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling CompanyApi->yes4trackV1CompaniesPost: $e\n');
+    print('Exception when calling NotificationApi->yes4trackV1NotificationsPost: $e\n');
 }
 ```
 
@@ -310,12 +312,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e6e3ef36-4bc2-4102-823f-8fb8a92fb0ec']
- **postCompanyRequest** | [**PostCompanyRequest**](PostCompanyRequest.md)| Company to create | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '9c8297d8-f60a-41c2-a431-407d7ea3b838']
+ **postNotificationRequest** | [**PostNotificationRequest**](PostNotificationRequest.md)| Notification to create | [optional] 
 
 ### Return type
 
-[**PostCompanyResponse**](PostCompanyResponse.md)
+[**PostNotificationResponse**](PostNotificationResponse.md)
 
 ### Authorization
 

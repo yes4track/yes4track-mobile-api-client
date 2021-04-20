@@ -12,22 +12,21 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(ActiveTrailResponse.serializer)
       ..add(Address.serializer)
       ..add(AdventureResponse.serializer)
-      ..add(CardType.serializer)
       ..add(ErrorDetails.serializer)
       ..add(GeoLocation.serializer)
       ..add(GetAllActiveTrailByAngelResponse.serializer)
       ..add(GetAllAdventureLikesResponse.serializer)
       ..add(GetAllAdventureResponse.serializer)
       ..add(GetAllAuditResponse.serializer)
-      ..add(GetAllCardResponse.serializer)
       ..add(GetAllCompanyResponse.serializer)
       ..add(GetAllExperienceResponse.serializer)
+      ..add(GetAllNotificationResponse.serializer)
       ..add(GetAllPagedAdventureLikesResponse.serializer)
       ..add(GetAllPagedAdventureResponse.serializer)
       ..add(GetAllPagedAuditResponse.serializer)
-      ..add(GetAllPagedCardResponse.serializer)
       ..add(GetAllPagedCompanyResponse.serializer)
       ..add(GetAllPagedExperienceResponse.serializer)
+      ..add(GetAllPagedNotificationResponse.serializer)
       ..add(GetAllPagedSponsorResponse.serializer)
       ..add(GetAllPagedTemplateResponse.serializer)
       ..add(GetAllPagedTrackResponse.serializer)
@@ -40,22 +39,25 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GetAllUserResponse.serializer)
       ..add(GetByIdAdventureCodeResponse.serializer)
       ..add(GetByIdExperienceCodeResponse.serializer)
+      ..add(GetUserLikedAdventureResponse.serializer)
       ..add(ImageUrl.serializer)
       ..add(LevelType.serializer)
       ..add(MapCoordinate.serializer)
+      ..add(NotificationChannel.serializer)
+      ..add(NotificationType.serializer)
       ..add(Operation.serializer)
       ..add(OperationType.serializer)
       ..add(PostAdventureLikesResponse.serializer)
       ..add(PostAdventureRequest.serializer)
       ..add(PostAdventureResponse.serializer)
-      ..add(PostCardRequest.serializer)
-      ..add(PostCardResponse.serializer)
       ..add(PostCheckAdventureCodeResponse.serializer)
       ..add(PostCheckExperienceCodeResponse.serializer)
       ..add(PostCompanyRequest.serializer)
       ..add(PostCompanyResponse.serializer)
       ..add(PostExperienceRequest.serializer)
       ..add(PostExperienceResponse.serializer)
+      ..add(PostNotificationRequest.serializer)
+      ..add(PostNotificationResponse.serializer)
       ..add(PostPostUserResendCodeRequest.serializer)
       ..add(PostSponsorRequest.serializer)
       ..add(PostSponsorResponse.serializer)
@@ -77,9 +79,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(PostUserSignInResponse.serializer)
       ..add(ProfilePhotoRequest.serializer)
       ..add(PutAdventureRequest.serializer)
-      ..add(PutCardRequest.serializer)
       ..add(PutCompanyRequest.serializer)
       ..add(PutExperienceRequest.serializer)
+      ..add(PutNotificationRequest.serializer)
       ..add(PutSponsorRequest.serializer)
       ..add(PutTemplateRequest.serializer)
       ..add(PutTrackRequest.serializer)
@@ -94,6 +96,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(TrackSource.serializer)
       ..add(TrailGeoDataRequest.serializer)
       ..add(TrailResponse.serializer)
+      ..add(User.serializer)
       ..add(UserResponse.serializer)
       ..add(UserTrailStatusResponse.serializer)
       ..add(VideoUrl.serializer)
@@ -115,9 +118,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
               BuiltList, const [const FullType(GetAllAuditResponse)]),
           () => new ListBuilder<GetAllAuditResponse>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(GetAllCardResponse)]),
-          () => new ListBuilder<GetAllCardResponse>())
-      ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(GetAllCompanyResponse)]),
           () => new ListBuilder<GetAllCompanyResponse>())
@@ -125,6 +125,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(GetAllExperienceResponse)]),
           () => new ListBuilder<GetAllExperienceResponse>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(GetAllNotificationResponse)]),
+          () => new ListBuilder<GetAllNotificationResponse>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(GetAllSponsorResponse)]),
@@ -160,6 +164,38 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
       ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(NotificationChannel)]),
+          () => new ListBuilder<NotificationChannel>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(NotificationChannel)]),
+          () => new ListBuilder<NotificationChannel>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(NotificationChannel)]),
+          () => new ListBuilder<NotificationChannel>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(NotificationChannel)]),
+          () => new ListBuilder<NotificationChannel>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(SponsorContact)]),
           () => new ListBuilder<SponsorContact>())
       ..addBuilderFactory(
@@ -180,34 +216,20 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(BuiltList, const [const FullType(double)])
           ]),
           () => new ListBuilder<BuiltList<double>>())
-      ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(TrackGeoLocationWaypointDto)]),
-          () => new ListBuilder<TrackGeoLocationWaypointDto>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(String)]),
-          () => new ListBuilder<String>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(String)]),
-          () => new ListBuilder<String>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(String)]),
-          () => new ListBuilder<String>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(String)]),
-          () => new ListBuilder<String>())
-      ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(TrailGeoDataRequest)]),
-          () => new ListBuilder<TrailGeoDataRequest>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(double)]),
-          () => new ListBuilder<double>()))
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(TrackGeoLocationWaypointDto)]), () => new ListBuilder<TrackGeoLocationWaypointDto>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(TrailGeoDataRequest)]), () => new ListBuilder<TrailGeoDataRequest>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(double)]), () => new ListBuilder<double>()))
     .build();
 
 // ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new

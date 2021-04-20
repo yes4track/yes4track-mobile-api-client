@@ -13,6 +13,7 @@ import 'package:built_value/serializer.dart';
 import 'package:yes4track_mobile_api_client/model/post_check_adventure_code_response.dart';
 import 'package:yes4track_mobile_api_client/model/post_adventure_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_by_id_adventure_code_response.dart';
+import 'package:yes4track_mobile_api_client/model/get_user_liked_adventure_response.dart';
 import 'package:yes4track_mobile_api_client/model/put_adventure_request.dart';
 import 'package:yes4track_mobile_api_client/model/level_type.dart';
 import 'package:yes4track_mobile_api_client/model/get_all_paged_adventure_likes_response.dart';
@@ -241,6 +242,79 @@ class AdventureApi {
             );
 
             return Response<GetAllAdventureLikesResponse>(
+                data: data,
+                headers: response.headers,
+                isRedirect: response.isRedirect,
+                request: response.request,
+                redirects: response.redirects,
+                statusCode: response.statusCode,
+                statusMessage: response.statusMessage,
+                extra: response.extra,
+            );
+        });
+    }
+
+    /// Get User Liked Adventure
+    ///
+    /// 
+    Future<Response<GetUserLikedAdventureResponse>> getUserLikedAdventure(
+        String id, { 
+        String xApiKey,
+        String xCsrfToken,
+        CancelToken cancelToken,
+        Map<String, dynamic> headers,
+        Map<String, dynamic> extra,
+        ValidateStatus validateStatus,
+        ProgressCallback onSendProgress,
+        ProgressCallback onReceiveProgress,
+    }) async {
+        final String _path = '/yes4track/v1/adventures/{id}/likes/userLiked'.replaceAll('{' r'id' '}', id.toString());
+
+        final queryParams = <String, dynamic>{};
+        final headerParams = <String, dynamic>{ 
+            if (headers != null) ...headers,
+        };
+        dynamic bodyData;
+
+        headerParams[r'x-api-key'] = xApiKey;
+        headerParams[r'x-csrf-token'] = xCsrfToken;
+        queryParams.removeWhere((key, dynamic value) => value == null);
+        headerParams.removeWhere((key, dynamic value) => value == null);
+
+        final contentTypes = <String>[];
+
+        return _dio.request<dynamic>(
+            _path,
+            queryParameters: queryParams,
+            data: bodyData,
+            options: Options(
+                method: 'get'.toUpperCase(),
+                headers: headerParams,
+                extra: <String, dynamic>{
+                    'secure': <Map<String, String>>[
+                        {
+                            'type': 'apiKey',
+                            'name': 'Bearer',
+                            'keyName': 'Authorization',
+                            'where': 'header',
+                        },
+                    ],
+                    if (extra != null) ...extra,
+                },
+                validateStatus: validateStatus,
+                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            ),
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+        ).then((response) {
+            final serializer = _serializers.serializerForType(GetUserLikedAdventureResponse) as Serializer<GetUserLikedAdventureResponse>;
+            final data = _serializers.deserializeWith<GetUserLikedAdventureResponse>(
+                serializer,
+                response.data is String ? jsonDecode(response.data as String) : response.data,
+            );
+
+            return Response<GetUserLikedAdventureResponse>(
                 data: data,
                 headers: response.headers,
                 isRedirect: response.isRedirect,
