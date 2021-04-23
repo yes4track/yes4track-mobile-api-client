@@ -17,6 +17,7 @@ import 'package:yes4track_mobile_api_client/model/action_type.dart';
 import 'package:yes4track_mobile_api_client/model/active_trail_response.dart';
 import 'package:yes4track_mobile_api_client/model/address.dart';
 import 'package:yes4track_mobile_api_client/model/adventure_response.dart';
+import 'package:yes4track_mobile_api_client/model/adventure_type.dart';
 import 'package:yes4track_mobile_api_client/model/error_details.dart';
 import 'package:yes4track_mobile_api_client/model/geo_location.dart';
 import 'package:yes4track_mobile_api_client/model/get_all_active_trail_by_angel_response.dart';
@@ -114,6 +115,7 @@ part 'serializers.g.dart';
   ActiveTrailResponse,
   Address,
   AdventureResponse,
+  AdventureType,
   ErrorDetails,
   GeoLocation,
   GetAllActiveTrailByAngelResponse,

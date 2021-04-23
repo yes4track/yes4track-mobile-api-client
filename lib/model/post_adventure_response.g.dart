@@ -85,6 +85,12 @@ class _$PostAdventureResponseSerializer
         ..add(serializers.serialize(object.effectiveEndDate,
             specifiedType: const FullType(DateTime)));
     }
+    if (object.type != null) {
+      result
+        ..add('type')
+        ..add(serializers.serialize(object.type,
+            specifiedType: const FullType(AdventureType)));
+    }
     if (object.id != null) {
       result
         ..add('id')
@@ -158,6 +164,10 @@ class _$PostAdventureResponseSerializer
           result.effectiveEndDate = serializers.deserialize(value,
               specifiedType: const FullType(DateTime)) as DateTime;
           break;
+        case 'type':
+          result.type = serializers.deserialize(value,
+              specifiedType: const FullType(AdventureType)) as AdventureType;
+          break;
         case 'id':
           result.id = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -199,6 +209,8 @@ class _$PostAdventureResponse extends PostAdventureResponse {
   @override
   final DateTime effectiveEndDate;
   @override
+  final AdventureType type;
+  @override
   final String id;
   @override
   final int likes;
@@ -220,6 +232,7 @@ class _$PostAdventureResponse extends PostAdventureResponse {
       this.level,
       this.effectiveStartDate,
       this.effectiveEndDate,
+      this.type,
       this.id,
       this.likes,
       this.codeRequired})
@@ -248,6 +261,7 @@ class _$PostAdventureResponse extends PostAdventureResponse {
         level == other.level &&
         effectiveStartDate == other.effectiveStartDate &&
         effectiveEndDate == other.effectiveEndDate &&
+        type == other.type &&
         id == other.id &&
         likes == other.likes &&
         codeRequired == other.codeRequired;
@@ -266,16 +280,20 @@ class _$PostAdventureResponse extends PostAdventureResponse {
                                     $jc(
                                         $jc(
                                             $jc(
-                                                $jc($jc(0, createdAt.hashCode),
-                                                    updatedAt.hashCode),
-                                                userCreated.hashCode),
-                                            userUpdated.hashCode),
-                                        companyId.hashCode),
-                                    name.hashCode),
-                                description.hashCode),
-                            level.hashCode),
-                        effectiveStartDate.hashCode),
-                    effectiveEndDate.hashCode),
+                                                $jc(
+                                                    $jc(
+                                                        $jc(0,
+                                                            createdAt.hashCode),
+                                                        updatedAt.hashCode),
+                                                    userCreated.hashCode),
+                                                userUpdated.hashCode),
+                                            companyId.hashCode),
+                                        name.hashCode),
+                                    description.hashCode),
+                                level.hashCode),
+                            effectiveStartDate.hashCode),
+                        effectiveEndDate.hashCode),
+                    type.hashCode),
                 id.hashCode),
             likes.hashCode),
         codeRequired.hashCode));
@@ -294,6 +312,7 @@ class _$PostAdventureResponse extends PostAdventureResponse {
           ..add('level', level)
           ..add('effectiveStartDate', effectiveStartDate)
           ..add('effectiveEndDate', effectiveEndDate)
+          ..add('type', type)
           ..add('id', id)
           ..add('likes', likes)
           ..add('codeRequired', codeRequired))
@@ -347,6 +366,10 @@ class PostAdventureResponseBuilder
   set effectiveEndDate(DateTime effectiveEndDate) =>
       _$this._effectiveEndDate = effectiveEndDate;
 
+  AdventureType _type;
+  AdventureType get type => _$this._type;
+  set type(AdventureType type) => _$this._type = type;
+
   String _id;
   String get id => _$this._id;
   set id(String id) => _$this._id = id;
@@ -375,6 +398,7 @@ class PostAdventureResponseBuilder
       _level = _$v.level;
       _effectiveStartDate = _$v.effectiveStartDate;
       _effectiveEndDate = _$v.effectiveEndDate;
+      _type = _$v.type;
       _id = _$v.id;
       _likes = _$v.likes;
       _codeRequired = _$v.codeRequired;
@@ -410,6 +434,7 @@ class PostAdventureResponseBuilder
             level: level,
             effectiveStartDate: effectiveStartDate,
             effectiveEndDate: effectiveEndDate,
+            type: type,
             id: id,
             likes: likes,
             codeRequired: codeRequired);

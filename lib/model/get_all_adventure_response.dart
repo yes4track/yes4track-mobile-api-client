@@ -10,6 +10,7 @@ import 'package:yes4track_mobile_api_client/model/image_url.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:yes4track_mobile_api_client/model/address.dart';
 import 'package:yes4track_mobile_api_client/model/level_type.dart';
+import 'package:yes4track_mobile_api_client/model/adventure_type.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -57,6 +58,11 @@ abstract class GetAllAdventureResponse implements Built<GetAllAdventureResponse,
     @nullable
     @BuiltValueField(wireName: r'effectiveEndDate')
     DateTime get effectiveEndDate;
+
+    @nullable
+    @BuiltValueField(wireName: r'type')
+    AdventureType get type;
+    // enum typeEnum {  1,  2,  3,  4,  5,  };
 
     @nullable
     @BuiltValueField(wireName: r'id')

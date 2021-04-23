@@ -6,6 +6,7 @@ doc/ActiveTrailResponse.md
 doc/Address.md
 doc/AdventureApi.md
 doc/AdventureResponse.md
+doc/AdventureType.md
 doc/AuditApi.md
 doc/CompanyApi.md
 doc/ErrorDetails.md
@@ -124,6 +125,7 @@ lib/model/action_type.dart
 lib/model/active_trail_response.dart
 lib/model/address.dart
 lib/model/adventure_response.dart
+lib/model/adventure_type.dart
 lib/model/error_details.dart
 lib/model/geo_location.dart
 lib/model/get_all_active_trail_by_angel_response.dart
@@ -215,13 +217,4 @@ lib/model/video_url.dart
 lib/model/waypoint_type.dart
 lib/serializers.dart
 pubspec.yaml
-test/get_all_notification_response_test.dart
-test/get_all_paged_notification_response_test.dart
-test/get_user_liked_adventure_response_test.dart
-test/notification_api_test.dart
-test/notification_channel_test.dart
-test/notification_type_test.dart
-test/post_notification_request_test.dart
-test/post_notification_response_test.dart
-test/put_notification_request_test.dart
-test/user_test.dart
+test/adventure_type_test.dart

@@ -85,6 +85,12 @@ class _$GetAllAdventureResponseSerializer
         ..add(serializers.serialize(object.effectiveEndDate,
             specifiedType: const FullType(DateTime)));
     }
+    if (object.type != null) {
+      result
+        ..add('type')
+        ..add(serializers.serialize(object.type,
+            specifiedType: const FullType(AdventureType)));
+    }
     if (object.id != null) {
       result
         ..add('id')
@@ -191,6 +197,10 @@ class _$GetAllAdventureResponseSerializer
           result.effectiveEndDate = serializers.deserialize(value,
               specifiedType: const FullType(DateTime)) as DateTime;
           break;
+        case 'type':
+          result.type = serializers.deserialize(value,
+              specifiedType: const FullType(AdventureType)) as AdventureType;
+          break;
         case 'id':
           result.id = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -258,6 +268,8 @@ class _$GetAllAdventureResponse extends GetAllAdventureResponse {
   @override
   final DateTime effectiveEndDate;
   @override
+  final AdventureType type;
+  @override
   final String id;
   @override
   final int likes;
@@ -289,6 +301,7 @@ class _$GetAllAdventureResponse extends GetAllAdventureResponse {
       this.level,
       this.effectiveStartDate,
       this.effectiveEndDate,
+      this.type,
       this.id,
       this.likes,
       this.imagesUrl,
@@ -322,6 +335,7 @@ class _$GetAllAdventureResponse extends GetAllAdventureResponse {
         level == other.level &&
         effectiveStartDate == other.effectiveStartDate &&
         effectiveEndDate == other.effectiveEndDate &&
+        type == other.type &&
         id == other.id &&
         likes == other.likes &&
         imagesUrl == other.imagesUrl &&
@@ -352,21 +366,24 @@ class _$GetAllAdventureResponse extends GetAllAdventureResponse {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            0,
-                                                                            createdAt
+                                                                            $jc(
+                                                                                0,
+                                                                                createdAt
+                                                                                    .hashCode),
+                                                                            updatedAt
                                                                                 .hashCode),
-                                                                        updatedAt
+                                                                        userCreated
                                                                             .hashCode),
-                                                                    userCreated
+                                                                    userUpdated
                                                                         .hashCode),
-                                                                userUpdated
+                                                                companyId
                                                                     .hashCode),
-                                                            companyId.hashCode),
-                                                        name.hashCode),
-                                                    description.hashCode),
-                                                level.hashCode),
-                                            effectiveStartDate.hashCode),
-                                        effectiveEndDate.hashCode),
+                                                            name.hashCode),
+                                                        description.hashCode),
+                                                    level.hashCode),
+                                                effectiveStartDate.hashCode),
+                                            effectiveEndDate.hashCode),
+                                        type.hashCode),
                                     id.hashCode),
                                 likes.hashCode),
                             imagesUrl.hashCode),
@@ -390,6 +407,7 @@ class _$GetAllAdventureResponse extends GetAllAdventureResponse {
           ..add('level', level)
           ..add('effectiveStartDate', effectiveStartDate)
           ..add('effectiveEndDate', effectiveEndDate)
+          ..add('type', type)
           ..add('id', id)
           ..add('likes', likes)
           ..add('imagesUrl', imagesUrl)
@@ -449,6 +467,10 @@ class GetAllAdventureResponseBuilder
   set effectiveEndDate(DateTime effectiveEndDate) =>
       _$this._effectiveEndDate = effectiveEndDate;
 
+  AdventureType _type;
+  AdventureType get type => _$this._type;
+  set type(AdventureType type) => _$this._type = type;
+
   String _id;
   String get id => _$this._id;
   set id(String id) => _$this._id = id;
@@ -503,6 +525,7 @@ class GetAllAdventureResponseBuilder
       _level = _$v.level;
       _effectiveStartDate = _$v.effectiveStartDate;
       _effectiveEndDate = _$v.effectiveEndDate;
+      _type = _$v.type;
       _id = _$v.id;
       _likes = _$v.likes;
       _imagesUrl = _$v.imagesUrl?.toBuilder();
@@ -545,6 +568,7 @@ class GetAllAdventureResponseBuilder
               level: level,
               effectiveStartDate: effectiveStartDate,
               effectiveEndDate: effectiveEndDate,
+              type: type,
               id: id,
               likes: likes,
               imagesUrl: _imagesUrl?.build(),

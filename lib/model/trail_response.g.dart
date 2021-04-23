@@ -62,6 +62,12 @@ class _$TrailResponseSerializer implements StructuredSerializer<TrailResponse> {
         ..add(serializers.serialize(object.adventureLevel,
             specifiedType: const FullType(LevelType)));
     }
+    if (object.adventureType != null) {
+      result
+        ..add('adventureType')
+        ..add(serializers.serialize(object.adventureType,
+            specifiedType: const FullType(AdventureType)));
+    }
     if (object.photoUrl != null) {
       result
         ..add('photoUrl')
@@ -111,6 +117,10 @@ class _$TrailResponseSerializer implements StructuredSerializer<TrailResponse> {
           result.adventureLevel = serializers.deserialize(value,
               specifiedType: const FullType(LevelType)) as LevelType;
           break;
+        case 'adventureType':
+          result.adventureType = serializers.deserialize(value,
+              specifiedType: const FullType(AdventureType)) as AdventureType;
+          break;
         case 'photoUrl':
           result.photoUrl = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -138,6 +148,8 @@ class _$TrailResponse extends TrailResponse {
   @override
   final LevelType adventureLevel;
   @override
+  final AdventureType adventureType;
+  @override
   final String photoUrl;
 
   factory _$TrailResponse([void Function(TrailResponseBuilder) updates]) =>
@@ -151,6 +163,7 @@ class _$TrailResponse extends TrailResponse {
       this.statistic,
       this.adventureName,
       this.adventureLevel,
+      this.adventureType,
       this.photoUrl})
       : super._();
 
@@ -172,6 +185,7 @@ class _$TrailResponse extends TrailResponse {
         statistic == other.statistic &&
         adventureName == other.adventureName &&
         adventureLevel == other.adventureLevel &&
+        adventureType == other.adventureType &&
         photoUrl == other.photoUrl;
   }
 
@@ -182,12 +196,14 @@ class _$TrailResponse extends TrailResponse {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, id.hashCode), adventureId.hashCode),
-                            name.hashCode),
-                        startDate.hashCode),
-                    statistic.hashCode),
-                adventureName.hashCode),
-            adventureLevel.hashCode),
+                        $jc(
+                            $jc($jc($jc(0, id.hashCode), adventureId.hashCode),
+                                name.hashCode),
+                            startDate.hashCode),
+                        statistic.hashCode),
+                    adventureName.hashCode),
+                adventureLevel.hashCode),
+            adventureType.hashCode),
         photoUrl.hashCode));
   }
 
@@ -201,6 +217,7 @@ class _$TrailResponse extends TrailResponse {
           ..add('statistic', statistic)
           ..add('adventureName', adventureName)
           ..add('adventureLevel', adventureLevel)
+          ..add('adventureType', adventureType)
           ..add('photoUrl', photoUrl))
         .toString();
   }
@@ -241,6 +258,11 @@ class TrailResponseBuilder
   set adventureLevel(LevelType adventureLevel) =>
       _$this._adventureLevel = adventureLevel;
 
+  AdventureType _adventureType;
+  AdventureType get adventureType => _$this._adventureType;
+  set adventureType(AdventureType adventureType) =>
+      _$this._adventureType = adventureType;
+
   String _photoUrl;
   String get photoUrl => _$this._photoUrl;
   set photoUrl(String photoUrl) => _$this._photoUrl = photoUrl;
@@ -258,6 +280,7 @@ class TrailResponseBuilder
       _statistic = _$v.statistic?.toBuilder();
       _adventureName = _$v.adventureName;
       _adventureLevel = _$v.adventureLevel;
+      _adventureType = _$v.adventureType;
       _photoUrl = _$v.photoUrl;
       _$v = null;
     }
@@ -290,6 +313,7 @@ class TrailResponseBuilder
               statistic: _statistic?.build(),
               adventureName: adventureName,
               adventureLevel: adventureLevel,
+              adventureType: adventureType,
               photoUrl: photoUrl);
     } catch (_) {
       String _$failedField;

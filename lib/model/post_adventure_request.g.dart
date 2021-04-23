@@ -85,6 +85,12 @@ class _$PostAdventureRequestSerializer
         ..add(serializers.serialize(object.effectiveEndDate,
             specifiedType: const FullType(DateTime)));
     }
+    if (object.type != null) {
+      result
+        ..add('type')
+        ..add(serializers.serialize(object.type,
+            specifiedType: const FullType(AdventureType)));
+    }
     if (object.codeRequired != null) {
       result
         ..add('codeRequired')
@@ -146,6 +152,10 @@ class _$PostAdventureRequestSerializer
           result.effectiveEndDate = serializers.deserialize(value,
               specifiedType: const FullType(DateTime)) as DateTime;
           break;
+        case 'type':
+          result.type = serializers.deserialize(value,
+              specifiedType: const FullType(AdventureType)) as AdventureType;
+          break;
         case 'codeRequired':
           result.codeRequired = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -179,6 +189,8 @@ class _$PostAdventureRequest extends PostAdventureRequest {
   @override
   final DateTime effectiveEndDate;
   @override
+  final AdventureType type;
+  @override
   final bool codeRequired;
 
   factory _$PostAdventureRequest(
@@ -196,6 +208,7 @@ class _$PostAdventureRequest extends PostAdventureRequest {
       this.level,
       this.effectiveStartDate,
       this.effectiveEndDate,
+      this.type,
       this.codeRequired})
       : super._();
 
@@ -222,6 +235,7 @@ class _$PostAdventureRequest extends PostAdventureRequest {
         level == other.level &&
         effectiveStartDate == other.effectiveStartDate &&
         effectiveEndDate == other.effectiveEndDate &&
+        type == other.type &&
         codeRequired == other.codeRequired;
   }
 
@@ -236,16 +250,18 @@ class _$PostAdventureRequest extends PostAdventureRequest {
                             $jc(
                                 $jc(
                                     $jc(
-                                        $jc($jc(0, createdAt.hashCode),
-                                            updatedAt.hashCode),
-                                        userCreated.hashCode),
-                                    userUpdated.hashCode),
-                                companyId.hashCode),
-                            name.hashCode),
-                        description.hashCode),
-                    level.hashCode),
-                effectiveStartDate.hashCode),
-            effectiveEndDate.hashCode),
+                                        $jc(
+                                            $jc($jc(0, createdAt.hashCode),
+                                                updatedAt.hashCode),
+                                            userCreated.hashCode),
+                                        userUpdated.hashCode),
+                                    companyId.hashCode),
+                                name.hashCode),
+                            description.hashCode),
+                        level.hashCode),
+                    effectiveStartDate.hashCode),
+                effectiveEndDate.hashCode),
+            type.hashCode),
         codeRequired.hashCode));
   }
 
@@ -262,6 +278,7 @@ class _$PostAdventureRequest extends PostAdventureRequest {
           ..add('level', level)
           ..add('effectiveStartDate', effectiveStartDate)
           ..add('effectiveEndDate', effectiveEndDate)
+          ..add('type', type)
           ..add('codeRequired', codeRequired))
         .toString();
   }
@@ -313,6 +330,10 @@ class PostAdventureRequestBuilder
   set effectiveEndDate(DateTime effectiveEndDate) =>
       _$this._effectiveEndDate = effectiveEndDate;
 
+  AdventureType _type;
+  AdventureType get type => _$this._type;
+  set type(AdventureType type) => _$this._type = type;
+
   bool _codeRequired;
   bool get codeRequired => _$this._codeRequired;
   set codeRequired(bool codeRequired) => _$this._codeRequired = codeRequired;
@@ -333,6 +354,7 @@ class PostAdventureRequestBuilder
       _level = _$v.level;
       _effectiveStartDate = _$v.effectiveStartDate;
       _effectiveEndDate = _$v.effectiveEndDate;
+      _type = _$v.type;
       _codeRequired = _$v.codeRequired;
       _$v = null;
     }
@@ -366,6 +388,7 @@ class PostAdventureRequestBuilder
             level: level,
             effectiveStartDate: effectiveStartDate,
             effectiveEndDate: effectiveEndDate,
+            type: type,
             codeRequired: codeRequired);
     replace(_$result);
     return _$result;

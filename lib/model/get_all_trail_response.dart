@@ -7,6 +7,7 @@
 
 import 'package:built_collection/built_collection.dart';
 import 'package:yes4track_mobile_api_client/model/level_type.dart';
+import 'package:yes4track_mobile_api_client/model/adventure_type.dart';
 import 'package:yes4track_mobile_api_client/model/statistic.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -71,6 +72,11 @@ abstract class GetAllTrailResponse implements Built<GetAllTrailResponse, GetAllT
     @BuiltValueField(wireName: r'adventureLevel')
     LevelType get adventureLevel;
     // enum adventureLevelEnum {  1,  2,  3,  };
+
+    @nullable
+    @BuiltValueField(wireName: r'adventureType')
+    AdventureType get adventureType;
+    // enum adventureTypeEnum {  1,  2,  3,  4,  5,  };
 
     @nullable
     @BuiltValueField(wireName: r'photoUrl')

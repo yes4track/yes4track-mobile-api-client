@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **level** | [**LevelType**](LevelType.md) |  | [optional] 
 **effectiveStartDate** | [**DateTime**](DateTime.md) |  | [optional] 
 **effectiveEndDate** | [**DateTime**](DateTime.md) |  | [optional] 
+**type** | [**AdventureType**](AdventureType.md) |  | [optional] 
 **id** | **String** |  | [optional] 
 **codeRequired** | **bool** |  | [optional] 
 **isActive** | **bool** |  | [optional] 

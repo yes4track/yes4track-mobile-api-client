@@ -85,6 +85,12 @@ class _$PutAdventureRequestSerializer
         ..add(serializers.serialize(object.effectiveEndDate,
             specifiedType: const FullType(DateTime)));
     }
+    if (object.type != null) {
+      result
+        ..add('type')
+        ..add(serializers.serialize(object.type,
+            specifiedType: const FullType(AdventureType)));
+    }
     if (object.id != null) {
       result
         ..add('id')
@@ -158,6 +164,10 @@ class _$PutAdventureRequestSerializer
           result.effectiveEndDate = serializers.deserialize(value,
               specifiedType: const FullType(DateTime)) as DateTime;
           break;
+        case 'type':
+          result.type = serializers.deserialize(value,
+              specifiedType: const FullType(AdventureType)) as AdventureType;
+          break;
         case 'id':
           result.id = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -199,6 +209,8 @@ class _$PutAdventureRequest extends PutAdventureRequest {
   @override
   final DateTime effectiveEndDate;
   @override
+  final AdventureType type;
+  @override
   final String id;
   @override
   final bool codeRequired;
@@ -220,6 +232,7 @@ class _$PutAdventureRequest extends PutAdventureRequest {
       this.level,
       this.effectiveStartDate,
       this.effectiveEndDate,
+      this.type,
       this.id,
       this.codeRequired,
       this.isActive})
@@ -248,6 +261,7 @@ class _$PutAdventureRequest extends PutAdventureRequest {
         level == other.level &&
         effectiveStartDate == other.effectiveStartDate &&
         effectiveEndDate == other.effectiveEndDate &&
+        type == other.type &&
         id == other.id &&
         codeRequired == other.codeRequired &&
         isActive == other.isActive;
@@ -266,16 +280,20 @@ class _$PutAdventureRequest extends PutAdventureRequest {
                                     $jc(
                                         $jc(
                                             $jc(
-                                                $jc($jc(0, createdAt.hashCode),
-                                                    updatedAt.hashCode),
-                                                userCreated.hashCode),
-                                            userUpdated.hashCode),
-                                        companyId.hashCode),
-                                    name.hashCode),
-                                description.hashCode),
-                            level.hashCode),
-                        effectiveStartDate.hashCode),
-                    effectiveEndDate.hashCode),
+                                                $jc(
+                                                    $jc(
+                                                        $jc(0,
+                                                            createdAt.hashCode),
+                                                        updatedAt.hashCode),
+                                                    userCreated.hashCode),
+                                                userUpdated.hashCode),
+                                            companyId.hashCode),
+                                        name.hashCode),
+                                    description.hashCode),
+                                level.hashCode),
+                            effectiveStartDate.hashCode),
+                        effectiveEndDate.hashCode),
+                    type.hashCode),
                 id.hashCode),
             codeRequired.hashCode),
         isActive.hashCode));
@@ -294,6 +312,7 @@ class _$PutAdventureRequest extends PutAdventureRequest {
           ..add('level', level)
           ..add('effectiveStartDate', effectiveStartDate)
           ..add('effectiveEndDate', effectiveEndDate)
+          ..add('type', type)
           ..add('id', id)
           ..add('codeRequired', codeRequired)
           ..add('isActive', isActive))
@@ -347,6 +366,10 @@ class PutAdventureRequestBuilder
   set effectiveEndDate(DateTime effectiveEndDate) =>
       _$this._effectiveEndDate = effectiveEndDate;
 
+  AdventureType _type;
+  AdventureType get type => _$this._type;
+  set type(AdventureType type) => _$this._type = type;
+
   String _id;
   String get id => _$this._id;
   set id(String id) => _$this._id = id;
@@ -375,6 +398,7 @@ class PutAdventureRequestBuilder
       _level = _$v.level;
       _effectiveStartDate = _$v.effectiveStartDate;
       _effectiveEndDate = _$v.effectiveEndDate;
+      _type = _$v.type;
       _id = _$v.id;
       _codeRequired = _$v.codeRequired;
       _isActive = _$v.isActive;
@@ -410,6 +434,7 @@ class PutAdventureRequestBuilder
             level: level,
             effectiveStartDate: effectiveStartDate,
             effectiveEndDate: effectiveEndDate,
+            type: type,
             id: id,
             codeRequired: codeRequired,
             isActive: isActive);

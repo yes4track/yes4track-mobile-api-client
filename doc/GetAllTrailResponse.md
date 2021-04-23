@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **angels** | **BuiltList<String>** |  | [optional] 
 **adventureName** | **String** |  | [optional] 
 **adventureLevel** | [**LevelType**](LevelType.md) |  | [optional] 
+**adventureType** | [**AdventureType**](AdventureType.md) |  | [optional] 
 **photoUrl** | **String** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

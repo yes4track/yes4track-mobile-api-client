@@ -17,7 +17,7 @@ Dart 1.20.0 or later OR Flutter 0.0.20 or later
 If this Dart package is published to Github, please include the following in pubspec.yaml
 ```
 name: yes4track_mobile_api_client
-version: 0.0.15
+version: 0.0.16
 description: Yes4track Mobile API Client
 dependencies:
   yes4track_mobile_api_client:
@@ -168,6 +168,7 @@ Class | Method | HTTP request | Description
  - [ActiveTrailResponse](doc\/ActiveTrailResponse.md)
  - [Address](doc\/Address.md)
  - [AdventureResponse](doc\/AdventureResponse.md)
+ - [AdventureType](doc\/AdventureType.md)
  - [ErrorDetails](doc\/ErrorDetails.md)
  - [GeoLocation](doc\/GeoLocation.md)
  - [GetAllActiveTrailByAngelResponse](doc\/GetAllActiveTrailByAngelResponse.md)

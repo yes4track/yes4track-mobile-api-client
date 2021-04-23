@@ -111,6 +111,12 @@ class _$GetAllTrailResponseSerializer
         ..add(serializers.serialize(object.adventureLevel,
             specifiedType: const FullType(LevelType)));
     }
+    if (object.adventureType != null) {
+      result
+        ..add('adventureType')
+        ..add(serializers.serialize(object.adventureType,
+            specifiedType: const FullType(AdventureType)));
+    }
     if (object.photoUrl != null) {
       result
         ..add('photoUrl')
@@ -192,6 +198,10 @@ class _$GetAllTrailResponseSerializer
           result.adventureLevel = serializers.deserialize(value,
               specifiedType: const FullType(LevelType)) as LevelType;
           break;
+        case 'adventureType':
+          result.adventureType = serializers.deserialize(value,
+              specifiedType: const FullType(AdventureType)) as AdventureType;
+          break;
         case 'photoUrl':
           result.photoUrl = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -233,6 +243,8 @@ class _$GetAllTrailResponse extends GetAllTrailResponse {
   @override
   final LevelType adventureLevel;
   @override
+  final AdventureType adventureType;
+  @override
   final String photoUrl;
 
   factory _$GetAllTrailResponse(
@@ -254,6 +266,7 @@ class _$GetAllTrailResponse extends GetAllTrailResponse {
       this.angels,
       this.adventureName,
       this.adventureLevel,
+      this.adventureType,
       this.photoUrl})
       : super._();
 
@@ -284,6 +297,7 @@ class _$GetAllTrailResponse extends GetAllTrailResponse {
         angels == other.angels &&
         adventureName == other.adventureName &&
         adventureLevel == other.adventureLevel &&
+        adventureType == other.adventureType &&
         photoUrl == other.photoUrl;
   }
 
@@ -304,22 +318,26 @@ class _$GetAllTrailResponse extends GetAllTrailResponse {
                                                     $jc(
                                                         $jc(
                                                             $jc(
-                                                                0,
-                                                                createdAt
+                                                                $jc(
+                                                                    0,
+                                                                    createdAt
+                                                                        .hashCode),
+                                                                updatedAt
                                                                     .hashCode),
-                                                            updatedAt.hashCode),
-                                                        userCreated.hashCode),
-                                                    userUpdated.hashCode),
-                                                adventureId.hashCode),
-                                            name.hashCode),
-                                        startDate.hashCode),
-                                    endDate.hashCode),
-                                id.hashCode),
-                            statistic.hashCode),
-                        sponsors.hashCode),
-                    angels.hashCode),
-                adventureName.hashCode),
-            adventureLevel.hashCode),
+                                                            userCreated
+                                                                .hashCode),
+                                                        userUpdated.hashCode),
+                                                    adventureId.hashCode),
+                                                name.hashCode),
+                                            startDate.hashCode),
+                                        endDate.hashCode),
+                                    id.hashCode),
+                                statistic.hashCode),
+                            sponsors.hashCode),
+                        angels.hashCode),
+                    adventureName.hashCode),
+                adventureLevel.hashCode),
+            adventureType.hashCode),
         photoUrl.hashCode));
   }
 
@@ -340,6 +358,7 @@ class _$GetAllTrailResponse extends GetAllTrailResponse {
           ..add('angels', angels)
           ..add('adventureName', adventureName)
           ..add('adventureLevel', adventureLevel)
+          ..add('adventureType', adventureType)
           ..add('photoUrl', photoUrl))
         .toString();
   }
@@ -410,6 +429,11 @@ class GetAllTrailResponseBuilder
   set adventureLevel(LevelType adventureLevel) =>
       _$this._adventureLevel = adventureLevel;
 
+  AdventureType _adventureType;
+  AdventureType get adventureType => _$this._adventureType;
+  set adventureType(AdventureType adventureType) =>
+      _$this._adventureType = adventureType;
+
   String _photoUrl;
   String get photoUrl => _$this._photoUrl;
   set photoUrl(String photoUrl) => _$this._photoUrl = photoUrl;
@@ -434,6 +458,7 @@ class GetAllTrailResponseBuilder
       _angels = _$v.angels?.toBuilder();
       _adventureName = _$v.adventureName;
       _adventureLevel = _$v.adventureLevel;
+      _adventureType = _$v.adventureType;
       _photoUrl = _$v.photoUrl;
       _$v = null;
     }
@@ -473,6 +498,7 @@ class GetAllTrailResponseBuilder
               angels: _angels?.build(),
               adventureName: adventureName,
               adventureLevel: adventureLevel,
+              adventureType: adventureType,
               photoUrl: photoUrl);
     } catch (_) {
       String _$failedField;

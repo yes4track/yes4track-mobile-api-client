@@ -14,6 +14,7 @@ import 'package:yes4track_mobile_api_client/model/post_check_adventure_code_resp
 import 'package:yes4track_mobile_api_client/model/post_adventure_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_by_id_adventure_code_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_user_liked_adventure_response.dart';
+import 'package:yes4track_mobile_api_client/model/adventure_type.dart';
 import 'package:yes4track_mobile_api_client/model/put_adventure_request.dart';
 import 'package:yes4track_mobile_api_client/model/level_type.dart';
 import 'package:yes4track_mobile_api_client/model/get_all_paged_adventure_likes_response.dart';
@@ -337,6 +338,7 @@ class AdventureApi {
         LevelType level,
         bool codeRequired,
         bool isActive,
+        AdventureType type,
         int page,
         int pageSize,
         String sort,
@@ -365,6 +367,7 @@ class AdventureApi {
         queryParams[r'level'] = level;
         queryParams[r'codeRequired'] = codeRequired;
         queryParams[r'isActive'] = isActive;
+        queryParams[r'type'] = type;
         queryParams[r'page'] = page;
         queryParams[r'pageSize'] = pageSize;
         queryParams[r'sort'] = sort;
