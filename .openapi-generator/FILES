@@ -217,4 +217,3 @@ lib/model/video_url.dart
 lib/model/waypoint_type.dart
 lib/serializers.dart
 pubspec.yaml
-test/adventure_type_test.dart

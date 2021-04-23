@@ -39,6 +39,12 @@ class _$AdventureResponseSerializer
         ..add(serializers.serialize(object.level,
             specifiedType: const FullType(LevelType)));
     }
+    if (object.type != null) {
+      result
+        ..add('type')
+        ..add(serializers.serialize(object.type,
+            specifiedType: const FullType(AdventureType)));
+    }
     return result;
   }
 
@@ -66,6 +72,10 @@ class _$AdventureResponseSerializer
           result.level = serializers.deserialize(value,
               specifiedType: const FullType(LevelType)) as LevelType;
           break;
+        case 'type':
+          result.type = serializers.deserialize(value,
+              specifiedType: const FullType(AdventureType)) as AdventureType;
+          break;
       }
     }
 
@@ -80,12 +90,15 @@ class _$AdventureResponse extends AdventureResponse {
   final String description;
   @override
   final LevelType level;
+  @override
+  final AdventureType type;
 
   factory _$AdventureResponse(
           [void Function(AdventureResponseBuilder) updates]) =>
       (new AdventureResponseBuilder()..update(updates)).build();
 
-  _$AdventureResponse._({this.name, this.description, this.level}) : super._();
+  _$AdventureResponse._({this.name, this.description, this.level, this.type})
+      : super._();
 
   @override
   AdventureResponse rebuild(void Function(AdventureResponseBuilder) updates) =>
@@ -101,13 +114,15 @@ class _$AdventureResponse extends AdventureResponse {
     return other is AdventureResponse &&
         name == other.name &&
         description == other.description &&
-        level == other.level;
+        level == other.level &&
+        type == other.type;
   }
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, name.hashCode), description.hashCode), level.hashCode));
+    return $jf($jc(
+        $jc($jc($jc(0, name.hashCode), description.hashCode), level.hashCode),
+        type.hashCode));
   }
 
   @override
@@ -115,7 +130,8 @@ class _$AdventureResponse extends AdventureResponse {
     return (newBuiltValueToStringHelper('AdventureResponse')
           ..add('name', name)
           ..add('description', description)
-          ..add('level', level))
+          ..add('level', level)
+          ..add('type', type))
         .toString();
   }
 }
@@ -136,6 +152,10 @@ class AdventureResponseBuilder
   LevelType get level => _$this._level;
   set level(LevelType level) => _$this._level = level;
 
+  AdventureType _type;
+  AdventureType get type => _$this._type;
+  set type(AdventureType type) => _$this._type = type;
+
   AdventureResponseBuilder() {
     AdventureResponse._initializeBuilder(this);
   }
@@ -145,6 +165,7 @@ class AdventureResponseBuilder
       _name = _$v.name;
       _description = _$v.description;
       _level = _$v.level;
+      _type = _$v.type;
       _$v = null;
     }
     return this;
@@ -167,7 +188,7 @@ class AdventureResponseBuilder
   _$AdventureResponse build() {
     final _$result = _$v ??
         new _$AdventureResponse._(
-            name: name, description: description, level: level);
+            name: name, description: description, level: level, type: type);
     replace(_$result);
     return _$result;
   }

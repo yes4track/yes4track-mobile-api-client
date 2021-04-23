@@ -6,6 +6,7 @@
 // ignore_for_file: unused_import
 
 import 'package:yes4track_mobile_api_client/model/level_type.dart';
+import 'package:yes4track_mobile_api_client/model/adventure_type.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -25,6 +26,11 @@ abstract class AdventureResponse implements Built<AdventureResponse, AdventureRe
     @BuiltValueField(wireName: r'level')
     LevelType get level;
     // enum levelEnum {  1,  2,  3,  };
+
+    @nullable
+    @BuiltValueField(wireName: r'type')
+    AdventureType get type;
+    // enum typeEnum {  1,  2,  3,  4,  5,  };
 
     // Boilerplate code needed to wire-up generated code
     AdventureResponse._();
