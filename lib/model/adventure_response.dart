@@ -30,7 +30,7 @@ abstract class AdventureResponse implements Built<AdventureResponse, AdventureRe
     @nullable
     @BuiltValueField(wireName: r'type')
     AdventureType get type;
-    // enum typeEnum {  1,  2,  3,  4,  5,  };
+    // enum typeEnum {  1,  2,  3,  4,  5,  6,  };
 
     // Boilerplate code needed to wire-up generated code
     AdventureResponse._();

@@ -71,7 +71,7 @@ abstract class PostTrailResponse implements Built<PostTrailResponse, PostTrailRe
     @nullable
     @BuiltValueField(wireName: r'adventureType')
     AdventureType get adventureType;
-    // enum adventureTypeEnum {  1,  2,  3,  4,  5,  };
+    // enum adventureTypeEnum {  1,  2,  3,  4,  5,  6,  };
 
     @nullable
     @BuiltValueField(wireName: r'photoUrl')

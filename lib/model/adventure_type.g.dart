@@ -12,6 +12,7 @@ const AdventureType _$number2 = const AdventureType._('number2');
 const AdventureType _$number3 = const AdventureType._('number3');
 const AdventureType _$number4 = const AdventureType._('number4');
 const AdventureType _$number5 = const AdventureType._('number5');
+const AdventureType _$number6 = const AdventureType._('number6');
 
 AdventureType _$valueOf(String name) {
   switch (name) {
@@ -25,6 +26,8 @@ AdventureType _$valueOf(String name) {
       return _$number4;
     case 'number5':
       return _$number5;
+    case 'number6':
+      return _$number6;
     default:
       throw new ArgumentError(name);
   }
@@ -37,6 +40,7 @@ final BuiltSet<AdventureType> _$values =
   _$number3,
   _$number4,
   _$number5,
+  _$number6,
 ]);
 
 class _$AdventureTypeMeta {
@@ -46,6 +50,7 @@ class _$AdventureTypeMeta {
   AdventureType get number3 => _$number3;
   AdventureType get number4 => _$number4;
   AdventureType get number5 => _$number5;
+  AdventureType get number6 => _$number6;
   AdventureType valueOf(String name) => _$valueOf(name);
   BuiltSet<AdventureType> get values => _$values;
 }
@@ -65,6 +70,7 @@ class _$AdventureTypeSerializer implements PrimitiveSerializer<AdventureType> {
     'number3': 3,
     'number4': 4,
     'number5': 5,
+    'number6': 6,
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     1: 'number1',
@@ -72,6 +78,7 @@ class _$AdventureTypeSerializer implements PrimitiveSerializer<AdventureType> {
     3: 'number3',
     4: 'number4',
     5: 'number5',
+    6: 'number6',
   };
 
   @override

@@ -23,6 +23,8 @@ class AdventureType extends EnumClass {
   static const AdventureType number4 = _$number4;
   @BuiltValueEnumConst(wireNumber: 5)
   static const AdventureType number5 = _$number5;
+  @BuiltValueEnumConst(wireNumber: 6)
+  static const AdventureType number6 = _$number6;
 
   static Serializer<AdventureType> get serializer => _$adventureTypeSerializer;
 

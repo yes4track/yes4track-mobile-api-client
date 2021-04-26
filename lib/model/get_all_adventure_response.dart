@@ -62,7 +62,7 @@ abstract class GetAllAdventureResponse implements Built<GetAllAdventureResponse,
     @nullable
     @BuiltValueField(wireName: r'type')
     AdventureType get type;
-    // enum typeEnum {  1,  2,  3,  4,  5,  };
+    // enum typeEnum {  1,  2,  3,  4,  5,  6,  };
 
     @nullable
     @BuiltValueField(wireName: r'id')
