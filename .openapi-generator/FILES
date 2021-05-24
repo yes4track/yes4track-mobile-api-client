@@ -37,6 +37,7 @@ doc/GetAllTrailResponse.md
 doc/GetAllUserResponse.md
 doc/GetByIdAdventureCodeResponse.md
 doc/GetByIdExperienceCodeResponse.md
+doc/GetByIdTrailGeoDataetByIdResponse.md
 doc/GetUserLikedAdventureResponse.md
 doc/ImageUrl.md
 doc/LevelType.md
@@ -153,6 +154,7 @@ lib/model/get_all_trail_response.dart
 lib/model/get_all_user_response.dart
 lib/model/get_by_id_adventure_code_response.dart
 lib/model/get_by_id_experience_code_response.dart
+lib/model/get_by_id_trail_geo_dataet_by_id_response.dart
 lib/model/get_user_liked_adventure_response.dart
 lib/model/image_url.dart
 lib/model/level_type.dart

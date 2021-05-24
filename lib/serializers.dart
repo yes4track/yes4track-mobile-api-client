@@ -45,6 +45,7 @@ import 'package:yes4track_mobile_api_client/model/get_all_trail_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_all_user_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_by_id_adventure_code_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_by_id_experience_code_response.dart';
+import 'package:yes4track_mobile_api_client/model/get_by_id_trail_geo_dataet_by_id_response.dart';
 import 'package:yes4track_mobile_api_client/model/get_user_liked_adventure_response.dart';
 import 'package:yes4track_mobile_api_client/model/image_url.dart';
 import 'package:yes4track_mobile_api_client/model/level_type.dart';
@@ -143,6 +144,7 @@ part 'serializers.g.dart';
   GetAllUserResponse,
   GetByIdAdventureCodeResponse,
   GetByIdExperienceCodeResponse,
+  GetByIdTrailGeoDataetByIdResponse,
   GetUserLikedAdventureResponse,
   ImageUrl,
   LevelType,

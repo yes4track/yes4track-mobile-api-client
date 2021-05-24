@@ -10,6 +10,7 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:built_value/serializer.dart';
 
+import 'package:yes4track_mobile_api_client/model/get_by_id_trail_geo_dataet_by_id_response.dart';
 import 'package:yes4track_mobile_api_client/model/post_trail_chunck_geo_data_request.dart';
 import 'package:yes4track_mobile_api_client/model/put_trail_request.dart';
 import 'package:yes4track_mobile_api_client/model/error_details.dart';
@@ -106,7 +107,7 @@ class TrailApi {
     /// Get Trail Geo Data by id
     ///
     /// 
-    Future<Response<void>> getByIdTrailGeoData(
+    Future<Response<GetByIdTrailGeoDataetByIdResponse>> getByIdTrailGeoData(
         String id, { 
         String xApiKey,
         String xCsrfToken,
@@ -156,7 +157,24 @@ class TrailApi {
             cancelToken: cancelToken,
             onSendProgress: onSendProgress,
             onReceiveProgress: onReceiveProgress,
-        );
+        ).then((response) {
+            final serializer = _serializers.serializerForType(GetByIdTrailGeoDataetByIdResponse) as Serializer<GetByIdTrailGeoDataetByIdResponse>;
+            final data = _serializers.deserializeWith<GetByIdTrailGeoDataetByIdResponse>(
+                serializer,
+                response.data is String ? jsonDecode(response.data as String) : response.data,
+            );
+
+            return Response<GetByIdTrailGeoDataetByIdResponse>(
+                data: data,
+                headers: response.headers,
+                isRedirect: response.isRedirect,
+                request: response.request,
+                redirects: response.redirects,
+                statusCode: response.statusCode,
+                statusMessage: response.statusMessage,
+                extra: response.extra,
+            );
+        });
     }
 
     /// Get All Active Trail by Angel
