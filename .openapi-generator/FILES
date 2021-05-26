@@ -12,6 +12,7 @@ doc/CompanyApi.md
 doc/ErrorDetails.md
 doc/ExperienceApi.md
 doc/GeoLocation.md
+doc/GeolocationApi.md
 doc/GetAllActiveTrailByAngelResponse.md
 doc/GetAllAdventureLikesResponse.md
 doc/GetAllAdventureResponse.md
@@ -111,6 +112,7 @@ lib/api/adventure_api.dart
 lib/api/audit_api.dart
 lib/api/company_api.dart
 lib/api/experience_api.dart
+lib/api/geolocation_api.dart
 lib/api/notification_api.dart
 lib/api/sponsor_api.dart
 lib/api/template_api.dart
@@ -219,3 +221,4 @@ lib/model/video_url.dart
 lib/model/waypoint_type.dart
 lib/serializers.dart
 pubspec.yaml
+test/geolocation_api_test.dart

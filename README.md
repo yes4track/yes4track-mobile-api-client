@@ -17,7 +17,7 @@ Dart 1.20.0 or later OR Flutter 0.0.20 or later
 If this Dart package is published to Github, please include the following in pubspec.yaml
 ```
 name: yes4track_mobile_api_client
-version: 0.0.19
+version: 0.0.20
 description: Yes4track Mobile API Client
 dependencies:
   yes4track_mobile_api_client:
@@ -101,6 +101,7 @@ Class | Method | HTTP request | Description
 *ExperienceApi* | [**yes4trackV1ExperiencesIdVideosPost**](doc\/ExperienceApi.md#yes4trackv1experiencesidvideospost) | **post** /yes4track/v1/experiences/{id}/videos | Add videos in an Experience
 *ExperienceApi* | [**yes4trackV1ExperiencesIdVideosVideoIdDelete**](doc\/ExperienceApi.md#yes4trackv1experiencesidvideosvideoiddelete) | **delete** /yes4track/v1/experiences/{id}/videos/{videoId} | Delete Experience by Id
 *ExperienceApi* | [**yes4trackV1ExperiencesPost**](doc\/ExperienceApi.md#yes4trackv1experiencespost) | **post** /yes4track/v1/experiences | Create Experience
+*GeolocationApi* | [**getAddressByLatLong**](doc\/GeolocationApi.md#getaddressbylatlong) | **get** /yes4track/v1/geolocations/{lat}/{lng} | Get Address by Lat Long
 *NotificationApi* | [**getByIdNotification**](doc\/NotificationApi.md#getbyidnotification) | **get** /yes4track/v1/notifications/{id} | Get Notification by id
 *NotificationApi* | [**yes4trackV1NotificationsGet**](doc\/NotificationApi.md#yes4trackv1notificationsget) | **get** /yes4track/v1/notifications | Get All Notification by filter with pagination
 *NotificationApi* | [**yes4trackV1NotificationsIdDelete**](doc\/NotificationApi.md#yes4trackv1notificationsiddelete) | **delete** /yes4track/v1/notifications/{id} | Delete Notification by Id

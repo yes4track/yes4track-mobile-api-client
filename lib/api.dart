@@ -17,6 +17,7 @@ import 'package:yes4track_mobile_api_client/api/adventure_api.dart';
 import 'package:yes4track_mobile_api_client/api/audit_api.dart';
 import 'package:yes4track_mobile_api_client/api/company_api.dart';
 import 'package:yes4track_mobile_api_client/api/experience_api.dart';
+import 'package:yes4track_mobile_api_client/api/geolocation_api.dart';
 import 'package:yes4track_mobile_api_client/api/notification_api.dart';
 import 'package:yes4track_mobile_api_client/api/sponsor_api.dart';
 import 'package:yes4track_mobile_api_client/api/template_api.dart';
@@ -104,6 +105,15 @@ class Yes4trackMobileApiClient {
     */
     ExperienceApi getExperienceApi() {
     return ExperienceApi(dio, serializers);
+    }
+
+
+    /**
+    * Get GeolocationApi instance, base route and serializer can be overridden by a given but be careful,
+    * by doing that all interceptors will not be executed
+    */
+    GeolocationApi getGeolocationApi() {
+    return GeolocationApi(dio, serializers);
     }
 
 
