@@ -4,29 +4,29 @@
 
 import 'package:dio/dio.dart';
 import 'package:built_value/serializer.dart';
-import 'package:api/src/serializers.dart';
-import 'package:api/src/auth/api_key_auth.dart';
-import 'package:api/src/auth/basic_auth.dart';
-import 'package:api/src/auth/oauth.dart';
-import 'package:api/src/api/adventure_api.dart';
-import 'package:api/src/api/audit_api.dart';
-import 'package:api/src/api/company_api.dart';
-import 'package:api/src/api/experience_api.dart';
-import 'package:api/src/api/geolocation_api.dart';
-import 'package:api/src/api/notification_api.dart';
-import 'package:api/src/api/sponsor_api.dart';
-import 'package:api/src/api/template_api.dart';
-import 'package:api/src/api/track_api.dart';
-import 'package:api/src/api/trail_api.dart';
-import 'package:api/src/api/user_api.dart';
+import 'package:yes4track_mobile_api_client/src/serializers.dart';
+import 'package:yes4track_mobile_api_client/src/auth/api_key_auth.dart';
+import 'package:yes4track_mobile_api_client/src/auth/basic_auth.dart';
+import 'package:yes4track_mobile_api_client/src/auth/oauth.dart';
+import 'package:yes4track_mobile_api_client/src/api/adventure_api.dart';
+import 'package:yes4track_mobile_api_client/src/api/audit_api.dart';
+import 'package:yes4track_mobile_api_client/src/api/company_api.dart';
+import 'package:yes4track_mobile_api_client/src/api/experience_api.dart';
+import 'package:yes4track_mobile_api_client/src/api/geolocation_api.dart';
+import 'package:yes4track_mobile_api_client/src/api/notification_api.dart';
+import 'package:yes4track_mobile_api_client/src/api/sponsor_api.dart';
+import 'package:yes4track_mobile_api_client/src/api/template_api.dart';
+import 'package:yes4track_mobile_api_client/src/api/track_api.dart';
+import 'package:yes4track_mobile_api_client/src/api/trail_api.dart';
+import 'package:yes4track_mobile_api_client/src/api/user_api.dart';
 
-class Api {
+class Yes4trackMobileApiClient {
   static const String basePath = r'http://localhost';
 
   final Dio dio;
   final Serializers serializers;
 
-  Api({
+  Yes4trackMobileApiClient({
     Dio? dio,
     Serializers? serializers,
     String? basePathOverride,

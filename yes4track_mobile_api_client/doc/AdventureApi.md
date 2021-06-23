@@ -1,8 +1,8 @@
-# api.api.AdventureApi
+# yes4track_mobile_api_client.api.AdventureApi
 
 ## Load the API package
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -38,7 +38,7 @@ Get Adventure by id
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -87,7 +87,7 @@ Get Adventure Code by id
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -136,7 +136,7 @@ Get Adventure Like by id
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -187,7 +187,7 @@ Get User Liked Adventure
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -236,7 +236,7 @@ Get All Adventure by filter with pagination
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -303,7 +303,7 @@ Activate Adventure
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -351,7 +351,7 @@ Check Adventure Code
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -402,7 +402,7 @@ Delete Adventure by Id
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -450,7 +450,7 @@ Delete Adventure Experience
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -500,7 +500,7 @@ Add Adventure Experience
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -550,7 +550,7 @@ Delete Adventure by Id
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -600,7 +600,7 @@ Add images in adventure
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -649,7 +649,7 @@ Delete Adventure Likes by Id
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -697,7 +697,7 @@ Get All Adventure Likes by filter with pagination
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -752,7 +752,7 @@ Create Adventure Likes
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -803,7 +803,7 @@ Sample request:                    PATCH /yes4track/v1/adventures/{id}      [   
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -853,7 +853,7 @@ Update Adventure
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -903,7 +903,7 @@ Add videos in adventure
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -952,7 +952,7 @@ Delete Adventure by Id
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -1002,7 +1002,7 @@ Create Adventure
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed

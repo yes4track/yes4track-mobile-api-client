@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/yes4track_mobile_api_client.dart';
 
 
 /// tests for SponsorApi
 void main() {
-  final instance = Api().getSponsorApi();
+  final instance = Yes4trackMobileApiClient().getSponsorApi();
 
   group(SponsorApi, () {
     // Get Sponsor by id

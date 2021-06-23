@@ -2,9 +2,9 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:api/src/model/statistic.dart';
-import 'package:api/src/model/map_coordinate.dart';
-import 'package:api/src/model/track_source.dart';
+import 'package:yes4track_mobile_api_client/src/model/track_source.dart';
+import 'package:yes4track_mobile_api_client/src/model/map_coordinate.dart';
+import 'package:yes4track_mobile_api_client/src/model/statistic.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 

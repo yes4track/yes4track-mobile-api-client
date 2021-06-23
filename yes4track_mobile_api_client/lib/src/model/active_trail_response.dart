@@ -2,10 +2,10 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:api/src/model/user_trail_status_response.dart';
-import 'package:api/src/model/trail_response.dart';
-import 'package:api/src/model/user_response.dart';
-import 'package:api/src/model/adventure_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/trail_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/user_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/adventure_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/user_trail_status_response.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 

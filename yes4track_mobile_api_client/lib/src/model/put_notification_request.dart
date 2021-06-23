@@ -2,10 +2,10 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+import 'package:yes4track_mobile_api_client/src/model/notification_type.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:api/src/model/notification_channel.dart';
-import 'package:api/src/model/notification_type.dart';
-import 'package:api/src/model/user.dart';
+import 'package:yes4track_mobile_api_client/src/model/notification_channel.dart';
+import 'package:yes4track_mobile_api_client/src/model/user.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 

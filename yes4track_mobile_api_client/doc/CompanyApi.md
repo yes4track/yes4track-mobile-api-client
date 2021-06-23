@@ -1,8 +1,8 @@
-# api.api.CompanyApi
+# yes4track_mobile_api_client.api.CompanyApi
 
 ## Load the API package
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -24,7 +24,7 @@ Get Company by id
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -73,7 +73,7 @@ Get All Company by filter with pagination
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -138,7 +138,7 @@ Delete Company by Id
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -186,7 +186,7 @@ Update part of Company
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -236,7 +236,7 @@ Update Company
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -286,7 +286,7 @@ Create Company
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed

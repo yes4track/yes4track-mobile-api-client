@@ -7,8 +7,8 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:api/src/model/address.dart';
-import 'package:api/src/model/error_details.dart';
+import 'package:yes4track_mobile_api_client/src/model/address.dart';
+import 'package:yes4track_mobile_api_client/src/model/error_details.dart';
 
 class GeolocationApi {
 

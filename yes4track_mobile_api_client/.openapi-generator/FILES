@@ -108,7 +108,6 @@ doc/UserResponse.md
 doc/UserTrailStatusResponse.md
 doc/VideoUrl.md
 doc/WaypointType.md
-lib/api.dart
 lib/src/api.dart
 lib/src/api/adventure_api.dart
 lib/src/api/audit_api.dart
@@ -224,6 +223,7 @@ lib/src/model/user_trail_status_response.dart
 lib/src/model/video_url.dart
 lib/src/model/waypoint_type.dart
 lib/src/serializers.dart
+lib/yes4track_mobile_api_client.dart
 pubspec.yaml
 test/action_type_test.dart
 test/active_trail_response_test.dart

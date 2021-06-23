@@ -7,9 +7,9 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:api/src/model/action_type.dart';
-import 'package:api/src/model/error_details.dart';
-import 'package:api/src/model/get_all_paged_audit_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/action_type.dart';
+import 'package:yes4track_mobile_api_client/src/model/error_details.dart';
+import 'package:yes4track_mobile_api_client/src/model/get_all_paged_audit_response.dart';
 
 class AuditApi {
 

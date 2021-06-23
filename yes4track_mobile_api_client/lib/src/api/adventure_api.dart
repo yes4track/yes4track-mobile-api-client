@@ -7,22 +7,22 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:api/src/model/adventure_type.dart';
-import 'package:api/src/model/error_details.dart';
-import 'package:api/src/model/get_all_adventure_likes_response.dart';
-import 'package:api/src/model/get_all_adventure_response.dart';
-import 'package:api/src/model/get_all_paged_adventure_likes_response.dart';
-import 'package:api/src/model/get_all_paged_adventure_response.dart';
-import 'package:api/src/model/get_by_id_adventure_code_response.dart';
-import 'package:api/src/model/get_user_liked_adventure_response.dart';
-import 'package:api/src/model/level_type.dart';
-import 'package:api/src/model/operation.dart';
-import 'package:api/src/model/post_adventure_likes_response.dart';
-import 'package:api/src/model/post_adventure_request.dart';
-import 'package:api/src/model/post_adventure_response.dart';
-import 'package:api/src/model/post_check_adventure_code_response.dart';
-import 'package:api/src/model/put_adventure_request.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:yes4track_mobile_api_client/src/model/adventure_type.dart';
+import 'package:yes4track_mobile_api_client/src/model/error_details.dart';
+import 'package:yes4track_mobile_api_client/src/model/get_all_adventure_likes_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/get_all_adventure_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/get_all_paged_adventure_likes_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/get_all_paged_adventure_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/get_by_id_adventure_code_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/get_user_liked_adventure_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/level_type.dart';
+import 'package:yes4track_mobile_api_client/src/model/operation.dart';
+import 'package:yes4track_mobile_api_client/src/model/post_adventure_likes_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/post_adventure_request.dart';
+import 'package:yes4track_mobile_api_client/src/model/post_adventure_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/post_check_adventure_code_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/put_adventure_request.dart';
 
 class AdventureApi {
 

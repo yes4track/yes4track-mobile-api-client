@@ -1,8 +1,8 @@
-# api.api.UserApi
+# yes4track_mobile_api_client.api.UserApi
 
 ## Load the API package
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -34,7 +34,7 @@ Get User by id
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -83,7 +83,7 @@ User SignIn
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -132,7 +132,7 @@ Get All User by filter with pagination
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -197,7 +197,7 @@ Delete User Company
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -247,7 +247,7 @@ Add User Company
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -297,7 +297,7 @@ Delete User by Id
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -345,7 +345,7 @@ Update User Location
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -395,7 +395,7 @@ Update part of User
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -445,7 +445,7 @@ Update User Photo
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -495,7 +495,7 @@ Update User
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -545,7 +545,7 @@ Add User
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -594,7 +594,7 @@ Resend Code
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -642,7 +642,7 @@ Setup User default Angel
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -690,7 +690,7 @@ Setup User default Sponsor
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -738,7 +738,7 @@ User SignIn
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -787,7 +787,7 @@ User SignUp
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed

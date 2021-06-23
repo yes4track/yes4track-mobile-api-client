@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/yes4track_mobile_api_client.dart';
 
 
 /// tests for AdventureApi
 void main() {
-  final instance = Api().getAdventureApi();
+  final instance = Yes4trackMobileApiClient().getAdventureApi();
 
   group(AdventureApi, () {
     // Get Adventure by id

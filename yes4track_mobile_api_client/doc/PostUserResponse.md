@@ -1,8 +1,8 @@
-# api.model.PostUserResponse
+# yes4track_mobile_api_client.model.PostUserResponse
 
 ## Load the model package
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 ```
 
 ## Properties

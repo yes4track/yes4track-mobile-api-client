@@ -3,7 +3,7 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:api/src/model/track_geo_location_waypoint_dto.dart';
+import 'package:yes4track_mobile_api_client/src/model/track_geo_location_waypoint_dto.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 

@@ -1,8 +1,8 @@
-# api.api.NotificationApi
+# yes4track_mobile_api_client.api.NotificationApi
 
 ## Load the API package
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -24,7 +24,7 @@ Get Notification by id
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -73,7 +73,7 @@ Get All Notification by filter with pagination
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -138,7 +138,7 @@ Delete Notification by Id
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -188,7 +188,7 @@ Sample request:                    PATCH /yes4track/v1/Notification/{id}      [ 
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -238,7 +238,7 @@ Update Notification
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -288,7 +288,7 @@ Create Notification
 
 ### Example 
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed

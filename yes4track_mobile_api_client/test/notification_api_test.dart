@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/yes4track_mobile_api_client.dart';
 
 
 /// tests for NotificationApi
 void main() {
-  final instance = Api().getNotificationApi();
+  final instance = Yes4trackMobileApiClient().getNotificationApi();
 
   group(NotificationApi, () {
     // Get Notification by id

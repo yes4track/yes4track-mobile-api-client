@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+import 'package:yes4track_mobile_api_client/src/model/get_all_notification_response.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:api/src/model/get_all_notification_response.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 

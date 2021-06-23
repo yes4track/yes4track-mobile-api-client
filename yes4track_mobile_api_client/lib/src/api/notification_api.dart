@@ -7,15 +7,15 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:api/src/model/error_details.dart';
-import 'package:api/src/model/get_all_notification_response.dart';
-import 'package:api/src/model/get_all_paged_notification_response.dart';
-import 'package:api/src/model/notification_type.dart';
-import 'package:api/src/model/operation.dart';
-import 'package:api/src/model/post_notification_request.dart';
-import 'package:api/src/model/post_notification_response.dart';
-import 'package:api/src/model/put_notification_request.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:yes4track_mobile_api_client/src/model/error_details.dart';
+import 'package:yes4track_mobile_api_client/src/model/get_all_notification_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/get_all_paged_notification_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/notification_type.dart';
+import 'package:yes4track_mobile_api_client/src/model/operation.dart';
+import 'package:yes4track_mobile_api_client/src/model/post_notification_request.dart';
+import 'package:yes4track_mobile_api_client/src/model/post_notification_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/put_notification_request.dart';
 
 class NotificationApi {
 

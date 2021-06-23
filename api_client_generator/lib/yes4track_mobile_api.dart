@@ -2,7 +2,7 @@ import 'package:openapi_generator_annotations/openapi_generator_annotations.dart
 
 @Openapi(
   additionalProperties: AdditionalProperties(
-    pubName: 'api',
+    pubName: 'yes4track_mobile_api_client',
     pubAuthor: 'Yes4Track',
     pubAuthorEmail: 'admin@yes4track.com',
     pubVersion: '1.0.0',

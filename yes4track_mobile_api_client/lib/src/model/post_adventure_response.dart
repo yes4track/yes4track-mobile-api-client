@@ -2,8 +2,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:api/src/model/adventure_type.dart';
-import 'package:api/src/model/level_type.dart';
+import 'package:yes4track_mobile_api_client/src/model/adventure_type.dart';
+import 'package:yes4track_mobile_api_client/src/model/level_type.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 

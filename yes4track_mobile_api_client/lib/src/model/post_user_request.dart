@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:api/src/model/profile_photo_request.dart';
+import 'package:yes4track_mobile_api_client/src/model/profile_photo_request.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 

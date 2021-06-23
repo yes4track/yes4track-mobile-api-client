@@ -1,8 +1,8 @@
-# api.model.PostCheckAdventureCodeResponse
+# yes4track_mobile_api_client.model.PostCheckAdventureCodeResponse
 
 ## Load the model package
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 ```
 
 ## Properties

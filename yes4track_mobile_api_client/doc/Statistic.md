@@ -1,8 +1,8 @@
-# api.model.Statistic
+# yes4track_mobile_api_client.model.Statistic
 
 ## Load the model package
 ```dart
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/api.dart';
 ```
 
 ## Properties

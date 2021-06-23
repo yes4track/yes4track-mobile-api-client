@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/yes4track_mobile_api_client.dart';
 
 
 /// tests for AuditApi
 void main() {
-  final instance = Api().getAuditApi();
+  final instance = Yes4trackMobileApiClient().getAuditApi();
 
   group(AuditApi, () {
     // Get All Audit by filter with pagination

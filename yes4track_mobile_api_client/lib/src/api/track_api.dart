@@ -7,18 +7,18 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:api/src/model/error_details.dart';
-import 'package:api/src/model/get_all_paged_track_response.dart';
-import 'package:api/src/model/get_all_track_response.dart';
-import 'package:api/src/model/operation.dart';
-import 'package:api/src/model/post_track_geo_data_response.dart';
-import 'package:api/src/model/post_track_request.dart';
-import 'package:api/src/model/post_track_response.dart';
-import 'package:api/src/model/put_track_request.dart';
-import 'package:api/src/model/put_track_statistic_request.dart';
-import 'package:api/src/model/track_geo_location_dto.dart';
-import 'package:api/src/model/track_source.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:yes4track_mobile_api_client/src/model/error_details.dart';
+import 'package:yes4track_mobile_api_client/src/model/get_all_paged_track_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/get_all_track_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/operation.dart';
+import 'package:yes4track_mobile_api_client/src/model/post_track_geo_data_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/post_track_request.dart';
+import 'package:yes4track_mobile_api_client/src/model/post_track_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/put_track_request.dart';
+import 'package:yes4track_mobile_api_client/src/model/put_track_statistic_request.dart';
+import 'package:yes4track_mobile_api_client/src/model/track_geo_location_dto.dart';
+import 'package:yes4track_mobile_api_client/src/model/track_source.dart';
 
 class TrackApi {
 

@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/yes4track_mobile_api_client.dart';
 
 
 /// tests for GeolocationApi
 void main() {
-  final instance = Api().getGeolocationApi();
+  final instance = Yes4trackMobileApiClient().getGeolocationApi();
 
   group(GeolocationApi, () {
     // Get Address by Lat Long

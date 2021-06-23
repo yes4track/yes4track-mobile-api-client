@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:api/api.dart';
+import 'package:yes4track_mobile_api_client/yes4track_mobile_api_client.dart';
 
 
 /// tests for TemplateApi
 void main() {
-  final instance = Api().getTemplateApi();
+  final instance = Yes4trackMobileApiClient().getTemplateApi();
 
   group(TemplateApi, () {
     // Get Template by id
