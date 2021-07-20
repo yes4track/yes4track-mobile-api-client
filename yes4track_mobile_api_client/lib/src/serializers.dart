@@ -102,6 +102,7 @@ import 'package:yes4track_mobile_api_client/src/model/track_geo_location_waypoin
 import 'package:yes4track_mobile_api_client/src/model/track_source.dart';
 import 'package:yes4track_mobile_api_client/src/model/trail_geo_data_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/trail_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/trail_type.dart';
 import 'package:yes4track_mobile_api_client/src/model/user.dart';
 import 'package:yes4track_mobile_api_client/src/model/user_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/user_trail_status_response.dart';
@@ -201,6 +202,7 @@ part 'serializers.g.dart';
   TrackSource,
   TrailGeoDataRequest,
   TrailResponse,
+  TrailType,
   User,
   UserResponse,
   UserTrailStatusResponse,
@@ -251,6 +253,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(Operation)]),
         () => ListBuilder<Operation>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(String)]),
+        () => ListBuilder<String>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(Operation)]),

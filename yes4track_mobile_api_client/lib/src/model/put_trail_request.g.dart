@@ -24,7 +24,11 @@ class _$PutTrailRequest extends PutTrailRequest {
   @override
   final DateTime? endDate;
   @override
+  final TrailType? type;
+  @override
   final String? id;
+  @override
+  final BuiltMap<String, JsonObject>? customValues;
 
   factory _$PutTrailRequest([void Function(PutTrailRequestBuilder)? updates]) =>
       (new PutTrailRequestBuilder()..update(updates)).build();
@@ -38,7 +42,9 @@ class _$PutTrailRequest extends PutTrailRequest {
       this.name,
       this.startDate,
       this.endDate,
-      this.id})
+      this.type,
+      this.id,
+      this.customValues})
       : super._();
 
   @override
@@ -61,7 +67,9 @@ class _$PutTrailRequest extends PutTrailRequest {
         name == other.name &&
         startDate == other.startDate &&
         endDate == other.endDate &&
-        id == other.id;
+        type == other.type &&
+        id == other.id &&
+        customValues == other.customValues;
   }
 
   @override
@@ -73,15 +81,19 @@ class _$PutTrailRequest extends PutTrailRequest {
                     $jc(
                         $jc(
                             $jc(
-                                $jc($jc(0, createdAt.hashCode),
-                                    updatedAt.hashCode),
-                                userCreated.hashCode),
-                            userUpdated.hashCode),
-                        adventureId.hashCode),
-                    name.hashCode),
-                startDate.hashCode),
-            endDate.hashCode),
-        id.hashCode));
+                                $jc(
+                                    $jc(
+                                        $jc($jc(0, createdAt.hashCode),
+                                            updatedAt.hashCode),
+                                        userCreated.hashCode),
+                                    userUpdated.hashCode),
+                                adventureId.hashCode),
+                            name.hashCode),
+                        startDate.hashCode),
+                    endDate.hashCode),
+                type.hashCode),
+            id.hashCode),
+        customValues.hashCode));
   }
 
   @override
@@ -95,7 +107,9 @@ class _$PutTrailRequest extends PutTrailRequest {
           ..add('name', name)
           ..add('startDate', startDate)
           ..add('endDate', endDate)
-          ..add('id', id))
+          ..add('type', type)
+          ..add('id', id)
+          ..add('customValues', customValues))
         .toString();
   }
 }
@@ -136,9 +150,19 @@ class PutTrailRequestBuilder
   DateTime? get endDate => _$this._endDate;
   set endDate(DateTime? endDate) => _$this._endDate = endDate;
 
+  TrailType? _type;
+  TrailType? get type => _$this._type;
+  set type(TrailType? type) => _$this._type = type;
+
   String? _id;
   String? get id => _$this._id;
   set id(String? id) => _$this._id = id;
+
+  MapBuilder<String, JsonObject>? _customValues;
+  MapBuilder<String, JsonObject> get customValues =>
+      _$this._customValues ??= new MapBuilder<String, JsonObject>();
+  set customValues(MapBuilder<String, JsonObject>? customValues) =>
+      _$this._customValues = customValues;
 
   PutTrailRequestBuilder() {
     PutTrailRequest._initializeBuilder(this);
@@ -155,7 +179,9 @@ class PutTrailRequestBuilder
       _name = $v.name;
       _startDate = $v.startDate;
       _endDate = $v.endDate;
+      _type = $v.type;
       _id = $v.id;
+      _customValues = $v.customValues?.toBuilder();
       _$v = null;
     }
     return this;
@@ -174,20 +200,35 @@ class PutTrailRequestBuilder
 
   @override
   _$PutTrailRequest build() {
-    final _$result = _$v ??
-        new _$PutTrailRequest._(
-            createdAt: createdAt,
-            updatedAt: updatedAt,
-            userCreated: userCreated,
-            userUpdated: userUpdated,
-            adventureId: adventureId,
-            name: name,
-            startDate: startDate,
-            endDate: endDate,
-            id: id);
+    _$PutTrailRequest _$result;
+    try {
+      _$result = _$v ??
+          new _$PutTrailRequest._(
+              createdAt: createdAt,
+              updatedAt: updatedAt,
+              userCreated: userCreated,
+              userUpdated: userUpdated,
+              adventureId: adventureId,
+              name: name,
+              startDate: startDate,
+              endDate: endDate,
+              type: type,
+              id: id,
+              customValues: _customValues?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'customValues';
+        _customValues?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PutTrailRequest', _$failedField, e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new

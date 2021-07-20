@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **startDate** | [**DateTime**](DateTime.md) |  | [optional] 
 **endDate** | [**DateTime**](DateTime.md) |  | [optional] 
+**type** | [**TrailType**](TrailType.md) |  | [optional] 
 **id** | **String** |  | [optional] 
 **sponsors** | **BuiltList<String>** |  | [optional] 
 **angels** | **BuiltList<String>** |  | [optional] 

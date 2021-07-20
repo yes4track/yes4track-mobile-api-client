@@ -3,6 +3,7 @@
 //
 
 import 'package:built_collection/built_collection.dart';
+import 'package:yes4track_mobile_api_client/src/model/trail_type.dart';
 import 'package:yes4track_mobile_api_client/src/model/adventure_type.dart';
 import 'package:yes4track_mobile_api_client/src/model/level_type.dart';
 import 'package:built_value/built_value.dart';
@@ -36,6 +37,10 @@ abstract class PostTrailResponse implements Built<PostTrailResponse, PostTrailRe
 
     @BuiltValueField(wireName: r'endDate')
     DateTime? get endDate;
+
+    @BuiltValueField(wireName: r'type')
+    TrailType? get type;
+    // enum typeEnum {  1,  2,  };
 
     @BuiltValueField(wireName: r'id')
     String? get id;
@@ -129,6 +134,12 @@ class _$PostTrailResponseSerializer implements StructuredSerializer<PostTrailRes
                 ..add(serializers.serialize(object.endDate,
                     specifiedType: const FullType(DateTime)));
         }
+        if (object.type != null) {
+            result
+                ..add(r'type')
+                ..add(serializers.serialize(object.type,
+                    specifiedType: const FullType(TrailType)));
+        }
         if (object.id != null) {
             result
                 ..add(r'id')
@@ -216,6 +227,10 @@ class _$PostTrailResponseSerializer implements StructuredSerializer<PostTrailRes
                 case r'endDate':
                     result.endDate = serializers.deserialize(value,
                         specifiedType: const FullType(DateTime)) as DateTime;
+                    break;
+                case r'type':
+                    result.type = serializers.deserialize(value,
+                        specifiedType: const FullType(TrailType)) as TrailType;
                     break;
                 case r'id':
                     result.id = serializers.deserialize(value,

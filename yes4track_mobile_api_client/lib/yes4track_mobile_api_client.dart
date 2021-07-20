@@ -111,6 +111,7 @@ export 'package:yes4track_mobile_api_client/src/model/track_geo_location_waypoin
 export 'package:yes4track_mobile_api_client/src/model/track_source.dart';
 export 'package:yes4track_mobile_api_client/src/model/trail_geo_data_request.dart';
 export 'package:yes4track_mobile_api_client/src/model/trail_response.dart';
+export 'package:yes4track_mobile_api_client/src/model/trail_type.dart';
 export 'package:yes4track_mobile_api_client/src/model/user.dart';
 export 'package:yes4track_mobile_api_client/src/model/user_response.dart';
 export 'package:yes4track_mobile_api_client/src/model/user_trail_status_response.dart';

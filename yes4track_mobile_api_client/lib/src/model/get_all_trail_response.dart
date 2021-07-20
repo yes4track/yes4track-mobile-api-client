@@ -4,6 +4,7 @@
 
 import 'package:built_collection/built_collection.dart';
 import 'package:yes4track_mobile_api_client/src/model/statistic.dart';
+import 'package:yes4track_mobile_api_client/src/model/trail_type.dart';
 import 'package:yes4track_mobile_api_client/src/model/adventure_type.dart';
 import 'package:yes4track_mobile_api_client/src/model/level_type.dart';
 import 'package:built_value/built_value.dart';
@@ -38,6 +39,10 @@ abstract class GetAllTrailResponse implements Built<GetAllTrailResponse, GetAllT
     @BuiltValueField(wireName: r'endDate')
     DateTime? get endDate;
 
+    @BuiltValueField(wireName: r'type')
+    TrailType? get type;
+    // enum typeEnum {  1,  2,  };
+
     @BuiltValueField(wireName: r'id')
     String? get id;
 
@@ -52,6 +57,9 @@ abstract class GetAllTrailResponse implements Built<GetAllTrailResponse, GetAllT
 
     @BuiltValueField(wireName: r'adventureName')
     String? get adventureName;
+
+    @BuiltValueField(wireName: r'adventureDescription')
+    String? get adventureDescription;
 
     @BuiltValueField(wireName: r'adventureLevel')
     LevelType? get adventureLevel;
@@ -133,6 +141,12 @@ class _$GetAllTrailResponseSerializer implements StructuredSerializer<GetAllTrai
                 ..add(serializers.serialize(object.endDate,
                     specifiedType: const FullType(DateTime)));
         }
+        if (object.type != null) {
+            result
+                ..add(r'type')
+                ..add(serializers.serialize(object.type,
+                    specifiedType: const FullType(TrailType)));
+        }
         if (object.id != null) {
             result
                 ..add(r'id')
@@ -161,6 +175,12 @@ class _$GetAllTrailResponseSerializer implements StructuredSerializer<GetAllTrai
             result
                 ..add(r'adventureName')
                 ..add(serializers.serialize(object.adventureName,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.adventureDescription != null) {
+            result
+                ..add(r'adventureDescription')
+                ..add(serializers.serialize(object.adventureDescription,
                     specifiedType: const FullType(String)));
         }
         if (object.adventureLevel != null) {
@@ -227,6 +247,10 @@ class _$GetAllTrailResponseSerializer implements StructuredSerializer<GetAllTrai
                     result.endDate = serializers.deserialize(value,
                         specifiedType: const FullType(DateTime)) as DateTime;
                     break;
+                case r'type':
+                    result.type = serializers.deserialize(value,
+                        specifiedType: const FullType(TrailType)) as TrailType;
+                    break;
                 case r'id':
                     result.id = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
@@ -245,6 +269,10 @@ class _$GetAllTrailResponseSerializer implements StructuredSerializer<GetAllTrai
                     break;
                 case r'adventureName':
                     result.adventureName = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+                case r'adventureDescription':
+                    result.adventureDescription = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
                 case r'adventureLevel':

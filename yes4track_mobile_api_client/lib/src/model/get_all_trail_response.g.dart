@@ -24,6 +24,8 @@ class _$GetAllTrailResponse extends GetAllTrailResponse {
   @override
   final DateTime? endDate;
   @override
+  final TrailType? type;
+  @override
   final String? id;
   @override
   final Statistic? statistic;
@@ -33,6 +35,8 @@ class _$GetAllTrailResponse extends GetAllTrailResponse {
   final BuiltList<String>? angels;
   @override
   final String? adventureName;
+  @override
+  final String? adventureDescription;
   @override
   final LevelType? adventureLevel;
   @override
@@ -53,11 +57,13 @@ class _$GetAllTrailResponse extends GetAllTrailResponse {
       this.name,
       this.startDate,
       this.endDate,
+      this.type,
       this.id,
       this.statistic,
       this.sponsors,
       this.angels,
       this.adventureName,
+      this.adventureDescription,
       this.adventureLevel,
       this.adventureType,
       this.photoUrl})
@@ -84,11 +90,13 @@ class _$GetAllTrailResponse extends GetAllTrailResponse {
         name == other.name &&
         startDate == other.startDate &&
         endDate == other.endDate &&
+        type == other.type &&
         id == other.id &&
         statistic == other.statistic &&
         sponsors == other.sponsors &&
         angels == other.angels &&
         adventureName == other.adventureName &&
+        adventureDescription == other.adventureDescription &&
         adventureLevel == other.adventureLevel &&
         adventureType == other.adventureType &&
         photoUrl == other.photoUrl;
@@ -112,23 +120,29 @@ class _$GetAllTrailResponse extends GetAllTrailResponse {
                                                         $jc(
                                                             $jc(
                                                                 $jc(
-                                                                    0,
-                                                                    createdAt
+                                                                    $jc(
+                                                                        $jc(
+                                                                            0,
+                                                                            createdAt
+                                                                                .hashCode),
+                                                                        updatedAt
+                                                                            .hashCode),
+                                                                    userCreated
                                                                         .hashCode),
-                                                                updatedAt
+                                                                userUpdated
                                                                     .hashCode),
-                                                            userCreated
+                                                            adventureId
                                                                 .hashCode),
-                                                        userUpdated.hashCode),
-                                                    adventureId.hashCode),
-                                                name.hashCode),
-                                            startDate.hashCode),
-                                        endDate.hashCode),
-                                    id.hashCode),
-                                statistic.hashCode),
-                            sponsors.hashCode),
-                        angels.hashCode),
-                    adventureName.hashCode),
+                                                        name.hashCode),
+                                                    startDate.hashCode),
+                                                endDate.hashCode),
+                                            type.hashCode),
+                                        id.hashCode),
+                                    statistic.hashCode),
+                                sponsors.hashCode),
+                            angels.hashCode),
+                        adventureName.hashCode),
+                    adventureDescription.hashCode),
                 adventureLevel.hashCode),
             adventureType.hashCode),
         photoUrl.hashCode));
@@ -145,11 +159,13 @@ class _$GetAllTrailResponse extends GetAllTrailResponse {
           ..add('name', name)
           ..add('startDate', startDate)
           ..add('endDate', endDate)
+          ..add('type', type)
           ..add('id', id)
           ..add('statistic', statistic)
           ..add('sponsors', sponsors)
           ..add('angels', angels)
           ..add('adventureName', adventureName)
+          ..add('adventureDescription', adventureDescription)
           ..add('adventureLevel', adventureLevel)
           ..add('adventureType', adventureType)
           ..add('photoUrl', photoUrl))
@@ -193,6 +209,10 @@ class GetAllTrailResponseBuilder
   DateTime? get endDate => _$this._endDate;
   set endDate(DateTime? endDate) => _$this._endDate = endDate;
 
+  TrailType? _type;
+  TrailType? get type => _$this._type;
+  set type(TrailType? type) => _$this._type = type;
+
   String? _id;
   String? get id => _$this._id;
   set id(String? id) => _$this._id = id;
@@ -216,6 +236,11 @@ class GetAllTrailResponseBuilder
   String? get adventureName => _$this._adventureName;
   set adventureName(String? adventureName) =>
       _$this._adventureName = adventureName;
+
+  String? _adventureDescription;
+  String? get adventureDescription => _$this._adventureDescription;
+  set adventureDescription(String? adventureDescription) =>
+      _$this._adventureDescription = adventureDescription;
 
   LevelType? _adventureLevel;
   LevelType? get adventureLevel => _$this._adventureLevel;
@@ -246,11 +271,13 @@ class GetAllTrailResponseBuilder
       _name = $v.name;
       _startDate = $v.startDate;
       _endDate = $v.endDate;
+      _type = $v.type;
       _id = $v.id;
       _statistic = $v.statistic?.toBuilder();
       _sponsors = $v.sponsors?.toBuilder();
       _angels = $v.angels?.toBuilder();
       _adventureName = $v.adventureName;
+      _adventureDescription = $v.adventureDescription;
       _adventureLevel = $v.adventureLevel;
       _adventureType = $v.adventureType;
       _photoUrl = $v.photoUrl;
@@ -284,11 +311,13 @@ class GetAllTrailResponseBuilder
               name: name,
               startDate: startDate,
               endDate: endDate,
+              type: type,
               id: id,
               statistic: _statistic?.build(),
               sponsors: _sponsors?.build(),
               angels: _angels?.build(),
               adventureName: adventureName,
+              adventureDescription: adventureDescription,
               adventureLevel: adventureLevel,
               adventureType: adventureType,
               photoUrl: photoUrl);
@@ -312,4 +341,4 @@ class GetAllTrailResponseBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new

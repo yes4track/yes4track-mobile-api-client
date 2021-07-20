@@ -24,6 +24,8 @@ class _$PostTrailResponse extends PostTrailResponse {
   @override
   final DateTime? endDate;
   @override
+  final TrailType? type;
+  @override
   final String? id;
   @override
   final BuiltList<String>? sponsors;
@@ -51,6 +53,7 @@ class _$PostTrailResponse extends PostTrailResponse {
       this.name,
       this.startDate,
       this.endDate,
+      this.type,
       this.id,
       this.sponsors,
       this.angels,
@@ -80,6 +83,7 @@ class _$PostTrailResponse extends PostTrailResponse {
         name == other.name &&
         startDate == other.startDate &&
         endDate == other.endDate &&
+        type == other.type &&
         id == other.id &&
         sponsors == other.sponsors &&
         angels == other.angels &&
@@ -106,16 +110,20 @@ class _$PostTrailResponse extends PostTrailResponse {
                                                     $jc(
                                                         $jc(
                                                             $jc(
-                                                                0,
-                                                                createdAt
+                                                                $jc(
+                                                                    0,
+                                                                    createdAt
+                                                                        .hashCode),
+                                                                updatedAt
                                                                     .hashCode),
-                                                            updatedAt.hashCode),
-                                                        userCreated.hashCode),
-                                                    userUpdated.hashCode),
-                                                adventureId.hashCode),
-                                            name.hashCode),
-                                        startDate.hashCode),
-                                    endDate.hashCode),
+                                                            userCreated
+                                                                .hashCode),
+                                                        userUpdated.hashCode),
+                                                    adventureId.hashCode),
+                                                name.hashCode),
+                                            startDate.hashCode),
+                                        endDate.hashCode),
+                                    type.hashCode),
                                 id.hashCode),
                             sponsors.hashCode),
                         angels.hashCode),
@@ -136,6 +144,7 @@ class _$PostTrailResponse extends PostTrailResponse {
           ..add('name', name)
           ..add('startDate', startDate)
           ..add('endDate', endDate)
+          ..add('type', type)
           ..add('id', id)
           ..add('sponsors', sponsors)
           ..add('angels', angels)
@@ -182,6 +191,10 @@ class PostTrailResponseBuilder
   DateTime? _endDate;
   DateTime? get endDate => _$this._endDate;
   set endDate(DateTime? endDate) => _$this._endDate = endDate;
+
+  TrailType? _type;
+  TrailType? get type => _$this._type;
+  set type(TrailType? type) => _$this._type = type;
 
   String? _id;
   String? get id => _$this._id;
@@ -231,6 +244,7 @@ class PostTrailResponseBuilder
       _name = $v.name;
       _startDate = $v.startDate;
       _endDate = $v.endDate;
+      _type = $v.type;
       _id = $v.id;
       _sponsors = $v.sponsors?.toBuilder();
       _angels = $v.angels?.toBuilder();
@@ -268,6 +282,7 @@ class PostTrailResponseBuilder
               name: name,
               startDate: startDate,
               endDate: endDate,
+              type: type,
               id: id,
               sponsors: _sponsors?.build(),
               angels: _angels?.build(),
@@ -293,4 +308,4 @@ class PostTrailResponseBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
