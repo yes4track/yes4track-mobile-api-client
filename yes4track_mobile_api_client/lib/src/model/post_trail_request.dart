@@ -4,7 +4,9 @@
 
 import 'package:built_collection/built_collection.dart';
 import 'package:yes4track_mobile_api_client/src/model/trail_type.dart';
-import 'package:built_value/json_object.dart';
+import 'package:yes4track_mobile_api_client/src/model/waypoint.dart';
+import 'package:yes4track_mobile_api_client/src/model/adventure_type.dart';
+import 'package:yes4track_mobile_api_client/src/model/level_type.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -44,8 +46,22 @@ abstract class PostTrailRequest implements Built<PostTrailRequest, PostTrailRequ
     @BuiltValueField(wireName: r'id')
     String? get id;
 
-    @BuiltValueField(wireName: r'customValues')
-    BuiltMap<String, JsonObject>? get customValues;
+    @BuiltValueField(wireName: r'adventureName')
+    String? get adventureName;
+
+    @BuiltValueField(wireName: r'adventureDescription')
+    String? get adventureDescription;
+
+    @BuiltValueField(wireName: r'adventureLevel')
+    LevelType? get adventureLevel;
+    // enum adventureLevelEnum {  1,  2,  3,  };
+
+    @BuiltValueField(wireName: r'adventureType')
+    AdventureType? get adventureType;
+    // enum adventureTypeEnum {  1,  2,  3,  4,  5,  6,  };
+
+    @BuiltValueField(wireName: r'waypoints')
+    BuiltList<Waypoint>? get waypoints;
 
     PostTrailRequest._();
 
@@ -128,11 +144,35 @@ class _$PostTrailRequestSerializer implements StructuredSerializer<PostTrailRequ
                 ..add(serializers.serialize(object.id,
                     specifiedType: const FullType(String)));
         }
-        if (object.customValues != null) {
+        if (object.adventureName != null) {
             result
-                ..add(r'customValues')
-                ..add(serializers.serialize(object.customValues,
-                    specifiedType: const FullType(BuiltMap, [FullType(String), FullType(JsonObject)])));
+                ..add(r'adventureName')
+                ..add(serializers.serialize(object.adventureName,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.adventureDescription != null) {
+            result
+                ..add(r'adventureDescription')
+                ..add(serializers.serialize(object.adventureDescription,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.adventureLevel != null) {
+            result
+                ..add(r'adventureLevel')
+                ..add(serializers.serialize(object.adventureLevel,
+                    specifiedType: const FullType(LevelType)));
+        }
+        if (object.adventureType != null) {
+            result
+                ..add(r'adventureType')
+                ..add(serializers.serialize(object.adventureType,
+                    specifiedType: const FullType(AdventureType)));
+        }
+        if (object.waypoints != null) {
+            result
+                ..add(r'waypoints')
+                ..add(serializers.serialize(object.waypoints,
+                    specifiedType: const FullType(BuiltList, [FullType(Waypoint)])));
         }
         return result;
     }
@@ -188,9 +228,25 @@ class _$PostTrailRequestSerializer implements StructuredSerializer<PostTrailRequ
                     result.id = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
-                case r'customValues':
-                    result.customValues.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltMap, [FullType(String), FullType(JsonObject)])) as BuiltMap<String, JsonObject>);
+                case r'adventureName':
+                    result.adventureName = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+                case r'adventureDescription':
+                    result.adventureDescription = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+                case r'adventureLevel':
+                    result.adventureLevel = serializers.deserialize(value,
+                        specifiedType: const FullType(LevelType)) as LevelType;
+                    break;
+                case r'adventureType':
+                    result.adventureType = serializers.deserialize(value,
+                        specifiedType: const FullType(AdventureType)) as AdventureType;
+                    break;
+                case r'waypoints':
+                    result.waypoints.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(BuiltList, [FullType(Waypoint)])) as BuiltList<Waypoint>);
                     break;
             }
         }

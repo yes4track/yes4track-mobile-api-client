@@ -3,7 +3,7 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:yes4track_mobile_api_client/src/model/track_geo_location_waypoint_dto.dart';
+import 'package:yes4track_mobile_api_client/src/model/waypoint.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -25,7 +25,7 @@ abstract class TrackGeoLocationDto implements Built<TrackGeoLocationDto, TrackGe
     BuiltList<BuiltList<double>>? get lines;
 
     @BuiltValueField(wireName: r'waypoints')
-    BuiltList<TrackGeoLocationWaypointDto>? get waypoints;
+    BuiltList<Waypoint>? get waypoints;
 
     TrackGeoLocationDto._();
 
@@ -76,7 +76,7 @@ class _$TrackGeoLocationDtoSerializer implements StructuredSerializer<TrackGeoLo
             result
                 ..add(r'waypoints')
                 ..add(serializers.serialize(object.waypoints,
-                    specifiedType: const FullType(BuiltList, [FullType(TrackGeoLocationWaypointDto)])));
+                    specifiedType: const FullType(BuiltList, [FullType(Waypoint)])));
         }
         return result;
     }
@@ -110,7 +110,7 @@ class _$TrackGeoLocationDtoSerializer implements StructuredSerializer<TrackGeoLo
                     break;
                 case r'waypoints':
                     result.waypoints.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(TrackGeoLocationWaypointDto)])) as BuiltList<TrackGeoLocationWaypointDto>);
+                        specifiedType: const FullType(BuiltList, [FullType(Waypoint)])) as BuiltList<Waypoint>);
                     break;
             }
         }

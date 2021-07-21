@@ -98,7 +98,6 @@ import 'package:yes4track_mobile_api_client/src/model/put_user_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/sponsor_contact.dart';
 import 'package:yes4track_mobile_api_client/src/model/statistic.dart';
 import 'package:yes4track_mobile_api_client/src/model/track_geo_location_dto.dart';
-import 'package:yes4track_mobile_api_client/src/model/track_geo_location_waypoint_dto.dart';
 import 'package:yes4track_mobile_api_client/src/model/track_source.dart';
 import 'package:yes4track_mobile_api_client/src/model/trail_geo_data_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/trail_response.dart';
@@ -107,6 +106,7 @@ import 'package:yes4track_mobile_api_client/src/model/user.dart';
 import 'package:yes4track_mobile_api_client/src/model/user_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/user_trail_status_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/video_url.dart';
+import 'package:yes4track_mobile_api_client/src/model/waypoint.dart';
 import 'package:yes4track_mobile_api_client/src/model/waypoint_type.dart';
 
 part 'serializers.g.dart';
@@ -198,7 +198,6 @@ part 'serializers.g.dart';
   SponsorContact,
   Statistic,
   TrackGeoLocationDto,
-  TrackGeoLocationWaypointDto,
   TrackSource,
   TrailGeoDataRequest,
   TrailResponse,
@@ -207,6 +206,7 @@ part 'serializers.g.dart';
   UserResponse,
   UserTrailStatusResponse,
   VideoUrl,
+  Waypoint,
   WaypointType,
 ])
 Serializers serializers = (_$serializers.toBuilder()

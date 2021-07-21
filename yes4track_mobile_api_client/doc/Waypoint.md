@@ -1,4 +1,4 @@
-# yes4track_mobile_api_client.model.TrackGeoLocationDto
+# yes4track_mobile_api_client.model.Waypoint
 
 ## Load the model package
 ```dart
@@ -8,11 +8,10 @@ import 'package:yes4track_mobile_api_client/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**experiences** | **BuiltList<String>** |  | [optional] 
-**trackId** | **String** |  | [optional] 
-**adventureId** | **String** |  | [optional] 
-**lines** | [**BuiltList<BuiltList<double>>**](BuiltList.md) |  | [optional] 
-**waypoints** | [**BuiltList<Waypoint>**](Waypoint.md) |  | [optional] 
+**name** | **String** |  | [optional] 
+**description** | **String** |  | [optional] 
+**type** | [**WaypointType**](WaypointType.md) |  | [optional] 
+**location** | **BuiltList<double>** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

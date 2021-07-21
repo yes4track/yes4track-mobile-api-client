@@ -39,6 +39,10 @@ class _$PostTrailResponse extends PostTrailResponse {
   final AdventureType? adventureType;
   @override
   final String? photoUrl;
+  @override
+  final String? adventureDescription;
+  @override
+  final BuiltList<Waypoint>? waypoints;
 
   factory _$PostTrailResponse(
           [void Function(PostTrailResponseBuilder)? updates]) =>
@@ -60,7 +64,9 @@ class _$PostTrailResponse extends PostTrailResponse {
       this.adventureName,
       this.adventureLevel,
       this.adventureType,
-      this.photoUrl})
+      this.photoUrl,
+      this.adventureDescription,
+      this.waypoints})
       : super._();
 
   @override
@@ -90,7 +96,9 @@ class _$PostTrailResponse extends PostTrailResponse {
         adventureName == other.adventureName &&
         adventureLevel == other.adventureLevel &&
         adventureType == other.adventureType &&
-        photoUrl == other.photoUrl;
+        photoUrl == other.photoUrl &&
+        adventureDescription == other.adventureDescription &&
+        waypoints == other.waypoints;
   }
 
   @override
@@ -111,26 +119,32 @@ class _$PostTrailResponse extends PostTrailResponse {
                                                         $jc(
                                                             $jc(
                                                                 $jc(
-                                                                    0,
-                                                                    createdAt
+                                                                    $jc(
+                                                                        $jc(
+                                                                            0,
+                                                                            createdAt
+                                                                                .hashCode),
+                                                                        updatedAt
+                                                                            .hashCode),
+                                                                    userCreated
                                                                         .hashCode),
-                                                                updatedAt
+                                                                userUpdated
                                                                     .hashCode),
-                                                            userCreated
+                                                            adventureId
                                                                 .hashCode),
-                                                        userUpdated.hashCode),
-                                                    adventureId.hashCode),
-                                                name.hashCode),
-                                            startDate.hashCode),
-                                        endDate.hashCode),
-                                    type.hashCode),
-                                id.hashCode),
-                            sponsors.hashCode),
-                        angels.hashCode),
-                    adventureName.hashCode),
-                adventureLevel.hashCode),
-            adventureType.hashCode),
-        photoUrl.hashCode));
+                                                        name.hashCode),
+                                                    startDate.hashCode),
+                                                endDate.hashCode),
+                                            type.hashCode),
+                                        id.hashCode),
+                                    sponsors.hashCode),
+                                angels.hashCode),
+                            adventureName.hashCode),
+                        adventureLevel.hashCode),
+                    adventureType.hashCode),
+                photoUrl.hashCode),
+            adventureDescription.hashCode),
+        waypoints.hashCode));
   }
 
   @override
@@ -151,7 +165,9 @@ class _$PostTrailResponse extends PostTrailResponse {
           ..add('adventureName', adventureName)
           ..add('adventureLevel', adventureLevel)
           ..add('adventureType', adventureType)
-          ..add('photoUrl', photoUrl))
+          ..add('photoUrl', photoUrl)
+          ..add('adventureDescription', adventureDescription)
+          ..add('waypoints', waypoints))
         .toString();
   }
 }
@@ -229,6 +245,17 @@ class PostTrailResponseBuilder
   String? get photoUrl => _$this._photoUrl;
   set photoUrl(String? photoUrl) => _$this._photoUrl = photoUrl;
 
+  String? _adventureDescription;
+  String? get adventureDescription => _$this._adventureDescription;
+  set adventureDescription(String? adventureDescription) =>
+      _$this._adventureDescription = adventureDescription;
+
+  ListBuilder<Waypoint>? _waypoints;
+  ListBuilder<Waypoint> get waypoints =>
+      _$this._waypoints ??= new ListBuilder<Waypoint>();
+  set waypoints(ListBuilder<Waypoint>? waypoints) =>
+      _$this._waypoints = waypoints;
+
   PostTrailResponseBuilder() {
     PostTrailResponse._initializeBuilder(this);
   }
@@ -252,6 +279,8 @@ class PostTrailResponseBuilder
       _adventureLevel = $v.adventureLevel;
       _adventureType = $v.adventureType;
       _photoUrl = $v.photoUrl;
+      _adventureDescription = $v.adventureDescription;
+      _waypoints = $v.waypoints?.toBuilder();
       _$v = null;
     }
     return this;
@@ -289,7 +318,9 @@ class PostTrailResponseBuilder
               adventureName: adventureName,
               adventureLevel: adventureLevel,
               adventureType: adventureType,
-              photoUrl: photoUrl);
+              photoUrl: photoUrl,
+              adventureDescription: adventureDescription,
+              waypoints: _waypoints?.build());
     } catch (_) {
       late String _$failedField;
       try {
@@ -297,6 +328,9 @@ class PostTrailResponseBuilder
         _sponsors?.build();
         _$failedField = 'angels';
         _angels?.build();
+
+        _$failedField = 'waypoints';
+        _waypoints?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'PostTrailResponse', _$failedField, e.toString());

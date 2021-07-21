@@ -28,7 +28,15 @@ class _$PutTrailRequest extends PutTrailRequest {
   @override
   final String? id;
   @override
-  final BuiltMap<String, JsonObject>? customValues;
+  final String? adventureName;
+  @override
+  final String? adventureDescription;
+  @override
+  final LevelType? adventureLevel;
+  @override
+  final AdventureType? adventureType;
+  @override
+  final BuiltList<Waypoint>? waypoints;
 
   factory _$PutTrailRequest([void Function(PutTrailRequestBuilder)? updates]) =>
       (new PutTrailRequestBuilder()..update(updates)).build();
@@ -44,7 +52,11 @@ class _$PutTrailRequest extends PutTrailRequest {
       this.endDate,
       this.type,
       this.id,
-      this.customValues})
+      this.adventureName,
+      this.adventureDescription,
+      this.adventureLevel,
+      this.adventureType,
+      this.waypoints})
       : super._();
 
   @override
@@ -69,7 +81,11 @@ class _$PutTrailRequest extends PutTrailRequest {
         endDate == other.endDate &&
         type == other.type &&
         id == other.id &&
-        customValues == other.customValues;
+        adventureName == other.adventureName &&
+        adventureDescription == other.adventureDescription &&
+        adventureLevel == other.adventureLevel &&
+        adventureType == other.adventureType &&
+        waypoints == other.waypoints;
   }
 
   @override
@@ -83,17 +99,29 @@ class _$PutTrailRequest extends PutTrailRequest {
                             $jc(
                                 $jc(
                                     $jc(
-                                        $jc($jc(0, createdAt.hashCode),
-                                            updatedAt.hashCode),
-                                        userCreated.hashCode),
-                                    userUpdated.hashCode),
-                                adventureId.hashCode),
-                            name.hashCode),
-                        startDate.hashCode),
-                    endDate.hashCode),
-                type.hashCode),
-            id.hashCode),
-        customValues.hashCode));
+                                        $jc(
+                                            $jc(
+                                                $jc(
+                                                    $jc(
+                                                        $jc(
+                                                            $jc(
+                                                                0,
+                                                                createdAt
+                                                                    .hashCode),
+                                                            updatedAt.hashCode),
+                                                        userCreated.hashCode),
+                                                    userUpdated.hashCode),
+                                                adventureId.hashCode),
+                                            name.hashCode),
+                                        startDate.hashCode),
+                                    endDate.hashCode),
+                                type.hashCode),
+                            id.hashCode),
+                        adventureName.hashCode),
+                    adventureDescription.hashCode),
+                adventureLevel.hashCode),
+            adventureType.hashCode),
+        waypoints.hashCode));
   }
 
   @override
@@ -109,7 +137,11 @@ class _$PutTrailRequest extends PutTrailRequest {
           ..add('endDate', endDate)
           ..add('type', type)
           ..add('id', id)
-          ..add('customValues', customValues))
+          ..add('adventureName', adventureName)
+          ..add('adventureDescription', adventureDescription)
+          ..add('adventureLevel', adventureLevel)
+          ..add('adventureType', adventureType)
+          ..add('waypoints', waypoints))
         .toString();
   }
 }
@@ -158,11 +190,31 @@ class PutTrailRequestBuilder
   String? get id => _$this._id;
   set id(String? id) => _$this._id = id;
 
-  MapBuilder<String, JsonObject>? _customValues;
-  MapBuilder<String, JsonObject> get customValues =>
-      _$this._customValues ??= new MapBuilder<String, JsonObject>();
-  set customValues(MapBuilder<String, JsonObject>? customValues) =>
-      _$this._customValues = customValues;
+  String? _adventureName;
+  String? get adventureName => _$this._adventureName;
+  set adventureName(String? adventureName) =>
+      _$this._adventureName = adventureName;
+
+  String? _adventureDescription;
+  String? get adventureDescription => _$this._adventureDescription;
+  set adventureDescription(String? adventureDescription) =>
+      _$this._adventureDescription = adventureDescription;
+
+  LevelType? _adventureLevel;
+  LevelType? get adventureLevel => _$this._adventureLevel;
+  set adventureLevel(LevelType? adventureLevel) =>
+      _$this._adventureLevel = adventureLevel;
+
+  AdventureType? _adventureType;
+  AdventureType? get adventureType => _$this._adventureType;
+  set adventureType(AdventureType? adventureType) =>
+      _$this._adventureType = adventureType;
+
+  ListBuilder<Waypoint>? _waypoints;
+  ListBuilder<Waypoint> get waypoints =>
+      _$this._waypoints ??= new ListBuilder<Waypoint>();
+  set waypoints(ListBuilder<Waypoint>? waypoints) =>
+      _$this._waypoints = waypoints;
 
   PutTrailRequestBuilder() {
     PutTrailRequest._initializeBuilder(this);
@@ -181,7 +233,11 @@ class PutTrailRequestBuilder
       _endDate = $v.endDate;
       _type = $v.type;
       _id = $v.id;
-      _customValues = $v.customValues?.toBuilder();
+      _adventureName = $v.adventureName;
+      _adventureDescription = $v.adventureDescription;
+      _adventureLevel = $v.adventureLevel;
+      _adventureType = $v.adventureType;
+      _waypoints = $v.waypoints?.toBuilder();
       _$v = null;
     }
     return this;
@@ -214,12 +270,16 @@ class PutTrailRequestBuilder
               endDate: endDate,
               type: type,
               id: id,
-              customValues: _customValues?.build());
+              adventureName: adventureName,
+              adventureDescription: adventureDescription,
+              adventureLevel: adventureLevel,
+              adventureType: adventureType,
+              waypoints: _waypoints?.build());
     } catch (_) {
       late String _$failedField;
       try {
-        _$failedField = 'customValues';
-        _customValues?.build();
+        _$failedField = 'waypoints';
+        _waypoints?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'PutTrailRequest', _$failedField, e.toString());

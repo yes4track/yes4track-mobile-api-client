@@ -9,7 +9,7 @@ import 'package:openapi_generator_annotations/openapi_generator_annotations.dart
     pubDescription: 'Caspian.Yes4Track.Service API',
     pubHomepage: 'https://github.com/yes4track/',
   ),
-  inputSpecFile: 'openapi.yaml',
+  inputSpecFile: 'swagger.json',
   generatorName: Generator.dioNext,
   //outputDirectory: 'yes4track_mobile_api_client',
   outputDirectory: '../yes4track_mobile_api_client',

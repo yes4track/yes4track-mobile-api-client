@@ -258,7 +258,6 @@ Class | Method | HTTP request | Description
  - [SponsorContact](doc\SponsorContact.md)
  - [Statistic](doc\Statistic.md)
  - [TrackGeoLocationDto](doc\TrackGeoLocationDto.md)
- - [TrackGeoLocationWaypointDto](doc\TrackGeoLocationWaypointDto.md)
  - [TrackSource](doc\TrackSource.md)
  - [TrailGeoDataRequest](doc\TrailGeoDataRequest.md)
  - [TrailResponse](doc\TrailResponse.md)
@@ -267,6 +266,7 @@ Class | Method | HTTP request | Description
  - [UserResponse](doc\UserResponse.md)
  - [UserTrailStatusResponse](doc\UserTrailStatusResponse.md)
  - [VideoUrl](doc\VideoUrl.md)
+ - [Waypoint](doc\Waypoint.md)
  - [WaypointType](doc\WaypointType.md)
 
 

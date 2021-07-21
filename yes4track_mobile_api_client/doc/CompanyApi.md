@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Company id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '007cd81f-2b12-4702-a1b2-74b8e216179a']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e0d5422a-ff4f-4401-b1c8-17d8e73d0959']
 
 ### Return type
 
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '85d79429-68f2-4243-b11b-170c32bf359a']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '00ba2e76-164e-47dd-bded-31af13ddd327']
 
 ### Return type
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Company id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '73bd3745-39b5-448a-9795-e3a1422f45c5']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '891523f0-d6ed-481a-b4f1-96345006b3f3']
 
 ### Return type
 
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Company id | 
  **operation** | [**BuiltList<Operation>**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'dbaeed9b-2e05-4650-af8f-5d7a0250b42c']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'fc367991-4edc-4ffd-902a-9b0128c15168']
 
 ### Return type
 
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Company Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '706a93c7-bc1d-4ac7-9e45-981cbf3e216a']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ffc5f669-0312-4c36-8b9b-cff39a6ffb04']
  **putCompanyRequest** | [**PutCompanyRequest**](PutCompanyRequest.md)| Company to update | [optional] 
 
 ### Return type
@@ -310,7 +310,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '49692552-422b-4961-a9b2-24c2d4cdf123']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '36352ce4-6b34-48b2-b138-7fcf355d72db']
  **postCompanyRequest** | [**PostCompanyRequest**](PostCompanyRequest.md)| Company to create | [optional] 
 
 ### Return type

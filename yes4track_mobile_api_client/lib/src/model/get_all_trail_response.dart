@@ -5,6 +5,7 @@
 import 'package:built_collection/built_collection.dart';
 import 'package:yes4track_mobile_api_client/src/model/statistic.dart';
 import 'package:yes4track_mobile_api_client/src/model/trail_type.dart';
+import 'package:yes4track_mobile_api_client/src/model/waypoint.dart';
 import 'package:yes4track_mobile_api_client/src/model/adventure_type.dart';
 import 'package:yes4track_mobile_api_client/src/model/level_type.dart';
 import 'package:built_value/built_value.dart';
@@ -71,6 +72,9 @@ abstract class GetAllTrailResponse implements Built<GetAllTrailResponse, GetAllT
 
     @BuiltValueField(wireName: r'photoUrl')
     String? get photoUrl;
+
+    @BuiltValueField(wireName: r'waypoints')
+    BuiltList<Waypoint>? get waypoints;
 
     GetAllTrailResponse._();
 
@@ -201,6 +205,12 @@ class _$GetAllTrailResponseSerializer implements StructuredSerializer<GetAllTrai
                 ..add(serializers.serialize(object.photoUrl,
                     specifiedType: const FullType(String)));
         }
+        if (object.waypoints != null) {
+            result
+                ..add(r'waypoints')
+                ..add(serializers.serialize(object.waypoints,
+                    specifiedType: const FullType(BuiltList, [FullType(Waypoint)])));
+        }
         return result;
     }
 
@@ -286,6 +296,10 @@ class _$GetAllTrailResponseSerializer implements StructuredSerializer<GetAllTrai
                 case r'photoUrl':
                     result.photoUrl = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    break;
+                case r'waypoints':
+                    result.waypoints.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(BuiltList, [FullType(Waypoint)])) as BuiltList<Waypoint>);
                     break;
             }
         }

@@ -16,7 +16,7 @@ class _$TrackGeoLocationDto extends TrackGeoLocationDto {
   @override
   final BuiltList<BuiltList<double>>? lines;
   @override
-  final BuiltList<TrackGeoLocationWaypointDto>? waypoints;
+  final BuiltList<Waypoint>? waypoints;
 
   factory _$TrackGeoLocationDto(
           [void Function(TrackGeoLocationDtoBuilder)? updates]) =>
@@ -95,10 +95,10 @@ class TrackGeoLocationDtoBuilder
       _$this._lines ??= new ListBuilder<BuiltList<double>>();
   set lines(ListBuilder<BuiltList<double>>? lines) => _$this._lines = lines;
 
-  ListBuilder<TrackGeoLocationWaypointDto>? _waypoints;
-  ListBuilder<TrackGeoLocationWaypointDto> get waypoints =>
-      _$this._waypoints ??= new ListBuilder<TrackGeoLocationWaypointDto>();
-  set waypoints(ListBuilder<TrackGeoLocationWaypointDto>? waypoints) =>
+  ListBuilder<Waypoint>? _waypoints;
+  ListBuilder<Waypoint> get waypoints =>
+      _$this._waypoints ??= new ListBuilder<Waypoint>();
+  set waypoints(ListBuilder<Waypoint>? waypoints) =>
       _$this._waypoints = waypoints;
 
   TrackGeoLocationDtoBuilder() {
