@@ -18,7 +18,7 @@ For more information, please visit [https://github.com/jefersonmlopes](https://g
 To use the package from [pub.dev](https://pub.dev), please include the following in pubspec.yaml
 ```yaml
 dependencies:
-  yes4track_mobile_api_client: 1.0.0
+  yes4track_mobile_api_client: 1.0.3
 ```
 
 ### Github

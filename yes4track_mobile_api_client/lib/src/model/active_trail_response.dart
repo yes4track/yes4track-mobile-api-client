@@ -25,7 +25,7 @@ abstract class ActiveTrailResponse implements Built<ActiveTrailResponse, ActiveT
 
     @BuiltValueField(wireName: r'status')
     UserTrailStatusResponse? get status;
-    // enum statusEnum {  1,  2,  3,  };
+    // enum statusEnum {  1,  2,  3,  4,  };
 
     ActiveTrailResponse._();
 

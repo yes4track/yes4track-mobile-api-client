@@ -12,6 +12,8 @@ const UserTrailStatusResponse _$number2 =
     const UserTrailStatusResponse._('number2');
 const UserTrailStatusResponse _$number3 =
     const UserTrailStatusResponse._('number3');
+const UserTrailStatusResponse _$number4 =
+    const UserTrailStatusResponse._('number4');
 
 UserTrailStatusResponse _$valueOf(String name) {
   switch (name) {
@@ -21,6 +23,8 @@ UserTrailStatusResponse _$valueOf(String name) {
       return _$number2;
     case 'number3':
       return _$number3;
+    case 'number4':
+      return _$number4;
     default:
       throw new ArgumentError(name);
   }
@@ -31,6 +35,7 @@ final BuiltSet<UserTrailStatusResponse> _$values =
   _$number1,
   _$number2,
   _$number3,
+  _$number4,
 ]);
 
 class _$UserTrailStatusResponseMeta {
@@ -38,6 +43,7 @@ class _$UserTrailStatusResponseMeta {
   UserTrailStatusResponse get number1 => _$number1;
   UserTrailStatusResponse get number2 => _$number2;
   UserTrailStatusResponse get number3 => _$number3;
+  UserTrailStatusResponse get number4 => _$number4;
   UserTrailStatusResponse valueOf(String name) => _$valueOf(name);
   BuiltSet<UserTrailStatusResponse> get values => _$values;
 }
@@ -57,11 +63,13 @@ class _$UserTrailStatusResponseSerializer
     'number1': 1,
     'number2': 2,
     'number3': 3,
+    'number4': 4,
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     1: 'number1',
     2: 'number2',
     3: 'number3',
+    4: 'number4',
   };
 
   @override

@@ -16,6 +16,8 @@ class UserTrailStatusResponse extends EnumClass {
   static const UserTrailStatusResponse number2 = _$number2;
   @BuiltValueEnumConst(wireNumber: 3)
   static const UserTrailStatusResponse number3 = _$number3;
+  @BuiltValueEnumConst(wireNumber: 4)
+  static const UserTrailStatusResponse number4 = _$number4;
 
   static Serializer<UserTrailStatusResponse> get serializer => _$userTrailStatusResponseSerializer;
 

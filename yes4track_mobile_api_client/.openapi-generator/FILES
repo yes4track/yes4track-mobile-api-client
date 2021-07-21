@@ -226,4 +226,3 @@ lib/src/model/waypoint_type.dart
 lib/src/serializers.dart
 lib/yes4track_mobile_api_client.dart
 pubspec.yaml
-test/waypoint_test.dart
