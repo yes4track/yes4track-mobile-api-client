@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Track id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '315cd838-7841-41ee-8521-389ae4f8fe7b']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'cd61d8c9-48e4-47d6-93e9-d2495f794007']
 
 ### Return type
 
@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Track id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '084d3047-41a1-46e6-a987-cb0146e44d06']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c523fe7d-1589-48ed-916a-e6807c7b387e']
 
 ### Return type
 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
  **adventureId** | [**String**](.md)| Track id | [optional] 
  **experienceId** | [**String**](.md)| Track id | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c217ac1c-8490-4c39-bd63-9fe1b2492290']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ad2cce17-b066-4af7-9bd5-05f9f1a414ec']
 
 ### Return type
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e05623fe-36ba-4123-b1cc-d929eeb2aaf9']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '99512070-fa8f-4a02-a1bc-6a2be1cd8194']
 
 ### Return type
 
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Track id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '63238a48-7d94-4132-8980-e6afe041d561']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'bb7b0a67-bc0e-4299-880d-c81a5c4d799c']
 
 ### Return type
 
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Track Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7a9832fa-a86e-44eb-bff3-ac9898be5860']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e5ad4a1b-ec31-4923-b146-a8315e43f173']
 
 ### Return type
 
@@ -362,7 +362,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Track id | 
  **operation** | [**BuiltList<Operation>**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6f9b28ef-cf12-4120-a455-db4ec700b9c2']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0a836477-034d-48d3-bd41-924e439ee35a']
 
 ### Return type
 
@@ -411,7 +411,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Track Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a2072790-b691-4453-ae19-2d58f47915d9']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f2cceb28-6845-41f2-9f65-b3cd5827b193']
  **putTrackRequest** | [**PutTrackRequest**](PutTrackRequest.md)| Track to update | [optional] 
 
 ### Return type
@@ -461,7 +461,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Track Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '09cbfe08-37e8-47dc-be57-5c41aadd999c']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3e52d013-a665-4cc9-bb39-86d8bdb9d5a1']
  **putTrackStatisticRequest** | [**PutTrackStatisticRequest**](PutTrackStatisticRequest.md)| Track to update | [optional] 
 
 ### Return type
@@ -510,7 +510,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '48378e28-529d-40e7-9388-0aabaa542372']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5d0d540a-0097-4504-855d-c439b5acc9b6']
  **postTrackRequest** | [**PostTrackRequest**](PostTrackRequest.md)| Track to create | [optional] 
 
 ### Return type

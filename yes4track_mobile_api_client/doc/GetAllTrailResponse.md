@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **adventureLevel** | [**LevelType**](LevelType.md) |  | [optional] 
 **adventureType** | [**AdventureType**](AdventureType.md) |  | [optional] 
 **photoUrl** | **String** |  | [optional] 
+**imagesUrl** | [**BuiltList<ImageUrl>**](ImageUrl.md) |  | [optional] 
 **waypoints** | [**BuiltList<Waypoint>**](Waypoint.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

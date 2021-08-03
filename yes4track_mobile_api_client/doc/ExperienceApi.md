@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Experience id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '08b23add-731c-481e-ac3c-e19816fedfcd']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c362a4eb-0b02-4c80-81de-3989891c89fd']
 
 ### Return type
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Experience id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7661d920-87b4-4a84-af61-a22429cf3f11']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '485f6bcf-1910-446b-b201-76126e08f292']
 
 ### Return type
 
@@ -166,7 +166,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6f0a772e-4975-4033-90a7-dfa848d0267a']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a171e82e-3c24-4e09-874e-ce8bc5b407c2']
 
 ### Return type
 
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Experience id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2e9d2b12-1538-4917-82ee-cd2abb3175a4']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '02a0cb78-41ea-40f3-b581-aff82115a708']
 
 ### Return type
 
@@ -265,7 +265,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Experience id | 
  **code** | **String**| Experience Code | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'de12750d-6d28-43a0-806d-d057408ab5de']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'fa16df2d-b5b3-4838-8f24-c00454d7849e']
 
 ### Return type
 
@@ -313,7 +313,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Experience id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3d4e9fa0-01dc-4095-b605-8a4336954983']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '634c89d8-91f0-4e59-aa38-6779ce8a50fe']
 
 ### Return type
 
@@ -363,7 +363,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Experience id | 
  **imageId** | [**String**](.md)| Experience Image id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3f97b380-0055-403c-9223-2c260f96a425']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1751d597-6180-4186-988a-2a0a1d6635f2']
 
 ### Return type
 
@@ -412,7 +412,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Experience Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c1d3f3e1-2f09-41e6-ba50-3e8078663759']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '9e4af3c4-6d59-44f1-8340-3b3ff3f1f7e5']
 
 ### Return type
 
@@ -464,7 +464,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Experience id | 
  **operation** | [**BuiltList<Operation>**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '25cf0f0c-c459-4a97-af83-d2de411206dd']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ded80860-bdde-4c76-8368-fe256c5519ca']
 
 ### Return type
 
@@ -513,7 +513,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Experience Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7dc3ffea-a247-49e6-86b3-defbd8bb469d']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '912a38a7-f2bc-4f6d-bf96-2ff1a92d2aec']
  **putExperienceRequest** | [**PutExperienceRequest**](PutExperienceRequest.md)| Experience to update | [optional] 
 
 ### Return type
@@ -563,7 +563,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Experience Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '720d3ea4-6bb2-45c8-b6a2-de336ce3786e']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '32ea06a1-3c82-4e55-bc9a-a7c5ca8be7b6']
 
 ### Return type
 
@@ -613,7 +613,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Experience id | 
  **videoId** | [**String**](.md)| Experience Video id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '719027e6-8be4-4cb3-9c6c-11242ed1c8b2']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6feab555-094f-4452-ba2c-d0b58fa258c9']
 
 ### Return type
 
@@ -661,7 +661,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0371a64a-d3c6-4c60-b186-d04c2da8e3c8']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '183400eb-14ce-4af6-94d5-614146a77c5a']
  **postExperienceRequest** | [**PostExperienceRequest**](PostExperienceRequest.md)| Experience to create | [optional] 
 
 ### Return type

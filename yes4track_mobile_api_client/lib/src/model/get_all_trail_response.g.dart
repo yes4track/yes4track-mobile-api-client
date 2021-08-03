@@ -44,6 +44,8 @@ class _$GetAllTrailResponse extends GetAllTrailResponse {
   @override
   final String? photoUrl;
   @override
+  final BuiltList<ImageUrl>? imagesUrl;
+  @override
   final BuiltList<Waypoint>? waypoints;
 
   factory _$GetAllTrailResponse(
@@ -69,6 +71,7 @@ class _$GetAllTrailResponse extends GetAllTrailResponse {
       this.adventureLevel,
       this.adventureType,
       this.photoUrl,
+      this.imagesUrl,
       this.waypoints})
       : super._();
 
@@ -103,6 +106,7 @@ class _$GetAllTrailResponse extends GetAllTrailResponse {
         adventureLevel == other.adventureLevel &&
         adventureType == other.adventureType &&
         photoUrl == other.photoUrl &&
+        imagesUrl == other.imagesUrl &&
         waypoints == other.waypoints;
   }
 
@@ -126,31 +130,25 @@ class _$GetAllTrailResponse extends GetAllTrailResponse {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc(
-                                                                                0,
-                                                                                createdAt
-                                                                                    .hashCode),
-                                                                            updatedAt
-                                                                                .hashCode),
-                                                                        userCreated
-                                                                            .hashCode),
-                                                                    userUpdated
-                                                                        .hashCode),
-                                                                adventureId
-                                                                    .hashCode),
-                                                            name.hashCode),
-                                                        startDate.hashCode),
-                                                    endDate.hashCode),
-                                                type.hashCode),
-                                            id.hashCode),
-                                        statistic.hashCode),
-                                    sponsors.hashCode),
-                                angels.hashCode),
-                            adventureName.hashCode),
-                        adventureDescription.hashCode),
-                    adventureLevel.hashCode),
-                adventureType.hashCode),
-            photoUrl.hashCode),
+                                                                            $jc($jc(0, createdAt.hashCode),
+                                                                                updatedAt.hashCode),
+                                                                            userCreated.hashCode),
+                                                                        userUpdated.hashCode),
+                                                                    adventureId.hashCode),
+                                                                name.hashCode),
+                                                            startDate.hashCode),
+                                                        endDate.hashCode),
+                                                    type.hashCode),
+                                                id.hashCode),
+                                            statistic.hashCode),
+                                        sponsors.hashCode),
+                                    angels.hashCode),
+                                adventureName.hashCode),
+                            adventureDescription.hashCode),
+                        adventureLevel.hashCode),
+                    adventureType.hashCode),
+                photoUrl.hashCode),
+            imagesUrl.hashCode),
         waypoints.hashCode));
   }
 
@@ -175,6 +173,7 @@ class _$GetAllTrailResponse extends GetAllTrailResponse {
           ..add('adventureLevel', adventureLevel)
           ..add('adventureType', adventureType)
           ..add('photoUrl', photoUrl)
+          ..add('imagesUrl', imagesUrl)
           ..add('waypoints', waypoints))
         .toString();
   }
@@ -263,6 +262,12 @@ class GetAllTrailResponseBuilder
   String? get photoUrl => _$this._photoUrl;
   set photoUrl(String? photoUrl) => _$this._photoUrl = photoUrl;
 
+  ListBuilder<ImageUrl>? _imagesUrl;
+  ListBuilder<ImageUrl> get imagesUrl =>
+      _$this._imagesUrl ??= new ListBuilder<ImageUrl>();
+  set imagesUrl(ListBuilder<ImageUrl>? imagesUrl) =>
+      _$this._imagesUrl = imagesUrl;
+
   ListBuilder<Waypoint>? _waypoints;
   ListBuilder<Waypoint> get waypoints =>
       _$this._waypoints ??= new ListBuilder<Waypoint>();
@@ -294,6 +299,7 @@ class GetAllTrailResponseBuilder
       _adventureLevel = $v.adventureLevel;
       _adventureType = $v.adventureType;
       _photoUrl = $v.photoUrl;
+      _imagesUrl = $v.imagesUrl?.toBuilder();
       _waypoints = $v.waypoints?.toBuilder();
       _$v = null;
     }
@@ -335,6 +341,7 @@ class GetAllTrailResponseBuilder
               adventureLevel: adventureLevel,
               adventureType: adventureType,
               photoUrl: photoUrl,
+              imagesUrl: _imagesUrl?.build(),
               waypoints: _waypoints?.build());
     } catch (_) {
       late String _$failedField;
@@ -346,6 +353,8 @@ class GetAllTrailResponseBuilder
         _$failedField = 'angels';
         _angels?.build();
 
+        _$failedField = 'imagesUrl';
+        _imagesUrl?.build();
         _$failedField = 'waypoints';
         _waypoints?.build();
       } catch (e) {
@@ -359,4 +368,4 @@ class GetAllTrailResponseBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new

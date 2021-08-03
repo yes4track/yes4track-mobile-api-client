@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '089ec3da-f5b1-44f7-aaf5-3e5256c3aa8f']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2bc07778-18ea-4f31-b846-94bfd9117501']
 
 ### Return type
 
