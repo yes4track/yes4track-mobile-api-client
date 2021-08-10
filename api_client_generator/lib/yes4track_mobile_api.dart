@@ -13,5 +13,7 @@ import 'package:openapi_generator_annotations/openapi_generator_annotations.dart
   generatorName: Generator.dioNext,
   //outputDirectory: 'yes4track_mobile_api_client',
   outputDirectory: '../yes4track_mobile_api_client',
+  alwaysRun: true,
+  //overwriteExistingFiles: true,
 )
 class Main extends OpenapiGeneratorConfig {}
