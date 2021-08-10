@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Template id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ea748720-8bf4-453f-9407-1fc8b21d8ade']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'b8851ffb-781a-47bb-a071-e147c80f8ae0']
 
 ### Return type
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'de259ef7-7a05-403f-ac2f-b05d07b0bd53']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c4efd4cc-3688-4e9b-800e-450f4bea4487']
 
 ### Return type
 
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Template id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '9beef829-38da-43dc-b572-1ebae7bfbada']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e341abfe-1ce2-42c5-8749-65803374a0c1']
 
 ### Return type
 
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Template id | 
  **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '05e0732e-d3eb-4b3c-b90e-4c787d3eed8c']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6a991690-7186-4709-80d4-c5cba3b71243']
 
 ### Return type
 
@@ -223,7 +223,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **yes4trackV1TemplatesIdPhotosUploadPost**
-> BuiltList<String> yes4trackV1TemplatesIdPhotosUploadPost(id, xApiKey, xCsrfToken)
+> BuiltList<String> yes4trackV1TemplatesIdPhotosUploadPost(id, xApiKey, xCsrfToken, images)
 
 Create Template
 
@@ -239,9 +239,10 @@ final api = Yes4trackMobileApiClient().getTemplateApi();
 final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Template Id
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final BuiltList<StringStringValuesKeyValuePair> images = ; // BuiltList<StringStringValuesKeyValuePair> | Images
 
 try { 
-    final response = api.yes4trackV1TemplatesIdPhotosUploadPost(id, xApiKey, xCsrfToken);
+    final response = api.yes4trackV1TemplatesIdPhotosUploadPost(id, xApiKey, xCsrfToken, images);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TemplateApi->yes4trackV1TemplatesIdPhotosUploadPost: $e\n');
@@ -254,7 +255,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Template Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'b6afa5ab-8ee7-4f45-bb71-308380ed9e21']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'abd2ee90-182f-42f1-8123-b94cbdcb3170']
+ **images** | [**BuiltList&lt;StringStringValuesKeyValuePair&gt;**](StringStringValuesKeyValuePair.md)| Images | [optional] 
 
 ### Return type
 
@@ -266,7 +268,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: multipart/form-data, application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -303,7 +305,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Template Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a0124d55-8f82-43cb-a9ec-95e04f8d6132']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd98d3052-121f-4967-9efc-cec1560248fe']
  **putTemplateRequest** | [**PutTemplateRequest**](PutTemplateRequest.md)| Template to update | [optional] 
 
 ### Return type
@@ -352,7 +354,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8aba9642-a389-42ca-ab05-72888fef3543']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e1dc576a-b6c4-405d-ac00-748a66fa47f3']
  **postTemplateRequest** | [**PostTemplateRequest**](PostTemplateRequest.md)| Template to create | [optional] 
 
 ### Return type

@@ -56,6 +56,14 @@ export 'package:yes4track_mobile_api_client/src/model/get_by_id_experience_code_
 export 'package:yes4track_mobile_api_client/src/model/get_by_id_trail_geo_dataet_by_id_response.dart';
 export 'package:yes4track_mobile_api_client/src/model/get_user_liked_adventure_response.dart';
 export 'package:yes4track_mobile_api_client/src/model/image_url.dart';
+export 'package:yes4track_mobile_api_client/src/model/inline_object.dart';
+export 'package:yes4track_mobile_api_client/src/model/inline_object1.dart';
+export 'package:yes4track_mobile_api_client/src/model/inline_object2.dart';
+export 'package:yes4track_mobile_api_client/src/model/inline_object3.dart';
+export 'package:yes4track_mobile_api_client/src/model/inline_object4.dart';
+export 'package:yes4track_mobile_api_client/src/model/inline_object5.dart';
+export 'package:yes4track_mobile_api_client/src/model/inline_object6.dart';
+export 'package:yes4track_mobile_api_client/src/model/inline_object7.dart';
 export 'package:yes4track_mobile_api_client/src/model/level_type.dart';
 export 'package:yes4track_mobile_api_client/src/model/map_coordinate.dart';
 export 'package:yes4track_mobile_api_client/src/model/notification_channel.dart';

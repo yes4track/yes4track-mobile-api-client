@@ -18,6 +18,7 @@ import 'package:yes4track_mobile_api_client/src/model/post_track_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_track_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/put_track_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/put_track_statistic_request.dart';
+import 'package:yes4track_mobile_api_client/src/model/string_string_values_key_value_pair.dart';
 import 'package:yes4track_mobile_api_client/src/model/track_geo_location_dto.dart';
 import 'package:yes4track_mobile_api_client/src/model/track_source.dart';
 
@@ -448,6 +449,7 @@ class TrackApi {
   /// * [id] - Track Id
   /// * [xApiKey] - Your Api Key
   /// * [xCsrfToken] - CSRF Protection
+  /// * [files] - Files
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -461,6 +463,7 @@ class TrackApi {
     required String id,
     String? xApiKey,
     String? xCsrfToken,
+    BuiltList<StringStringValuesKeyValuePair>? files,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -487,11 +490,31 @@ class TrackApi {
         ],
         ...?extra,
       },
+      contentType: 'multipart/form-data',
       validateStatus: validateStatus,
     );
 
+    dynamic _bodyData;
+
+    try {
+      _bodyData = FormData.fromMap(<String, dynamic>{
+        if (files != null) r'files': encodeFormParameter(_serializers, files, const FullType(BuiltList, [FullType(StringStringValuesKeyValuePair)])),
+      });
+
+    } catch(error, stackTrace) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
     final _response = await _dio.request<Object>(
       _path,
+      data: _bodyData,
       options: _options,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,

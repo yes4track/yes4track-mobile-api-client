@@ -20,6 +20,7 @@ import 'package:yes4track_mobile_api_client/src/model/post_trail_geo_data_respon
 import 'package:yes4track_mobile_api_client/src/model/post_trail_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_trail_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/put_trail_request.dart';
+import 'package:yes4track_mobile_api_client/src/model/string_string_values_key_value_pair.dart';
 
 class TrailApi {
 
@@ -676,6 +677,7 @@ class TrailApi {
   /// * [id] - Trail Id
   /// * [xApiKey] - Your Api Key
   /// * [xCsrfToken] - CSRF Protection
+  /// * [files] - Files
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -689,6 +691,7 @@ class TrailApi {
     required String id,
     String? xApiKey,
     String? xCsrfToken,
+    BuiltList<StringStringValuesKeyValuePair>? files,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -715,11 +718,31 @@ class TrailApi {
         ],
         ...?extra,
       },
+      contentType: 'multipart/form-data',
       validateStatus: validateStatus,
     );
 
+    dynamic _bodyData;
+
+    try {
+      _bodyData = FormData.fromMap(<String, dynamic>{
+        if (files != null) r'files': encodeFormParameter(_serializers, files, const FullType(BuiltList, [FullType(StringStringValuesKeyValuePair)])),
+      });
+
+    } catch(error, stackTrace) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
     final _response = await _dio.request<Object>(
       _path,
+      data: _bodyData,
       options: _options,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
@@ -763,6 +786,7 @@ class TrailApi {
   /// * [id] - Trail Id
   /// * [xApiKey] - Your Api Key
   /// * [xCsrfToken] - CSRF Protection
+  /// * [images] - Images
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -776,6 +800,7 @@ class TrailApi {
     required String id,
     String? xApiKey,
     String? xCsrfToken,
+    BuiltList<StringStringValuesKeyValuePair>? images,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -802,11 +827,31 @@ class TrailApi {
         ],
         ...?extra,
       },
+      contentType: 'multipart/form-data',
       validateStatus: validateStatus,
     );
 
+    dynamic _bodyData;
+
+    try {
+      _bodyData = FormData.fromMap(<String, dynamic>{
+        if (images != null) r'images': encodeFormParameter(_serializers, images, const FullType(BuiltList, [FullType(StringStringValuesKeyValuePair)])),
+      });
+
+    } catch(error, stackTrace) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
     final _response = await _dio.request<Object>(
       _path,
+      data: _bodyData,
       options: _options,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,

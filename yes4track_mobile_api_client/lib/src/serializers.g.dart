@@ -42,6 +42,14 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GetByIdTrailGeoDataetByIdResponse.serializer)
       ..add(GetUserLikedAdventureResponse.serializer)
       ..add(ImageUrl.serializer)
+      ..add(InlineObject.serializer)
+      ..add(InlineObject1.serializer)
+      ..add(InlineObject2.serializer)
+      ..add(InlineObject3.serializer)
+      ..add(InlineObject4.serializer)
+      ..add(InlineObject5.serializer)
+      ..add(InlineObject6.serializer)
+      ..add(InlineObject7.serializer)
       ..add(LevelType.serializer)
       ..add(MapCoordinate.serializer)
       ..add(NotificationChannel.serializer)
@@ -219,24 +227,74 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(BuiltList, const [const FullType(double)])
           ]),
           () => new ListBuilder<BuiltList<double>>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(Waypoint)]), () => new ListBuilder<Waypoint>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(ImageUrl)]), () => new ListBuilder<ImageUrl>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(Waypoint)]), () => new ListBuilder<Waypoint>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(Waypoint)]), () => new ListBuilder<Waypoint>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(TrailGeoDataRequest)]), () => new ListBuilder<TrailGeoDataRequest>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(Waypoint)]), () => new ListBuilder<Waypoint>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(Waypoint)]), () => new ListBuilder<Waypoint>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(double)]), () => new ListBuilder<double>()))
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(Waypoint)]),
+          () => new ListBuilder<Waypoint>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(ImageUrl)]),
+          () => new ListBuilder<ImageUrl>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(Waypoint)]),
+          () => new ListBuilder<Waypoint>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(Waypoint)]),
+          () => new ListBuilder<Waypoint>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(TrailGeoDataRequest)]),
+          () => new ListBuilder<TrailGeoDataRequest>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(Waypoint)]),
+          () => new ListBuilder<Waypoint>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(Waypoint)]),
+          () => new ListBuilder<Waypoint>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(double)]),
+          () => new ListBuilder<double>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(dynamic)]),
+          () => new ListBuilder<dynamic>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(dynamic)]),
+          () => new ListBuilder<dynamic>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(dynamic)]),
+          () => new ListBuilder<dynamic>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(dynamic)]),
+          () => new ListBuilder<dynamic>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(dynamic)]),
+          () => new ListBuilder<dynamic>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(dynamic)]),
+          () => new ListBuilder<dynamic>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(dynamic)]),
+          () => new ListBuilder<dynamic>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(dynamic)]),
+          () => new ListBuilder<dynamic>()))
     .build();
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
