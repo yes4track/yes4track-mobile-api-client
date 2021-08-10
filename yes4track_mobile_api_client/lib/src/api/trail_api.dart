@@ -17,6 +17,7 @@ import 'package:yes4track_mobile_api_client/src/model/get_by_id_trail_geo_dataet
 import 'package:yes4track_mobile_api_client/src/model/operation.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_trail_chunck_geo_data_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_trail_geo_data_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/post_trail_photos_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_trail_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_trail_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/put_trail_request.dart';
@@ -793,9 +794,9 @@ class TrailApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<String>] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<PostTrailPhotosResponse>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<String>>> yes4trackV1TrailsIdImagesPost({ 
+  Future<Response<BuiltList<PostTrailPhotosResponse>>> yes4trackV1TrailsIdImagesPost({ 
     required String id,
     String? xApiKey,
     String? xCsrfToken,
@@ -857,14 +858,14 @@ class TrailApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<String> _responseData;
+    BuiltList<PostTrailPhotosResponse> _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(String)]);
+      const _responseType = FullType(BuiltList, [FullType(PostTrailPhotosResponse)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BuiltList<String>;
+      ) as BuiltList<PostTrailPhotosResponse>;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -875,7 +876,7 @@ class TrailApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BuiltList<String>>(
+    return Response<BuiltList<PostTrailPhotosResponse>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

@@ -74,6 +74,7 @@ import 'package:yes4track_mobile_api_client/src/model/post_track_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_track_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_trail_chunck_geo_data_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_trail_geo_data_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/post_trail_photos_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_trail_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_trail_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_user_access_token_request.dart';
@@ -174,6 +175,7 @@ part 'serializers.g.dart';
   PostTrackResponse,
   PostTrailChunckGeoDataRequest,
   PostTrailGeoDataResponse,
+  PostTrailPhotosResponse,
   PostTrailRequest,
   PostTrailResponse,
   PostUserAccessTokenRequest,
@@ -255,8 +257,8 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<Operation>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(String)]),
-        () => ListBuilder<String>(),
+        const FullType(BuiltList, [FullType(PostTrailPhotosResponse)]),
+        () => ListBuilder<PostTrailPhotosResponse>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(Operation)]),

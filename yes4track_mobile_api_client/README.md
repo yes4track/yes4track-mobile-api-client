@@ -18,7 +18,7 @@ For more information, please visit [https://github.com/jefersonmlopes](https://g
 To use the package from [pub.dev](https://pub.dev), please include the following in pubspec.yaml
 ```yaml
 dependencies:
-  yes4track_mobile_api_client: 1.0.5
+  yes4track_mobile_api_client: 1.0.6
 ```
 
 ### Github
@@ -234,6 +234,7 @@ Class | Method | HTTP request | Description
  - [PostTrackResponse](doc\PostTrackResponse.md)
  - [PostTrailChunckGeoDataRequest](doc\PostTrailChunckGeoDataRequest.md)
  - [PostTrailGeoDataResponse](doc\PostTrailGeoDataResponse.md)
+ - [PostTrailPhotosResponse](doc\PostTrailPhotosResponse.md)
  - [PostTrailRequest](doc\PostTrailRequest.md)
  - [PostTrailResponse](doc\PostTrailResponse.md)
  - [PostUserAccessTokenRequest](doc\PostUserAccessTokenRequest.md)

@@ -69,6 +69,7 @@ doc/PostTrackRequest.md
 doc/PostTrackResponse.md
 doc/PostTrailChunckGeoDataRequest.md
 doc/PostTrailGeoDataResponse.md
+doc/PostTrailPhotosResponse.md
 doc/PostTrailRequest.md
 doc/PostTrailResponse.md
 doc/PostUserAccessTokenRequest.md
@@ -189,6 +190,7 @@ lib/src/model/post_track_request.dart
 lib/src/model/post_track_response.dart
 lib/src/model/post_trail_chunck_geo_data_request.dart
 lib/src/model/post_trail_geo_data_response.dart
+lib/src/model/post_trail_photos_response.dart
 lib/src/model/post_trail_request.dart
 lib/src/model/post_trail_response.dart
 lib/src/model/post_user_access_token_request.dart
@@ -226,3 +228,4 @@ lib/src/model/waypoint_type.dart
 lib/src/serializers.dart
 lib/yes4track_mobile_api_client.dart
 pubspec.yaml
+test/post_trail_photos_response_test.dart

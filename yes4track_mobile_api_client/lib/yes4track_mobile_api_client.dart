@@ -83,6 +83,7 @@ export 'package:yes4track_mobile_api_client/src/model/post_track_request.dart';
 export 'package:yes4track_mobile_api_client/src/model/post_track_response.dart';
 export 'package:yes4track_mobile_api_client/src/model/post_trail_chunck_geo_data_request.dart';
 export 'package:yes4track_mobile_api_client/src/model/post_trail_geo_data_response.dart';
+export 'package:yes4track_mobile_api_client/src/model/post_trail_photos_response.dart';
 export 'package:yes4track_mobile_api_client/src/model/post_trail_request.dart';
 export 'package:yes4track_mobile_api_client/src/model/post_trail_response.dart';
 export 'package:yes4track_mobile_api_client/src/model/post_user_access_token_request.dart';
