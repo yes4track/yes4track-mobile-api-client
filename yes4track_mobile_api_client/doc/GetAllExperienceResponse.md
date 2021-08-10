@@ -18,8 +18,8 @@ Name | Type | Description | Notes
 **effectiveStartDate** | [**DateTime**](DateTime.md) |  | [optional] 
 **effectiveEndDate** | [**DateTime**](DateTime.md) |  | [optional] 
 **id** | **String** |  | [optional] 
-**imagesUrl** | [**BuiltList<ImageUrl>**](ImageUrl.md) |  | [optional] 
-**videosUrl** | [**BuiltList<VideoUrl>**](VideoUrl.md) |  | [optional] 
+**imagesUrl** | [**BuiltList&lt;ImageUrl&gt;**](ImageUrl.md) |  | [optional] 
+**videosUrl** | [**BuiltList&lt;VideoUrl&gt;**](VideoUrl.md) |  | [optional] 
 **codeRequired** | **bool** |  | [optional] 
 **isActive** | **bool** |  | [optional] 
 

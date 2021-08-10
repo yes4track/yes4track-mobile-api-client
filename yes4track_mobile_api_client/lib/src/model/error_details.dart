@@ -8,8 +8,12 @@ import 'package:built_value/serializer.dart';
 
 part 'error_details.g.dart';
 
-
-
+/// ErrorDetails
+///
+/// Properties:
+/// * [statusCode] 
+/// * [errorCode] 
+/// * [messages] 
 abstract class ErrorDetails implements Built<ErrorDetails, ErrorDetailsBuilder> {
     @BuiltValueField(wireName: r'statusCode')
     int? get statusCode;

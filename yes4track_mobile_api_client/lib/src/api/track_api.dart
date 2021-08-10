@@ -8,6 +8,7 @@ import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
+import 'package:yes4track_mobile_api_client/src/api_util.dart';
 import 'package:yes4track_mobile_api_client/src/model/error_details.dart';
 import 'package:yes4track_mobile_api_client/src/model/get_all_paged_track_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/get_all_track_response.dart';
@@ -29,8 +30,21 @@ class TrackApi {
   const TrackApi(this._dio, this._serializers);
 
   /// Get Track by id
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Track id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [GetAllTrackResponse] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<GetAllTrackResponse>> getByIdTrack({ 
     required String id,
     String? xApiKey,
@@ -61,19 +75,12 @@ class TrackApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -88,13 +95,13 @@ class TrackApi {
         specifiedType: _responseType,
       ) as GetAllTrackResponse;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<GetAllTrackResponse>(
@@ -110,8 +117,21 @@ class TrackApi {
   }
 
   /// Get Track Geo Data by id
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Track id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<void>> getByIdTrackGeoData({ 
     required String id,
     String? xApiKey,
@@ -142,19 +162,12 @@ class TrackApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -164,8 +177,23 @@ class TrackApi {
   }
 
   /// Get Track Geo Location by id
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [trackId] - Track id
+  /// * [adventureId] - Track id
+  /// * [experienceId] - Track id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<TrackGeoLocationDto>] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<TrackGeoLocationDto>>> getByIdTrackGeoLocation({ 
     String? trackId,
     String? adventureId,
@@ -198,16 +226,13 @@ class TrackApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
     final _queryParameters = <String, dynamic>{
-      r'trackId': trackId,
-      r'adventureId': adventureId,
-      r'experienceId': experienceId,
+      r'trackId': encodeQueryParameter(_serializers, trackId, const FullType(String)),
+      r'adventureId': encodeQueryParameter(_serializers, adventureId, const FullType(String)),
+      r'experienceId': encodeQueryParameter(_serializers, experienceId, const FullType(String)),
     };
 
     final _response = await _dio.request<Object>(
@@ -228,13 +253,13 @@ class TrackApi {
         specifiedType: _responseType,
       ) as BuiltList<TrackGeoLocationDto>;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<BuiltList<TrackGeoLocationDto>>(
@@ -250,8 +275,26 @@ class TrackApi {
   }
 
   /// Get All Track by filter with pagination
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [adventureId] 
+  /// * [name] 
+  /// * [source_] 
+  /// * [page] 
+  /// * [pageSize] 
+  /// * [sort] - Sorting atributes, sample: id.desc,name.asc
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [GetAllPagedTrackResponse] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<GetAllPagedTrackResponse>> yes4trackV1TracksGet({ 
     required String adventureId,
     String? name,
@@ -287,19 +330,16 @@ class TrackApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
     final _queryParameters = <String, dynamic>{
-      r'adventureId': adventureId,
-      r'name': name,
-      if (source_ != null) r'source': source_,
-      if (page != null) r'page': page,
-      if (pageSize != null) r'pageSize': pageSize,
-      r'sort': sort,
+      r'adventureId': encodeQueryParameter(_serializers, adventureId, const FullType(String)),
+      r'name': encodeQueryParameter(_serializers, name, const FullType(String)),
+      if (source_ != null) r'source': encodeQueryParameter(_serializers, source_, const FullType(TrackSource)),
+      if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
+      if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
+      r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
     };
 
     final _response = await _dio.request<Object>(
@@ -320,13 +360,13 @@ class TrackApi {
         specifiedType: _responseType,
       ) as GetAllPagedTrackResponse;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<GetAllPagedTrackResponse>(
@@ -342,8 +382,21 @@ class TrackApi {
   }
 
   /// Delete Track by Id
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Track id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<void>> yes4trackV1TracksIdDelete({ 
     required String id,
     String? xApiKey,
@@ -374,19 +427,12 @@ class TrackApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -396,8 +442,21 @@ class TrackApi {
   }
 
   /// Create Track GeoData
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Track Id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [PostTrackGeoDataResponse] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<PostTrackGeoDataResponse>> yes4trackV1TracksIdGeodataPost({ 
     required String id,
     String? xApiKey,
@@ -428,19 +487,12 @@ class TrackApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -455,13 +507,13 @@ class TrackApi {
         specifiedType: _responseType,
       ) as PostTrackGeoDataResponse;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<PostTrackGeoDataResponse>(
@@ -477,8 +529,22 @@ class TrackApi {
   }
 
   /// Update part of Track
+  /// Sample request:                    PATCH /yes4track/v1/Track/{id}      [          {              \&quot;op\&quot;: \&quot;replace\&quot;,              \&quot;path\&quot;: \&quot;/atribute_name\&quot;,              \&quot;value\&quot;: \&quot;new value\&quot;          }      ]
   ///
-  /// Sample request:                    PATCH /yes4track/v1/Track/{id}      [          {              \"op\": \"replace\",              \"path\": \"/atribute_name\",              \"value\": \"new value\"          }      ]
+  /// Parameters:
+  /// * [id] - Track id
+  /// * [operation] - Atributes values
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<void>> yes4trackV1TracksIdPatch({ 
     required String id,
     required BuiltList<Operation> operation,
@@ -510,14 +576,9 @@ class TrackApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
+      contentType: 'application/json',
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     dynamic _bodyData;
 
@@ -525,23 +586,21 @@ class TrackApi {
       const _type = FullType(BuiltList, [FullType(Operation)]);
       _bodyData = _serializers.serialize(operation, specifiedType: _type);
 
-    } catch(error) {
+    } catch(error, stackTrace) {
       throw DioError(
          requestOptions: _options.compose(
           _dio.options,
           _path,
-          queryParameters: _queryParameters,
         ),
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     final _response = await _dio.request<Object>(
       _path,
       data: _bodyData,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -551,8 +610,22 @@ class TrackApi {
   }
 
   /// Update Track
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Track Id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [putTrackRequest] - Track to update
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<void>> yes4trackV1TracksIdPut({ 
     required String id,
     String? xApiKey,
@@ -584,14 +657,9 @@ class TrackApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
+      contentType: 'application/json',
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     dynamic _bodyData;
 
@@ -599,23 +667,21 @@ class TrackApi {
       const _type = FullType(PutTrackRequest);
       _bodyData = putTrackRequest == null ? null : _serializers.serialize(putTrackRequest, specifiedType: _type);
 
-    } catch(error) {
+    } catch(error, stackTrace) {
       throw DioError(
          requestOptions: _options.compose(
           _dio.options,
           _path,
-          queryParameters: _queryParameters,
         ),
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     final _response = await _dio.request<Object>(
       _path,
       data: _bodyData,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -625,8 +691,22 @@ class TrackApi {
   }
 
   /// Update Track Statistic
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Track Id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [putTrackStatisticRequest] - Track to update
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<void>> yes4trackV1TracksIdStatisticPut({ 
     required String id,
     String? xApiKey,
@@ -658,14 +738,9 @@ class TrackApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
+      contentType: 'application/json',
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     dynamic _bodyData;
 
@@ -673,23 +748,21 @@ class TrackApi {
       const _type = FullType(PutTrackStatisticRequest);
       _bodyData = putTrackStatisticRequest == null ? null : _serializers.serialize(putTrackStatisticRequest, specifiedType: _type);
 
-    } catch(error) {
+    } catch(error, stackTrace) {
       throw DioError(
          requestOptions: _options.compose(
           _dio.options,
           _path,
-          queryParameters: _queryParameters,
         ),
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     final _response = await _dio.request<Object>(
       _path,
       data: _bodyData,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -699,8 +772,21 @@ class TrackApi {
   }
 
   /// Create Track
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [postTrackRequest] - Track to create
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [PostTrackResponse] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<PostTrackResponse>> yes4trackV1TracksPost({ 
     String? xApiKey,
     String? xCsrfToken,
@@ -731,14 +817,9 @@ class TrackApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
+      contentType: 'application/json',
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     dynamic _bodyData;
 
@@ -746,23 +827,21 @@ class TrackApi {
       const _type = FullType(PostTrackRequest);
       _bodyData = postTrackRequest == null ? null : _serializers.serialize(postTrackRequest, specifiedType: _type);
 
-    } catch(error) {
+    } catch(error, stackTrace) {
       throw DioError(
          requestOptions: _options.compose(
           _dio.options,
           _path,
-          queryParameters: _queryParameters,
         ),
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     final _response = await _dio.request<Object>(
       _path,
       data: _bodyData,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -777,13 +856,13 @@ class TrackApi {
         specifiedType: _responseType,
       ) as PostTrackResponse;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<PostTrackResponse>(

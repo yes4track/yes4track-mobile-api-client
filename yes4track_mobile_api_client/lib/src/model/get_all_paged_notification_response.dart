@@ -9,8 +9,16 @@ import 'package:built_value/serializer.dart';
 
 part 'get_all_paged_notification_response.g.dart';
 
-
-
+/// GetAllPagedNotificationResponse
+///
+/// Properties:
+/// * [currentPage] 
+/// * [pageCount] 
+/// * [pageSize] 
+/// * [rowCount] 
+/// * [firstRowOnPage] 
+/// * [lastRowOnPage] 
+/// * [results] 
 abstract class GetAllPagedNotificationResponse implements Built<GetAllPagedNotificationResponse, GetAllPagedNotificationResponseBuilder> {
     @BuiltValueField(wireName: r'currentPage')
     int? get currentPage;

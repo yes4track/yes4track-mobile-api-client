@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **companyId** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
-**contacts** | [**BuiltList<SponsorContact>**](SponsorContact.md) |  | [optional] 
+**contacts** | [**BuiltList&lt;SponsorContact&gt;**](SponsorContact.md) |  | [optional] 
 **address** | [**Address**](Address.md) |  | [optional] 
 **id** | **String** |  | [optional] 
 **photoUrl** | **String** |  | [optional] 

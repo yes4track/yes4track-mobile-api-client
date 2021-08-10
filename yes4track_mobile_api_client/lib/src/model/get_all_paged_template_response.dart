@@ -9,8 +9,16 @@ import 'package:built_value/serializer.dart';
 
 part 'get_all_paged_template_response.g.dart';
 
-
-
+/// GetAllPagedTemplateResponse
+///
+/// Properties:
+/// * [currentPage] 
+/// * [pageCount] 
+/// * [pageSize] 
+/// * [rowCount] 
+/// * [firstRowOnPage] 
+/// * [lastRowOnPage] 
+/// * [results] 
 abstract class GetAllPagedTemplateResponse implements Built<GetAllPagedTemplateResponse, GetAllPagedTemplateResponseBuilder> {
     @BuiltValueField(wireName: r'currentPage')
     int? get currentPage;

@@ -7,6 +7,7 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
+import 'package:yes4track_mobile_api_client/src/api_util.dart';
 import 'package:yes4track_mobile_api_client/src/model/action_type.dart';
 import 'package:yes4track_mobile_api_client/src/model/error_details.dart';
 import 'package:yes4track_mobile_api_client/src/model/get_all_paged_audit_response.dart';
@@ -20,8 +21,30 @@ class AuditApi {
   const AuditApi(this._dio, this._serializers);
 
   /// Get All Audit by filter with pagination
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [parentId] 
+  /// * [entity] 
+  /// * [action] 
+  /// * [startDate] 
+  /// * [endDate] 
+  /// * [userCreated] 
+  /// * [userUpdated] 
+  /// * [page] 
+  /// * [pageSize] 
+  /// * [sort] - Sorting atributes, sample: id.desc,name.asc
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [GetAllPagedAuditResponse] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<GetAllPagedAuditResponse>> yes4trackV1AuditsGet({ 
     String? parentId,
     String? entity,
@@ -61,23 +84,20 @@ class AuditApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
     final _queryParameters = <String, dynamic>{
-      r'parentId': parentId,
-      r'entity': entity,
-      if (action != null) r'action': action,
-      if (startDate != null) r'startDate': startDate,
-      if (endDate != null) r'endDate': endDate,
-      r'userCreated': userCreated,
-      r'userUpdated': userUpdated,
-      if (page != null) r'page': page,
-      if (pageSize != null) r'pageSize': pageSize,
-      r'sort': sort,
+      r'parentId': encodeQueryParameter(_serializers, parentId, const FullType(String)),
+      r'entity': encodeQueryParameter(_serializers, entity, const FullType(String)),
+      if (action != null) r'action': encodeQueryParameter(_serializers, action, const FullType(ActionType)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+      r'userCreated': encodeQueryParameter(_serializers, userCreated, const FullType(String)),
+      r'userUpdated': encodeQueryParameter(_serializers, userUpdated, const FullType(String)),
+      if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
+      if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
+      r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
     };
 
     final _response = await _dio.request<Object>(
@@ -98,13 +118,13 @@ class AuditApi {
         specifiedType: _responseType,
       ) as GetAllPagedAuditResponse;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<GetAllPagedAuditResponse>(

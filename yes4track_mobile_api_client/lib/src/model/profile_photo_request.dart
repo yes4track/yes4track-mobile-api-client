@@ -7,8 +7,11 @@ import 'package:built_value/serializer.dart';
 
 part 'profile_photo_request.g.dart';
 
-
-
+/// ProfilePhotoRequest
+///
+/// Properties:
+/// * [data] 
+/// * [extension_] 
 abstract class ProfilePhotoRequest implements Built<ProfilePhotoRequest, ProfilePhotoRequestBuilder> {
     @BuiltValueField(wireName: r'data')
     String? get data;

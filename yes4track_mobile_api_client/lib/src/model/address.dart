@@ -8,8 +8,25 @@ import 'package:built_value/serializer.dart';
 
 part 'address.g.dart';
 
-
-
+/// Address
+///
+/// Properties:
+/// * [id] 
+/// * [createdAt] 
+/// * [updatedAt] 
+/// * [userCreated] 
+/// * [userUpdated] 
+/// * [version] 
+/// * [zipCode] 
+/// * [street] 
+/// * [number] 
+/// * [complement] 
+/// * [neighborhood] 
+/// * [city] 
+/// * [state] 
+/// * [country] 
+/// * [latitude] 
+/// * [longitude] 
 abstract class Address implements Built<Address, AddressBuilder> {
     @BuiltValueField(wireName: r'id')
     String? get id;

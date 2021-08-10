@@ -2,8 +2,6 @@ name: yes4track_mobile_api_client
 version: 1.0.4
 description: Caspian.Yes4Track.Service API
 homepage: https://github.com/yes4track/
-authors:
-  - 'Yes4Track <admin@yes4track.com>'
 
 environment:
   sdk: '>=2.12.0 <3.0.0'

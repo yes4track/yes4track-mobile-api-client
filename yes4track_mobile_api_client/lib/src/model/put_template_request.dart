@@ -7,8 +7,14 @@ import 'package:built_value/serializer.dart';
 
 part 'put_template_request.g.dart';
 
-
-
+/// PutTemplateRequest
+///
+/// Properties:
+/// * [id] 
+/// * [name] 
+/// * [businessId] 
+/// * [createdAt] 
+/// * [updatedAt] 
 abstract class PutTemplateRequest implements Built<PutTemplateRequest, PutTemplateRequestBuilder> {
     @BuiltValueField(wireName: r'id')
     String? get id;

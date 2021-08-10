@@ -9,22 +9,22 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getByIdUser**](UserApi.md#getbyiduser) | **get** /yes4track/v1/users/{id} | Get User by id
-[**yes4trackV1UsersAccesstokenPost**](UserApi.md#yes4trackv1usersaccesstokenpost) | **post** /yes4track/v1/users/accesstoken | User SignIn
-[**yes4trackV1UsersGet**](UserApi.md#yes4trackv1usersget) | **get** /yes4track/v1/users | Get All User by filter with pagination
-[**yes4trackV1UsersIdCompaniesCompanyIdDelete**](UserApi.md#yes4trackv1usersidcompaniescompanyiddelete) | **delete** /yes4track/v1/users/{id}/companies/{companyId} | Delete User Company
-[**yes4trackV1UsersIdCompaniesCompanyIdPost**](UserApi.md#yes4trackv1usersidcompaniescompanyidpost) | **post** /yes4track/v1/users/{id}/companies/{companyId} | Add User Company
-[**yes4trackV1UsersIdDelete**](UserApi.md#yes4trackv1usersiddelete) | **delete** /yes4track/v1/users/{id} | Delete User by Id
-[**yes4trackV1UsersIdLocationPut**](UserApi.md#yes4trackv1usersidlocationput) | **put** /yes4track/v1/users/{id}/location | Update User Location
-[**yes4trackV1UsersIdPatch**](UserApi.md#yes4trackv1usersidpatch) | **patch** /yes4track/v1/users/{id} | Update part of User
-[**yes4trackV1UsersIdPhotoPut**](UserApi.md#yes4trackv1usersidphotoput) | **put** /yes4track/v1/users/{id}/photo | Update User Photo
-[**yes4trackV1UsersIdPut**](UserApi.md#yes4trackv1usersidput) | **put** /yes4track/v1/users/{id} | Update User
-[**yes4trackV1UsersPost**](UserApi.md#yes4trackv1userspost) | **post** /yes4track/v1/users | Add User
-[**yes4trackV1UsersResendcodePost**](UserApi.md#yes4trackv1usersresendcodepost) | **post** /yes4track/v1/users/resendcode | Resend Code
-[**yes4trackV1UsersSetupangelPost**](UserApi.md#yes4trackv1userssetupangelpost) | **post** /yes4track/v1/users/setupangel | Setup User default Angel
-[**yes4trackV1UsersSetupsponsorIdPost**](UserApi.md#yes4trackv1userssetupsponsoridpost) | **post** /yes4track/v1/users/setupsponsor/{id} | Setup User default Sponsor
-[**yes4trackV1UsersSigninPost**](UserApi.md#yes4trackv1userssigninpost) | **post** /yes4track/v1/users/signin | User SignIn
-[**yes4trackV1UsersSignupPost**](UserApi.md#yes4trackv1userssignuppost) | **post** /yes4track/v1/users/signup | User SignUp
+[**getByIdUser**](UserApi.md#getbyiduser) | **GET** /yes4track/v1/users/{id} | Get User by id
+[**yes4trackV1UsersAccesstokenPost**](UserApi.md#yes4trackv1usersaccesstokenpost) | **POST** /yes4track/v1/users/accesstoken | User SignIn
+[**yes4trackV1UsersGet**](UserApi.md#yes4trackv1usersget) | **GET** /yes4track/v1/users | Get All User by filter with pagination
+[**yes4trackV1UsersIdCompaniesCompanyIdDelete**](UserApi.md#yes4trackv1usersidcompaniescompanyiddelete) | **DELETE** /yes4track/v1/users/{id}/companies/{companyId} | Delete User Company
+[**yes4trackV1UsersIdCompaniesCompanyIdPost**](UserApi.md#yes4trackv1usersidcompaniescompanyidpost) | **POST** /yes4track/v1/users/{id}/companies/{companyId} | Add User Company
+[**yes4trackV1UsersIdDelete**](UserApi.md#yes4trackv1usersiddelete) | **DELETE** /yes4track/v1/users/{id} | Delete User by Id
+[**yes4trackV1UsersIdLocationPut**](UserApi.md#yes4trackv1usersidlocationput) | **PUT** /yes4track/v1/users/{id}/location | Update User Location
+[**yes4trackV1UsersIdPatch**](UserApi.md#yes4trackv1usersidpatch) | **PATCH** /yes4track/v1/users/{id} | Update part of User
+[**yes4trackV1UsersIdPhotoPut**](UserApi.md#yes4trackv1usersidphotoput) | **PUT** /yes4track/v1/users/{id}/photo | Update User Photo
+[**yes4trackV1UsersIdPut**](UserApi.md#yes4trackv1usersidput) | **PUT** /yes4track/v1/users/{id} | Update User
+[**yes4trackV1UsersPost**](UserApi.md#yes4trackv1userspost) | **POST** /yes4track/v1/users | Add User
+[**yes4trackV1UsersResendcodePost**](UserApi.md#yes4trackv1usersresendcodepost) | **POST** /yes4track/v1/users/resendcode | Resend Code
+[**yes4trackV1UsersSetupangelPost**](UserApi.md#yes4trackv1userssetupangelpost) | **POST** /yes4track/v1/users/setupangel | Setup User default Angel
+[**yes4trackV1UsersSetupsponsorIdPost**](UserApi.md#yes4trackv1userssetupsponsoridpost) | **POST** /yes4track/v1/users/setupsponsor/{id} | Setup User default Sponsor
+[**yes4trackV1UsersSigninPost**](UserApi.md#yes4trackv1userssigninpost) | **POST** /yes4track/v1/users/signin | User SignIn
+[**yes4trackV1UsersSignupPost**](UserApi.md#yes4trackv1userssignuppost) | **POST** /yes4track/v1/users/signup | User SignUp
 
 
 # **getByIdUser**
@@ -40,15 +40,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new UserApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | User id
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getUserApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | User id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    var result = api_instance.getByIdUser(id, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.getByIdUser(id, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling UserApi->getByIdUser: $e\n');
 }
 ```
@@ -89,15 +89,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new UserApi();
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-var postUserAccessTokenRequest = new PostUserAccessTokenRequest(); // PostUserAccessTokenRequest | User to SignIn
+final api = Yes4trackMobileApiClient().getUserApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostUserAccessTokenRequest postUserAccessTokenRequest = ; // PostUserAccessTokenRequest | User to SignIn
 
 try { 
-    var result = api_instance.yes4trackV1UsersAccesstokenPost(xApiKey, xCsrfToken, postUserAccessTokenRequest);
-    print(result);
-} catch (e) {
+    final response = api.yes4trackV1UsersAccesstokenPost(xApiKey, xCsrfToken, postUserAccessTokenRequest);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling UserApi->yes4trackV1UsersAccesstokenPost: $e\n');
 }
 ```
@@ -138,23 +138,23 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new UserApi();
-var name = name_example; // String | 
-var phone = phone_example; // String | 
-var email = email_example; // String | 
-var isActive = true; // bool | 
-var isAdmin = true; // bool | 
-var companyId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-var page = 56; // int | 
-var pageSize = 56; // int | 
-var sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getUserApi();
+final String name = name_example; // String | 
+final String phone = phone_example; // String | 
+final String email = email_example; // String | 
+final bool isActive = true; // bool | 
+final bool isAdmin = true; // bool | 
+final String companyId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final int page = 56; // int | 
+final int pageSize = 56; // int | 
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    var result = api_instance.yes4trackV1UsersGet(name, phone, email, isActive, isAdmin, companyId, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.yes4trackV1UsersGet(name, phone, email, isActive, isAdmin, companyId, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling UserApi->yes4trackV1UsersGet: $e\n');
 }
 ```
@@ -203,15 +203,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new UserApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Id User
-var companyId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Id Company
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getUserApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Id User
+final String companyId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Id Company
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    api_instance.yes4trackV1UsersIdCompaniesCompanyIdDelete(id, companyId, xApiKey, xCsrfToken);
-} catch (e) {
+    api.yes4trackV1UsersIdCompaniesCompanyIdDelete(id, companyId, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling UserApi->yes4trackV1UsersIdCompaniesCompanyIdDelete: $e\n');
 }
 ```
@@ -253,15 +253,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new UserApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Id User
-var companyId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Id Company
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getUserApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Id User
+final String companyId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Id Company
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    api_instance.yes4trackV1UsersIdCompaniesCompanyIdPost(id, companyId, xApiKey, xCsrfToken);
-} catch (e) {
+    api.yes4trackV1UsersIdCompaniesCompanyIdPost(id, companyId, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling UserApi->yes4trackV1UsersIdCompaniesCompanyIdPost: $e\n');
 }
 ```
@@ -303,14 +303,14 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new UserApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | User id
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getUserApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | User id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    api_instance.yes4trackV1UsersIdDelete(id, xApiKey, xCsrfToken);
-} catch (e) {
+    api.yes4trackV1UsersIdDelete(id, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling UserApi->yes4trackV1UsersIdDelete: $e\n');
 }
 ```
@@ -351,15 +351,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new UserApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | User Id
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-var putUserLocationRequest = new PutUserLocationRequest(); // PutUserLocationRequest | GeoLocation and Date
+final api = Yes4trackMobileApiClient().getUserApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | User Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PutUserLocationRequest putUserLocationRequest = ; // PutUserLocationRequest | GeoLocation and Date
 
 try { 
-    api_instance.yes4trackV1UsersIdLocationPut(id, xApiKey, xCsrfToken, putUserLocationRequest);
-} catch (e) {
+    api.yes4trackV1UsersIdLocationPut(id, xApiKey, xCsrfToken, putUserLocationRequest);
+} catch on DioError (e) {
     print('Exception when calling UserApi->yes4trackV1UsersIdLocationPut: $e\n');
 }
 ```
@@ -401,15 +401,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new UserApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | User id
-var operation = [new BuiltList<Operation>()]; // BuiltList<Operation> | Atributes values
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getUserApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | User id
+final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    api_instance.yes4trackV1UsersIdPatch(id, operation, xApiKey, xCsrfToken);
-} catch (e) {
+    api.yes4trackV1UsersIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling UserApi->yes4trackV1UsersIdPatch: $e\n');
 }
 ```
@@ -419,7 +419,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| User id | 
- **operation** | [**BuiltList<Operation>**](Operation.md)| Atributes values | 
+ **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
  **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'faef2128-fe8e-4b93-8e8e-e5b02f15581a']
 
@@ -451,15 +451,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new UserApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | User Id
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-var profilePhotoRequest = new ProfilePhotoRequest(); // ProfilePhotoRequest | User to update
+final api = Yes4trackMobileApiClient().getUserApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | User Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final ProfilePhotoRequest profilePhotoRequest = ; // ProfilePhotoRequest | User to update
 
 try { 
-    api_instance.yes4trackV1UsersIdPhotoPut(id, xApiKey, xCsrfToken, profilePhotoRequest);
-} catch (e) {
+    api.yes4trackV1UsersIdPhotoPut(id, xApiKey, xCsrfToken, profilePhotoRequest);
+} catch on DioError (e) {
     print('Exception when calling UserApi->yes4trackV1UsersIdPhotoPut: $e\n');
 }
 ```
@@ -501,15 +501,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new UserApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | User Id
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-var putUserRequest = new PutUserRequest(); // PutUserRequest | User to update
+final api = Yes4trackMobileApiClient().getUserApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | User Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PutUserRequest putUserRequest = ; // PutUserRequest | User to update
 
 try { 
-    api_instance.yes4trackV1UsersIdPut(id, xApiKey, xCsrfToken, putUserRequest);
-} catch (e) {
+    api.yes4trackV1UsersIdPut(id, xApiKey, xCsrfToken, putUserRequest);
+} catch on DioError (e) {
     print('Exception when calling UserApi->yes4trackV1UsersIdPut: $e\n');
 }
 ```
@@ -551,15 +551,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new UserApi();
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-var postUserRequest = new PostUserRequest(); // PostUserRequest | User to create
+final api = Yes4trackMobileApiClient().getUserApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostUserRequest postUserRequest = ; // PostUserRequest | User to create
 
 try { 
-    var result = api_instance.yes4trackV1UsersPost(xApiKey, xCsrfToken, postUserRequest);
-    print(result);
-} catch (e) {
+    final response = api.yes4trackV1UsersPost(xApiKey, xCsrfToken, postUserRequest);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling UserApi->yes4trackV1UsersPost: $e\n');
 }
 ```
@@ -600,14 +600,14 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new UserApi();
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-var postPostUserResendCodeRequest = new PostPostUserResendCodeRequest(); // PostPostUserResendCodeRequest | Phone and Hash
+final api = Yes4trackMobileApiClient().getUserApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostPostUserResendCodeRequest postPostUserResendCodeRequest = ; // PostPostUserResendCodeRequest | Phone and Hash
 
 try { 
-    api_instance.yes4trackV1UsersResendcodePost(xApiKey, xCsrfToken, postPostUserResendCodeRequest);
-} catch (e) {
+    api.yes4trackV1UsersResendcodePost(xApiKey, xCsrfToken, postPostUserResendCodeRequest);
+} catch on DioError (e) {
     print('Exception when calling UserApi->yes4trackV1UsersResendcodePost: $e\n');
 }
 ```
@@ -648,14 +648,14 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new UserApi();
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-var postUserSetupAngelRequest = new PostUserSetupAngelRequest(); // PostUserSetupAngelRequest | Angel to Setup
+final api = Yes4trackMobileApiClient().getUserApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostUserSetupAngelRequest postUserSetupAngelRequest = ; // PostUserSetupAngelRequest | Angel to Setup
 
 try { 
-    api_instance.yes4trackV1UsersSetupangelPost(xApiKey, xCsrfToken, postUserSetupAngelRequest);
-} catch (e) {
+    api.yes4trackV1UsersSetupangelPost(xApiKey, xCsrfToken, postUserSetupAngelRequest);
+} catch on DioError (e) {
     print('Exception when calling UserApi->yes4trackV1UsersSetupangelPost: $e\n');
 }
 ```
@@ -696,14 +696,14 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new UserApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Sponsor Id
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getUserApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Sponsor Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    api_instance.yes4trackV1UsersSetupsponsorIdPost(id, xApiKey, xCsrfToken);
-} catch (e) {
+    api.yes4trackV1UsersSetupsponsorIdPost(id, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling UserApi->yes4trackV1UsersSetupsponsorIdPost: $e\n');
 }
 ```
@@ -744,15 +744,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new UserApi();
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-var postUserSignInRequest = new PostUserSignInRequest(); // PostUserSignInRequest | User to SignIn
+final api = Yes4trackMobileApiClient().getUserApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostUserSignInRequest postUserSignInRequest = ; // PostUserSignInRequest | User to SignIn
 
 try { 
-    var result = api_instance.yes4trackV1UsersSigninPost(xApiKey, xCsrfToken, postUserSignInRequest);
-    print(result);
-} catch (e) {
+    final response = api.yes4trackV1UsersSigninPost(xApiKey, xCsrfToken, postUserSignInRequest);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling UserApi->yes4trackV1UsersSigninPost: $e\n');
 }
 ```
@@ -793,15 +793,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new UserApi();
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-var postUserRequest = new PostUserRequest(); // PostUserRequest | User to create
+final api = Yes4trackMobileApiClient().getUserApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostUserRequest postUserRequest = ; // PostUserRequest | User to create
 
 try { 
-    var result = api_instance.yes4trackV1UsersSignupPost(xApiKey, xCsrfToken, postUserRequest);
-    print(result);
-} catch (e) {
+    final response = api.yes4trackV1UsersSignupPost(xApiKey, xCsrfToken, postUserRequest);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling UserApi->yes4trackV1UsersSignupPost: $e\n');
 }
 ```

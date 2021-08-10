@@ -8,6 +8,7 @@ import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
+import 'package:yes4track_mobile_api_client/src/api_util.dart';
 import 'package:yes4track_mobile_api_client/src/model/error_details.dart';
 import 'package:yes4track_mobile_api_client/src/model/get_all_experience_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/get_all_paged_experience_response.dart';
@@ -27,8 +28,21 @@ class ExperienceApi {
   const ExperienceApi(this._dio, this._serializers);
 
   /// Get Experience by id
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Experience id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [GetAllExperienceResponse] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<GetAllExperienceResponse>> getByIdExperience({ 
     required String id,
     String? xApiKey,
@@ -59,19 +73,12 @@ class ExperienceApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -86,13 +93,13 @@ class ExperienceApi {
         specifiedType: _responseType,
       ) as GetAllExperienceResponse;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<GetAllExperienceResponse>(
@@ -108,8 +115,21 @@ class ExperienceApi {
   }
 
   /// Get Experience Code by id
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Experience id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [GetByIdExperienceCodeResponse] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<GetByIdExperienceCodeResponse>> getByIdExperienceCode({ 
     required String id,
     String? xApiKey,
@@ -140,19 +160,12 @@ class ExperienceApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -167,13 +180,13 @@ class ExperienceApi {
         specifiedType: _responseType,
       ) as GetByIdExperienceCodeResponse;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<GetByIdExperienceCodeResponse>(
@@ -189,8 +202,27 @@ class ExperienceApi {
   }
 
   /// Get All Experience by filter with pagination
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [companyId] 
+  /// * [name] 
+  /// * [description] 
+  /// * [codeRequired] 
+  /// * [page] 
+  /// * [pageSize] 
+  /// * [sort] - Sorting atributes, sample: id.desc,name.asc
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [GetAllPagedExperienceResponse] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<GetAllPagedExperienceResponse>> yes4trackV1ExperiencesGet({ 
     String? companyId,
     String? name,
@@ -227,20 +259,17 @@ class ExperienceApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
     final _queryParameters = <String, dynamic>{
-      r'companyId': companyId,
-      r'name': name,
-      r'description': description,
-      r'codeRequired': codeRequired,
-      if (page != null) r'page': page,
-      if (pageSize != null) r'pageSize': pageSize,
-      r'sort': sort,
+      r'companyId': encodeQueryParameter(_serializers, companyId, const FullType(String)),
+      r'name': encodeQueryParameter(_serializers, name, const FullType(String)),
+      r'description': encodeQueryParameter(_serializers, description, const FullType(String)),
+      r'codeRequired': encodeQueryParameter(_serializers, codeRequired, const FullType(bool)),
+      if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
+      if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
+      r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
     };
 
     final _response = await _dio.request<Object>(
@@ -261,13 +290,13 @@ class ExperienceApi {
         specifiedType: _responseType,
       ) as GetAllPagedExperienceResponse;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<GetAllPagedExperienceResponse>(
@@ -283,8 +312,21 @@ class ExperienceApi {
   }
 
   /// Activate Experience
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Experience id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<void>> yes4trackV1ExperiencesIdActivatePost({ 
     required String id,
     String? xApiKey,
@@ -315,19 +357,12 @@ class ExperienceApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -337,8 +372,22 @@ class ExperienceApi {
   }
 
   /// Check Experience Code
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Experience id
+  /// * [code] - Experience Code
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [PostCheckExperienceCodeResponse] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<PostCheckExperienceCodeResponse>> yes4trackV1ExperiencesIdCodeCodeCheckPost({ 
     required String id,
     required String code,
@@ -370,19 +419,12 @@ class ExperienceApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -397,13 +439,13 @@ class ExperienceApi {
         specifiedType: _responseType,
       ) as PostCheckExperienceCodeResponse;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<PostCheckExperienceCodeResponse>(
@@ -419,8 +461,21 @@ class ExperienceApi {
   }
 
   /// Delete Experience by Id
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Experience id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<void>> yes4trackV1ExperiencesIdDelete({ 
     required String id,
     String? xApiKey,
@@ -451,19 +506,12 @@ class ExperienceApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -473,8 +521,22 @@ class ExperienceApi {
   }
 
   /// Delete Experience by Id
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Experience id
+  /// * [imageId] - Experience Image id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<void>> yes4trackV1ExperiencesIdImagesImageIdDelete({ 
     required String id,
     required String imageId,
@@ -506,19 +568,12 @@ class ExperienceApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -528,8 +583,21 @@ class ExperienceApi {
   }
 
   /// Add images in Experience
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Experience Id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<String>] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<String>>> yes4trackV1ExperiencesIdImagesPost({ 
     required String id,
     String? xApiKey,
@@ -560,19 +628,12 @@ class ExperienceApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -587,13 +648,13 @@ class ExperienceApi {
         specifiedType: _responseType,
       ) as BuiltList<String>;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<BuiltList<String>>(
@@ -609,8 +670,22 @@ class ExperienceApi {
   }
 
   /// Update part of Experience
+  /// Sample request:                    PATCH /yes4track/v1/Experience/{id}      [          {              \&quot;op\&quot;: \&quot;replace\&quot;,              \&quot;path\&quot;: \&quot;/atribute_name\&quot;,              \&quot;value\&quot;: \&quot;new value\&quot;          }      ]
   ///
-  /// Sample request:                    PATCH /yes4track/v1/Experience/{id}      [          {              \"op\": \"replace\",              \"path\": \"/atribute_name\",              \"value\": \"new value\"          }      ]
+  /// Parameters:
+  /// * [id] - Experience id
+  /// * [operation] - Atributes values
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<void>> yes4trackV1ExperiencesIdPatch({ 
     required String id,
     required BuiltList<Operation> operation,
@@ -642,14 +717,9 @@ class ExperienceApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
+      contentType: 'application/json',
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     dynamic _bodyData;
 
@@ -657,23 +727,21 @@ class ExperienceApi {
       const _type = FullType(BuiltList, [FullType(Operation)]);
       _bodyData = _serializers.serialize(operation, specifiedType: _type);
 
-    } catch(error) {
+    } catch(error, stackTrace) {
       throw DioError(
          requestOptions: _options.compose(
           _dio.options,
           _path,
-          queryParameters: _queryParameters,
         ),
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     final _response = await _dio.request<Object>(
       _path,
       data: _bodyData,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -683,8 +751,22 @@ class ExperienceApi {
   }
 
   /// Update Experience
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Experience Id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [putExperienceRequest] - Experience to update
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<void>> yes4trackV1ExperiencesIdPut({ 
     required String id,
     String? xApiKey,
@@ -716,14 +798,9 @@ class ExperienceApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
+      contentType: 'application/json',
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     dynamic _bodyData;
 
@@ -731,23 +808,21 @@ class ExperienceApi {
       const _type = FullType(PutExperienceRequest);
       _bodyData = putExperienceRequest == null ? null : _serializers.serialize(putExperienceRequest, specifiedType: _type);
 
-    } catch(error) {
+    } catch(error, stackTrace) {
       throw DioError(
          requestOptions: _options.compose(
           _dio.options,
           _path,
-          queryParameters: _queryParameters,
         ),
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     final _response = await _dio.request<Object>(
       _path,
       data: _bodyData,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -757,8 +832,21 @@ class ExperienceApi {
   }
 
   /// Add videos in an Experience
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Experience Id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<String>] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<String>>> yes4trackV1ExperiencesIdVideosPost({ 
     required String id,
     String? xApiKey,
@@ -789,19 +877,12 @@ class ExperienceApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -816,13 +897,13 @@ class ExperienceApi {
         specifiedType: _responseType,
       ) as BuiltList<String>;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<BuiltList<String>>(
@@ -838,8 +919,22 @@ class ExperienceApi {
   }
 
   /// Delete Experience by Id
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Experience id
+  /// * [videoId] - Experience Video id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<void>> yes4trackV1ExperiencesIdVideosVideoIdDelete({ 
     required String id,
     required String videoId,
@@ -871,19 +966,12 @@ class ExperienceApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -893,8 +981,21 @@ class ExperienceApi {
   }
 
   /// Create Experience
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [postExperienceRequest] - Experience to create
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [PostExperienceResponse] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<PostExperienceResponse>> yes4trackV1ExperiencesPost({ 
     String? xApiKey,
     String? xCsrfToken,
@@ -925,14 +1026,9 @@ class ExperienceApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
+      contentType: 'application/json',
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     dynamic _bodyData;
 
@@ -940,23 +1036,21 @@ class ExperienceApi {
       const _type = FullType(PostExperienceRequest);
       _bodyData = postExperienceRequest == null ? null : _serializers.serialize(postExperienceRequest, specifiedType: _type);
 
-    } catch(error) {
+    } catch(error, stackTrace) {
       throw DioError(
          requestOptions: _options.compose(
           _dio.options,
           _path,
-          queryParameters: _queryParameters,
         ),
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     final _response = await _dio.request<Object>(
       _path,
       data: _bodyData,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -971,13 +1065,13 @@ class ExperienceApi {
         specifiedType: _responseType,
       ) as PostExperienceResponse;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<PostExperienceResponse>(

@@ -7,8 +7,10 @@ import 'package:built_value/serializer.dart';
 
 part 'get_by_id_experience_code_response.g.dart';
 
-
-
+/// GetByIdExperienceCodeResponse
+///
+/// Properties:
+/// * [code] 
 abstract class GetByIdExperienceCodeResponse implements Built<GetByIdExperienceCodeResponse, GetByIdExperienceCodeResponseBuilder> {
     @BuiltValueField(wireName: r'code')
     String? get code;

@@ -8,8 +8,18 @@ import 'package:built_value/serializer.dart';
 
 part 'post_track_request.g.dart';
 
-
-
+/// PostTrackRequest
+///
+/// Properties:
+/// * [createdAt] 
+/// * [updatedAt] 
+/// * [userCreated] 
+/// * [userUpdated] 
+/// * [adventureId] 
+/// * [name] 
+/// * [source_] 
+/// * [startDate] 
+/// * [endDate] 
 abstract class PostTrackRequest implements Built<PostTrackRequest, PostTrackRequestBuilder> {
     @BuiltValueField(wireName: r'createdAt')
     DateTime? get createdAt;

@@ -8,6 +8,7 @@ import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
+import 'package:yes4track_mobile_api_client/src/api_util.dart';
 import 'package:yes4track_mobile_api_client/src/model/error_details.dart';
 import 'package:yes4track_mobile_api_client/src/model/get_all_paged_sponsor_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/get_all_sponsor_response.dart';
@@ -25,8 +26,21 @@ class SponsorApi {
   const SponsorApi(this._dio, this._serializers);
 
   /// Get Sponsor by id
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Sponsor id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [GetAllSponsorResponse] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<GetAllSponsorResponse>> getByIdSponsor({ 
     required String id,
     String? xApiKey,
@@ -57,19 +71,12 @@ class SponsorApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -84,13 +91,13 @@ class SponsorApi {
         specifiedType: _responseType,
       ) as GetAllSponsorResponse;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<GetAllSponsorResponse>(
@@ -106,8 +113,29 @@ class SponsorApi {
   }
 
   /// Get All Sponsor by filter with pagination
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [companyId] 
+  /// * [name] 
+  /// * [isActive] 
+  /// * [city] 
+  /// * [state] 
+  /// * [country] 
+  /// * [page] 
+  /// * [pageSize] 
+  /// * [sort] - Sorting atributes, sample: id.desc,name.asc
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [GetAllPagedSponsorResponse] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<GetAllPagedSponsorResponse>> yes4trackV1SponsorsGet({ 
     String? companyId,
     String? name,
@@ -146,22 +174,19 @@ class SponsorApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
     final _queryParameters = <String, dynamic>{
-      r'companyId': companyId,
-      r'name': name,
-      r'isActive': isActive,
-      r'city': city,
-      r'state': state,
-      r'country': country,
-      if (page != null) r'page': page,
-      if (pageSize != null) r'pageSize': pageSize,
-      r'sort': sort,
+      r'companyId': encodeQueryParameter(_serializers, companyId, const FullType(String)),
+      r'name': encodeQueryParameter(_serializers, name, const FullType(String)),
+      r'isActive': encodeQueryParameter(_serializers, isActive, const FullType(bool)),
+      r'city': encodeQueryParameter(_serializers, city, const FullType(String)),
+      r'state': encodeQueryParameter(_serializers, state, const FullType(String)),
+      r'country': encodeQueryParameter(_serializers, country, const FullType(String)),
+      if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
+      if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
+      r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
     };
 
     final _response = await _dio.request<Object>(
@@ -182,13 +207,13 @@ class SponsorApi {
         specifiedType: _responseType,
       ) as GetAllPagedSponsorResponse;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<GetAllPagedSponsorResponse>(
@@ -204,8 +229,21 @@ class SponsorApi {
   }
 
   /// Delete Sponsor by Id
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Sponsor id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<void>> yes4trackV1SponsorsIdDelete({ 
     required String id,
     String? xApiKey,
@@ -236,19 +274,12 @@ class SponsorApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -258,8 +289,22 @@ class SponsorApi {
   }
 
   /// Update part of Sponsor
+  /// Sample request:                    PATCH /yes4track/v1/Sponsor/{id}      [          {              \&quot;op\&quot;: \&quot;replace\&quot;,              \&quot;path\&quot;: \&quot;/atribute_name\&quot;,              \&quot;value\&quot;: \&quot;new value\&quot;          }      ]
   ///
-  /// Sample request:                    PATCH /yes4track/v1/Sponsor/{id}      [          {              \"op\": \"replace\",              \"path\": \"/atribute_name\",              \"value\": \"new value\"          }      ]
+  /// Parameters:
+  /// * [id] - Sponsor id
+  /// * [operation] - Atributes values
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<void>> yes4trackV1SponsorsIdPatch({ 
     required String id,
     required BuiltList<Operation> operation,
@@ -291,14 +336,9 @@ class SponsorApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
+      contentType: 'application/json',
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     dynamic _bodyData;
 
@@ -306,23 +346,21 @@ class SponsorApi {
       const _type = FullType(BuiltList, [FullType(Operation)]);
       _bodyData = _serializers.serialize(operation, specifiedType: _type);
 
-    } catch(error) {
+    } catch(error, stackTrace) {
       throw DioError(
          requestOptions: _options.compose(
           _dio.options,
           _path,
-          queryParameters: _queryParameters,
         ),
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     final _response = await _dio.request<Object>(
       _path,
       data: _bodyData,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -332,8 +370,22 @@ class SponsorApi {
   }
 
   /// Update Sponsor
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Sponsor Id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [putSponsorRequest] - Sponsor to update
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<void>> yes4trackV1SponsorsIdPut({ 
     required String id,
     String? xApiKey,
@@ -365,14 +417,9 @@ class SponsorApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
+      contentType: 'application/json',
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     dynamic _bodyData;
 
@@ -380,23 +427,21 @@ class SponsorApi {
       const _type = FullType(PutSponsorRequest);
       _bodyData = putSponsorRequest == null ? null : _serializers.serialize(putSponsorRequest, specifiedType: _type);
 
-    } catch(error) {
+    } catch(error, stackTrace) {
       throw DioError(
          requestOptions: _options.compose(
           _dio.options,
           _path,
-          queryParameters: _queryParameters,
         ),
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     final _response = await _dio.request<Object>(
       _path,
       data: _bodyData,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -406,8 +451,21 @@ class SponsorApi {
   }
 
   /// Create Sponsor
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [postSponsorRequest] - Sponsor to create
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [PostSponsorResponse] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<PostSponsorResponse>> yes4trackV1SponsorsPost({ 
     String? xApiKey,
     String? xCsrfToken,
@@ -438,14 +496,9 @@ class SponsorApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
+      contentType: 'application/json',
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     dynamic _bodyData;
 
@@ -453,23 +506,21 @@ class SponsorApi {
       const _type = FullType(PostSponsorRequest);
       _bodyData = postSponsorRequest == null ? null : _serializers.serialize(postSponsorRequest, specifiedType: _type);
 
-    } catch(error) {
+    } catch(error, stackTrace) {
       throw DioError(
          requestOptions: _options.compose(
           _dio.options,
           _path,
-          queryParameters: _queryParameters,
         ),
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     final _response = await _dio.request<Object>(
       _path,
       data: _bodyData,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -484,13 +535,13 @@ class SponsorApi {
         specifiedType: _responseType,
       ) as PostSponsorResponse;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<PostSponsorResponse>(

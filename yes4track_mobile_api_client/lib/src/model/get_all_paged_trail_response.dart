@@ -9,8 +9,16 @@ import 'package:built_value/serializer.dart';
 
 part 'get_all_paged_trail_response.g.dart';
 
-
-
+/// GetAllPagedTrailResponse
+///
+/// Properties:
+/// * [currentPage] 
+/// * [pageCount] 
+/// * [pageSize] 
+/// * [rowCount] 
+/// * [firstRowOnPage] 
+/// * [lastRowOnPage] 
+/// * [results] 
 abstract class GetAllPagedTrailResponse implements Built<GetAllPagedTrailResponse, GetAllPagedTrailResponseBuilder> {
     @BuiltValueField(wireName: r'currentPage')
     int? get currentPage;

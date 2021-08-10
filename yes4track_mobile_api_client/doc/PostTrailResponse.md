@@ -18,14 +18,14 @@ Name | Type | Description | Notes
 **endDate** | [**DateTime**](DateTime.md) |  | [optional] 
 **type** | [**TrailType**](TrailType.md) |  | [optional] 
 **id** | **String** |  | [optional] 
-**sponsors** | **BuiltList<String>** |  | [optional] 
-**angels** | **BuiltList<String>** |  | [optional] 
+**sponsors** | **BuiltList&lt;String&gt;** |  | [optional] 
+**angels** | **BuiltList&lt;String&gt;** |  | [optional] 
 **adventureName** | **String** |  | [optional] 
 **adventureLevel** | [**LevelType**](LevelType.md) |  | [optional] 
 **adventureType** | [**AdventureType**](AdventureType.md) |  | [optional] 
 **photoUrl** | **String** |  | [optional] 
 **adventureDescription** | **String** |  | [optional] 
-**waypoints** | [**BuiltList<Waypoint>**](Waypoint.md) |  | [optional] 
+**waypoints** | [**BuiltList&lt;Waypoint&gt;**](Waypoint.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -9,12 +9,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getByIdSponsor**](SponsorApi.md#getbyidsponsor) | **get** /yes4track/v1/sponsors/{id} | Get Sponsor by id
-[**yes4trackV1SponsorsGet**](SponsorApi.md#yes4trackv1sponsorsget) | **get** /yes4track/v1/sponsors | Get All Sponsor by filter with pagination
-[**yes4trackV1SponsorsIdDelete**](SponsorApi.md#yes4trackv1sponsorsiddelete) | **delete** /yes4track/v1/sponsors/{id} | Delete Sponsor by Id
-[**yes4trackV1SponsorsIdPatch**](SponsorApi.md#yes4trackv1sponsorsidpatch) | **patch** /yes4track/v1/sponsors/{id} | Update part of Sponsor
-[**yes4trackV1SponsorsIdPut**](SponsorApi.md#yes4trackv1sponsorsidput) | **put** /yes4track/v1/sponsors/{id} | Update Sponsor
-[**yes4trackV1SponsorsPost**](SponsorApi.md#yes4trackv1sponsorspost) | **post** /yes4track/v1/sponsors | Create Sponsor
+[**getByIdSponsor**](SponsorApi.md#getbyidsponsor) | **GET** /yes4track/v1/sponsors/{id} | Get Sponsor by id
+[**yes4trackV1SponsorsGet**](SponsorApi.md#yes4trackv1sponsorsget) | **GET** /yes4track/v1/sponsors | Get All Sponsor by filter with pagination
+[**yes4trackV1SponsorsIdDelete**](SponsorApi.md#yes4trackv1sponsorsiddelete) | **DELETE** /yes4track/v1/sponsors/{id} | Delete Sponsor by Id
+[**yes4trackV1SponsorsIdPatch**](SponsorApi.md#yes4trackv1sponsorsidpatch) | **PATCH** /yes4track/v1/sponsors/{id} | Update part of Sponsor
+[**yes4trackV1SponsorsIdPut**](SponsorApi.md#yes4trackv1sponsorsidput) | **PUT** /yes4track/v1/sponsors/{id} | Update Sponsor
+[**yes4trackV1SponsorsPost**](SponsorApi.md#yes4trackv1sponsorspost) | **POST** /yes4track/v1/sponsors | Create Sponsor
 
 
 # **getByIdSponsor**
@@ -30,15 +30,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new SponsorApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Sponsor id
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getSponsorApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Sponsor id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    var result = api_instance.getByIdSponsor(id, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.getByIdSponsor(id, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling SponsorApi->getByIdSponsor: $e\n');
 }
 ```
@@ -79,23 +79,23 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new SponsorApi();
-var companyId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-var name = name_example; // String | 
-var isActive = true; // bool | 
-var city = city_example; // String | 
-var state = state_example; // String | 
-var country = country_example; // String | 
-var page = 56; // int | 
-var pageSize = 56; // int | 
-var sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getSponsorApi();
+final String companyId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String name = name_example; // String | 
+final bool isActive = true; // bool | 
+final String city = city_example; // String | 
+final String state = state_example; // String | 
+final String country = country_example; // String | 
+final int page = 56; // int | 
+final int pageSize = 56; // int | 
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    var result = api_instance.yes4trackV1SponsorsGet(companyId, name, isActive, city, state, country, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.yes4trackV1SponsorsGet(companyId, name, isActive, city, state, country, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling SponsorApi->yes4trackV1SponsorsGet: $e\n');
 }
 ```
@@ -144,14 +144,14 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new SponsorApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Sponsor id
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getSponsorApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Sponsor id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    api_instance.yes4trackV1SponsorsIdDelete(id, xApiKey, xCsrfToken);
-} catch (e) {
+    api.yes4trackV1SponsorsIdDelete(id, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling SponsorApi->yes4trackV1SponsorsIdDelete: $e\n');
 }
 ```
@@ -194,15 +194,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new SponsorApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Sponsor id
-var operation = [new BuiltList<Operation>()]; // BuiltList<Operation> | Atributes values
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getSponsorApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Sponsor id
+final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    api_instance.yes4trackV1SponsorsIdPatch(id, operation, xApiKey, xCsrfToken);
-} catch (e) {
+    api.yes4trackV1SponsorsIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling SponsorApi->yes4trackV1SponsorsIdPatch: $e\n');
 }
 ```
@@ -212,7 +212,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Sponsor id | 
- **operation** | [**BuiltList<Operation>**](Operation.md)| Atributes values | 
+ **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
  **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'dcbb2156-296d-4b50-a19a-4f466353d54d']
 
@@ -244,15 +244,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new SponsorApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Sponsor Id
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-var putSponsorRequest = new PutSponsorRequest(); // PutSponsorRequest | Sponsor to update
+final api = Yes4trackMobileApiClient().getSponsorApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Sponsor Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PutSponsorRequest putSponsorRequest = ; // PutSponsorRequest | Sponsor to update
 
 try { 
-    api_instance.yes4trackV1SponsorsIdPut(id, xApiKey, xCsrfToken, putSponsorRequest);
-} catch (e) {
+    api.yes4trackV1SponsorsIdPut(id, xApiKey, xCsrfToken, putSponsorRequest);
+} catch on DioError (e) {
     print('Exception when calling SponsorApi->yes4trackV1SponsorsIdPut: $e\n');
 }
 ```
@@ -294,15 +294,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new SponsorApi();
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-var postSponsorRequest = new PostSponsorRequest(); // PostSponsorRequest | Sponsor to create
+final api = Yes4trackMobileApiClient().getSponsorApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostSponsorRequest postSponsorRequest = ; // PostSponsorRequest | Sponsor to create
 
 try { 
-    var result = api_instance.yes4trackV1SponsorsPost(xApiKey, xCsrfToken, postSponsorRequest);
-    print(result);
-} catch (e) {
+    final response = api.yes4trackV1SponsorsPost(xApiKey, xCsrfToken, postSponsorRequest);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling SponsorApi->yes4trackV1SponsorsPost: $e\n');
 }
 ```

@@ -11,8 +11,19 @@ import 'package:built_value/serializer.dart';
 
 part 'get_all_notification_response.g.dart';
 
-
-
+/// GetAllNotificationResponse
+///
+/// Properties:
+/// * [createdAt] 
+/// * [updatedAt] 
+/// * [userCreated] 
+/// * [userUpdated] 
+/// * [message] 
+/// * [type] 
+/// * [channels] 
+/// * [attributes] 
+/// * [user] 
+/// * [id] 
 abstract class GetAllNotificationResponse implements Built<GetAllNotificationResponse, GetAllNotificationResponseBuilder> {
     @BuiltValueField(wireName: r'createdAt')
     DateTime? get createdAt;

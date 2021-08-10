@@ -21,11 +21,11 @@ Name | Type | Description | Notes
 **type** | [**AdventureType**](AdventureType.md) |  | [optional] 
 **id** | **String** |  | [optional] 
 **likes** | **int** |  | [optional] 
-**imagesUrl** | [**BuiltList<ImageUrl>**](ImageUrl.md) |  | [optional] 
-**videosUrl** | [**BuiltList<VideoUrl>**](VideoUrl.md) |  | [optional] 
+**imagesUrl** | [**BuiltList&lt;ImageUrl&gt;**](ImageUrl.md) |  | [optional] 
+**videosUrl** | [**BuiltList&lt;VideoUrl&gt;**](VideoUrl.md) |  | [optional] 
 **codeRequired** | **bool** |  | [optional] 
 **isActive** | **bool** |  | [optional] 
-**experiences** | **BuiltList<String>** |  | [optional] 
+**experiences** | **BuiltList&lt;String&gt;** |  | [optional] 
 **address** | [**Address**](Address.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -10,8 +10,27 @@ import 'package:built_value/serializer.dart';
 
 part 'user.g.dart';
 
-
-
+/// User
+///
+/// Properties:
+/// * [id] 
+/// * [createdAt] 
+/// * [updatedAt] 
+/// * [userCreated] 
+/// * [userUpdated] 
+/// * [version] 
+/// * [name] 
+/// * [phone] 
+/// * [email] 
+/// * [photoUrl] 
+/// * [isActive] 
+/// * [isAdmin] 
+/// * [isSuperAdmin] 
+/// * [isAngel] 
+/// * [defaultAngel] 
+/// * [defaultSponsor] 
+/// * [companies] 
+/// * [location] 
 abstract class User implements Built<User, UserBuilder> {
     @BuiltValueField(wireName: r'id')
     String? get id;

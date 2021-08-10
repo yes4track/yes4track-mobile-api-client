@@ -7,8 +7,12 @@ import 'package:built_value/serializer.dart';
 
 part 'sponsor_contact.g.dart';
 
-
-
+/// SponsorContact
+///
+/// Properties:
+/// * [name] 
+/// * [phone] 
+/// * [email] 
 abstract class SponsorContact implements Built<SponsorContact, SponsorContactBuilder> {
     @BuiltValueField(wireName: r'name')
     String? get name;

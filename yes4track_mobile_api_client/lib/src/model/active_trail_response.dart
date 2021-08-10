@@ -11,8 +11,13 @@ import 'package:built_value/serializer.dart';
 
 part 'active_trail_response.g.dart';
 
-
-
+/// ActiveTrailResponse
+///
+/// Properties:
+/// * [trail] 
+/// * [user] 
+/// * [adventure] 
+/// * [status] 
 abstract class ActiveTrailResponse implements Built<ActiveTrailResponse, ActiveTrailResponseBuilder> {
     @BuiltValueField(wireName: r'trail')
     TrailResponse? get trail;

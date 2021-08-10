@@ -10,8 +10,23 @@ import 'package:built_value/serializer.dart';
 
 part 'get_all_experience_response.g.dart';
 
-
-
+/// GetAllExperienceResponse
+///
+/// Properties:
+/// * [createdAt] 
+/// * [updatedAt] 
+/// * [userCreated] 
+/// * [userUpdated] 
+/// * [companyId] 
+/// * [name] 
+/// * [description] 
+/// * [effectiveStartDate] 
+/// * [effectiveEndDate] 
+/// * [id] 
+/// * [imagesUrl] 
+/// * [videosUrl] 
+/// * [codeRequired] 
+/// * [isActive] 
 abstract class GetAllExperienceResponse implements Built<GetAllExperienceResponse, GetAllExperienceResponseBuilder> {
     @BuiltValueField(wireName: r'createdAt')
     DateTime? get createdAt;

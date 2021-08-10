@@ -8,8 +8,22 @@ import 'package:built_value/serializer.dart';
 
 part 'put_user_request.g.dart';
 
-
-
+/// PutUserRequest
+///
+/// Properties:
+/// * [createdAt] 
+/// * [updatedAt] 
+/// * [userCreated] 
+/// * [userUpdated] 
+/// * [name] 
+/// * [phone] 
+/// * [email] 
+/// * [id] 
+/// * [profilePhoto] 
+/// * [isActive] 
+/// * [isAdmin] 
+/// * [isSuperAdmin] 
+/// * [isAngel] 
 abstract class PutUserRequest implements Built<PutUserRequest, PutUserRequestBuilder> {
     @BuiltValueField(wireName: r'createdAt')
     DateTime? get createdAt;

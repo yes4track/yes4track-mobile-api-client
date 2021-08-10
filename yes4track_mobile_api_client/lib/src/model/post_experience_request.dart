@@ -7,8 +7,19 @@ import 'package:built_value/serializer.dart';
 
 part 'post_experience_request.g.dart';
 
-
-
+/// PostExperienceRequest
+///
+/// Properties:
+/// * [createdAt] 
+/// * [updatedAt] 
+/// * [userCreated] 
+/// * [userUpdated] 
+/// * [companyId] 
+/// * [name] 
+/// * [description] 
+/// * [effectiveStartDate] 
+/// * [effectiveEndDate] 
+/// * [codeRequired] 
 abstract class PostExperienceRequest implements Built<PostExperienceRequest, PostExperienceRequestBuilder> {
     @BuiltValueField(wireName: r'createdAt')
     DateTime? get createdAt;

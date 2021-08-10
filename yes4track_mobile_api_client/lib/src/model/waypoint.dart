@@ -9,8 +9,13 @@ import 'package:built_value/serializer.dart';
 
 part 'waypoint.g.dart';
 
-
-
+/// Waypoint
+///
+/// Properties:
+/// * [name] 
+/// * [description] 
+/// * [type] 
+/// * [location] 
 abstract class Waypoint implements Built<Waypoint, WaypointBuilder> {
     @BuiltValueField(wireName: r'name')
     String? get name;

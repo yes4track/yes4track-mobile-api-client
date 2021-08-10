@@ -9,8 +9,14 @@ import 'package:built_value/serializer.dart';
 
 part 'track_geo_location_dto.g.dart';
 
-
-
+/// TrackGeoLocationDto
+///
+/// Properties:
+/// * [experiences] 
+/// * [trackId] 
+/// * [adventureId] 
+/// * [lines] 
+/// * [waypoints] 
 abstract class TrackGeoLocationDto implements Built<TrackGeoLocationDto, TrackGeoLocationDtoBuilder> {
     @BuiltValueField(wireName: r'experiences')
     BuiltList<String>? get experiences;

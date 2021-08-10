@@ -8,8 +8,18 @@ import 'package:built_value/serializer.dart';
 
 part 'video_url.g.dart';
 
-
-
+/// VideoUrl
+///
+/// Properties:
+/// * [id] 
+/// * [createdAt] 
+/// * [updatedAt] 
+/// * [userCreated] 
+/// * [userUpdated] 
+/// * [version] 
+/// * [fileName] 
+/// * [url] 
+/// * [sequence] 
 abstract class VideoUrl implements Built<VideoUrl, VideoUrlBuilder> {
     @BuiltValueField(wireName: r'id')
     String? get id;

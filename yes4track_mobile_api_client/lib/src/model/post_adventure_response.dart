@@ -9,8 +9,23 @@ import 'package:built_value/serializer.dart';
 
 part 'post_adventure_response.g.dart';
 
-
-
+/// PostAdventureResponse
+///
+/// Properties:
+/// * [createdAt] 
+/// * [updatedAt] 
+/// * [userCreated] 
+/// * [userUpdated] 
+/// * [companyId] 
+/// * [name] 
+/// * [description] 
+/// * [level] 
+/// * [effectiveStartDate] 
+/// * [effectiveEndDate] 
+/// * [type] 
+/// * [id] 
+/// * [likes] 
+/// * [codeRequired] 
 abstract class PostAdventureResponse implements Built<PostAdventureResponse, PostAdventureResponseBuilder> {
     @BuiltValueField(wireName: r'createdAt')
     DateTime? get createdAt;

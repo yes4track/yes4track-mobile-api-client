@@ -7,8 +7,14 @@ import 'package:built_value/serializer.dart';
 
 part 'put_track_statistic_request.g.dart';
 
-
-
+/// PutTrackStatisticRequest
+///
+/// Properties:
+/// * [totalTime] 
+/// * [totalMovingTime] 
+/// * [totalDistance] 
+/// * [elevationGain] 
+/// * [speed] 
 abstract class PutTrackStatisticRequest implements Built<PutTrackStatisticRequest, PutTrackStatisticRequestBuilder> {
     @BuiltValueField(wireName: r'totalTime')
     double? get totalTime;

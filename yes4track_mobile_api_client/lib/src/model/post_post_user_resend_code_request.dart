@@ -7,8 +7,11 @@ import 'package:built_value/serializer.dart';
 
 part 'post_post_user_resend_code_request.g.dart';
 
-
-
+/// PostPostUserResendCodeRequest
+///
+/// Properties:
+/// * [phone] 
+/// * [hash] 
 abstract class PostPostUserResendCodeRequest implements Built<PostPostUserResendCodeRequest, PostPostUserResendCodeRequestBuilder> {
     @BuiltValueField(wireName: r'phone')
     String? get phone;

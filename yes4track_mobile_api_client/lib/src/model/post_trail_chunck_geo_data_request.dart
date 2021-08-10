@@ -9,8 +9,10 @@ import 'package:built_value/serializer.dart';
 
 part 'post_trail_chunck_geo_data_request.g.dart';
 
-
-
+/// PostTrailChunckGeoDataRequest
+///
+/// Properties:
+/// * [lines] 
 abstract class PostTrailChunckGeoDataRequest implements Built<PostTrailChunckGeoDataRequest, PostTrailChunckGeoDataRequestBuilder> {
     @BuiltValueField(wireName: r'lines')
     BuiltList<TrailGeoDataRequest>? get lines;

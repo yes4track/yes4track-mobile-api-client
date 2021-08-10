@@ -7,8 +7,17 @@ import 'package:built_value/serializer.dart';
 
 part 'post_adventure_likes_response.g.dart';
 
-
-
+/// PostAdventureLikesResponse
+///
+/// Properties:
+/// * [createdAt] 
+/// * [updatedAt] 
+/// * [userCreated] 
+/// * [userUpdated] 
+/// * [id] 
+/// * [adventureId] 
+/// * [userName] 
+/// * [userPhoto] 
 abstract class PostAdventureLikesResponse implements Built<PostAdventureLikesResponse, PostAdventureLikesResponseBuilder> {
     @BuiltValueField(wireName: r'createdAt')
     DateTime? get createdAt;

@@ -8,6 +8,7 @@ import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
+import 'package:yes4track_mobile_api_client/src/api_util.dart';
 import 'package:yes4track_mobile_api_client/src/model/adventure_type.dart';
 import 'package:yes4track_mobile_api_client/src/model/error_details.dart';
 import 'package:yes4track_mobile_api_client/src/model/get_all_adventure_likes_response.dart';
@@ -33,8 +34,21 @@ class AdventureApi {
   const AdventureApi(this._dio, this._serializers);
 
   /// Get Adventure by id
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Adventure id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [GetAllAdventureResponse] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<GetAllAdventureResponse>> getByIdAdventure({ 
     required String id,
     String? xApiKey,
@@ -65,19 +79,12 @@ class AdventureApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -92,13 +99,13 @@ class AdventureApi {
         specifiedType: _responseType,
       ) as GetAllAdventureResponse;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<GetAllAdventureResponse>(
@@ -114,8 +121,21 @@ class AdventureApi {
   }
 
   /// Get Adventure Code by id
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Adventure id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [GetByIdAdventureCodeResponse] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<GetByIdAdventureCodeResponse>> getByIdAdventureCode({ 
     required String id,
     String? xApiKey,
@@ -146,19 +166,12 @@ class AdventureApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -173,13 +186,13 @@ class AdventureApi {
         specifiedType: _responseType,
       ) as GetByIdAdventureCodeResponse;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<GetByIdAdventureCodeResponse>(
@@ -195,8 +208,22 @@ class AdventureApi {
   }
 
   /// Get Adventure Like by id
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Adventure Id
+  /// * [likeId] - Adventure Like Id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [GetAllAdventureLikesResponse] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<GetAllAdventureLikesResponse>> getByIdAdventureLikes({ 
     required String id,
     required String likeId,
@@ -228,19 +255,12 @@ class AdventureApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -255,13 +275,13 @@ class AdventureApi {
         specifiedType: _responseType,
       ) as GetAllAdventureLikesResponse;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<GetAllAdventureLikesResponse>(
@@ -277,8 +297,21 @@ class AdventureApi {
   }
 
   /// Get User Liked Adventure
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Adventure Id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [GetUserLikedAdventureResponse] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<GetUserLikedAdventureResponse>> getUserLikedAdventure({ 
     required String id,
     String? xApiKey,
@@ -309,19 +342,12 @@ class AdventureApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -336,13 +362,13 @@ class AdventureApi {
         specifiedType: _responseType,
       ) as GetUserLikedAdventureResponse;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<GetUserLikedAdventureResponse>(
@@ -358,8 +384,30 @@ class AdventureApi {
   }
 
   /// Get All Adventure by filter with pagination
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [companyId] 
+  /// * [name] 
+  /// * [description] 
+  /// * [level] 
+  /// * [codeRequired] 
+  /// * [isActive] 
+  /// * [type] 
+  /// * [page] 
+  /// * [pageSize] 
+  /// * [sort] - Sorting atributes, sample: id.desc,name.asc
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [GetAllPagedAdventureResponse] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<GetAllPagedAdventureResponse>> yes4trackV1AdventuresGet({ 
     String? companyId,
     String? name,
@@ -399,23 +447,20 @@ class AdventureApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
     final _queryParameters = <String, dynamic>{
-      r'companyId': companyId,
-      r'name': name,
-      r'description': description,
-      if (level != null) r'level': level,
-      r'codeRequired': codeRequired,
-      r'isActive': isActive,
-      if (type != null) r'type': type,
-      if (page != null) r'page': page,
-      if (pageSize != null) r'pageSize': pageSize,
-      r'sort': sort,
+      r'companyId': encodeQueryParameter(_serializers, companyId, const FullType(String)),
+      r'name': encodeQueryParameter(_serializers, name, const FullType(String)),
+      r'description': encodeQueryParameter(_serializers, description, const FullType(String)),
+      if (level != null) r'level': encodeQueryParameter(_serializers, level, const FullType(LevelType)),
+      r'codeRequired': encodeQueryParameter(_serializers, codeRequired, const FullType(bool)),
+      r'isActive': encodeQueryParameter(_serializers, isActive, const FullType(bool)),
+      if (type != null) r'type': encodeQueryParameter(_serializers, type, const FullType(AdventureType)),
+      if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
+      if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
+      r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
     };
 
     final _response = await _dio.request<Object>(
@@ -436,13 +481,13 @@ class AdventureApi {
         specifiedType: _responseType,
       ) as GetAllPagedAdventureResponse;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<GetAllPagedAdventureResponse>(
@@ -458,8 +503,22 @@ class AdventureApi {
   }
 
   /// Activate Adventure
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Adventure id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
+  @Deprecated('This operation has been deprecated')
   Future<Response<void>> yes4trackV1AdventuresIdActivatePost({ 
     required String id,
     String? xApiKey,
@@ -490,19 +549,12 @@ class AdventureApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -512,8 +564,22 @@ class AdventureApi {
   }
 
   /// Check Adventure Code
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Adventure id
+  /// * [code] - Adventure Code
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [PostCheckAdventureCodeResponse] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<PostCheckAdventureCodeResponse>> yes4trackV1AdventuresIdCodeCodeCheckPost({ 
     required String id,
     required String code,
@@ -545,19 +611,12 @@ class AdventureApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -572,13 +631,13 @@ class AdventureApi {
         specifiedType: _responseType,
       ) as PostCheckAdventureCodeResponse;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<PostCheckAdventureCodeResponse>(
@@ -594,8 +653,21 @@ class AdventureApi {
   }
 
   /// Delete Adventure by Id
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Adventure id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<void>> yes4trackV1AdventuresIdDelete({ 
     required String id,
     String? xApiKey,
@@ -626,19 +698,12 @@ class AdventureApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -648,8 +713,22 @@ class AdventureApi {
   }
 
   /// Delete Adventure Experience
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Id Adventure
+  /// * [experienceId] - Id Experience
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<void>> yes4trackV1AdventuresIdExperiencesExperienceIdDelete({ 
     required String id,
     required String experienceId,
@@ -681,19 +760,12 @@ class AdventureApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -703,8 +775,22 @@ class AdventureApi {
   }
 
   /// Add Adventure Experience
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Id Adventure
+  /// * [experienceId] - Id Experience
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<void>> yes4trackV1AdventuresIdExperiencesExperienceIdPost({ 
     required String id,
     required String experienceId,
@@ -736,19 +822,12 @@ class AdventureApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -758,8 +837,22 @@ class AdventureApi {
   }
 
   /// Delete Adventure by Id
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Adventure id
+  /// * [imageId] - Adventure Image id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<void>> yes4trackV1AdventuresIdImagesImageIdDelete({ 
     required String id,
     required String imageId,
@@ -791,19 +884,12 @@ class AdventureApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -813,8 +899,21 @@ class AdventureApi {
   }
 
   /// Add images in adventure
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Adventure Id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<String>] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<String>>> yes4trackV1AdventuresIdImagesPost({ 
     required String id,
     String? xApiKey,
@@ -845,19 +944,12 @@ class AdventureApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -872,13 +964,13 @@ class AdventureApi {
         specifiedType: _responseType,
       ) as BuiltList<String>;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<BuiltList<String>>(
@@ -894,8 +986,21 @@ class AdventureApi {
   }
 
   /// Delete Adventure Likes by Id
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Adventure Id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<void>> yes4trackV1AdventuresIdLikesDelete({ 
     required String id,
     String? xApiKey,
@@ -926,19 +1031,12 @@ class AdventureApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -948,8 +1046,24 @@ class AdventureApi {
   }
 
   /// Get All Adventure Likes by filter with pagination
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Adventure Id
+  /// * [page] 
+  /// * [pageSize] 
+  /// * [sort] - Sorting atributes, sample: id.desc,name.asc
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [GetAllPagedAdventureLikesResponse] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<GetAllPagedAdventureLikesResponse>> yes4trackV1AdventuresIdLikesGet({ 
     required String id,
     int? page,
@@ -983,16 +1097,13 @@ class AdventureApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
 
     final _queryParameters = <String, dynamic>{
-      if (page != null) r'page': page,
-      if (pageSize != null) r'pageSize': pageSize,
-      r'sort': sort,
+      if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
+      if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
+      r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
     };
 
     final _response = await _dio.request<Object>(
@@ -1013,13 +1124,13 @@ class AdventureApi {
         specifiedType: _responseType,
       ) as GetAllPagedAdventureLikesResponse;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<GetAllPagedAdventureLikesResponse>(
@@ -1035,8 +1146,21 @@ class AdventureApi {
   }
 
   /// Create Adventure Likes
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Adventure Id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [PostAdventureLikesResponse] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<PostAdventureLikesResponse>> yes4trackV1AdventuresIdLikesPost({ 
     required String id,
     String? xApiKey,
@@ -1067,19 +1191,12 @@ class AdventureApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -1094,13 +1211,13 @@ class AdventureApi {
         specifiedType: _responseType,
       ) as PostAdventureLikesResponse;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<PostAdventureLikesResponse>(
@@ -1116,8 +1233,22 @@ class AdventureApi {
   }
 
   /// Update part of Adventure
+  /// Sample request:                    PATCH /yes4track/v1/adventures/{id}      [          {              \&quot;op\&quot;: \&quot;replace\&quot;,              \&quot;path\&quot;: \&quot;/atribute_name\&quot;,              \&quot;value\&quot;: \&quot;new value\&quot;          }      ]
   ///
-  /// Sample request:                    PATCH /yes4track/v1/adventures/{id}      [          {              \"op\": \"replace\",              \"path\": \"/atribute_name\",              \"value\": \"new value\"          }      ]
+  /// Parameters:
+  /// * [id] - Adventure id
+  /// * [operation] - Atributes values
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<void>> yes4trackV1AdventuresIdPatch({ 
     required String id,
     required BuiltList<Operation> operation,
@@ -1149,14 +1280,9 @@ class AdventureApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
+      contentType: 'application/json',
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     dynamic _bodyData;
 
@@ -1164,23 +1290,21 @@ class AdventureApi {
       const _type = FullType(BuiltList, [FullType(Operation)]);
       _bodyData = _serializers.serialize(operation, specifiedType: _type);
 
-    } catch(error) {
+    } catch(error, stackTrace) {
       throw DioError(
          requestOptions: _options.compose(
           _dio.options,
           _path,
-          queryParameters: _queryParameters,
         ),
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     final _response = await _dio.request<Object>(
       _path,
       data: _bodyData,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -1190,8 +1314,22 @@ class AdventureApi {
   }
 
   /// Update Adventure
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Adventure Id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [putAdventureRequest] - Adventure to update
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<void>> yes4trackV1AdventuresIdPut({ 
     required String id,
     String? xApiKey,
@@ -1223,14 +1361,9 @@ class AdventureApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
+      contentType: 'application/json',
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     dynamic _bodyData;
 
@@ -1238,23 +1371,21 @@ class AdventureApi {
       const _type = FullType(PutAdventureRequest);
       _bodyData = putAdventureRequest == null ? null : _serializers.serialize(putAdventureRequest, specifiedType: _type);
 
-    } catch(error) {
+    } catch(error, stackTrace) {
       throw DioError(
          requestOptions: _options.compose(
           _dio.options,
           _path,
-          queryParameters: _queryParameters,
         ),
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     final _response = await _dio.request<Object>(
       _path,
       data: _bodyData,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -1264,8 +1395,21 @@ class AdventureApi {
   }
 
   /// Add videos in adventure
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Adventure Id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<String>] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<String>>> yes4trackV1AdventuresIdVideosPost({ 
     required String id,
     String? xApiKey,
@@ -1296,19 +1440,12 @@ class AdventureApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -1323,13 +1460,13 @@ class AdventureApi {
         specifiedType: _responseType,
       ) as BuiltList<String>;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<BuiltList<String>>(
@@ -1345,8 +1482,22 @@ class AdventureApi {
   }
 
   /// Delete Adventure by Id
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [id] - Adventure id
+  /// * [videoId] - Adventure Video id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<void>> yes4trackV1AdventuresIdVideosVideoIdDelete({ 
     required String id,
     required String videoId,
@@ -1378,19 +1529,12 @@ class AdventureApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -1400,8 +1544,21 @@ class AdventureApi {
   }
 
   /// Create Adventure
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [postAdventureRequest] - Adventure to create
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [PostAdventureResponse] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<PostAdventureResponse>> yes4trackV1AdventuresPost({ 
     String? xApiKey,
     String? xCsrfToken,
@@ -1432,14 +1589,9 @@ class AdventureApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
+      contentType: 'application/json',
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     dynamic _bodyData;
 
@@ -1447,23 +1599,21 @@ class AdventureApi {
       const _type = FullType(PostAdventureRequest);
       _bodyData = postAdventureRequest == null ? null : _serializers.serialize(postAdventureRequest, specifiedType: _type);
 
-    } catch(error) {
+    } catch(error, stackTrace) {
       throw DioError(
          requestOptions: _options.compose(
           _dio.options,
           _path,
-          queryParameters: _queryParameters,
         ),
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     final _response = await _dio.request<Object>(
       _path,
       data: _bodyData,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -1478,13 +1628,13 @@ class AdventureApi {
         specifiedType: _responseType,
       ) as PostAdventureResponse;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<PostAdventureResponse>(

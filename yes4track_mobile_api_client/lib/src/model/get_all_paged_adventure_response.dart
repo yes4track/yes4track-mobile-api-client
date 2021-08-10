@@ -9,8 +9,16 @@ import 'package:built_value/serializer.dart';
 
 part 'get_all_paged_adventure_response.g.dart';
 
-
-
+/// GetAllPagedAdventureResponse
+///
+/// Properties:
+/// * [currentPage] 
+/// * [pageCount] 
+/// * [pageSize] 
+/// * [rowCount] 
+/// * [firstRowOnPage] 
+/// * [lastRowOnPage] 
+/// * [results] 
 abstract class GetAllPagedAdventureResponse implements Built<GetAllPagedAdventureResponse, GetAllPagedAdventureResponseBuilder> {
     @BuiltValueField(wireName: r'currentPage')
     int? get currentPage;

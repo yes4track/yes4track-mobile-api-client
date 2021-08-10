@@ -7,8 +7,14 @@ import 'package:built_value/serializer.dart';
 
 part 'post_trail_geo_data_response.g.dart';
 
-
-
+/// PostTrailGeoDataResponse
+///
+/// Properties:
+/// * [id] 
+/// * [trailId] 
+/// * [fileName] 
+/// * [extension_] 
+/// * [data] 
 abstract class PostTrailGeoDataResponse implements Built<PostTrailGeoDataResponse, PostTrailGeoDataResponseBuilder> {
     @BuiltValueField(wireName: r'id')
     String? get id;

@@ -7,8 +7,10 @@ import 'package:built_value/serializer.dart';
 
 part 'post_user_sign_in_response.g.dart';
 
-
-
+/// PostUserSignInResponse
+///
+/// Properties:
+/// * [message] 
 abstract class PostUserSignInResponse implements Built<PostUserSignInResponse, PostUserSignInResponseBuilder> {
     @BuiltValueField(wireName: r'message')
     String? get message;

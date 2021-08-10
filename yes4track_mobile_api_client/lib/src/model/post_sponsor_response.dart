@@ -10,8 +10,21 @@ import 'package:built_value/serializer.dart';
 
 part 'post_sponsor_response.g.dart';
 
-
-
+/// PostSponsorResponse
+///
+/// Properties:
+/// * [createdAt] 
+/// * [updatedAt] 
+/// * [userCreated] 
+/// * [userUpdated] 
+/// * [companyId] 
+/// * [name] 
+/// * [description] 
+/// * [contacts] 
+/// * [address] 
+/// * [id] 
+/// * [photoUrl] 
+/// * [isActive] 
 abstract class PostSponsorResponse implements Built<PostSponsorResponse, PostSponsorResponseBuilder> {
     @BuiltValueField(wireName: r'createdAt')
     DateTime? get createdAt;

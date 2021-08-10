@@ -8,8 +8,15 @@ import 'package:built_value/serializer.dart';
 
 part 'user_response.g.dart';
 
-
-
+/// UserResponse
+///
+/// Properties:
+/// * [id] 
+/// * [name] 
+/// * [phone] 
+/// * [email] 
+/// * [photoUrl] 
+/// * [location] 
 abstract class UserResponse implements Built<UserResponse, UserResponseBuilder> {
     @BuiltValueField(wireName: r'id')
     String? get id;

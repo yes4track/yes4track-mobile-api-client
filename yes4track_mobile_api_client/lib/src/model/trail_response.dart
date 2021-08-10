@@ -10,8 +10,18 @@ import 'package:built_value/serializer.dart';
 
 part 'trail_response.g.dart';
 
-
-
+/// TrailResponse
+///
+/// Properties:
+/// * [id] 
+/// * [adventureId] 
+/// * [name] 
+/// * [startDate] 
+/// * [statistic] 
+/// * [adventureName] 
+/// * [adventureLevel] 
+/// * [adventureType] 
+/// * [photoUrl] 
 abstract class TrailResponse implements Built<TrailResponse, TrailResponseBuilder> {
     @BuiltValueField(wireName: r'id')
     String? get id;

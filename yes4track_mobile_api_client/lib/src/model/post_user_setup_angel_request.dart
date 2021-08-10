@@ -7,8 +7,16 @@ import 'package:built_value/serializer.dart';
 
 part 'post_user_setup_angel_request.g.dart';
 
-
-
+/// PostUserSetupAngelRequest
+///
+/// Properties:
+/// * [createdAt] 
+/// * [updatedAt] 
+/// * [userCreated] 
+/// * [userUpdated] 
+/// * [name] 
+/// * [phone] 
+/// * [email] 
 abstract class PostUserSetupAngelRequest implements Built<PostUserSetupAngelRequest, PostUserSetupAngelRequestBuilder> {
     @BuiltValueField(wireName: r'createdAt')
     DateTime? get createdAt;

@@ -9,8 +9,16 @@ import 'package:built_value/serializer.dart';
 
 part 'get_all_paged_user_response.g.dart';
 
-
-
+/// GetAllPagedUserResponse
+///
+/// Properties:
+/// * [currentPage] 
+/// * [pageCount] 
+/// * [pageSize] 
+/// * [rowCount] 
+/// * [firstRowOnPage] 
+/// * [lastRowOnPage] 
+/// * [results] 
 abstract class GetAllPagedUserResponse implements Built<GetAllPagedUserResponse, GetAllPagedUserResponseBuilder> {
     @BuiltValueField(wireName: r'currentPage')
     int? get currentPage;

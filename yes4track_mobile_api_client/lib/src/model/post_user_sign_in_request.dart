@@ -7,8 +7,11 @@ import 'package:built_value/serializer.dart';
 
 part 'post_user_sign_in_request.g.dart';
 
-
-
+/// PostUserSignInRequest
+///
+/// Properties:
+/// * [phone] 
+/// * [hash] 
 abstract class PostUserSignInRequest implements Built<PostUserSignInRequest, PostUserSignInRequestBuilder> {
     @BuiltValueField(wireName: r'phone')
     String? get phone;

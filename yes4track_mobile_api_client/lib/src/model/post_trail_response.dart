@@ -12,8 +12,27 @@ import 'package:built_value/serializer.dart';
 
 part 'post_trail_response.g.dart';
 
-
-
+/// PostTrailResponse
+///
+/// Properties:
+/// * [createdAt] 
+/// * [updatedAt] 
+/// * [userCreated] 
+/// * [userUpdated] 
+/// * [adventureId] 
+/// * [name] 
+/// * [startDate] 
+/// * [endDate] 
+/// * [type] 
+/// * [id] 
+/// * [sponsors] 
+/// * [angels] 
+/// * [adventureName] 
+/// * [adventureLevel] 
+/// * [adventureType] 
+/// * [photoUrl] 
+/// * [adventureDescription] 
+/// * [waypoints] 
 abstract class PostTrailResponse implements Built<PostTrailResponse, PostTrailResponseBuilder> {
     @BuiltValueField(wireName: r'createdAt')
     DateTime? get createdAt;

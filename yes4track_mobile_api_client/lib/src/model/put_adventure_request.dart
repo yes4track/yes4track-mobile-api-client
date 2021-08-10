@@ -9,8 +9,23 @@ import 'package:built_value/serializer.dart';
 
 part 'put_adventure_request.g.dart';
 
-
-
+/// PutAdventureRequest
+///
+/// Properties:
+/// * [createdAt] 
+/// * [updatedAt] 
+/// * [userCreated] 
+/// * [userUpdated] 
+/// * [companyId] 
+/// * [name] 
+/// * [description] 
+/// * [level] 
+/// * [effectiveStartDate] 
+/// * [effectiveEndDate] 
+/// * [type] 
+/// * [id] 
+/// * [codeRequired] 
+/// * [isActive] 
 abstract class PutAdventureRequest implements Built<PutAdventureRequest, PutAdventureRequestBuilder> {
     @BuiltValueField(wireName: r'createdAt')
     DateTime? get createdAt;

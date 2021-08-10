@@ -9,8 +9,16 @@ import 'package:built_value/serializer.dart';
 
 part 'get_all_paged_experience_response.g.dart';
 
-
-
+/// GetAllPagedExperienceResponse
+///
+/// Properties:
+/// * [currentPage] 
+/// * [pageCount] 
+/// * [pageSize] 
+/// * [rowCount] 
+/// * [firstRowOnPage] 
+/// * [lastRowOnPage] 
+/// * [results] 
 abstract class GetAllPagedExperienceResponse implements Built<GetAllPagedExperienceResponse, GetAllPagedExperienceResponseBuilder> {
     @BuiltValueField(wireName: r'currentPage')
     int? get currentPage;

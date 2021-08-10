@@ -7,8 +7,24 @@ import 'package:built_value/serializer.dart';
 
 part 'post_user_response.g.dart';
 
-
-
+/// PostUserResponse
+///
+/// Properties:
+/// * [createdAt] 
+/// * [updatedAt] 
+/// * [userCreated] 
+/// * [userUpdated] 
+/// * [name] 
+/// * [phone] 
+/// * [email] 
+/// * [id] 
+/// * [photoUrl] 
+/// * [isActive] 
+/// * [isAdmin] 
+/// * [isSuperAdmin] 
+/// * [isAngel] 
+/// * [defaultAngel] 
+/// * [defaultSponsor] 
 abstract class PostUserResponse implements Built<PostUserResponse, PostUserResponseBuilder> {
     @BuiltValueField(wireName: r'createdAt')
     DateTime? get createdAt;

@@ -9,12 +9,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getByIdNotification**](NotificationApi.md#getbyidnotification) | **get** /yes4track/v1/notifications/{id} | Get Notification by id
-[**yes4trackV1NotificationsGet**](NotificationApi.md#yes4trackv1notificationsget) | **get** /yes4track/v1/notifications | Get All Notification by filter with pagination
-[**yes4trackV1NotificationsIdDelete**](NotificationApi.md#yes4trackv1notificationsiddelete) | **delete** /yes4track/v1/notifications/{id} | Delete Notification by Id
-[**yes4trackV1NotificationsIdPatch**](NotificationApi.md#yes4trackv1notificationsidpatch) | **patch** /yes4track/v1/notifications/{id} | Update part of Notification
-[**yes4trackV1NotificationsIdPut**](NotificationApi.md#yes4trackv1notificationsidput) | **put** /yes4track/v1/notifications/{id} | Update Notification
-[**yes4trackV1NotificationsPost**](NotificationApi.md#yes4trackv1notificationspost) | **post** /yes4track/v1/notifications | Create Notification
+[**getByIdNotification**](NotificationApi.md#getbyidnotification) | **GET** /yes4track/v1/notifications/{id} | Get Notification by id
+[**yes4trackV1NotificationsGet**](NotificationApi.md#yes4trackv1notificationsget) | **GET** /yes4track/v1/notifications | Get All Notification by filter with pagination
+[**yes4trackV1NotificationsIdDelete**](NotificationApi.md#yes4trackv1notificationsiddelete) | **DELETE** /yes4track/v1/notifications/{id} | Delete Notification by Id
+[**yes4trackV1NotificationsIdPatch**](NotificationApi.md#yes4trackv1notificationsidpatch) | **PATCH** /yes4track/v1/notifications/{id} | Update part of Notification
+[**yes4trackV1NotificationsIdPut**](NotificationApi.md#yes4trackv1notificationsidput) | **PUT** /yes4track/v1/notifications/{id} | Update Notification
+[**yes4trackV1NotificationsPost**](NotificationApi.md#yes4trackv1notificationspost) | **POST** /yes4track/v1/notifications | Create Notification
 
 
 # **getByIdNotification**
@@ -30,15 +30,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new NotificationApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification id
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getNotificationApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    var result = api_instance.getByIdNotification(id, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.getByIdNotification(id, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling NotificationApi->getByIdNotification: $e\n');
 }
 ```
@@ -79,23 +79,23 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new NotificationApi();
-var message = message_example; // String | 
-var type = ; // NotificationType | 
-var userPhone = userPhone_example; // String | 
-var userName = userName_example; // String | 
-var userEmail = userEmail_example; // String | 
-var userId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-var page = 56; // int | 
-var pageSize = 56; // int | 
-var sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getNotificationApi();
+final String message = message_example; // String | 
+final NotificationType type = ; // NotificationType | 
+final String userPhone = userPhone_example; // String | 
+final String userName = userName_example; // String | 
+final String userEmail = userEmail_example; // String | 
+final String userId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final int page = 56; // int | 
+final int pageSize = 56; // int | 
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    var result = api_instance.yes4trackV1NotificationsGet(message, type, userPhone, userName, userEmail, userId, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.yes4trackV1NotificationsGet(message, type, userPhone, userName, userEmail, userId, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling NotificationApi->yes4trackV1NotificationsGet: $e\n');
 }
 ```
@@ -144,14 +144,14 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new NotificationApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification id
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getNotificationApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    api_instance.yes4trackV1NotificationsIdDelete(id, xApiKey, xCsrfToken);
-} catch (e) {
+    api.yes4trackV1NotificationsIdDelete(id, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling NotificationApi->yes4trackV1NotificationsIdDelete: $e\n');
 }
 ```
@@ -194,15 +194,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new NotificationApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification id
-var operation = [new BuiltList<Operation>()]; // BuiltList<Operation> | Atributes values
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getNotificationApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification id
+final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    api_instance.yes4trackV1NotificationsIdPatch(id, operation, xApiKey, xCsrfToken);
-} catch (e) {
+    api.yes4trackV1NotificationsIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling NotificationApi->yes4trackV1NotificationsIdPatch: $e\n');
 }
 ```
@@ -212,7 +212,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Notification id | 
- **operation** | [**BuiltList<Operation>**](Operation.md)| Atributes values | 
+ **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
  **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '37403bf5-ae91-44f2-94ce-e49d090254a4']
 
@@ -244,15 +244,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new NotificationApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification Id
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-var putNotificationRequest = new PutNotificationRequest(); // PutNotificationRequest | Notification to update
+final api = Yes4trackMobileApiClient().getNotificationApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PutNotificationRequest putNotificationRequest = ; // PutNotificationRequest | Notification to update
 
 try { 
-    api_instance.yes4trackV1NotificationsIdPut(id, xApiKey, xCsrfToken, putNotificationRequest);
-} catch (e) {
+    api.yes4trackV1NotificationsIdPut(id, xApiKey, xCsrfToken, putNotificationRequest);
+} catch on DioError (e) {
     print('Exception when calling NotificationApi->yes4trackV1NotificationsIdPut: $e\n');
 }
 ```
@@ -294,15 +294,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new NotificationApi();
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-var postNotificationRequest = new PostNotificationRequest(); // PostNotificationRequest | Notification to create
+final api = Yes4trackMobileApiClient().getNotificationApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostNotificationRequest postNotificationRequest = ; // PostNotificationRequest | Notification to create
 
 try { 
-    var result = api_instance.yes4trackV1NotificationsPost(xApiKey, xCsrfToken, postNotificationRequest);
-    print(result);
-} catch (e) {
+    final response = api.yes4trackV1NotificationsPost(xApiKey, xCsrfToken, postNotificationRequest);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling NotificationApi->yes4trackV1NotificationsPost: $e\n');
 }
 ```

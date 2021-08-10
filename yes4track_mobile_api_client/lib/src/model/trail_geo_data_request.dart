@@ -7,8 +7,13 @@ import 'package:built_value/serializer.dart';
 
 part 'trail_geo_data_request.g.dart';
 
-
-
+/// TrailGeoDataRequest
+///
+/// Properties:
+/// * [latitude] 
+/// * [longitude] 
+/// * [elevation] 
+/// * [date] 
 abstract class TrailGeoDataRequest implements Built<TrailGeoDataRequest, TrailGeoDataRequestBuilder> {
     @BuiltValueField(wireName: r'latitude')
     double? get latitude;

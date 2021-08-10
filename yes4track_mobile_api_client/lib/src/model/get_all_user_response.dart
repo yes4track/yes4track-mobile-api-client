@@ -8,8 +8,25 @@ import 'package:built_value/serializer.dart';
 
 part 'get_all_user_response.g.dart';
 
-
-
+/// GetAllUserResponse
+///
+/// Properties:
+/// * [createdAt] 
+/// * [updatedAt] 
+/// * [userCreated] 
+/// * [userUpdated] 
+/// * [name] 
+/// * [phone] 
+/// * [email] 
+/// * [id] 
+/// * [photoUrl] 
+/// * [isActive] 
+/// * [isAdmin] 
+/// * [isSuperAdmin] 
+/// * [isAngel] 
+/// * [defaultAngel] 
+/// * [defaultSponsor] 
+/// * [companies] 
 abstract class GetAllUserResponse implements Built<GetAllUserResponse, GetAllUserResponseBuilder> {
     @BuiltValueField(wireName: r'createdAt')
     DateTime? get createdAt;

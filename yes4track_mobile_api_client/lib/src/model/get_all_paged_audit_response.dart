@@ -9,8 +9,16 @@ import 'package:built_value/serializer.dart';
 
 part 'get_all_paged_audit_response.g.dart';
 
-
-
+/// GetAllPagedAuditResponse
+///
+/// Properties:
+/// * [currentPage] 
+/// * [pageCount] 
+/// * [pageSize] 
+/// * [rowCount] 
+/// * [firstRowOnPage] 
+/// * [lastRowOnPage] 
+/// * [results] 
 abstract class GetAllPagedAuditResponse implements Built<GetAllPagedAuditResponse, GetAllPagedAuditResponseBuilder> {
     @BuiltValueField(wireName: r'currentPage')
     int? get currentPage;

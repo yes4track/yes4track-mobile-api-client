@@ -9,26 +9,26 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getByIdAdventure**](AdventureApi.md#getbyidadventure) | **get** /yes4track/v1/adventures/{id} | Get Adventure by id
-[**getByIdAdventureCode**](AdventureApi.md#getbyidadventurecode) | **get** /yes4track/v1/adventures/{id}/code | Get Adventure Code by id
-[**getByIdAdventureLikes**](AdventureApi.md#getbyidadventurelikes) | **get** /yes4track/v1/adventures/{id}/likes/{likeId} | Get Adventure Like by id
-[**getUserLikedAdventure**](AdventureApi.md#getuserlikedadventure) | **get** /yes4track/v1/adventures/{id}/likes/userLiked | Get User Liked Adventure
-[**yes4trackV1AdventuresGet**](AdventureApi.md#yes4trackv1adventuresget) | **get** /yes4track/v1/adventures | Get All Adventure by filter with pagination
-[**yes4trackV1AdventuresIdActivatePost**](AdventureApi.md#yes4trackv1adventuresidactivatepost) | **post** /yes4track/v1/adventures/{id}/activate | Activate Adventure
-[**yes4trackV1AdventuresIdCodeCodeCheckPost**](AdventureApi.md#yes4trackv1adventuresidcodecodecheckpost) | **post** /yes4track/v1/adventures/{id}/code/{code}/check | Check Adventure Code
-[**yes4trackV1AdventuresIdDelete**](AdventureApi.md#yes4trackv1adventuresiddelete) | **delete** /yes4track/v1/adventures/{id} | Delete Adventure by Id
-[**yes4trackV1AdventuresIdExperiencesExperienceIdDelete**](AdventureApi.md#yes4trackv1adventuresidexperiencesexperienceiddelete) | **delete** /yes4track/v1/adventures/{id}/experiences/{experienceId} | Delete Adventure Experience
-[**yes4trackV1AdventuresIdExperiencesExperienceIdPost**](AdventureApi.md#yes4trackv1adventuresidexperiencesexperienceidpost) | **post** /yes4track/v1/adventures/{id}/experiences/{experienceId} | Add Adventure Experience
-[**yes4trackV1AdventuresIdImagesImageIdDelete**](AdventureApi.md#yes4trackv1adventuresidimagesimageiddelete) | **delete** /yes4track/v1/adventures/{id}/images/{imageId} | Delete Adventure by Id
-[**yes4trackV1AdventuresIdImagesPost**](AdventureApi.md#yes4trackv1adventuresidimagespost) | **post** /yes4track/v1/adventures/{id}/images | Add images in adventure
-[**yes4trackV1AdventuresIdLikesDelete**](AdventureApi.md#yes4trackv1adventuresidlikesdelete) | **delete** /yes4track/v1/adventures/{id}/likes | Delete Adventure Likes by Id
-[**yes4trackV1AdventuresIdLikesGet**](AdventureApi.md#yes4trackv1adventuresidlikesget) | **get** /yes4track/v1/adventures/{id}/likes | Get All Adventure Likes by filter with pagination
-[**yes4trackV1AdventuresIdLikesPost**](AdventureApi.md#yes4trackv1adventuresidlikespost) | **post** /yes4track/v1/adventures/{id}/likes | Create Adventure Likes
-[**yes4trackV1AdventuresIdPatch**](AdventureApi.md#yes4trackv1adventuresidpatch) | **patch** /yes4track/v1/adventures/{id} | Update part of Adventure
-[**yes4trackV1AdventuresIdPut**](AdventureApi.md#yes4trackv1adventuresidput) | **put** /yes4track/v1/adventures/{id} | Update Adventure
-[**yes4trackV1AdventuresIdVideosPost**](AdventureApi.md#yes4trackv1adventuresidvideospost) | **post** /yes4track/v1/adventures/{id}/videos | Add videos in adventure
-[**yes4trackV1AdventuresIdVideosVideoIdDelete**](AdventureApi.md#yes4trackv1adventuresidvideosvideoiddelete) | **delete** /yes4track/v1/adventures/{id}/videos/{videoId} | Delete Adventure by Id
-[**yes4trackV1AdventuresPost**](AdventureApi.md#yes4trackv1adventurespost) | **post** /yes4track/v1/adventures | Create Adventure
+[**getByIdAdventure**](AdventureApi.md#getbyidadventure) | **GET** /yes4track/v1/adventures/{id} | Get Adventure by id
+[**getByIdAdventureCode**](AdventureApi.md#getbyidadventurecode) | **GET** /yes4track/v1/adventures/{id}/code | Get Adventure Code by id
+[**getByIdAdventureLikes**](AdventureApi.md#getbyidadventurelikes) | **GET** /yes4track/v1/adventures/{id}/likes/{likeId} | Get Adventure Like by id
+[**getUserLikedAdventure**](AdventureApi.md#getuserlikedadventure) | **GET** /yes4track/v1/adventures/{id}/likes/userLiked | Get User Liked Adventure
+[**yes4trackV1AdventuresGet**](AdventureApi.md#yes4trackv1adventuresget) | **GET** /yes4track/v1/adventures | Get All Adventure by filter with pagination
+[**yes4trackV1AdventuresIdActivatePost**](AdventureApi.md#yes4trackv1adventuresidactivatepost) | **POST** /yes4track/v1/adventures/{id}/activate | Activate Adventure
+[**yes4trackV1AdventuresIdCodeCodeCheckPost**](AdventureApi.md#yes4trackv1adventuresidcodecodecheckpost) | **POST** /yes4track/v1/adventures/{id}/code/{code}/check | Check Adventure Code
+[**yes4trackV1AdventuresIdDelete**](AdventureApi.md#yes4trackv1adventuresiddelete) | **DELETE** /yes4track/v1/adventures/{id} | Delete Adventure by Id
+[**yes4trackV1AdventuresIdExperiencesExperienceIdDelete**](AdventureApi.md#yes4trackv1adventuresidexperiencesexperienceiddelete) | **DELETE** /yes4track/v1/adventures/{id}/experiences/{experienceId} | Delete Adventure Experience
+[**yes4trackV1AdventuresIdExperiencesExperienceIdPost**](AdventureApi.md#yes4trackv1adventuresidexperiencesexperienceidpost) | **POST** /yes4track/v1/adventures/{id}/experiences/{experienceId} | Add Adventure Experience
+[**yes4trackV1AdventuresIdImagesImageIdDelete**](AdventureApi.md#yes4trackv1adventuresidimagesimageiddelete) | **DELETE** /yes4track/v1/adventures/{id}/images/{imageId} | Delete Adventure by Id
+[**yes4trackV1AdventuresIdImagesPost**](AdventureApi.md#yes4trackv1adventuresidimagespost) | **POST** /yes4track/v1/adventures/{id}/images | Add images in adventure
+[**yes4trackV1AdventuresIdLikesDelete**](AdventureApi.md#yes4trackv1adventuresidlikesdelete) | **DELETE** /yes4track/v1/adventures/{id}/likes | Delete Adventure Likes by Id
+[**yes4trackV1AdventuresIdLikesGet**](AdventureApi.md#yes4trackv1adventuresidlikesget) | **GET** /yes4track/v1/adventures/{id}/likes | Get All Adventure Likes by filter with pagination
+[**yes4trackV1AdventuresIdLikesPost**](AdventureApi.md#yes4trackv1adventuresidlikespost) | **POST** /yes4track/v1/adventures/{id}/likes | Create Adventure Likes
+[**yes4trackV1AdventuresIdPatch**](AdventureApi.md#yes4trackv1adventuresidpatch) | **PATCH** /yes4track/v1/adventures/{id} | Update part of Adventure
+[**yes4trackV1AdventuresIdPut**](AdventureApi.md#yes4trackv1adventuresidput) | **PUT** /yes4track/v1/adventures/{id} | Update Adventure
+[**yes4trackV1AdventuresIdVideosPost**](AdventureApi.md#yes4trackv1adventuresidvideospost) | **POST** /yes4track/v1/adventures/{id}/videos | Add videos in adventure
+[**yes4trackV1AdventuresIdVideosVideoIdDelete**](AdventureApi.md#yes4trackv1adventuresidvideosvideoiddelete) | **DELETE** /yes4track/v1/adventures/{id}/videos/{videoId} | Delete Adventure by Id
+[**yes4trackV1AdventuresPost**](AdventureApi.md#yes4trackv1adventurespost) | **POST** /yes4track/v1/adventures | Create Adventure
 
 
 # **getByIdAdventure**
@@ -44,15 +44,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdventureApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure id
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getAdventureApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    var result = api_instance.getByIdAdventure(id, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.getByIdAdventure(id, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AdventureApi->getByIdAdventure: $e\n');
 }
 ```
@@ -93,15 +93,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdventureApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure id
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getAdventureApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    var result = api_instance.getByIdAdventureCode(id, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.getByIdAdventureCode(id, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AdventureApi->getByIdAdventureCode: $e\n');
 }
 ```
@@ -142,16 +142,16 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdventureApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure Id
-var likeId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure Like Id
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getAdventureApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure Id
+final String likeId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure Like Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    var result = api_instance.getByIdAdventureLikes(id, likeId, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.getByIdAdventureLikes(id, likeId, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AdventureApi->getByIdAdventureLikes: $e\n');
 }
 ```
@@ -193,15 +193,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdventureApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure Id
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getAdventureApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    var result = api_instance.getUserLikedAdventure(id, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.getUserLikedAdventure(id, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AdventureApi->getUserLikedAdventure: $e\n');
 }
 ```
@@ -242,24 +242,24 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdventureApi();
-var companyId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-var name = name_example; // String | 
-var description = description_example; // String | 
-var level = ; // LevelType | 
-var codeRequired = true; // bool | 
-var isActive = true; // bool | 
-var type = ; // AdventureType | 
-var page = 56; // int | 
-var pageSize = 56; // int | 
-var sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getAdventureApi();
+final String companyId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String name = name_example; // String | 
+final String description = description_example; // String | 
+final LevelType level = ; // LevelType | 
+final bool codeRequired = true; // bool | 
+final bool isActive = true; // bool | 
+final AdventureType type = ; // AdventureType | 
+final int page = 56; // int | 
+final int pageSize = 56; // int | 
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    var result = api_instance.yes4trackV1AdventuresGet(companyId, name, description, level, codeRequired, isActive, type, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.yes4trackV1AdventuresGet(companyId, name, description, level, codeRequired, isActive, type, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AdventureApi->yes4trackV1AdventuresGet: $e\n');
 }
 ```
@@ -309,14 +309,14 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdventureApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure id
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getAdventureApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    api_instance.yes4trackV1AdventuresIdActivatePost(id, xApiKey, xCsrfToken);
-} catch (e) {
+    api.yes4trackV1AdventuresIdActivatePost(id, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling AdventureApi->yes4trackV1AdventuresIdActivatePost: $e\n');
 }
 ```
@@ -357,16 +357,16 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdventureApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure id
-var code = code_example; // String | Adventure Code
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getAdventureApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure id
+final String code = code_example; // String | Adventure Code
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    var result = api_instance.yes4trackV1AdventuresIdCodeCodeCheckPost(id, code, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.yes4trackV1AdventuresIdCodeCodeCheckPost(id, code, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AdventureApi->yes4trackV1AdventuresIdCodeCodeCheckPost: $e\n');
 }
 ```
@@ -408,14 +408,14 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdventureApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure id
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getAdventureApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    api_instance.yes4trackV1AdventuresIdDelete(id, xApiKey, xCsrfToken);
-} catch (e) {
+    api.yes4trackV1AdventuresIdDelete(id, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling AdventureApi->yes4trackV1AdventuresIdDelete: $e\n');
 }
 ```
@@ -456,15 +456,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdventureApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Id Adventure
-var experienceId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Id Experience
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getAdventureApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Id Adventure
+final String experienceId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Id Experience
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    api_instance.yes4trackV1AdventuresIdExperiencesExperienceIdDelete(id, experienceId, xApiKey, xCsrfToken);
-} catch (e) {
+    api.yes4trackV1AdventuresIdExperiencesExperienceIdDelete(id, experienceId, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling AdventureApi->yes4trackV1AdventuresIdExperiencesExperienceIdDelete: $e\n');
 }
 ```
@@ -506,15 +506,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdventureApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Id Adventure
-var experienceId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Id Experience
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getAdventureApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Id Adventure
+final String experienceId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Id Experience
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    api_instance.yes4trackV1AdventuresIdExperiencesExperienceIdPost(id, experienceId, xApiKey, xCsrfToken);
-} catch (e) {
+    api.yes4trackV1AdventuresIdExperiencesExperienceIdPost(id, experienceId, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling AdventureApi->yes4trackV1AdventuresIdExperiencesExperienceIdPost: $e\n');
 }
 ```
@@ -556,15 +556,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdventureApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure id
-var imageId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure Image id
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getAdventureApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure id
+final String imageId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure Image id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    api_instance.yes4trackV1AdventuresIdImagesImageIdDelete(id, imageId, xApiKey, xCsrfToken);
-} catch (e) {
+    api.yes4trackV1AdventuresIdImagesImageIdDelete(id, imageId, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling AdventureApi->yes4trackV1AdventuresIdImagesImageIdDelete: $e\n');
 }
 ```
@@ -606,15 +606,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdventureApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure Id
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getAdventureApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    var result = api_instance.yes4trackV1AdventuresIdImagesPost(id, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.yes4trackV1AdventuresIdImagesPost(id, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AdventureApi->yes4trackV1AdventuresIdImagesPost: $e\n');
 }
 ```
@@ -629,7 +629,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**BuiltList<String>**
+**BuiltList&lt;String&gt;**
 
 ### Authorization
 
@@ -655,14 +655,14 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdventureApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure Id
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getAdventureApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    api_instance.yes4trackV1AdventuresIdLikesDelete(id, xApiKey, xCsrfToken);
-} catch (e) {
+    api.yes4trackV1AdventuresIdLikesDelete(id, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling AdventureApi->yes4trackV1AdventuresIdLikesDelete: $e\n');
 }
 ```
@@ -703,18 +703,18 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdventureApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure Id
-var page = 56; // int | 
-var pageSize = 56; // int | 
-var sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getAdventureApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure Id
+final int page = 56; // int | 
+final int pageSize = 56; // int | 
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    var result = api_instance.yes4trackV1AdventuresIdLikesGet(id, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.yes4trackV1AdventuresIdLikesGet(id, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AdventureApi->yes4trackV1AdventuresIdLikesGet: $e\n');
 }
 ```
@@ -758,15 +758,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdventureApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure Id
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getAdventureApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    var result = api_instance.yes4trackV1AdventuresIdLikesPost(id, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.yes4trackV1AdventuresIdLikesPost(id, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AdventureApi->yes4trackV1AdventuresIdLikesPost: $e\n');
 }
 ```
@@ -809,15 +809,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdventureApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure id
-var operation = [new BuiltList<Operation>()]; // BuiltList<Operation> | Atributes values
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getAdventureApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure id
+final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    api_instance.yes4trackV1AdventuresIdPatch(id, operation, xApiKey, xCsrfToken);
-} catch (e) {
+    api.yes4trackV1AdventuresIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling AdventureApi->yes4trackV1AdventuresIdPatch: $e\n');
 }
 ```
@@ -827,7 +827,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Adventure id | 
- **operation** | [**BuiltList<Operation>**](Operation.md)| Atributes values | 
+ **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
  **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ecd21121-f035-4515-b36d-454232476ff4']
 
@@ -859,15 +859,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdventureApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure Id
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-var putAdventureRequest = new PutAdventureRequest(); // PutAdventureRequest | Adventure to update
+final api = Yes4trackMobileApiClient().getAdventureApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PutAdventureRequest putAdventureRequest = ; // PutAdventureRequest | Adventure to update
 
 try { 
-    api_instance.yes4trackV1AdventuresIdPut(id, xApiKey, xCsrfToken, putAdventureRequest);
-} catch (e) {
+    api.yes4trackV1AdventuresIdPut(id, xApiKey, xCsrfToken, putAdventureRequest);
+} catch on DioError (e) {
     print('Exception when calling AdventureApi->yes4trackV1AdventuresIdPut: $e\n');
 }
 ```
@@ -909,15 +909,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdventureApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure Id
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getAdventureApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    var result = api_instance.yes4trackV1AdventuresIdVideosPost(id, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.yes4trackV1AdventuresIdVideosPost(id, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AdventureApi->yes4trackV1AdventuresIdVideosPost: $e\n');
 }
 ```
@@ -932,7 +932,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**BuiltList<String>**
+**BuiltList&lt;String&gt;**
 
 ### Authorization
 
@@ -958,15 +958,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdventureApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure id
-var videoId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure Video id
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getAdventureApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure id
+final String videoId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure Video id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    api_instance.yes4trackV1AdventuresIdVideosVideoIdDelete(id, videoId, xApiKey, xCsrfToken);
-} catch (e) {
+    api.yes4trackV1AdventuresIdVideosVideoIdDelete(id, videoId, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling AdventureApi->yes4trackV1AdventuresIdVideosVideoIdDelete: $e\n');
 }
 ```
@@ -1008,15 +1008,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdventureApi();
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-var postAdventureRequest = new PostAdventureRequest(); // PostAdventureRequest | Adventure to create
+final api = Yes4trackMobileApiClient().getAdventureApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostAdventureRequest postAdventureRequest = ; // PostAdventureRequest | Adventure to create
 
 try { 
-    var result = api_instance.yes4trackV1AdventuresPost(xApiKey, xCsrfToken, postAdventureRequest);
-    print(result);
-} catch (e) {
+    final response = api.yes4trackV1AdventuresPost(xApiKey, xCsrfToken, postAdventureRequest);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AdventureApi->yes4trackV1AdventuresPost: $e\n');
 }
 ```

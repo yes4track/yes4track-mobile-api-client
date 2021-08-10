@@ -10,8 +10,21 @@ import 'package:built_value/serializer.dart';
 
 part 'get_all_track_response.g.dart';
 
-
-
+/// GetAllTrackResponse
+///
+/// Properties:
+/// * [createdAt] 
+/// * [updatedAt] 
+/// * [userCreated] 
+/// * [userUpdated] 
+/// * [adventureId] 
+/// * [name] 
+/// * [source_] 
+/// * [startDate] 
+/// * [endDate] 
+/// * [id] 
+/// * [statistic] 
+/// * [mapCoordinate] 
 abstract class GetAllTrackResponse implements Built<GetAllTrackResponse, GetAllTrackResponseBuilder> {
     @BuiltValueField(wireName: r'createdAt')
     DateTime? get createdAt;

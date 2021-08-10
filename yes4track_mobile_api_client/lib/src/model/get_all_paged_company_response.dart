@@ -9,8 +9,16 @@ import 'package:built_value/serializer.dart';
 
 part 'get_all_paged_company_response.g.dart';
 
-
-
+/// GetAllPagedCompanyResponse
+///
+/// Properties:
+/// * [currentPage] 
+/// * [pageCount] 
+/// * [pageSize] 
+/// * [rowCount] 
+/// * [firstRowOnPage] 
+/// * [lastRowOnPage] 
+/// * [results] 
 abstract class GetAllPagedCompanyResponse implements Built<GetAllPagedCompanyResponse, GetAllPagedCompanyResponseBuilder> {
     @BuiltValueField(wireName: r'currentPage')
     int? get currentPage;

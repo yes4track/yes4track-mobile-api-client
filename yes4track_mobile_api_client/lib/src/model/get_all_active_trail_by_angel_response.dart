@@ -10,8 +10,11 @@ import 'package:built_value/serializer.dart';
 
 part 'get_all_active_trail_by_angel_response.g.dart';
 
-
-
+/// GetAllActiveTrailByAngelResponse
+///
+/// Properties:
+/// * [trails] 
+/// * [mapCoordinate] 
 abstract class GetAllActiveTrailByAngelResponse implements Built<GetAllActiveTrailByAngelResponse, GetAllActiveTrailByAngelResponseBuilder> {
     @BuiltValueField(wireName: r'trails')
     BuiltList<ActiveTrailResponse>? get trails;

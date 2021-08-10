@@ -9,8 +9,14 @@ import 'package:built_value/serializer.dart';
 
 part 'operation.g.dart';
 
-
-
+/// Operation
+///
+/// Properties:
+/// * [operationType] 
+/// * [path] 
+/// * [op] 
+/// * [from] 
+/// * [value] 
 abstract class Operation implements Built<Operation, OperationBuilder> {
     @BuiltValueField(wireName: r'operationType')
     OperationType? get operationType;

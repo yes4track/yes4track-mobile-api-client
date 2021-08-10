@@ -7,8 +7,18 @@ import 'package:built_value/serializer.dart';
 
 part 'post_company_request.g.dart';
 
-
-
+/// PostCompanyRequest
+///
+/// Properties:
+/// * [createdAt] 
+/// * [updatedAt] 
+/// * [userCreated] 
+/// * [userUpdated] 
+/// * [legalName] 
+/// * [fantasyName] 
+/// * [registrationNumber] 
+/// * [contactEmail] 
+/// * [contactPhone] 
 abstract class PostCompanyRequest implements Built<PostCompanyRequest, PostCompanyRequestBuilder> {
     @BuiltValueField(wireName: r'createdAt')
     DateTime? get createdAt;

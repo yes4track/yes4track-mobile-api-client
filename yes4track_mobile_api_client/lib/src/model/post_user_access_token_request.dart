@@ -7,8 +7,11 @@ import 'package:built_value/serializer.dart';
 
 part 'post_user_access_token_request.g.dart';
 
-
-
+/// PostUserAccessTokenRequest
+///
+/// Properties:
+/// * [phone] 
+/// * [code] 
 abstract class PostUserAccessTokenRequest implements Built<PostUserAccessTokenRequest, PostUserAccessTokenRequestBuilder> {
     @BuiltValueField(wireName: r'phone')
     String? get phone;

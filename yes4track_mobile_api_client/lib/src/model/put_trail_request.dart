@@ -12,8 +12,24 @@ import 'package:built_value/serializer.dart';
 
 part 'put_trail_request.g.dart';
 
-
-
+/// PutTrailRequest
+///
+/// Properties:
+/// * [createdAt] 
+/// * [updatedAt] 
+/// * [userCreated] 
+/// * [userUpdated] 
+/// * [adventureId] 
+/// * [name] 
+/// * [startDate] 
+/// * [endDate] 
+/// * [type] 
+/// * [id] 
+/// * [adventureName] 
+/// * [adventureDescription] 
+/// * [adventureLevel] 
+/// * [adventureType] 
+/// * [waypoints] 
 abstract class PutTrailRequest implements Built<PutTrailRequest, PutTrailRequestBuilder> {
     @BuiltValueField(wireName: r'createdAt')
     DateTime? get createdAt;

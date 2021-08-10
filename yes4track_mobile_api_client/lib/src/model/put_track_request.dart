@@ -8,8 +8,19 @@ import 'package:built_value/serializer.dart';
 
 part 'put_track_request.g.dart';
 
-
-
+/// PutTrackRequest
+///
+/// Properties:
+/// * [createdAt] 
+/// * [updatedAt] 
+/// * [userCreated] 
+/// * [userUpdated] 
+/// * [adventureId] 
+/// * [name] 
+/// * [source_] 
+/// * [startDate] 
+/// * [endDate] 
+/// * [id] 
 abstract class PutTrackRequest implements Built<PutTrackRequest, PutTrackRequestBuilder> {
     @BuiltValueField(wireName: r'createdAt')
     DateTime? get createdAt;

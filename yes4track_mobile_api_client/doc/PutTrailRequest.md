@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **adventureDescription** | **String** |  | [optional] 
 **adventureLevel** | [**LevelType**](LevelType.md) |  | [optional] 
 **adventureType** | [**AdventureType**](AdventureType.md) |  | [optional] 
-**waypoints** | [**BuiltList<Waypoint>**](Waypoint.md) |  | [optional] 
+**waypoints** | [**BuiltList&lt;Waypoint&gt;**](Waypoint.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

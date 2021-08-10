@@ -9,8 +9,13 @@ import 'package:built_value/serializer.dart';
 
 part 'adventure_response.g.dart';
 
-
-
+/// AdventureResponse
+///
+/// Properties:
+/// * [name] 
+/// * [description] 
+/// * [level] 
+/// * [type] 
 abstract class AdventureResponse implements Built<AdventureResponse, AdventureResponseBuilder> {
     @BuiltValueField(wireName: r'name')
     String? get name;

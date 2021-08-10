@@ -14,8 +14,8 @@ Name | Type | Description | Notes
 **userUpdated** | **String** |  | [optional] 
 **message** | **String** |  | [optional] 
 **type** | [**NotificationType**](NotificationType.md) |  | [optional] 
-**channels** | [**BuiltList<NotificationChannel>**](NotificationChannel.md) |  | [optional] 
-**attributes** | **BuiltMap<String, String>** |  | [optional] 
+**channels** | [**BuiltList&lt;NotificationChannel&gt;**](NotificationChannel.md) |  | [optional] 
+**attributes** | **BuiltMap&lt;String, String&gt;** |  | [optional] 
 **user** | [**User**](User.md) |  | [optional] 
 **id** | **String** |  | [optional] 
 

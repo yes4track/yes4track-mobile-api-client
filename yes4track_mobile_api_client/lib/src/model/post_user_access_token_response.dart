@@ -7,8 +7,10 @@ import 'package:built_value/serializer.dart';
 
 part 'post_user_access_token_response.g.dart';
 
-
-
+/// PostUserAccessTokenResponse
+///
+/// Properties:
+/// * [idToken] 
 abstract class PostUserAccessTokenResponse implements Built<PostUserAccessTokenResponse, PostUserAccessTokenResponseBuilder> {
     @BuiltValueField(wireName: r'id_token')
     String? get idToken;

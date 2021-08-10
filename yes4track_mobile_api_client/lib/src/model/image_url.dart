@@ -8,8 +8,18 @@ import 'package:built_value/serializer.dart';
 
 part 'image_url.g.dart';
 
-
-
+/// ImageUrl
+///
+/// Properties:
+/// * [id] 
+/// * [createdAt] 
+/// * [updatedAt] 
+/// * [userCreated] 
+/// * [userUpdated] 
+/// * [version] 
+/// * [fileName] 
+/// * [url] 
+/// * [sequence] 
 abstract class ImageUrl implements Built<ImageUrl, ImageUrlBuilder> {
     @BuiltValueField(wireName: r'id')
     String? get id;

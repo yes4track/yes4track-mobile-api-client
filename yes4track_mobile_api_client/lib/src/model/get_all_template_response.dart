@@ -7,8 +7,14 @@ import 'package:built_value/serializer.dart';
 
 part 'get_all_template_response.g.dart';
 
-
-
+/// GetAllTemplateResponse
+///
+/// Properties:
+/// * [id] 
+/// * [name] 
+/// * [businessId] 
+/// * [createdAt] 
+/// * [updatedAt] 
 abstract class GetAllTemplateResponse implements Built<GetAllTemplateResponse, GetAllTemplateResponseBuilder> {
     @BuiltValueField(wireName: r'id')
     String? get id;

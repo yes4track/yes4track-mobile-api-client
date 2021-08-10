@@ -7,8 +7,19 @@ import 'package:built_value/serializer.dart';
 
 part 'get_all_company_response.g.dart';
 
-
-
+/// GetAllCompanyResponse
+///
+/// Properties:
+/// * [createdAt] 
+/// * [updatedAt] 
+/// * [userCreated] 
+/// * [userUpdated] 
+/// * [legalName] 
+/// * [fantasyName] 
+/// * [registrationNumber] 
+/// * [contactEmail] 
+/// * [contactPhone] 
+/// * [id] 
 abstract class GetAllCompanyResponse implements Built<GetAllCompanyResponse, GetAllCompanyResponseBuilder> {
     @BuiltValueField(wireName: r'createdAt')
     DateTime? get createdAt;

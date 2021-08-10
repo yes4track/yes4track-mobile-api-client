@@ -7,8 +7,12 @@ import 'package:built_value/serializer.dart';
 
 part 'put_user_location_request.g.dart';
 
-
-
+/// PutUserLocationRequest
+///
+/// Properties:
+/// * [date] 
+/// * [latitude] 
+/// * [longitude] 
 abstract class PutUserLocationRequest implements Built<PutUserLocationRequest, PutUserLocationRequestBuilder> {
     @BuiltValueField(wireName: r'date')
     DateTime get date;

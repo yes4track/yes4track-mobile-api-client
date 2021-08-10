@@ -7,8 +7,13 @@ import 'package:built_value/serializer.dart';
 
 part 'map_coordinate.g.dart';
 
-
-
+/// MapCoordinate
+///
+/// Properties:
+/// * [maxLongitude] 
+/// * [maxLatitude] 
+/// * [minLongitude] 
+/// * [minLatitude] 
 abstract class MapCoordinate implements Built<MapCoordinate, MapCoordinateBuilder> {
     @BuiltValueField(wireName: r'maxLongitude')
     double? get maxLongitude;

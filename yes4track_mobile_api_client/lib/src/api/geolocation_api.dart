@@ -19,8 +19,22 @@ class GeolocationApi {
   const GeolocationApi(this._dio, this._serializers);
 
   /// Get Address by Lat Long
-  ///
   /// 
+  ///
+  /// Parameters:
+  /// * [lat] - latitude
+  /// * [lng] - longitude
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [Address] as data
+  /// Throws [DioError] if API call or serialization fails
   Future<Response<Address>> getAddressByLatLong({ 
     required double lat,
     required double lng,
@@ -52,19 +66,12 @@ class GeolocationApi {
         ],
         ...?extra,
       },
-      contentType: [
-        'application/json',
-      ].first,
       validateStatus: validateStatus,
     );
-
-    final _queryParameters = <String, dynamic>{
-    };
 
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -79,13 +86,13 @@ class GeolocationApi {
         specifiedType: _responseType,
       ) as Address;
 
-    } catch (error) {
+    } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
         type: DioErrorType.other,
         error: error,
-      );
+      )..stackTrace = stackTrace;
     }
 
     return Response<Address>(

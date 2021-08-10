@@ -19,15 +19,15 @@ Name | Type | Description | Notes
 **type** | [**TrailType**](TrailType.md) |  | [optional] 
 **id** | **String** |  | [optional] 
 **statistic** | [**Statistic**](Statistic.md) |  | [optional] 
-**sponsors** | **BuiltList<String>** |  | [optional] 
-**angels** | **BuiltList<String>** |  | [optional] 
+**sponsors** | **BuiltList&lt;String&gt;** |  | [optional] 
+**angels** | **BuiltList&lt;String&gt;** |  | [optional] 
 **adventureName** | **String** |  | [optional] 
 **adventureDescription** | **String** |  | [optional] 
 **adventureLevel** | [**LevelType**](LevelType.md) |  | [optional] 
 **adventureType** | [**AdventureType**](AdventureType.md) |  | [optional] 
 **photoUrl** | **String** |  | [optional] 
-**imagesUrl** | [**BuiltList<ImageUrl>**](ImageUrl.md) |  | [optional] 
-**waypoints** | [**BuiltList<Waypoint>**](Waypoint.md) |  | [optional] 
+**imagesUrl** | [**BuiltList&lt;ImageUrl&gt;**](ImageUrl.md) |  | [optional] 
+**waypoints** | [**BuiltList&lt;Waypoint&gt;**](Waypoint.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

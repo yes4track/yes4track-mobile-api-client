@@ -8,8 +8,18 @@ import 'package:built_value/serializer.dart';
 
 part 'get_all_audit_response.g.dart';
 
-
-
+/// GetAllAuditResponse
+///
+/// Properties:
+/// * [createdAt] 
+/// * [updatedAt] 
+/// * [userCreated] 
+/// * [userUpdated] 
+/// * [parentId] 
+/// * [entity] 
+/// * [action] 
+/// * [data] 
+/// * [id] 
 abstract class GetAllAuditResponse implements Built<GetAllAuditResponse, GetAllAuditResponseBuilder> {
     @BuiltValueField(wireName: r'createdAt')
     DateTime? get createdAt;

@@ -7,8 +7,10 @@ import 'package:built_value/serializer.dart';
 
 part 'post_check_experience_code_response.g.dart';
 
-
-
+/// PostCheckExperienceCodeResponse
+///
+/// Properties:
+/// * [isSuccess] 
 abstract class PostCheckExperienceCodeResponse implements Built<PostCheckExperienceCodeResponse, PostCheckExperienceCodeResponseBuilder> {
     @BuiltValueField(wireName: r'isSuccess')
     bool? get isSuccess;

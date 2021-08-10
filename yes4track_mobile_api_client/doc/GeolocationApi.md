@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAddressByLatLong**](GeolocationApi.md#getaddressbylatlong) | **get** /yes4track/v1/geolocations/{lat}/{lng} | Get Address by Lat Long
+[**getAddressByLatLong**](GeolocationApi.md#getaddressbylatlong) | **GET** /yes4track/v1/geolocations/{lat}/{lng} | Get Address by Lat Long
 
 
 # **getAddressByLatLong**
@@ -25,16 +25,16 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new GeolocationApi();
-var lat = 1.2; // double | latitude
-var lng = 1.2; // double | longitude
-var xApiKey = xApiKey_example; // String | Your Api Key
-var xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getGeolocationApi();
+final double lat = 1.2; // double | latitude
+final double lng = 1.2; // double | longitude
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    var result = api_instance.getAddressByLatLong(lat, lng, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.getAddressByLatLong(lat, lng, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling GeolocationApi->getAddressByLatLong: $e\n');
 }
 ```

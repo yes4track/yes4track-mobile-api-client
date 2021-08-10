@@ -7,8 +7,14 @@ import 'package:built_value/serializer.dart';
 
 part 'statistic.g.dart';
 
-
-
+/// Statistic
+///
+/// Properties:
+/// * [totalTime] 
+/// * [totalMovingTime] 
+/// * [totalDistance] 
+/// * [elevationGain] 
+/// * [speed] 
 abstract class Statistic implements Built<Statistic, StatisticBuilder> {
     @BuiltValueField(wireName: r'totalTime')
     double? get totalTime;

@@ -7,8 +7,10 @@ import 'package:built_value/serializer.dart';
 
 part 'get_user_liked_adventure_response.g.dart';
 
-
-
+/// GetUserLikedAdventureResponse
+///
+/// Properties:
+/// * [userLiked] 
 abstract class GetUserLikedAdventureResponse implements Built<GetUserLikedAdventureResponse, GetUserLikedAdventureResponseBuilder> {
     @BuiltValueField(wireName: r'userLiked')
     bool? get userLiked;

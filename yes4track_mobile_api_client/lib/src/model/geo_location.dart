@@ -7,8 +7,13 @@ import 'package:built_value/serializer.dart';
 
 part 'geo_location.g.dart';
 
-
-
+/// GeoLocation
+///
+/// Properties:
+/// * [date] 
+/// * [latitude] 
+/// * [longitude] 
+/// * [elevation] 
 abstract class GeoLocation implements Built<GeoLocation, GeoLocationBuilder> {
     @BuiltValueField(wireName: r'date')
     DateTime? get date;

@@ -47,10 +47,10 @@ Please follow the [installation procedure](#installation--usage) and then run th
 import 'package:yes4track_mobile_api_client/yes4track_mobile_api_client.dart';
 
 
-final api = AdventureApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = Yes4trackMobileApiClient().getAdventureApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
     final response = await api.getByIdAdventure(id, xApiKey, xCsrfToken);
@@ -67,107 +67,107 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AdventureApi* | [**getByIdAdventure**](doc/AdventureApi.md#getbyidadventure) | **get** /yes4track/v1/adventures/{id} | Get Adventure by id
-*AdventureApi* | [**getByIdAdventureCode**](doc/AdventureApi.md#getbyidadventurecode) | **get** /yes4track/v1/adventures/{id}/code | Get Adventure Code by id
-*AdventureApi* | [**getByIdAdventureLikes**](doc/AdventureApi.md#getbyidadventurelikes) | **get** /yes4track/v1/adventures/{id}/likes/{likeId} | Get Adventure Like by id
-*AdventureApi* | [**getUserLikedAdventure**](doc/AdventureApi.md#getuserlikedadventure) | **get** /yes4track/v1/adventures/{id}/likes/userLiked | Get User Liked Adventure
-*AdventureApi* | [**yes4trackV1AdventuresGet**](doc/AdventureApi.md#yes4trackv1adventuresget) | **get** /yes4track/v1/adventures | Get All Adventure by filter with pagination
-*AdventureApi* | [**yes4trackV1AdventuresIdActivatePost**](doc/AdventureApi.md#yes4trackv1adventuresidactivatepost) | **post** /yes4track/v1/adventures/{id}/activate | Activate Adventure
-*AdventureApi* | [**yes4trackV1AdventuresIdCodeCodeCheckPost**](doc/AdventureApi.md#yes4trackv1adventuresidcodecodecheckpost) | **post** /yes4track/v1/adventures/{id}/code/{code}/check | Check Adventure Code
-*AdventureApi* | [**yes4trackV1AdventuresIdDelete**](doc/AdventureApi.md#yes4trackv1adventuresiddelete) | **delete** /yes4track/v1/adventures/{id} | Delete Adventure by Id
-*AdventureApi* | [**yes4trackV1AdventuresIdExperiencesExperienceIdDelete**](doc/AdventureApi.md#yes4trackv1adventuresidexperiencesexperienceiddelete) | **delete** /yes4track/v1/adventures/{id}/experiences/{experienceId} | Delete Adventure Experience
-*AdventureApi* | [**yes4trackV1AdventuresIdExperiencesExperienceIdPost**](doc/AdventureApi.md#yes4trackv1adventuresidexperiencesexperienceidpost) | **post** /yes4track/v1/adventures/{id}/experiences/{experienceId} | Add Adventure Experience
-*AdventureApi* | [**yes4trackV1AdventuresIdImagesImageIdDelete**](doc/AdventureApi.md#yes4trackv1adventuresidimagesimageiddelete) | **delete** /yes4track/v1/adventures/{id}/images/{imageId} | Delete Adventure by Id
-*AdventureApi* | [**yes4trackV1AdventuresIdImagesPost**](doc/AdventureApi.md#yes4trackv1adventuresidimagespost) | **post** /yes4track/v1/adventures/{id}/images | Add images in adventure
-*AdventureApi* | [**yes4trackV1AdventuresIdLikesDelete**](doc/AdventureApi.md#yes4trackv1adventuresidlikesdelete) | **delete** /yes4track/v1/adventures/{id}/likes | Delete Adventure Likes by Id
-*AdventureApi* | [**yes4trackV1AdventuresIdLikesGet**](doc/AdventureApi.md#yes4trackv1adventuresidlikesget) | **get** /yes4track/v1/adventures/{id}/likes | Get All Adventure Likes by filter with pagination
-*AdventureApi* | [**yes4trackV1AdventuresIdLikesPost**](doc/AdventureApi.md#yes4trackv1adventuresidlikespost) | **post** /yes4track/v1/adventures/{id}/likes | Create Adventure Likes
-*AdventureApi* | [**yes4trackV1AdventuresIdPatch**](doc/AdventureApi.md#yes4trackv1adventuresidpatch) | **patch** /yes4track/v1/adventures/{id} | Update part of Adventure
-*AdventureApi* | [**yes4trackV1AdventuresIdPut**](doc/AdventureApi.md#yes4trackv1adventuresidput) | **put** /yes4track/v1/adventures/{id} | Update Adventure
-*AdventureApi* | [**yes4trackV1AdventuresIdVideosPost**](doc/AdventureApi.md#yes4trackv1adventuresidvideospost) | **post** /yes4track/v1/adventures/{id}/videos | Add videos in adventure
-*AdventureApi* | [**yes4trackV1AdventuresIdVideosVideoIdDelete**](doc/AdventureApi.md#yes4trackv1adventuresidvideosvideoiddelete) | **delete** /yes4track/v1/adventures/{id}/videos/{videoId} | Delete Adventure by Id
-*AdventureApi* | [**yes4trackV1AdventuresPost**](doc/AdventureApi.md#yes4trackv1adventurespost) | **post** /yes4track/v1/adventures | Create Adventure
-*AuditApi* | [**yes4trackV1AuditsGet**](doc/AuditApi.md#yes4trackv1auditsget) | **get** /yes4track/v1/audits | Get All Audit by filter with pagination
-*CompanyApi* | [**getByIdCompany**](doc/CompanyApi.md#getbyidcompany) | **get** /yes4track/v1/companies/{id} | Get Company by id
-*CompanyApi* | [**yes4trackV1CompaniesGet**](doc/CompanyApi.md#yes4trackv1companiesget) | **get** /yes4track/v1/companies | Get All Company by filter with pagination
-*CompanyApi* | [**yes4trackV1CompaniesIdDelete**](doc/CompanyApi.md#yes4trackv1companiesiddelete) | **delete** /yes4track/v1/companies/{id} | Delete Company by Id
-*CompanyApi* | [**yes4trackV1CompaniesIdPatch**](doc/CompanyApi.md#yes4trackv1companiesidpatch) | **patch** /yes4track/v1/companies/{id} | Update part of Company
-*CompanyApi* | [**yes4trackV1CompaniesIdPut**](doc/CompanyApi.md#yes4trackv1companiesidput) | **put** /yes4track/v1/companies/{id} | Update Company
-*CompanyApi* | [**yes4trackV1CompaniesPost**](doc/CompanyApi.md#yes4trackv1companiespost) | **post** /yes4track/v1/companies | Create Company
-*ExperienceApi* | [**getByIdExperience**](doc/ExperienceApi.md#getbyidexperience) | **get** /yes4track/v1/experiences/{id} | Get Experience by id
-*ExperienceApi* | [**getByIdExperienceCode**](doc/ExperienceApi.md#getbyidexperiencecode) | **get** /yes4track/v1/experiences/{id}/code | Get Experience Code by id
-*ExperienceApi* | [**yes4trackV1ExperiencesGet**](doc/ExperienceApi.md#yes4trackv1experiencesget) | **get** /yes4track/v1/experiences | Get All Experience by filter with pagination
-*ExperienceApi* | [**yes4trackV1ExperiencesIdActivatePost**](doc/ExperienceApi.md#yes4trackv1experiencesidactivatepost) | **post** /yes4track/v1/experiences/{id}/activate | Activate Experience
-*ExperienceApi* | [**yes4trackV1ExperiencesIdCodeCodeCheckPost**](doc/ExperienceApi.md#yes4trackv1experiencesidcodecodecheckpost) | **post** /yes4track/v1/experiences/{id}/code/{code}/check | Check Experience Code
-*ExperienceApi* | [**yes4trackV1ExperiencesIdDelete**](doc/ExperienceApi.md#yes4trackv1experiencesiddelete) | **delete** /yes4track/v1/experiences/{id} | Delete Experience by Id
-*ExperienceApi* | [**yes4trackV1ExperiencesIdImagesImageIdDelete**](doc/ExperienceApi.md#yes4trackv1experiencesidimagesimageiddelete) | **delete** /yes4track/v1/experiences/{id}/images/{imageId} | Delete Experience by Id
-*ExperienceApi* | [**yes4trackV1ExperiencesIdImagesPost**](doc/ExperienceApi.md#yes4trackv1experiencesidimagespost) | **post** /yes4track/v1/experiences/{id}/images | Add images in Experience
-*ExperienceApi* | [**yes4trackV1ExperiencesIdPatch**](doc/ExperienceApi.md#yes4trackv1experiencesidpatch) | **patch** /yes4track/v1/experiences/{id} | Update part of Experience
-*ExperienceApi* | [**yes4trackV1ExperiencesIdPut**](doc/ExperienceApi.md#yes4trackv1experiencesidput) | **put** /yes4track/v1/experiences/{id} | Update Experience
-*ExperienceApi* | [**yes4trackV1ExperiencesIdVideosPost**](doc/ExperienceApi.md#yes4trackv1experiencesidvideospost) | **post** /yes4track/v1/experiences/{id}/videos | Add videos in an Experience
-*ExperienceApi* | [**yes4trackV1ExperiencesIdVideosVideoIdDelete**](doc/ExperienceApi.md#yes4trackv1experiencesidvideosvideoiddelete) | **delete** /yes4track/v1/experiences/{id}/videos/{videoId} | Delete Experience by Id
-*ExperienceApi* | [**yes4trackV1ExperiencesPost**](doc/ExperienceApi.md#yes4trackv1experiencespost) | **post** /yes4track/v1/experiences | Create Experience
-*GeolocationApi* | [**getAddressByLatLong**](doc/GeolocationApi.md#getaddressbylatlong) | **get** /yes4track/v1/geolocations/{lat}/{lng} | Get Address by Lat Long
-*NotificationApi* | [**getByIdNotification**](doc/NotificationApi.md#getbyidnotification) | **get** /yes4track/v1/notifications/{id} | Get Notification by id
-*NotificationApi* | [**yes4trackV1NotificationsGet**](doc/NotificationApi.md#yes4trackv1notificationsget) | **get** /yes4track/v1/notifications | Get All Notification by filter with pagination
-*NotificationApi* | [**yes4trackV1NotificationsIdDelete**](doc/NotificationApi.md#yes4trackv1notificationsiddelete) | **delete** /yes4track/v1/notifications/{id} | Delete Notification by Id
-*NotificationApi* | [**yes4trackV1NotificationsIdPatch**](doc/NotificationApi.md#yes4trackv1notificationsidpatch) | **patch** /yes4track/v1/notifications/{id} | Update part of Notification
-*NotificationApi* | [**yes4trackV1NotificationsIdPut**](doc/NotificationApi.md#yes4trackv1notificationsidput) | **put** /yes4track/v1/notifications/{id} | Update Notification
-*NotificationApi* | [**yes4trackV1NotificationsPost**](doc/NotificationApi.md#yes4trackv1notificationspost) | **post** /yes4track/v1/notifications | Create Notification
-*SponsorApi* | [**getByIdSponsor**](doc/SponsorApi.md#getbyidsponsor) | **get** /yes4track/v1/sponsors/{id} | Get Sponsor by id
-*SponsorApi* | [**yes4trackV1SponsorsGet**](doc/SponsorApi.md#yes4trackv1sponsorsget) | **get** /yes4track/v1/sponsors | Get All Sponsor by filter with pagination
-*SponsorApi* | [**yes4trackV1SponsorsIdDelete**](doc/SponsorApi.md#yes4trackv1sponsorsiddelete) | **delete** /yes4track/v1/sponsors/{id} | Delete Sponsor by Id
-*SponsorApi* | [**yes4trackV1SponsorsIdPatch**](doc/SponsorApi.md#yes4trackv1sponsorsidpatch) | **patch** /yes4track/v1/sponsors/{id} | Update part of Sponsor
-*SponsorApi* | [**yes4trackV1SponsorsIdPut**](doc/SponsorApi.md#yes4trackv1sponsorsidput) | **put** /yes4track/v1/sponsors/{id} | Update Sponsor
-*SponsorApi* | [**yes4trackV1SponsorsPost**](doc/SponsorApi.md#yes4trackv1sponsorspost) | **post** /yes4track/v1/sponsors | Create Sponsor
-*TemplateApi* | [**getByIdTemplate**](doc/TemplateApi.md#getbyidtemplate) | **get** /yes4track/v1/templates/{id} | Get Template by id
-*TemplateApi* | [**yes4trackV1TemplatesGet**](doc/TemplateApi.md#yes4trackv1templatesget) | **get** /yes4track/v1/templates | Get All Template by filter with pagination
-*TemplateApi* | [**yes4trackV1TemplatesIdDelete**](doc/TemplateApi.md#yes4trackv1templatesiddelete) | **delete** /yes4track/v1/templates/{id} | Delete Template by Id
-*TemplateApi* | [**yes4trackV1TemplatesIdPatch**](doc/TemplateApi.md#yes4trackv1templatesidpatch) | **patch** /yes4track/v1/templates/{id} | Update part of Template
-*TemplateApi* | [**yes4trackV1TemplatesIdPhotosUploadPost**](doc/TemplateApi.md#yes4trackv1templatesidphotosuploadpost) | **post** /yes4track/v1/templates/{id}/photos/upload | Create Template
-*TemplateApi* | [**yes4trackV1TemplatesIdPut**](doc/TemplateApi.md#yes4trackv1templatesidput) | **put** /yes4track/v1/templates/{id} | Update Template
-*TemplateApi* | [**yes4trackV1TemplatesPost**](doc/TemplateApi.md#yes4trackv1templatespost) | **post** /yes4track/v1/templates | Create Template
-*TrackApi* | [**getByIdTrack**](doc/TrackApi.md#getbyidtrack) | **get** /yes4track/v1/tracks/{id} | Get Track by id
-*TrackApi* | [**getByIdTrackGeoData**](doc/TrackApi.md#getbyidtrackgeodata) | **get** /yes4track/v1/tracks/{id}/geodata | Get Track Geo Data by id
-*TrackApi* | [**getByIdTrackGeoLocation**](doc/TrackApi.md#getbyidtrackgeolocation) | **get** /yes4track/v1/tracks/geolocation | Get Track Geo Location by id
-*TrackApi* | [**yes4trackV1TracksGet**](doc/TrackApi.md#yes4trackv1tracksget) | **get** /yes4track/v1/tracks | Get All Track by filter with pagination
-*TrackApi* | [**yes4trackV1TracksIdDelete**](doc/TrackApi.md#yes4trackv1tracksiddelete) | **delete** /yes4track/v1/tracks/{id} | Delete Track by Id
-*TrackApi* | [**yes4trackV1TracksIdGeodataPost**](doc/TrackApi.md#yes4trackv1tracksidgeodatapost) | **post** /yes4track/v1/tracks/{id}/geodata | Create Track GeoData
-*TrackApi* | [**yes4trackV1TracksIdPatch**](doc/TrackApi.md#yes4trackv1tracksidpatch) | **patch** /yes4track/v1/tracks/{id} | Update part of Track
-*TrackApi* | [**yes4trackV1TracksIdPut**](doc/TrackApi.md#yes4trackv1tracksidput) | **put** /yes4track/v1/tracks/{id} | Update Track
-*TrackApi* | [**yes4trackV1TracksIdStatisticPut**](doc/TrackApi.md#yes4trackv1tracksidstatisticput) | **put** /yes4track/v1/tracks/{id}/statistic | Update Track Statistic
-*TrackApi* | [**yes4trackV1TracksPost**](doc/TrackApi.md#yes4trackv1trackspost) | **post** /yes4track/v1/tracks | Create Track
-*TrailApi* | [**getByIdTrail**](doc/TrailApi.md#getbyidtrail) | **get** /yes4track/v1/trails/{id} | Get Trail by id
-*TrailApi* | [**getByIdTrailGeoData**](doc/TrailApi.md#getbyidtrailgeodata) | **get** /yes4track/v1/trails/{id}/geodata | Get Trail Geo Data by id
-*TrailApi* | [**yes4trackV1TrailsActiveByAngelGet**](doc/TrailApi.md#yes4trackv1trailsactivebyangelget) | **get** /yes4track/v1/trails/activeByAngel | Get All Active Trail by Angel
-*TrailApi* | [**yes4trackV1TrailsGet**](doc/TrailApi.md#yes4trackv1trailsget) | **get** /yes4track/v1/trails | Get All Trail by filter with pagination
-*TrailApi* | [**yes4trackV1TrailsIdAngelAngelIdDelete**](doc/TrailApi.md#yes4trackv1trailsidangelangeliddelete) | **delete** /yes4track/v1/trails/{id}/angel/{angelId} | Delete Trail Angel by Id
-*TrailApi* | [**yes4trackV1TrailsIdAngelAngelIdPost**](doc/TrailApi.md#yes4trackv1trailsidangelangelidpost) | **post** /yes4track/v1/trails/{id}/angel/{angelId} | Add Trail Angel by Id
-*TrailApi* | [**yes4trackV1TrailsIdDelete**](doc/TrailApi.md#yes4trackv1trailsiddelete) | **delete** /yes4track/v1/trails/{id} | Delete Trail by Id
-*TrailApi* | [**yes4trackV1TrailsIdGeodataChunckPost**](doc/TrailApi.md#yes4trackv1trailsidgeodatachunckpost) | **post** /yes4track/v1/trails/{id}/geodata/chunck | Add Chunck Trail GeoData
-*TrailApi* | [**yes4trackV1TrailsIdGeodataPost**](doc/TrailApi.md#yes4trackv1trailsidgeodatapost) | **post** /yes4track/v1/trails/{id}/geodata | Create Trail GeoData
-*TrailApi* | [**yes4trackV1TrailsIdImagesPost**](doc/TrailApi.md#yes4trackv1trailsidimagespost) | **post** /yes4track/v1/trails/{id}/images | Add images in trail
-*TrailApi* | [**yes4trackV1TrailsIdPatch**](doc/TrailApi.md#yes4trackv1trailsidpatch) | **patch** /yes4track/v1/trails/{id} | Update part of Trail
-*TrailApi* | [**yes4trackV1TrailsIdPut**](doc/TrailApi.md#yes4trackv1trailsidput) | **put** /yes4track/v1/trails/{id} | Update Trail
-*TrailApi* | [**yes4trackV1TrailsIdSponsorSponsorIdDelete**](doc/TrailApi.md#yes4trackv1trailsidsponsorsponsoriddelete) | **delete** /yes4track/v1/trails/{id}/sponsor/{sponsorId} | Delete Trail Sponsor by Id
-*TrailApi* | [**yes4trackV1TrailsIdSponsorSponsorIdPost**](doc/TrailApi.md#yes4trackv1trailsidsponsorsponsoridpost) | **post** /yes4track/v1/trails/{id}/sponsor/{sponsorId} | Add Trail Sponsor by Id
-*TrailApi* | [**yes4trackV1TrailsPost**](doc/TrailApi.md#yes4trackv1trailspost) | **post** /yes4track/v1/trails | Create Trail
-*UserApi* | [**getByIdUser**](doc/UserApi.md#getbyiduser) | **get** /yes4track/v1/users/{id} | Get User by id
-*UserApi* | [**yes4trackV1UsersAccesstokenPost**](doc/UserApi.md#yes4trackv1usersaccesstokenpost) | **post** /yes4track/v1/users/accesstoken | User SignIn
-*UserApi* | [**yes4trackV1UsersGet**](doc/UserApi.md#yes4trackv1usersget) | **get** /yes4track/v1/users | Get All User by filter with pagination
-*UserApi* | [**yes4trackV1UsersIdCompaniesCompanyIdDelete**](doc/UserApi.md#yes4trackv1usersidcompaniescompanyiddelete) | **delete** /yes4track/v1/users/{id}/companies/{companyId} | Delete User Company
-*UserApi* | [**yes4trackV1UsersIdCompaniesCompanyIdPost**](doc/UserApi.md#yes4trackv1usersidcompaniescompanyidpost) | **post** /yes4track/v1/users/{id}/companies/{companyId} | Add User Company
-*UserApi* | [**yes4trackV1UsersIdDelete**](doc/UserApi.md#yes4trackv1usersiddelete) | **delete** /yes4track/v1/users/{id} | Delete User by Id
-*UserApi* | [**yes4trackV1UsersIdLocationPut**](doc/UserApi.md#yes4trackv1usersidlocationput) | **put** /yes4track/v1/users/{id}/location | Update User Location
-*UserApi* | [**yes4trackV1UsersIdPatch**](doc/UserApi.md#yes4trackv1usersidpatch) | **patch** /yes4track/v1/users/{id} | Update part of User
-*UserApi* | [**yes4trackV1UsersIdPhotoPut**](doc/UserApi.md#yes4trackv1usersidphotoput) | **put** /yes4track/v1/users/{id}/photo | Update User Photo
-*UserApi* | [**yes4trackV1UsersIdPut**](doc/UserApi.md#yes4trackv1usersidput) | **put** /yes4track/v1/users/{id} | Update User
-*UserApi* | [**yes4trackV1UsersPost**](doc/UserApi.md#yes4trackv1userspost) | **post** /yes4track/v1/users | Add User
-*UserApi* | [**yes4trackV1UsersResendcodePost**](doc/UserApi.md#yes4trackv1usersresendcodepost) | **post** /yes4track/v1/users/resendcode | Resend Code
-*UserApi* | [**yes4trackV1UsersSetupangelPost**](doc/UserApi.md#yes4trackv1userssetupangelpost) | **post** /yes4track/v1/users/setupangel | Setup User default Angel
-*UserApi* | [**yes4trackV1UsersSetupsponsorIdPost**](doc/UserApi.md#yes4trackv1userssetupsponsoridpost) | **post** /yes4track/v1/users/setupsponsor/{id} | Setup User default Sponsor
-*UserApi* | [**yes4trackV1UsersSigninPost**](doc/UserApi.md#yes4trackv1userssigninpost) | **post** /yes4track/v1/users/signin | User SignIn
-*UserApi* | [**yes4trackV1UsersSignupPost**](doc/UserApi.md#yes4trackv1userssignuppost) | **post** /yes4track/v1/users/signup | User SignUp
+[*AdventureApi*](doc/AdventureApi.md) | [**getByIdAdventure**](doc/AdventureApi.md#getbyidadventure) | **GET** /yes4track/v1/adventures/{id} | Get Adventure by id
+[*AdventureApi*](doc/AdventureApi.md) | [**getByIdAdventureCode**](doc/AdventureApi.md#getbyidadventurecode) | **GET** /yes4track/v1/adventures/{id}/code | Get Adventure Code by id
+[*AdventureApi*](doc/AdventureApi.md) | [**getByIdAdventureLikes**](doc/AdventureApi.md#getbyidadventurelikes) | **GET** /yes4track/v1/adventures/{id}/likes/{likeId} | Get Adventure Like by id
+[*AdventureApi*](doc/AdventureApi.md) | [**getUserLikedAdventure**](doc/AdventureApi.md#getuserlikedadventure) | **GET** /yes4track/v1/adventures/{id}/likes/userLiked | Get User Liked Adventure
+[*AdventureApi*](doc/AdventureApi.md) | [**yes4trackV1AdventuresGet**](doc/AdventureApi.md#yes4trackv1adventuresget) | **GET** /yes4track/v1/adventures | Get All Adventure by filter with pagination
+[*AdventureApi*](doc/AdventureApi.md) | [**yes4trackV1AdventuresIdActivatePost**](doc/AdventureApi.md#yes4trackv1adventuresidactivatepost) | **POST** /yes4track/v1/adventures/{id}/activate | Activate Adventure
+[*AdventureApi*](doc/AdventureApi.md) | [**yes4trackV1AdventuresIdCodeCodeCheckPost**](doc/AdventureApi.md#yes4trackv1adventuresidcodecodecheckpost) | **POST** /yes4track/v1/adventures/{id}/code/{code}/check | Check Adventure Code
+[*AdventureApi*](doc/AdventureApi.md) | [**yes4trackV1AdventuresIdDelete**](doc/AdventureApi.md#yes4trackv1adventuresiddelete) | **DELETE** /yes4track/v1/adventures/{id} | Delete Adventure by Id
+[*AdventureApi*](doc/AdventureApi.md) | [**yes4trackV1AdventuresIdExperiencesExperienceIdDelete**](doc/AdventureApi.md#yes4trackv1adventuresidexperiencesexperienceiddelete) | **DELETE** /yes4track/v1/adventures/{id}/experiences/{experienceId} | Delete Adventure Experience
+[*AdventureApi*](doc/AdventureApi.md) | [**yes4trackV1AdventuresIdExperiencesExperienceIdPost**](doc/AdventureApi.md#yes4trackv1adventuresidexperiencesexperienceidpost) | **POST** /yes4track/v1/adventures/{id}/experiences/{experienceId} | Add Adventure Experience
+[*AdventureApi*](doc/AdventureApi.md) | [**yes4trackV1AdventuresIdImagesImageIdDelete**](doc/AdventureApi.md#yes4trackv1adventuresidimagesimageiddelete) | **DELETE** /yes4track/v1/adventures/{id}/images/{imageId} | Delete Adventure by Id
+[*AdventureApi*](doc/AdventureApi.md) | [**yes4trackV1AdventuresIdImagesPost**](doc/AdventureApi.md#yes4trackv1adventuresidimagespost) | **POST** /yes4track/v1/adventures/{id}/images | Add images in adventure
+[*AdventureApi*](doc/AdventureApi.md) | [**yes4trackV1AdventuresIdLikesDelete**](doc/AdventureApi.md#yes4trackv1adventuresidlikesdelete) | **DELETE** /yes4track/v1/adventures/{id}/likes | Delete Adventure Likes by Id
+[*AdventureApi*](doc/AdventureApi.md) | [**yes4trackV1AdventuresIdLikesGet**](doc/AdventureApi.md#yes4trackv1adventuresidlikesget) | **GET** /yes4track/v1/adventures/{id}/likes | Get All Adventure Likes by filter with pagination
+[*AdventureApi*](doc/AdventureApi.md) | [**yes4trackV1AdventuresIdLikesPost**](doc/AdventureApi.md#yes4trackv1adventuresidlikespost) | **POST** /yes4track/v1/adventures/{id}/likes | Create Adventure Likes
+[*AdventureApi*](doc/AdventureApi.md) | [**yes4trackV1AdventuresIdPatch**](doc/AdventureApi.md#yes4trackv1adventuresidpatch) | **PATCH** /yes4track/v1/adventures/{id} | Update part of Adventure
+[*AdventureApi*](doc/AdventureApi.md) | [**yes4trackV1AdventuresIdPut**](doc/AdventureApi.md#yes4trackv1adventuresidput) | **PUT** /yes4track/v1/adventures/{id} | Update Adventure
+[*AdventureApi*](doc/AdventureApi.md) | [**yes4trackV1AdventuresIdVideosPost**](doc/AdventureApi.md#yes4trackv1adventuresidvideospost) | **POST** /yes4track/v1/adventures/{id}/videos | Add videos in adventure
+[*AdventureApi*](doc/AdventureApi.md) | [**yes4trackV1AdventuresIdVideosVideoIdDelete**](doc/AdventureApi.md#yes4trackv1adventuresidvideosvideoiddelete) | **DELETE** /yes4track/v1/adventures/{id}/videos/{videoId} | Delete Adventure by Id
+[*AdventureApi*](doc/AdventureApi.md) | [**yes4trackV1AdventuresPost**](doc/AdventureApi.md#yes4trackv1adventurespost) | **POST** /yes4track/v1/adventures | Create Adventure
+[*AuditApi*](doc/AuditApi.md) | [**yes4trackV1AuditsGet**](doc/AuditApi.md#yes4trackv1auditsget) | **GET** /yes4track/v1/audits | Get All Audit by filter with pagination
+[*CompanyApi*](doc/CompanyApi.md) | [**getByIdCompany**](doc/CompanyApi.md#getbyidcompany) | **GET** /yes4track/v1/companies/{id} | Get Company by id
+[*CompanyApi*](doc/CompanyApi.md) | [**yes4trackV1CompaniesGet**](doc/CompanyApi.md#yes4trackv1companiesget) | **GET** /yes4track/v1/companies | Get All Company by filter with pagination
+[*CompanyApi*](doc/CompanyApi.md) | [**yes4trackV1CompaniesIdDelete**](doc/CompanyApi.md#yes4trackv1companiesiddelete) | **DELETE** /yes4track/v1/companies/{id} | Delete Company by Id
+[*CompanyApi*](doc/CompanyApi.md) | [**yes4trackV1CompaniesIdPatch**](doc/CompanyApi.md#yes4trackv1companiesidpatch) | **PATCH** /yes4track/v1/companies/{id} | Update part of Company
+[*CompanyApi*](doc/CompanyApi.md) | [**yes4trackV1CompaniesIdPut**](doc/CompanyApi.md#yes4trackv1companiesidput) | **PUT** /yes4track/v1/companies/{id} | Update Company
+[*CompanyApi*](doc/CompanyApi.md) | [**yes4trackV1CompaniesPost**](doc/CompanyApi.md#yes4trackv1companiespost) | **POST** /yes4track/v1/companies | Create Company
+[*ExperienceApi*](doc/ExperienceApi.md) | [**getByIdExperience**](doc/ExperienceApi.md#getbyidexperience) | **GET** /yes4track/v1/experiences/{id} | Get Experience by id
+[*ExperienceApi*](doc/ExperienceApi.md) | [**getByIdExperienceCode**](doc/ExperienceApi.md#getbyidexperiencecode) | **GET** /yes4track/v1/experiences/{id}/code | Get Experience Code by id
+[*ExperienceApi*](doc/ExperienceApi.md) | [**yes4trackV1ExperiencesGet**](doc/ExperienceApi.md#yes4trackv1experiencesget) | **GET** /yes4track/v1/experiences | Get All Experience by filter with pagination
+[*ExperienceApi*](doc/ExperienceApi.md) | [**yes4trackV1ExperiencesIdActivatePost**](doc/ExperienceApi.md#yes4trackv1experiencesidactivatepost) | **POST** /yes4track/v1/experiences/{id}/activate | Activate Experience
+[*ExperienceApi*](doc/ExperienceApi.md) | [**yes4trackV1ExperiencesIdCodeCodeCheckPost**](doc/ExperienceApi.md#yes4trackv1experiencesidcodecodecheckpost) | **POST** /yes4track/v1/experiences/{id}/code/{code}/check | Check Experience Code
+[*ExperienceApi*](doc/ExperienceApi.md) | [**yes4trackV1ExperiencesIdDelete**](doc/ExperienceApi.md#yes4trackv1experiencesiddelete) | **DELETE** /yes4track/v1/experiences/{id} | Delete Experience by Id
+[*ExperienceApi*](doc/ExperienceApi.md) | [**yes4trackV1ExperiencesIdImagesImageIdDelete**](doc/ExperienceApi.md#yes4trackv1experiencesidimagesimageiddelete) | **DELETE** /yes4track/v1/experiences/{id}/images/{imageId} | Delete Experience by Id
+[*ExperienceApi*](doc/ExperienceApi.md) | [**yes4trackV1ExperiencesIdImagesPost**](doc/ExperienceApi.md#yes4trackv1experiencesidimagespost) | **POST** /yes4track/v1/experiences/{id}/images | Add images in Experience
+[*ExperienceApi*](doc/ExperienceApi.md) | [**yes4trackV1ExperiencesIdPatch**](doc/ExperienceApi.md#yes4trackv1experiencesidpatch) | **PATCH** /yes4track/v1/experiences/{id} | Update part of Experience
+[*ExperienceApi*](doc/ExperienceApi.md) | [**yes4trackV1ExperiencesIdPut**](doc/ExperienceApi.md#yes4trackv1experiencesidput) | **PUT** /yes4track/v1/experiences/{id} | Update Experience
+[*ExperienceApi*](doc/ExperienceApi.md) | [**yes4trackV1ExperiencesIdVideosPost**](doc/ExperienceApi.md#yes4trackv1experiencesidvideospost) | **POST** /yes4track/v1/experiences/{id}/videos | Add videos in an Experience
+[*ExperienceApi*](doc/ExperienceApi.md) | [**yes4trackV1ExperiencesIdVideosVideoIdDelete**](doc/ExperienceApi.md#yes4trackv1experiencesidvideosvideoiddelete) | **DELETE** /yes4track/v1/experiences/{id}/videos/{videoId} | Delete Experience by Id
+[*ExperienceApi*](doc/ExperienceApi.md) | [**yes4trackV1ExperiencesPost**](doc/ExperienceApi.md#yes4trackv1experiencespost) | **POST** /yes4track/v1/experiences | Create Experience
+[*GeolocationApi*](doc/GeolocationApi.md) | [**getAddressByLatLong**](doc/GeolocationApi.md#getaddressbylatlong) | **GET** /yes4track/v1/geolocations/{lat}/{lng} | Get Address by Lat Long
+[*NotificationApi*](doc/NotificationApi.md) | [**getByIdNotification**](doc/NotificationApi.md#getbyidnotification) | **GET** /yes4track/v1/notifications/{id} | Get Notification by id
+[*NotificationApi*](doc/NotificationApi.md) | [**yes4trackV1NotificationsGet**](doc/NotificationApi.md#yes4trackv1notificationsget) | **GET** /yes4track/v1/notifications | Get All Notification by filter with pagination
+[*NotificationApi*](doc/NotificationApi.md) | [**yes4trackV1NotificationsIdDelete**](doc/NotificationApi.md#yes4trackv1notificationsiddelete) | **DELETE** /yes4track/v1/notifications/{id} | Delete Notification by Id
+[*NotificationApi*](doc/NotificationApi.md) | [**yes4trackV1NotificationsIdPatch**](doc/NotificationApi.md#yes4trackv1notificationsidpatch) | **PATCH** /yes4track/v1/notifications/{id} | Update part of Notification
+[*NotificationApi*](doc/NotificationApi.md) | [**yes4trackV1NotificationsIdPut**](doc/NotificationApi.md#yes4trackv1notificationsidput) | **PUT** /yes4track/v1/notifications/{id} | Update Notification
+[*NotificationApi*](doc/NotificationApi.md) | [**yes4trackV1NotificationsPost**](doc/NotificationApi.md#yes4trackv1notificationspost) | **POST** /yes4track/v1/notifications | Create Notification
+[*SponsorApi*](doc/SponsorApi.md) | [**getByIdSponsor**](doc/SponsorApi.md#getbyidsponsor) | **GET** /yes4track/v1/sponsors/{id} | Get Sponsor by id
+[*SponsorApi*](doc/SponsorApi.md) | [**yes4trackV1SponsorsGet**](doc/SponsorApi.md#yes4trackv1sponsorsget) | **GET** /yes4track/v1/sponsors | Get All Sponsor by filter with pagination
+[*SponsorApi*](doc/SponsorApi.md) | [**yes4trackV1SponsorsIdDelete**](doc/SponsorApi.md#yes4trackv1sponsorsiddelete) | **DELETE** /yes4track/v1/sponsors/{id} | Delete Sponsor by Id
+[*SponsorApi*](doc/SponsorApi.md) | [**yes4trackV1SponsorsIdPatch**](doc/SponsorApi.md#yes4trackv1sponsorsidpatch) | **PATCH** /yes4track/v1/sponsors/{id} | Update part of Sponsor
+[*SponsorApi*](doc/SponsorApi.md) | [**yes4trackV1SponsorsIdPut**](doc/SponsorApi.md#yes4trackv1sponsorsidput) | **PUT** /yes4track/v1/sponsors/{id} | Update Sponsor
+[*SponsorApi*](doc/SponsorApi.md) | [**yes4trackV1SponsorsPost**](doc/SponsorApi.md#yes4trackv1sponsorspost) | **POST** /yes4track/v1/sponsors | Create Sponsor
+[*TemplateApi*](doc/TemplateApi.md) | [**getByIdTemplate**](doc/TemplateApi.md#getbyidtemplate) | **GET** /yes4track/v1/templates/{id} | Get Template by id
+[*TemplateApi*](doc/TemplateApi.md) | [**yes4trackV1TemplatesGet**](doc/TemplateApi.md#yes4trackv1templatesget) | **GET** /yes4track/v1/templates | Get All Template by filter with pagination
+[*TemplateApi*](doc/TemplateApi.md) | [**yes4trackV1TemplatesIdDelete**](doc/TemplateApi.md#yes4trackv1templatesiddelete) | **DELETE** /yes4track/v1/templates/{id} | Delete Template by Id
+[*TemplateApi*](doc/TemplateApi.md) | [**yes4trackV1TemplatesIdPatch**](doc/TemplateApi.md#yes4trackv1templatesidpatch) | **PATCH** /yes4track/v1/templates/{id} | Update part of Template
+[*TemplateApi*](doc/TemplateApi.md) | [**yes4trackV1TemplatesIdPhotosUploadPost**](doc/TemplateApi.md#yes4trackv1templatesidphotosuploadpost) | **POST** /yes4track/v1/templates/{id}/photos/upload | Create Template
+[*TemplateApi*](doc/TemplateApi.md) | [**yes4trackV1TemplatesIdPut**](doc/TemplateApi.md#yes4trackv1templatesidput) | **PUT** /yes4track/v1/templates/{id} | Update Template
+[*TemplateApi*](doc/TemplateApi.md) | [**yes4trackV1TemplatesPost**](doc/TemplateApi.md#yes4trackv1templatespost) | **POST** /yes4track/v1/templates | Create Template
+[*TrackApi*](doc/TrackApi.md) | [**getByIdTrack**](doc/TrackApi.md#getbyidtrack) | **GET** /yes4track/v1/tracks/{id} | Get Track by id
+[*TrackApi*](doc/TrackApi.md) | [**getByIdTrackGeoData**](doc/TrackApi.md#getbyidtrackgeodata) | **GET** /yes4track/v1/tracks/{id}/geodata | Get Track Geo Data by id
+[*TrackApi*](doc/TrackApi.md) | [**getByIdTrackGeoLocation**](doc/TrackApi.md#getbyidtrackgeolocation) | **GET** /yes4track/v1/tracks/geolocation | Get Track Geo Location by id
+[*TrackApi*](doc/TrackApi.md) | [**yes4trackV1TracksGet**](doc/TrackApi.md#yes4trackv1tracksget) | **GET** /yes4track/v1/tracks | Get All Track by filter with pagination
+[*TrackApi*](doc/TrackApi.md) | [**yes4trackV1TracksIdDelete**](doc/TrackApi.md#yes4trackv1tracksiddelete) | **DELETE** /yes4track/v1/tracks/{id} | Delete Track by Id
+[*TrackApi*](doc/TrackApi.md) | [**yes4trackV1TracksIdGeodataPost**](doc/TrackApi.md#yes4trackv1tracksidgeodatapost) | **POST** /yes4track/v1/tracks/{id}/geodata | Create Track GeoData
+[*TrackApi*](doc/TrackApi.md) | [**yes4trackV1TracksIdPatch**](doc/TrackApi.md#yes4trackv1tracksidpatch) | **PATCH** /yes4track/v1/tracks/{id} | Update part of Track
+[*TrackApi*](doc/TrackApi.md) | [**yes4trackV1TracksIdPut**](doc/TrackApi.md#yes4trackv1tracksidput) | **PUT** /yes4track/v1/tracks/{id} | Update Track
+[*TrackApi*](doc/TrackApi.md) | [**yes4trackV1TracksIdStatisticPut**](doc/TrackApi.md#yes4trackv1tracksidstatisticput) | **PUT** /yes4track/v1/tracks/{id}/statistic | Update Track Statistic
+[*TrackApi*](doc/TrackApi.md) | [**yes4trackV1TracksPost**](doc/TrackApi.md#yes4trackv1trackspost) | **POST** /yes4track/v1/tracks | Create Track
+[*TrailApi*](doc/TrailApi.md) | [**getByIdTrail**](doc/TrailApi.md#getbyidtrail) | **GET** /yes4track/v1/trails/{id} | Get Trail by id
+[*TrailApi*](doc/TrailApi.md) | [**getByIdTrailGeoData**](doc/TrailApi.md#getbyidtrailgeodata) | **GET** /yes4track/v1/trails/{id}/geodata | Get Trail Geo Data by id
+[*TrailApi*](doc/TrailApi.md) | [**yes4trackV1TrailsActiveByAngelGet**](doc/TrailApi.md#yes4trackv1trailsactivebyangelget) | **GET** /yes4track/v1/trails/activeByAngel | Get All Active Trail by Angel
+[*TrailApi*](doc/TrailApi.md) | [**yes4trackV1TrailsGet**](doc/TrailApi.md#yes4trackv1trailsget) | **GET** /yes4track/v1/trails | Get All Trail by filter with pagination
+[*TrailApi*](doc/TrailApi.md) | [**yes4trackV1TrailsIdAngelAngelIdDelete**](doc/TrailApi.md#yes4trackv1trailsidangelangeliddelete) | **DELETE** /yes4track/v1/trails/{id}/angel/{angelId} | Delete Trail Angel by Id
+[*TrailApi*](doc/TrailApi.md) | [**yes4trackV1TrailsIdAngelAngelIdPost**](doc/TrailApi.md#yes4trackv1trailsidangelangelidpost) | **POST** /yes4track/v1/trails/{id}/angel/{angelId} | Add Trail Angel by Id
+[*TrailApi*](doc/TrailApi.md) | [**yes4trackV1TrailsIdDelete**](doc/TrailApi.md#yes4trackv1trailsiddelete) | **DELETE** /yes4track/v1/trails/{id} | Delete Trail by Id
+[*TrailApi*](doc/TrailApi.md) | [**yes4trackV1TrailsIdGeodataChunckPost**](doc/TrailApi.md#yes4trackv1trailsidgeodatachunckpost) | **POST** /yes4track/v1/trails/{id}/geodata/chunck | Add Chunck Trail GeoData
+[*TrailApi*](doc/TrailApi.md) | [**yes4trackV1TrailsIdGeodataPost**](doc/TrailApi.md#yes4trackv1trailsidgeodatapost) | **POST** /yes4track/v1/trails/{id}/geodata | Create Trail GeoData
+[*TrailApi*](doc/TrailApi.md) | [**yes4trackV1TrailsIdImagesPost**](doc/TrailApi.md#yes4trackv1trailsidimagespost) | **POST** /yes4track/v1/trails/{id}/images | Add images in trail
+[*TrailApi*](doc/TrailApi.md) | [**yes4trackV1TrailsIdPatch**](doc/TrailApi.md#yes4trackv1trailsidpatch) | **PATCH** /yes4track/v1/trails/{id} | Update part of Trail
+[*TrailApi*](doc/TrailApi.md) | [**yes4trackV1TrailsIdPut**](doc/TrailApi.md#yes4trackv1trailsidput) | **PUT** /yes4track/v1/trails/{id} | Update Trail
+[*TrailApi*](doc/TrailApi.md) | [**yes4trackV1TrailsIdSponsorSponsorIdDelete**](doc/TrailApi.md#yes4trackv1trailsidsponsorsponsoriddelete) | **DELETE** /yes4track/v1/trails/{id}/sponsor/{sponsorId} | Delete Trail Sponsor by Id
+[*TrailApi*](doc/TrailApi.md) | [**yes4trackV1TrailsIdSponsorSponsorIdPost**](doc/TrailApi.md#yes4trackv1trailsidsponsorsponsoridpost) | **POST** /yes4track/v1/trails/{id}/sponsor/{sponsorId} | Add Trail Sponsor by Id
+[*TrailApi*](doc/TrailApi.md) | [**yes4trackV1TrailsPost**](doc/TrailApi.md#yes4trackv1trailspost) | **POST** /yes4track/v1/trails | Create Trail
+[*UserApi*](doc/UserApi.md) | [**getByIdUser**](doc/UserApi.md#getbyiduser) | **GET** /yes4track/v1/users/{id} | Get User by id
+[*UserApi*](doc/UserApi.md) | [**yes4trackV1UsersAccesstokenPost**](doc/UserApi.md#yes4trackv1usersaccesstokenpost) | **POST** /yes4track/v1/users/accesstoken | User SignIn
+[*UserApi*](doc/UserApi.md) | [**yes4trackV1UsersGet**](doc/UserApi.md#yes4trackv1usersget) | **GET** /yes4track/v1/users | Get All User by filter with pagination
+[*UserApi*](doc/UserApi.md) | [**yes4trackV1UsersIdCompaniesCompanyIdDelete**](doc/UserApi.md#yes4trackv1usersidcompaniescompanyiddelete) | **DELETE** /yes4track/v1/users/{id}/companies/{companyId} | Delete User Company
+[*UserApi*](doc/UserApi.md) | [**yes4trackV1UsersIdCompaniesCompanyIdPost**](doc/UserApi.md#yes4trackv1usersidcompaniescompanyidpost) | **POST** /yes4track/v1/users/{id}/companies/{companyId} | Add User Company
+[*UserApi*](doc/UserApi.md) | [**yes4trackV1UsersIdDelete**](doc/UserApi.md#yes4trackv1usersiddelete) | **DELETE** /yes4track/v1/users/{id} | Delete User by Id
+[*UserApi*](doc/UserApi.md) | [**yes4trackV1UsersIdLocationPut**](doc/UserApi.md#yes4trackv1usersidlocationput) | **PUT** /yes4track/v1/users/{id}/location | Update User Location
+[*UserApi*](doc/UserApi.md) | [**yes4trackV1UsersIdPatch**](doc/UserApi.md#yes4trackv1usersidpatch) | **PATCH** /yes4track/v1/users/{id} | Update part of User
+[*UserApi*](doc/UserApi.md) | [**yes4trackV1UsersIdPhotoPut**](doc/UserApi.md#yes4trackv1usersidphotoput) | **PUT** /yes4track/v1/users/{id}/photo | Update User Photo
+[*UserApi*](doc/UserApi.md) | [**yes4trackV1UsersIdPut**](doc/UserApi.md#yes4trackv1usersidput) | **PUT** /yes4track/v1/users/{id} | Update User
+[*UserApi*](doc/UserApi.md) | [**yes4trackV1UsersPost**](doc/UserApi.md#yes4trackv1userspost) | **POST** /yes4track/v1/users | Add User
+[*UserApi*](doc/UserApi.md) | [**yes4trackV1UsersResendcodePost**](doc/UserApi.md#yes4trackv1usersresendcodepost) | **POST** /yes4track/v1/users/resendcode | Resend Code
+[*UserApi*](doc/UserApi.md) | [**yes4trackV1UsersSetupangelPost**](doc/UserApi.md#yes4trackv1userssetupangelpost) | **POST** /yes4track/v1/users/setupangel | Setup User default Angel
+[*UserApi*](doc/UserApi.md) | [**yes4trackV1UsersSetupsponsorIdPost**](doc/UserApi.md#yes4trackv1userssetupsponsoridpost) | **POST** /yes4track/v1/users/setupsponsor/{id} | Setup User default Sponsor
+[*UserApi*](doc/UserApi.md) | [**yes4trackV1UsersSigninPost**](doc/UserApi.md#yes4trackv1userssigninpost) | **POST** /yes4track/v1/users/signin | User SignIn
+[*UserApi*](doc/UserApi.md) | [**yes4trackV1UsersSignupPost**](doc/UserApi.md#yes4trackv1userssignuppost) | **POST** /yes4track/v1/users/signup | User SignUp
 
 
 ## Documentation For Models

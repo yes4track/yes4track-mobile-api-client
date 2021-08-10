@@ -11,8 +11,19 @@ import 'package:built_value/serializer.dart';
 
 part 'post_notification_response.g.dart';
 
-
-
+/// PostNotificationResponse
+///
+/// Properties:
+/// * [createdAt] 
+/// * [updatedAt] 
+/// * [userCreated] 
+/// * [userUpdated] 
+/// * [message] 
+/// * [type] 
+/// * [channels] 
+/// * [attributes] 
+/// * [user] 
+/// * [id] 
 abstract class PostNotificationResponse implements Built<PostNotificationResponse, PostNotificationResponseBuilder> {
     @BuiltValueField(wireName: r'createdAt')
     DateTime? get createdAt;

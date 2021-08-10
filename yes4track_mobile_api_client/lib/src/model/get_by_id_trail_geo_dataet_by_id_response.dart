@@ -7,8 +7,10 @@ import 'package:built_value/serializer.dart';
 
 part 'get_by_id_trail_geo_dataet_by_id_response.g.dart';
 
-
-
+/// GetByIdTrailGeoDataetByIdResponse
+///
+/// Properties:
+/// * [data] 
 abstract class GetByIdTrailGeoDataetByIdResponse implements Built<GetByIdTrailGeoDataetByIdResponse, GetByIdTrailGeoDataetByIdResponseBuilder> {
     @BuiltValueField(wireName: r'data')
     String? get data;
