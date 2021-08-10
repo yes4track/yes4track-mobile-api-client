@@ -20,7 +20,6 @@ import 'package:yes4track_mobile_api_client/src/model/post_trail_geo_data_respon
 import 'package:yes4track_mobile_api_client/src/model/post_trail_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_trail_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/put_trail_request.dart';
-import 'package:yes4track_mobile_api_client/src/model/string_string_values_key_value_pair.dart';
 
 class TrailApi {
 
@@ -691,7 +690,7 @@ class TrailApi {
     required String id,
     String? xApiKey,
     String? xCsrfToken,
-    BuiltList<StringStringValuesKeyValuePair>? files,
+    MultipartFile? files,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -726,7 +725,7 @@ class TrailApi {
 
     try {
       _bodyData = FormData.fromMap(<String, dynamic>{
-        if (files != null) r'files': encodeFormParameter(_serializers, files, const FullType(BuiltList, [FullType(StringStringValuesKeyValuePair)])),
+        if (files != null) r'files': files,
       });
 
     } catch(error, stackTrace) {
@@ -800,7 +799,7 @@ class TrailApi {
     required String id,
     String? xApiKey,
     String? xCsrfToken,
-    BuiltList<StringStringValuesKeyValuePair>? images,
+    MultipartFile? images,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -835,7 +834,7 @@ class TrailApi {
 
     try {
       _bodyData = FormData.fromMap(<String, dynamic>{
-        if (images != null) r'images': encodeFormParameter(_serializers, images, const FullType(BuiltList, [FullType(StringStringValuesKeyValuePair)])),
+        if (images != null) r'images': images,
       });
 
     } catch(error, stackTrace) {

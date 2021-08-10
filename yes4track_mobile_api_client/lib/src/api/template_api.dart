@@ -16,7 +16,6 @@ import 'package:yes4track_mobile_api_client/src/model/operation.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_template_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_template_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/put_template_request.dart';
-import 'package:yes4track_mobile_api_client/src/model/string_string_values_key_value_pair.dart';
 
 class TemplateApi {
 
@@ -376,7 +375,7 @@ class TemplateApi {
     required String id,
     String? xApiKey,
     String? xCsrfToken,
-    BuiltList<StringStringValuesKeyValuePair>? images,
+    MultipartFile? images,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -411,7 +410,7 @@ class TemplateApi {
 
     try {
       _bodyData = FormData.fromMap(<String, dynamic>{
-        if (images != null) r'images': encodeFormParameter(_serializers, images, const FullType(BuiltList, [FullType(StringStringValuesKeyValuePair)])),
+        if (images != null) r'images': images,
       });
 
     } catch(error, stackTrace) {

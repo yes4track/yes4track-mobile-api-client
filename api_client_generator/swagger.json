@@ -48,7 +48,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "b2462734-4c9d-4544-acfb-11a366d01777"
+              "default": "b572e8f3-a606-4cd9-a83a-d3656261d2b4"
             }
           }
         ],
@@ -112,7 +112,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "68f0847b-a279-4d5f-a460-ac03845963b4"
+              "default": "38d7cd78-8d14-4d10-b939-86479289baba"
             }
           }
         ],
@@ -183,7 +183,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c2d54a61-83ef-47f7-bb6e-a762b1cdcc94"
+              "default": "62fdf72e-8d68-43ac-8554-23da0df7ce34"
             }
           }
         ],
@@ -281,7 +281,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "d58e4e16-d59a-42ac-ac0e-0e230b5d9915"
+              "default": "f766902f-df50-4643-83d3-f9f71ec3af8d"
             }
           }
         ],
@@ -387,7 +387,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "e3b2c20c-680f-450a-9c93-769fb55723bd"
+              "default": "a89f869b-d2ee-4c30-b64b-df0412588954"
             }
           }
         ],
@@ -478,7 +478,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "9cb29509-b021-492a-a55b-12ff102dfb48"
+              "default": "4139a9fc-c952-49e8-b35e-53b5d0fe2e5e"
             }
           }
         ],
@@ -571,7 +571,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "4e3d0f05-9858-496a-b99e-ef1f4301c556"
+              "default": "49c7dd81-d78f-4c7d-a3b5-5cd603ea0865"
             }
           }
         ],
@@ -636,7 +636,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "6eadb995-89b5-4fd3-8fde-6bf949181439"
+              "default": "f67efa77-e8c0-424b-8b71-7e4484a436e7"
             }
           }
         ],
@@ -725,7 +725,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "def094d9-239a-4ae0-826a-93d4291da1d8"
+              "default": "31c7492d-2357-4528-ac0d-885350c7f2ba"
             }
           }
         ],
@@ -792,7 +792,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "79eeaeb1-2aa8-4229-8c52-722d5ae0eaab"
+              "default": "e7f0672f-6fa6-4ac4-ba8f-f7631995f354"
             }
           }
         ],
@@ -892,7 +892,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "6e081065-eb7e-4b59-9c9d-ffc332003640"
+              "default": "a229fea5-500b-44f9-8cb7-129aed8b7731"
             }
           }
         ],
@@ -1027,7 +1027,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "05299909-8f70-44c8-b0cb-481783af619e"
+              "default": "850d9307-895f-4c3b-85a3-ed164800d341"
             }
           }
         ],
@@ -1083,7 +1083,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "9515652b-aa16-4cb3-bd6b-d499a56a2266"
+              "default": "f2d88fc7-7dfa-4162-978d-d23a5168b0f4"
             }
           }
         ],
@@ -1183,7 +1183,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "b446bdaf-99a3-4532-8f06-09fca1e3f4ad"
+              "default": "3bc6408c-ca76-4747-a4ad-4f9b21cb4fd6"
             }
           }
         ],
@@ -1267,7 +1267,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "0e43387c-be1e-4667-aaf2-0c0bf9a70e1c"
+              "default": "33bf21ce-153c-42bf-95f1-367906206fb7"
             }
           }
         ],
@@ -1340,7 +1340,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "e7232b6a-1e21-4982-a42c-7d6c772152bd"
+              "default": "d769e471-c7b9-4e6a-93c0-f787034c58ca"
             }
           }
         ],
@@ -1412,7 +1412,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "03dc7bf0-e54c-4758-a529-907ab6f3b18a"
+              "default": "8ce6f577-a2af-41d9-b7d0-9dac7e2d6403"
             }
           }
         ],
@@ -1478,7 +1478,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "59b542f9-554f-40a8-8950-0bac1d6d0961"
+              "default": "71bf26f4-911c-466f-bb85-2c4d0e359424"
             }
           }
         ],
@@ -1491,27 +1491,8 @@
                   "images": {
                     "type": "array",
                     "items": {
-                      "$ref": "#/components/schemas/StringStringValuesKeyValuePair"
-                    },
-                    "description": "Images",
-                    "nullable": true
-                  }
-                }
-              },
-              "encoding": {
-                "images": {
-                  "style": "form"
-                }
-              }
-            },
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "images": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/StringStringValuesKeyValuePair"
+                      "type": "string",
+                      "format": "binary"
                     },
                     "description": "Images",
                     "nullable": true
@@ -1530,7 +1511,23 @@
           "201": {
             "description": "Created - The request has succeeded and a new resource has been created as a result of it. This is typically the response sent after a POST request, or after some PUT requests.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
               "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "text/json": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -1543,7 +1540,17 @@
           "412": {
             "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
               "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
+              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorDetails"
                 }
@@ -1553,7 +1560,17 @@
           "422": {
             "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
               "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
+              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorDetails"
                 }
@@ -1563,7 +1580,17 @@
           "500": {
             "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
               "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
+              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorDetails"
                 }
@@ -1614,7 +1641,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "10c6c30f-b563-430a-968a-98dc055d2b20"
+              "default": "265a9d51-2e21-4b01-bf11-6ecb1acd6a3c"
             }
           }
         ],
@@ -1627,27 +1654,8 @@
                   "videos": {
                     "type": "array",
                     "items": {
-                      "$ref": "#/components/schemas/StringStringValuesKeyValuePair"
-                    },
-                    "description": "Videos",
-                    "nullable": true
-                  }
-                }
-              },
-              "encoding": {
-                "videos": {
-                  "style": "form"
-                }
-              }
-            },
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "videos": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/StringStringValuesKeyValuePair"
+                      "type": "string",
+                      "format": "binary"
                     },
                     "description": "Videos",
                     "nullable": true
@@ -1666,7 +1674,23 @@
           "201": {
             "description": "Created - The request has succeeded and a new resource has been created as a result of it. This is typically the response sent after a POST request, or after some PUT requests.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
               "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "text/json": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -1679,7 +1703,17 @@
           "412": {
             "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
               "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
+              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorDetails"
                 }
@@ -1689,7 +1723,17 @@
           "422": {
             "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
               "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
+              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorDetails"
                 }
@@ -1699,7 +1743,17 @@
           "500": {
             "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
               "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
+              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorDetails"
                 }
@@ -1760,7 +1814,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "ab15d629-817e-4c69-beb8-7651a6dcfa25"
+              "default": "c083c29f-bb58-4046-bbe1-1025a3f95420"
             }
           }
         ],
@@ -1905,7 +1959,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "81821e6e-0d89-402e-bb2c-5b1e9a466261"
+              "default": "70e62ae2-f12a-47ba-964d-e6dc6b6a52f2"
             }
           }
         ],
@@ -1974,7 +2028,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "0efd6a08-e69d-4a9f-85e8-fb38e20272ae"
+              "default": "c2cfbb9a-90d4-4a2d-8391-b6d18a63407d"
             }
           }
         ],
@@ -2038,7 +2092,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "b4d1d9fa-c6f3-49da-bf61-08b371b8940d"
+              "default": "e83d0b2a-4955-43bd-8c16-67c7ddcbe25a"
             }
           }
         ],
@@ -2108,7 +2162,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "1b50b60c-7893-4e9b-b8b6-80f9b15101d8"
+              "default": "ebfdf13d-e7f2-411d-95e5-e5b420862e67"
             }
           }
         ],
@@ -2206,7 +2260,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "fd9266e3-ec6f-47e9-aed2-604f02a19d9d"
+              "default": "7905a250-4038-4fc5-b7d5-e46cd19919bd"
             }
           }
         ],
@@ -2364,7 +2418,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "8547c59c-fdc1-4594-bf9f-d08895f654a1"
+              "default": "e7129b4c-58ee-4dde-b94e-be331e1579a7"
             }
           }
         ],
@@ -2420,7 +2474,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "8d33cd60-daba-42c2-8306-14b14617b91d"
+              "default": "6ecc61e1-2837-4889-8131-d3506d83cf81"
             }
           }
         ],
@@ -2519,7 +2573,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "84c02874-ae89-4816-81c1-787db2d9781e"
+              "default": "6c451a5c-4433-4201-bc53-87a3802c7582"
             }
           }
         ],
@@ -2583,7 +2637,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "5848be78-2612-403e-bc91-1ec67c516f8c"
+              "default": "105121be-aec8-4c34-92c0-d716cc585e3c"
             }
           }
         ],
@@ -2654,7 +2708,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "35f49c96-d186-4289-83e9-ba6652ba2d97"
+              "default": "1b88c0cd-7793-46fb-9b3d-aae3677b9ff6"
             }
           }
         ],
@@ -2752,7 +2806,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "91aa231d-217c-4c7b-89d2-455ed536a946"
+              "default": "77cb152a-89b6-4445-ba3b-963d33e2e2c6"
             }
           }
         ],
@@ -2858,7 +2912,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f68f8abd-e9fe-46cc-9796-e2288a067f59"
+              "default": "cb2d84e8-2403-4d5d-9861-1984d855bb8d"
             }
           }
         ],
@@ -2934,7 +2988,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "b908d7bb-bdf0-44da-a36f-85741891b9a0"
+              "default": "cb8cfc56-fb02-48a2-9bbb-16f1d13763cd"
             }
           }
         ],
@@ -3047,7 +3101,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "d0ff78a9-6440-49c2-aa64-d3bef1c3b788"
+              "default": "aa1042b3-6379-4fba-935d-4bc0b0fec577"
             }
           }
         ],
@@ -3103,7 +3157,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "1a4c8b7d-bcf5-43d8-8928-8838512af8ef"
+              "default": "0d06f6a4-4489-43d1-bf5a-4276bce23b90"
             }
           }
         ],
@@ -3203,7 +3257,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "705bea96-73b1-4c3e-8c19-0bee44451937"
+              "default": "e95aa09b-ccd9-4dc9-b406-e60d42873809"
             }
           }
         ],
@@ -3275,7 +3329,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "3f7f0728-9f5c-4ee7-aaea-ad27b90bf3b5"
+              "default": "4600783f-5a88-4350-916b-c7de8d9e6f4a"
             }
           }
         ],
@@ -3350,7 +3404,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "05d98143-c9c0-4025-b4e8-4ac3a39097ad"
+              "default": "d0b5f655-6949-40b6-84df-1950f3d90ad6"
             }
           }
         ],
@@ -3422,7 +3476,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "14eb6244-f52b-4d4a-a63e-0bee8b6e3427"
+              "default": "ced0a7a3-aa46-4702-87ce-a79c3a2017d7"
             }
           }
         ],
@@ -3435,27 +3489,8 @@
                   "images": {
                     "type": "array",
                     "items": {
-                      "$ref": "#/components/schemas/StringStringValuesKeyValuePair"
-                    },
-                    "description": "Images",
-                    "nullable": true
-                  }
-                }
-              },
-              "encoding": {
-                "images": {
-                  "style": "form"
-                }
-              }
-            },
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "images": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/StringStringValuesKeyValuePair"
+                      "type": "string",
+                      "format": "binary"
                     },
                     "description": "Images",
                     "nullable": true
@@ -3474,7 +3509,23 @@
           "201": {
             "description": "Created - The request has succeeded and a new resource has been created as a result of it. This is typically the response sent after a POST request, or after some PUT requests.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
               "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "text/json": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -3487,7 +3538,17 @@
           "412": {
             "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
               "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
+              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorDetails"
                 }
@@ -3497,7 +3558,17 @@
           "422": {
             "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
               "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
+              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorDetails"
                 }
@@ -3507,7 +3578,17 @@
           "500": {
             "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
               "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
+              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorDetails"
                 }
@@ -3558,7 +3639,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "2bf79e8b-1f7c-456b-a483-b49ecba17697"
+              "default": "c376d5bc-c8ec-4e72-b115-80a98cb0bff4"
             }
           }
         ],
@@ -3571,27 +3652,8 @@
                   "videos": {
                     "type": "array",
                     "items": {
-                      "$ref": "#/components/schemas/StringStringValuesKeyValuePair"
-                    },
-                    "description": "Videos",
-                    "nullable": true
-                  }
-                }
-              },
-              "encoding": {
-                "videos": {
-                  "style": "form"
-                }
-              }
-            },
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "videos": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/StringStringValuesKeyValuePair"
+                      "type": "string",
+                      "format": "binary"
                     },
                     "description": "Videos",
                     "nullable": true
@@ -3610,7 +3672,23 @@
           "201": {
             "description": "Created - The request has succeeded and a new resource has been created as a result of it. This is typically the response sent after a POST request, or after some PUT requests.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
               "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "text/json": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -3623,7 +3701,17 @@
           "412": {
             "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
               "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
+              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorDetails"
                 }
@@ -3633,7 +3721,17 @@
           "422": {
             "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
               "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
+              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorDetails"
                 }
@@ -3643,7 +3741,17 @@
           "500": {
             "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
               "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
+              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorDetails"
                 }
@@ -3706,7 +3814,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "38a25394-c4a1-4cd7-9198-0549b27360d8"
+              "default": "6fd0b3b9-69b3-4b4a-aedb-72a9475f5504"
             }
           }
         ],
@@ -3778,7 +3886,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "ffa1dc4c-1028-4917-9ca9-996e4597be6c"
+              "default": "4c214caa-fcda-4ec1-969d-720366094343"
             }
           }
         ],
@@ -3842,7 +3950,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "b2c71d8d-bb7d-4492-91a6-bc53b71c8a4f"
+              "default": "ebcd2b2e-f095-4173-90d2-697b443b5b61"
             }
           }
         ],
@@ -3913,7 +4021,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f9c45305-9b46-490a-8532-7d453d10adb2"
+              "default": "8b93d725-9955-4946-8f57-002be1c6b104"
             }
           }
         ],
@@ -4011,7 +4119,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "88aea552-2951-4c1b-baa4-aa26fedecc33"
+              "default": "7d56610e-a599-46b4-a292-b46308a8a6d9"
             }
           }
         ],
@@ -4169,7 +4277,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "cd34df28-7384-4741-9c23-b79472aeb867"
+              "default": "921f73c7-f0aa-4bd7-bba8-6f8f7141450e"
             }
           }
         ],
@@ -4225,7 +4333,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "56ec0596-713d-4747-9d58-e45139d0dea6"
+              "default": "2ec9d9bd-2b93-49c0-a756-27f02b3a8a43"
             }
           }
         ],
@@ -4324,7 +4432,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "3754123e-9464-4fee-938c-02bde7dd1255"
+              "default": "d2b719d4-d448-4c0e-85e6-664350de9023"
             }
           }
         ],
@@ -4388,7 +4496,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "09308dfc-bd35-4d58-a09b-487021e3d6a2"
+              "default": "38da138b-0313-4a3c-8097-0234a3ada7c5"
             }
           }
         ],
@@ -4459,7 +4567,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "dcf8a5e7-c367-4272-9204-6680b4dda9fb"
+              "default": "0c9f20ef-527c-4ac8-965f-49a5abcecbc2"
             }
           }
         ],
@@ -4557,7 +4665,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "148a6484-9408-47a0-9bb7-80f86db5992d"
+              "default": "d0e690b0-e6c5-4861-b0fc-2f8a2a9f14fb"
             }
           }
         ],
@@ -4716,7 +4824,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "74232269-4259-4853-9825-9d42cfae90ae"
+              "default": "af49eb01-1c5d-4705-939f-aeac85ff0ef1"
             }
           }
         ],
@@ -4772,7 +4880,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f4dc91b9-00e3-4d8c-8ea9-e5ff2087621c"
+              "default": "103f0502-20db-43e8-bb5a-091e9a4b0888"
             }
           }
         ],
@@ -4871,7 +4979,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "e341abfe-1ce2-42c5-8749-65803374a0c1"
+              "default": "a83b190d-6595-41c3-b0a6-ca240c1d6ef0"
             }
           }
         ],
@@ -4935,7 +5043,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "b8851ffb-781a-47bb-a071-e147c80f8ae0"
+              "default": "4448325d-4a31-4de1-b43c-0fda179a8bc9"
             }
           }
         ],
@@ -5006,7 +5114,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "6a991690-7186-4709-80d4-c5cba3b71243"
+              "default": "df5627ef-f8bc-4aed-a1a0-261f70f3a8e3"
             }
           }
         ],
@@ -5104,7 +5212,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "d98d3052-121f-4967-9efc-cec1560248fe"
+              "default": "1bb1f459-32f6-4918-89b5-bea7ca96184b"
             }
           }
         ],
@@ -5222,7 +5330,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c4efd4cc-3688-4e9b-800e-450f4bea4487"
+              "default": "4f6e28e8-0b15-4432-b933-b772198360a3"
             }
           }
         ],
@@ -5278,7 +5386,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "e1dc576a-b6c4-405d-ac00-748a66fa47f3"
+              "default": "96f24c5e-9575-4a1b-9f16-28043f746523"
             }
           }
         ],
@@ -5377,7 +5485,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "abd2ee90-182f-42f1-8123-b94cbdcb3170"
+              "default": "7927ba02-a82f-49d7-a44d-5c4ddf8d6eaf"
             }
           }
         ],
@@ -5390,27 +5498,8 @@
                   "images": {
                     "type": "array",
                     "items": {
-                      "$ref": "#/components/schemas/StringStringValuesKeyValuePair"
-                    },
-                    "description": "Images",
-                    "nullable": true
-                  }
-                }
-              },
-              "encoding": {
-                "images": {
-                  "style": "form"
-                }
-              }
-            },
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "images": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/StringStringValuesKeyValuePair"
+                      "type": "string",
+                      "format": "binary"
                     },
                     "description": "Images",
                     "nullable": true
@@ -5429,7 +5518,23 @@
           "201": {
             "description": "Created - The request has succeeded and a new resource has been created as a result of it. This is typically the response sent after a POST request, or after some PUT requests.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
               "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "text/json": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -5442,7 +5547,17 @@
           "412": {
             "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
               "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
+              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorDetails"
                 }
@@ -5452,7 +5567,17 @@
           "422": {
             "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
               "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
+              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorDetails"
                 }
@@ -5462,7 +5587,17 @@
           "500": {
             "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
               "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
+              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorDetails"
                 }
@@ -5513,7 +5648,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "878e3972-bd5a-4baa-b29b-7c619b4a9ff0"
+              "default": "ef8c5c90-7f30-47b0-a190-3d5a3acb49a6"
             }
           }
         ],
@@ -5577,7 +5712,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "eba507fe-1731-403d-8df2-6cca4aeaeb4f"
+              "default": "c7acedd7-80e1-4a57-a2da-9a42e4538016"
             }
           }
         ],
@@ -5648,7 +5783,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "d3426793-0e19-4730-a2ab-1a89537127ab"
+              "default": "98b64b05-2227-43c5-b358-b3c214a2bb4a"
             }
           }
         ],
@@ -5746,7 +5881,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f17e1134-e099-4673-b795-9b6ae96467c9"
+              "default": "99f421b1-fcb4-4b45-9888-393d90e5624b"
             }
           }
         ],
@@ -5880,7 +6015,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "358d990b-8461-4dbc-a2af-803a4d39c064"
+              "default": "83e86816-3a6c-4646-aedf-4e3f31a3fb09"
             }
           }
         ],
@@ -5936,7 +6071,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "43b31e5b-a7cd-4520-a6df-e84e123d03a2"
+              "default": "6ca58d41-8b28-41b3-a97c-ce048979756c"
             }
           }
         ],
@@ -6036,7 +6171,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "2e244b6c-1c37-4a95-bbf7-66242d1f5583"
+              "default": "5dfe7d50-bf18-4ef7-9fd4-60c0dee67c57"
             }
           }
         ],
@@ -6099,7 +6234,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "b669a73f-470f-4821-84ce-8ba5dbb04c28"
+              "default": "d43d40f0-dff0-477e-8650-153057ffc83e"
             }
           }
         ],
@@ -6112,27 +6247,8 @@
                   "files": {
                     "type": "array",
                     "items": {
-                      "$ref": "#/components/schemas/StringStringValuesKeyValuePair"
-                    },
-                    "description": "Files",
-                    "nullable": true
-                  }
-                }
-              },
-              "encoding": {
-                "files": {
-                  "style": "form"
-                }
-              }
-            },
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "files": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/StringStringValuesKeyValuePair"
+                      "type": "string",
+                      "format": "binary"
                     },
                     "description": "Files",
                     "nullable": true
@@ -6151,7 +6267,17 @@
           "201": {
             "description": "Created - The request has succeeded and a new resource has been created as a result of it. This is typically the response sent after a POST request, or after some PUT requests.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostTrackGeoDataResponse"
+                }
+              },
               "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostTrackGeoDataResponse"
+                }
+              },
+              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/PostTrackGeoDataResponse"
                 }
@@ -6161,7 +6287,17 @@
           "412": {
             "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
               "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
+              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorDetails"
                 }
@@ -6171,7 +6307,17 @@
           "422": {
             "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
               "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
+              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorDetails"
                 }
@@ -6181,7 +6327,17 @@
           "500": {
             "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
               "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
+              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorDetails"
                 }
@@ -6255,7 +6411,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "295bdbc6-9805-4fd4-9c95-4645ecb8a074"
+              "default": "45dd5e52-783d-4ad4-bbd4-675c55b782ea"
             }
           }
         ],
@@ -6330,7 +6486,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "e5a243c5-bb9a-4b2a-96d1-69ef2f60874c"
+              "default": "7156f9a8-67f9-47d1-ad2d-1eb50d87606d"
             }
           }
         ],
@@ -6436,7 +6592,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "8a718eaa-16d6-4a92-bc50-fea3088c798f"
+              "default": "a527d8ca-b4b1-4d34-8726-04f1a72f0ba3"
             }
           }
         ],
@@ -6510,7 +6666,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "97d826da-687c-49a3-94df-9a8058518af9"
+              "default": "d636d633-e914-4eaa-a180-d4bbdc22cf98"
             }
           }
         ],
@@ -6575,7 +6731,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "ae228c1a-254a-4323-9698-8b4f5245224e"
+              "default": "1a675dab-06a2-4024-b253-841d32769abc"
             }
           }
         ],
@@ -6639,7 +6795,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "0669d7dd-01c5-4419-8193-b7f2d60d0c21"
+              "default": "c2662510-78c2-463b-9a3b-b063b6dd075f"
             }
           }
         ],
@@ -6710,7 +6866,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "083be3e7-e62c-427a-8293-5f65452fd20c"
+              "default": "90fdfff8-5421-4844-add5-4cb82a0b9fb0"
             }
           }
         ],
@@ -6808,7 +6964,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f7481a75-b35a-44b6-b9c1-a783af9a79da"
+              "default": "bd62f7e2-4bee-49c6-9c52-95f4a7db1c9c"
             }
           }
         ],
@@ -6914,7 +7070,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "87676d80-6c87-4942-97aa-eab24aa0da13"
+              "default": "28d96548-293f-434e-b037-267649c246d8"
             }
           }
         ],
@@ -6988,7 +7144,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "8db4657a-928a-4413-949a-86faee5af802"
+              "default": "c890b946-68a1-483e-ba17-e45aa3403d28"
             }
           }
         ],
@@ -7042,7 +7198,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "5d4c8f68-b1fd-4a0b-986b-0e0dabab7400"
+              "default": "a247b681-fe09-49e9-84df-a1724f8e18e3"
             }
           }
         ],
@@ -7178,7 +7334,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f6532c04-bf97-47af-bf26-03f76aff828a"
+              "default": "fd2c223c-d59c-42c1-9fde-15f2afc027cc"
             }
           }
         ],
@@ -7234,7 +7390,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "8e37ad90-a24d-4b1b-b6c4-498cf6205fa6"
+              "default": "a40d4aef-0d9b-497f-a04d-6a5839cdbb9c"
             }
           }
         ],
@@ -7334,7 +7490,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "a08774d8-9247-4852-afa2-336f69cf6e9a"
+              "default": "97d7d75a-2a9c-443a-8eab-b6a2c2d5f5f8"
             }
           }
         ],
@@ -7404,7 +7560,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "a565a556-74ff-41d3-9706-22e2c564153e"
+              "default": "cd4e07cc-4141-4a5d-b680-0bed6becfb72"
             }
           }
         ],
@@ -7417,27 +7573,8 @@
                   "files": {
                     "type": "array",
                     "items": {
-                      "$ref": "#/components/schemas/StringStringValuesKeyValuePair"
-                    },
-                    "description": "Files",
-                    "nullable": true
-                  }
-                }
-              },
-              "encoding": {
-                "files": {
-                  "style": "form"
-                }
-              }
-            },
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "files": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/StringStringValuesKeyValuePair"
+                      "type": "string",
+                      "format": "binary"
                     },
                     "description": "Files",
                     "nullable": true
@@ -7456,7 +7593,17 @@
           "201": {
             "description": "Created - The request has succeeded and a new resource has been created as a result of it. This is typically the response sent after a POST request, or after some PUT requests.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostTrailGeoDataResponse"
+                }
+              },
               "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostTrailGeoDataResponse"
+                }
+              },
+              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/PostTrailGeoDataResponse"
                 }
@@ -7466,7 +7613,17 @@
           "412": {
             "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
               "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
+              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorDetails"
                 }
@@ -7476,7 +7633,17 @@
           "422": {
             "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
               "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
+              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorDetails"
                 }
@@ -7486,7 +7653,17 @@
           "500": {
             "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
               "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
+              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorDetails"
                 }
@@ -7537,7 +7714,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "dadf2fa7-5aa8-4eb1-ade0-db19f4a95562"
+              "default": "8313c752-fd70-4aba-a844-ede0a0572e5e"
             }
           }
         ],
@@ -7630,7 +7807,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "b935340b-e701-4674-88d5-90da5f3e52cf"
+              "default": "71157248-7a54-477b-8141-7163c671dd9a"
             }
           }
         ],
@@ -7643,27 +7820,8 @@
                   "images": {
                     "type": "array",
                     "items": {
-                      "$ref": "#/components/schemas/StringStringValuesKeyValuePair"
-                    },
-                    "description": "Images",
-                    "nullable": true
-                  }
-                }
-              },
-              "encoding": {
-                "images": {
-                  "style": "form"
-                }
-              }
-            },
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "images": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/StringStringValuesKeyValuePair"
+                      "type": "string",
+                      "format": "binary"
                     },
                     "description": "Images",
                     "nullable": true
@@ -7682,7 +7840,23 @@
           "201": {
             "description": "Created - The request has succeeded and a new resource has been created as a result of it. This is typically the response sent after a POST request, or after some PUT requests.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
               "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "text/json": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -7695,7 +7869,17 @@
           "412": {
             "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
               "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
+              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorDetails"
                 }
@@ -7705,7 +7889,17 @@
           "422": {
             "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
               "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
+              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorDetails"
                 }
@@ -7715,7 +7909,17 @@
           "500": {
             "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
               "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              },
+              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorDetails"
                 }
@@ -7777,7 +7981,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "1f0b807d-a7bc-4532-8747-5a85dd72d33f"
+              "default": "f6da07ce-5c32-4945-9366-61f9cc0aad1f"
             }
           }
         ],
@@ -7868,7 +8072,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "78653f2b-fec4-463e-82f5-a977555bd016"
+              "default": "43567cec-fe8a-4689-8af0-cbe14f10c4ca"
             }
           }
         ],
@@ -7950,7 +8154,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "8c6f7e55-ca12-480f-829d-c2ef51afd3c2"
+              "default": "6f850c4e-2432-4590-8f94-c8fee1869280"
             }
           }
         ],
@@ -8014,7 +8218,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "148f6553-b124-4e62-b108-d3434874316a"
+              "default": "bf9a696d-0937-4823-9755-f048009720d5"
             }
           }
         ],
@@ -8084,7 +8288,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "0d891935-60e2-49bc-a8e9-bbb1b498e46a"
+              "default": "862fe9c8-ad8f-4a17-a732-3c67932663e5"
             }
           }
         ],
@@ -8182,7 +8386,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "fb3dd906-8904-421d-bb13-5a9c01ede255"
+              "default": "2445bd15-cc23-4787-af14-9ca9e9784f02"
             }
           }
         ],
@@ -8341,7 +8545,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "7d272fbf-461d-43c4-98f1-38111c8cdd28"
+              "default": "a9c15e14-2d88-4e9d-8770-66b061b8e8f0"
             }
           }
         ],
@@ -8397,7 +8601,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "1136d45d-bbee-404b-b55c-f3375f70577c"
+              "default": "700c7689-5356-42ba-bd13-401aea0dcc16"
             }
           }
         ],
@@ -8485,7 +8689,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "0b4fe32f-1369-4ee0-8d6d-752db4a4d549"
+              "default": "0499dc59-b66d-4694-a1aa-3fd6e42179df"
             }
           }
         ],
@@ -8576,7 +8780,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "d57c102d-ebf5-4c30-bd07-0abb1d14c717"
+              "default": "c74f6516-3ef6-474a-9ee7-74921050cf55"
             }
           }
         ],
@@ -8660,7 +8864,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f62f1070-a315-4e16-bbc8-5f05c561aa61"
+              "default": "e6847519-4255-44b6-86b9-ba10a80f0c6c"
             }
           }
         ],
@@ -8752,7 +8956,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "416d8490-0677-4896-bc19-902e09e89ec0"
+              "default": "005448dc-a990-4387-ba34-6b240157396a"
             }
           }
         ],
@@ -8823,7 +9027,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "3a46d186-10f3-45ef-97ff-12c25a8481dc"
+              "default": "28cc9418-777b-4760-bd97-75bc2d7e2e30"
             }
           }
         ],
@@ -8921,7 +9125,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "eae83ac4-4b10-40c1-b494-ab48244298aa"
+              "default": "677e4f8a-cc9d-4e47-9eab-980d6d7ed76b"
             }
           }
         ],
@@ -9020,7 +9224,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "4b189615-da91-405d-bc60-41856409e4d2"
+              "default": "f00173b4-e4ba-4a15-9cf2-7f5f2b0a6d61"
             }
           }
         ],
@@ -9115,7 +9319,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "4193ec8a-12a7-40c4-a731-4ae013dc75e8"
+              "default": "6a3b5619-2158-4b53-8066-cc2a0f63f907"
             }
           }
         ],
@@ -9863,24 +10067,6 @@
         "properties": {
           "userLiked": {
             "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "StringStringValuesKeyValuePair": {
-        "type": "object",
-        "properties": {
-          "key": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "value": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "readOnly": true
           }
         },
         "additionalProperties": false

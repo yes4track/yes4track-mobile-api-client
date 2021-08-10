@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Track id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'eba507fe-1731-403d-8df2-6cca4aeaeb4f']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c7acedd7-80e1-4a57-a2da-9a42e4538016']
 
 ### Return type
 
@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Track id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2e244b6c-1c37-4a95-bbf7-66242d1f5583']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5dfe7d50-bf18-4ef7-9fd4-60c0dee67c57']
 
 ### Return type
 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
  **adventureId** | [**String**](.md)| Track id | [optional] 
  **experienceId** | [**String**](.md)| Track id | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '295bdbc6-9805-4fd4-9c95-4645ecb8a074']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '45dd5e52-783d-4ad4-bbd4-675c55b782ea']
 
 ### Return type
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '358d990b-8461-4dbc-a2af-803a4d39c064']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '83e86816-3a6c-4646-aedf-4e3f31a3fb09']
 
 ### Return type
 
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Track id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '878e3972-bd5a-4baa-b29b-7c619b4a9ff0']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ef8c5c90-7f30-47b0-a190-3d5a3acb49a6']
 
 ### Return type
 
@@ -295,7 +295,7 @@ final api = Yes4trackMobileApiClient().getTrackApi();
 final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Track Id
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final BuiltList<StringStringValuesKeyValuePair> files = ; // BuiltList<StringStringValuesKeyValuePair> | Files
+final MultipartFile files = BINARY_DATA_HERE; // MultipartFile | Files
 
 try { 
     final response = api.yes4trackV1TracksIdGeodataPost(id, xApiKey, xCsrfToken, files);
@@ -311,8 +311,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Track Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'b669a73f-470f-4821-84ce-8ba5dbb04c28']
- **files** | [**BuiltList&lt;StringStringValuesKeyValuePair&gt;**](StringStringValuesKeyValuePair.md)| Files | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd43d40f0-dff0-477e-8650-153057ffc83e']
+ **files** | [**MultipartFile**](MultipartFile.md)| Files | [optional] 
 
 ### Return type
 
@@ -324,8 +324,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data, application/json
- - **Accept**: application/json
+ - **Content-Type**: multipart/form-data
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -364,7 +364,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Track id | 
  **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd3426793-0e19-4730-a2ab-1a89537127ab']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '98b64b05-2227-43c5-b358-b3c214a2bb4a']
 
 ### Return type
 
@@ -413,7 +413,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Track Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f17e1134-e099-4673-b795-9b6ae96467c9']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '99f421b1-fcb4-4b45-9888-393d90e5624b']
  **putTrackRequest** | [**PutTrackRequest**](PutTrackRequest.md)| Track to update | [optional] 
 
 ### Return type
@@ -463,7 +463,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Track Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e5a243c5-bb9a-4b2a-96d1-69ef2f60874c']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7156f9a8-67f9-47d1-ad2d-1eb50d87606d']
  **putTrackStatisticRequest** | [**PutTrackStatisticRequest**](PutTrackStatisticRequest.md)| Track to update | [optional] 
 
 ### Return type
@@ -512,7 +512,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '43b31e5b-a7cd-4520-a6df-e84e123d03a2']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6ca58d41-8b28-41b3-a97c-ce048979756c']
  **postTrackRequest** | [**PostTrackRequest**](PostTrackRequest.md)| Track to create | [optional] 
 
 ### Return type

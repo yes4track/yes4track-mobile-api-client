@@ -24,7 +24,6 @@ import 'package:yes4track_mobile_api_client/src/model/post_adventure_request.dar
 import 'package:yes4track_mobile_api_client/src/model/post_adventure_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_check_adventure_code_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/put_adventure_request.dart';
-import 'package:yes4track_mobile_api_client/src/model/string_string_values_key_value_pair.dart';
 
 class AdventureApi {
 
@@ -920,7 +919,7 @@ class AdventureApi {
     required String id,
     String? xApiKey,
     String? xCsrfToken,
-    BuiltList<StringStringValuesKeyValuePair>? images,
+    MultipartFile? images,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -955,7 +954,7 @@ class AdventureApi {
 
     try {
       _bodyData = FormData.fromMap(<String, dynamic>{
-        if (images != null) r'images': encodeFormParameter(_serializers, images, const FullType(BuiltList, [FullType(StringStringValuesKeyValuePair)])),
+        if (images != null) r'images': images,
       });
 
     } catch(error, stackTrace) {
@@ -1438,7 +1437,7 @@ class AdventureApi {
     required String id,
     String? xApiKey,
     String? xCsrfToken,
-    BuiltList<StringStringValuesKeyValuePair>? videos,
+    MultipartFile? videos,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1473,7 +1472,7 @@ class AdventureApi {
 
     try {
       _bodyData = FormData.fromMap(<String, dynamic>{
-        if (videos != null) r'videos': encodeFormParameter(_serializers, videos, const FullType(BuiltList, [FullType(StringStringValuesKeyValuePair)])),
+        if (videos != null) r'videos': videos,
       });
 
     } catch(error, stackTrace) {

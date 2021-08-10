@@ -18,7 +18,6 @@ import 'package:yes4track_mobile_api_client/src/model/post_track_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_track_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/put_track_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/put_track_statistic_request.dart';
-import 'package:yes4track_mobile_api_client/src/model/string_string_values_key_value_pair.dart';
 import 'package:yes4track_mobile_api_client/src/model/track_geo_location_dto.dart';
 import 'package:yes4track_mobile_api_client/src/model/track_source.dart';
 
@@ -463,7 +462,7 @@ class TrackApi {
     required String id,
     String? xApiKey,
     String? xCsrfToken,
-    BuiltList<StringStringValuesKeyValuePair>? files,
+    MultipartFile? files,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -498,7 +497,7 @@ class TrackApi {
 
     try {
       _bodyData = FormData.fromMap(<String, dynamic>{
-        if (files != null) r'files': encodeFormParameter(_serializers, files, const FullType(BuiltList, [FullType(StringStringValuesKeyValuePair)])),
+        if (files != null) r'files': files,
       });
 
     } catch(error, stackTrace) {

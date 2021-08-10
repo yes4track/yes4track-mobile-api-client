@@ -47,14 +47,6 @@ import 'package:yes4track_mobile_api_client/src/model/get_by_id_experience_code_
 import 'package:yes4track_mobile_api_client/src/model/get_by_id_trail_geo_dataet_by_id_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/get_user_liked_adventure_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/image_url.dart';
-import 'package:yes4track_mobile_api_client/src/model/inline_object.dart';
-import 'package:yes4track_mobile_api_client/src/model/inline_object1.dart';
-import 'package:yes4track_mobile_api_client/src/model/inline_object2.dart';
-import 'package:yes4track_mobile_api_client/src/model/inline_object3.dart';
-import 'package:yes4track_mobile_api_client/src/model/inline_object4.dart';
-import 'package:yes4track_mobile_api_client/src/model/inline_object5.dart';
-import 'package:yes4track_mobile_api_client/src/model/inline_object6.dart';
-import 'package:yes4track_mobile_api_client/src/model/inline_object7.dart';
 import 'package:yes4track_mobile_api_client/src/model/level_type.dart';
 import 'package:yes4track_mobile_api_client/src/model/map_coordinate.dart';
 import 'package:yes4track_mobile_api_client/src/model/notification_channel.dart';
@@ -155,14 +147,6 @@ part 'serializers.g.dart';
   GetByIdTrailGeoDataetByIdResponse,
   GetUserLikedAdventureResponse,
   ImageUrl,
-  InlineObject,
-  InlineObject1,
-  InlineObject2,
-  InlineObject3,
-  InlineObject4,
-  InlineObject5,
-  InlineObject6,
-  InlineObject7,
   LevelType,
   MapCoordinate,
   NotificationChannel,
