@@ -43,6 +43,8 @@ class _$User extends User {
   final BuiltList<String>? companies;
   @override
   final GeoLocation? location;
+  @override
+  final BuiltList<String>? pushTokens;
 
   factory _$User([void Function(UserBuilder)? updates]) =>
       (new UserBuilder()..update(updates)).build();
@@ -65,7 +67,8 @@ class _$User extends User {
       this.defaultAngel,
       this.defaultSponsor,
       this.companies,
-      this.location})
+      this.location,
+      this.pushTokens})
       : super._();
 
   @override
@@ -96,7 +99,8 @@ class _$User extends User {
         defaultAngel == other.defaultAngel &&
         defaultSponsor == other.defaultSponsor &&
         companies == other.companies &&
-        location == other.location;
+        location == other.location &&
+        pushTokens == other.pushTokens;
   }
 
   @override
@@ -119,30 +123,32 @@ class _$User extends User {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            0,
-                                                                            id
+                                                                            $jc(
+                                                                                0,
+                                                                                id
+                                                                                    .hashCode),
+                                                                            createdAt
                                                                                 .hashCode),
-                                                                        createdAt
+                                                                        updatedAt
                                                                             .hashCode),
-                                                                    updatedAt
+                                                                    userCreated
                                                                         .hashCode),
-                                                                userCreated
+                                                                userUpdated
                                                                     .hashCode),
-                                                            userUpdated
-                                                                .hashCode),
-                                                        version.hashCode),
-                                                    name.hashCode),
-                                                phone.hashCode),
-                                            email.hashCode),
-                                        photoUrl.hashCode),
-                                    isActive.hashCode),
-                                isAdmin.hashCode),
-                            isSuperAdmin.hashCode),
-                        isAngel.hashCode),
-                    defaultAngel.hashCode),
-                defaultSponsor.hashCode),
-            companies.hashCode),
-        location.hashCode));
+                                                            version.hashCode),
+                                                        name.hashCode),
+                                                    phone.hashCode),
+                                                email.hashCode),
+                                            photoUrl.hashCode),
+                                        isActive.hashCode),
+                                    isAdmin.hashCode),
+                                isSuperAdmin.hashCode),
+                            isAngel.hashCode),
+                        defaultAngel.hashCode),
+                    defaultSponsor.hashCode),
+                companies.hashCode),
+            location.hashCode),
+        pushTokens.hashCode));
   }
 
   @override
@@ -165,7 +171,8 @@ class _$User extends User {
           ..add('defaultAngel', defaultAngel)
           ..add('defaultSponsor', defaultSponsor)
           ..add('companies', companies)
-          ..add('location', location))
+          ..add('location', location)
+          ..add('pushTokens', pushTokens))
         .toString();
   }
 }
@@ -249,6 +256,12 @@ class UserBuilder implements Builder<User, UserBuilder> {
       _$this._location ??= new GeoLocationBuilder();
   set location(GeoLocationBuilder? location) => _$this._location = location;
 
+  ListBuilder<String>? _pushTokens;
+  ListBuilder<String> get pushTokens =>
+      _$this._pushTokens ??= new ListBuilder<String>();
+  set pushTokens(ListBuilder<String>? pushTokens) =>
+      _$this._pushTokens = pushTokens;
+
   UserBuilder() {
     User._initializeBuilder(this);
   }
@@ -274,6 +287,7 @@ class UserBuilder implements Builder<User, UserBuilder> {
       _defaultSponsor = $v.defaultSponsor;
       _companies = $v.companies?.toBuilder();
       _location = $v.location?.toBuilder();
+      _pushTokens = $v.pushTokens?.toBuilder();
       _$v = null;
     }
     return this;
@@ -313,7 +327,8 @@ class UserBuilder implements Builder<User, UserBuilder> {
               defaultAngel: defaultAngel,
               defaultSponsor: defaultSponsor,
               companies: _companies?.build(),
-              location: _location?.build());
+              location: _location?.build(),
+              pushTokens: _pushTokens?.build());
     } catch (_) {
       late String _$failedField;
       try {
@@ -321,6 +336,8 @@ class UserBuilder implements Builder<User, UserBuilder> {
         _companies?.build();
         _$failedField = 'location';
         _location?.build();
+        _$failedField = 'pushTokens';
+        _pushTokens?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'User', _$failedField, e.toString());

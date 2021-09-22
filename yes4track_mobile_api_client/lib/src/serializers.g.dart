@@ -12,6 +12,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(Address.serializer)
       ..add(AdventureResponse.serializer)
       ..add(AdventureType.serializer)
+      ..add(DeleteUserPushTokenRequest.serializer)
       ..add(ErrorDetails.serializer)
       ..add(GeoLocation.serializer)
       ..add(GetAllActiveTrailByAngelResponse.serializer)
@@ -36,6 +37,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GetAllTemplateResponse.serializer)
       ..add(GetAllTrackResponse.serializer)
       ..add(GetAllTrailResponse.serializer)
+      ..add(GetAllUserPushTokenResponse.serializer)
       ..add(GetAllUserResponse.serializer)
       ..add(GetByIdAdventureCodeResponse.serializer)
       ..add(GetByIdExperienceCodeResponse.serializer)
@@ -74,6 +76,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(PostTrailResponse.serializer)
       ..add(PostUserAccessTokenRequest.serializer)
       ..add(PostUserAccessTokenResponse.serializer)
+      ..add(PostUserPushTokenRequest.serializer)
       ..add(PostUserRequest.serializer)
       ..add(PostUserResponse.serializer)
       ..add(PostUserSetupAngelRequest.serializer)
@@ -220,9 +223,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(String)]),
-          () => new ListBuilder<String>())
-      ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(BuiltList, const [const FullType(double)])
           ]),
@@ -230,6 +230,18 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Waypoint)]),
           () => new ListBuilder<Waypoint>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())

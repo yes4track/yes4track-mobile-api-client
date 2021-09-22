@@ -19,6 +19,7 @@ import 'package:yes4track_mobile_api_client/src/api/template_api.dart';
 import 'package:yes4track_mobile_api_client/src/api/track_api.dart';
 import 'package:yes4track_mobile_api_client/src/api/trail_api.dart';
 import 'package:yes4track_mobile_api_client/src/api/user_api.dart';
+import 'package:yes4track_mobile_api_client/src/api/version_api.dart';
 
 class Yes4trackMobileApiClient {
   static const String basePath = r'http://localhost';
@@ -131,5 +132,11 @@ class Yes4trackMobileApiClient {
   /// by doing that all interceptors will not be executed
   UserApi getUserApi() {
     return UserApi(dio, serializers);
+  }
+
+  /// Get VersionApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  VersionApi getVersionApi() {
+    return VersionApi(dio, serializers);
   }
 }

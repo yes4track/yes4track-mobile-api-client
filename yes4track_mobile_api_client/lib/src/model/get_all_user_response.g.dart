@@ -39,6 +39,8 @@ class _$GetAllUserResponse extends GetAllUserResponse {
   final String? defaultSponsor;
   @override
   final BuiltList<String>? companies;
+  @override
+  final BuiltList<String>? pushTokens;
 
   factory _$GetAllUserResponse(
           [void Function(GetAllUserResponseBuilder)? updates]) =>
@@ -60,7 +62,8 @@ class _$GetAllUserResponse extends GetAllUserResponse {
       this.isAngel,
       this.defaultAngel,
       this.defaultSponsor,
-      this.companies})
+      this.companies,
+      this.pushTokens})
       : super._();
 
   @override
@@ -91,7 +94,8 @@ class _$GetAllUserResponse extends GetAllUserResponse {
         isAngel == other.isAngel &&
         defaultAngel == other.defaultAngel &&
         defaultSponsor == other.defaultSponsor &&
-        companies == other.companies;
+        companies == other.companies &&
+        pushTokens == other.pushTokens;
   }
 
   @override
@@ -112,26 +116,29 @@ class _$GetAllUserResponse extends GetAllUserResponse {
                                                         $jc(
                                                             $jc(
                                                                 $jc(
-                                                                    0,
-                                                                    createdAt
+                                                                    $jc(
+                                                                        0,
+                                                                        createdAt
+                                                                            .hashCode),
+                                                                    updatedAt
                                                                         .hashCode),
-                                                                updatedAt
+                                                                userCreated
                                                                     .hashCode),
-                                                            userCreated
+                                                            userUpdated
                                                                 .hashCode),
-                                                        userUpdated.hashCode),
-                                                    name.hashCode),
-                                                phone.hashCode),
-                                            email.hashCode),
-                                        id.hashCode),
-                                    photoUrl.hashCode),
-                                isActive.hashCode),
-                            isAdmin.hashCode),
-                        isSuperAdmin.hashCode),
-                    isAngel.hashCode),
-                defaultAngel.hashCode),
-            defaultSponsor.hashCode),
-        companies.hashCode));
+                                                        name.hashCode),
+                                                    phone.hashCode),
+                                                email.hashCode),
+                                            id.hashCode),
+                                        photoUrl.hashCode),
+                                    isActive.hashCode),
+                                isAdmin.hashCode),
+                            isSuperAdmin.hashCode),
+                        isAngel.hashCode),
+                    defaultAngel.hashCode),
+                defaultSponsor.hashCode),
+            companies.hashCode),
+        pushTokens.hashCode));
   }
 
   @override
@@ -152,7 +159,8 @@ class _$GetAllUserResponse extends GetAllUserResponse {
           ..add('isAngel', isAngel)
           ..add('defaultAngel', defaultAngel)
           ..add('defaultSponsor', defaultSponsor)
-          ..add('companies', companies))
+          ..add('companies', companies)
+          ..add('pushTokens', pushTokens))
         .toString();
   }
 }
@@ -228,6 +236,12 @@ class GetAllUserResponseBuilder
   set companies(ListBuilder<String>? companies) =>
       _$this._companies = companies;
 
+  ListBuilder<String>? _pushTokens;
+  ListBuilder<String> get pushTokens =>
+      _$this._pushTokens ??= new ListBuilder<String>();
+  set pushTokens(ListBuilder<String>? pushTokens) =>
+      _$this._pushTokens = pushTokens;
+
   GetAllUserResponseBuilder() {
     GetAllUserResponse._initializeBuilder(this);
   }
@@ -251,6 +265,7 @@ class GetAllUserResponseBuilder
       _defaultAngel = $v.defaultAngel;
       _defaultSponsor = $v.defaultSponsor;
       _companies = $v.companies?.toBuilder();
+      _pushTokens = $v.pushTokens?.toBuilder();
       _$v = null;
     }
     return this;
@@ -288,12 +303,15 @@ class GetAllUserResponseBuilder
               isAngel: isAngel,
               defaultAngel: defaultAngel,
               defaultSponsor: defaultSponsor,
-              companies: _companies?.build());
+              companies: _companies?.build(),
+              pushTokens: _pushTokens?.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'companies';
         _companies?.build();
+        _$failedField = 'pushTokens';
+        _pushTokens?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'GetAllUserResponse', _$failedField, e.toString());

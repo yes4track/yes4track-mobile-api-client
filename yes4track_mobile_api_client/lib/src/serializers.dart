@@ -17,6 +17,7 @@ import 'package:yes4track_mobile_api_client/src/model/active_trail_response.dart
 import 'package:yes4track_mobile_api_client/src/model/address.dart';
 import 'package:yes4track_mobile_api_client/src/model/adventure_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/adventure_type.dart';
+import 'package:yes4track_mobile_api_client/src/model/delete_user_push_token_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/error_details.dart';
 import 'package:yes4track_mobile_api_client/src/model/geo_location.dart';
 import 'package:yes4track_mobile_api_client/src/model/get_all_active_trail_by_angel_response.dart';
@@ -41,6 +42,7 @@ import 'package:yes4track_mobile_api_client/src/model/get_all_sponsor_response.d
 import 'package:yes4track_mobile_api_client/src/model/get_all_template_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/get_all_track_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/get_all_trail_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/get_all_user_push_token_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/get_all_user_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/get_by_id_adventure_code_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/get_by_id_experience_code_response.dart';
@@ -79,6 +81,7 @@ import 'package:yes4track_mobile_api_client/src/model/post_trail_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_trail_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_user_access_token_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_user_access_token_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/post_user_push_token_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_user_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_user_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_user_setup_angel_request.dart';
@@ -118,6 +121,7 @@ part 'serializers.g.dart';
   Address,
   AdventureResponse,
   AdventureType,
+  DeleteUserPushTokenRequest,
   ErrorDetails,
   GeoLocation,
   GetAllActiveTrailByAngelResponse,
@@ -142,6 +146,7 @@ part 'serializers.g.dart';
   GetAllTemplateResponse,
   GetAllTrackResponse,
   GetAllTrailResponse,
+  GetAllUserPushTokenResponse,
   GetAllUserResponse,
   GetByIdAdventureCodeResponse,
   GetByIdExperienceCodeResponse,
@@ -180,6 +185,7 @@ part 'serializers.g.dart';
   PostTrailResponse,
   PostUserAccessTokenRequest,
   PostUserAccessTokenResponse,
+  PostUserPushTokenRequest,
   PostUserRequest,
   PostUserResponse,
   PostUserSetupAngelRequest,

@@ -18,7 +18,7 @@ For more information, please visit [https://github.com/jefersonmlopes](https://g
 To use the package from [pub.dev](https://pub.dev), please include the following in pubspec.yaml
 ```yaml
 dependencies:
-  yes4track_mobile_api_client: 1.0.6
+  yes4track_mobile_api_client: 1.0.7
 ```
 
 ### Github
@@ -147,6 +147,7 @@ Class | Method | HTTP request | Description
 [*TrailApi*](doc\TrailApi.md) | [**yes4trackV1TrailsIdGeodataChunckPost**](doc\TrailApi.md#yes4trackv1trailsidgeodatachunckpost) | **POST** /yes4track/v1/trails/{id}/geodata/chunck | Add Chunck Trail GeoData
 [*TrailApi*](doc\TrailApi.md) | [**yes4trackV1TrailsIdGeodataPost**](doc\TrailApi.md#yes4trackv1trailsidgeodatapost) | **POST** /yes4track/v1/trails/{id}/geodata | Create Trail GeoData
 [*TrailApi*](doc\TrailApi.md) | [**yes4trackV1TrailsIdImagesPost**](doc\TrailApi.md#yes4trackv1trailsidimagespost) | **POST** /yes4track/v1/trails/{id}/images | Add images in trail
+[*TrailApi*](doc\TrailApi.md) | [**yes4trackV1TrailsIdMapPhotoPut**](doc\TrailApi.md#yes4trackv1trailsidmapphotoput) | **PUT** /yes4track/v1/trails/{id}/map/photo | Update Trail Map Photo
 [*TrailApi*](doc\TrailApi.md) | [**yes4trackV1TrailsIdPatch**](doc\TrailApi.md#yes4trackv1trailsidpatch) | **PATCH** /yes4track/v1/trails/{id} | Update part of Trail
 [*TrailApi*](doc\TrailApi.md) | [**yes4trackV1TrailsIdPut**](doc\TrailApi.md#yes4trackv1trailsidput) | **PUT** /yes4track/v1/trails/{id} | Update Trail
 [*TrailApi*](doc\TrailApi.md) | [**yes4trackV1TrailsIdSponsorSponsorIdDelete**](doc\TrailApi.md#yes4trackv1trailsidsponsorsponsoriddelete) | **DELETE** /yes4track/v1/trails/{id}/sponsor/{sponsorId} | Delete Trail Sponsor by Id
@@ -161,6 +162,9 @@ Class | Method | HTTP request | Description
 [*UserApi*](doc\UserApi.md) | [**yes4trackV1UsersIdLocationPut**](doc\UserApi.md#yes4trackv1usersidlocationput) | **PUT** /yes4track/v1/users/{id}/location | Update User Location
 [*UserApi*](doc\UserApi.md) | [**yes4trackV1UsersIdPatch**](doc\UserApi.md#yes4trackv1usersidpatch) | **PATCH** /yes4track/v1/users/{id} | Update part of User
 [*UserApi*](doc\UserApi.md) | [**yes4trackV1UsersIdPhotoPut**](doc\UserApi.md#yes4trackv1usersidphotoput) | **PUT** /yes4track/v1/users/{id}/photo | Update User Photo
+[*UserApi*](doc\UserApi.md) | [**yes4trackV1UsersIdPushtokenDelete**](doc\UserApi.md#yes4trackv1usersidpushtokendelete) | **DELETE** /yes4track/v1/users/{id}/pushtoken | Delete User Push Token
+[*UserApi*](doc\UserApi.md) | [**yes4trackV1UsersIdPushtokenGet**](doc\UserApi.md#yes4trackv1usersidpushtokenget) | **GET** /yes4track/v1/users/{id}/pushtoken | Get All User Push Token
+[*UserApi*](doc\UserApi.md) | [**yes4trackV1UsersIdPushtokenPost**](doc\UserApi.md#yes4trackv1usersidpushtokenpost) | **POST** /yes4track/v1/users/{id}/pushtoken | Add User Push Token
 [*UserApi*](doc\UserApi.md) | [**yes4trackV1UsersIdPut**](doc\UserApi.md#yes4trackv1usersidput) | **PUT** /yes4track/v1/users/{id} | Update User
 [*UserApi*](doc\UserApi.md) | [**yes4trackV1UsersPost**](doc\UserApi.md#yes4trackv1userspost) | **POST** /yes4track/v1/users | Add User
 [*UserApi*](doc\UserApi.md) | [**yes4trackV1UsersResendcodePost**](doc\UserApi.md#yes4trackv1usersresendcodepost) | **POST** /yes4track/v1/users/resendcode | Resend Code
@@ -168,6 +172,7 @@ Class | Method | HTTP request | Description
 [*UserApi*](doc\UserApi.md) | [**yes4trackV1UsersSetupsponsorIdPost**](doc\UserApi.md#yes4trackv1userssetupsponsoridpost) | **POST** /yes4track/v1/users/setupsponsor/{id} | Setup User default Sponsor
 [*UserApi*](doc\UserApi.md) | [**yes4trackV1UsersSigninPost**](doc\UserApi.md#yes4trackv1userssigninpost) | **POST** /yes4track/v1/users/signin | User SignIn
 [*UserApi*](doc\UserApi.md) | [**yes4trackV1UsersSignupPost**](doc\UserApi.md#yes4trackv1userssignuppost) | **POST** /yes4track/v1/users/signup | User SignUp
+[*VersionApi*](doc\VersionApi.md) | [**yes4trackV1VersionGet**](doc\VersionApi.md#yes4trackv1versionget) | **GET** /yes4track/v1/version | Get Version
 
 
 ## Documentation For Models
@@ -177,6 +182,7 @@ Class | Method | HTTP request | Description
  - [Address](doc\Address.md)
  - [AdventureResponse](doc\AdventureResponse.md)
  - [AdventureType](doc\AdventureType.md)
+ - [DeleteUserPushTokenRequest](doc\DeleteUserPushTokenRequest.md)
  - [ErrorDetails](doc\ErrorDetails.md)
  - [GeoLocation](doc\GeoLocation.md)
  - [GetAllActiveTrailByAngelResponse](doc\GetAllActiveTrailByAngelResponse.md)
@@ -201,6 +207,7 @@ Class | Method | HTTP request | Description
  - [GetAllTemplateResponse](doc\GetAllTemplateResponse.md)
  - [GetAllTrackResponse](doc\GetAllTrackResponse.md)
  - [GetAllTrailResponse](doc\GetAllTrailResponse.md)
+ - [GetAllUserPushTokenResponse](doc\GetAllUserPushTokenResponse.md)
  - [GetAllUserResponse](doc\GetAllUserResponse.md)
  - [GetByIdAdventureCodeResponse](doc\GetByIdAdventureCodeResponse.md)
  - [GetByIdExperienceCodeResponse](doc\GetByIdExperienceCodeResponse.md)
@@ -239,6 +246,7 @@ Class | Method | HTTP request | Description
  - [PostTrailResponse](doc\PostTrailResponse.md)
  - [PostUserAccessTokenRequest](doc\PostUserAccessTokenRequest.md)
  - [PostUserAccessTokenResponse](doc\PostUserAccessTokenResponse.md)
+ - [PostUserPushTokenRequest](doc\PostUserPushTokenRequest.md)
  - [PostUserRequest](doc\PostUserRequest.md)
  - [PostUserResponse](doc\PostUserResponse.md)
  - [PostUserSetupAngelRequest](doc\PostUserSetupAngelRequest.md)

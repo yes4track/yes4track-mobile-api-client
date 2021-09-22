@@ -9,13 +9,16 @@ import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
 import 'package:yes4track_mobile_api_client/src/api_util.dart';
+import 'package:yes4track_mobile_api_client/src/model/delete_user_push_token_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/error_details.dart';
 import 'package:yes4track_mobile_api_client/src/model/get_all_paged_user_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/get_all_user_push_token_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/get_all_user_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/operation.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_post_user_resend_code_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_user_access_token_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_user_access_token_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/post_user_push_token_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_user_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_user_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_user_setup_angel_request.dart';
@@ -745,6 +748,255 @@ class UserApi {
     try {
       const _type = FullType(ProfilePhotoRequest);
       _bodyData = profilePhotoRequest == null ? null : _serializers.serialize(profilePhotoRequest, specifiedType: _type);
+
+    } catch(error, stackTrace) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    return _response;
+  }
+
+  /// Delete User Push Token
+  /// 
+  ///
+  /// Parameters:
+  /// * [id] - Id User
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [deleteUserPushTokenRequest] - FCM Token
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<void>> yes4trackV1UsersIdPushtokenDelete({ 
+    required String id,
+    String? xApiKey,
+    String? xCsrfToken,
+    DeleteUserPushTokenRequest? deleteUserPushTokenRequest,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/yes4track/v1/users/{id}/pushtoken'.replaceAll('{' r'id' '}', id.toString());
+    final _options = Options(
+      method: r'DELETE',
+      headers: <String, dynamic>{
+        if (xApiKey != null) r'x-api-key': xApiKey,
+        if (xCsrfToken != null) r'x-csrf-token': xCsrfToken,
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'apiKey',
+            'name': 'Bearer',
+            'keyName': 'Authorization',
+            'where': 'header',
+          },
+        ],
+        ...?extra,
+      },
+      contentType: 'application/json',
+      validateStatus: validateStatus,
+    );
+
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(DeleteUserPushTokenRequest);
+      _bodyData = deleteUserPushTokenRequest == null ? null : _serializers.serialize(deleteUserPushTokenRequest, specifiedType: _type);
+
+    } catch(error, stackTrace) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    return _response;
+  }
+
+  /// Get All User Push Token
+  /// 
+  ///
+  /// Parameters:
+  /// * [id] - User Id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [GetAllUserPushTokenResponse] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<GetAllUserPushTokenResponse>> yes4trackV1UsersIdPushtokenGet({ 
+    required String id,
+    String? xApiKey,
+    String? xCsrfToken,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/yes4track/v1/users/{id}/pushtoken'.replaceAll('{' r'id' '}', id.toString());
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        if (xApiKey != null) r'x-api-key': xApiKey,
+        if (xCsrfToken != null) r'x-csrf-token': xCsrfToken,
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'apiKey',
+            'name': 'Bearer',
+            'keyName': 'Authorization',
+            'where': 'header',
+          },
+        ],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    GetAllUserPushTokenResponse _responseData;
+
+    try {
+      const _responseType = FullType(GetAllUserPushTokenResponse);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as GetAllUserPushTokenResponse;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<GetAllUserPushTokenResponse>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Add User Push Token
+  /// 
+  ///
+  /// Parameters:
+  /// * [id] - Id User
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [postUserPushTokenRequest] - FCM Token
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<void>> yes4trackV1UsersIdPushtokenPost({ 
+    required String id,
+    String? xApiKey,
+    String? xCsrfToken,
+    PostUserPushTokenRequest? postUserPushTokenRequest,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/yes4track/v1/users/{id}/pushtoken'.replaceAll('{' r'id' '}', id.toString());
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{
+        if (xApiKey != null) r'x-api-key': xApiKey,
+        if (xCsrfToken != null) r'x-csrf-token': xCsrfToken,
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'apiKey',
+            'name': 'Bearer',
+            'keyName': 'Authorization',
+            'where': 'header',
+          },
+        ],
+        ...?extra,
+      },
+      contentType: 'application/json',
+      validateStatus: validateStatus,
+    );
+
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(PostUserPushTokenRequest);
+      _bodyData = postUserPushTokenRequest == null ? null : _serializers.serialize(postUserPushTokenRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(

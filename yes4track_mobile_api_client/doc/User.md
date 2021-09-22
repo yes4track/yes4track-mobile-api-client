@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **defaultSponsor** | **String** |  | [optional] 
 **companies** | **BuiltList&lt;String&gt;** |  | [optional] 
 **location** | [**GeoLocation**](GeoLocation.md) |  | [optional] 
+**pushTokens** | **BuiltList&lt;String&gt;** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -27,6 +27,7 @@ part 'get_all_user_response.g.dart';
 /// * [defaultAngel] 
 /// * [defaultSponsor] 
 /// * [companies] 
+/// * [pushTokens] 
 abstract class GetAllUserResponse implements Built<GetAllUserResponse, GetAllUserResponseBuilder> {
     @BuiltValueField(wireName: r'createdAt')
     DateTime? get createdAt;
@@ -75,6 +76,9 @@ abstract class GetAllUserResponse implements Built<GetAllUserResponse, GetAllUse
 
     @BuiltValueField(wireName: r'companies')
     BuiltList<String>? get companies;
+
+    @BuiltValueField(wireName: r'pushTokens')
+    BuiltList<String>? get pushTokens;
 
     GetAllUserResponse._();
 
@@ -193,6 +197,12 @@ class _$GetAllUserResponseSerializer implements StructuredSerializer<GetAllUserR
                 ..add(serializers.serialize(object.companies,
                     specifiedType: const FullType(BuiltList, [FullType(String)])));
         }
+        if (object.pushTokens != null) {
+            result
+                ..add(r'pushTokens')
+                ..add(serializers.serialize(object.pushTokens,
+                    specifiedType: const FullType(BuiltList, [FullType(String)])));
+        }
         return result;
     }
 
@@ -269,6 +279,10 @@ class _$GetAllUserResponseSerializer implements StructuredSerializer<GetAllUserR
                     break;
                 case r'companies':
                     result.companies.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(BuiltList, [FullType(String)])) as BuiltList<String>);
+                    break;
+                case r'pushTokens':
+                    result.pushTokens.replace(serializers.deserialize(value,
                         specifiedType: const FullType(BuiltList, [FullType(String)])) as BuiltList<String>);
                     break;
             }

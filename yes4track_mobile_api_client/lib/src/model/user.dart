@@ -31,6 +31,7 @@ part 'user.g.dart';
 /// * [defaultSponsor] 
 /// * [companies] 
 /// * [location] 
+/// * [pushTokens] 
 abstract class User implements Built<User, UserBuilder> {
     @BuiltValueField(wireName: r'id')
     String? get id;
@@ -85,6 +86,9 @@ abstract class User implements Built<User, UserBuilder> {
 
     @BuiltValueField(wireName: r'location')
     GeoLocation? get location;
+
+    @BuiltValueField(wireName: r'pushTokens')
+    BuiltList<String>? get pushTokens;
 
     User._();
 
@@ -215,6 +219,12 @@ class _$UserSerializer implements StructuredSerializer<User> {
                 ..add(serializers.serialize(object.location,
                     specifiedType: const FullType(GeoLocation)));
         }
+        if (object.pushTokens != null) {
+            result
+                ..add(r'pushTokens')
+                ..add(serializers.serialize(object.pushTokens,
+                    specifiedType: const FullType(BuiltList, [FullType(String)])));
+        }
         return result;
     }
 
@@ -300,6 +310,10 @@ class _$UserSerializer implements StructuredSerializer<User> {
                 case r'location':
                     result.location.replace(serializers.deserialize(value,
                         specifiedType: const FullType(GeoLocation)) as GeoLocation);
+                    break;
+                case r'pushTokens':
+                    result.pushTokens.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(BuiltList, [FullType(String)])) as BuiltList<String>);
                     break;
             }
         }

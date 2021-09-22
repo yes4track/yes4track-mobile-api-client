@@ -1,4 +1,4 @@
-# yes4track_mobile_api_client.api.GeolocationApi
+# yes4track_mobile_api_client.api.VersionApi
 
 ## Load the API package
 ```dart
@@ -9,13 +9,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAddressByLatLong**](GeolocationApi.md#getaddressbylatlong) | **GET** /yes4track/v1/geolocations/{lat}/{lng} | Get Address by Lat Long
+[**yes4trackV1VersionGet**](VersionApi.md#yes4trackv1versionget) | **GET** /yes4track/v1/version | Get Version
 
 
-# **getAddressByLatLong**
-> Address getAddressByLatLong(lat, lng, xApiKey, xCsrfToken)
+# **yes4trackV1VersionGet**
+> yes4trackV1VersionGet(xApiKey, xCsrfToken)
 
-Get Address by Lat Long
+Get Version
 
 ### Example 
 ```dart
@@ -25,17 +25,14 @@ import 'package:yes4track_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = Yes4trackMobileApiClient().getGeolocationApi();
-final double lat = 1.2; // double | latitude
-final double lng = 1.2; // double | longitude
+final api = Yes4trackMobileApiClient().getVersionApi();
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    final response = api.getAddressByLatLong(lat, lng, xApiKey, xCsrfToken);
-    print(response);
+    api.yes4trackV1VersionGet(xApiKey, xCsrfToken);
 } catch on DioError (e) {
-    print('Exception when calling GeolocationApi->getAddressByLatLong: $e\n');
+    print('Exception when calling VersionApi->yes4trackV1VersionGet: $e\n');
 }
 ```
 
@@ -43,14 +40,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **lat** | **double**| latitude | 
- **lng** | **double**| longitude | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c0f6cae3-374e-4890-a3b4-adbe083cccfd']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f3885744-bcae-4257-8b08-ef5f288e02e0']
 
 ### Return type
 
-[**Address**](Address.md)
+void (empty response body)
 
 ### Authorization
 

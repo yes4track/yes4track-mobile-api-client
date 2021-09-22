@@ -9,6 +9,7 @@ doc/AdventureResponse.md
 doc/AdventureType.md
 doc/AuditApi.md
 doc/CompanyApi.md
+doc/DeleteUserPushTokenRequest.md
 doc/ErrorDetails.md
 doc/ExperienceApi.md
 doc/GeoLocation.md
@@ -35,6 +36,7 @@ doc/GetAllSponsorResponse.md
 doc/GetAllTemplateResponse.md
 doc/GetAllTrackResponse.md
 doc/GetAllTrailResponse.md
+doc/GetAllUserPushTokenResponse.md
 doc/GetAllUserResponse.md
 doc/GetByIdAdventureCodeResponse.md
 doc/GetByIdExperienceCodeResponse.md
@@ -74,6 +76,7 @@ doc/PostTrailRequest.md
 doc/PostTrailResponse.md
 doc/PostUserAccessTokenRequest.md
 doc/PostUserAccessTokenResponse.md
+doc/PostUserPushTokenRequest.md
 doc/PostUserRequest.md
 doc/PostUserResponse.md
 doc/PostUserSetupAngelRequest.md
@@ -106,6 +109,7 @@ doc/User.md
 doc/UserApi.md
 doc/UserResponse.md
 doc/UserTrailStatusResponse.md
+doc/VersionApi.md
 doc/VideoUrl.md
 doc/Waypoint.md
 doc/WaypointType.md
@@ -121,6 +125,7 @@ lib/src/api/template_api.dart
 lib/src/api/track_api.dart
 lib/src/api/trail_api.dart
 lib/src/api/user_api.dart
+lib/src/api/version_api.dart
 lib/src/api_util.dart
 lib/src/auth/api_key_auth.dart
 lib/src/auth/auth.dart
@@ -133,6 +138,7 @@ lib/src/model/address.dart
 lib/src/model/adventure_response.dart
 lib/src/model/adventure_type.dart
 lib/src/model/date.dart
+lib/src/model/delete_user_push_token_request.dart
 lib/src/model/error_details.dart
 lib/src/model/geo_location.dart
 lib/src/model/get_all_active_trail_by_angel_response.dart
@@ -157,6 +163,7 @@ lib/src/model/get_all_sponsor_response.dart
 lib/src/model/get_all_template_response.dart
 lib/src/model/get_all_track_response.dart
 lib/src/model/get_all_trail_response.dart
+lib/src/model/get_all_user_push_token_response.dart
 lib/src/model/get_all_user_response.dart
 lib/src/model/get_by_id_adventure_code_response.dart
 lib/src/model/get_by_id_experience_code_response.dart
@@ -195,6 +202,7 @@ lib/src/model/post_trail_request.dart
 lib/src/model/post_trail_response.dart
 lib/src/model/post_user_access_token_request.dart
 lib/src/model/post_user_access_token_response.dart
+lib/src/model/post_user_push_token_request.dart
 lib/src/model/post_user_request.dart
 lib/src/model/post_user_response.dart
 lib/src/model/post_user_setup_angel_request.dart
@@ -228,4 +236,7 @@ lib/src/model/waypoint_type.dart
 lib/src/serializers.dart
 lib/yes4track_mobile_api_client.dart
 pubspec.yaml
-test/post_trail_photos_response_test.dart
+test/delete_user_push_token_request_test.dart
+test/get_all_user_push_token_response_test.dart
+test/post_user_push_token_request_test.dart
+test/version_api_test.dart
