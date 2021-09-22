@@ -18,7 +18,7 @@ For more information, please visit [https://github.com/jefersonmlopes](https://g
 To use the package from [pub.dev](https://pub.dev), please include the following in pubspec.yaml
 ```yaml
 dependencies:
-  yes4track_mobile_api_client: 1.0.7
+  yes4track_mobile_api_client: 1.0.8
 ```
 
 ### Github
@@ -253,6 +253,7 @@ Class | Method | HTTP request | Description
  - [PostUserSignInRequest](doc\PostUserSignInRequest.md)
  - [PostUserSignInResponse](doc\PostUserSignInResponse.md)
  - [ProfilePhotoRequest](doc\ProfilePhotoRequest.md)
+ - [PushToken](doc\PushToken.md)
  - [PutAdventureRequest](doc\PutAdventureRequest.md)
  - [PutCompanyRequest](doc\PutCompanyRequest.md)
  - [PutExperienceRequest](doc\PutExperienceRequest.md)

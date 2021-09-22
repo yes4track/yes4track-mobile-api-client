@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| User id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '901b7129-ceab-4f5a-971b-7f18d522a498']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3af58499-76bd-405d-ab03-90a9058aec06']
 
 ### Return type
 
@@ -110,7 +110,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a46526ab-aa92-45d6-88f1-9a9dcd629ca9']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5ae47985-47d9-4c10-a66f-1166b0c4264c']
  **postUserAccessTokenRequest** | [**PostUserAccessTokenRequest**](PostUserAccessTokenRequest.md)| User to SignIn | [optional] 
 
 ### Return type
@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '591009ec-5e97-4f89-b749-572b1afc3548']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1f034e3f-9e2f-4524-9ee0-45128c0f5757']
 
 ### Return type
 
@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Id User | 
  **companyId** | [**String**](.md)| Id Company | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '956adc39-cc91-4093-9f21-3ac86ce2520d']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1af59d3f-0bfa-4683-92a8-ee91588cbccf']
 
 ### Return type
 
@@ -276,7 +276,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Id User | 
  **companyId** | [**String**](.md)| Id Company | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a504ce42-4065-446c-9341-a828cc4b2a70']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3ad88c19-27f3-4a6d-9505-b9b942599582']
 
 ### Return type
 
@@ -324,7 +324,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| User id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c982b873-40fd-4f6a-88a6-622e853faa25']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '60213f97-dba2-462b-9624-db0d63518fa2']
 
 ### Return type
 
@@ -373,7 +373,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| User Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7e701de9-3e77-4892-8cf3-e2d9ea90534a']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'fdeab8d4-71ca-436d-9828-7e3e7cd3e7b8']
  **putUserLocationRequest** | [**PutUserLocationRequest**](PutUserLocationRequest.md)| GeoLocation and Date | [optional] 
 
 ### Return type
@@ -424,7 +424,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| User id | 
  **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'b5149b63-9d7d-485e-906d-cf47ab790661']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8e844e79-f187-461c-9e5c-3e3fa5008e1b']
 
 ### Return type
 
@@ -473,7 +473,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| User Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6eee22d3-4f5b-4cd9-ab7e-870a7f000ebf']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f96c9122-cc0d-4438-a894-12e69f9a2875']
  **profilePhotoRequest** | [**ProfilePhotoRequest**](ProfilePhotoRequest.md)| User to update | [optional] 
 
 ### Return type
@@ -523,7 +523,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Id User | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f1db09b4-80e8-43aa-8e97-6321028b64b6']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e1c63e88-39f7-4ec0-aa40-d0ec691b8e57']
  **deleteUserPushTokenRequest** | [**DeleteUserPushTokenRequest**](DeleteUserPushTokenRequest.md)| FCM Token | [optional] 
 
 ### Return type
@@ -573,7 +573,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| User Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0ab13e6e-1bcc-484c-9ea4-6b97d04b3352']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f2a4ae90-328c-4ab5-ab82-b64d8eacc171']
 
 ### Return type
 
@@ -622,7 +622,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Id User | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'dd6a6e15-4907-4992-a28a-a54b2e2425ad']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'b5ac0464-71a7-4ef9-8a15-f8148818dcf8']
  **postUserPushTokenRequest** | [**PostUserPushTokenRequest**](PostUserPushTokenRequest.md)| FCM Token | [optional] 
 
 ### Return type
@@ -672,7 +672,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| User Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '997460ff-a976-42b9-bd14-97b557987f5b']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8636f8e8-d916-442c-976d-6dd532678b6f']
  **putUserRequest** | [**PutUserRequest**](PutUserRequest.md)| User to update | [optional] 
 
 ### Return type
@@ -721,7 +721,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2212e207-a833-4012-adf9-c147b5b97baf']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5d21003c-0ab0-4a75-b062-6b7e40f6cffb']
  **postUserRequest** | [**PostUserRequest**](PostUserRequest.md)| User to create | [optional] 
 
 ### Return type
@@ -769,7 +769,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '476028ee-8229-41a0-9add-ae79b1528a61']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ea187ceb-34cd-458d-aee4-f450de52c116']
  **postPostUserResendCodeRequest** | [**PostPostUserResendCodeRequest**](PostPostUserResendCodeRequest.md)| Phone and Hash | [optional] 
 
 ### Return type
@@ -817,7 +817,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0196225a-44a6-4b07-b6a7-cc053cb70e0b']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1250de30-c3bf-447e-a3a6-d9429e12efee']
  **postUserSetupAngelRequest** | [**PostUserSetupAngelRequest**](PostUserSetupAngelRequest.md)| Angel to Setup | [optional] 
 
 ### Return type
@@ -866,7 +866,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Sponsor Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '67211d3c-4b81-4f27-a38d-c5c78d0cc19d']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd73c09ab-cbf6-410f-b480-97ad587714cf']
 
 ### Return type
 
@@ -914,7 +914,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8091b9c3-6aea-495e-9713-6daf57f2b2d3']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f4534c45-e032-4047-8723-9062e399ccfe']
  **postUserSignInRequest** | [**PostUserSignInRequest**](PostUserSignInRequest.md)| User to SignIn | [optional] 
 
 ### Return type
@@ -963,7 +963,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '94005091-b30b-4f05-8dcd-dfd7fa1c1583']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '960ebfeb-a615-492a-b158-9d9bf58ffdc5']
  **postUserRequest** | [**PostUserRequest**](PostUserRequest.md)| User to create | [optional] 
 
 ### Return type

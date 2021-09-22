@@ -98,6 +98,7 @@ export 'package:yes4track_mobile_api_client/src/model/post_user_setup_angel_requ
 export 'package:yes4track_mobile_api_client/src/model/post_user_sign_in_request.dart';
 export 'package:yes4track_mobile_api_client/src/model/post_user_sign_in_response.dart';
 export 'package:yes4track_mobile_api_client/src/model/profile_photo_request.dart';
+export 'package:yes4track_mobile_api_client/src/model/push_token.dart';
 export 'package:yes4track_mobile_api_client/src/model/put_adventure_request.dart';
 export 'package:yes4track_mobile_api_client/src/model/put_company_request.dart';
 export 'package:yes4track_mobile_api_client/src/model/put_experience_request.dart';

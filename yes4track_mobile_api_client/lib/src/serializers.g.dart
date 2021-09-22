@@ -83,6 +83,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(PostUserSignInRequest.serializer)
       ..add(PostUserSignInResponse.serializer)
       ..add(ProfilePhotoRequest.serializer)
+      ..add(PushToken.serializer)
       ..add(PutAdventureRequest.serializer)
       ..add(PutCompanyRequest.serializer)
       ..add(PutExperienceRequest.serializer)
@@ -202,8 +203,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
               BuiltMap, const [const FullType(String), const FullType(String)]),
           () => new MapBuilder<String, String>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(SponsorContact)]),
-          () => new ListBuilder<SponsorContact>())
+          const FullType(BuiltList, const [const FullType(PushToken)]),
+          () => new ListBuilder<PushToken>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(SponsorContact)]),
           () => new ListBuilder<SponsorContact>())
@@ -214,8 +215,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(SponsorContact)]),
           () => new ListBuilder<SponsorContact>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(String)]),
-          () => new ListBuilder<String>())
+          const FullType(BuiltList, const [const FullType(SponsorContact)]),
+          () => new ListBuilder<SponsorContact>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
@@ -234,14 +235,14 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(String)]),
-          () => new ListBuilder<String>())
+          const FullType(BuiltList, const [const FullType(PushToken)]),
+          () => new ListBuilder<PushToken>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(String)]),
-          () => new ListBuilder<String>())
+          const FullType(BuiltList, const [const FullType(PushToken)]),
+          () => new ListBuilder<PushToken>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())

@@ -9,14 +9,19 @@ part of 'delete_user_push_token_request.dart';
 class _$DeleteUserPushTokenRequest extends DeleteUserPushTokenRequest {
   @override
   final String token;
+  @override
+  final String deviceId;
 
   factory _$DeleteUserPushTokenRequest(
           [void Function(DeleteUserPushTokenRequestBuilder)? updates]) =>
       (new DeleteUserPushTokenRequestBuilder()..update(updates)).build();
 
-  _$DeleteUserPushTokenRequest._({required this.token}) : super._() {
+  _$DeleteUserPushTokenRequest._({required this.token, required this.deviceId})
+      : super._() {
     BuiltValueNullFieldError.checkNotNull(
         token, 'DeleteUserPushTokenRequest', 'token');
+    BuiltValueNullFieldError.checkNotNull(
+        deviceId, 'DeleteUserPushTokenRequest', 'deviceId');
   }
 
   @override
@@ -31,18 +36,21 @@ class _$DeleteUserPushTokenRequest extends DeleteUserPushTokenRequest {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is DeleteUserPushTokenRequest && token == other.token;
+    return other is DeleteUserPushTokenRequest &&
+        token == other.token &&
+        deviceId == other.deviceId;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(0, token.hashCode));
+    return $jf($jc($jc(0, token.hashCode), deviceId.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('DeleteUserPushTokenRequest')
-          ..add('token', token))
+          ..add('token', token)
+          ..add('deviceId', deviceId))
         .toString();
   }
 }
@@ -56,6 +64,10 @@ class DeleteUserPushTokenRequestBuilder
   String? get token => _$this._token;
   set token(String? token) => _$this._token = token;
 
+  String? _deviceId;
+  String? get deviceId => _$this._deviceId;
+  set deviceId(String? deviceId) => _$this._deviceId = deviceId;
+
   DeleteUserPushTokenRequestBuilder() {
     DeleteUserPushTokenRequest._initializeBuilder(this);
   }
@@ -64,6 +76,7 @@ class DeleteUserPushTokenRequestBuilder
     final $v = _$v;
     if ($v != null) {
       _token = $v.token;
+      _deviceId = $v.deviceId;
       _$v = null;
     }
     return this;
@@ -85,7 +98,9 @@ class DeleteUserPushTokenRequestBuilder
     final _$result = _$v ??
         new _$DeleteUserPushTokenRequest._(
             token: BuiltValueNullFieldError.checkNotNull(
-                token, 'DeleteUserPushTokenRequest', 'token'));
+                token, 'DeleteUserPushTokenRequest', 'token'),
+            deviceId: BuiltValueNullFieldError.checkNotNull(
+                deviceId, 'DeleteUserPushTokenRequest', 'deviceId'));
     replace(_$result);
     return _$result;
   }

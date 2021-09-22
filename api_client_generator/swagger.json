@@ -48,7 +48,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "3544327e-6c77-490a-a020-0d1142ac4e10"
+              "default": "f9fe4809-2e3a-46e0-949e-128246308756"
             }
           }
         ],
@@ -112,7 +112,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "18a49a0a-4e4e-4d94-8400-4a157a3d05fe"
+              "default": "78aba506-6dfc-4a75-bf8a-7b8cdd778a17"
             }
           }
         ],
@@ -183,7 +183,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "b807c9fe-eb6f-4eba-b5b2-08303ba6bcde"
+              "default": "81a9c613-4636-4e30-a21a-2b2a35d9dd69"
             }
           }
         ],
@@ -281,7 +281,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "2ee0c98d-ae3e-45ec-99fd-55a0e969294c"
+              "default": "396dff70-4e72-4780-b685-ddb77840f261"
             }
           }
         ],
@@ -387,7 +387,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "2b79968a-dfb7-4f14-bf4b-1d4d0df0c30c"
+              "default": "613f3fd5-1760-4425-ba67-2c32c2fb086a"
             }
           }
         ],
@@ -478,7 +478,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "876c3b5f-d879-4a5f-9dea-fe7b0cbbd64c"
+              "default": "53d6054d-dc50-4496-8b6c-b2e37ec85ff5"
             }
           }
         ],
@@ -571,7 +571,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "e925e687-6f0c-43fe-98e2-2617084daacd"
+              "default": "60568db4-977f-4671-a9e3-b7e55cb1daa7"
             }
           }
         ],
@@ -636,7 +636,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "ab0bc1fa-9e47-408c-ac07-f9d3458761cc"
+              "default": "eaefc3c5-06f0-453b-a784-c0bbb22d1ec5"
             }
           }
         ],
@@ -725,7 +725,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "23eae225-64a0-4c68-8c76-ce0b639780a8"
+              "default": "7e881fbf-1c50-4e07-9b36-316ed515b0ec"
             }
           }
         ],
@@ -792,7 +792,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "61deb01e-2166-4254-a840-6f2abb766ab6"
+              "default": "a41c10b7-a286-4182-8247-7dbcfc2037e4"
             }
           }
         ],
@@ -892,7 +892,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c43dfb88-0c72-4d9e-abdf-45e32cc1c379"
+              "default": "fc6ec09f-9b47-4e82-9d7a-8b99af9e9542"
             }
           }
         ],
@@ -1027,7 +1027,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "d12db97f-c263-43a1-acf5-3b73eee64a75"
+              "default": "d6d5f2ac-e0f4-4417-8b30-30c597844163"
             }
           }
         ],
@@ -1083,7 +1083,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "1aa25cbe-1bda-4dbf-9370-316a7bb43dce"
+              "default": "f2ebd81e-b18d-4eb0-b119-2964299e8112"
             }
           }
         ],
@@ -1183,7 +1183,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "28d29152-bc79-45fb-9795-756564d90cbf"
+              "default": "3e6cb9ed-6e54-4f81-a797-522f6f6753dc"
             }
           }
         ],
@@ -1267,7 +1267,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "12228af7-b3e0-44a9-9e9e-d9e29bf76b6e"
+              "default": "22d1d74f-4f31-4b02-8018-e713abde475c"
             }
           }
         ],
@@ -1340,7 +1340,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "8b21f2ac-3eb3-4b4e-af69-ba26e6044b64"
+              "default": "b4619bab-ec69-4e80-8c41-e62f43fe58ee"
             }
           }
         ],
@@ -1412,7 +1412,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "600c2115-de96-4e5b-acb7-e1b12f60c35d"
+              "default": "85930b9a-84f5-4180-a018-d53127ad296c"
             }
           }
         ],
@@ -1478,7 +1478,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "d1ae1685-f9af-4c1e-a610-a9c95b556430"
+              "default": "32be144d-3dc4-4d02-9526-b838ceca6568"
             }
           }
         ],
@@ -1641,7 +1641,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "caffed5f-0787-43ba-8d15-6f143db7c2f0"
+              "default": "4a4e4768-05cf-462f-b44d-7f8f4e829325"
             }
           }
         ],
@@ -1814,7 +1814,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "b7410972-0000-4e1a-b476-307413d20ba0"
+              "default": "761f68a7-db4e-4a37-ae4f-4d4ea0c4fdf6"
             }
           }
         ],
@@ -1959,7 +1959,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "5eb564fe-a42e-40d9-a585-e1f6d4d60de2"
+              "default": "29a66222-08d7-4ea4-85d0-99da534d755e"
             }
           }
         ],
@@ -2028,7 +2028,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "4dbb4510-efb4-48fa-be12-f6ee8e352bd5"
+              "default": "0cd0f93f-fb5f-478e-8b2e-e2879e975785"
             }
           }
         ],
@@ -2092,7 +2092,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c7a24cef-3fa1-47b9-8027-277b607c92f7"
+              "default": "2d91827f-88ad-431c-88ad-8f702130e260"
             }
           }
         ],
@@ -2162,7 +2162,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "705ef08c-cbee-4d51-ab36-e945faf3bcac"
+              "default": "513a2cbf-258e-4d28-8748-2d0f14e03e84"
             }
           }
         ],
@@ -2260,7 +2260,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f185378b-5005-47f6-92de-b696f1b16a9d"
+              "default": "f5fa8210-a927-4d3a-abf1-f5e93ae4f3c1"
             }
           }
         ],
@@ -2418,7 +2418,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "3ebab137-babc-4c9a-94e0-0678ec1ca44f"
+              "default": "9a661a1a-c99c-4002-9010-6487f1e732e3"
             }
           }
         ],
@@ -2474,7 +2474,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "55d58e8d-5719-4aff-b700-5ca3010abec5"
+              "default": "5a467a16-fdca-4a1b-ab9e-ed8d02a3ab34"
             }
           }
         ],
@@ -2573,7 +2573,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "28d5023c-7010-41a4-9f39-55d69b0cccc8"
+              "default": "92551905-8719-427b-bf7a-8f18892a1a84"
             }
           }
         ],
@@ -2637,7 +2637,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "3c612019-cbef-4414-bcf3-b5c0de02a4de"
+              "default": "3d31d01e-b191-487d-9d58-3351d126a656"
             }
           }
         ],
@@ -2708,7 +2708,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "d622c32f-e1e4-4cff-b1c4-8193431b2953"
+              "default": "9d80a98d-fa58-4132-8b5e-87697fe84601"
             }
           }
         ],
@@ -2806,7 +2806,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "2a305dc2-572d-43ee-a1e4-8e30861e0950"
+              "default": "60a7a520-dccb-480b-b429-9760dd96b110"
             }
           }
         ],
@@ -2912,7 +2912,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "6fea63dd-12fb-4f92-aeb5-48fd9da0f0b7"
+              "default": "8d24481b-b8ec-4c31-9ba2-916608bad279"
             }
           }
         ],
@@ -2988,7 +2988,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "823a138e-fcc4-4629-a9ba-352d7a14e772"
+              "default": "19954d07-7e6d-4ad1-bd87-86ae7d772aeb"
             }
           }
         ],
@@ -3101,7 +3101,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "7faff833-770c-464f-9fd4-c776a82b2c50"
+              "default": "83e08f6c-b8f0-442c-8480-3c487a7cc287"
             }
           }
         ],
@@ -3157,7 +3157,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "03e17340-f537-4f9f-97d2-e7c53d8462cb"
+              "default": "071d766b-9ad5-4c8f-8220-35d3335bff90"
             }
           }
         ],
@@ -3257,7 +3257,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "45e3c821-1d0b-4b4c-94f0-0078c796606f"
+              "default": "64d2f12b-e574-4406-b15a-e258e89f95a4"
             }
           }
         ],
@@ -3329,7 +3329,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "e29b1cd7-84f7-4970-969a-4fee64404365"
+              "default": "6247e708-cd04-432d-9a99-40f37c7a9efe"
             }
           }
         ],
@@ -3404,7 +3404,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "64773425-062c-4ec7-bd5c-1b7dd4d61081"
+              "default": "2bfb9ca8-1a6f-45a0-b389-da0fffc9e008"
             }
           }
         ],
@@ -3476,7 +3476,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "3ca060bd-6bd5-4dfb-823a-a2fc907a5d66"
+              "default": "e9151db2-fb46-4b94-8b74-38383a9c218c"
             }
           }
         ],
@@ -3639,7 +3639,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "dc37d06d-4b43-43db-b0a6-3fbb6268ae32"
+              "default": "5b60ae79-9715-4f2d-8fb2-61138a97de3e"
             }
           }
         ],
@@ -3814,7 +3814,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c0f6cae3-374e-4890-a3b4-adbe083cccfd"
+              "default": "77ca9aaa-6929-4dd4-8e6b-99d8a716d818"
             }
           }
         ],
@@ -3886,7 +3886,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "acc1ff80-90cb-425c-99f5-c58935800ebf"
+              "default": "e60c0b8f-5fb5-4f75-b3ed-3b42bffbae16"
             }
           }
         ],
@@ -3950,7 +3950,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "86d90ae7-0db6-4ff0-b4f8-f49da30569a8"
+              "default": "30f0ceec-4507-4bdf-b446-85450eaae9b8"
             }
           }
         ],
@@ -4021,7 +4021,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "6f697163-e4a9-4a90-80bf-77e4dc506268"
+              "default": "95ca02b0-97fb-4ed2-ab2f-ec1b3fd71796"
             }
           }
         ],
@@ -4119,7 +4119,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "ef6467a6-49ae-4139-a2b0-ecba02ee82e0"
+              "default": "a3b1b4cd-7292-4757-8acd-e6e52165b2c1"
             }
           }
         ],
@@ -4277,7 +4277,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c9f65bff-9700-4b8c-855d-7ba9e28244d4"
+              "default": "f6a7f5b1-0d32-441f-bfac-534a8b049d24"
             }
           }
         ],
@@ -4333,7 +4333,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "9e471ce7-a5db-4bb9-9060-b693ebae6e71"
+              "default": "c78607bf-db9a-4d48-8cc4-88ad35754eb7"
             }
           }
         ],
@@ -4432,7 +4432,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "cf964e06-6278-487b-8d25-dc3d61a0c108"
+              "default": "4ba40232-d67e-4e75-8df1-aebb266097ae"
             }
           }
         ],
@@ -4496,7 +4496,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "e910a166-a095-49b4-9301-5e3f695ab5d1"
+              "default": "4314474b-34d4-4812-9178-5c53385fcd8f"
             }
           }
         ],
@@ -4567,7 +4567,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "050cd6d0-e1ad-4902-8341-73810429e048"
+              "default": "e7c5988f-870b-4b06-9649-64e9cffb5329"
             }
           }
         ],
@@ -4665,7 +4665,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "9098fc52-2ca8-473a-a6f4-ce808ab2663d"
+              "default": "65bcfe41-e43f-4c03-82fc-c77a0c3d53b8"
             }
           }
         ],
@@ -4824,7 +4824,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c9350b58-ef3a-4a0a-892b-468dcb2b2b33"
+              "default": "b68fc29c-f2f2-437a-8160-427f6f104a0c"
             }
           }
         ],
@@ -4880,7 +4880,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "eb256ef1-0da5-456a-9c7a-f11571bcb5de"
+              "default": "ec526c1b-159f-4e01-bb7d-f78e0d102e14"
             }
           }
         ],
@@ -4979,7 +4979,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "9bd6e412-3070-44b5-953e-cac0f216d8c7"
+              "default": "d18257d6-57c6-4e93-b3a7-f2ac17f8e391"
             }
           }
         ],
@@ -5043,7 +5043,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c992faa2-04a3-46ec-ac62-3b9069214ca7"
+              "default": "31b21d39-05d0-463c-b099-effcdb5505f5"
             }
           }
         ],
@@ -5114,7 +5114,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "dcc127f2-799c-4971-8eba-919bacd6fe98"
+              "default": "956e8ad5-6022-47dd-ba4a-afad710007a7"
             }
           }
         ],
@@ -5212,7 +5212,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "6777bc1a-def1-49ac-9846-9fa1f57a5f91"
+              "default": "8bf99685-1a15-4014-9813-c7b4d7761e6a"
             }
           }
         ],
@@ -5330,7 +5330,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "2bd174e0-e967-4ea4-8456-288704d5cf95"
+              "default": "b0cecf6b-de8c-40ad-8833-75bfd2a88e3a"
             }
           }
         ],
@@ -5386,7 +5386,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "7df8aaa9-b01e-4803-bd90-8f91bc753e8f"
+              "default": "964502d6-74b1-41b5-9d4f-06586dcafa54"
             }
           }
         ],
@@ -5485,7 +5485,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "4ed3e892-6612-4fbb-9d39-0ebac4e197ed"
+              "default": "62143927-d3b6-4878-b5b7-3f3c78f9970b"
             }
           }
         ],
@@ -5648,7 +5648,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "8096ff78-65b8-4efd-85f4-5a147e581000"
+              "default": "78a9aa66-1789-49fd-9d87-538c45e1070a"
             }
           }
         ],
@@ -5712,7 +5712,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "b1421f14-3926-4a84-907e-b4ea1ab12b6f"
+              "default": "9ec95aa5-93f1-4bef-b4cf-3e3334de4d19"
             }
           }
         ],
@@ -5783,7 +5783,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "de8d287b-6a6a-488a-943b-8c1ab4017d42"
+              "default": "90ad0e9c-c7fb-44df-9aa9-1e3e2fc1cff6"
             }
           }
         ],
@@ -5881,7 +5881,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "8dcc6aeb-4ac0-4352-8b92-d16fac41a643"
+              "default": "698a924c-005b-46ac-a99b-d729d22d8e25"
             }
           }
         ],
@@ -6015,7 +6015,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c80df65b-e1f0-4fc8-a612-ca2c4afbbe7f"
+              "default": "ae300352-4a90-4c40-a480-8409a532983a"
             }
           }
         ],
@@ -6071,7 +6071,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "60260a36-f3be-4d46-9187-fafe03c8ef96"
+              "default": "a173eb0e-511c-41bb-8dc7-6e9d51c6d3bc"
             }
           }
         ],
@@ -6171,7 +6171,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "fba3d880-a059-4084-ad5d-96935b8ae63e"
+              "default": "1b2c4d9c-68b1-4402-81a0-6bda5592152e"
             }
           }
         ],
@@ -6234,7 +6234,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "489a5ce8-c54e-416e-8a9f-7282ca592f0f"
+              "default": "4019d03b-9e87-494e-b4a8-f4a879839d6e"
             }
           }
         ],
@@ -6411,7 +6411,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "d2db7217-485f-4cd0-9447-233ce2034b59"
+              "default": "6e98e7c8-53be-4aaa-9722-d76fd8d3fdf0"
             }
           }
         ],
@@ -6486,7 +6486,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "8847e452-2344-43ff-8492-40c26198af7e"
+              "default": "ce7dadb2-8997-4346-92de-80e919018aa3"
             }
           }
         ],
@@ -6592,7 +6592,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "d9193f9e-e75b-4de2-8d28-3bf534b30003"
+              "default": "c7c8253d-2c16-4362-8b5c-150c18afc25a"
             }
           }
         ],
@@ -6666,7 +6666,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "0533e90e-7c98-4532-ad0c-c893cc1d3504"
+              "default": "8d16e813-10cb-46fc-86f3-05b72bb5bdef"
             }
           }
         ],
@@ -6731,7 +6731,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "bc75e015-6d88-4a41-a4f0-bfb3044d6320"
+              "default": "7772d2b3-f43a-497c-81df-e5fe92f2800c"
             }
           }
         ],
@@ -6795,7 +6795,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "eb044fcb-0711-4555-9fc5-2c4c48e4eb28"
+              "default": "13cfa0b8-c69e-411e-9380-c9dfbb498f69"
             }
           }
         ],
@@ -6866,7 +6866,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "5c252116-3f57-4c1d-b6ed-85e711a04db4"
+              "default": "5721fda7-5a99-48f4-84d0-59db7203f4d1"
             }
           }
         ],
@@ -6964,7 +6964,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c7eafe85-d01a-4573-9120-b3b0b727f9bd"
+              "default": "92d581bf-57c9-4af5-a548-6202438f2952"
             }
           }
         ],
@@ -7070,7 +7070,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "fe90cb2b-7734-4296-a919-716e8f20dffc"
+              "default": "ace3d7d5-6313-4841-8a3d-8b3a8285c5d8"
             }
           }
         ],
@@ -7144,7 +7144,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "9727d79e-9bd6-48d6-89e2-642068d062aa"
+              "default": "5928d3f3-1c5f-44e4-8cdf-c53c09310ca9"
             }
           }
         ],
@@ -7198,7 +7198,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "540f2bb6-e430-44b2-9889-168c6f9ace8e"
+              "default": "cc8cbee3-a493-4fc5-b96f-cfd6b966f870"
             }
           }
         ],
@@ -7334,7 +7334,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "6ffc99a4-185e-4ec8-98cf-c991b91b426a"
+              "default": "6f21dad8-9118-400a-97f3-c02ae68bfe72"
             }
           }
         ],
@@ -7390,7 +7390,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "3cd20265-c96f-4e4a-b695-5e288307f923"
+              "default": "e07db129-58e0-4149-911f-eb0e82559269"
             }
           }
         ],
@@ -7490,7 +7490,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f33adcc9-12b2-407a-b97c-6cac9992a804"
+              "default": "ecaf4277-4766-48ff-ba40-216541bd4cbd"
             }
           }
         ],
@@ -7560,7 +7560,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "3bc2e599-7329-47fa-909a-23d73e5f346f"
+              "default": "20c34a30-8e86-4422-9723-61e3decee38e"
             }
           }
         ],
@@ -7714,7 +7714,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "e606d2b2-4ca9-42bc-a8f9-899dde55fd5d"
+              "default": "881065a1-1ec1-4414-b300-13899907d1da"
             }
           }
         ],
@@ -7807,7 +7807,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "3c7f7813-e977-4ba7-b009-985a3baafd0f"
+              "default": "76592a06-7232-405a-9fe9-e0df143b6eeb"
             }
           }
         ],
@@ -7970,7 +7970,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "fcffc6fd-be19-43b2-9d1f-7c7295015762"
+              "default": "82de8a46-0181-4473-89ba-640b8a28cb13"
             }
           }
         ],
@@ -8066,7 +8066,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "956adc39-cc91-4093-9f21-3ac86ce2520d"
+              "default": "1af59d3f-0bfa-4683-92a8-ee91588cbccf"
             }
           }
         ],
@@ -8157,7 +8157,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "a504ce42-4065-446c-9341-a828cc4b2a70"
+              "default": "3ad88c19-27f3-4a6d-9505-b9b942599582"
             }
           }
         ],
@@ -8239,7 +8239,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c982b873-40fd-4f6a-88a6-622e853faa25"
+              "default": "60213f97-dba2-462b-9624-db0d63518fa2"
             }
           }
         ],
@@ -8303,7 +8303,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "901b7129-ceab-4f5a-971b-7f18d522a498"
+              "default": "3af58499-76bd-405d-ab03-90a9058aec06"
             }
           }
         ],
@@ -8373,7 +8373,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "b5149b63-9d7d-485e-906d-cf47ab790661"
+              "default": "8e844e79-f187-461c-9e5c-3e3fa5008e1b"
             }
           }
         ],
@@ -8471,7 +8471,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "997460ff-a976-42b9-bd14-97b557987f5b"
+              "default": "8636f8e8-d916-442c-976d-6dd532678b6f"
             }
           }
         ],
@@ -8566,7 +8566,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f1db09b4-80e8-43aa-8e97-6321028b64b6"
+              "default": "e1c63e88-39f7-4ec0-aa40-d0ec691b8e57"
             }
           }
         ],
@@ -8656,7 +8656,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "0ab13e6e-1bcc-484c-9ea4-6b97d04b3352"
+              "default": "f2a4ae90-328c-4ab5-ab82-b64d8eacc171"
             }
           }
         ],
@@ -8723,7 +8723,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "dd6a6e15-4907-4992-a28a-a54b2e2425ad"
+              "default": "b5ac0464-71a7-4ef9-8a15-f8148818dcf8"
             }
           }
         ],
@@ -8879,7 +8879,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "591009ec-5e97-4f89-b749-572b1afc3548"
+              "default": "1f034e3f-9e2f-4524-9ee0-45128c0f5757"
             }
           }
         ],
@@ -8935,7 +8935,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "2212e207-a833-4012-adf9-c147b5b97baf"
+              "default": "5d21003c-0ab0-4a75-b062-6b7e40f6cffb"
             }
           }
         ],
@@ -9023,7 +9023,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "a46526ab-aa92-45d6-88f1-9a9dcd629ca9"
+              "default": "5ae47985-47d9-4c10-a66f-1166b0c4264c"
             }
           }
         ],
@@ -9114,7 +9114,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "476028ee-8229-41a0-9add-ae79b1528a61"
+              "default": "ea187ceb-34cd-458d-aee4-f450de52c116"
             }
           }
         ],
@@ -9198,7 +9198,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "0196225a-44a6-4b07-b6a7-cc053cb70e0b"
+              "default": "1250de30-c3bf-447e-a3a6-d9429e12efee"
             }
           }
         ],
@@ -9290,7 +9290,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "67211d3c-4b81-4f27-a38d-c5c78d0cc19d"
+              "default": "d73c09ab-cbf6-410f-b480-97ad587714cf"
             }
           }
         ],
@@ -9361,7 +9361,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "8091b9c3-6aea-495e-9713-6daf57f2b2d3"
+              "default": "f4534c45-e032-4047-8723-9062e399ccfe"
             }
           }
         ],
@@ -9459,7 +9459,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "94005091-b30b-4f05-8dcd-dfd7fa1c1583"
+              "default": "960ebfeb-a615-492a-b158-9d9bf58ffdc5"
             }
           }
         ],
@@ -9558,7 +9558,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "7e701de9-3e77-4892-8cf3-e2d9ea90534a"
+              "default": "fdeab8d4-71ca-436d-9828-7e3e7cd3e7b8"
             }
           }
         ],
@@ -9653,7 +9653,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "6eee22d3-4f5b-4cd9-ab7e-870a7f000ebf"
+              "default": "f96c9122-cc0d-4438-a894-12e69f9a2875"
             }
           }
         ],
@@ -9737,7 +9737,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f3885744-bcae-4257-8b08-ef5f288e02e0"
+              "default": "eeafda34-b1c3-4bb6-8fba-da175f1b85fb"
             }
           }
         ],
@@ -11110,6 +11110,20 @@
         },
         "additionalProperties": false
       },
+      "PushToken": {
+        "type": "object",
+        "properties": {
+          "deviceId": {
+            "type": "string",
+            "nullable": true
+          },
+          "token": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "User": {
         "type": "object",
         "properties": {
@@ -11190,7 +11204,7 @@
           "pushTokens": {
             "type": "array",
             "items": {
-              "type": "string"
+              "$ref": "#/components/schemas/PushToken"
             },
             "nullable": true
           }
@@ -12981,7 +12995,7 @@
           "pushTokens": {
             "type": "array",
             "items": {
-              "type": "string"
+              "$ref": "#/components/schemas/PushToken"
             },
             "nullable": true
           }
@@ -13045,11 +13059,15 @@
       },
       "DeleteUserPushTokenRequest": {
         "required": [
+          "deviceId",
           "token"
         ],
         "type": "object",
         "properties": {
           "token": {
+            "type": "string"
+          },
+          "deviceId": {
             "type": "string"
           }
         },
@@ -13058,10 +13076,10 @@
       "GetAllUserPushTokenResponse": {
         "type": "object",
         "properties": {
-          "tokens": {
+          "pushTokens": {
             "type": "array",
             "items": {
-              "type": "string"
+              "$ref": "#/components/schemas/PushToken"
             },
             "nullable": true
           }
@@ -13070,11 +13088,15 @@
       },
       "PostUserPushTokenRequest": {
         "required": [
+          "deviceId",
           "token"
         ],
         "type": "object",
         "properties": {
           "token": {
+            "type": "string"
+          },
+          "deviceId": {
             "type": "string"
           }
         },

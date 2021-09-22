@@ -3,6 +3,7 @@
 //
 
 import 'package:built_collection/built_collection.dart';
+import 'package:yes4track_mobile_api_client/src/model/push_token.dart';
 import 'package:yes4track_mobile_api_client/src/model/geo_location.dart';
 import 'package:built_value/json_object.dart';
 import 'package:built_value/built_value.dart';
@@ -88,7 +89,7 @@ abstract class User implements Built<User, UserBuilder> {
     GeoLocation? get location;
 
     @BuiltValueField(wireName: r'pushTokens')
-    BuiltList<String>? get pushTokens;
+    BuiltList<PushToken>? get pushTokens;
 
     User._();
 
@@ -223,7 +224,7 @@ class _$UserSerializer implements StructuredSerializer<User> {
             result
                 ..add(r'pushTokens')
                 ..add(serializers.serialize(object.pushTokens,
-                    specifiedType: const FullType(BuiltList, [FullType(String)])));
+                    specifiedType: const FullType(BuiltList, [FullType(PushToken)])));
         }
         return result;
     }
@@ -313,7 +314,7 @@ class _$UserSerializer implements StructuredSerializer<User> {
                     break;
                 case r'pushTokens':
                     result.pushTokens.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(String)])) as BuiltList<String>);
+                        specifiedType: const FullType(BuiltList, [FullType(PushToken)])) as BuiltList<PushToken>);
                     break;
             }
         }

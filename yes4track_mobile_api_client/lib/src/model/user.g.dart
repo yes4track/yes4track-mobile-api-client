@@ -44,7 +44,7 @@ class _$User extends User {
   @override
   final GeoLocation? location;
   @override
-  final BuiltList<String>? pushTokens;
+  final BuiltList<PushToken>? pushTokens;
 
   factory _$User([void Function(UserBuilder)? updates]) =>
       (new UserBuilder()..update(updates)).build();
@@ -256,10 +256,10 @@ class UserBuilder implements Builder<User, UserBuilder> {
       _$this._location ??= new GeoLocationBuilder();
   set location(GeoLocationBuilder? location) => _$this._location = location;
 
-  ListBuilder<String>? _pushTokens;
-  ListBuilder<String> get pushTokens =>
-      _$this._pushTokens ??= new ListBuilder<String>();
-  set pushTokens(ListBuilder<String>? pushTokens) =>
+  ListBuilder<PushToken>? _pushTokens;
+  ListBuilder<PushToken> get pushTokens =>
+      _$this._pushTokens ??= new ListBuilder<PushToken>();
+  set pushTokens(ListBuilder<PushToken>? pushTokens) =>
       _$this._pushTokens = pushTokens;
 
   UserBuilder() {

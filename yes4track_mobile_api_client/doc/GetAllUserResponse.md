@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 **defaultAngel** | **String** |  | [optional] 
 **defaultSponsor** | **String** |  | [optional] 
 **companies** | **BuiltList&lt;String&gt;** |  | [optional] 
-**pushTokens** | **BuiltList&lt;String&gt;** |  | [optional] 
+**pushTokens** | [**BuiltList&lt;PushToken&gt;**](PushToken.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

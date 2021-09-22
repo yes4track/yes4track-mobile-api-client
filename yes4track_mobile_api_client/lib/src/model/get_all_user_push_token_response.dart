@@ -3,6 +3,7 @@
 //
 
 import 'package:built_collection/built_collection.dart';
+import 'package:yes4track_mobile_api_client/src/model/push_token.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -11,10 +12,10 @@ part 'get_all_user_push_token_response.g.dart';
 /// GetAllUserPushTokenResponse
 ///
 /// Properties:
-/// * [tokens] 
+/// * [pushTokens] 
 abstract class GetAllUserPushTokenResponse implements Built<GetAllUserPushTokenResponse, GetAllUserPushTokenResponseBuilder> {
-    @BuiltValueField(wireName: r'tokens')
-    BuiltList<String>? get tokens;
+    @BuiltValueField(wireName: r'pushTokens')
+    BuiltList<PushToken>? get pushTokens;
 
     GetAllUserPushTokenResponse._();
 
@@ -37,11 +38,11 @@ class _$GetAllUserPushTokenResponseSerializer implements StructuredSerializer<Ge
     Iterable<Object?> serialize(Serializers serializers, GetAllUserPushTokenResponse object,
         {FullType specifiedType = FullType.unspecified}) {
         final result = <Object?>[];
-        if (object.tokens != null) {
+        if (object.pushTokens != null) {
             result
-                ..add(r'tokens')
-                ..add(serializers.serialize(object.tokens,
-                    specifiedType: const FullType(BuiltList, [FullType(String)])));
+                ..add(r'pushTokens')
+                ..add(serializers.serialize(object.pushTokens,
+                    specifiedType: const FullType(BuiltList, [FullType(PushToken)])));
         }
         return result;
     }
@@ -57,9 +58,9 @@ class _$GetAllUserPushTokenResponseSerializer implements StructuredSerializer<Ge
             iterator.moveNext();
             final Object? value = iterator.current;
             switch (key) {
-                case r'tokens':
-                    result.tokens.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(String)])) as BuiltList<String>);
+                case r'pushTokens':
+                    result.pushTokens.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(BuiltList, [FullType(PushToken)])) as BuiltList<PushToken>);
                     break;
             }
         }

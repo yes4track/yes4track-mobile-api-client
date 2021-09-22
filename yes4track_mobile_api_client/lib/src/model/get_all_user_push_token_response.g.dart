@@ -8,13 +8,13 @@ part of 'get_all_user_push_token_response.dart';
 
 class _$GetAllUserPushTokenResponse extends GetAllUserPushTokenResponse {
   @override
-  final BuiltList<String>? tokens;
+  final BuiltList<PushToken>? pushTokens;
 
   factory _$GetAllUserPushTokenResponse(
           [void Function(GetAllUserPushTokenResponseBuilder)? updates]) =>
       (new GetAllUserPushTokenResponseBuilder()..update(updates)).build();
 
-  _$GetAllUserPushTokenResponse._({this.tokens}) : super._();
+  _$GetAllUserPushTokenResponse._({this.pushTokens}) : super._();
 
   @override
   GetAllUserPushTokenResponse rebuild(
@@ -28,18 +28,19 @@ class _$GetAllUserPushTokenResponse extends GetAllUserPushTokenResponse {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is GetAllUserPushTokenResponse && tokens == other.tokens;
+    return other is GetAllUserPushTokenResponse &&
+        pushTokens == other.pushTokens;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(0, tokens.hashCode));
+    return $jf($jc(0, pushTokens.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('GetAllUserPushTokenResponse')
-          ..add('tokens', tokens))
+          ..add('pushTokens', pushTokens))
         .toString();
   }
 }
@@ -50,10 +51,11 @@ class GetAllUserPushTokenResponseBuilder
             GetAllUserPushTokenResponseBuilder> {
   _$GetAllUserPushTokenResponse? _$v;
 
-  ListBuilder<String>? _tokens;
-  ListBuilder<String> get tokens =>
-      _$this._tokens ??= new ListBuilder<String>();
-  set tokens(ListBuilder<String>? tokens) => _$this._tokens = tokens;
+  ListBuilder<PushToken>? _pushTokens;
+  ListBuilder<PushToken> get pushTokens =>
+      _$this._pushTokens ??= new ListBuilder<PushToken>();
+  set pushTokens(ListBuilder<PushToken>? pushTokens) =>
+      _$this._pushTokens = pushTokens;
 
   GetAllUserPushTokenResponseBuilder() {
     GetAllUserPushTokenResponse._initializeBuilder(this);
@@ -62,7 +64,7 @@ class GetAllUserPushTokenResponseBuilder
   GetAllUserPushTokenResponseBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _tokens = $v.tokens?.toBuilder();
+      _pushTokens = $v.pushTokens?.toBuilder();
       _$v = null;
     }
     return this;
@@ -83,13 +85,13 @@ class GetAllUserPushTokenResponseBuilder
   _$GetAllUserPushTokenResponse build() {
     _$GetAllUserPushTokenResponse _$result;
     try {
-      _$result =
-          _$v ?? new _$GetAllUserPushTokenResponse._(tokens: _tokens?.build());
+      _$result = _$v ??
+          new _$GetAllUserPushTokenResponse._(pushTokens: _pushTokens?.build());
     } catch (_) {
       late String _$failedField;
       try {
-        _$failedField = 'tokens';
-        _tokens?.build();
+        _$failedField = 'pushTokens';
+        _pushTokens?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'GetAllUserPushTokenResponse', _$failedField, e.toString());

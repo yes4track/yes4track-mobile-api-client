@@ -83,6 +83,7 @@ doc/PostUserSetupAngelRequest.md
 doc/PostUserSignInRequest.md
 doc/PostUserSignInResponse.md
 doc/ProfilePhotoRequest.md
+doc/PushToken.md
 doc/PutAdventureRequest.md
 doc/PutCompanyRequest.md
 doc/PutExperienceRequest.md
@@ -209,6 +210,7 @@ lib/src/model/post_user_setup_angel_request.dart
 lib/src/model/post_user_sign_in_request.dart
 lib/src/model/post_user_sign_in_response.dart
 lib/src/model/profile_photo_request.dart
+lib/src/model/push_token.dart
 lib/src/model/put_adventure_request.dart
 lib/src/model/put_company_request.dart
 lib/src/model/put_experience_request.dart
@@ -236,7 +238,4 @@ lib/src/model/waypoint_type.dart
 lib/src/serializers.dart
 lib/yes4track_mobile_api_client.dart
 pubspec.yaml
-test/delete_user_push_token_request_test.dart
-test/get_all_user_push_token_response_test.dart
-test/post_user_push_token_request_test.dart
-test/version_api_test.dart
+test/push_token_test.dart

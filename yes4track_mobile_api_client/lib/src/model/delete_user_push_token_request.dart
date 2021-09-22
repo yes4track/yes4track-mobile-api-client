@@ -11,9 +11,13 @@ part 'delete_user_push_token_request.g.dart';
 ///
 /// Properties:
 /// * [token] 
+/// * [deviceId] 
 abstract class DeleteUserPushTokenRequest implements Built<DeleteUserPushTokenRequest, DeleteUserPushTokenRequestBuilder> {
     @BuiltValueField(wireName: r'token')
     String get token;
+
+    @BuiltValueField(wireName: r'deviceId')
+    String get deviceId;
 
     DeleteUserPushTokenRequest._();
 
@@ -40,6 +44,10 @@ class _$DeleteUserPushTokenRequestSerializer implements StructuredSerializer<Del
             ..add(r'token')
             ..add(serializers.serialize(object.token,
                 specifiedType: const FullType(String)));
+        result
+            ..add(r'deviceId')
+            ..add(serializers.serialize(object.deviceId,
+                specifiedType: const FullType(String)));
         return result;
     }
 
@@ -56,6 +64,10 @@ class _$DeleteUserPushTokenRequestSerializer implements StructuredSerializer<Del
             switch (key) {
                 case r'token':
                     result.token = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+                case r'deviceId':
+                    result.deviceId = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
             }
