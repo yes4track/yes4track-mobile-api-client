@@ -31,6 +31,8 @@ class _$GetAllTrackResponse extends GetAllTrackResponse {
   final Statistic? statistic;
   @override
   final MapCoordinate? mapCoordinate;
+  @override
+  final BuiltList<Waypoint>? waypoints;
 
   factory _$GetAllTrackResponse(
           [void Function(GetAllTrackResponseBuilder)? updates]) =>
@@ -48,7 +50,8 @@ class _$GetAllTrackResponse extends GetAllTrackResponse {
       this.endDate,
       this.id,
       this.statistic,
-      this.mapCoordinate})
+      this.mapCoordinate,
+      this.waypoints})
       : super._();
 
   @override
@@ -75,7 +78,8 @@ class _$GetAllTrackResponse extends GetAllTrackResponse {
         endDate == other.endDate &&
         id == other.id &&
         statistic == other.statistic &&
-        mapCoordinate == other.mapCoordinate;
+        mapCoordinate == other.mapCoordinate &&
+        waypoints == other.waypoints;
   }
 
   @override
@@ -90,18 +94,20 @@ class _$GetAllTrackResponse extends GetAllTrackResponse {
                                 $jc(
                                     $jc(
                                         $jc(
-                                            $jc($jc(0, createdAt.hashCode),
-                                                updatedAt.hashCode),
-                                            userCreated.hashCode),
-                                        userUpdated.hashCode),
-                                    adventureId.hashCode),
-                                name.hashCode),
-                            source_.hashCode),
-                        startDate.hashCode),
-                    endDate.hashCode),
-                id.hashCode),
-            statistic.hashCode),
-        mapCoordinate.hashCode));
+                                            $jc(
+                                                $jc($jc(0, createdAt.hashCode),
+                                                    updatedAt.hashCode),
+                                                userCreated.hashCode),
+                                            userUpdated.hashCode),
+                                        adventureId.hashCode),
+                                    name.hashCode),
+                                source_.hashCode),
+                            startDate.hashCode),
+                        endDate.hashCode),
+                    id.hashCode),
+                statistic.hashCode),
+            mapCoordinate.hashCode),
+        waypoints.hashCode));
   }
 
   @override
@@ -118,7 +124,8 @@ class _$GetAllTrackResponse extends GetAllTrackResponse {
           ..add('endDate', endDate)
           ..add('id', id)
           ..add('statistic', statistic)
-          ..add('mapCoordinate', mapCoordinate))
+          ..add('mapCoordinate', mapCoordinate)
+          ..add('waypoints', waypoints))
         .toString();
   }
 }
@@ -178,6 +185,12 @@ class GetAllTrackResponseBuilder
   set mapCoordinate(MapCoordinateBuilder? mapCoordinate) =>
       _$this._mapCoordinate = mapCoordinate;
 
+  ListBuilder<Waypoint>? _waypoints;
+  ListBuilder<Waypoint> get waypoints =>
+      _$this._waypoints ??= new ListBuilder<Waypoint>();
+  set waypoints(ListBuilder<Waypoint>? waypoints) =>
+      _$this._waypoints = waypoints;
+
   GetAllTrackResponseBuilder() {
     GetAllTrackResponse._initializeBuilder(this);
   }
@@ -197,6 +210,7 @@ class GetAllTrackResponseBuilder
       _id = $v.id;
       _statistic = $v.statistic?.toBuilder();
       _mapCoordinate = $v.mapCoordinate?.toBuilder();
+      _waypoints = $v.waypoints?.toBuilder();
       _$v = null;
     }
     return this;
@@ -230,7 +244,8 @@ class GetAllTrackResponseBuilder
               endDate: endDate,
               id: id,
               statistic: _statistic?.build(),
-              mapCoordinate: _mapCoordinate?.build());
+              mapCoordinate: _mapCoordinate?.build(),
+              waypoints: _waypoints?.build());
     } catch (_) {
       late String _$failedField;
       try {
@@ -238,6 +253,8 @@ class GetAllTrackResponseBuilder
         _statistic?.build();
         _$failedField = 'mapCoordinate';
         _mapCoordinate?.build();
+        _$failedField = 'waypoints';
+        _waypoints?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'GetAllTrackResponse', _$failedField, e.toString());

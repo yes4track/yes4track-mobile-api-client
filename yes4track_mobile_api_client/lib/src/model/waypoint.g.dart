@@ -8,6 +8,8 @@ part of 'waypoint.dart';
 
 class _$Waypoint extends Waypoint {
   @override
+  final String? id;
+  @override
   final String? name;
   @override
   final String? description;
@@ -15,11 +17,19 @@ class _$Waypoint extends Waypoint {
   final WaypointType? type;
   @override
   final BuiltList<double>? location;
+  @override
+  final DateTime? time;
 
   factory _$Waypoint([void Function(WaypointBuilder)? updates]) =>
       (new WaypointBuilder()..update(updates)).build();
 
-  _$Waypoint._({this.name, this.description, this.type, this.location})
+  _$Waypoint._(
+      {this.id,
+      this.name,
+      this.description,
+      this.type,
+      this.location,
+      this.time})
       : super._();
 
   @override
@@ -33,32 +43,45 @@ class _$Waypoint extends Waypoint {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is Waypoint &&
+        id == other.id &&
         name == other.name &&
         description == other.description &&
         type == other.type &&
-        location == other.location;
+        location == other.location &&
+        time == other.time;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, name.hashCode), description.hashCode), type.hashCode),
-        location.hashCode));
+        $jc(
+            $jc(
+                $jc($jc($jc(0, id.hashCode), name.hashCode),
+                    description.hashCode),
+                type.hashCode),
+            location.hashCode),
+        time.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('Waypoint')
+          ..add('id', id)
           ..add('name', name)
           ..add('description', description)
           ..add('type', type)
-          ..add('location', location))
+          ..add('location', location)
+          ..add('time', time))
         .toString();
   }
 }
 
 class WaypointBuilder implements Builder<Waypoint, WaypointBuilder> {
   _$Waypoint? _$v;
+
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
 
   String? _name;
   String? get name => _$this._name;
@@ -77,6 +100,10 @@ class WaypointBuilder implements Builder<Waypoint, WaypointBuilder> {
       _$this._location ??= new ListBuilder<double>();
   set location(ListBuilder<double>? location) => _$this._location = location;
 
+  DateTime? _time;
+  DateTime? get time => _$this._time;
+  set time(DateTime? time) => _$this._time = time;
+
   WaypointBuilder() {
     Waypoint._initializeBuilder(this);
   }
@@ -84,10 +111,12 @@ class WaypointBuilder implements Builder<Waypoint, WaypointBuilder> {
   WaypointBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
+      _id = $v.id;
       _name = $v.name;
       _description = $v.description;
       _type = $v.type;
       _location = $v.location?.toBuilder();
+      _time = $v.time;
       _$v = null;
     }
     return this;
@@ -110,10 +139,12 @@ class WaypointBuilder implements Builder<Waypoint, WaypointBuilder> {
     try {
       _$result = _$v ??
           new _$Waypoint._(
+              id: id,
               name: name,
               description: description,
               type: type,
-              location: _location?.build());
+              location: _location?.build(),
+              time: time);
     } catch (_) {
       late String _$failedField;
       try {

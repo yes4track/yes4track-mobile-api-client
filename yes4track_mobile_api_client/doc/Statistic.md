@@ -13,6 +13,10 @@ Name | Type | Description | Notes
 **totalDistance** | **double** |  | [optional] 
 **elevationGain** | **double** |  | [optional] 
 **speed** | **double** |  | [optional] 
+**elevationLoss** | **double** |  | [optional] 
+**elevationMin** | **double** |  | [optional] 
+**elevationMax** | **double** |  | [optional] 
+**elevationMedian** | **double** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

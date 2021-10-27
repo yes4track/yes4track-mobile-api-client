@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **isAdmin** | **bool** |  | [optional] 
 **isSuperAdmin** | **bool** |  | [optional] 
 **isAngel** | **bool** |  | [optional] 
+**isExplorer** | **bool** |  | [optional] 
 **defaultAngel** | **String** |  | [optional] 
 **defaultSponsor** | **String** |  | [optional] 
 

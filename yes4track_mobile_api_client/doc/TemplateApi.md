@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Template id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '31b21d39-05d0-463c-b099-effcdb5505f5']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1153119e-5bdc-4487-a829-ae497efdbef5']
 
 ### Return type
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'b0cecf6b-de8c-40ad-8833-75bfd2a88e3a']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'bc308a28-bea7-440d-9d37-b4d00ed0944e']
 
 ### Return type
 
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Template id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd18257d6-57c6-4e93-b3a7-f2ac17f8e391']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '02fd4133-233f-415e-aeeb-c91210b224bf']
 
 ### Return type
 
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
  **id** | [**String**](.md)| Template id | 
  **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '956e8ad5-6022-47dd-ba4a-afad710007a7']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0d0bab8b-6649-4758-aed4-529340b694df']
 
 ### Return type
 
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Template Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '62143927-d3b6-4878-b5b7-3f3c78f9970b']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1b4bc005-feb3-4e19-82cd-3d9a4af8f13e']
  **images** | [**MultipartFile**](MultipartFile.md)| Images | [optional] 
 
 ### Return type
@@ -305,7 +305,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**String**](.md)| Template Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8bf99685-1a15-4014-9813-c7b4d7761e6a']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd07f1ed9-03b5-41dd-b15d-592ab8a5f750']
  **putTemplateRequest** | [**PutTemplateRequest**](PutTemplateRequest.md)| Template to update | [optional] 
 
 ### Return type
@@ -354,7 +354,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '964502d6-74b1-41b5-9d4f-06586dcafa54']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6386fe33-9330-4341-ac28-c7a751d49c3c']
  **postTemplateRequest** | [**PostTemplateRequest**](PostTemplateRequest.md)| Template to create | [optional] 
 
 ### Return type

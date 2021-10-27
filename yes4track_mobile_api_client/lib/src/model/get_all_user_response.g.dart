@@ -34,6 +34,8 @@ class _$GetAllUserResponse extends GetAllUserResponse {
   @override
   final bool? isAngel;
   @override
+  final bool? isExplorer;
+  @override
   final String? defaultAngel;
   @override
   final String? defaultSponsor;
@@ -60,6 +62,7 @@ class _$GetAllUserResponse extends GetAllUserResponse {
       this.isAdmin,
       this.isSuperAdmin,
       this.isAngel,
+      this.isExplorer,
       this.defaultAngel,
       this.defaultSponsor,
       this.companies,
@@ -92,6 +95,7 @@ class _$GetAllUserResponse extends GetAllUserResponse {
         isAdmin == other.isAdmin &&
         isSuperAdmin == other.isSuperAdmin &&
         isAngel == other.isAngel &&
+        isExplorer == other.isExplorer &&
         defaultAngel == other.defaultAngel &&
         defaultSponsor == other.defaultSponsor &&
         companies == other.companies &&
@@ -117,24 +121,26 @@ class _$GetAllUserResponse extends GetAllUserResponse {
                                                             $jc(
                                                                 $jc(
                                                                     $jc(
-                                                                        0,
-                                                                        createdAt
+                                                                        $jc(
+                                                                            0,
+                                                                            createdAt
+                                                                                .hashCode),
+                                                                        updatedAt
                                                                             .hashCode),
-                                                                    updatedAt
+                                                                    userCreated
                                                                         .hashCode),
-                                                                userCreated
+                                                                userUpdated
                                                                     .hashCode),
-                                                            userUpdated
-                                                                .hashCode),
-                                                        name.hashCode),
-                                                    phone.hashCode),
-                                                email.hashCode),
-                                            id.hashCode),
-                                        photoUrl.hashCode),
-                                    isActive.hashCode),
-                                isAdmin.hashCode),
-                            isSuperAdmin.hashCode),
-                        isAngel.hashCode),
+                                                            name.hashCode),
+                                                        phone.hashCode),
+                                                    email.hashCode),
+                                                id.hashCode),
+                                            photoUrl.hashCode),
+                                        isActive.hashCode),
+                                    isAdmin.hashCode),
+                                isSuperAdmin.hashCode),
+                            isAngel.hashCode),
+                        isExplorer.hashCode),
                     defaultAngel.hashCode),
                 defaultSponsor.hashCode),
             companies.hashCode),
@@ -157,6 +163,7 @@ class _$GetAllUserResponse extends GetAllUserResponse {
           ..add('isAdmin', isAdmin)
           ..add('isSuperAdmin', isSuperAdmin)
           ..add('isAngel', isAngel)
+          ..add('isExplorer', isExplorer)
           ..add('defaultAngel', defaultAngel)
           ..add('defaultSponsor', defaultSponsor)
           ..add('companies', companies)
@@ -221,6 +228,10 @@ class GetAllUserResponseBuilder
   bool? get isAngel => _$this._isAngel;
   set isAngel(bool? isAngel) => _$this._isAngel = isAngel;
 
+  bool? _isExplorer;
+  bool? get isExplorer => _$this._isExplorer;
+  set isExplorer(bool? isExplorer) => _$this._isExplorer = isExplorer;
+
   String? _defaultAngel;
   String? get defaultAngel => _$this._defaultAngel;
   set defaultAngel(String? defaultAngel) => _$this._defaultAngel = defaultAngel;
@@ -262,6 +273,7 @@ class GetAllUserResponseBuilder
       _isAdmin = $v.isAdmin;
       _isSuperAdmin = $v.isSuperAdmin;
       _isAngel = $v.isAngel;
+      _isExplorer = $v.isExplorer;
       _defaultAngel = $v.defaultAngel;
       _defaultSponsor = $v.defaultSponsor;
       _companies = $v.companies?.toBuilder();
@@ -301,6 +313,7 @@ class GetAllUserResponseBuilder
               isAdmin: isAdmin,
               isSuperAdmin: isSuperAdmin,
               isAngel: isAngel,
+              isExplorer: isExplorer,
               defaultAngel: defaultAngel,
               defaultSponsor: defaultSponsor,
               companies: _companies?.build(),

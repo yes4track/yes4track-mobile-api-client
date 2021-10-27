@@ -22,11 +22,19 @@ class _$PutCompanyRequest extends PutCompanyRequest {
   @override
   final String? registrationNumber;
   @override
+  final RegistrationType? registrationType;
+  @override
   final String? contactEmail;
   @override
   final String? contactPhone;
   @override
+  final CompanyType? type;
+  @override
+  final String? biography;
+  @override
   final String? id;
+  @override
+  final ProfilePhotoRequest? profilePhoto;
 
   factory _$PutCompanyRequest(
           [void Function(PutCompanyRequestBuilder)? updates]) =>
@@ -40,9 +48,13 @@ class _$PutCompanyRequest extends PutCompanyRequest {
       this.legalName,
       this.fantasyName,
       this.registrationNumber,
+      this.registrationType,
       this.contactEmail,
       this.contactPhone,
-      this.id})
+      this.type,
+      this.biography,
+      this.id,
+      this.profilePhoto})
       : super._();
 
   @override
@@ -64,9 +76,13 @@ class _$PutCompanyRequest extends PutCompanyRequest {
         legalName == other.legalName &&
         fantasyName == other.fantasyName &&
         registrationNumber == other.registrationNumber &&
+        registrationType == other.registrationType &&
         contactEmail == other.contactEmail &&
         contactPhone == other.contactPhone &&
-        id == other.id;
+        type == other.type &&
+        biography == other.biography &&
+        id == other.id &&
+        profilePhoto == other.profilePhoto;
   }
 
   @override
@@ -79,16 +95,26 @@ class _$PutCompanyRequest extends PutCompanyRequest {
                         $jc(
                             $jc(
                                 $jc(
-                                    $jc($jc(0, createdAt.hashCode),
-                                        updatedAt.hashCode),
-                                    userCreated.hashCode),
-                                userUpdated.hashCode),
-                            legalName.hashCode),
-                        fantasyName.hashCode),
-                    registrationNumber.hashCode),
-                contactEmail.hashCode),
-            contactPhone.hashCode),
-        id.hashCode));
+                                    $jc(
+                                        $jc(
+                                            $jc(
+                                                $jc(
+                                                    $jc(
+                                                        $jc(0,
+                                                            createdAt.hashCode),
+                                                        updatedAt.hashCode),
+                                                    userCreated.hashCode),
+                                                userUpdated.hashCode),
+                                            legalName.hashCode),
+                                        fantasyName.hashCode),
+                                    registrationNumber.hashCode),
+                                registrationType.hashCode),
+                            contactEmail.hashCode),
+                        contactPhone.hashCode),
+                    type.hashCode),
+                biography.hashCode),
+            id.hashCode),
+        profilePhoto.hashCode));
   }
 
   @override
@@ -101,9 +127,13 @@ class _$PutCompanyRequest extends PutCompanyRequest {
           ..add('legalName', legalName)
           ..add('fantasyName', fantasyName)
           ..add('registrationNumber', registrationNumber)
+          ..add('registrationType', registrationType)
           ..add('contactEmail', contactEmail)
           ..add('contactPhone', contactPhone)
-          ..add('id', id))
+          ..add('type', type)
+          ..add('biography', biography)
+          ..add('id', id)
+          ..add('profilePhoto', profilePhoto))
         .toString();
   }
 }
@@ -141,6 +171,11 @@ class PutCompanyRequestBuilder
   set registrationNumber(String? registrationNumber) =>
       _$this._registrationNumber = registrationNumber;
 
+  RegistrationType? _registrationType;
+  RegistrationType? get registrationType => _$this._registrationType;
+  set registrationType(RegistrationType? registrationType) =>
+      _$this._registrationType = registrationType;
+
   String? _contactEmail;
   String? get contactEmail => _$this._contactEmail;
   set contactEmail(String? contactEmail) => _$this._contactEmail = contactEmail;
@@ -149,9 +184,23 @@ class PutCompanyRequestBuilder
   String? get contactPhone => _$this._contactPhone;
   set contactPhone(String? contactPhone) => _$this._contactPhone = contactPhone;
 
+  CompanyType? _type;
+  CompanyType? get type => _$this._type;
+  set type(CompanyType? type) => _$this._type = type;
+
+  String? _biography;
+  String? get biography => _$this._biography;
+  set biography(String? biography) => _$this._biography = biography;
+
   String? _id;
   String? get id => _$this._id;
   set id(String? id) => _$this._id = id;
+
+  ProfilePhotoRequestBuilder? _profilePhoto;
+  ProfilePhotoRequestBuilder get profilePhoto =>
+      _$this._profilePhoto ??= new ProfilePhotoRequestBuilder();
+  set profilePhoto(ProfilePhotoRequestBuilder? profilePhoto) =>
+      _$this._profilePhoto = profilePhoto;
 
   PutCompanyRequestBuilder() {
     PutCompanyRequest._initializeBuilder(this);
@@ -167,9 +216,13 @@ class PutCompanyRequestBuilder
       _legalName = $v.legalName;
       _fantasyName = $v.fantasyName;
       _registrationNumber = $v.registrationNumber;
+      _registrationType = $v.registrationType;
       _contactEmail = $v.contactEmail;
       _contactPhone = $v.contactPhone;
+      _type = $v.type;
+      _biography = $v.biography;
       _id = $v.id;
+      _profilePhoto = $v.profilePhoto?.toBuilder();
       _$v = null;
     }
     return this;
@@ -188,18 +241,35 @@ class PutCompanyRequestBuilder
 
   @override
   _$PutCompanyRequest build() {
-    final _$result = _$v ??
-        new _$PutCompanyRequest._(
-            createdAt: createdAt,
-            updatedAt: updatedAt,
-            userCreated: userCreated,
-            userUpdated: userUpdated,
-            legalName: legalName,
-            fantasyName: fantasyName,
-            registrationNumber: registrationNumber,
-            contactEmail: contactEmail,
-            contactPhone: contactPhone,
-            id: id);
+    _$PutCompanyRequest _$result;
+    try {
+      _$result = _$v ??
+          new _$PutCompanyRequest._(
+              createdAt: createdAt,
+              updatedAt: updatedAt,
+              userCreated: userCreated,
+              userUpdated: userUpdated,
+              legalName: legalName,
+              fantasyName: fantasyName,
+              registrationNumber: registrationNumber,
+              registrationType: registrationType,
+              contactEmail: contactEmail,
+              contactPhone: contactPhone,
+              type: type,
+              biography: biography,
+              id: id,
+              profilePhoto: _profilePhoto?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'profilePhoto';
+        _profilePhoto?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PutCompanyRequest', _$failedField, e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }

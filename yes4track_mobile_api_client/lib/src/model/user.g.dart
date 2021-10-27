@@ -10,87 +10,69 @@ class _$User extends User {
   @override
   final String? id;
   @override
-  final String? subscriptionId;
+  final DateTime? createdAt;
   @override
-  final Subscription? subscriptionReference;
+  final DateTime? updatedAt;
   @override
-  final String name;
+  final String? userCreated;
   @override
-  final String? photo;
+  final String? userUpdated;
   @override
-  final String email;
+  final JsonObject? version;
   @override
-  final String? mobilePhone;
+  final String? name;
   @override
-  final String? documentNumber;
+  final String? phone;
+  @override
+  final String? email;
+  @override
+  final String? photoUrl;
   @override
   final bool? isActive;
   @override
-  final String? identityProviderId;
-  @override
-  final String? identityProvidersEnabled;
-  @override
-  final String? username;
-  @override
-  final bool? isEmailVerified;
-  @override
-  final bool? isPhoneVerified;
-  @override
-  final bool? socialLoginEnabled;
-  @override
-  final bool? loginEnabled;
-  @override
-  final bool? isAnonymous;
-  @override
   final bool? isAdmin;
   @override
-  final bool? isDeleted;
+  final bool? isSuperAdmin;
   @override
-  final DateTime? deleteDate;
+  final bool? isAngel;
   @override
-  final DateTime? updateDate;
+  final bool? isExplorer;
   @override
-  final DateTime? createDate;
+  final String? defaultAngel;
   @override
-  final String? deleteUserId;
+  final String? defaultSponsor;
   @override
-  final String? updateUserId;
+  final BuiltList<String>? companies;
   @override
-  final String? createUserId;
+  final GeoLocation? location;
+  @override
+  final BuiltList<PushToken>? pushTokens;
 
   factory _$User([void Function(UserBuilder)? updates]) =>
       (new UserBuilder()..update(updates)).build();
 
   _$User._(
       {this.id,
-      this.subscriptionId,
-      this.subscriptionReference,
-      required this.name,
-      this.photo,
-      required this.email,
-      this.mobilePhone,
-      this.documentNumber,
+      this.createdAt,
+      this.updatedAt,
+      this.userCreated,
+      this.userUpdated,
+      this.version,
+      this.name,
+      this.phone,
+      this.email,
+      this.photoUrl,
       this.isActive,
-      this.identityProviderId,
-      this.identityProvidersEnabled,
-      this.username,
-      this.isEmailVerified,
-      this.isPhoneVerified,
-      this.socialLoginEnabled,
-      this.loginEnabled,
-      this.isAnonymous,
       this.isAdmin,
-      this.isDeleted,
-      this.deleteDate,
-      this.updateDate,
-      this.createDate,
-      this.deleteUserId,
-      this.updateUserId,
-      this.createUserId})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(name, 'User', 'name');
-    BuiltValueNullFieldError.checkNotNull(email, 'User', 'email');
-  }
+      this.isSuperAdmin,
+      this.isAngel,
+      this.isExplorer,
+      this.defaultAngel,
+      this.defaultSponsor,
+      this.companies,
+      this.location,
+      this.pushTokens})
+      : super._();
 
   @override
   User rebuild(void Function(UserBuilder) updates) =>
@@ -104,30 +86,25 @@ class _$User extends User {
     if (identical(other, this)) return true;
     return other is User &&
         id == other.id &&
-        subscriptionId == other.subscriptionId &&
-        subscriptionReference == other.subscriptionReference &&
+        createdAt == other.createdAt &&
+        updatedAt == other.updatedAt &&
+        userCreated == other.userCreated &&
+        userUpdated == other.userUpdated &&
+        version == other.version &&
         name == other.name &&
-        photo == other.photo &&
+        phone == other.phone &&
         email == other.email &&
-        mobilePhone == other.mobilePhone &&
-        documentNumber == other.documentNumber &&
+        photoUrl == other.photoUrl &&
         isActive == other.isActive &&
-        identityProviderId == other.identityProviderId &&
-        identityProvidersEnabled == other.identityProvidersEnabled &&
-        username == other.username &&
-        isEmailVerified == other.isEmailVerified &&
-        isPhoneVerified == other.isPhoneVerified &&
-        socialLoginEnabled == other.socialLoginEnabled &&
-        loginEnabled == other.loginEnabled &&
-        isAnonymous == other.isAnonymous &&
         isAdmin == other.isAdmin &&
-        isDeleted == other.isDeleted &&
-        deleteDate == other.deleteDate &&
-        updateDate == other.updateDate &&
-        createDate == other.createDate &&
-        deleteUserId == other.deleteUserId &&
-        updateUserId == other.updateUserId &&
-        createUserId == other.createUserId;
+        isSuperAdmin == other.isSuperAdmin &&
+        isAngel == other.isAngel &&
+        isExplorer == other.isExplorer &&
+        defaultAngel == other.defaultAngel &&
+        defaultSponsor == other.defaultSponsor &&
+        companies == other.companies &&
+        location == other.location &&
+        pushTokens == other.pushTokens;
   }
 
   @override
@@ -150,56 +127,51 @@ class _$User extends User {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc(0, id.hashCode), subscriptionId.hashCode), subscriptionReference.hashCode), name.hashCode), photo.hashCode), email.hashCode),
-                                                                                mobilePhone.hashCode),
-                                                                            documentNumber.hashCode),
-                                                                        isActive.hashCode),
-                                                                    identityProviderId.hashCode),
-                                                                identityProvidersEnabled.hashCode),
-                                                            username.hashCode),
-                                                        isEmailVerified.hashCode),
-                                                    isPhoneVerified.hashCode),
-                                                socialLoginEnabled.hashCode),
-                                            loginEnabled.hashCode),
-                                        isAnonymous.hashCode),
-                                    isAdmin.hashCode),
-                                isDeleted.hashCode),
-                            deleteDate.hashCode),
-                        updateDate.hashCode),
-                    createDate.hashCode),
-                deleteUserId.hashCode),
-            updateUserId.hashCode),
-        createUserId.hashCode));
+                                                                            $jc($jc(0, id.hashCode),
+                                                                                createdAt.hashCode),
+                                                                            updatedAt.hashCode),
+                                                                        userCreated.hashCode),
+                                                                    userUpdated.hashCode),
+                                                                version.hashCode),
+                                                            name.hashCode),
+                                                        phone.hashCode),
+                                                    email.hashCode),
+                                                photoUrl.hashCode),
+                                            isActive.hashCode),
+                                        isAdmin.hashCode),
+                                    isSuperAdmin.hashCode),
+                                isAngel.hashCode),
+                            isExplorer.hashCode),
+                        defaultAngel.hashCode),
+                    defaultSponsor.hashCode),
+                companies.hashCode),
+            location.hashCode),
+        pushTokens.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('User')
           ..add('id', id)
-          ..add('subscriptionId', subscriptionId)
-          ..add('subscriptionReference', subscriptionReference)
+          ..add('createdAt', createdAt)
+          ..add('updatedAt', updatedAt)
+          ..add('userCreated', userCreated)
+          ..add('userUpdated', userUpdated)
+          ..add('version', version)
           ..add('name', name)
-          ..add('photo', photo)
+          ..add('phone', phone)
           ..add('email', email)
-          ..add('mobilePhone', mobilePhone)
-          ..add('documentNumber', documentNumber)
+          ..add('photoUrl', photoUrl)
           ..add('isActive', isActive)
-          ..add('identityProviderId', identityProviderId)
-          ..add('identityProvidersEnabled', identityProvidersEnabled)
-          ..add('username', username)
-          ..add('isEmailVerified', isEmailVerified)
-          ..add('isPhoneVerified', isPhoneVerified)
-          ..add('socialLoginEnabled', socialLoginEnabled)
-          ..add('loginEnabled', loginEnabled)
-          ..add('isAnonymous', isAnonymous)
           ..add('isAdmin', isAdmin)
-          ..add('isDeleted', isDeleted)
-          ..add('deleteDate', deleteDate)
-          ..add('updateDate', updateDate)
-          ..add('createDate', createDate)
-          ..add('deleteUserId', deleteUserId)
-          ..add('updateUserId', updateUserId)
-          ..add('createUserId', createUserId))
+          ..add('isSuperAdmin', isSuperAdmin)
+          ..add('isAngel', isAngel)
+          ..add('isExplorer', isExplorer)
+          ..add('defaultAngel', defaultAngel)
+          ..add('defaultSponsor', defaultSponsor)
+          ..add('companies', companies)
+          ..add('location', location)
+          ..add('pushTokens', pushTokens))
         .toString();
   }
 }
@@ -211,110 +183,87 @@ class UserBuilder implements Builder<User, UserBuilder> {
   String? get id => _$this._id;
   set id(String? id) => _$this._id = id;
 
-  String? _subscriptionId;
-  String? get subscriptionId => _$this._subscriptionId;
-  set subscriptionId(String? subscriptionId) =>
-      _$this._subscriptionId = subscriptionId;
+  DateTime? _createdAt;
+  DateTime? get createdAt => _$this._createdAt;
+  set createdAt(DateTime? createdAt) => _$this._createdAt = createdAt;
 
-  SubscriptionBuilder? _subscriptionReference;
-  SubscriptionBuilder get subscriptionReference =>
-      _$this._subscriptionReference ??= new SubscriptionBuilder();
-  set subscriptionReference(SubscriptionBuilder? subscriptionReference) =>
-      _$this._subscriptionReference = subscriptionReference;
+  DateTime? _updatedAt;
+  DateTime? get updatedAt => _$this._updatedAt;
+  set updatedAt(DateTime? updatedAt) => _$this._updatedAt = updatedAt;
+
+  String? _userCreated;
+  String? get userCreated => _$this._userCreated;
+  set userCreated(String? userCreated) => _$this._userCreated = userCreated;
+
+  String? _userUpdated;
+  String? get userUpdated => _$this._userUpdated;
+  set userUpdated(String? userUpdated) => _$this._userUpdated = userUpdated;
+
+  JsonObject? _version;
+  JsonObject? get version => _$this._version;
+  set version(JsonObject? version) => _$this._version = version;
 
   String? _name;
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
-  String? _photo;
-  String? get photo => _$this._photo;
-  set photo(String? photo) => _$this._photo = photo;
+  String? _phone;
+  String? get phone => _$this._phone;
+  set phone(String? phone) => _$this._phone = phone;
 
   String? _email;
   String? get email => _$this._email;
   set email(String? email) => _$this._email = email;
 
-  String? _mobilePhone;
-  String? get mobilePhone => _$this._mobilePhone;
-  set mobilePhone(String? mobilePhone) => _$this._mobilePhone = mobilePhone;
-
-  String? _documentNumber;
-  String? get documentNumber => _$this._documentNumber;
-  set documentNumber(String? documentNumber) =>
-      _$this._documentNumber = documentNumber;
+  String? _photoUrl;
+  String? get photoUrl => _$this._photoUrl;
+  set photoUrl(String? photoUrl) => _$this._photoUrl = photoUrl;
 
   bool? _isActive;
   bool? get isActive => _$this._isActive;
   set isActive(bool? isActive) => _$this._isActive = isActive;
 
-  String? _identityProviderId;
-  String? get identityProviderId => _$this._identityProviderId;
-  set identityProviderId(String? identityProviderId) =>
-      _$this._identityProviderId = identityProviderId;
-
-  String? _identityProvidersEnabled;
-  String? get identityProvidersEnabled => _$this._identityProvidersEnabled;
-  set identityProvidersEnabled(String? identityProvidersEnabled) =>
-      _$this._identityProvidersEnabled = identityProvidersEnabled;
-
-  String? _username;
-  String? get username => _$this._username;
-  set username(String? username) => _$this._username = username;
-
-  bool? _isEmailVerified;
-  bool? get isEmailVerified => _$this._isEmailVerified;
-  set isEmailVerified(bool? isEmailVerified) =>
-      _$this._isEmailVerified = isEmailVerified;
-
-  bool? _isPhoneVerified;
-  bool? get isPhoneVerified => _$this._isPhoneVerified;
-  set isPhoneVerified(bool? isPhoneVerified) =>
-      _$this._isPhoneVerified = isPhoneVerified;
-
-  bool? _socialLoginEnabled;
-  bool? get socialLoginEnabled => _$this._socialLoginEnabled;
-  set socialLoginEnabled(bool? socialLoginEnabled) =>
-      _$this._socialLoginEnabled = socialLoginEnabled;
-
-  bool? _loginEnabled;
-  bool? get loginEnabled => _$this._loginEnabled;
-  set loginEnabled(bool? loginEnabled) => _$this._loginEnabled = loginEnabled;
-
-  bool? _isAnonymous;
-  bool? get isAnonymous => _$this._isAnonymous;
-  set isAnonymous(bool? isAnonymous) => _$this._isAnonymous = isAnonymous;
-
   bool? _isAdmin;
   bool? get isAdmin => _$this._isAdmin;
   set isAdmin(bool? isAdmin) => _$this._isAdmin = isAdmin;
 
-  bool? _isDeleted;
-  bool? get isDeleted => _$this._isDeleted;
-  set isDeleted(bool? isDeleted) => _$this._isDeleted = isDeleted;
+  bool? _isSuperAdmin;
+  bool? get isSuperAdmin => _$this._isSuperAdmin;
+  set isSuperAdmin(bool? isSuperAdmin) => _$this._isSuperAdmin = isSuperAdmin;
 
-  DateTime? _deleteDate;
-  DateTime? get deleteDate => _$this._deleteDate;
-  set deleteDate(DateTime? deleteDate) => _$this._deleteDate = deleteDate;
+  bool? _isAngel;
+  bool? get isAngel => _$this._isAngel;
+  set isAngel(bool? isAngel) => _$this._isAngel = isAngel;
 
-  DateTime? _updateDate;
-  DateTime? get updateDate => _$this._updateDate;
-  set updateDate(DateTime? updateDate) => _$this._updateDate = updateDate;
+  bool? _isExplorer;
+  bool? get isExplorer => _$this._isExplorer;
+  set isExplorer(bool? isExplorer) => _$this._isExplorer = isExplorer;
 
-  DateTime? _createDate;
-  DateTime? get createDate => _$this._createDate;
-  set createDate(DateTime? createDate) => _$this._createDate = createDate;
+  String? _defaultAngel;
+  String? get defaultAngel => _$this._defaultAngel;
+  set defaultAngel(String? defaultAngel) => _$this._defaultAngel = defaultAngel;
 
-  String? _deleteUserId;
-  String? get deleteUserId => _$this._deleteUserId;
-  set deleteUserId(String? deleteUserId) => _$this._deleteUserId = deleteUserId;
+  String? _defaultSponsor;
+  String? get defaultSponsor => _$this._defaultSponsor;
+  set defaultSponsor(String? defaultSponsor) =>
+      _$this._defaultSponsor = defaultSponsor;
 
-  String? _updateUserId;
-  String? get updateUserId => _$this._updateUserId;
-  set updateUserId(String? updateUserId) => _$this._updateUserId = updateUserId;
+  ListBuilder<String>? _companies;
+  ListBuilder<String> get companies =>
+      _$this._companies ??= new ListBuilder<String>();
+  set companies(ListBuilder<String>? companies) =>
+      _$this._companies = companies;
 
-  String? _createUserId;
-  String? get createUserId => _$this._createUserId;
-  set createUserId(String? createUserId) => _$this._createUserId = createUserId;
+  GeoLocationBuilder? _location;
+  GeoLocationBuilder get location =>
+      _$this._location ??= new GeoLocationBuilder();
+  set location(GeoLocationBuilder? location) => _$this._location = location;
+
+  ListBuilder<PushToken>? _pushTokens;
+  ListBuilder<PushToken> get pushTokens =>
+      _$this._pushTokens ??= new ListBuilder<PushToken>();
+  set pushTokens(ListBuilder<PushToken>? pushTokens) =>
+      _$this._pushTokens = pushTokens;
 
   UserBuilder() {
     User._initializeBuilder(this);
@@ -324,30 +273,25 @@ class UserBuilder implements Builder<User, UserBuilder> {
     final $v = _$v;
     if ($v != null) {
       _id = $v.id;
-      _subscriptionId = $v.subscriptionId;
-      _subscriptionReference = $v.subscriptionReference?.toBuilder();
+      _createdAt = $v.createdAt;
+      _updatedAt = $v.updatedAt;
+      _userCreated = $v.userCreated;
+      _userUpdated = $v.userUpdated;
+      _version = $v.version;
       _name = $v.name;
-      _photo = $v.photo;
+      _phone = $v.phone;
       _email = $v.email;
-      _mobilePhone = $v.mobilePhone;
-      _documentNumber = $v.documentNumber;
+      _photoUrl = $v.photoUrl;
       _isActive = $v.isActive;
-      _identityProviderId = $v.identityProviderId;
-      _identityProvidersEnabled = $v.identityProvidersEnabled;
-      _username = $v.username;
-      _isEmailVerified = $v.isEmailVerified;
-      _isPhoneVerified = $v.isPhoneVerified;
-      _socialLoginEnabled = $v.socialLoginEnabled;
-      _loginEnabled = $v.loginEnabled;
-      _isAnonymous = $v.isAnonymous;
       _isAdmin = $v.isAdmin;
-      _isDeleted = $v.isDeleted;
-      _deleteDate = $v.deleteDate;
-      _updateDate = $v.updateDate;
-      _createDate = $v.createDate;
-      _deleteUserId = $v.deleteUserId;
-      _updateUserId = $v.updateUserId;
-      _createUserId = $v.createUserId;
+      _isSuperAdmin = $v.isSuperAdmin;
+      _isAngel = $v.isAngel;
+      _isExplorer = $v.isExplorer;
+      _defaultAngel = $v.defaultAngel;
+      _defaultSponsor = $v.defaultSponsor;
+      _companies = $v.companies?.toBuilder();
+      _location = $v.location?.toBuilder();
+      _pushTokens = $v.pushTokens?.toBuilder();
       _$v = null;
     }
     return this;
@@ -371,36 +315,34 @@ class UserBuilder implements Builder<User, UserBuilder> {
       _$result = _$v ??
           new _$User._(
               id: id,
-              subscriptionId: subscriptionId,
-              subscriptionReference: _subscriptionReference?.build(),
-              name: BuiltValueNullFieldError.checkNotNull(name, 'User', 'name'),
-              photo: photo,
-              email:
-                  BuiltValueNullFieldError.checkNotNull(email, 'User', 'email'),
-              mobilePhone: mobilePhone,
-              documentNumber: documentNumber,
+              createdAt: createdAt,
+              updatedAt: updatedAt,
+              userCreated: userCreated,
+              userUpdated: userUpdated,
+              version: version,
+              name: name,
+              phone: phone,
+              email: email,
+              photoUrl: photoUrl,
               isActive: isActive,
-              identityProviderId: identityProviderId,
-              identityProvidersEnabled: identityProvidersEnabled,
-              username: username,
-              isEmailVerified: isEmailVerified,
-              isPhoneVerified: isPhoneVerified,
-              socialLoginEnabled: socialLoginEnabled,
-              loginEnabled: loginEnabled,
-              isAnonymous: isAnonymous,
               isAdmin: isAdmin,
-              isDeleted: isDeleted,
-              deleteDate: deleteDate,
-              updateDate: updateDate,
-              createDate: createDate,
-              deleteUserId: deleteUserId,
-              updateUserId: updateUserId,
-              createUserId: createUserId);
+              isSuperAdmin: isSuperAdmin,
+              isAngel: isAngel,
+              isExplorer: isExplorer,
+              defaultAngel: defaultAngel,
+              defaultSponsor: defaultSponsor,
+              companies: _companies?.build(),
+              location: _location?.build(),
+              pushTokens: _pushTokens?.build());
     } catch (_) {
       late String _$failedField;
       try {
-        _$failedField = 'subscriptionReference';
-        _subscriptionReference?.build();
+        _$failedField = 'companies';
+        _companies?.build();
+        _$failedField = 'location';
+        _location?.build();
+        _$failedField = 'pushTokens';
+        _pushTokens?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'User', _$failedField, e.toString());

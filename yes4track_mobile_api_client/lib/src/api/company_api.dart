@@ -9,6 +9,7 @@ import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
 import 'package:yes4track_mobile_api_client/src/api_util.dart';
+import 'package:yes4track_mobile_api_client/src/model/company_type.dart';
 import 'package:yes4track_mobile_api_client/src/model/error_details.dart';
 import 'package:yes4track_mobile_api_client/src/model/get_all_company_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/get_all_paged_company_response.dart';
@@ -16,6 +17,7 @@ import 'package:yes4track_mobile_api_client/src/model/operation.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_company_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_company_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/put_company_request.dart';
+import 'package:yes4track_mobile_api_client/src/model/registration_type.dart';
 
 class CompanyApi {
 
@@ -122,6 +124,8 @@ class CompanyApi {
   /// * [contactEmail] 
   /// * [contactPhone] 
   /// * [companies] 
+  /// * [type] 
+  /// * [registrationType] 
   /// * [page] 
   /// * [pageSize] 
   /// * [sort] - Sorting atributes, sample: id.desc,name.asc
@@ -143,6 +147,8 @@ class CompanyApi {
     String? contactEmail,
     String? contactPhone,
     String? companies,
+    CompanyType? type,
+    RegistrationType? registrationType,
     int? page,
     int? pageSize,
     String? sort,
@@ -184,6 +190,8 @@ class CompanyApi {
       r'contactEmail': encodeQueryParameter(_serializers, contactEmail, const FullType(String)),
       r'contactPhone': encodeQueryParameter(_serializers, contactPhone, const FullType(String)),
       r'companies': encodeQueryParameter(_serializers, companies, const FullType(String)),
+      if (type != null) r'type': encodeQueryParameter(_serializers, type, const FullType(CompanyType)),
+      if (registrationType != null) r'registrationType': encodeQueryParameter(_serializers, registrationType, const FullType(RegistrationType)),
       if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
       if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
       r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),

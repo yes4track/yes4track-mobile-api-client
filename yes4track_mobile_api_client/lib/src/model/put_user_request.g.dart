@@ -33,6 +33,8 @@ class _$PutUserRequest extends PutUserRequest {
   final bool? isSuperAdmin;
   @override
   final bool? isAngel;
+  @override
+  final bool? isExplorer;
 
   factory _$PutUserRequest([void Function(PutUserRequestBuilder)? updates]) =>
       (new PutUserRequestBuilder()..update(updates)).build();
@@ -50,7 +52,8 @@ class _$PutUserRequest extends PutUserRequest {
       this.isActive,
       this.isAdmin,
       this.isSuperAdmin,
-      this.isAngel})
+      this.isAngel,
+      this.isExplorer})
       : super._();
 
   @override
@@ -77,7 +80,8 @@ class _$PutUserRequest extends PutUserRequest {
         isActive == other.isActive &&
         isAdmin == other.isAdmin &&
         isSuperAdmin == other.isSuperAdmin &&
-        isAngel == other.isAngel;
+        isAngel == other.isAngel &&
+        isExplorer == other.isExplorer;
   }
 
   @override
@@ -93,19 +97,23 @@ class _$PutUserRequest extends PutUserRequest {
                                     $jc(
                                         $jc(
                                             $jc(
-                                                $jc($jc(0, createdAt.hashCode),
-                                                    updatedAt.hashCode),
-                                                userCreated.hashCode),
-                                            userUpdated.hashCode),
-                                        name.hashCode),
-                                    phone.hashCode),
-                                email.hashCode),
-                            id.hashCode),
-                        profilePhoto.hashCode),
-                    isActive.hashCode),
-                isAdmin.hashCode),
-            isSuperAdmin.hashCode),
-        isAngel.hashCode));
+                                                $jc(
+                                                    $jc(
+                                                        $jc(0,
+                                                            createdAt.hashCode),
+                                                        updatedAt.hashCode),
+                                                    userCreated.hashCode),
+                                                userUpdated.hashCode),
+                                            name.hashCode),
+                                        phone.hashCode),
+                                    email.hashCode),
+                                id.hashCode),
+                            profilePhoto.hashCode),
+                        isActive.hashCode),
+                    isAdmin.hashCode),
+                isSuperAdmin.hashCode),
+            isAngel.hashCode),
+        isExplorer.hashCode));
   }
 
   @override
@@ -123,7 +131,8 @@ class _$PutUserRequest extends PutUserRequest {
           ..add('isActive', isActive)
           ..add('isAdmin', isAdmin)
           ..add('isSuperAdmin', isSuperAdmin)
-          ..add('isAngel', isAngel))
+          ..add('isAngel', isAngel)
+          ..add('isExplorer', isExplorer))
         .toString();
   }
 }
@@ -186,6 +195,10 @@ class PutUserRequestBuilder
   bool? get isAngel => _$this._isAngel;
   set isAngel(bool? isAngel) => _$this._isAngel = isAngel;
 
+  bool? _isExplorer;
+  bool? get isExplorer => _$this._isExplorer;
+  set isExplorer(bool? isExplorer) => _$this._isExplorer = isExplorer;
+
   PutUserRequestBuilder() {
     PutUserRequest._initializeBuilder(this);
   }
@@ -206,6 +219,7 @@ class PutUserRequestBuilder
       _isAdmin = $v.isAdmin;
       _isSuperAdmin = $v.isSuperAdmin;
       _isAngel = $v.isAngel;
+      _isExplorer = $v.isExplorer;
       _$v = null;
     }
     return this;
@@ -240,7 +254,8 @@ class PutUserRequestBuilder
               isActive: isActive,
               isAdmin: isAdmin,
               isSuperAdmin: isSuperAdmin,
-              isAngel: isAngel);
+              isAngel: isAngel,
+              isExplorer: isExplorer);
     } catch (_) {
       late String _$failedField;
       try {

@@ -22,6 +22,8 @@ class NotificationType extends EnumClass {
   static const NotificationType number5 = _$number5;
   @BuiltValueEnumConst(wireNumber: 6)
   static const NotificationType number6 = _$number6;
+  @BuiltValueEnumConst(wireNumber: 7)
+  static const NotificationType number7 = _$number7;
 
   static Serializer<NotificationType> get serializer => _$notificationTypeSerializer;
 

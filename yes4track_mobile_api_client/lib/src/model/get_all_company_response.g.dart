@@ -22,11 +22,19 @@ class _$GetAllCompanyResponse extends GetAllCompanyResponse {
   @override
   final String? registrationNumber;
   @override
+  final RegistrationType? registrationType;
+  @override
   final String? contactEmail;
   @override
   final String? contactPhone;
   @override
+  final CompanyType? type;
+  @override
+  final String? biography;
+  @override
   final String? id;
+  @override
+  final String? photoUrl;
 
   factory _$GetAllCompanyResponse(
           [void Function(GetAllCompanyResponseBuilder)? updates]) =>
@@ -40,9 +48,13 @@ class _$GetAllCompanyResponse extends GetAllCompanyResponse {
       this.legalName,
       this.fantasyName,
       this.registrationNumber,
+      this.registrationType,
       this.contactEmail,
       this.contactPhone,
-      this.id})
+      this.type,
+      this.biography,
+      this.id,
+      this.photoUrl})
       : super._();
 
   @override
@@ -65,9 +77,13 @@ class _$GetAllCompanyResponse extends GetAllCompanyResponse {
         legalName == other.legalName &&
         fantasyName == other.fantasyName &&
         registrationNumber == other.registrationNumber &&
+        registrationType == other.registrationType &&
         contactEmail == other.contactEmail &&
         contactPhone == other.contactPhone &&
-        id == other.id;
+        type == other.type &&
+        biography == other.biography &&
+        id == other.id &&
+        photoUrl == other.photoUrl;
   }
 
   @override
@@ -80,16 +96,26 @@ class _$GetAllCompanyResponse extends GetAllCompanyResponse {
                         $jc(
                             $jc(
                                 $jc(
-                                    $jc($jc(0, createdAt.hashCode),
-                                        updatedAt.hashCode),
-                                    userCreated.hashCode),
-                                userUpdated.hashCode),
-                            legalName.hashCode),
-                        fantasyName.hashCode),
-                    registrationNumber.hashCode),
-                contactEmail.hashCode),
-            contactPhone.hashCode),
-        id.hashCode));
+                                    $jc(
+                                        $jc(
+                                            $jc(
+                                                $jc(
+                                                    $jc(
+                                                        $jc(0,
+                                                            createdAt.hashCode),
+                                                        updatedAt.hashCode),
+                                                    userCreated.hashCode),
+                                                userUpdated.hashCode),
+                                            legalName.hashCode),
+                                        fantasyName.hashCode),
+                                    registrationNumber.hashCode),
+                                registrationType.hashCode),
+                            contactEmail.hashCode),
+                        contactPhone.hashCode),
+                    type.hashCode),
+                biography.hashCode),
+            id.hashCode),
+        photoUrl.hashCode));
   }
 
   @override
@@ -102,9 +128,13 @@ class _$GetAllCompanyResponse extends GetAllCompanyResponse {
           ..add('legalName', legalName)
           ..add('fantasyName', fantasyName)
           ..add('registrationNumber', registrationNumber)
+          ..add('registrationType', registrationType)
           ..add('contactEmail', contactEmail)
           ..add('contactPhone', contactPhone)
-          ..add('id', id))
+          ..add('type', type)
+          ..add('biography', biography)
+          ..add('id', id)
+          ..add('photoUrl', photoUrl))
         .toString();
   }
 }
@@ -142,6 +172,11 @@ class GetAllCompanyResponseBuilder
   set registrationNumber(String? registrationNumber) =>
       _$this._registrationNumber = registrationNumber;
 
+  RegistrationType? _registrationType;
+  RegistrationType? get registrationType => _$this._registrationType;
+  set registrationType(RegistrationType? registrationType) =>
+      _$this._registrationType = registrationType;
+
   String? _contactEmail;
   String? get contactEmail => _$this._contactEmail;
   set contactEmail(String? contactEmail) => _$this._contactEmail = contactEmail;
@@ -150,9 +185,21 @@ class GetAllCompanyResponseBuilder
   String? get contactPhone => _$this._contactPhone;
   set contactPhone(String? contactPhone) => _$this._contactPhone = contactPhone;
 
+  CompanyType? _type;
+  CompanyType? get type => _$this._type;
+  set type(CompanyType? type) => _$this._type = type;
+
+  String? _biography;
+  String? get biography => _$this._biography;
+  set biography(String? biography) => _$this._biography = biography;
+
   String? _id;
   String? get id => _$this._id;
   set id(String? id) => _$this._id = id;
+
+  String? _photoUrl;
+  String? get photoUrl => _$this._photoUrl;
+  set photoUrl(String? photoUrl) => _$this._photoUrl = photoUrl;
 
   GetAllCompanyResponseBuilder() {
     GetAllCompanyResponse._initializeBuilder(this);
@@ -168,9 +215,13 @@ class GetAllCompanyResponseBuilder
       _legalName = $v.legalName;
       _fantasyName = $v.fantasyName;
       _registrationNumber = $v.registrationNumber;
+      _registrationType = $v.registrationType;
       _contactEmail = $v.contactEmail;
       _contactPhone = $v.contactPhone;
+      _type = $v.type;
+      _biography = $v.biography;
       _id = $v.id;
+      _photoUrl = $v.photoUrl;
       _$v = null;
     }
     return this;
@@ -198,9 +249,13 @@ class GetAllCompanyResponseBuilder
             legalName: legalName,
             fantasyName: fantasyName,
             registrationNumber: registrationNumber,
+            registrationType: registrationType,
             contactEmail: contactEmail,
             contactPhone: contactPhone,
-            id: id);
+            type: type,
+            biography: biography,
+            id: id,
+            photoUrl: photoUrl);
     replace(_$result);
     return _$result;
   }

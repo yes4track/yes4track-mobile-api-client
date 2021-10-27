@@ -3,8 +3,10 @@
 //
 
 import 'package:yes4track_mobile_api_client/src/model/track_source.dart';
+import 'package:built_collection/built_collection.dart';
 import 'package:yes4track_mobile_api_client/src/model/map_coordinate.dart';
 import 'package:yes4track_mobile_api_client/src/model/statistic.dart';
+import 'package:yes4track_mobile_api_client/src/model/waypoint.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -25,6 +27,7 @@ part 'get_all_track_response.g.dart';
 /// * [id] 
 /// * [statistic] 
 /// * [mapCoordinate] 
+/// * [waypoints] 
 abstract class GetAllTrackResponse implements Built<GetAllTrackResponse, GetAllTrackResponseBuilder> {
     @BuiltValueField(wireName: r'createdAt')
     DateTime? get createdAt;
@@ -62,6 +65,9 @@ abstract class GetAllTrackResponse implements Built<GetAllTrackResponse, GetAllT
 
     @BuiltValueField(wireName: r'mapCoordinate')
     MapCoordinate? get mapCoordinate;
+
+    @BuiltValueField(wireName: r'waypoints')
+    BuiltList<Waypoint>? get waypoints;
 
     GetAllTrackResponse._();
 
@@ -156,6 +162,12 @@ class _$GetAllTrackResponseSerializer implements StructuredSerializer<GetAllTrac
                 ..add(serializers.serialize(object.mapCoordinate,
                     specifiedType: const FullType(MapCoordinate)));
         }
+        if (object.waypoints != null) {
+            result
+                ..add(r'waypoints')
+                ..add(serializers.serialize(object.waypoints,
+                    specifiedType: const FullType(BuiltList, [FullType(Waypoint)])));
+        }
         return result;
     }
 
@@ -217,6 +229,10 @@ class _$GetAllTrackResponseSerializer implements StructuredSerializer<GetAllTrac
                 case r'mapCoordinate':
                     result.mapCoordinate.replace(serializers.deserialize(value,
                         specifiedType: const FullType(MapCoordinate)) as MapCoordinate);
+                    break;
+                case r'waypoints':
+                    result.waypoints.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(BuiltList, [FullType(Waypoint)])) as BuiltList<Waypoint>);
                     break;
             }
         }

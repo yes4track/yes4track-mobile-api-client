@@ -7,6 +7,7 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
+import 'package:yes4track_mobile_api_client/src/model/error_details.dart';
 
 class VersionApi {
 
@@ -16,10 +17,12 @@ class VersionApi {
 
   const VersionApi(this._dio, this._serializers);
 
-  /// versionGet
+  /// Get Version
   /// 
   ///
   /// Parameters:
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -29,7 +32,9 @@ class VersionApi {
   ///
   /// Returns a [Future]
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> versionGet({ 
+  Future<Response<void>> yes4trackV1VersionGet({ 
+    String? xApiKey,
+    String? xCsrfToken,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -37,10 +42,12 @@ class VersionApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/hypercube_usm/v1/version';
+    final _path = r'/yes4track/v1/version';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
+        if (xApiKey != null) r'x-api-key': xApiKey,
+        if (xCsrfToken != null) r'x-csrf-token': xCsrfToken,
         ...?headers,
       },
       extra: <String, dynamic>{

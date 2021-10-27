@@ -42,7 +42,7 @@ abstract class PutNotificationRequest implements Built<PutNotificationRequest, P
 
     @BuiltValueField(wireName: r'type')
     NotificationType? get type;
-    // enum typeEnum {  1,  2,  3,  4,  5,  6,  };
+    // enum typeEnum {  1,  2,  3,  4,  5,  6,  7,  };
 
     @BuiltValueField(wireName: r'channels')
     BuiltList<NotificationChannel>? get channels;

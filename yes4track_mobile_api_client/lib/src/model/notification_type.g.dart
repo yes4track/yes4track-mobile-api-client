@@ -12,6 +12,7 @@ const NotificationType _$number3 = const NotificationType._('number3');
 const NotificationType _$number4 = const NotificationType._('number4');
 const NotificationType _$number5 = const NotificationType._('number5');
 const NotificationType _$number6 = const NotificationType._('number6');
+const NotificationType _$number7 = const NotificationType._('number7');
 
 NotificationType _$valueOf(String name) {
   switch (name) {
@@ -27,6 +28,8 @@ NotificationType _$valueOf(String name) {
       return _$number5;
     case 'number6':
       return _$number6;
+    case 'number7':
+      return _$number7;
     default:
       throw new ArgumentError(name);
   }
@@ -40,6 +43,7 @@ final BuiltSet<NotificationType> _$values =
   _$number4,
   _$number5,
   _$number6,
+  _$number7,
 ]);
 
 class _$NotificationTypeMeta {
@@ -50,6 +54,7 @@ class _$NotificationTypeMeta {
   NotificationType get number4 => _$number4;
   NotificationType get number5 => _$number5;
   NotificationType get number6 => _$number6;
+  NotificationType get number7 => _$number7;
   NotificationType valueOf(String name) => _$valueOf(name);
   BuiltSet<NotificationType> get values => _$values;
 }
@@ -71,6 +76,7 @@ class _$NotificationTypeSerializer
     'number4': 4,
     'number5': 5,
     'number6': 6,
+    'number7': 7,
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     1: 'number1',
@@ -79,6 +85,7 @@ class _$NotificationTypeSerializer
     4: 'number4',
     5: 'number5',
     6: 'number6',
+    7: 'number7',
   };
 
   @override

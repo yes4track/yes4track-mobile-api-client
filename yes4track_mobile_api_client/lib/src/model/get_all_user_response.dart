@@ -25,6 +25,7 @@ part 'get_all_user_response.g.dart';
 /// * [isAdmin] 
 /// * [isSuperAdmin] 
 /// * [isAngel] 
+/// * [isExplorer] 
 /// * [defaultAngel] 
 /// * [defaultSponsor] 
 /// * [companies] 
@@ -68,6 +69,9 @@ abstract class GetAllUserResponse implements Built<GetAllUserResponse, GetAllUse
 
     @BuiltValueField(wireName: r'isAngel')
     bool? get isAngel;
+
+    @BuiltValueField(wireName: r'isExplorer')
+    bool? get isExplorer;
 
     @BuiltValueField(wireName: r'defaultAngel')
     String? get defaultAngel;
@@ -180,6 +184,12 @@ class _$GetAllUserResponseSerializer implements StructuredSerializer<GetAllUserR
                 ..add(serializers.serialize(object.isAngel,
                     specifiedType: const FullType(bool)));
         }
+        if (object.isExplorer != null) {
+            result
+                ..add(r'isExplorer')
+                ..add(serializers.serialize(object.isExplorer,
+                    specifiedType: const FullType(bool)));
+        }
         if (object.defaultAngel != null) {
             result
                 ..add(r'defaultAngel')
@@ -268,6 +278,10 @@ class _$GetAllUserResponseSerializer implements StructuredSerializer<GetAllUserR
                     break;
                 case r'isAngel':
                     result.isAngel = serializers.deserialize(value,
+                        specifiedType: const FullType(bool)) as bool;
+                    break;
+                case r'isExplorer':
+                    result.isExplorer = serializers.deserialize(value,
                         specifiedType: const FullType(bool)) as bool;
                     break;
                 case r'defaultAngel':

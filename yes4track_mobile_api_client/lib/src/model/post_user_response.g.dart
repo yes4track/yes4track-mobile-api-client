@@ -34,6 +34,8 @@ class _$PostUserResponse extends PostUserResponse {
   @override
   final bool? isAngel;
   @override
+  final bool? isExplorer;
+  @override
   final String? defaultAngel;
   @override
   final String? defaultSponsor;
@@ -56,6 +58,7 @@ class _$PostUserResponse extends PostUserResponse {
       this.isAdmin,
       this.isSuperAdmin,
       this.isAngel,
+      this.isExplorer,
       this.defaultAngel,
       this.defaultSponsor})
       : super._();
@@ -85,6 +88,7 @@ class _$PostUserResponse extends PostUserResponse {
         isAdmin == other.isAdmin &&
         isSuperAdmin == other.isSuperAdmin &&
         isAngel == other.isAngel &&
+        isExplorer == other.isExplorer &&
         defaultAngel == other.defaultAngel &&
         defaultSponsor == other.defaultSponsor;
   }
@@ -106,21 +110,25 @@ class _$PostUserResponse extends PostUserResponse {
                                                     $jc(
                                                         $jc(
                                                             $jc(
-                                                                0,
-                                                                createdAt
+                                                                $jc(
+                                                                    0,
+                                                                    createdAt
+                                                                        .hashCode),
+                                                                updatedAt
                                                                     .hashCode),
-                                                            updatedAt.hashCode),
-                                                        userCreated.hashCode),
-                                                    userUpdated.hashCode),
-                                                name.hashCode),
-                                            phone.hashCode),
-                                        email.hashCode),
-                                    id.hashCode),
-                                photoUrl.hashCode),
-                            isActive.hashCode),
-                        isAdmin.hashCode),
-                    isSuperAdmin.hashCode),
-                isAngel.hashCode),
+                                                            userCreated
+                                                                .hashCode),
+                                                        userUpdated.hashCode),
+                                                    name.hashCode),
+                                                phone.hashCode),
+                                            email.hashCode),
+                                        id.hashCode),
+                                    photoUrl.hashCode),
+                                isActive.hashCode),
+                            isAdmin.hashCode),
+                        isSuperAdmin.hashCode),
+                    isAngel.hashCode),
+                isExplorer.hashCode),
             defaultAngel.hashCode),
         defaultSponsor.hashCode));
   }
@@ -141,6 +149,7 @@ class _$PostUserResponse extends PostUserResponse {
           ..add('isAdmin', isAdmin)
           ..add('isSuperAdmin', isSuperAdmin)
           ..add('isAngel', isAngel)
+          ..add('isExplorer', isExplorer)
           ..add('defaultAngel', defaultAngel)
           ..add('defaultSponsor', defaultSponsor))
         .toString();
@@ -203,6 +212,10 @@ class PostUserResponseBuilder
   bool? get isAngel => _$this._isAngel;
   set isAngel(bool? isAngel) => _$this._isAngel = isAngel;
 
+  bool? _isExplorer;
+  bool? get isExplorer => _$this._isExplorer;
+  set isExplorer(bool? isExplorer) => _$this._isExplorer = isExplorer;
+
   String? _defaultAngel;
   String? get defaultAngel => _$this._defaultAngel;
   set defaultAngel(String? defaultAngel) => _$this._defaultAngel = defaultAngel;
@@ -232,6 +245,7 @@ class PostUserResponseBuilder
       _isAdmin = $v.isAdmin;
       _isSuperAdmin = $v.isSuperAdmin;
       _isAngel = $v.isAngel;
+      _isExplorer = $v.isExplorer;
       _defaultAngel = $v.defaultAngel;
       _defaultSponsor = $v.defaultSponsor;
       _$v = null;
@@ -267,6 +281,7 @@ class PostUserResponseBuilder
             isAdmin: isAdmin,
             isSuperAdmin: isSuperAdmin,
             isAngel: isAngel,
+            isExplorer: isExplorer,
             defaultAngel: defaultAngel,
             defaultSponsor: defaultSponsor);
     replace(_$result);

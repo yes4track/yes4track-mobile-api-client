@@ -24,6 +24,7 @@ part 'put_user_request.g.dart';
 /// * [isAdmin] 
 /// * [isSuperAdmin] 
 /// * [isAngel] 
+/// * [isExplorer] 
 abstract class PutUserRequest implements Built<PutUserRequest, PutUserRequestBuilder> {
     @BuiltValueField(wireName: r'createdAt')
     DateTime? get createdAt;
@@ -63,6 +64,9 @@ abstract class PutUserRequest implements Built<PutUserRequest, PutUserRequestBui
 
     @BuiltValueField(wireName: r'isAngel')
     bool? get isAngel;
+
+    @BuiltValueField(wireName: r'isExplorer')
+    bool? get isExplorer;
 
     PutUserRequest._();
 
@@ -163,6 +167,12 @@ class _$PutUserRequestSerializer implements StructuredSerializer<PutUserRequest>
                 ..add(serializers.serialize(object.isAngel,
                     specifiedType: const FullType(bool)));
         }
+        if (object.isExplorer != null) {
+            result
+                ..add(r'isExplorer')
+                ..add(serializers.serialize(object.isExplorer,
+                    specifiedType: const FullType(bool)));
+        }
         return result;
     }
 
@@ -227,6 +237,10 @@ class _$PutUserRequestSerializer implements StructuredSerializer<PutUserRequest>
                     break;
                 case r'isAngel':
                     result.isAngel = serializers.deserialize(value,
+                        specifiedType: const FullType(bool)) as bool;
+                    break;
+                case r'isExplorer':
+                    result.isExplorer = serializers.deserialize(value,
                         specifiedType: const FullType(bool)) as bool;
                     break;
             }

@@ -29,6 +29,8 @@ class _$PostUserRequest extends PostUserRequest {
   final bool? isSuperAdmin;
   @override
   final bool? isAngel;
+  @override
+  final bool? isExplorer;
 
   factory _$PostUserRequest([void Function(PostUserRequestBuilder)? updates]) =>
       (new PostUserRequestBuilder()..update(updates)).build();
@@ -44,7 +46,8 @@ class _$PostUserRequest extends PostUserRequest {
       this.profilePhoto,
       this.isAdmin,
       this.isSuperAdmin,
-      this.isAngel})
+      this.isAngel,
+      this.isExplorer})
       : super._();
 
   @override
@@ -69,7 +72,8 @@ class _$PostUserRequest extends PostUserRequest {
         profilePhoto == other.profilePhoto &&
         isAdmin == other.isAdmin &&
         isSuperAdmin == other.isSuperAdmin &&
-        isAngel == other.isAngel;
+        isAngel == other.isAngel &&
+        isExplorer == other.isExplorer;
   }
 
   @override
@@ -83,17 +87,19 @@ class _$PostUserRequest extends PostUserRequest {
                             $jc(
                                 $jc(
                                     $jc(
-                                        $jc($jc(0, createdAt.hashCode),
-                                            updatedAt.hashCode),
-                                        userCreated.hashCode),
-                                    userUpdated.hashCode),
-                                name.hashCode),
-                            phone.hashCode),
-                        email.hashCode),
-                    profilePhoto.hashCode),
-                isAdmin.hashCode),
-            isSuperAdmin.hashCode),
-        isAngel.hashCode));
+                                        $jc(
+                                            $jc($jc(0, createdAt.hashCode),
+                                                updatedAt.hashCode),
+                                            userCreated.hashCode),
+                                        userUpdated.hashCode),
+                                    name.hashCode),
+                                phone.hashCode),
+                            email.hashCode),
+                        profilePhoto.hashCode),
+                    isAdmin.hashCode),
+                isSuperAdmin.hashCode),
+            isAngel.hashCode),
+        isExplorer.hashCode));
   }
 
   @override
@@ -109,7 +115,8 @@ class _$PostUserRequest extends PostUserRequest {
           ..add('profilePhoto', profilePhoto)
           ..add('isAdmin', isAdmin)
           ..add('isSuperAdmin', isSuperAdmin)
-          ..add('isAngel', isAngel))
+          ..add('isAngel', isAngel)
+          ..add('isExplorer', isExplorer))
         .toString();
   }
 }
@@ -164,6 +171,10 @@ class PostUserRequestBuilder
   bool? get isAngel => _$this._isAngel;
   set isAngel(bool? isAngel) => _$this._isAngel = isAngel;
 
+  bool? _isExplorer;
+  bool? get isExplorer => _$this._isExplorer;
+  set isExplorer(bool? isExplorer) => _$this._isExplorer = isExplorer;
+
   PostUserRequestBuilder() {
     PostUserRequest._initializeBuilder(this);
   }
@@ -182,6 +193,7 @@ class PostUserRequestBuilder
       _isAdmin = $v.isAdmin;
       _isSuperAdmin = $v.isSuperAdmin;
       _isAngel = $v.isAngel;
+      _isExplorer = $v.isExplorer;
       _$v = null;
     }
     return this;
@@ -214,7 +226,8 @@ class PostUserRequestBuilder
               profilePhoto: _profilePhoto?.build(),
               isAdmin: isAdmin,
               isSuperAdmin: isSuperAdmin,
-              isAngel: isAngel);
+              isAngel: isAngel,
+              isExplorer: isExplorer);
     } catch (_) {
       late String _$failedField;
       try {

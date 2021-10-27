@@ -9,73 +9,31 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteAnonymousUserByDeviceAddress**](UserApi.md#deleteanonymoususerbydeviceaddress) | **DELETE** /hypercube_usm/v1/anonymoususer/deviceAddress | Delete all Anonymous Users by DeviceAddress and ClientId
-[**deleteUser**](UserApi.md#deleteuser) | **DELETE** /hypercube_usm/v1/user/{id} | Delete User
-[**getAnonymousUserIsAnonymousUserExists**](UserApi.md#getanonymoususerisanonymoususerexists) | **GET** /hypercube_usm/v1/anonymousUser/existsIdentified | Valida se um deviceAddress/usuário anonimo possui uma conta já identificada/logada
-[**userGetAll**](UserApi.md#usergetall) | **GET** /hypercube_usm/v1/user/all | Get all User
-[**userGetByEmail**](UserApi.md#usergetbyemail) | **GET** /hypercube_usm/v1/user/validate/{email} | Get User by Email Active
-[**userGetById**](UserApi.md#usergetbyid) | **GET** /hypercube_usm/v1/user/{id} | Get user by id
-[**userGetFind**](UserApi.md#usergetfind) | **GET** /hypercube_usm/v1/user/find | Get all User
-[**userGetFindPaged**](UserApi.md#usergetfindpaged) | **GET** /hypercube_usm/v1/user/find-paged | Get all User
-[**userGetPerfil**](UserApi.md#usergetperfil) | **GET** /hypercube_usm/v1/user/perfil | 
-[**userGetVerifyUserByEmail**](UserApi.md#usergetverifyuserbyemail) | **GET** /hypercube_usm/v1/user/verify/{email} | Get Verify User By Email
-[**userPatch**](UserApi.md#userpatch) | **PATCH** /hypercube_usm/v1/user/{id} | Update Partial User
-[**userPost**](UserApi.md#userpost) | **POST** /hypercube_usm/v1/user | Create User
-[**userPostAddUser**](UserApi.md#userpostadduser) | **POST** /hypercube_usm/v1/user/activate | User Activate
-[**userPostAddUserBySubscriptionManager**](UserApi.md#userpostadduserbysubscriptionmanager) | **POST** /hypercube_usm/v1/user/addUserBySubscriptionManager | Create User Custom - Subscription manager
-[**userPostRemoveFotoPerfil**](UserApi.md#userpostremovefotoperfil) | **POST** /hypercube_usm/v1/user/removefotoperfil | Create User Custom
-[**userPostUploadFotoPerfil**](UserApi.md#userpostuploadfotoperfil) | **POST** /hypercube_usm/v1/user/uploadfotoperfil | Create User Custom
-[**userPut**](UserApi.md#userput) | **PUT** /hypercube_usm/v1/user/{id} | Update User
+[**getByIdUser**](UserApi.md#getbyiduser) | **GET** /yes4track/v1/users/{id} | Get User by id
+[**yes4trackV1UsersAccesstokenPost**](UserApi.md#yes4trackv1usersaccesstokenpost) | **POST** /yes4track/v1/users/accesstoken | User SignIn
+[**yes4trackV1UsersGet**](UserApi.md#yes4trackv1usersget) | **GET** /yes4track/v1/users | Get All User by filter with pagination
+[**yes4trackV1UsersIdCompaniesCompanyIdDelete**](UserApi.md#yes4trackv1usersidcompaniescompanyiddelete) | **DELETE** /yes4track/v1/users/{id}/companies/{companyId} | Delete User Company
+[**yes4trackV1UsersIdCompaniesCompanyIdPost**](UserApi.md#yes4trackv1usersidcompaniescompanyidpost) | **POST** /yes4track/v1/users/{id}/companies/{companyId} | Add User Company
+[**yes4trackV1UsersIdDelete**](UserApi.md#yes4trackv1usersiddelete) | **DELETE** /yes4track/v1/users/{id} | Delete User by Id
+[**yes4trackV1UsersIdLocationPut**](UserApi.md#yes4trackv1usersidlocationput) | **PUT** /yes4track/v1/users/{id}/location | Update User Location
+[**yes4trackV1UsersIdPatch**](UserApi.md#yes4trackv1usersidpatch) | **PATCH** /yes4track/v1/users/{id} | Update part of User
+[**yes4trackV1UsersIdPhotoPut**](UserApi.md#yes4trackv1usersidphotoput) | **PUT** /yes4track/v1/users/{id}/photo | Update User Photo
+[**yes4trackV1UsersIdPushtokenDelete**](UserApi.md#yes4trackv1usersidpushtokendelete) | **DELETE** /yes4track/v1/users/{id}/pushtoken | Delete User Push Token
+[**yes4trackV1UsersIdPushtokenGet**](UserApi.md#yes4trackv1usersidpushtokenget) | **GET** /yes4track/v1/users/{id}/pushtoken | Get All User Push Token
+[**yes4trackV1UsersIdPushtokenPost**](UserApi.md#yes4trackv1usersidpushtokenpost) | **POST** /yes4track/v1/users/{id}/pushtoken | Add User Push Token
+[**yes4trackV1UsersIdPut**](UserApi.md#yes4trackv1usersidput) | **PUT** /yes4track/v1/users/{id} | Update User
+[**yes4trackV1UsersPost**](UserApi.md#yes4trackv1userspost) | **POST** /yes4track/v1/users | Add User
+[**yes4trackV1UsersResendcodePost**](UserApi.md#yes4trackv1usersresendcodepost) | **POST** /yes4track/v1/users/resendcode | Resend Code
+[**yes4trackV1UsersSetupangelPost**](UserApi.md#yes4trackv1userssetupangelpost) | **POST** /yes4track/v1/users/setupangel | Setup User default Angel
+[**yes4trackV1UsersSetupsponsorIdPost**](UserApi.md#yes4trackv1userssetupsponsoridpost) | **POST** /yes4track/v1/users/setupsponsor/{id} | Setup User default Sponsor
+[**yes4trackV1UsersSigninPost**](UserApi.md#yes4trackv1userssigninpost) | **POST** /yes4track/v1/users/signin | User SignIn
+[**yes4trackV1UsersSignupPost**](UserApi.md#yes4trackv1userssignuppost) | **POST** /yes4track/v1/users/signup | User SignUp
 
 
-# **deleteAnonymousUserByDeviceAddress**
-> deleteAnonymousUserByDeviceAddress(request)
+# **getByIdUser**
+> GetAllUserResponse getByIdUser(id, xApiKey, xCsrfToken)
 
-Delete all Anonymous Users by DeviceAddress and ClientId
-
-### Example 
-```dart
-import 'package:yes4track_mobile_api_client/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
-
-final api = Yes4trackMobileApiClient().getUserApi();
-final DeleteUserByDeviceAddressRequest request = ; // DeleteUserByDeviceAddressRequest | 
-
-try { 
-    api.deleteAnonymousUserByDeviceAddress(request);
-} catch on DioError (e) {
-    print('Exception when calling UserApi->deleteAnonymousUserByDeviceAddress: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**DeleteUserByDeviceAddressRequest**](DeleteUserByDeviceAddressRequest.md)|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json-patch+json, application/json, application/_*+json
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **deleteUser**
-> deleteUser(id)
-
-Delete User
+Get User by id
 
 ### Example 
 ```dart
@@ -86,144 +44,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Yes4trackMobileApiClient().getUserApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | User id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    api.deleteUser(id);
-} catch on DioError (e) {
-    print('Exception when calling UserApi->deleteUser: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **getAnonymousUserIsAnonymousUserExists**
-> getAnonymousUserIsAnonymousUserExists(deviceAddress, clientId)
-
-Valida se um deviceAddress/usuário anonimo possui uma conta já identificada/logada
-
-### Example 
-```dart
-import 'package:yes4track_mobile_api_client/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
-
-final api = Yes4trackMobileApiClient().getUserApi();
-final String deviceAddress = deviceAddress_example; // String | 
-final String clientId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-
-try { 
-    api.getAnonymousUserIsAnonymousUserExists(deviceAddress, clientId);
-} catch on DioError (e) {
-    print('Exception when calling UserApi->getAnonymousUserIsAnonymousUserExists: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **deviceAddress** | **String**|  | 
- **clientId** | [**String**](.md)|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **userGetAll**
-> BuiltList<User> userGetAll()
-
-Get all User
-
-### Example 
-```dart
-import 'package:yes4track_mobile_api_client/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
-
-final api = Yes4trackMobileApiClient().getUserApi();
-
-try { 
-    final response = api.userGetAll();
+    final response = api.getByIdUser(id, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling UserApi->userGetAll: $e\n');
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**BuiltList&lt;User&gt;**](User.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **userGetByEmail**
-> User userGetByEmail(email)
-
-Get User by Email Active
-
-### Example 
-```dart
-import 'package:yes4track_mobile_api_client/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
-
-final api = Yes4trackMobileApiClient().getUserApi();
-final String email = email_example; // String | 
-
-try { 
-    final response = api.userGetByEmail(email);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling UserApi->userGetByEmail: $e\n');
+    print('Exception when calling UserApi->getByIdUser: $e\n');
 }
 ```
 
@@ -231,11 +60,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email** | **String**|  | 
+ **id** | [**String**](.md)| User id | 
+ **xApiKey** | **String**| Your Api Key | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '975d5cca-3b68-4ca3-a7ff-8c8bc7067785']
 
 ### Return type
 
-[**User**](User.md)
+[**GetAllUserResponse**](GetAllUserResponse.md)
 
 ### Authorization
 
@@ -244,14 +75,14 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **userGetById**
-> User userGetById(id)
+# **yes4trackV1UsersAccesstokenPost**
+> PostUserAccessTokenResponse yes4trackV1UsersAccesstokenPost(xApiKey, xCsrfToken, postUserAccessTokenRequest)
 
-Get user by id
+User SignIn
 
 ### Example 
 ```dart
@@ -262,13 +93,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Yes4trackMobileApiClient().getUserApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostUserAccessTokenRequest postUserAccessTokenRequest = ; // PostUserAccessTokenRequest | User to SignIn
 
 try { 
-    final response = api.userGetById(id);
+    final response = api.yes4trackV1UsersAccesstokenPost(xApiKey, xCsrfToken, postUserAccessTokenRequest);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling UserApi->userGetById: $e\n');
+    print('Exception when calling UserApi->yes4trackV1UsersAccesstokenPost: $e\n');
 }
 ```
 
@@ -276,11 +109,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+ **xApiKey** | **String**| Your Api Key | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'b402e624-0aba-4de1-9890-5c4346d6d221']
+ **postUserAccessTokenRequest** | [**PostUserAccessTokenRequest**](PostUserAccessTokenRequest.md)| User to SignIn | [optional] 
 
 ### Return type
 
-[**User**](User.md)
+[**PostUserAccessTokenResponse**](PostUserAccessTokenResponse.md)
 
 ### Authorization
 
@@ -288,15 +123,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **userGetFind**
-> BuiltList<User> userGetFind(subscriptionId, name, photo, email, mobilePhone, documentNumber)
+# **yes4trackV1UsersGet**
+> GetAllPagedUserResponse yes4trackV1UsersGet(name, phone, email, isActive, isAdmin, companyId, page, pageSize, sort, xApiKey, xCsrfToken)
 
-Get all User
+Get All User by filter with pagination
 
 ### Example 
 ```dart
@@ -307,75 +142,23 @@ import 'package:yes4track_mobile_api_client/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Yes4trackMobileApiClient().getUserApi();
-final String subscriptionId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 final String name = name_example; // String | 
-final String photo = photo_example; // String | 
+final String phone = phone_example; // String | 
 final String email = email_example; // String | 
-final String mobilePhone = mobilePhone_example; // String | 
-final String documentNumber = documentNumber_example; // String | 
-
-try { 
-    final response = api.userGetFind(subscriptionId, name, photo, email, mobilePhone, documentNumber);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling UserApi->userGetFind: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **subscriptionId** | [**String**](.md)|  | [optional] 
- **name** | **String**|  | [optional] 
- **photo** | **String**|  | [optional] 
- **email** | **String**|  | [optional] 
- **mobilePhone** | **String**|  | [optional] 
- **documentNumber** | **String**|  | [optional] 
-
-### Return type
-
-[**BuiltList&lt;User&gt;**](User.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **userGetFindPaged**
-> PagedResultUserModel userGetFindPaged(page, pageSize, subscriptionId, name, photo, email, mobilePhone, documentNumber)
-
-Get all User
-
-### Example 
-```dart
-import 'package:yes4track_mobile_api_client/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
-
-final api = Yes4trackMobileApiClient().getUserApi();
+final bool isActive = true; // bool | 
+final bool isAdmin = true; // bool | 
+final String companyId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 final int page = 56; // int | 
 final int pageSize = 56; // int | 
-final String subscriptionId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final String name = name_example; // String | 
-final String photo = photo_example; // String | 
-final String email = email_example; // String | 
-final String mobilePhone = mobilePhone_example; // String | 
-final String documentNumber = documentNumber_example; // String | 
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    final response = api.userGetFindPaged(page, pageSize, subscriptionId, name, photo, email, mobilePhone, documentNumber);
+    final response = api.yes4trackV1UsersGet(name, phone, email, isActive, isAdmin, companyId, page, pageSize, sort, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling UserApi->userGetFindPaged: $e\n');
+    print('Exception when calling UserApi->yes4trackV1UsersGet: $e\n');
 }
 ```
 
@@ -383,18 +166,21 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **name** | **String**|  | [optional] 
+ **phone** | **String**|  | [optional] 
+ **email** | **String**|  | [optional] 
+ **isActive** | **bool**|  | [optional] 
+ **isAdmin** | **bool**|  | [optional] 
+ **companyId** | [**String**](.md)|  | [optional] 
  **page** | **int**|  | [optional] 
  **pageSize** | **int**|  | [optional] 
- **subscriptionId** | [**String**](.md)|  | [optional] 
- **name** | **String**|  | [optional] 
- **photo** | **String**|  | [optional] 
- **email** | **String**|  | [optional] 
- **mobilePhone** | **String**|  | [optional] 
- **documentNumber** | **String**|  | [optional] 
+ **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
+ **xApiKey** | **String**| Your Api Key | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd98fe8cc-4738-45ea-a971-86b829e3ce7c']
 
 ### Return type
 
-[**PagedResultUserModel**](PagedResultUserModel.md)
+[**GetAllPagedUserResponse**](GetAllPagedUserResponse.md)
 
 ### Authorization
 
@@ -403,14 +189,14 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **userGetPerfil**
-> userGetPerfil()
+# **yes4trackV1UsersIdCompaniesCompanyIdDelete**
+> yes4trackV1UsersIdCompaniesCompanyIdDelete(id, companyId, xApiKey, xCsrfToken)
 
-
+Delete User Company
 
 ### Example 
 ```dart
@@ -421,16 +207,26 @@ import 'package:yes4track_mobile_api_client/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Yes4trackMobileApiClient().getUserApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Id User
+final String companyId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Id Company
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    api.userGetPerfil();
+    api.yes4trackV1UsersIdCompaniesCompanyIdDelete(id, companyId, xApiKey, xCsrfToken);
 } catch on DioError (e) {
-    print('Exception when calling UserApi->userGetPerfil: $e\n');
+    print('Exception when calling UserApi->yes4trackV1UsersIdCompaniesCompanyIdDelete: $e\n');
 }
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)| Id User | 
+ **companyId** | [**String**](.md)| Id Company | 
+ **xApiKey** | **String**| Your Api Key | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'beccb322-fa2b-4d2b-9460-5a4f6d5deb3a']
 
 ### Return type
 
@@ -443,14 +239,14 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **userGetVerifyUserByEmail**
-> bool userGetVerifyUserByEmail(email, device)
+# **yes4trackV1UsersIdCompaniesCompanyIdPost**
+> yes4trackV1UsersIdCompaniesCompanyIdPost(id, companyId, xApiKey, xCsrfToken)
 
-Get Verify User By Email
+Add User Company
 
 ### Example 
 ```dart
@@ -461,14 +257,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Yes4trackMobileApiClient().getUserApi();
-final String email = email_example; // String | 
-final String device = device_example; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Id User
+final String companyId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Id Company
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    final response = api.userGetVerifyUserByEmail(email, device);
-    print(response);
+    api.yes4trackV1UsersIdCompaniesCompanyIdPost(id, companyId, xApiKey, xCsrfToken);
 } catch on DioError (e) {
-    print('Exception when calling UserApi->userGetVerifyUserByEmail: $e\n');
+    print('Exception when calling UserApi->yes4trackV1UsersIdCompaniesCompanyIdPost: $e\n');
 }
 ```
 
@@ -476,54 +273,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email** | **String**|  | 
- **device** | **String**|  | [optional] 
-
-### Return type
-
-**bool**
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **userPatch**
-> userPatch(id, patchAttributes)
-
-Update Partial User
-
-### Example 
-```dart
-import 'package:yes4track_mobile_api_client/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
-
-final api = Yes4trackMobileApiClient().getUserApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final BuiltList<PatchDto> patchAttributes = ; // BuiltList<PatchDto> | 
-
-try { 
-    api.userPatch(id, patchAttributes);
-} catch on DioError (e) {
-    print('Exception when calling UserApi->userPatch: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **patchAttributes** | [**BuiltList&lt;PatchDto&gt;**](PatchDto.md)|  | [optional] 
+ **id** | [**String**](.md)| Id User | 
+ **companyId** | [**String**](.md)| Id Company | 
+ **xApiKey** | **String**| Your Api Key | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e55f901a-da97-464a-abdf-4f0ef00d08a3']
 
 ### Return type
 
@@ -535,15 +288,15 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, application/_*+json
- - **Accept**: Not defined
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **userPost**
-> User userPost(model)
+# **yes4trackV1UsersIdDelete**
+> yes4trackV1UsersIdDelete(id, xApiKey, xCsrfToken)
 
-Create User
+Delete User by Id
 
 ### Example 
 ```dart
@@ -554,13 +307,14 @@ import 'package:yes4track_mobile_api_client/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Yes4trackMobileApiClient().getUserApi();
-final User model = ; // User | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | User id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    final response = api.userPost(model);
-    print(response);
+    api.yes4trackV1UsersIdDelete(id, xApiKey, xCsrfToken);
 } catch on DioError (e) {
-    print('Exception when calling UserApi->userPost: $e\n');
+    print('Exception when calling UserApi->yes4trackV1UsersIdDelete: $e\n');
 }
 ```
 
@@ -568,142 +322,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**User**](User.md)|  | [optional] 
+ **id** | [**String**](.md)| User id | 
+ **xApiKey** | **String**| Your Api Key | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3fc12766-0406-4938-829a-d7c1e9f4307c']
 
 ### Return type
 
-[**User**](User.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json-patch+json, application/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **userPostAddUser**
-> OauthSignUpResponseDto userPostAddUser(model)
-
-User Activate
-
-### Example 
-```dart
-import 'package:yes4track_mobile_api_client/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
-
-final api = Yes4trackMobileApiClient().getUserApi();
-final UserActivationModel model = ; // UserActivationModel | 
-
-try { 
-    final response = api.userPostAddUser(model);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling UserApi->userPostAddUser: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **model** | [**UserActivationModel**](UserActivationModel.md)|  | [optional] 
-
-### Return type
-
-[**OauthSignUpResponseDto**](OauthSignUpResponseDto.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json-patch+json, application/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **userPostAddUserBySubscriptionManager**
-> User userPostAddUserBySubscriptionManager(model)
-
-Create User Custom - Subscription manager
-
-### Example 
-```dart
-import 'package:yes4track_mobile_api_client/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
-
-final api = Yes4trackMobileApiClient().getUserApi();
-final UserSubscriptionManagerRequest model = ; // UserSubscriptionManagerRequest | 
-
-try { 
-    final response = api.userPostAddUserBySubscriptionManager(model);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling UserApi->userPostAddUserBySubscriptionManager: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **model** | [**UserSubscriptionManagerRequest**](UserSubscriptionManagerRequest.md)|  | [optional] 
-
-### Return type
-
-[**User**](User.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json-patch+json, application/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **userPostRemoveFotoPerfil**
-> User userPostRemoveFotoPerfil()
-
-Create User Custom
-
-### Example 
-```dart
-import 'package:yes4track_mobile_api_client/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
-
-final api = Yes4trackMobileApiClient().getUserApi();
-
-try { 
-    final response = api.userPostRemoveFotoPerfil();
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling UserApi->userPostRemoveFotoPerfil: $e\n');
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**User**](User.md)
+void (empty response body)
 
 ### Authorization
 
@@ -712,14 +337,14 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **userPostUploadFotoPerfil**
-> User userPostUploadFotoPerfil()
+# **yes4trackV1UsersIdLocationPut**
+> yes4trackV1UsersIdLocationPut(id, xApiKey, xCsrfToken, putUserLocationRequest)
 
-Create User Custom
+Update User Location
 
 ### Example 
 ```dart
@@ -730,21 +355,229 @@ import 'package:yes4track_mobile_api_client/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Yes4trackMobileApiClient().getUserApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | User Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PutUserLocationRequest putUserLocationRequest = ; // PutUserLocationRequest | GeoLocation and Date
 
 try { 
-    final response = api.userPostUploadFotoPerfil();
-    print(response);
+    api.yes4trackV1UsersIdLocationPut(id, xApiKey, xCsrfToken, putUserLocationRequest);
 } catch on DioError (e) {
-    print('Exception when calling UserApi->userPostUploadFotoPerfil: $e\n');
+    print('Exception when calling UserApi->yes4trackV1UsersIdLocationPut: $e\n');
 }
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)| User Id | 
+ **xApiKey** | **String**| Your Api Key | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'bfc844c6-d6bb-45cc-8a4a-58fede7923a6']
+ **putUserLocationRequest** | [**PutUserLocationRequest**](PutUserLocationRequest.md)| GeoLocation and Date | [optional] 
 
 ### Return type
 
-[**User**](User.md)
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **yes4trackV1UsersIdPatch**
+> yes4trackV1UsersIdPatch(id, operation, xApiKey, xCsrfToken)
+
+Update part of User
+
+### Example 
+```dart
+import 'package:yes4track_mobile_api_client/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+final api = Yes4trackMobileApiClient().getUserApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | User id
+final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+
+try { 
+    api.yes4trackV1UsersIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch on DioError (e) {
+    print('Exception when calling UserApi->yes4trackV1UsersIdPatch: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)| User id | 
+ **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
+ **xApiKey** | **String**| Your Api Key | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'eea00d55-e5dc-4713-b442-540da841fc4a']
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **yes4trackV1UsersIdPhotoPut**
+> yes4trackV1UsersIdPhotoPut(id, xApiKey, xCsrfToken, profilePhotoRequest)
+
+Update User Photo
+
+### Example 
+```dart
+import 'package:yes4track_mobile_api_client/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+final api = Yes4trackMobileApiClient().getUserApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | User Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final ProfilePhotoRequest profilePhotoRequest = ; // ProfilePhotoRequest | User to update
+
+try { 
+    api.yes4trackV1UsersIdPhotoPut(id, xApiKey, xCsrfToken, profilePhotoRequest);
+} catch on DioError (e) {
+    print('Exception when calling UserApi->yes4trackV1UsersIdPhotoPut: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)| User Id | 
+ **xApiKey** | **String**| Your Api Key | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '26ff95f1-beeb-4495-80e4-07f19980e98d']
+ **profilePhotoRequest** | [**ProfilePhotoRequest**](ProfilePhotoRequest.md)| User to update | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **yes4trackV1UsersIdPushtokenDelete**
+> yes4trackV1UsersIdPushtokenDelete(id, xApiKey, xCsrfToken, deleteUserPushTokenRequest)
+
+Delete User Push Token
+
+### Example 
+```dart
+import 'package:yes4track_mobile_api_client/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+final api = Yes4trackMobileApiClient().getUserApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Id User
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final DeleteUserPushTokenRequest deleteUserPushTokenRequest = ; // DeleteUserPushTokenRequest | FCM Token
+
+try { 
+    api.yes4trackV1UsersIdPushtokenDelete(id, xApiKey, xCsrfToken, deleteUserPushTokenRequest);
+} catch on DioError (e) {
+    print('Exception when calling UserApi->yes4trackV1UsersIdPushtokenDelete: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)| Id User | 
+ **xApiKey** | **String**| Your Api Key | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1eca7de1-4864-44c4-acf1-0a74d545891f']
+ **deleteUserPushTokenRequest** | [**DeleteUserPushTokenRequest**](DeleteUserPushTokenRequest.md)| FCM Token | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **yes4trackV1UsersIdPushtokenGet**
+> GetAllUserPushTokenResponse yes4trackV1UsersIdPushtokenGet(id, xApiKey, xCsrfToken)
+
+Get All User Push Token
+
+### Example 
+```dart
+import 'package:yes4track_mobile_api_client/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+final api = Yes4trackMobileApiClient().getUserApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | User Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+
+try { 
+    final response = api.yes4trackV1UsersIdPushtokenGet(id, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UserApi->yes4trackV1UsersIdPushtokenGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)| User Id | 
+ **xApiKey** | **String**| Your Api Key | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '9653c263-0ed6-4cc0-b777-ffe052cc439c']
+
+### Return type
+
+[**GetAllUserPushTokenResponse**](GetAllUserPushTokenResponse.md)
 
 ### Authorization
 
@@ -753,12 +586,62 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **userPut**
-> userPut(id, model)
+# **yes4trackV1UsersIdPushtokenPost**
+> yes4trackV1UsersIdPushtokenPost(id, xApiKey, xCsrfToken, postUserPushTokenRequest)
+
+Add User Push Token
+
+### Example 
+```dart
+import 'package:yes4track_mobile_api_client/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+final api = Yes4trackMobileApiClient().getUserApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Id User
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostUserPushTokenRequest postUserPushTokenRequest = ; // PostUserPushTokenRequest | FCM Token
+
+try { 
+    api.yes4trackV1UsersIdPushtokenPost(id, xApiKey, xCsrfToken, postUserPushTokenRequest);
+} catch on DioError (e) {
+    print('Exception when calling UserApi->yes4trackV1UsersIdPushtokenPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)| Id User | 
+ **xApiKey** | **String**| Your Api Key | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '60f528e4-0c81-4cbf-8500-bc9c25c5d05d']
+ **postUserPushTokenRequest** | [**PostUserPushTokenRequest**](PostUserPushTokenRequest.md)| FCM Token | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **yes4trackV1UsersIdPut**
+> yes4trackV1UsersIdPut(id, xApiKey, xCsrfToken, putUserRequest)
 
 Update User
 
@@ -771,13 +654,15 @@ import 'package:yes4track_mobile_api_client/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Yes4trackMobileApiClient().getUserApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final User model = ; // User | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | User Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PutUserRequest putUserRequest = ; // PutUserRequest | User to update
 
 try { 
-    api.userPut(id, model);
+    api.yes4trackV1UsersIdPut(id, xApiKey, xCsrfToken, putUserRequest);
 } catch on DioError (e) {
-    print('Exception when calling UserApi->userPut: $e\n');
+    print('Exception when calling UserApi->yes4trackV1UsersIdPut: $e\n');
 }
 ```
 
@@ -785,8 +670,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
- **model** | [**User**](User.md)|  | [optional] 
+ **id** | [**String**](.md)| User Id | 
+ **xApiKey** | **String**| Your Api Key | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e73a0184-6b41-40b6-9425-8a1d408e2429']
+ **putUserRequest** | [**PutUserRequest**](PutUserRequest.md)| User to update | [optional] 
 
 ### Return type
 
@@ -798,8 +685,299 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **yes4trackV1UsersPost**
+> PostUserResponse yes4trackV1UsersPost(xApiKey, xCsrfToken, postUserRequest)
+
+Add User
+
+### Example 
+```dart
+import 'package:yes4track_mobile_api_client/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+final api = Yes4trackMobileApiClient().getUserApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostUserRequest postUserRequest = ; // PostUserRequest | User to create
+
+try { 
+    final response = api.yes4trackV1UsersPost(xApiKey, xCsrfToken, postUserRequest);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UserApi->yes4trackV1UsersPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xApiKey** | **String**| Your Api Key | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '17faaf29-1766-4578-964a-e5d9dd6a0a70']
+ **postUserRequest** | [**PostUserRequest**](PostUserRequest.md)| User to create | [optional] 
+
+### Return type
+
+[**PostUserResponse**](PostUserResponse.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **yes4trackV1UsersResendcodePost**
+> yes4trackV1UsersResendcodePost(xApiKey, xCsrfToken, postPostUserResendCodeRequest)
+
+Resend Code
+
+### Example 
+```dart
+import 'package:yes4track_mobile_api_client/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+final api = Yes4trackMobileApiClient().getUserApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostPostUserResendCodeRequest postPostUserResendCodeRequest = ; // PostPostUserResendCodeRequest | Phone and Hash
+
+try { 
+    api.yes4trackV1UsersResendcodePost(xApiKey, xCsrfToken, postPostUserResendCodeRequest);
+} catch on DioError (e) {
+    print('Exception when calling UserApi->yes4trackV1UsersResendcodePost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xApiKey** | **String**| Your Api Key | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5f8a91f8-963f-4d04-a394-93258abefe82']
+ **postPostUserResendCodeRequest** | [**PostPostUserResendCodeRequest**](PostPostUserResendCodeRequest.md)| Phone and Hash | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **yes4trackV1UsersSetupangelPost**
+> yes4trackV1UsersSetupangelPost(xApiKey, xCsrfToken, postUserSetupAngelRequest)
+
+Setup User default Angel
+
+### Example 
+```dart
+import 'package:yes4track_mobile_api_client/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+final api = Yes4trackMobileApiClient().getUserApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostUserSetupAngelRequest postUserSetupAngelRequest = ; // PostUserSetupAngelRequest | Angel to Setup
+
+try { 
+    api.yes4trackV1UsersSetupangelPost(xApiKey, xCsrfToken, postUserSetupAngelRequest);
+} catch on DioError (e) {
+    print('Exception when calling UserApi->yes4trackV1UsersSetupangelPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xApiKey** | **String**| Your Api Key | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e8dcfa7f-1063-4373-b2fc-ceb92898482a']
+ **postUserSetupAngelRequest** | [**PostUserSetupAngelRequest**](PostUserSetupAngelRequest.md)| Angel to Setup | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **yes4trackV1UsersSetupsponsorIdPost**
+> yes4trackV1UsersSetupsponsorIdPost(id, xApiKey, xCsrfToken)
+
+Setup User default Sponsor
+
+### Example 
+```dart
+import 'package:yes4track_mobile_api_client/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+final api = Yes4trackMobileApiClient().getUserApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Sponsor Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+
+try { 
+    api.yes4trackV1UsersSetupsponsorIdPost(id, xApiKey, xCsrfToken);
+} catch on DioError (e) {
+    print('Exception when calling UserApi->yes4trackV1UsersSetupsponsorIdPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)| Sponsor Id | 
+ **xApiKey** | **String**| Your Api Key | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '64400d3a-9a09-476a-8faf-a3c58e5972c7']
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **yes4trackV1UsersSigninPost**
+> PostUserSignInResponse yes4trackV1UsersSigninPost(xApiKey, xCsrfToken, postUserSignInRequest)
+
+User SignIn
+
+### Example 
+```dart
+import 'package:yes4track_mobile_api_client/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+final api = Yes4trackMobileApiClient().getUserApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostUserSignInRequest postUserSignInRequest = ; // PostUserSignInRequest | User to SignIn
+
+try { 
+    final response = api.yes4trackV1UsersSigninPost(xApiKey, xCsrfToken, postUserSignInRequest);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UserApi->yes4trackV1UsersSigninPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xApiKey** | **String**| Your Api Key | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3351c1b3-7f66-4232-bd09-95175595adc9']
+ **postUserSignInRequest** | [**PostUserSignInRequest**](PostUserSignInRequest.md)| User to SignIn | [optional] 
+
+### Return type
+
+[**PostUserSignInResponse**](PostUserSignInResponse.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **yes4trackV1UsersSignupPost**
+> PostUserResponse yes4trackV1UsersSignupPost(xApiKey, xCsrfToken, postUserRequest)
+
+User SignUp
+
+### Example 
+```dart
+import 'package:yes4track_mobile_api_client/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+final api = Yes4trackMobileApiClient().getUserApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostUserRequest postUserRequest = ; // PostUserRequest | User to create
+
+try { 
+    final response = api.yes4trackV1UsersSignupPost(xApiKey, xCsrfToken, postUserRequest);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UserApi->yes4trackV1UsersSignupPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xApiKey** | **String**| Your Api Key | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd2ddd6ef-9474-47a1-a4b2-68be2fc581d0']
+ **postUserRequest** | [**PostUserRequest**](PostUserRequest.md)| User to create | [optional] 
+
+### Return type
+
+[**PostUserResponse**](PostUserResponse.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

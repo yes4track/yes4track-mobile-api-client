@@ -17,6 +17,14 @@ class _$Statistic extends Statistic {
   final double? elevationGain;
   @override
   final double? speed;
+  @override
+  final double? elevationLoss;
+  @override
+  final double? elevationMin;
+  @override
+  final double? elevationMax;
+  @override
+  final double? elevationMedian;
 
   factory _$Statistic([void Function(StatisticBuilder)? updates]) =>
       (new StatisticBuilder()..update(updates)).build();
@@ -26,7 +34,11 @@ class _$Statistic extends Statistic {
       this.totalMovingTime,
       this.totalDistance,
       this.elevationGain,
-      this.speed})
+      this.speed,
+      this.elevationLoss,
+      this.elevationMin,
+      this.elevationMax,
+      this.elevationMedian})
       : super._();
 
   @override
@@ -44,17 +56,31 @@ class _$Statistic extends Statistic {
         totalMovingTime == other.totalMovingTime &&
         totalDistance == other.totalDistance &&
         elevationGain == other.elevationGain &&
-        speed == other.speed;
+        speed == other.speed &&
+        elevationLoss == other.elevationLoss &&
+        elevationMin == other.elevationMin &&
+        elevationMax == other.elevationMax &&
+        elevationMedian == other.elevationMedian;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
         $jc(
-            $jc($jc($jc(0, totalTime.hashCode), totalMovingTime.hashCode),
-                totalDistance.hashCode),
-            elevationGain.hashCode),
-        speed.hashCode));
+            $jc(
+                $jc(
+                    $jc(
+                        $jc(
+                            $jc(
+                                $jc($jc(0, totalTime.hashCode),
+                                    totalMovingTime.hashCode),
+                                totalDistance.hashCode),
+                            elevationGain.hashCode),
+                        speed.hashCode),
+                    elevationLoss.hashCode),
+                elevationMin.hashCode),
+            elevationMax.hashCode),
+        elevationMedian.hashCode));
   }
 
   @override
@@ -64,7 +90,11 @@ class _$Statistic extends Statistic {
           ..add('totalMovingTime', totalMovingTime)
           ..add('totalDistance', totalDistance)
           ..add('elevationGain', elevationGain)
-          ..add('speed', speed))
+          ..add('speed', speed)
+          ..add('elevationLoss', elevationLoss)
+          ..add('elevationMin', elevationMin)
+          ..add('elevationMax', elevationMax)
+          ..add('elevationMedian', elevationMedian))
         .toString();
   }
 }
@@ -95,6 +125,24 @@ class StatisticBuilder implements Builder<Statistic, StatisticBuilder> {
   double? get speed => _$this._speed;
   set speed(double? speed) => _$this._speed = speed;
 
+  double? _elevationLoss;
+  double? get elevationLoss => _$this._elevationLoss;
+  set elevationLoss(double? elevationLoss) =>
+      _$this._elevationLoss = elevationLoss;
+
+  double? _elevationMin;
+  double? get elevationMin => _$this._elevationMin;
+  set elevationMin(double? elevationMin) => _$this._elevationMin = elevationMin;
+
+  double? _elevationMax;
+  double? get elevationMax => _$this._elevationMax;
+  set elevationMax(double? elevationMax) => _$this._elevationMax = elevationMax;
+
+  double? _elevationMedian;
+  double? get elevationMedian => _$this._elevationMedian;
+  set elevationMedian(double? elevationMedian) =>
+      _$this._elevationMedian = elevationMedian;
+
   StatisticBuilder() {
     Statistic._initializeBuilder(this);
   }
@@ -107,6 +155,10 @@ class StatisticBuilder implements Builder<Statistic, StatisticBuilder> {
       _totalDistance = $v.totalDistance;
       _elevationGain = $v.elevationGain;
       _speed = $v.speed;
+      _elevationLoss = $v.elevationLoss;
+      _elevationMin = $v.elevationMin;
+      _elevationMax = $v.elevationMax;
+      _elevationMedian = $v.elevationMedian;
       _$v = null;
     }
     return this;
@@ -131,7 +183,11 @@ class StatisticBuilder implements Builder<Statistic, StatisticBuilder> {
             totalMovingTime: totalMovingTime,
             totalDistance: totalDistance,
             elevationGain: elevationGain,
-            speed: speed);
+            speed: speed,
+            elevationLoss: elevationLoss,
+            elevationMin: elevationMin,
+            elevationMax: elevationMax,
+            elevationMedian: elevationMedian);
     replace(_$result);
     return _$result;
   }

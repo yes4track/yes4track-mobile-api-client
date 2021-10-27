@@ -12,11 +12,16 @@ part 'waypoint.g.dart';
 /// Waypoint
 ///
 /// Properties:
+/// * [id] 
 /// * [name] 
 /// * [description] 
 /// * [type] 
 /// * [location] 
+/// * [time] 
 abstract class Waypoint implements Built<Waypoint, WaypointBuilder> {
+    @BuiltValueField(wireName: r'id')
+    String? get id;
+
     @BuiltValueField(wireName: r'name')
     String? get name;
 
@@ -29,6 +34,9 @@ abstract class Waypoint implements Built<Waypoint, WaypointBuilder> {
 
     @BuiltValueField(wireName: r'location')
     BuiltList<double>? get location;
+
+    @BuiltValueField(wireName: r'time')
+    DateTime? get time;
 
     Waypoint._();
 
@@ -51,6 +59,12 @@ class _$WaypointSerializer implements StructuredSerializer<Waypoint> {
     Iterable<Object?> serialize(Serializers serializers, Waypoint object,
         {FullType specifiedType = FullType.unspecified}) {
         final result = <Object?>[];
+        if (object.id != null) {
+            result
+                ..add(r'id')
+                ..add(serializers.serialize(object.id,
+                    specifiedType: const FullType(String)));
+        }
         if (object.name != null) {
             result
                 ..add(r'name')
@@ -75,6 +89,12 @@ class _$WaypointSerializer implements StructuredSerializer<Waypoint> {
                 ..add(serializers.serialize(object.location,
                     specifiedType: const FullType(BuiltList, [FullType(double)])));
         }
+        if (object.time != null) {
+            result
+                ..add(r'time')
+                ..add(serializers.serialize(object.time,
+                    specifiedType: const FullType(DateTime)));
+        }
         return result;
     }
 
@@ -89,6 +109,10 @@ class _$WaypointSerializer implements StructuredSerializer<Waypoint> {
             iterator.moveNext();
             final Object? value = iterator.current;
             switch (key) {
+                case r'id':
+                    result.id = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
                 case r'name':
                     result.name = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
@@ -104,6 +128,10 @@ class _$WaypointSerializer implements StructuredSerializer<Waypoint> {
                 case r'location':
                     result.location.replace(serializers.deserialize(value,
                         specifiedType: const FullType(BuiltList, [FullType(double)])) as BuiltList<double>);
+                    break;
+                case r'time':
+                    result.time = serializers.deserialize(value,
+                        specifiedType: const FullType(DateTime)) as DateTime;
                     break;
             }
         }

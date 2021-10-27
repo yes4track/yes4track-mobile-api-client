@@ -22,9 +22,17 @@ class _$PostCompanyRequest extends PostCompanyRequest {
   @override
   final String? registrationNumber;
   @override
+  final RegistrationType? registrationType;
+  @override
   final String? contactEmail;
   @override
   final String? contactPhone;
+  @override
+  final CompanyType? type;
+  @override
+  final String? biography;
+  @override
+  final ProfilePhotoRequest? profilePhoto;
 
   factory _$PostCompanyRequest(
           [void Function(PostCompanyRequestBuilder)? updates]) =>
@@ -38,8 +46,12 @@ class _$PostCompanyRequest extends PostCompanyRequest {
       this.legalName,
       this.fantasyName,
       this.registrationNumber,
+      this.registrationType,
       this.contactEmail,
-      this.contactPhone})
+      this.contactPhone,
+      this.type,
+      this.biography,
+      this.profilePhoto})
       : super._();
 
   @override
@@ -62,8 +74,12 @@ class _$PostCompanyRequest extends PostCompanyRequest {
         legalName == other.legalName &&
         fantasyName == other.fantasyName &&
         registrationNumber == other.registrationNumber &&
+        registrationType == other.registrationType &&
         contactEmail == other.contactEmail &&
-        contactPhone == other.contactPhone;
+        contactPhone == other.contactPhone &&
+        type == other.type &&
+        biography == other.biography &&
+        profilePhoto == other.profilePhoto;
   }
 
   @override
@@ -75,15 +91,23 @@ class _$PostCompanyRequest extends PostCompanyRequest {
                     $jc(
                         $jc(
                             $jc(
-                                $jc($jc(0, createdAt.hashCode),
-                                    updatedAt.hashCode),
-                                userCreated.hashCode),
-                            userUpdated.hashCode),
-                        legalName.hashCode),
-                    fantasyName.hashCode),
-                registrationNumber.hashCode),
-            contactEmail.hashCode),
-        contactPhone.hashCode));
+                                $jc(
+                                    $jc(
+                                        $jc(
+                                            $jc(
+                                                $jc($jc(0, createdAt.hashCode),
+                                                    updatedAt.hashCode),
+                                                userCreated.hashCode),
+                                            userUpdated.hashCode),
+                                        legalName.hashCode),
+                                    fantasyName.hashCode),
+                                registrationNumber.hashCode),
+                            registrationType.hashCode),
+                        contactEmail.hashCode),
+                    contactPhone.hashCode),
+                type.hashCode),
+            biography.hashCode),
+        profilePhoto.hashCode));
   }
 
   @override
@@ -96,8 +120,12 @@ class _$PostCompanyRequest extends PostCompanyRequest {
           ..add('legalName', legalName)
           ..add('fantasyName', fantasyName)
           ..add('registrationNumber', registrationNumber)
+          ..add('registrationType', registrationType)
           ..add('contactEmail', contactEmail)
-          ..add('contactPhone', contactPhone))
+          ..add('contactPhone', contactPhone)
+          ..add('type', type)
+          ..add('biography', biography)
+          ..add('profilePhoto', profilePhoto))
         .toString();
   }
 }
@@ -135,6 +163,11 @@ class PostCompanyRequestBuilder
   set registrationNumber(String? registrationNumber) =>
       _$this._registrationNumber = registrationNumber;
 
+  RegistrationType? _registrationType;
+  RegistrationType? get registrationType => _$this._registrationType;
+  set registrationType(RegistrationType? registrationType) =>
+      _$this._registrationType = registrationType;
+
   String? _contactEmail;
   String? get contactEmail => _$this._contactEmail;
   set contactEmail(String? contactEmail) => _$this._contactEmail = contactEmail;
@@ -142,6 +175,20 @@ class PostCompanyRequestBuilder
   String? _contactPhone;
   String? get contactPhone => _$this._contactPhone;
   set contactPhone(String? contactPhone) => _$this._contactPhone = contactPhone;
+
+  CompanyType? _type;
+  CompanyType? get type => _$this._type;
+  set type(CompanyType? type) => _$this._type = type;
+
+  String? _biography;
+  String? get biography => _$this._biography;
+  set biography(String? biography) => _$this._biography = biography;
+
+  ProfilePhotoRequestBuilder? _profilePhoto;
+  ProfilePhotoRequestBuilder get profilePhoto =>
+      _$this._profilePhoto ??= new ProfilePhotoRequestBuilder();
+  set profilePhoto(ProfilePhotoRequestBuilder? profilePhoto) =>
+      _$this._profilePhoto = profilePhoto;
 
   PostCompanyRequestBuilder() {
     PostCompanyRequest._initializeBuilder(this);
@@ -157,8 +204,12 @@ class PostCompanyRequestBuilder
       _legalName = $v.legalName;
       _fantasyName = $v.fantasyName;
       _registrationNumber = $v.registrationNumber;
+      _registrationType = $v.registrationType;
       _contactEmail = $v.contactEmail;
       _contactPhone = $v.contactPhone;
+      _type = $v.type;
+      _biography = $v.biography;
+      _profilePhoto = $v.profilePhoto?.toBuilder();
       _$v = null;
     }
     return this;
@@ -177,17 +228,34 @@ class PostCompanyRequestBuilder
 
   @override
   _$PostCompanyRequest build() {
-    final _$result = _$v ??
-        new _$PostCompanyRequest._(
-            createdAt: createdAt,
-            updatedAt: updatedAt,
-            userCreated: userCreated,
-            userUpdated: userUpdated,
-            legalName: legalName,
-            fantasyName: fantasyName,
-            registrationNumber: registrationNumber,
-            contactEmail: contactEmail,
-            contactPhone: contactPhone);
+    _$PostCompanyRequest _$result;
+    try {
+      _$result = _$v ??
+          new _$PostCompanyRequest._(
+              createdAt: createdAt,
+              updatedAt: updatedAt,
+              userCreated: userCreated,
+              userUpdated: userUpdated,
+              legalName: legalName,
+              fantasyName: fantasyName,
+              registrationNumber: registrationNumber,
+              registrationType: registrationType,
+              contactEmail: contactEmail,
+              contactPhone: contactPhone,
+              type: type,
+              biography: biography,
+              profilePhoto: _profilePhoto?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'profilePhoto';
+        _profilePhoto?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PostCompanyRequest', _$failedField, e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }

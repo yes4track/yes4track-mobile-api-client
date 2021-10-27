@@ -13,14 +13,16 @@ import 'package:yes4track_mobile_api_client/src/model/error_details.dart';
 import 'package:yes4track_mobile_api_client/src/model/get_all_active_trail_by_angel_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/get_all_paged_trail_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/get_all_trail_response.dart';
-import 'package:yes4track_mobile_api_client/src/model/get_by_id_trail_geo_dataet_by_id_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/get_by_id_trail_geo_data_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/operation.dart';
+import 'package:yes4track_mobile_api_client/src/model/post_adventure_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_trail_chunck_geo_data_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_trail_geo_data_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_trail_photos_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_trail_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_trail_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/put_trail_request.dart';
+import 'package:yes4track_mobile_api_client/src/model/trail_geo_location_dto.dart';
 
 class TrailApi {
 
@@ -131,9 +133,9 @@ class TrailApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [GetByIdTrailGeoDataetByIdResponse] as data
+  /// Returns a [Future] containing a [Response] with a [GetByIdTrailGeoDataResponse] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<GetByIdTrailGeoDataetByIdResponse>> getByIdTrailGeoData({ 
+  Future<Response<GetByIdTrailGeoDataResponse>> getByIdTrailGeoData({ 
     required String id,
     String? xApiKey,
     String? xCsrfToken,
@@ -174,14 +176,14 @@ class TrailApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    GetByIdTrailGeoDataetByIdResponse _responseData;
+    GetByIdTrailGeoDataResponse _responseData;
 
     try {
-      const _responseType = FullType(GetByIdTrailGeoDataetByIdResponse);
+      const _responseType = FullType(GetByIdTrailGeoDataResponse);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as GetByIdTrailGeoDataetByIdResponse;
+      ) as GetByIdTrailGeoDataResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -192,7 +194,94 @@ class TrailApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<GetByIdTrailGeoDataetByIdResponse>(
+    return Response<GetByIdTrailGeoDataResponse>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Get Trail Geo Location by id
+  /// 
+  ///
+  /// Parameters:
+  /// * [id] - Trail id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [TrailGeoLocationDto] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<TrailGeoLocationDto>> getByIdTrailGeoLocation({ 
+    required String id,
+    String? xApiKey,
+    String? xCsrfToken,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/yes4track/v1/trails/{id}/geolocation'.replaceAll('{' r'id' '}', id.toString());
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        if (xApiKey != null) r'x-api-key': xApiKey,
+        if (xCsrfToken != null) r'x-csrf-token': xCsrfToken,
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'apiKey',
+            'name': 'Bearer',
+            'keyName': 'Authorization',
+            'where': 'header',
+          },
+        ],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    TrailGeoLocationDto _responseData;
+
+    try {
+      const _responseType = FullType(TrailGeoLocationDto);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as TrailGeoLocationDto;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<TrailGeoLocationDto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -527,6 +616,95 @@ class TrailApi {
     );
 
     return _response;
+  }
+
+  /// Convert Trail to Adventure
+  /// 
+  ///
+  /// Parameters:
+  /// * [id] - Trail Id
+  /// * [companyId] - Company Id
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [PostAdventureResponse] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<PostAdventureResponse>> yes4trackV1TrailsIdCompanyIdTrailtoadventurePost({ 
+    required String id,
+    required String companyId,
+    String? xApiKey,
+    String? xCsrfToken,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/yes4track/v1/trails/{id}/{companyId}/trailtoadventure'.replaceAll('{' r'id' '}', id.toString()).replaceAll('{' r'companyId' '}', companyId.toString());
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{
+        if (xApiKey != null) r'x-api-key': xApiKey,
+        if (xCsrfToken != null) r'x-csrf-token': xCsrfToken,
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'apiKey',
+            'name': 'Bearer',
+            'keyName': 'Authorization',
+            'where': 'header',
+          },
+        ],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    PostAdventureResponse _responseData;
+
+    try {
+      const _responseType = FullType(PostAdventureResponse);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as PostAdventureResponse;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<PostAdventureResponse>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
   }
 
   /// Delete Trail by Id

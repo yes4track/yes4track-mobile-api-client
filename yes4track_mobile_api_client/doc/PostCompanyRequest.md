@@ -15,8 +15,12 @@ Name | Type | Description | Notes
 **legalName** | **String** |  | [optional] 
 **fantasyName** | **String** |  | [optional] 
 **registrationNumber** | **String** |  | [optional] 
+**registrationType** | [**RegistrationType**](RegistrationType.md) |  | [optional] 
 **contactEmail** | **String** |  | [optional] 
 **contactPhone** | **String** |  | [optional] 
+**type** | [**CompanyType**](CompanyType.md) |  | [optional] 
+**biography** | **String** |  | [optional] 
+**profilePhoto** | [**ProfilePhotoRequest**](ProfilePhotoRequest.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
