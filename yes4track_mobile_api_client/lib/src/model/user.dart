@@ -2,10 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:built_collection/built_collection.dart';
-import 'package:yes4track_mobile_api_client/src/model/push_token.dart';
-import 'package:yes4track_mobile_api_client/src/model/geo_location.dart';
-import 'package:built_value/json_object.dart';
+import 'package:yes4track_mobile_api_client/src/model/subscription.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -15,81 +12,105 @@ part 'user.g.dart';
 ///
 /// Properties:
 /// * [id] 
-/// * [createdAt] 
-/// * [updatedAt] 
-/// * [userCreated] 
-/// * [userUpdated] 
-/// * [version] 
+/// * [subscriptionId] 
+/// * [subscriptionReference] 
 /// * [name] 
-/// * [phone] 
+/// * [photo] 
 /// * [email] 
-/// * [photoUrl] 
+/// * [mobilePhone] 
+/// * [documentNumber] 
 /// * [isActive] 
+/// * [identityProviderId] 
+/// * [identityProvidersEnabled] 
+/// * [username] 
+/// * [isEmailVerified] 
+/// * [isPhoneVerified] 
+/// * [socialLoginEnabled] 
+/// * [loginEnabled] 
+/// * [isAnonymous] 
 /// * [isAdmin] 
-/// * [isSuperAdmin] 
-/// * [isAngel] 
-/// * [defaultAngel] 
-/// * [defaultSponsor] 
-/// * [companies] 
-/// * [location] 
-/// * [pushTokens] 
+/// * [isDeleted] 
+/// * [deleteDate] 
+/// * [updateDate] 
+/// * [createDate] 
+/// * [deleteUserId] 
+/// * [updateUserId] 
+/// * [createUserId] 
 abstract class User implements Built<User, UserBuilder> {
     @BuiltValueField(wireName: r'id')
     String? get id;
 
-    @BuiltValueField(wireName: r'createdAt')
-    DateTime? get createdAt;
+    @BuiltValueField(wireName: r'subscriptionId')
+    String? get subscriptionId;
 
-    @BuiltValueField(wireName: r'updatedAt')
-    DateTime? get updatedAt;
-
-    @BuiltValueField(wireName: r'userCreated')
-    String? get userCreated;
-
-    @BuiltValueField(wireName: r'userUpdated')
-    String? get userUpdated;
-
-    @BuiltValueField(wireName: r'version')
-    JsonObject? get version;
+    @BuiltValueField(wireName: r'subscriptionReference')
+    Subscription? get subscriptionReference;
 
     @BuiltValueField(wireName: r'name')
-    String? get name;
+    String get name;
 
-    @BuiltValueField(wireName: r'phone')
-    String? get phone;
+    @BuiltValueField(wireName: r'photo')
+    String? get photo;
 
     @BuiltValueField(wireName: r'email')
-    String? get email;
+    String get email;
 
-    @BuiltValueField(wireName: r'photoUrl')
-    String? get photoUrl;
+    @BuiltValueField(wireName: r'mobilePhone')
+    String? get mobilePhone;
+
+    @BuiltValueField(wireName: r'documentNumber')
+    String? get documentNumber;
 
     @BuiltValueField(wireName: r'isActive')
     bool? get isActive;
 
+    @BuiltValueField(wireName: r'identityProviderId')
+    String? get identityProviderId;
+
+    @BuiltValueField(wireName: r'identityProvidersEnabled')
+    String? get identityProvidersEnabled;
+
+    @BuiltValueField(wireName: r'username')
+    String? get username;
+
+    @BuiltValueField(wireName: r'isEmailVerified')
+    bool? get isEmailVerified;
+
+    @BuiltValueField(wireName: r'isPhoneVerified')
+    bool? get isPhoneVerified;
+
+    @BuiltValueField(wireName: r'socialLoginEnabled')
+    bool? get socialLoginEnabled;
+
+    @BuiltValueField(wireName: r'loginEnabled')
+    bool? get loginEnabled;
+
+    @BuiltValueField(wireName: r'isAnonymous')
+    bool? get isAnonymous;
+
     @BuiltValueField(wireName: r'isAdmin')
     bool? get isAdmin;
 
-    @BuiltValueField(wireName: r'isSuperAdmin')
-    bool? get isSuperAdmin;
+    @BuiltValueField(wireName: r'isDeleted')
+    bool? get isDeleted;
 
-    @BuiltValueField(wireName: r'isAngel')
-    bool? get isAngel;
+    @BuiltValueField(wireName: r'deleteDate')
+    DateTime? get deleteDate;
 
-    @BuiltValueField(wireName: r'defaultAngel')
-    String? get defaultAngel;
+    @BuiltValueField(wireName: r'updateDate')
+    DateTime? get updateDate;
 
-    @BuiltValueField(wireName: r'defaultSponsor')
-    String? get defaultSponsor;
+    @BuiltValueField(wireName: r'createDate')
+    DateTime? get createDate;
 
-    @BuiltValueField(wireName: r'companies')
-    BuiltList<String>? get companies;
+    @BuiltValueField(wireName: r'deleteUserId')
+    String? get deleteUserId;
 
-    @BuiltValueField(wireName: r'location')
-    GeoLocation? get location;
+    @BuiltValueField(wireName: r'updateUserId')
+    String? get updateUserId;
 
-    @BuiltValueField(wireName: r'pushTokens')
-    BuiltList<PushToken>? get pushTokens;
+    @BuiltValueField(wireName: r'createUserId')
+    String? get createUserId;
 
     User._();
 
@@ -118,58 +139,42 @@ class _$UserSerializer implements StructuredSerializer<User> {
                 ..add(serializers.serialize(object.id,
                     specifiedType: const FullType(String)));
         }
-        if (object.createdAt != null) {
+        if (object.subscriptionId != null) {
             result
-                ..add(r'createdAt')
-                ..add(serializers.serialize(object.createdAt,
-                    specifiedType: const FullType(DateTime)));
-        }
-        if (object.updatedAt != null) {
-            result
-                ..add(r'updatedAt')
-                ..add(serializers.serialize(object.updatedAt,
-                    specifiedType: const FullType(DateTime)));
-        }
-        if (object.userCreated != null) {
-            result
-                ..add(r'userCreated')
-                ..add(serializers.serialize(object.userCreated,
+                ..add(r'subscriptionId')
+                ..add(serializers.serialize(object.subscriptionId,
                     specifiedType: const FullType(String)));
         }
-        if (object.userUpdated != null) {
+        if (object.subscriptionReference != null) {
             result
-                ..add(r'userUpdated')
-                ..add(serializers.serialize(object.userUpdated,
+                ..add(r'subscriptionReference')
+                ..add(serializers.serialize(object.subscriptionReference,
+                    specifiedType: const FullType(Subscription)));
+        }
+        result
+            ..add(r'name')
+            ..add(serializers.serialize(object.name,
+                specifiedType: const FullType(String)));
+        if (object.photo != null) {
+            result
+                ..add(r'photo')
+                ..add(serializers.serialize(object.photo,
                     specifiedType: const FullType(String)));
         }
-        if (object.version != null) {
+        result
+            ..add(r'email')
+            ..add(serializers.serialize(object.email,
+                specifiedType: const FullType(String)));
+        if (object.mobilePhone != null) {
             result
-                ..add(r'version')
-                ..add(serializers.serialize(object.version,
-                    specifiedType: const FullType(JsonObject)));
-        }
-        if (object.name != null) {
-            result
-                ..add(r'name')
-                ..add(serializers.serialize(object.name,
+                ..add(r'mobilePhone')
+                ..add(serializers.serialize(object.mobilePhone,
                     specifiedType: const FullType(String)));
         }
-        if (object.phone != null) {
+        if (object.documentNumber != null) {
             result
-                ..add(r'phone')
-                ..add(serializers.serialize(object.phone,
-                    specifiedType: const FullType(String)));
-        }
-        if (object.email != null) {
-            result
-                ..add(r'email')
-                ..add(serializers.serialize(object.email,
-                    specifiedType: const FullType(String)));
-        }
-        if (object.photoUrl != null) {
-            result
-                ..add(r'photoUrl')
-                ..add(serializers.serialize(object.photoUrl,
+                ..add(r'documentNumber')
+                ..add(serializers.serialize(object.documentNumber,
                     specifiedType: const FullType(String)));
         }
         if (object.isActive != null) {
@@ -178,53 +183,101 @@ class _$UserSerializer implements StructuredSerializer<User> {
                 ..add(serializers.serialize(object.isActive,
                     specifiedType: const FullType(bool)));
         }
+        if (object.identityProviderId != null) {
+            result
+                ..add(r'identityProviderId')
+                ..add(serializers.serialize(object.identityProviderId,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.identityProvidersEnabled != null) {
+            result
+                ..add(r'identityProvidersEnabled')
+                ..add(serializers.serialize(object.identityProvidersEnabled,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.username != null) {
+            result
+                ..add(r'username')
+                ..add(serializers.serialize(object.username,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.isEmailVerified != null) {
+            result
+                ..add(r'isEmailVerified')
+                ..add(serializers.serialize(object.isEmailVerified,
+                    specifiedType: const FullType(bool)));
+        }
+        if (object.isPhoneVerified != null) {
+            result
+                ..add(r'isPhoneVerified')
+                ..add(serializers.serialize(object.isPhoneVerified,
+                    specifiedType: const FullType(bool)));
+        }
+        if (object.socialLoginEnabled != null) {
+            result
+                ..add(r'socialLoginEnabled')
+                ..add(serializers.serialize(object.socialLoginEnabled,
+                    specifiedType: const FullType(bool)));
+        }
+        if (object.loginEnabled != null) {
+            result
+                ..add(r'loginEnabled')
+                ..add(serializers.serialize(object.loginEnabled,
+                    specifiedType: const FullType(bool)));
+        }
+        if (object.isAnonymous != null) {
+            result
+                ..add(r'isAnonymous')
+                ..add(serializers.serialize(object.isAnonymous,
+                    specifiedType: const FullType(bool)));
+        }
         if (object.isAdmin != null) {
             result
                 ..add(r'isAdmin')
                 ..add(serializers.serialize(object.isAdmin,
                     specifiedType: const FullType(bool)));
         }
-        if (object.isSuperAdmin != null) {
+        if (object.isDeleted != null) {
             result
-                ..add(r'isSuperAdmin')
-                ..add(serializers.serialize(object.isSuperAdmin,
+                ..add(r'isDeleted')
+                ..add(serializers.serialize(object.isDeleted,
                     specifiedType: const FullType(bool)));
         }
-        if (object.isAngel != null) {
+        if (object.deleteDate != null) {
             result
-                ..add(r'isAngel')
-                ..add(serializers.serialize(object.isAngel,
-                    specifiedType: const FullType(bool)));
+                ..add(r'deleteDate')
+                ..add(serializers.serialize(object.deleteDate,
+                    specifiedType: const FullType(DateTime)));
         }
-        if (object.defaultAngel != null) {
+        if (object.updateDate != null) {
             result
-                ..add(r'defaultAngel')
-                ..add(serializers.serialize(object.defaultAngel,
+                ..add(r'updateDate')
+                ..add(serializers.serialize(object.updateDate,
+                    specifiedType: const FullType(DateTime)));
+        }
+        if (object.createDate != null) {
+            result
+                ..add(r'createDate')
+                ..add(serializers.serialize(object.createDate,
+                    specifiedType: const FullType(DateTime)));
+        }
+        if (object.deleteUserId != null) {
+            result
+                ..add(r'deleteUserId')
+                ..add(serializers.serialize(object.deleteUserId,
                     specifiedType: const FullType(String)));
         }
-        if (object.defaultSponsor != null) {
+        if (object.updateUserId != null) {
             result
-                ..add(r'defaultSponsor')
-                ..add(serializers.serialize(object.defaultSponsor,
+                ..add(r'updateUserId')
+                ..add(serializers.serialize(object.updateUserId,
                     specifiedType: const FullType(String)));
         }
-        if (object.companies != null) {
+        if (object.createUserId != null) {
             result
-                ..add(r'companies')
-                ..add(serializers.serialize(object.companies,
-                    specifiedType: const FullType(BuiltList, [FullType(String)])));
-        }
-        if (object.location != null) {
-            result
-                ..add(r'location')
-                ..add(serializers.serialize(object.location,
-                    specifiedType: const FullType(GeoLocation)));
-        }
-        if (object.pushTokens != null) {
-            result
-                ..add(r'pushTokens')
-                ..add(serializers.serialize(object.pushTokens,
-                    specifiedType: const FullType(BuiltList, [FullType(PushToken)])));
+                ..add(r'createUserId')
+                ..add(serializers.serialize(object.createUserId,
+                    specifiedType: const FullType(String)));
         }
         return result;
     }
@@ -244,77 +297,101 @@ class _$UserSerializer implements StructuredSerializer<User> {
                     result.id = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
-                case r'createdAt':
-                    result.createdAt = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
-                    break;
-                case r'updatedAt':
-                    result.updatedAt = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
-                    break;
-                case r'userCreated':
-                    result.userCreated = serializers.deserialize(value,
+                case r'subscriptionId':
+                    result.subscriptionId = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
-                case r'userUpdated':
-                    result.userUpdated = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
-                    break;
-                case r'version':
-                    result.version = serializers.deserialize(value,
-                        specifiedType: const FullType(JsonObject)) as JsonObject;
+                case r'subscriptionReference':
+                    result.subscriptionReference.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(Subscription)) as Subscription);
                     break;
                 case r'name':
                     result.name = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
-                case r'phone':
-                    result.phone = serializers.deserialize(value,
+                case r'photo':
+                    result.photo = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
                 case r'email':
                     result.email = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
-                case r'photoUrl':
-                    result.photoUrl = serializers.deserialize(value,
+                case r'mobilePhone':
+                    result.mobilePhone = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+                case r'documentNumber':
+                    result.documentNumber = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
                 case r'isActive':
                     result.isActive = serializers.deserialize(value,
                         specifiedType: const FullType(bool)) as bool;
                     break;
+                case r'identityProviderId':
+                    result.identityProviderId = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+                case r'identityProvidersEnabled':
+                    result.identityProvidersEnabled = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+                case r'username':
+                    result.username = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+                case r'isEmailVerified':
+                    result.isEmailVerified = serializers.deserialize(value,
+                        specifiedType: const FullType(bool)) as bool;
+                    break;
+                case r'isPhoneVerified':
+                    result.isPhoneVerified = serializers.deserialize(value,
+                        specifiedType: const FullType(bool)) as bool;
+                    break;
+                case r'socialLoginEnabled':
+                    result.socialLoginEnabled = serializers.deserialize(value,
+                        specifiedType: const FullType(bool)) as bool;
+                    break;
+                case r'loginEnabled':
+                    result.loginEnabled = serializers.deserialize(value,
+                        specifiedType: const FullType(bool)) as bool;
+                    break;
+                case r'isAnonymous':
+                    result.isAnonymous = serializers.deserialize(value,
+                        specifiedType: const FullType(bool)) as bool;
+                    break;
                 case r'isAdmin':
                     result.isAdmin = serializers.deserialize(value,
                         specifiedType: const FullType(bool)) as bool;
                     break;
-                case r'isSuperAdmin':
-                    result.isSuperAdmin = serializers.deserialize(value,
+                case r'isDeleted':
+                    result.isDeleted = serializers.deserialize(value,
                         specifiedType: const FullType(bool)) as bool;
                     break;
-                case r'isAngel':
-                    result.isAngel = serializers.deserialize(value,
-                        specifiedType: const FullType(bool)) as bool;
+                case r'deleteDate':
+                    result.deleteDate = serializers.deserialize(value,
+                        specifiedType: const FullType(DateTime)) as DateTime;
                     break;
-                case r'defaultAngel':
-                    result.defaultAngel = serializers.deserialize(value,
+                case r'updateDate':
+                    result.updateDate = serializers.deserialize(value,
+                        specifiedType: const FullType(DateTime)) as DateTime;
+                    break;
+                case r'createDate':
+                    result.createDate = serializers.deserialize(value,
+                        specifiedType: const FullType(DateTime)) as DateTime;
+                    break;
+                case r'deleteUserId':
+                    result.deleteUserId = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
-                case r'defaultSponsor':
-                    result.defaultSponsor = serializers.deserialize(value,
+                case r'updateUserId':
+                    result.updateUserId = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
-                case r'companies':
-                    result.companies.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(String)])) as BuiltList<String>);
-                    break;
-                case r'location':
-                    result.location.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(GeoLocation)) as GeoLocation);
-                    break;
-                case r'pushTokens':
-                    result.pushTokens.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(PushToken)])) as BuiltList<PushToken>);
+                case r'createUserId':
+                    result.createUserId = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
                     break;
             }
         }

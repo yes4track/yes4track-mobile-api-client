@@ -9,13 +9,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**yes4trackV1VersionGet**](VersionApi.md#yes4trackv1versionget) | **GET** /yes4track/v1/version | Get Version
+[**versionGet**](VersionApi.md#versionget) | **GET** /hypercube_usm/v1/version | 
 
 
-# **yes4trackV1VersionGet**
-> yes4trackV1VersionGet(xApiKey, xCsrfToken)
+# **versionGet**
+> versionGet()
 
-Get Version
+
 
 ### Example 
 ```dart
@@ -26,22 +26,16 @@ import 'package:yes4track_mobile_api_client/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Yes4trackMobileApiClient().getVersionApi();
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try { 
-    api.yes4trackV1VersionGet(xApiKey, xCsrfToken);
+    api.versionGet();
 } catch on DioError (e) {
-    print('Exception when calling VersionApi->yes4trackV1VersionGet: $e\n');
+    print('Exception when calling VersionApi->versionGet: $e\n');
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'eeafda34-b1c3-4bb6-8fba-da175f1b85fb']
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -54,7 +48,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
