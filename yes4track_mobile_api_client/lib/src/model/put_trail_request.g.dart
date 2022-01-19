@@ -217,7 +217,7 @@ class PutTrailRequestBuilder
       _$this._waypoints = waypoints;
 
   PutTrailRequestBuilder() {
-    PutTrailRequest._initializeBuilder(this);
+    PutTrailRequest._defaults(this);
   }
 
   PutTrailRequestBuilder get _$this {

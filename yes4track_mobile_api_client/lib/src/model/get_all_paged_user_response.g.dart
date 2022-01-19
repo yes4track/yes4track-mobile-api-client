@@ -124,7 +124,7 @@ class GetAllPagedUserResponseBuilder
       _$this._results = results;
 
   GetAllPagedUserResponseBuilder() {
-    GetAllPagedUserResponse._initializeBuilder(this);
+    GetAllPagedUserResponse._defaults(this);
   }
 
   GetAllPagedUserResponseBuilder get _$this {

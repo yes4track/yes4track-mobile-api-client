@@ -34,7 +34,7 @@ class VersionApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<void>> yes4trackV1VersionGet({ 
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '1fd863c9-4edf-4b0c-be36-d75ab9df17c3',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,

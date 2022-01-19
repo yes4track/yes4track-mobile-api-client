@@ -56,7 +56,7 @@ class PostCheckAdventureCodeResponseBuilder
   set isSuccess(bool? isSuccess) => _$this._isSuccess = isSuccess;
 
   PostCheckAdventureCodeResponseBuilder() {
-    PostCheckAdventureCodeResponse._initializeBuilder(this);
+    PostCheckAdventureCodeResponse._defaults(this);
   }
 
   PostCheckAdventureCodeResponseBuilder get _$this {

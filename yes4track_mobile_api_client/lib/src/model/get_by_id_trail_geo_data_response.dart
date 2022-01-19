@@ -17,7 +17,8 @@ abstract class GetByIdTrailGeoDataResponse implements Built<GetByIdTrailGeoDataR
 
     GetByIdTrailGeoDataResponse._();
 
-    static void _initializeBuilder(GetByIdTrailGeoDataResponseBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(GetByIdTrailGeoDataResponseBuilder b) => b;
 
     factory GetByIdTrailGeoDataResponse([void updates(GetByIdTrailGeoDataResponseBuilder b)]) = _$GetByIdTrailGeoDataResponse;
 
@@ -40,7 +41,7 @@ class _$GetByIdTrailGeoDataResponseSerializer implements StructuredSerializer<Ge
             result
                 ..add(r'data')
                 ..add(serializers.serialize(object.data,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -55,10 +56,13 @@ class _$GetByIdTrailGeoDataResponseSerializer implements StructuredSerializer<Ge
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'data':
-                    result.data = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.data = valueDes;
                     break;
             }
         }

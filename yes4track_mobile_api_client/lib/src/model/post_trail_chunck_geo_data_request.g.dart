@@ -56,7 +56,7 @@ class PostTrailChunckGeoDataRequestBuilder
   set lines(ListBuilder<TrailGeoDataRequest>? lines) => _$this._lines = lines;
 
   PostTrailChunckGeoDataRequestBuilder() {
-    PostTrailChunckGeoDataRequest._initializeBuilder(this);
+    PostTrailChunckGeoDataRequest._defaults(this);
   }
 
   PostTrailChunckGeoDataRequestBuilder get _$this {

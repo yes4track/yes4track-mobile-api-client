@@ -17,7 +17,8 @@ abstract class PostUserAccessTokenResponse implements Built<PostUserAccessTokenR
 
     PostUserAccessTokenResponse._();
 
-    static void _initializeBuilder(PostUserAccessTokenResponseBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(PostUserAccessTokenResponseBuilder b) => b;
 
     factory PostUserAccessTokenResponse([void updates(PostUserAccessTokenResponseBuilder b)]) = _$PostUserAccessTokenResponse;
 
@@ -40,7 +41,7 @@ class _$PostUserAccessTokenResponseSerializer implements StructuredSerializer<Po
             result
                 ..add(r'id_token')
                 ..add(serializers.serialize(object.idToken,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -55,10 +56,13 @@ class _$PostUserAccessTokenResponseSerializer implements StructuredSerializer<Po
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'id_token':
-                    result.idToken = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.idToken = valueDes;
                     break;
             }
         }

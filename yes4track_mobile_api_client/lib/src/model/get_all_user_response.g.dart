@@ -254,7 +254,7 @@ class GetAllUserResponseBuilder
       _$this._pushTokens = pushTokens;
 
   GetAllUserResponseBuilder() {
-    GetAllUserResponse._initializeBuilder(this);
+    GetAllUserResponse._defaults(this);
   }
 
   GetAllUserResponseBuilder get _$this {

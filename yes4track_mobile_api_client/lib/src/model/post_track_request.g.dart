@@ -142,7 +142,7 @@ class PostTrackRequestBuilder
   set endDate(DateTime? endDate) => _$this._endDate = endDate;
 
   PostTrackRequestBuilder() {
-    PostTrackRequest._initializeBuilder(this);
+    PostTrackRequest._defaults(this);
   }
 
   PostTrackRequestBuilder get _$this {

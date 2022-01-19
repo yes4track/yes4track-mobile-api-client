@@ -34,7 +34,8 @@ abstract class ActiveTrailResponse implements Built<ActiveTrailResponse, ActiveT
 
     ActiveTrailResponse._();
 
-    static void _initializeBuilder(ActiveTrailResponseBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(ActiveTrailResponseBuilder b) => b;
 
     factory ActiveTrailResponse([void updates(ActiveTrailResponseBuilder b)]) = _$ActiveTrailResponse;
 
@@ -90,22 +91,27 @@ class _$ActiveTrailResponseSerializer implements StructuredSerializer<ActiveTrai
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'trail':
-                    result.trail.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(TrailResponse)) as TrailResponse);
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(TrailResponse)) as TrailResponse;
+                    result.trail.replace(valueDes);
                     break;
                 case r'user':
-                    result.user.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(UserResponse)) as UserResponse);
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(UserResponse)) as UserResponse;
+                    result.user.replace(valueDes);
                     break;
                 case r'adventure':
-                    result.adventure.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(AdventureResponse)) as AdventureResponse);
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(AdventureResponse)) as AdventureResponse;
+                    result.adventure.replace(valueDes);
                     break;
                 case r'status':
-                    result.status = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(UserTrailStatusResponse)) as UserTrailStatusResponse;
+                    result.status = valueDes;
                     break;
             }
         }

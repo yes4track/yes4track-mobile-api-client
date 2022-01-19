@@ -18,7 +18,7 @@ For more information, please visit [https://github.com/jefersonmlopes](https://g
 To use the package from [pub.dev](https://pub.dev), please include the following in pubspec.yaml
 ```yaml
 dependencies:
-  yes4track_mobile_api_client: 1.0.9
+  yes4track_mobile_api_client: 1.0.10
 ```
 
 ### Github
@@ -141,6 +141,7 @@ Class | Method | HTTP request | Description
 [*TrailApi*](doc/TrailApi.md) | [**getByIdTrailGeoData**](doc/TrailApi.md#getbyidtrailgeodata) | **GET** /yes4track/v1/trails/{id}/geodata | Get Trail Geo Data by id
 [*TrailApi*](doc/TrailApi.md) | [**getByIdTrailGeoLocation**](doc/TrailApi.md#getbyidtrailgeolocation) | **GET** /yes4track/v1/trails/{id}/geolocation | Get Trail Geo Location by id
 [*TrailApi*](doc/TrailApi.md) | [**yes4trackV1TrailsActiveByAngelGet**](doc/TrailApi.md#yes4trackv1trailsactivebyangelget) | **GET** /yes4track/v1/trails/activeByAngel | Get All Active Trail by Angel
+[*TrailApi*](doc/TrailApi.md) | [**yes4trackV1TrailsEndopenPut**](doc/TrailApi.md#yes4trackv1trailsendopenput) | **PUT** /yes4track/v1/trails/endopen | End Opens Trails
 [*TrailApi*](doc/TrailApi.md) | [**yes4trackV1TrailsGet**](doc/TrailApi.md#yes4trackv1trailsget) | **GET** /yes4track/v1/trails | Get All Trail by filter with pagination
 [*TrailApi*](doc/TrailApi.md) | [**yes4trackV1TrailsIdAngelAngelIdDelete**](doc/TrailApi.md#yes4trackv1trailsidangelangeliddelete) | **DELETE** /yes4track/v1/trails/{id}/angel/{angelId} | Delete Trail Angel by Id
 [*TrailApi*](doc/TrailApi.md) | [**yes4trackV1TrailsIdAngelAngelIdPost**](doc/TrailApi.md#yes4trackv1trailsidangelangelidpost) | **POST** /yes4track/v1/trails/{id}/angel/{angelId} | Add Trail Angel by Id
@@ -247,6 +248,7 @@ Class | Method | HTTP request | Description
  - [PostTrailPhotosResponse](doc/PostTrailPhotosResponse.md)
  - [PostTrailRequest](doc/PostTrailRequest.md)
  - [PostTrailResponse](doc/PostTrailResponse.md)
+ - [PostTrailToAdventureRequest](doc/PostTrailToAdventureRequest.md)
  - [PostUserAccessTokenRequest](doc/PostUserAccessTokenRequest.md)
  - [PostUserAccessTokenResponse](doc/PostUserAccessTokenResponse.md)
  - [PostUserPushTokenRequest](doc/PostUserPushTokenRequest.md)
@@ -298,5 +300,4 @@ Class | Method | HTTP request | Description
 ## Author
 
 admin@yes4track.com
-
 

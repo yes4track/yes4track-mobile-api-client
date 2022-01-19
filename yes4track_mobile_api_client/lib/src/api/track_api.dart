@@ -48,7 +48,7 @@ class TrackApi {
   Future<Response<GetAllTrackResponse>> getByIdTrack({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'db94a96c-ce0b-4b13-9aa8-827e8ac4cf74',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -135,7 +135,7 @@ class TrackApi {
   Future<Response<void>> getByIdTrackGeoData({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '4d4be19d-66c9-4b85-80a0-3c405a7dd081',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -199,7 +199,7 @@ class TrackApi {
     String? adventureId,
     String? experienceId,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '77151707-287a-4d2f-80db-18d8246661ec',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -303,7 +303,7 @@ class TrackApi {
     int? pageSize,
     String? sort,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '82b8cca8-b460-43d6-a6ca-6172b53822df',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -400,7 +400,7 @@ class TrackApi {
   Future<Response<void>> yes4trackV1TracksIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '61873039-615b-4725-9836-63b8081d177e',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -446,9 +446,9 @@ class TrackApi {
   ///
   /// Parameters:
   /// * [id] - Track Id
+  /// * [files] - Files
   /// * [xApiKey] - Your Api Key
   /// * [xCsrfToken] - CSRF Protection
-  /// * [files] - Files
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -460,9 +460,9 @@ class TrackApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostTrackGeoDataResponse>> yes4trackV1TracksIdGeodataPost({ 
     required String id,
+    required BuiltList<MultipartFile> files,
     String? xApiKey,
-    String? xCsrfToken,
-    MultipartFile? files,
+    String? xCsrfToken = '54f95085-e832-4540-ae9f-2c387a12b268',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -497,7 +497,7 @@ class TrackApi {
 
     try {
       _bodyData = FormData.fromMap(<String, dynamic>{
-        if (files != null) r'files': files,
+        r'files': files.toList(),
       });
 
     } catch(error, stackTrace) {
@@ -571,7 +571,7 @@ class TrackApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '00bfaf0b-70c3-4611-ad3c-82701f5a334d',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -651,7 +651,7 @@ class TrackApi {
   Future<Response<void>> yes4trackV1TracksIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '047d255c-b174-4688-81b6-8b3eb165a40c',
     PutTrackRequest? putTrackRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -732,7 +732,7 @@ class TrackApi {
   Future<Response<void>> yes4trackV1TracksIdStatisticPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '4c6f56d7-de7b-493d-8194-ae4852385242',
     PutTrackStatisticRequest? putTrackStatisticRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -811,7 +811,7 @@ class TrackApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostTrackResponse>> yes4trackV1TracksPost({ 
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'aae9fea3-0fee-436e-acfc-13ccb83d7aa7',
     PostTrackRequest? postTrackRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

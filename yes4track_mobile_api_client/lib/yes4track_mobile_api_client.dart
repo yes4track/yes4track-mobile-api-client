@@ -90,6 +90,7 @@ export 'package:yes4track_mobile_api_client/src/model/post_trail_geo_data_respon
 export 'package:yes4track_mobile_api_client/src/model/post_trail_photos_response.dart';
 export 'package:yes4track_mobile_api_client/src/model/post_trail_request.dart';
 export 'package:yes4track_mobile_api_client/src/model/post_trail_response.dart';
+export 'package:yes4track_mobile_api_client/src/model/post_trail_to_adventure_request.dart';
 export 'package:yes4track_mobile_api_client/src/model/post_user_access_token_request.dart';
 export 'package:yes4track_mobile_api_client/src/model/post_user_access_token_response.dart';
 export 'package:yes4track_mobile_api_client/src/model/post_user_push_token_request.dart';

@@ -19,7 +19,8 @@ abstract class PostTrailChunckGeoDataRequest implements Built<PostTrailChunckGeo
 
     PostTrailChunckGeoDataRequest._();
 
-    static void _initializeBuilder(PostTrailChunckGeoDataRequestBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(PostTrailChunckGeoDataRequestBuilder b) => b;
 
     factory PostTrailChunckGeoDataRequest([void updates(PostTrailChunckGeoDataRequestBuilder b)]) = _$PostTrailChunckGeoDataRequest;
 
@@ -42,7 +43,7 @@ class _$PostTrailChunckGeoDataRequestSerializer implements StructuredSerializer<
             result
                 ..add(r'lines')
                 ..add(serializers.serialize(object.lines,
-                    specifiedType: const FullType(BuiltList, [FullType(TrailGeoDataRequest)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(TrailGeoDataRequest)])));
         }
         return result;
     }
@@ -57,10 +58,13 @@ class _$PostTrailChunckGeoDataRequestSerializer implements StructuredSerializer<
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'lines':
-                    result.lines.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(TrailGeoDataRequest)])) as BuiltList<TrailGeoDataRequest>);
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(TrailGeoDataRequest)])) as BuiltList<TrailGeoDataRequest>?;
+                    if (valueDes == null) continue;
+                    result.lines.replace(valueDes);
                     break;
             }
         }

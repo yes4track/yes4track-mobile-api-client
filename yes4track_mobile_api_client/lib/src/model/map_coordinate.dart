@@ -29,7 +29,8 @@ abstract class MapCoordinate implements Built<MapCoordinate, MapCoordinateBuilde
 
     MapCoordinate._();
 
-    static void _initializeBuilder(MapCoordinateBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(MapCoordinateBuilder b) => b;
 
     factory MapCoordinate([void updates(MapCoordinateBuilder b)]) = _$MapCoordinate;
 
@@ -85,22 +86,27 @@ class _$MapCoordinateSerializer implements StructuredSerializer<MapCoordinate> {
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'maxLongitude':
-                    result.maxLongitude = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
+                    result.maxLongitude = valueDes;
                     break;
                 case r'maxLatitude':
-                    result.maxLatitude = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
+                    result.maxLatitude = valueDes;
                     break;
                 case r'minLongitude':
-                    result.minLongitude = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
+                    result.minLongitude = valueDes;
                     break;
                 case r'minLatitude':
-                    result.minLatitude = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
+                    result.minLatitude = valueDes;
                     break;
             }
         }

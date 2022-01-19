@@ -33,7 +33,8 @@ abstract class PostTrailGeoDataResponse implements Built<PostTrailGeoDataRespons
 
     PostTrailGeoDataResponse._();
 
-    static void _initializeBuilder(PostTrailGeoDataResponseBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(PostTrailGeoDataResponseBuilder b) => b;
 
     factory PostTrailGeoDataResponse([void updates(PostTrailGeoDataResponseBuilder b)]) = _$PostTrailGeoDataResponse;
 
@@ -68,19 +69,19 @@ class _$PostTrailGeoDataResponseSerializer implements StructuredSerializer<PostT
             result
                 ..add(r'fileName')
                 ..add(serializers.serialize(object.fileName,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.extension_ != null) {
             result
                 ..add(r'extension')
                 ..add(serializers.serialize(object.extension_,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.data != null) {
             result
                 ..add(r'data')
                 ..add(serializers.serialize(object.data,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -95,26 +96,35 @@ class _$PostTrailGeoDataResponseSerializer implements StructuredSerializer<PostT
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'id':
-                    result.id = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    result.id = valueDes;
                     break;
                 case r'trailId':
-                    result.trailId = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    result.trailId = valueDes;
                     break;
                 case r'fileName':
-                    result.fileName = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.fileName = valueDes;
                     break;
                 case r'extension':
-                    result.extension_ = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.extension_ = valueDes;
                     break;
                 case r'data':
-                    result.data = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.data = valueDes;
                     break;
             }
         }

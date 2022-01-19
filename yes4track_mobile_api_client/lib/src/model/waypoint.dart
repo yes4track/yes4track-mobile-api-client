@@ -40,7 +40,8 @@ abstract class Waypoint implements Built<Waypoint, WaypointBuilder> {
 
     Waypoint._();
 
-    static void _initializeBuilder(WaypointBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(WaypointBuilder b) => b;
 
     factory Waypoint([void updates(WaypointBuilder b)]) = _$Waypoint;
 
@@ -69,13 +70,13 @@ class _$WaypointSerializer implements StructuredSerializer<Waypoint> {
             result
                 ..add(r'name')
                 ..add(serializers.serialize(object.name,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.description != null) {
             result
                 ..add(r'description')
                 ..add(serializers.serialize(object.description,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.type != null) {
             result
@@ -87,13 +88,13 @@ class _$WaypointSerializer implements StructuredSerializer<Waypoint> {
             result
                 ..add(r'location')
                 ..add(serializers.serialize(object.location,
-                    specifiedType: const FullType(BuiltList, [FullType(double)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(double)])));
         }
         if (object.time != null) {
             result
                 ..add(r'time')
                 ..add(serializers.serialize(object.time,
-                    specifiedType: const FullType(DateTime)));
+                    specifiedType: const FullType.nullable(DateTime)));
         }
         return result;
     }
@@ -108,30 +109,41 @@ class _$WaypointSerializer implements StructuredSerializer<Waypoint> {
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'id':
-                    result.id = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    result.id = valueDes;
                     break;
                 case r'name':
-                    result.name = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.name = valueDes;
                     break;
                 case r'description':
-                    result.description = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.description = valueDes;
                     break;
                 case r'type':
-                    result.type = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(WaypointType)) as WaypointType;
+                    result.type = valueDes;
                     break;
                 case r'location':
-                    result.location.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(double)])) as BuiltList<double>);
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(double)])) as BuiltList<double>?;
+                    if (valueDes == null) continue;
+                    result.location.replace(valueDes);
                     break;
                 case r'time':
-                    result.time = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
+                    result.time = valueDes;
                     break;
             }
         }

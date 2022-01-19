@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**getByIdTrailGeoData**](TrailApi.md#getbyidtrailgeodata) | **GET** /yes4track/v1/trails/{id}/geodata | Get Trail Geo Data by id
 [**getByIdTrailGeoLocation**](TrailApi.md#getbyidtrailgeolocation) | **GET** /yes4track/v1/trails/{id}/geolocation | Get Trail Geo Location by id
 [**yes4trackV1TrailsActiveByAngelGet**](TrailApi.md#yes4trackv1trailsactivebyangelget) | **GET** /yes4track/v1/trails/activeByAngel | Get All Active Trail by Angel
+[**yes4trackV1TrailsEndopenPut**](TrailApi.md#yes4trackv1trailsendopenput) | **PUT** /yes4track/v1/trails/endopen | End Opens Trails
 [**yes4trackV1TrailsGet**](TrailApi.md#yes4trackv1trailsget) | **GET** /yes4track/v1/trails | Get All Trail by filter with pagination
 [**yes4trackV1TrailsIdAngelAngelIdDelete**](TrailApi.md#yes4trackv1trailsidangelangeliddelete) | **DELETE** /yes4track/v1/trails/{id}/angel/{angelId} | Delete Trail Angel by Id
 [**yes4trackV1TrailsIdAngelAngelIdPost**](TrailApi.md#yes4trackv1trailsidangelangelidpost) | **POST** /yes4track/v1/trails/{id}/angel/{angelId} | Add Trail Angel by Id
@@ -34,7 +35,7 @@ Method | HTTP request | Description
 
 Get Trail by id
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -47,7 +48,7 @@ final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Trail id
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     final response = api.getByIdTrail(id, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
@@ -59,9 +60,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Trail id | 
+ **id** | **String**| Trail id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0499010c-4737-4bb5-8a2d-cfae6db050a5']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f74a19c1-e7ed-4ac1-b719-024f7f357f48']
 
 ### Return type
 
@@ -83,7 +84,7 @@ Name | Type | Description  | Notes
 
 Get Trail Geo Data by id
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -96,7 +97,7 @@ final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Trail id
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     final response = api.getByIdTrailGeoData(id, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
@@ -108,9 +109,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Trail id | 
+ **id** | **String**| Trail id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ab27c929-f360-4a74-93a0-5502165ae806']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ea0f58c1-d99d-4a52-bd83-c519d36828e6']
 
 ### Return type
 
@@ -132,7 +133,7 @@ Name | Type | Description  | Notes
 
 Get Trail Geo Location by id
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -145,7 +146,7 @@ final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Trail id
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     final response = api.getByIdTrailGeoLocation(id, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
@@ -157,9 +158,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Trail id | 
+ **id** | **String**| Trail id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '17558e2a-796a-4704-ae9c-c3c5dd1e1a94']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '05e77eda-b280-4eda-8b08-46f9c937038f']
 
 ### Return type
 
@@ -181,7 +182,7 @@ Name | Type | Description  | Notes
 
 Get All Active Trail by Angel
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -193,7 +194,7 @@ final api = Yes4trackMobileApiClient().getTrailApi();
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     final response = api.yes4trackV1TrailsActiveByAngelGet(xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
@@ -206,11 +207,57 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '793a3db0-339d-48a6-8d4b-8c1a5f8a87aa']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '83be7e44-61ef-49c6-8fd1-8a737a613a28']
 
 ### Return type
 
 [**GetAllActiveTrailByAngelResponse**](GetAllActiveTrailByAngelResponse.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **yes4trackV1TrailsEndopenPut**
+> yes4trackV1TrailsEndopenPut(xApiKey, xCsrfToken)
+
+End Opens Trails
+
+### Example
+```dart
+import 'package:yes4track_mobile_api_client/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+final api = Yes4trackMobileApiClient().getTrailApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+
+try {
+    api.yes4trackV1TrailsEndopenPut(xApiKey, xCsrfToken);
+} catch on DioError (e) {
+    print('Exception when calling TrailApi->yes4trackV1TrailsEndopenPut: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xApiKey** | **String**| Your Api Key | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5ca1b864-5197-43c7-953d-5d874a04c20d']
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 
@@ -228,7 +275,7 @@ Name | Type | Description  | Notes
 
 Get All Trail by filter with pagination
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -249,7 +296,7 @@ final String sort = sort_example; // String | Sorting atributes, sample: id.desc
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     final response = api.yes4trackV1TrailsGet(adventureId, name, startDate, endDate, adventureName, userCreated, page, pageSize, sort, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
@@ -261,17 +308,17 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **adventureId** | [**String**](.md)|  | [optional] 
+ **adventureId** | **String**|  | [optional] 
  **name** | **String**|  | [optional] 
  **startDate** | **DateTime**|  | [optional] 
  **endDate** | **DateTime**|  | [optional] 
  **adventureName** | **String**|  | [optional] 
- **userCreated** | [**String**](.md)|  | [optional] 
+ **userCreated** | **String**|  | [optional] 
  **page** | **int**|  | [optional] 
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'b4954497-945d-4975-87b3-96e74298e7f8']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '90346f6b-a1d6-4862-bd98-03ebfc5e2e22']
 
 ### Return type
 
@@ -293,7 +340,7 @@ Name | Type | Description  | Notes
 
 Delete Trail Angel by Id
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -307,7 +354,7 @@ final String angelId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Angel i
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     api.yes4trackV1TrailsIdAngelAngelIdDelete(id, angelId, xApiKey, xCsrfToken);
 } catch on DioError (e) {
     print('Exception when calling TrailApi->yes4trackV1TrailsIdAngelAngelIdDelete: $e\n');
@@ -318,10 +365,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Trail id | 
- **angelId** | [**String**](.md)| Angel id | 
+ **id** | **String**| Trail id | 
+ **angelId** | **String**| Angel id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '76b5ed0d-fb63-4fc5-b406-cb533415b1f5']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'af5b3459-a37e-4451-980f-57789a84f5dd']
 
 ### Return type
 
@@ -343,7 +390,7 @@ void (empty response body)
 
 Add Trail Angel by Id
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -357,7 +404,7 @@ final String angelId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Angel i
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     api.yes4trackV1TrailsIdAngelAngelIdPost(id, angelId, xApiKey, xCsrfToken);
 } catch on DioError (e) {
     print('Exception when calling TrailApi->yes4trackV1TrailsIdAngelAngelIdPost: $e\n');
@@ -368,10 +415,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Trail id | 
- **angelId** | [**String**](.md)| Angel id | 
+ **id** | **String**| Trail id | 
+ **angelId** | **String**| Angel id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3a5b6982-09c5-4a15-a56e-c2158bb3adbf']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c88660fb-71e5-4fab-83f9-f8b26f17b7c4']
 
 ### Return type
 
@@ -389,11 +436,11 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **yes4trackV1TrailsIdCompanyIdTrailtoadventurePost**
-> PostAdventureResponse yes4trackV1TrailsIdCompanyIdTrailtoadventurePost(id, companyId, xApiKey, xCsrfToken)
+> PostAdventureResponse yes4trackV1TrailsIdCompanyIdTrailtoadventurePost(id, companyId, xApiKey, xCsrfToken, postTrailToAdventureRequest)
 
 Convert Trail to Adventure
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -406,9 +453,10 @@ final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Trail Id
 final String companyId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Company Id
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostTrailToAdventureRequest postTrailToAdventureRequest = ; // PostTrailToAdventureRequest | Adventure to create from trail conversion
 
-try { 
-    final response = api.yes4trackV1TrailsIdCompanyIdTrailtoadventurePost(id, companyId, xApiKey, xCsrfToken);
+try {
+    final response = api.yes4trackV1TrailsIdCompanyIdTrailtoadventurePost(id, companyId, xApiKey, xCsrfToken, postTrailToAdventureRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TrailApi->yes4trackV1TrailsIdCompanyIdTrailtoadventurePost: $e\n');
@@ -419,10 +467,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Trail Id | 
- **companyId** | [**String**](.md)| Company Id | 
+ **id** | **String**| Trail Id | 
+ **companyId** | **String**| Company Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '9f909d3e-9397-414f-a821-1ffac92d8ed4']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0aee0fe4-33c1-4826-83f1-74707e47ef4b']
+ **postTrailToAdventureRequest** | [**PostTrailToAdventureRequest**](PostTrailToAdventureRequest.md)| Adventure to create from trail conversion | [optional] 
 
 ### Return type
 
@@ -434,7 +483,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -444,7 +493,7 @@ Name | Type | Description  | Notes
 
 Delete Trail by Id
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -457,7 +506,7 @@ final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Trail id
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     api.yes4trackV1TrailsIdDelete(id, xApiKey, xCsrfToken);
 } catch on DioError (e) {
     print('Exception when calling TrailApi->yes4trackV1TrailsIdDelete: $e\n');
@@ -468,9 +517,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Trail id | 
+ **id** | **String**| Trail id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5361e844-4b81-4cf9-b843-3b116456075d']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '98b5a0c9-9ba3-435d-90ab-c026a91eb119']
 
 ### Return type
 
@@ -492,7 +541,7 @@ void (empty response body)
 
 Add Chunck Trail GeoData
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -506,7 +555,7 @@ final PostTrailChunckGeoDataRequest postTrailChunckGeoDataRequest = ; // PostTra
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     api.yes4trackV1TrailsIdGeodataChunckPost(id, postTrailChunckGeoDataRequest, xApiKey, xCsrfToken);
 } catch on DioError (e) {
     print('Exception when calling TrailApi->yes4trackV1TrailsIdGeodataChunckPost: $e\n');
@@ -517,10 +566,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Trail Id | 
+ **id** | **String**| Trail Id | 
  **postTrailChunckGeoDataRequest** | [**PostTrailChunckGeoDataRequest**](PostTrailChunckGeoDataRequest.md)| Object Request | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0749a332-9cbb-40bc-a372-cf51f02e87f0']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '788f488d-14ec-4257-90a9-beef9b0774ee']
 
 ### Return type
 
@@ -538,11 +587,11 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **yes4trackV1TrailsIdGeodataPost**
-> PostTrailGeoDataResponse yes4trackV1TrailsIdGeodataPost(id, xApiKey, xCsrfToken, files)
+> PostTrailGeoDataResponse yes4trackV1TrailsIdGeodataPost(id, files, xApiKey, xCsrfToken)
 
 Create Trail GeoData
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -552,12 +601,12 @@ import 'package:yes4track_mobile_api_client/api.dart';
 
 final api = Yes4trackMobileApiClient().getTrailApi();
 final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Trail Id
+final BuiltList<MultipartFile> files = /path/to/file.txt; // BuiltList<MultipartFile> | Files
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final MultipartFile files = BINARY_DATA_HERE; // MultipartFile | Files
 
-try { 
-    final response = api.yes4trackV1TrailsIdGeodataPost(id, xApiKey, xCsrfToken, files);
+try {
+    final response = api.yes4trackV1TrailsIdGeodataPost(id, files, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TrailApi->yes4trackV1TrailsIdGeodataPost: $e\n');
@@ -568,10 +617,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Trail Id | 
+ **id** | **String**| Trail Id | 
+ **files** | [**BuiltList&lt;MultipartFile&gt;**](MultipartFile.md)| Files | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '376b05ab-1f49-44b8-baee-7419a100b529']
- **files** | [**MultipartFile**](MultipartFile.md)| Files | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '62d14cb8-db9a-48fa-8e13-2058bd809946']
 
 ### Return type
 
@@ -589,11 +638,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **yes4trackV1TrailsIdImagesPost**
-> BuiltList<PostTrailPhotosResponse> yes4trackV1TrailsIdImagesPost(id, xApiKey, xCsrfToken, images)
+> BuiltList<PostTrailPhotosResponse> yes4trackV1TrailsIdImagesPost(id, images, xApiKey, xCsrfToken)
 
 Add images in trail
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -603,12 +652,12 @@ import 'package:yes4track_mobile_api_client/api.dart';
 
 final api = Yes4trackMobileApiClient().getTrailApi();
 final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Trail Id
+final BuiltList<MultipartFile> images = /path/to/file.txt; // BuiltList<MultipartFile> | Images
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final MultipartFile images = BINARY_DATA_HERE; // MultipartFile | Images
 
-try { 
-    final response = api.yes4trackV1TrailsIdImagesPost(id, xApiKey, xCsrfToken, images);
+try {
+    final response = api.yes4trackV1TrailsIdImagesPost(id, images, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TrailApi->yes4trackV1TrailsIdImagesPost: $e\n');
@@ -619,10 +668,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Trail Id | 
+ **id** | **String**| Trail Id | 
+ **images** | [**BuiltList&lt;MultipartFile&gt;**](MultipartFile.md)| Images | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1e814387-dfe0-43bd-a2ac-30fee3ac9488']
- **images** | [**MultipartFile**](MultipartFile.md)| Images | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '9def4669-d055-4622-a047-2c58409e7006']
 
 ### Return type
 
@@ -644,7 +693,7 @@ Name | Type | Description  | Notes
 
 Update Trail Map Photo
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -657,7 +706,7 @@ final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Trail Id
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     api.yes4trackV1TrailsIdMapPhotoPut(id, xApiKey, xCsrfToken);
 } catch on DioError (e) {
     print('Exception when calling TrailApi->yes4trackV1TrailsIdMapPhotoPut: $e\n');
@@ -668,9 +717,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Trail Id | 
+ **id** | **String**| Trail Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4a270e97-d334-4135-8e0d-85ee2f14f406']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '702400f1-c5ae-4a5d-a221-93c0b8b2a5f2']
 
 ### Return type
 
@@ -694,7 +743,7 @@ Update part of Trail
 
 Sample request:                    PATCH /yes4track/v1/Trail/{id}      [          {              \"op\": \"replace\",              \"path\": \"/atribute_name\",              \"value\": \"new value\"          }      ]
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -708,7 +757,7 @@ final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes val
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     api.yes4trackV1TrailsIdPatch(id, operation, xApiKey, xCsrfToken);
 } catch on DioError (e) {
     print('Exception when calling TrailApi->yes4trackV1TrailsIdPatch: $e\n');
@@ -719,10 +768,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Trail id | 
+ **id** | **String**| Trail id | 
  **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5de73261-7c2d-4f48-ab6a-e30cd4f96434']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f586741f-3417-4cbf-976c-1eb3998e0b9b']
 
 ### Return type
 
@@ -744,7 +793,7 @@ void (empty response body)
 
 Update Trail
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -758,7 +807,7 @@ final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 final PutTrailRequest putTrailRequest = ; // PutTrailRequest | Trail to update
 
-try { 
+try {
     api.yes4trackV1TrailsIdPut(id, xApiKey, xCsrfToken, putTrailRequest);
 } catch on DioError (e) {
     print('Exception when calling TrailApi->yes4trackV1TrailsIdPut: $e\n');
@@ -769,9 +818,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Trail Id | 
+ **id** | **String**| Trail Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7d295a57-6dd2-43aa-9451-250f03a9ff16']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '110d1f8d-1008-4780-8548-633cab44f56a']
  **putTrailRequest** | [**PutTrailRequest**](PutTrailRequest.md)| Trail to update | [optional] 
 
 ### Return type
@@ -794,7 +843,7 @@ void (empty response body)
 
 Delete Trail Sponsor by Id
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -808,7 +857,7 @@ final String sponsorId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Spons
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     api.yes4trackV1TrailsIdSponsorSponsorIdDelete(id, sponsorId, xApiKey, xCsrfToken);
 } catch on DioError (e) {
     print('Exception when calling TrailApi->yes4trackV1TrailsIdSponsorSponsorIdDelete: $e\n');
@@ -819,10 +868,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Trail id | 
- **sponsorId** | [**String**](.md)| Sponsor id | 
+ **id** | **String**| Trail id | 
+ **sponsorId** | **String**| Sponsor id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3072bdde-f4db-4323-9e3b-37e5ac31bba4']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '27ed4586-bb07-407c-83c9-68b5b6baf0bd']
 
 ### Return type
 
@@ -844,7 +893,7 @@ void (empty response body)
 
 Add Trail Sponsor by Id
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -858,7 +907,7 @@ final String sponsorId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Spons
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     api.yes4trackV1TrailsIdSponsorSponsorIdPost(id, sponsorId, xApiKey, xCsrfToken);
 } catch on DioError (e) {
     print('Exception when calling TrailApi->yes4trackV1TrailsIdSponsorSponsorIdPost: $e\n');
@@ -869,10 +918,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Trail id | 
- **sponsorId** | [**String**](.md)| Sponsor id | 
+ **id** | **String**| Trail id | 
+ **sponsorId** | **String**| Sponsor id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '548371c7-9032-4e6e-a1a3-15c2a1c9383a']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4b80b926-8928-4545-8aa3-3ee8b42ea829']
 
 ### Return type
 
@@ -894,7 +943,7 @@ void (empty response body)
 
 Create Trail
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -907,7 +956,7 @@ final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 final PostTrailRequest postTrailRequest = ; // PostTrailRequest | Trail to create
 
-try { 
+try {
     final response = api.yes4trackV1TrailsPost(xApiKey, xCsrfToken, postTrailRequest);
     print(response);
 } catch on DioError (e) {
@@ -920,7 +969,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '41f743d1-728b-4e53-8ebd-810a8aa5b3bf']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f97c2d04-53ed-4750-9e1d-e5c6ea74a8bd']
  **postTrailRequest** | [**PostTrailRequest**](PostTrailRequest.md)| Trail to create | [optional] 
 
 ### Return type

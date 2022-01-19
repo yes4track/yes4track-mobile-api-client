@@ -19,7 +19,8 @@ abstract class GetAllUserPushTokenResponse implements Built<GetAllUserPushTokenR
 
     GetAllUserPushTokenResponse._();
 
-    static void _initializeBuilder(GetAllUserPushTokenResponseBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(GetAllUserPushTokenResponseBuilder b) => b;
 
     factory GetAllUserPushTokenResponse([void updates(GetAllUserPushTokenResponseBuilder b)]) = _$GetAllUserPushTokenResponse;
 
@@ -42,7 +43,7 @@ class _$GetAllUserPushTokenResponseSerializer implements StructuredSerializer<Ge
             result
                 ..add(r'pushTokens')
                 ..add(serializers.serialize(object.pushTokens,
-                    specifiedType: const FullType(BuiltList, [FullType(PushToken)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(PushToken)])));
         }
         return result;
     }
@@ -57,10 +58,13 @@ class _$GetAllUserPushTokenResponseSerializer implements StructuredSerializer<Ge
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'pushTokens':
-                    result.pushTokens.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(PushToken)])) as BuiltList<PushToken>);
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(PushToken)])) as BuiltList<PushToken>?;
+                    if (valueDes == null) continue;
+                    result.pushTokens.replace(valueDes);
                     break;
             }
         }

@@ -52,7 +52,7 @@ class AdventureApi {
   Future<Response<GetAllAdventureResponse>> getByIdAdventure({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '3cb89f87-a26e-4e65-88f8-0744569ad463',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -139,7 +139,7 @@ class AdventureApi {
   Future<Response<GetByIdAdventureCodeResponse>> getByIdAdventureCode({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '04d8e62d-ad46-4af8-82a5-d22979d690de',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -228,7 +228,7 @@ class AdventureApi {
     required String id,
     required String likeId,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '6c38d605-3f81-4deb-bbbb-65e1a6d01ee0',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -315,7 +315,7 @@ class AdventureApi {
   Future<Response<GetUserLikedAdventureResponse>> getUserLikedAdventure({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '2cb1c9ce-54dc-4cc1-b194-46f585885007',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -420,7 +420,7 @@ class AdventureApi {
     int? pageSize,
     String? sort,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '53c5e608-2c4e-4a34-ac05-a706061a5150',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -522,7 +522,7 @@ class AdventureApi {
   Future<Response<void>> yes4trackV1AdventuresIdActivatePost({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '216c84d3-7e27-472f-b2aa-c04b2ed07537',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -584,7 +584,7 @@ class AdventureApi {
     required String id,
     required String code,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '78335ace-738f-46bc-b540-ba2a8f0ea3f6',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -671,7 +671,7 @@ class AdventureApi {
   Future<Response<void>> yes4trackV1AdventuresIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'b896d95c-b21e-44bc-a050-b90334ecdab3',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -733,7 +733,7 @@ class AdventureApi {
     required String id,
     required String experienceId,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '9bf909ae-fca5-4ae3-9a7e-b34e0a55f16d',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -795,7 +795,7 @@ class AdventureApi {
     required String id,
     required String experienceId,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '63b67393-0d2c-4872-a604-27641c9e9efb',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -857,7 +857,7 @@ class AdventureApi {
     required String id,
     required String imageId,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'd047e785-98d0-4ffc-a1d2-a1cce45f8981',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -903,9 +903,9 @@ class AdventureApi {
   ///
   /// Parameters:
   /// * [id] - Adventure Id
+  /// * [images] - Images
   /// * [xApiKey] - Your Api Key
   /// * [xCsrfToken] - CSRF Protection
-  /// * [images] - Images
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -917,9 +917,9 @@ class AdventureApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<String>>> yes4trackV1AdventuresIdImagesPost({ 
     required String id,
+    required BuiltList<MultipartFile> images,
     String? xApiKey,
-    String? xCsrfToken,
-    MultipartFile? images,
+    String? xCsrfToken = '32cb0f6e-94b9-45c5-82f5-0c3796f2b946',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -954,7 +954,7 @@ class AdventureApi {
 
     try {
       _bodyData = FormData.fromMap(<String, dynamic>{
-        if (images != null) r'images': images,
+        r'images': images.toList(),
       });
 
     } catch(error, stackTrace) {
@@ -1026,7 +1026,7 @@ class AdventureApi {
   Future<Response<void>> yes4trackV1AdventuresIdLikesDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '5fd79448-a0ff-407a-9aac-ee83b139027e',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1092,7 +1092,7 @@ class AdventureApi {
     int? pageSize,
     String? sort,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '5ec401ad-620e-414e-abd4-ebe8a979b1ed',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1186,7 +1186,7 @@ class AdventureApi {
   Future<Response<PostAdventureLikesResponse>> yes4trackV1AdventuresIdLikesPost({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'd2657914-2ea0-4545-adce-d08daa729e72',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1275,7 +1275,7 @@ class AdventureApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'd5932028-d0eb-47c2-a18d-f52e791ea0c6',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1355,7 +1355,7 @@ class AdventureApi {
   Future<Response<void>> yes4trackV1AdventuresIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '2b343f48-df1d-4271-bbee-f954c60349ae',
     PutAdventureRequest? putAdventureRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -1421,9 +1421,9 @@ class AdventureApi {
   ///
   /// Parameters:
   /// * [id] - Adventure Id
+  /// * [videos] - Videos
   /// * [xApiKey] - Your Api Key
   /// * [xCsrfToken] - CSRF Protection
-  /// * [videos] - Videos
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1435,9 +1435,9 @@ class AdventureApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<String>>> yes4trackV1AdventuresIdVideosPost({ 
     required String id,
+    required BuiltList<MultipartFile> videos,
     String? xApiKey,
-    String? xCsrfToken,
-    MultipartFile? videos,
+    String? xCsrfToken = 'e97073f5-95d8-4a64-b7b5-d2d43d988a7f',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1472,7 +1472,7 @@ class AdventureApi {
 
     try {
       _bodyData = FormData.fromMap(<String, dynamic>{
-        if (videos != null) r'videos': videos,
+        r'videos': videos.toList(),
       });
 
     } catch(error, stackTrace) {
@@ -1546,7 +1546,7 @@ class AdventureApi {
     required String id,
     required String videoId,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'bee711c2-d6a2-4cc8-bd34-8dad8dab495f',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1605,7 +1605,7 @@ class AdventureApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostAdventureResponse>> yes4trackV1AdventuresPost({ 
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'd03724a0-2a1b-49d1-9231-476ab45b2be8',
     PostAdventureRequest? postAdventureRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

@@ -21,7 +21,8 @@ abstract class ProfilePhotoRequest implements Built<ProfilePhotoRequest, Profile
 
     ProfilePhotoRequest._();
 
-    static void _initializeBuilder(ProfilePhotoRequestBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(ProfilePhotoRequestBuilder b) => b;
 
     factory ProfilePhotoRequest([void updates(ProfilePhotoRequestBuilder b)]) = _$ProfilePhotoRequest;
 
@@ -44,13 +45,13 @@ class _$ProfilePhotoRequestSerializer implements StructuredSerializer<ProfilePho
             result
                 ..add(r'data')
                 ..add(serializers.serialize(object.data,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.extension_ != null) {
             result
                 ..add(r'extension')
                 ..add(serializers.serialize(object.extension_,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -65,14 +66,19 @@ class _$ProfilePhotoRequestSerializer implements StructuredSerializer<ProfilePho
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'data':
-                    result.data = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.data = valueDes;
                     break;
                 case r'extension':
-                    result.extension_ = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.extension_ = valueDes;
                     break;
             }
         }

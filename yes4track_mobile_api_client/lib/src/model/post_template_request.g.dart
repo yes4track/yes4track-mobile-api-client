@@ -91,7 +91,7 @@ class PostTemplateRequestBuilder
   set updatedAt(DateTime? updatedAt) => _$this._updatedAt = updatedAt;
 
   PostTemplateRequestBuilder() {
-    PostTemplateRequest._initializeBuilder(this);
+    PostTemplateRequest._defaults(this);
   }
 
   PostTemplateRequestBuilder get _$this {

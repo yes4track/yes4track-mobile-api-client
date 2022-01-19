@@ -36,7 +36,7 @@ Method | HTTP request | Description
 
 Get Adventure by id
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -49,7 +49,7 @@ final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure id
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     final response = api.getByIdAdventure(id, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
@@ -61,9 +61,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Adventure id | 
+ **id** | **String**| Adventure id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2d1d6f5d-ccd5-4864-903a-40fdb155a833']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3cb89f87-a26e-4e65-88f8-0744569ad463']
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 Get Adventure Code by id
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -98,7 +98,7 @@ final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure id
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     final response = api.getByIdAdventureCode(id, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
@@ -110,9 +110,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Adventure id | 
+ **id** | **String**| Adventure id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a497bc10-7489-4c89-a1b4-b0671f32332e']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '04d8e62d-ad46-4af8-82a5-d22979d690de']
 
 ### Return type
 
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 Get Adventure Like by id
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -148,7 +148,7 @@ final String likeId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventur
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     final response = api.getByIdAdventureLikes(id, likeId, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
@@ -160,10 +160,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Adventure Id | 
- **likeId** | [**String**](.md)| Adventure Like Id | 
+ **id** | **String**| Adventure Id | 
+ **likeId** | **String**| Adventure Like Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a6f5b30f-8d29-411c-96a8-0992e02b66bb']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6c38d605-3f81-4deb-bbbb-65e1a6d01ee0']
 
 ### Return type
 
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 Get User Liked Adventure
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -198,7 +198,7 @@ final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure Id
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     final response = api.getUserLikedAdventure(id, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
@@ -210,9 +210,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Adventure Id | 
+ **id** | **String**| Adventure Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4e73d14c-8a90-4274-a214-e05a3f75076a']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2cb1c9ce-54dc-4cc1-b194-46f585885007']
 
 ### Return type
 
@@ -234,7 +234,7 @@ Name | Type | Description  | Notes
 
 Get All Adventure by filter with pagination
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -256,7 +256,7 @@ final String sort = sort_example; // String | Sorting atributes, sample: id.desc
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     final response = api.yes4trackV1AdventuresGet(companyId, name, description, level, codeRequired, isActive, type, page, pageSize, sort, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
@@ -268,7 +268,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | [**String**](.md)|  | [optional] 
+ **companyId** | **String**|  | [optional] 
  **name** | **String**|  | [optional] 
  **description** | **String**|  | [optional] 
  **level** | [**LevelType**](.md)|  | [optional] 
@@ -279,7 +279,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '819b677d-693b-4296-b855-976738ae2666']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '53c5e608-2c4e-4a34-ac05-a706061a5150']
 
 ### Return type
 
@@ -301,7 +301,7 @@ Name | Type | Description  | Notes
 
 Activate Adventure
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -314,7 +314,7 @@ final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure id
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     api.yes4trackV1AdventuresIdActivatePost(id, xApiKey, xCsrfToken);
 } catch on DioError (e) {
     print('Exception when calling AdventureApi->yes4trackV1AdventuresIdActivatePost: $e\n');
@@ -325,9 +325,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Adventure id | 
+ **id** | **String**| Adventure id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '35fa5d81-59b7-4e20-bd0d-dc2f2525e0c0']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '216c84d3-7e27-472f-b2aa-c04b2ed07537']
 
 ### Return type
 
@@ -349,7 +349,7 @@ void (empty response body)
 
 Check Adventure Code
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -363,7 +363,7 @@ final String code = code_example; // String | Adventure Code
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     final response = api.yes4trackV1AdventuresIdCodeCodeCheckPost(id, code, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
@@ -375,10 +375,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Adventure id | 
+ **id** | **String**| Adventure id | 
  **code** | **String**| Adventure Code | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '23d3e56c-dc13-403e-84f2-f08bb08cefc5']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '78335ace-738f-46bc-b540-ba2a8f0ea3f6']
 
 ### Return type
 
@@ -400,7 +400,7 @@ Name | Type | Description  | Notes
 
 Delete Adventure by Id
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -413,7 +413,7 @@ final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure id
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     api.yes4trackV1AdventuresIdDelete(id, xApiKey, xCsrfToken);
 } catch on DioError (e) {
     print('Exception when calling AdventureApi->yes4trackV1AdventuresIdDelete: $e\n');
@@ -424,9 +424,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Adventure id | 
+ **id** | **String**| Adventure id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '40aef1d4-afae-441f-b83e-114fa5e45125']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'b896d95c-b21e-44bc-a050-b90334ecdab3']
 
 ### Return type
 
@@ -448,7 +448,7 @@ void (empty response body)
 
 Delete Adventure Experience
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -462,7 +462,7 @@ final String experienceId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Id
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     api.yes4trackV1AdventuresIdExperiencesExperienceIdDelete(id, experienceId, xApiKey, xCsrfToken);
 } catch on DioError (e) {
     print('Exception when calling AdventureApi->yes4trackV1AdventuresIdExperiencesExperienceIdDelete: $e\n');
@@ -473,10 +473,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Id Adventure | 
- **experienceId** | [**String**](.md)| Id Experience | 
+ **id** | **String**| Id Adventure | 
+ **experienceId** | **String**| Id Experience | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '9852dbca-be0f-4f25-9abc-a3265e1b0ca4']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '9bf909ae-fca5-4ae3-9a7e-b34e0a55f16d']
 
 ### Return type
 
@@ -498,7 +498,7 @@ void (empty response body)
 
 Add Adventure Experience
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -512,7 +512,7 @@ final String experienceId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Id
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     api.yes4trackV1AdventuresIdExperiencesExperienceIdPost(id, experienceId, xApiKey, xCsrfToken);
 } catch on DioError (e) {
     print('Exception when calling AdventureApi->yes4trackV1AdventuresIdExperiencesExperienceIdPost: $e\n');
@@ -523,10 +523,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Id Adventure | 
- **experienceId** | [**String**](.md)| Id Experience | 
+ **id** | **String**| Id Adventure | 
+ **experienceId** | **String**| Id Experience | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '57bad4cc-db6c-461e-b319-3e0bdee28f63']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '63b67393-0d2c-4872-a604-27641c9e9efb']
 
 ### Return type
 
@@ -548,7 +548,7 @@ void (empty response body)
 
 Delete Adventure by Id
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -562,7 +562,7 @@ final String imageId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventu
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     api.yes4trackV1AdventuresIdImagesImageIdDelete(id, imageId, xApiKey, xCsrfToken);
 } catch on DioError (e) {
     print('Exception when calling AdventureApi->yes4trackV1AdventuresIdImagesImageIdDelete: $e\n');
@@ -573,10 +573,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Adventure id | 
- **imageId** | [**String**](.md)| Adventure Image id | 
+ **id** | **String**| Adventure id | 
+ **imageId** | **String**| Adventure Image id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'de410cd1-7d19-4e57-bbbe-e89ab99b9407']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd047e785-98d0-4ffc-a1d2-a1cce45f8981']
 
 ### Return type
 
@@ -594,11 +594,11 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **yes4trackV1AdventuresIdImagesPost**
-> BuiltList<String> yes4trackV1AdventuresIdImagesPost(id, xApiKey, xCsrfToken, images)
+> BuiltList<String> yes4trackV1AdventuresIdImagesPost(id, images, xApiKey, xCsrfToken)
 
 Add images in adventure
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -608,12 +608,12 @@ import 'package:yes4track_mobile_api_client/api.dart';
 
 final api = Yes4trackMobileApiClient().getAdventureApi();
 final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure Id
+final BuiltList<MultipartFile> images = /path/to/file.txt; // BuiltList<MultipartFile> | Images
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final MultipartFile images = BINARY_DATA_HERE; // MultipartFile | Images
 
-try { 
-    final response = api.yes4trackV1AdventuresIdImagesPost(id, xApiKey, xCsrfToken, images);
+try {
+    final response = api.yes4trackV1AdventuresIdImagesPost(id, images, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling AdventureApi->yes4trackV1AdventuresIdImagesPost: $e\n');
@@ -624,10 +624,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Adventure Id | 
+ **id** | **String**| Adventure Id | 
+ **images** | [**BuiltList&lt;MultipartFile&gt;**](MultipartFile.md)| Images | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '54815feb-1c71-4a86-ad50-6e38b184ab9b']
- **images** | [**MultipartFile**](MultipartFile.md)| Images | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '32cb0f6e-94b9-45c5-82f5-0c3796f2b946']
 
 ### Return type
 
@@ -649,7 +649,7 @@ Name | Type | Description  | Notes
 
 Delete Adventure Likes by Id
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -662,7 +662,7 @@ final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure Id
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     api.yes4trackV1AdventuresIdLikesDelete(id, xApiKey, xCsrfToken);
 } catch on DioError (e) {
     print('Exception when calling AdventureApi->yes4trackV1AdventuresIdLikesDelete: $e\n');
@@ -673,9 +673,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Adventure Id | 
+ **id** | **String**| Adventure Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c776faed-112d-46fc-b6a8-3050a54abb82']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5fd79448-a0ff-407a-9aac-ee83b139027e']
 
 ### Return type
 
@@ -697,7 +697,7 @@ void (empty response body)
 
 Get All Adventure Likes by filter with pagination
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -713,7 +713,7 @@ final String sort = sort_example; // String | Sorting atributes, sample: id.desc
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     final response = api.yes4trackV1AdventuresIdLikesGet(id, page, pageSize, sort, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
@@ -725,12 +725,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Adventure Id | 
+ **id** | **String**| Adventure Id | 
  **page** | **int**|  | [optional] 
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e046892f-0793-4615-bf02-ed7f1e117f2f']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5ec401ad-620e-414e-abd4-ebe8a979b1ed']
 
 ### Return type
 
@@ -752,7 +752,7 @@ Name | Type | Description  | Notes
 
 Create Adventure Likes
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -765,7 +765,7 @@ final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure Id
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     final response = api.yes4trackV1AdventuresIdLikesPost(id, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
@@ -777,9 +777,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Adventure Id | 
+ **id** | **String**| Adventure Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c1639c5d-1716-4f88-8496-d9f5354b8015']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd2657914-2ea0-4545-adce-d08daa729e72']
 
 ### Return type
 
@@ -803,7 +803,7 @@ Update part of Adventure
 
 Sample request:                    PATCH /yes4track/v1/adventures/{id}      [          {              \"op\": \"replace\",              \"path\": \"/atribute_name\",              \"value\": \"new value\"          }      ]
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -817,7 +817,7 @@ final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes val
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     api.yes4trackV1AdventuresIdPatch(id, operation, xApiKey, xCsrfToken);
 } catch on DioError (e) {
     print('Exception when calling AdventureApi->yes4trackV1AdventuresIdPatch: $e\n');
@@ -828,10 +828,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Adventure id | 
+ **id** | **String**| Adventure id | 
  **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6db01a3f-9c95-4cce-b452-3f6d03ee804c']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd5932028-d0eb-47c2-a18d-f52e791ea0c6']
 
 ### Return type
 
@@ -853,7 +853,7 @@ void (empty response body)
 
 Update Adventure
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -867,7 +867,7 @@ final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 final PutAdventureRequest putAdventureRequest = ; // PutAdventureRequest | Adventure to update
 
-try { 
+try {
     api.yes4trackV1AdventuresIdPut(id, xApiKey, xCsrfToken, putAdventureRequest);
 } catch on DioError (e) {
     print('Exception when calling AdventureApi->yes4trackV1AdventuresIdPut: $e\n');
@@ -878,9 +878,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Adventure Id | 
+ **id** | **String**| Adventure Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '110d0a41-63f0-41ec-a8f1-e33dc50d6cf5']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2b343f48-df1d-4271-bbee-f954c60349ae']
  **putAdventureRequest** | [**PutAdventureRequest**](PutAdventureRequest.md)| Adventure to update | [optional] 
 
 ### Return type
@@ -899,11 +899,11 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **yes4trackV1AdventuresIdVideosPost**
-> BuiltList<String> yes4trackV1AdventuresIdVideosPost(id, xApiKey, xCsrfToken, videos)
+> BuiltList<String> yes4trackV1AdventuresIdVideosPost(id, videos, xApiKey, xCsrfToken)
 
 Add videos in adventure
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -913,12 +913,12 @@ import 'package:yes4track_mobile_api_client/api.dart';
 
 final api = Yes4trackMobileApiClient().getAdventureApi();
 final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventure Id
+final BuiltList<MultipartFile> videos = /path/to/file.txt; // BuiltList<MultipartFile> | Videos
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final MultipartFile videos = BINARY_DATA_HERE; // MultipartFile | Videos
 
-try { 
-    final response = api.yes4trackV1AdventuresIdVideosPost(id, xApiKey, xCsrfToken, videos);
+try {
+    final response = api.yes4trackV1AdventuresIdVideosPost(id, videos, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling AdventureApi->yes4trackV1AdventuresIdVideosPost: $e\n');
@@ -929,10 +929,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Adventure Id | 
+ **id** | **String**| Adventure Id | 
+ **videos** | [**BuiltList&lt;MultipartFile&gt;**](MultipartFile.md)| Videos | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8bd73c68-15fe-483c-b18f-35f9bf35226d']
- **videos** | [**MultipartFile**](MultipartFile.md)| Videos | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e97073f5-95d8-4a64-b7b5-d2d43d988a7f']
 
 ### Return type
 
@@ -954,7 +954,7 @@ Name | Type | Description  | Notes
 
 Delete Adventure by Id
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -968,7 +968,7 @@ final String videoId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Adventu
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     api.yes4trackV1AdventuresIdVideosVideoIdDelete(id, videoId, xApiKey, xCsrfToken);
 } catch on DioError (e) {
     print('Exception when calling AdventureApi->yes4trackV1AdventuresIdVideosVideoIdDelete: $e\n');
@@ -979,10 +979,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Adventure id | 
- **videoId** | [**String**](.md)| Adventure Video id | 
+ **id** | **String**| Adventure id | 
+ **videoId** | **String**| Adventure Video id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5beca3e0-aabb-4fc7-8b87-52de978f96ff']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'bee711c2-d6a2-4cc8-bd34-8dad8dab495f']
 
 ### Return type
 
@@ -1004,7 +1004,7 @@ void (empty response body)
 
 Create Adventure
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -1017,7 +1017,7 @@ final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 final PostAdventureRequest postAdventureRequest = ; // PostAdventureRequest | Adventure to create
 
-try { 
+try {
     final response = api.yes4trackV1AdventuresPost(xApiKey, xCsrfToken, postAdventureRequest);
     print(response);
 } catch on DioError (e) {
@@ -1030,7 +1030,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f151a099-90fb-4c77-92c2-2deb08ac67c6']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd03724a0-2a1b-49d1-9231-476ab45b2be8']
  **postAdventureRequest** | [**PostAdventureRequest**](PostAdventureRequest.md)| Adventure to create | [optional] 
 
 ### Return type

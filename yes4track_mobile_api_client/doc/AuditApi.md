@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 Get All Audit by filter with pagination
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -39,7 +39,7 @@ final String sort = sort_example; // String | Sorting atributes, sample: id.desc
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     final response = api.yes4trackV1AuditsGet(parentId, entity, action, startDate, endDate, userCreated, userUpdated, page, pageSize, sort, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
@@ -51,18 +51,18 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **parentId** | [**String**](.md)|  | [optional] 
+ **parentId** | **String**|  | [optional] 
  **entity** | **String**|  | [optional] 
  **action** | [**ActionType**](.md)|  | [optional] 
  **startDate** | **DateTime**|  | [optional] 
  **endDate** | **DateTime**|  | [optional] 
- **userCreated** | [**String**](.md)|  | [optional] 
- **userUpdated** | [**String**](.md)|  | [optional] 
+ **userCreated** | **String**|  | [optional] 
+ **userUpdated** | **String**|  | [optional] 
  **page** | **int**|  | [optional] 
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4ec434a8-06d2-4b7b-8099-e9d3fe9b31e8']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '872be29d-e726-4892-aaea-ef36d50e98d6']
 
 ### Return type
 

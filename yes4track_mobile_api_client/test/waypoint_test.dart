@@ -7,6 +7,11 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(Waypoint, () {
+    // String id
+    test('to test the property `id`', () async {
+      // TODO
+    });
+
     // String name
     test('to test the property `name`', () async {
       // TODO
@@ -24,6 +29,11 @@ void main() {
 
     // BuiltList<double> location
     test('to test the property `location`', () async {
+      // TODO
+    });
+
+    // DateTime time
+    test('to test the property `time`', () async {
       // TODO
     });
 

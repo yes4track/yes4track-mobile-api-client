@@ -29,7 +29,8 @@ abstract class TrailGeoDataRequest implements Built<TrailGeoDataRequest, TrailGe
 
     TrailGeoDataRequest._();
 
-    static void _initializeBuilder(TrailGeoDataRequestBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(TrailGeoDataRequestBuilder b) => b;
 
     factory TrailGeoDataRequest([void updates(TrailGeoDataRequestBuilder b)]) = _$TrailGeoDataRequest;
 
@@ -64,7 +65,7 @@ class _$TrailGeoDataRequestSerializer implements StructuredSerializer<TrailGeoDa
             result
                 ..add(r'elevation')
                 ..add(serializers.serialize(object.elevation,
-                    specifiedType: const FullType(double)));
+                    specifiedType: const FullType.nullable(double)));
         }
         if (object.date != null) {
             result
@@ -85,22 +86,28 @@ class _$TrailGeoDataRequestSerializer implements StructuredSerializer<TrailGeoDa
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'latitude':
-                    result.latitude = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
+                    result.latitude = valueDes;
                     break;
                 case r'longitude':
-                    result.longitude = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
+                    result.longitude = valueDes;
                     break;
                 case r'elevation':
-                    result.elevation = serializers.deserialize(value,
-                        specifiedType: const FullType(double)) as double;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(double)) as double?;
+                    if (valueDes == null) continue;
+                    result.elevation = valueDes;
                     break;
                 case r'date':
-                    result.date = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(DateTime)) as DateTime;
+                    result.date = valueDes;
                     break;
             }
         }

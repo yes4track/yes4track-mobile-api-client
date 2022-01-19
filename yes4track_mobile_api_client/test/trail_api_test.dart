@@ -16,8 +16,15 @@ void main() {
 
     // Get Trail Geo Data by id
     //
-    //Future<GetByIdTrailGeoDataetByIdResponse> getByIdTrailGeoData(String id, { String xApiKey, String xCsrfToken }) async
+    //Future<GetByIdTrailGeoDataResponse> getByIdTrailGeoData(String id, { String xApiKey, String xCsrfToken }) async
     test('test getByIdTrailGeoData', () async {
+      // TODO
+    });
+
+    // Get Trail Geo Location by id
+    //
+    //Future<TrailGeoLocationDto> getByIdTrailGeoLocation(String id, { String xApiKey, String xCsrfToken }) async
+    test('test getByIdTrailGeoLocation', () async {
       // TODO
     });
 
@@ -25,6 +32,13 @@ void main() {
     //
     //Future<GetAllActiveTrailByAngelResponse> yes4trackV1TrailsActiveByAngelGet({ String xApiKey, String xCsrfToken }) async
     test('test yes4trackV1TrailsActiveByAngelGet', () async {
+      // TODO
+    });
+
+    // End Opens Trails
+    //
+    //Future yes4trackV1TrailsEndopenPut({ String xApiKey, String xCsrfToken }) async
+    test('test yes4trackV1TrailsEndopenPut', () async {
       // TODO
     });
 
@@ -49,6 +63,13 @@ void main() {
       // TODO
     });
 
+    // Convert Trail to Adventure
+    //
+    //Future<PostAdventureResponse> yes4trackV1TrailsIdCompanyIdTrailtoadventurePost(String id, String companyId, { String xApiKey, String xCsrfToken, PostTrailToAdventureRequest postTrailToAdventureRequest }) async
+    test('test yes4trackV1TrailsIdCompanyIdTrailtoadventurePost', () async {
+      // TODO
+    });
+
     // Delete Trail by Id
     //
     //Future yes4trackV1TrailsIdDelete(String id, { String xApiKey, String xCsrfToken }) async
@@ -65,8 +86,22 @@ void main() {
 
     // Create Trail GeoData
     //
-    //Future<PostTrailGeoDataResponse> yes4trackV1TrailsIdGeodataPost(String id, { String xApiKey, String xCsrfToken }) async
+    //Future<PostTrailGeoDataResponse> yes4trackV1TrailsIdGeodataPost(String id, { String xApiKey, String xCsrfToken, BuiltList<MultipartFile> files }) async
     test('test yes4trackV1TrailsIdGeodataPost', () async {
+      // TODO
+    });
+
+    // Add images in trail
+    //
+    //Future<BuiltList<PostTrailPhotosResponse>> yes4trackV1TrailsIdImagesPost(String id, { String xApiKey, String xCsrfToken, BuiltList<MultipartFile> images }) async
+    test('test yes4trackV1TrailsIdImagesPost', () async {
+      // TODO
+    });
+
+    // Update Trail Map Photo
+    //
+    //Future yes4trackV1TrailsIdMapPhotoPut(String id, { String xApiKey, String xCsrfToken }) async
+    test('test yes4trackV1TrailsIdMapPhotoPut', () async {
       // TODO
     });
 

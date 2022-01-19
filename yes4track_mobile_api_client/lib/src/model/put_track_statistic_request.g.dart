@@ -101,7 +101,7 @@ class PutTrackStatisticRequestBuilder
   set speed(double? speed) => _$this._speed = speed;
 
   PutTrackStatisticRequestBuilder() {
-    PutTrackStatisticRequest._initializeBuilder(this);
+    PutTrackStatisticRequest._defaults(this);
   }
 
   PutTrackStatisticRequestBuilder get _$this {

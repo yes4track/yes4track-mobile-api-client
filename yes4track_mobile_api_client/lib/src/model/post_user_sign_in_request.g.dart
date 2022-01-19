@@ -62,7 +62,7 @@ class PostUserSignInRequestBuilder
   set hash(String? hash) => _$this._hash = hash;
 
   PostUserSignInRequestBuilder() {
-    PostUserSignInRequest._initializeBuilder(this);
+    PostUserSignInRequest._defaults(this);
   }
 
   PostUserSignInRequestBuilder get _$this {

@@ -124,7 +124,7 @@ class GetAllPagedTrackResponseBuilder
       _$this._results = results;
 
   GetAllPagedTrackResponseBuilder() {
-    GetAllPagedTrackResponse._initializeBuilder(this);
+    GetAllPagedTrackResponse._defaults(this);
   }
 
   GetAllPagedTrackResponseBuilder get _$this {

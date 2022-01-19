@@ -39,7 +39,7 @@ class GeolocationApi {
     required double lat,
     required double lng,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'da632c01-5d26-4bfc-84e2-abbe358964c0',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,

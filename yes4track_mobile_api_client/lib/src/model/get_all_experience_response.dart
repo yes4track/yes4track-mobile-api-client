@@ -72,7 +72,8 @@ abstract class GetAllExperienceResponse implements Built<GetAllExperienceRespons
 
     GetAllExperienceResponse._();
 
-    static void _initializeBuilder(GetAllExperienceResponseBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(GetAllExperienceResponseBuilder b) => b;
 
     factory GetAllExperienceResponse([void updates(GetAllExperienceResponseBuilder b)]) = _$GetAllExperienceResponse;
 
@@ -95,25 +96,25 @@ class _$GetAllExperienceResponseSerializer implements StructuredSerializer<GetAl
             result
                 ..add(r'createdAt')
                 ..add(serializers.serialize(object.createdAt,
-                    specifiedType: const FullType(DateTime)));
+                    specifiedType: const FullType.nullable(DateTime)));
         }
         if (object.updatedAt != null) {
             result
                 ..add(r'updatedAt')
                 ..add(serializers.serialize(object.updatedAt,
-                    specifiedType: const FullType(DateTime)));
+                    specifiedType: const FullType.nullable(DateTime)));
         }
         if (object.userCreated != null) {
             result
                 ..add(r'userCreated')
                 ..add(serializers.serialize(object.userCreated,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.userUpdated != null) {
             result
                 ..add(r'userUpdated')
                 ..add(serializers.serialize(object.userUpdated,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.companyId != null) {
             result
@@ -125,25 +126,25 @@ class _$GetAllExperienceResponseSerializer implements StructuredSerializer<GetAl
             result
                 ..add(r'name')
                 ..add(serializers.serialize(object.name,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.description != null) {
             result
                 ..add(r'description')
                 ..add(serializers.serialize(object.description,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.effectiveStartDate != null) {
             result
                 ..add(r'effectiveStartDate')
                 ..add(serializers.serialize(object.effectiveStartDate,
-                    specifiedType: const FullType(DateTime)));
+                    specifiedType: const FullType.nullable(DateTime)));
         }
         if (object.effectiveEndDate != null) {
             result
                 ..add(r'effectiveEndDate')
                 ..add(serializers.serialize(object.effectiveEndDate,
-                    specifiedType: const FullType(DateTime)));
+                    specifiedType: const FullType.nullable(DateTime)));
         }
         if (object.id != null) {
             result
@@ -155,13 +156,13 @@ class _$GetAllExperienceResponseSerializer implements StructuredSerializer<GetAl
             result
                 ..add(r'imagesUrl')
                 ..add(serializers.serialize(object.imagesUrl,
-                    specifiedType: const FullType(BuiltList, [FullType(ImageUrl)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(ImageUrl)])));
         }
         if (object.videosUrl != null) {
             result
                 ..add(r'videosUrl')
                 ..add(serializers.serialize(object.videosUrl,
-                    specifiedType: const FullType(BuiltList, [FullType(VideoUrl)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(VideoUrl)])));
         }
         if (object.codeRequired != null) {
             result
@@ -188,62 +189,87 @@ class _$GetAllExperienceResponseSerializer implements StructuredSerializer<GetAl
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'createdAt':
-                    result.createdAt = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
+                    result.createdAt = valueDes;
                     break;
                 case r'updatedAt':
-                    result.updatedAt = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
+                    result.updatedAt = valueDes;
                     break;
                 case r'userCreated':
-                    result.userCreated = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.userCreated = valueDes;
                     break;
                 case r'userUpdated':
-                    result.userUpdated = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.userUpdated = valueDes;
                     break;
                 case r'companyId':
-                    result.companyId = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    result.companyId = valueDes;
                     break;
                 case r'name':
-                    result.name = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.name = valueDes;
                     break;
                 case r'description':
-                    result.description = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.description = valueDes;
                     break;
                 case r'effectiveStartDate':
-                    result.effectiveStartDate = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
+                    result.effectiveStartDate = valueDes;
                     break;
                 case r'effectiveEndDate':
-                    result.effectiveEndDate = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
+                    result.effectiveEndDate = valueDes;
                     break;
                 case r'id':
-                    result.id = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    result.id = valueDes;
                     break;
                 case r'imagesUrl':
-                    result.imagesUrl.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(ImageUrl)])) as BuiltList<ImageUrl>);
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(ImageUrl)])) as BuiltList<ImageUrl>?;
+                    if (valueDes == null) continue;
+                    result.imagesUrl.replace(valueDes);
                     break;
                 case r'videosUrl':
-                    result.videosUrl.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(VideoUrl)])) as BuiltList<VideoUrl>);
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(VideoUrl)])) as BuiltList<VideoUrl>?;
+                    if (valueDes == null) continue;
+                    result.videosUrl.replace(valueDes);
                     break;
                 case r'codeRequired':
-                    result.codeRequired = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(bool)) as bool;
+                    result.codeRequired = valueDes;
                     break;
                 case r'isActive':
-                    result.isActive = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(bool)) as bool;
+                    result.isActive = valueDes;
                     break;
             }
         }

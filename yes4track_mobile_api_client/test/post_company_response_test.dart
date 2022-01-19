@@ -42,6 +42,11 @@ void main() {
       // TODO
     });
 
+    // RegistrationType registrationType
+    test('to test the property `registrationType`', () async {
+      // TODO
+    });
+
     // String contactEmail
     test('to test the property `contactEmail`', () async {
       // TODO
@@ -52,8 +57,23 @@ void main() {
       // TODO
     });
 
+    // CompanyType type
+    test('to test the property `type`', () async {
+      // TODO
+    });
+
+    // String biography
+    test('to test the property `biography`', () async {
+      // TODO
+    });
+
     // String id
     test('to test the property `id`', () async {
+      // TODO
+    });
+
+    // String photoUrl
+    test('to test the property `photoUrl`', () async {
       // TODO
     });
 

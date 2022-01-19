@@ -202,7 +202,7 @@ class GetAllCompanyResponseBuilder
   set photoUrl(String? photoUrl) => _$this._photoUrl = photoUrl;
 
   GetAllCompanyResponseBuilder() {
-    GetAllCompanyResponse._initializeBuilder(this);
+    GetAllCompanyResponse._defaults(this);
   }
 
   GetAllCompanyResponseBuilder get _$this {

@@ -83,7 +83,7 @@ class TrailGeoDataRequestBuilder
   set date(DateTime? date) => _$this._date = date;
 
   TrailGeoDataRequestBuilder() {
-    TrailGeoDataRequest._initializeBuilder(this);
+    TrailGeoDataRequest._defaults(this);
   }
 
   TrailGeoDataRequestBuilder get _$this {

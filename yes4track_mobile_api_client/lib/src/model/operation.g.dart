@@ -89,7 +89,7 @@ class OperationBuilder implements Builder<Operation, OperationBuilder> {
   set value(JsonObject? value) => _$this._value = value;
 
   OperationBuilder() {
-    Operation._initializeBuilder(this);
+    Operation._defaults(this);
   }
 
   OperationBuilder get _$this {

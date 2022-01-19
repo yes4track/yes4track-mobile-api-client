@@ -124,7 +124,7 @@ class GetAllPagedTrailResponseBuilder
       _$this._results = results;
 
   GetAllPagedTrailResponseBuilder() {
-    GetAllPagedTrailResponse._initializeBuilder(this);
+    GetAllPagedTrailResponse._defaults(this);
   }
 
   GetAllPagedTrailResponseBuilder get _$this {

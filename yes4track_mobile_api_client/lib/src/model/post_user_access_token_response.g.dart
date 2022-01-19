@@ -55,7 +55,7 @@ class PostUserAccessTokenResponseBuilder
   set idToken(String? idToken) => _$this._idToken = idToken;
 
   PostUserAccessTokenResponseBuilder() {
-    PostUserAccessTokenResponse._initializeBuilder(this);
+    PostUserAccessTokenResponse._defaults(this);
   }
 
   PostUserAccessTokenResponseBuilder get _$this {

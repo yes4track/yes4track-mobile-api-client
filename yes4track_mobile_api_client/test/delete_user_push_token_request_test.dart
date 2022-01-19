@@ -12,5 +12,10 @@ void main() {
       // TODO
     });
 
+    // String deviceId
+    test('to test the property `deviceId`', () async {
+      // TODO
+    });
+
   });
 }

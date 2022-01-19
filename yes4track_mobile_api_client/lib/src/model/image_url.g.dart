@@ -137,7 +137,7 @@ class ImageUrlBuilder implements Builder<ImageUrl, ImageUrlBuilder> {
   set sequence(int? sequence) => _$this._sequence = sequence;
 
   ImageUrlBuilder() {
-    ImageUrl._initializeBuilder(this);
+    ImageUrl._defaults(this);
   }
 
   ImageUrlBuilder get _$this {

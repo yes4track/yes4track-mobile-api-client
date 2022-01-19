@@ -24,7 +24,8 @@ abstract class GetAllActiveTrailByAngelResponse implements Built<GetAllActiveTra
 
     GetAllActiveTrailByAngelResponse._();
 
-    static void _initializeBuilder(GetAllActiveTrailByAngelResponseBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(GetAllActiveTrailByAngelResponseBuilder b) => b;
 
     factory GetAllActiveTrailByAngelResponse([void updates(GetAllActiveTrailByAngelResponseBuilder b)]) = _$GetAllActiveTrailByAngelResponse;
 
@@ -47,7 +48,7 @@ class _$GetAllActiveTrailByAngelResponseSerializer implements StructuredSerializ
             result
                 ..add(r'trails')
                 ..add(serializers.serialize(object.trails,
-                    specifiedType: const FullType(BuiltList, [FullType(ActiveTrailResponse)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(ActiveTrailResponse)])));
         }
         if (object.mapCoordinate != null) {
             result
@@ -68,14 +69,18 @@ class _$GetAllActiveTrailByAngelResponseSerializer implements StructuredSerializ
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'trails':
-                    result.trails.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(ActiveTrailResponse)])) as BuiltList<ActiveTrailResponse>);
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(ActiveTrailResponse)])) as BuiltList<ActiveTrailResponse>?;
+                    if (valueDes == null) continue;
+                    result.trails.replace(valueDes);
                     break;
                 case r'mapCoordinate':
-                    result.mapCoordinate.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(MapCoordinate)) as MapCoordinate);
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(MapCoordinate)) as MapCoordinate;
+                    result.mapCoordinate.replace(valueDes);
                     break;
             }
         }

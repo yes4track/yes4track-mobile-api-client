@@ -39,7 +39,7 @@ void main() {
 
     // Create Template
     //
-    //Future<BuiltList<String>> yes4trackV1TemplatesIdPhotosUploadPost(String id, { String xApiKey, String xCsrfToken }) async
+    //Future<BuiltList<String>> yes4trackV1TemplatesIdPhotosUploadPost(String id, { String xApiKey, String xCsrfToken, BuiltList<MultipartFile> images }) async
     test('test yes4trackV1TemplatesIdPhotosUploadPost', () async {
       // TODO
     });

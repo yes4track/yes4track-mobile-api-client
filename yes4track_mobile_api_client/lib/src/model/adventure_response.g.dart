@@ -80,7 +80,7 @@ class AdventureResponseBuilder
   set type(AdventureType? type) => _$this._type = type;
 
   AdventureResponseBuilder() {
-    AdventureResponse._initializeBuilder(this);
+    AdventureResponse._defaults(this);
   }
 
   AdventureResponseBuilder get _$this {

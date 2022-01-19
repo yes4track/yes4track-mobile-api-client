@@ -36,7 +36,8 @@ abstract class Operation implements Built<Operation, OperationBuilder> {
 
     Operation._();
 
-    static void _initializeBuilder(OperationBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(OperationBuilder b) => b;
 
     factory Operation([void updates(OperationBuilder b)]) = _$Operation;
 
@@ -65,25 +66,25 @@ class _$OperationSerializer implements StructuredSerializer<Operation> {
             result
                 ..add(r'path')
                 ..add(serializers.serialize(object.path,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.op != null) {
             result
                 ..add(r'op')
                 ..add(serializers.serialize(object.op,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.from != null) {
             result
                 ..add(r'from')
                 ..add(serializers.serialize(object.from,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.value != null) {
             result
                 ..add(r'value')
                 ..add(serializers.serialize(object.value,
-                    specifiedType: const FullType(JsonObject)));
+                    specifiedType: const FullType.nullable(JsonObject)));
         }
         return result;
     }
@@ -98,26 +99,36 @@ class _$OperationSerializer implements StructuredSerializer<Operation> {
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'operationType':
-                    result.operationType = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(OperationType)) as OperationType;
+                    result.operationType = valueDes;
                     break;
                 case r'path':
-                    result.path = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.path = valueDes;
                     break;
                 case r'op':
-                    result.op = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.op = valueDes;
                     break;
                 case r'from':
-                    result.from = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.from = valueDes;
                     break;
                 case r'value':
-                    result.value = serializers.deserialize(value,
-                        specifiedType: const FullType(JsonObject)) as JsonObject;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(JsonObject)) as JsonObject?;
+                    if (valueDes == null) continue;
+                    result.value = valueDes;
                     break;
             }
         }

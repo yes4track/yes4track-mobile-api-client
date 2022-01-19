@@ -21,7 +21,8 @@ abstract class PostUserAccessTokenRequest implements Built<PostUserAccessTokenRe
 
     PostUserAccessTokenRequest._();
 
-    static void _initializeBuilder(PostUserAccessTokenRequestBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(PostUserAccessTokenRequestBuilder b) => b;
 
     factory PostUserAccessTokenRequest([void updates(PostUserAccessTokenRequestBuilder b)]) = _$PostUserAccessTokenRequest;
 
@@ -44,13 +45,13 @@ class _$PostUserAccessTokenRequestSerializer implements StructuredSerializer<Pos
             result
                 ..add(r'phone')
                 ..add(serializers.serialize(object.phone,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.code != null) {
             result
                 ..add(r'code')
                 ..add(serializers.serialize(object.code,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -65,14 +66,19 @@ class _$PostUserAccessTokenRequestSerializer implements StructuredSerializer<Pos
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'phone':
-                    result.phone = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.phone = valueDes;
                     break;
                 case r'code':
-                    result.code = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.code = valueDes;
                     break;
             }
         }

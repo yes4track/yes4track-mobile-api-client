@@ -44,7 +44,7 @@ class SponsorApi {
   Future<Response<GetAllSponsorResponse>> getByIdSponsor({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '2720b3cb-c7c7-4223-8e7c-62e2fec7afeb',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -147,7 +147,7 @@ class SponsorApi {
     int? pageSize,
     String? sort,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '454ef5a0-27fa-4692-a7e8-769775405875',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -247,7 +247,7 @@ class SponsorApi {
   Future<Response<void>> yes4trackV1SponsorsIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '31c7717e-27b1-4c3a-a71c-84c3b31e12be',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -309,7 +309,7 @@ class SponsorApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'ca186003-cf8f-44f4-ae6e-2d0e34e564b6',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -389,7 +389,7 @@ class SponsorApi {
   Future<Response<void>> yes4trackV1SponsorsIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'be210bff-dffa-4b98-a07c-ff1c620e8d88',
     PutSponsorRequest? putSponsorRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -468,7 +468,7 @@ class SponsorApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostSponsorResponse>> yes4trackV1SponsorsPost({ 
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '43d6a678-609b-43ad-81c8-50e0d6de1e4b',
     PostSponsorRequest? postSponsorRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

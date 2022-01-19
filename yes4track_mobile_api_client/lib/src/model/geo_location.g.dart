@@ -77,7 +77,7 @@ class GeoLocationBuilder implements Builder<GeoLocation, GeoLocationBuilder> {
   set elevation(double? elevation) => _$this._elevation = elevation;
 
   GeoLocationBuilder() {
-    GeoLocation._initializeBuilder(this);
+    GeoLocation._defaults(this);
   }
 
   GeoLocationBuilder get _$this {

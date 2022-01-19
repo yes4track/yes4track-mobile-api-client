@@ -21,7 +21,8 @@ abstract class PostUserSignInRequest implements Built<PostUserSignInRequest, Pos
 
     PostUserSignInRequest._();
 
-    static void _initializeBuilder(PostUserSignInRequestBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(PostUserSignInRequestBuilder b) => b;
 
     factory PostUserSignInRequest([void updates(PostUserSignInRequestBuilder b)]) = _$PostUserSignInRequest;
 
@@ -44,13 +45,13 @@ class _$PostUserSignInRequestSerializer implements StructuredSerializer<PostUser
             result
                 ..add(r'phone')
                 ..add(serializers.serialize(object.phone,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.hash != null) {
             result
                 ..add(r'hash')
                 ..add(serializers.serialize(object.hash,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -65,14 +66,19 @@ class _$PostUserSignInRequestSerializer implements StructuredSerializer<PostUser
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'phone':
-                    result.phone = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.phone = valueDes;
                     break;
                 case r'hash':
-                    result.hash = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.hash = valueDes;
                     break;
             }
         }

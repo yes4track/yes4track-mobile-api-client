@@ -46,7 +46,7 @@ class CompanyApi {
   Future<Response<GetAllCompanyResponse>> getByIdCompany({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '45970b6d-99a7-45c3-98f2-cbea780e3209',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -153,7 +153,7 @@ class CompanyApi {
     int? pageSize,
     String? sort,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '7f649d20-aa7b-4fde-8196-eafdfcf9865d',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -255,7 +255,7 @@ class CompanyApi {
   Future<Response<void>> yes4trackV1CompaniesIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'd49e371b-69d4-42e9-8265-efd119bf4549',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -317,7 +317,7 @@ class CompanyApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '6b359a21-d753-4ae7-9c49-50e0069b790f',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -397,7 +397,7 @@ class CompanyApi {
   Future<Response<void>> yes4trackV1CompaniesIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '07fda19c-9a5f-4fbf-b6a7-adc41664f5d7',
     PutCompanyRequest? putCompanyRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -476,7 +476,7 @@ class CompanyApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostCompanyResponse>> yes4trackV1CompaniesPost({ 
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '75e8f014-7900-4dc2-b62c-41ed9fd0e42b',
     PostCompanyRequest? postCompanyRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

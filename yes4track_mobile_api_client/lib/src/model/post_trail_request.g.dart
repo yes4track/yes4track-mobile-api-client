@@ -218,7 +218,7 @@ class PostTrailRequestBuilder
       _$this._waypoints = waypoints;
 
   PostTrailRequestBuilder() {
-    PostTrailRequest._initializeBuilder(this);
+    PostTrailRequest._defaults(this);
   }
 
   PostTrailRequestBuilder get _$this {

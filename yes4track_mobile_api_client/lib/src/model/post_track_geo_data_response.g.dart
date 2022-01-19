@@ -109,7 +109,7 @@ class PostTrackGeoDataResponseBuilder
   set version(String? version) => _$this._version = version;
 
   PostTrackGeoDataResponseBuilder() {
-    PostTrackGeoDataResponse._initializeBuilder(this);
+    PostTrackGeoDataResponse._defaults(this);
   }
 
   PostTrackGeoDataResponseBuilder get _$this {

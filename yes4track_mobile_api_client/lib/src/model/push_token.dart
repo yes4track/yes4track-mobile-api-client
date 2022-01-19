@@ -21,7 +21,8 @@ abstract class PushToken implements Built<PushToken, PushTokenBuilder> {
 
     PushToken._();
 
-    static void _initializeBuilder(PushTokenBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(PushTokenBuilder b) => b;
 
     factory PushToken([void updates(PushTokenBuilder b)]) = _$PushToken;
 
@@ -44,13 +45,13 @@ class _$PushTokenSerializer implements StructuredSerializer<PushToken> {
             result
                 ..add(r'deviceId')
                 ..add(serializers.serialize(object.deviceId,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.token != null) {
             result
                 ..add(r'token')
                 ..add(serializers.serialize(object.token,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -65,14 +66,19 @@ class _$PushTokenSerializer implements StructuredSerializer<PushToken> {
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'deviceId':
-                    result.deviceId = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.deviceId = valueDes;
                     break;
                 case r'token':
-                    result.token = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.token = valueDes;
                     break;
             }
         }

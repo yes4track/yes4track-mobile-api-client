@@ -87,7 +87,8 @@ abstract class GetAllUserResponse implements Built<GetAllUserResponse, GetAllUse
 
     GetAllUserResponse._();
 
-    static void _initializeBuilder(GetAllUserResponseBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(GetAllUserResponseBuilder b) => b;
 
     factory GetAllUserResponse([void updates(GetAllUserResponseBuilder b)]) = _$GetAllUserResponse;
 
@@ -110,43 +111,43 @@ class _$GetAllUserResponseSerializer implements StructuredSerializer<GetAllUserR
             result
                 ..add(r'createdAt')
                 ..add(serializers.serialize(object.createdAt,
-                    specifiedType: const FullType(DateTime)));
+                    specifiedType: const FullType.nullable(DateTime)));
         }
         if (object.updatedAt != null) {
             result
                 ..add(r'updatedAt')
                 ..add(serializers.serialize(object.updatedAt,
-                    specifiedType: const FullType(DateTime)));
+                    specifiedType: const FullType.nullable(DateTime)));
         }
         if (object.userCreated != null) {
             result
                 ..add(r'userCreated')
                 ..add(serializers.serialize(object.userCreated,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.userUpdated != null) {
             result
                 ..add(r'userUpdated')
                 ..add(serializers.serialize(object.userUpdated,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.name != null) {
             result
                 ..add(r'name')
                 ..add(serializers.serialize(object.name,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.phone != null) {
             result
                 ..add(r'phone')
                 ..add(serializers.serialize(object.phone,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.email != null) {
             result
                 ..add(r'email')
                 ..add(serializers.serialize(object.email,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.id != null) {
             result
@@ -158,7 +159,7 @@ class _$GetAllUserResponseSerializer implements StructuredSerializer<GetAllUserR
             result
                 ..add(r'photoUrl')
                 ..add(serializers.serialize(object.photoUrl,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.isActive != null) {
             result
@@ -194,25 +195,25 @@ class _$GetAllUserResponseSerializer implements StructuredSerializer<GetAllUserR
             result
                 ..add(r'defaultAngel')
                 ..add(serializers.serialize(object.defaultAngel,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.defaultSponsor != null) {
             result
                 ..add(r'defaultSponsor')
                 ..add(serializers.serialize(object.defaultSponsor,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.companies != null) {
             result
                 ..add(r'companies')
                 ..add(serializers.serialize(object.companies,
-                    specifiedType: const FullType(BuiltList, [FullType(String)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(String)])));
         }
         if (object.pushTokens != null) {
             result
                 ..add(r'pushTokens')
                 ..add(serializers.serialize(object.pushTokens,
-                    specifiedType: const FullType(BuiltList, [FullType(PushToken)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(PushToken)])));
         }
         return result;
     }
@@ -227,78 +228,109 @@ class _$GetAllUserResponseSerializer implements StructuredSerializer<GetAllUserR
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'createdAt':
-                    result.createdAt = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
+                    result.createdAt = valueDes;
                     break;
                 case r'updatedAt':
-                    result.updatedAt = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
+                    result.updatedAt = valueDes;
                     break;
                 case r'userCreated':
-                    result.userCreated = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.userCreated = valueDes;
                     break;
                 case r'userUpdated':
-                    result.userUpdated = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.userUpdated = valueDes;
                     break;
                 case r'name':
-                    result.name = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.name = valueDes;
                     break;
                 case r'phone':
-                    result.phone = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.phone = valueDes;
                     break;
                 case r'email':
-                    result.email = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.email = valueDes;
                     break;
                 case r'id':
-                    result.id = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    result.id = valueDes;
                     break;
                 case r'photoUrl':
-                    result.photoUrl = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.photoUrl = valueDes;
                     break;
                 case r'isActive':
-                    result.isActive = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(bool)) as bool;
+                    result.isActive = valueDes;
                     break;
                 case r'isAdmin':
-                    result.isAdmin = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(bool)) as bool;
+                    result.isAdmin = valueDes;
                     break;
                 case r'isSuperAdmin':
-                    result.isSuperAdmin = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(bool)) as bool;
+                    result.isSuperAdmin = valueDes;
                     break;
                 case r'isAngel':
-                    result.isAngel = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(bool)) as bool;
+                    result.isAngel = valueDes;
                     break;
                 case r'isExplorer':
-                    result.isExplorer = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(bool)) as bool;
+                    result.isExplorer = valueDes;
                     break;
                 case r'defaultAngel':
-                    result.defaultAngel = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.defaultAngel = valueDes;
                     break;
                 case r'defaultSponsor':
-                    result.defaultSponsor = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.defaultSponsor = valueDes;
                     break;
                 case r'companies':
-                    result.companies.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(String)])) as BuiltList<String>);
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(String)])) as BuiltList<String>?;
+                    if (valueDes == null) continue;
+                    result.companies.replace(valueDes);
                     break;
                 case r'pushTokens':
-                    result.pushTokens.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(PushToken)])) as BuiltList<PushToken>);
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(PushToken)])) as BuiltList<PushToken>?;
+                    if (valueDes == null) continue;
+                    result.pushTokens.replace(valueDes);
                     break;
             }
         }

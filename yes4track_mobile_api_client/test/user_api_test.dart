@@ -70,6 +70,27 @@ void main() {
       // TODO
     });
 
+    // Delete User Push Token
+    //
+    //Future yes4trackV1UsersIdPushtokenDelete(String id, { String xApiKey, String xCsrfToken, DeleteUserPushTokenRequest deleteUserPushTokenRequest }) async
+    test('test yes4trackV1UsersIdPushtokenDelete', () async {
+      // TODO
+    });
+
+    // Get All User Push Token
+    //
+    //Future<GetAllUserPushTokenResponse> yes4trackV1UsersIdPushtokenGet(String id, { String xApiKey, String xCsrfToken }) async
+    test('test yes4trackV1UsersIdPushtokenGet', () async {
+      // TODO
+    });
+
+    // Add User Push Token
+    //
+    //Future yes4trackV1UsersIdPushtokenPost(String id, { String xApiKey, String xCsrfToken, PostUserPushTokenRequest postUserPushTokenRequest }) async
+    test('test yes4trackV1UsersIdPushtokenPost', () async {
+      // TODO
+    });
+
     // Update User
     //
     //Future yes4trackV1UsersIdPut(String id, { String xApiKey, String xCsrfToken, PutUserRequest putUserRequest }) async

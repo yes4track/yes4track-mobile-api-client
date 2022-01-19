@@ -86,7 +86,7 @@ void main() {
 
     // Add images in adventure
     //
-    //Future<BuiltList<String>> yes4trackV1AdventuresIdImagesPost(String id, { String xApiKey, String xCsrfToken }) async
+    //Future<BuiltList<String>> yes4trackV1AdventuresIdImagesPost(String id, { String xApiKey, String xCsrfToken, BuiltList<MultipartFile> images }) async
     test('test yes4trackV1AdventuresIdImagesPost', () async {
       // TODO
     });
@@ -130,7 +130,7 @@ void main() {
 
     // Add videos in adventure
     //
-    //Future<BuiltList<String>> yes4trackV1AdventuresIdVideosPost(String id, { String xApiKey, String xCsrfToken }) async
+    //Future<BuiltList<String>> yes4trackV1AdventuresIdVideosPost(String id, { String xApiKey, String xCsrfToken, BuiltList<MultipartFile> videos }) async
     test('test yes4trackV1AdventuresIdVideosPost', () async {
       // TODO
     });

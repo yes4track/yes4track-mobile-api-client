@@ -142,7 +142,7 @@ class TrailResponseBuilder
   set photoUrl(String? photoUrl) => _$this._photoUrl = photoUrl;
 
   TrailResponseBuilder() {
-    TrailResponse._initializeBuilder(this);
+    TrailResponse._defaults(this);
   }
 
   TrailResponseBuilder get _$this {

@@ -179,7 +179,7 @@ class PutSponsorRequestBuilder
   set isActive(bool? isActive) => _$this._isActive = isActive;
 
   PutSponsorRequestBuilder() {
-    PutSponsorRequest._initializeBuilder(this);
+    PutSponsorRequest._defaults(this);
   }
 
   PutSponsorRequestBuilder get _$this {

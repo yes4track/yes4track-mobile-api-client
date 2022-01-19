@@ -143,7 +143,7 @@ class GetAllAuditResponseBuilder
   set id(String? id) => _$this._id = id;
 
   GetAllAuditResponseBuilder() {
-    GetAllAuditResponse._initializeBuilder(this);
+    GetAllAuditResponse._defaults(this);
   }
 
   GetAllAuditResponseBuilder get _$this {

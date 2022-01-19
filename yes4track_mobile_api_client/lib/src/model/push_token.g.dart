@@ -58,7 +58,7 @@ class PushTokenBuilder implements Builder<PushToken, PushTokenBuilder> {
   set token(String? token) => _$this._token = token;
 
   PushTokenBuilder() {
-    PushToken._initializeBuilder(this);
+    PushToken._defaults(this);
   }
 
   PushTokenBuilder get _$this {

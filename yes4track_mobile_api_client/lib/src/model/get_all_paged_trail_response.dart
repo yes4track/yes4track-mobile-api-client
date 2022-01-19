@@ -43,7 +43,8 @@ abstract class GetAllPagedTrailResponse implements Built<GetAllPagedTrailRespons
 
     GetAllPagedTrailResponse._();
 
-    static void _initializeBuilder(GetAllPagedTrailResponseBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(GetAllPagedTrailResponseBuilder b) => b;
 
     factory GetAllPagedTrailResponse([void updates(GetAllPagedTrailResponseBuilder b)]) = _$GetAllPagedTrailResponse;
 
@@ -102,7 +103,7 @@ class _$GetAllPagedTrailResponseSerializer implements StructuredSerializer<GetAl
             result
                 ..add(r'results')
                 ..add(serializers.serialize(object.results,
-                    specifiedType: const FullType(BuiltList, [FullType(GetAllTrailResponse)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(GetAllTrailResponse)])));
         }
         return result;
     }
@@ -117,34 +118,43 @@ class _$GetAllPagedTrailResponseSerializer implements StructuredSerializer<GetAl
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'currentPage':
-                    result.currentPage = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
+                    result.currentPage = valueDes;
                     break;
                 case r'pageCount':
-                    result.pageCount = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
+                    result.pageCount = valueDes;
                     break;
                 case r'pageSize':
-                    result.pageSize = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
+                    result.pageSize = valueDes;
                     break;
                 case r'rowCount':
-                    result.rowCount = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
+                    result.rowCount = valueDes;
                     break;
                 case r'firstRowOnPage':
-                    result.firstRowOnPage = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
+                    result.firstRowOnPage = valueDes;
                     break;
                 case r'lastRowOnPage':
-                    result.lastRowOnPage = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
+                    result.lastRowOnPage = valueDes;
                     break;
                 case r'results':
-                    result.results.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(GetAllTrailResponse)])) as BuiltList<GetAllTrailResponse>);
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(GetAllTrailResponse)])) as BuiltList<GetAllTrailResponse>?;
+                    if (valueDes == null) continue;
+                    result.results.replace(valueDes);
                     break;
             }
         }

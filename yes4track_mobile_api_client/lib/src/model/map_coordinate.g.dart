@@ -83,7 +83,7 @@ class MapCoordinateBuilder
   set minLatitude(double? minLatitude) => _$this._minLatitude = minLatitude;
 
   MapCoordinateBuilder() {
-    MapCoordinate._initializeBuilder(this);
+    MapCoordinate._defaults(this);
   }
 
   MapCoordinateBuilder get _$this {

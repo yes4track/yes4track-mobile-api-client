@@ -176,7 +176,7 @@ class PostUserRequestBuilder
   set isExplorer(bool? isExplorer) => _$this._isExplorer = isExplorer;
 
   PostUserRequestBuilder() {
-    PostUserRequest._initializeBuilder(this);
+    PostUserRequest._defaults(this);
   }
 
   PostUserRequestBuilder get _$this {

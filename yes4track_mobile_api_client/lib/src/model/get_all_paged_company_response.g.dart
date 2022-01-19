@@ -124,7 +124,7 @@ class GetAllPagedCompanyResponseBuilder
       _$this._results = results;
 
   GetAllPagedCompanyResponseBuilder() {
-    GetAllPagedCompanyResponse._initializeBuilder(this);
+    GetAllPagedCompanyResponse._defaults(this);
   }
 
   GetAllPagedCompanyResponseBuilder get _$this {

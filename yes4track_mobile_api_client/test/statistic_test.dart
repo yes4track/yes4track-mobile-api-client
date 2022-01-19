@@ -32,5 +32,25 @@ void main() {
       // TODO
     });
 
+    // double elevationLoss
+    test('to test the property `elevationLoss`', () async {
+      // TODO
+    });
+
+    // double elevationMin
+    test('to test the property `elevationMin`', () async {
+      // TODO
+    });
+
+    // double elevationMax
+    test('to test the property `elevationMax`', () async {
+      // TODO
+    });
+
+    // double elevationMedian
+    test('to test the property `elevationMedian`', () async {
+      // TODO
+    });
+
   });
 }

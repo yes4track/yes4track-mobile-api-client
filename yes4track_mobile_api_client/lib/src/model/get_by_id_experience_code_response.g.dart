@@ -55,7 +55,7 @@ class GetByIdExperienceCodeResponseBuilder
   set code(String? code) => _$this._code = code;
 
   GetByIdExperienceCodeResponseBuilder() {
-    GetByIdExperienceCodeResponse._initializeBuilder(this);
+    GetByIdExperienceCodeResponse._defaults(this);
   }
 
   GetByIdExperienceCodeResponseBuilder get _$this {

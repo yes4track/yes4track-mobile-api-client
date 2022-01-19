@@ -270,7 +270,7 @@ class GetAllAdventureResponseBuilder
   set address(AddressBuilder? address) => _$this._address = address;
 
   GetAllAdventureResponseBuilder() {
-    GetAllAdventureResponse._initializeBuilder(this);
+    GetAllAdventureResponse._defaults(this);
   }
 
   GetAllAdventureResponseBuilder get _$this {

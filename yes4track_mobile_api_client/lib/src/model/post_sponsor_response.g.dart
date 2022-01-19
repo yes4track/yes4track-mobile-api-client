@@ -178,7 +178,7 @@ class PostSponsorResponseBuilder
   set isActive(bool? isActive) => _$this._isActive = isActive;
 
   PostSponsorResponseBuilder() {
-    PostSponsorResponse._initializeBuilder(this);
+    PostSponsorResponse._defaults(this);
   }
 
   PostSponsorResponseBuilder get _$this {

@@ -44,7 +44,7 @@ void main() {
 
     // Create Track GeoData
     //
-    //Future<PostTrackGeoDataResponse> yes4trackV1TracksIdGeodataPost(String id, { String xApiKey, String xCsrfToken }) async
+    //Future<PostTrackGeoDataResponse> yes4trackV1TracksIdGeodataPost(String id, { String xApiKey, String xCsrfToken, BuiltList<MultipartFile> files }) async
     test('test yes4trackV1TracksIdGeodataPost', () async {
       // TODO
     });

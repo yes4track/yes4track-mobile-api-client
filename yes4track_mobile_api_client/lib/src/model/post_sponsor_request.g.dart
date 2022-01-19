@@ -158,7 +158,7 @@ class PostSponsorRequestBuilder
       _$this._profilePhoto = profilePhoto;
 
   PostSponsorRequestBuilder() {
-    PostSponsorRequest._initializeBuilder(this);
+    PostSponsorRequest._defaults(this);
   }
 
   PostSponsorRequestBuilder get _$this {

@@ -152,7 +152,7 @@ class PutTrackRequestBuilder
   set id(String? id) => _$this._id = id;
 
   PutTrackRequestBuilder() {
-    PutTrackRequest._initializeBuilder(this);
+    PutTrackRequest._defaults(this);
   }
 
   PutTrackRequestBuilder get _$this {

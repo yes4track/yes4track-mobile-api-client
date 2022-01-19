@@ -38,7 +38,8 @@ abstract class UserResponse implements Built<UserResponse, UserResponseBuilder> 
 
     UserResponse._();
 
-    static void _initializeBuilder(UserResponseBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(UserResponseBuilder b) => b;
 
     factory UserResponse([void updates(UserResponseBuilder b)]) = _$UserResponse;
 
@@ -61,31 +62,31 @@ class _$UserResponseSerializer implements StructuredSerializer<UserResponse> {
             result
                 ..add(r'id')
                 ..add(serializers.serialize(object.id,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.name != null) {
             result
                 ..add(r'name')
                 ..add(serializers.serialize(object.name,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.phone != null) {
             result
                 ..add(r'phone')
                 ..add(serializers.serialize(object.phone,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.email != null) {
             result
                 ..add(r'email')
                 ..add(serializers.serialize(object.email,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.photoUrl != null) {
             result
                 ..add(r'photoUrl')
                 ..add(serializers.serialize(object.photoUrl,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.location != null) {
             result
@@ -106,30 +107,42 @@ class _$UserResponseSerializer implements StructuredSerializer<UserResponse> {
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'id':
-                    result.id = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.id = valueDes;
                     break;
                 case r'name':
-                    result.name = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.name = valueDes;
                     break;
                 case r'phone':
-                    result.phone = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.phone = valueDes;
                     break;
                 case r'email':
-                    result.email = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.email = valueDes;
                     break;
                 case r'photoUrl':
-                    result.photoUrl = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.photoUrl = valueDes;
                     break;
                 case r'location':
-                    result.location.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(GeoLocation)) as GeoLocation);
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(GeoLocation)) as GeoLocation;
+                    result.location.replace(valueDes);
                     break;
             }
         }

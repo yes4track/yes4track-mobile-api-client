@@ -25,7 +25,8 @@ abstract class PutUserLocationRequest implements Built<PutUserLocationRequest, P
 
     PutUserLocationRequest._();
 
-    static void _initializeBuilder(PutUserLocationRequestBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(PutUserLocationRequestBuilder b) => b;
 
     factory PutUserLocationRequest([void updates(PutUserLocationRequestBuilder b)]) = _$PutUserLocationRequest;
 
@@ -69,18 +70,22 @@ class _$PutUserLocationRequestSerializer implements StructuredSerializer<PutUser
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'date':
-                    result.date = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(DateTime)) as DateTime;
+                    result.date = valueDes;
                     break;
                 case r'latitude':
-                    result.latitude = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
+                    result.latitude = valueDes;
                     break;
                 case r'longitude':
-                    result.longitude = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
+                    result.longitude = valueDes;
                     break;
             }
         }

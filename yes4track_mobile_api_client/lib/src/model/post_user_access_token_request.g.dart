@@ -63,7 +63,7 @@ class PostUserAccessTokenRequestBuilder
   set code(String? code) => _$this._code = code;
 
   PostUserAccessTokenRequestBuilder() {
-    PostUserAccessTokenRequest._initializeBuilder(this);
+    PostUserAccessTokenRequest._defaults(this);
   }
 
   PostUserAccessTokenRequestBuilder get _$this {

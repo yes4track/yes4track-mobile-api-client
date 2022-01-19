@@ -64,7 +64,7 @@ class PostPostUserResendCodeRequestBuilder
   set hash(String? hash) => _$this._hash = hash;
 
   PostPostUserResendCodeRequestBuilder() {
-    PostPostUserResendCodeRequest._initializeBuilder(this);
+    PostPostUserResendCodeRequest._defaults(this);
   }
 
   PostPostUserResendCodeRequestBuilder get _$this {

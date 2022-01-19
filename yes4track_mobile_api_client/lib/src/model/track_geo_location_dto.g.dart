@@ -102,7 +102,7 @@ class TrackGeoLocationDtoBuilder
       _$this._waypoints = waypoints;
 
   TrackGeoLocationDtoBuilder() {
-    TrackGeoLocationDto._initializeBuilder(this);
+    TrackGeoLocationDto._defaults(this);
   }
 
   TrackGeoLocationDtoBuilder get _$this {

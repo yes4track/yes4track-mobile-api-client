@@ -45,7 +45,7 @@ class NotificationApi {
   Future<Response<GetAllNotificationResponse>> getByIdNotification({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '2a1a3f5d-33a7-43bf-a420-918ef2483b53',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -148,7 +148,7 @@ class NotificationApi {
     int? pageSize,
     String? sort,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '58088d5b-05f4-4edd-9e9c-7e17ed99d4e0',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -248,7 +248,7 @@ class NotificationApi {
   Future<Response<void>> yes4trackV1NotificationsIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'af11f719-ed35-4101-878f-346455939658',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -310,7 +310,7 @@ class NotificationApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'c1ee1e8a-cf6e-41c9-ad73-1e2d59dc1a7d',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -390,7 +390,7 @@ class NotificationApi {
   Future<Response<void>> yes4trackV1NotificationsIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '20cfd330-4394-4380-bea0-ea6300eb6bc7',
     PutNotificationRequest? putNotificationRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -469,7 +469,7 @@ class NotificationApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostNotificationResponse>> yes4trackV1NotificationsPost({ 
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'b35f14e1-a96f-4676-862a-253d5a2e9474',
     PostNotificationRequest? postNotificationRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

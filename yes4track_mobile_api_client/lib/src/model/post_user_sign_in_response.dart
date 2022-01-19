@@ -17,7 +17,8 @@ abstract class PostUserSignInResponse implements Built<PostUserSignInResponse, P
 
     PostUserSignInResponse._();
 
-    static void _initializeBuilder(PostUserSignInResponseBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(PostUserSignInResponseBuilder b) => b;
 
     factory PostUserSignInResponse([void updates(PostUserSignInResponseBuilder b)]) = _$PostUserSignInResponse;
 
@@ -40,7 +41,7 @@ class _$PostUserSignInResponseSerializer implements StructuredSerializer<PostUse
             result
                 ..add(r'message')
                 ..add(serializers.serialize(object.message,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -55,10 +56,13 @@ class _$PostUserSignInResponseSerializer implements StructuredSerializer<PostUse
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'message':
-                    result.message = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.message = valueDes;
                     break;
             }
         }

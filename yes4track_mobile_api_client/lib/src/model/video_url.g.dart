@@ -137,7 +137,7 @@ class VideoUrlBuilder implements Builder<VideoUrl, VideoUrlBuilder> {
   set sequence(int? sequence) => _$this._sequence = sequence;
 
   VideoUrlBuilder() {
-    VideoUrl._initializeBuilder(this);
+    VideoUrl._defaults(this);
   }
 
   VideoUrlBuilder get _$this {

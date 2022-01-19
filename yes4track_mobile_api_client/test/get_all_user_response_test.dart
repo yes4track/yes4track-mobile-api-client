@@ -72,6 +72,11 @@ void main() {
       // TODO
     });
 
+    // bool isExplorer
+    test('to test the property `isExplorer`', () async {
+      // TODO
+    });
+
     // String defaultAngel
     test('to test the property `defaultAngel`', () async {
       // TODO
@@ -84,6 +89,11 @@ void main() {
 
     // BuiltList<String> companies
     test('to test the property `companies`', () async {
+      // TODO
+    });
+
+    // BuiltList<PushToken> pushTokens
+    test('to test the property `pushTokens`', () async {
       // TODO
     });
 

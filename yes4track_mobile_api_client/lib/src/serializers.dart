@@ -80,6 +80,7 @@ import 'package:yes4track_mobile_api_client/src/model/post_trail_geo_data_respon
 import 'package:yes4track_mobile_api_client/src/model/post_trail_photos_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_trail_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_trail_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/post_trail_to_adventure_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_user_access_token_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_user_access_token_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_user_push_token_request.dart';
@@ -188,6 +189,7 @@ part 'serializers.g.dart';
   PostTrailPhotosResponse,
   PostTrailRequest,
   PostTrailResponse,
+  PostTrailToAdventureRequest,
   PostUserAccessTokenRequest,
   PostUserAccessTokenResponse,
   PostUserPushTokenRequest,

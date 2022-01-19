@@ -75,7 +75,7 @@ class TrailGeoLocationDtoBuilder
       _$this._waypoints = waypoints;
 
   TrailGeoLocationDtoBuilder() {
-    TrailGeoLocationDto._initializeBuilder(this);
+    TrailGeoLocationDto._defaults(this);
   }
 
   TrailGeoLocationDtoBuilder get _$this {
