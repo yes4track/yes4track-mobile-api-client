@@ -192,7 +192,7 @@ class GetAllTrackResponseBuilder
       _$this._waypoints = waypoints;
 
   GetAllTrackResponseBuilder() {
-    GetAllTrackResponse._initializeBuilder(this);
+    GetAllTrackResponse._defaults(this);
   }
 
   GetAllTrackResponseBuilder get _$this {

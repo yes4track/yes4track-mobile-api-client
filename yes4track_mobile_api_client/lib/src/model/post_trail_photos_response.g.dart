@@ -82,7 +82,7 @@ class PostTrailPhotosResponseBuilder
   set sequence(int? sequence) => _$this._sequence = sequence;
 
   PostTrailPhotosResponseBuilder() {
-    PostTrailPhotosResponse._initializeBuilder(this);
+    PostTrailPhotosResponse._defaults(this);
   }
 
   PostTrailPhotosResponseBuilder get _$this {

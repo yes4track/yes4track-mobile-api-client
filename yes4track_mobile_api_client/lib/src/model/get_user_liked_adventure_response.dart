@@ -17,7 +17,8 @@ abstract class GetUserLikedAdventureResponse implements Built<GetUserLikedAdvent
 
     GetUserLikedAdventureResponse._();
 
-    static void _initializeBuilder(GetUserLikedAdventureResponseBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(GetUserLikedAdventureResponseBuilder b) => b;
 
     factory GetUserLikedAdventureResponse([void updates(GetUserLikedAdventureResponseBuilder b)]) = _$GetUserLikedAdventureResponse;
 
@@ -55,10 +56,12 @@ class _$GetUserLikedAdventureResponseSerializer implements StructuredSerializer<
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'userLiked':
-                    result.userLiked = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(bool)) as bool;
+                    result.userLiked = valueDes;
                     break;
             }
         }

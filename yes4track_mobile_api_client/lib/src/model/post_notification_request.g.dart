@@ -148,7 +148,7 @@ class PostNotificationRequestBuilder
   set user(UserBuilder? user) => _$this._user = user;
 
   PostNotificationRequestBuilder() {
-    PostNotificationRequest._initializeBuilder(this);
+    PostNotificationRequest._defaults(this);
   }
 
   PostNotificationRequestBuilder get _$this {

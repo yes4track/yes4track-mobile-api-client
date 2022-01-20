@@ -53,7 +53,7 @@ class PostUserSignInResponseBuilder
   set message(String? message) => _$this._message = message;
 
   PostUserSignInResponseBuilder() {
-    PostUserSignInResponse._initializeBuilder(this);
+    PostUserSignInResponse._defaults(this);
   }
 
   PostUserSignInResponseBuilder get _$this {

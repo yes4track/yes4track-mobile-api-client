@@ -69,7 +69,7 @@ class PostUserPushTokenRequestBuilder
   set deviceId(String? deviceId) => _$this._deviceId = deviceId;
 
   PostUserPushTokenRequestBuilder() {
-    PostUserPushTokenRequest._initializeBuilder(this);
+    PostUserPushTokenRequest._defaults(this);
   }
 
   PostUserPushTokenRequestBuilder get _$this {

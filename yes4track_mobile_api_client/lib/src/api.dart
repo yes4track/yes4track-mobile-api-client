@@ -7,6 +7,7 @@ import 'package:built_value/serializer.dart';
 import 'package:yes4track_mobile_api_client/src/serializers.dart';
 import 'package:yes4track_mobile_api_client/src/auth/api_key_auth.dart';
 import 'package:yes4track_mobile_api_client/src/auth/basic_auth.dart';
+import 'package:yes4track_mobile_api_client/src/auth/bearer_auth.dart';
 import 'package:yes4track_mobile_api_client/src/auth/oauth.dart';
 import 'package:yes4track_mobile_api_client/src/api/adventure_api.dart';
 import 'package:yes4track_mobile_api_client/src/api/audit_api.dart';
@@ -43,6 +44,7 @@ class Yes4trackMobileApiClient {
       this.dio.interceptors.addAll([
         OAuthInterceptor(),
         BasicAuthInterceptor(),
+        BearerAuthInterceptor(),
         ApiKeyAuthInterceptor(),
       ]);
     } else {
@@ -53,6 +55,12 @@ class Yes4trackMobileApiClient {
   void setOAuthToken(String name, String token) {
     if (this.dio.interceptors.any((i) => i is OAuthInterceptor)) {
       (this.dio.interceptors.firstWhere((i) => i is OAuthInterceptor) as OAuthInterceptor).tokens[name] = token;
+    }
+  }
+
+  void setBearerAuth(String name, String token) {
+    if (this.dio.interceptors.any((i) => i is BearerAuthInterceptor)) {
+      (this.dio.interceptors.firstWhere((i) => i is BearerAuthInterceptor) as BearerAuthInterceptor).tokens[name] = token;
     }
   }
 

@@ -21,7 +21,8 @@ abstract class DeleteUserPushTokenRequest implements Built<DeleteUserPushTokenRe
 
     DeleteUserPushTokenRequest._();
 
-    static void _initializeBuilder(DeleteUserPushTokenRequestBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(DeleteUserPushTokenRequestBuilder b) => b;
 
     factory DeleteUserPushTokenRequest([void updates(DeleteUserPushTokenRequestBuilder b)]) = _$DeleteUserPushTokenRequest;
 
@@ -61,14 +62,17 @@ class _$DeleteUserPushTokenRequestSerializer implements StructuredSerializer<Del
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'token':
-                    result.token = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    result.token = valueDes;
                     break;
                 case r'deviceId':
-                    result.deviceId = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    result.deviceId = valueDes;
                     break;
             }
         }

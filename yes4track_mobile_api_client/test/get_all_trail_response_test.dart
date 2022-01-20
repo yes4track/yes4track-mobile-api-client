@@ -47,6 +47,11 @@ void main() {
       // TODO
     });
 
+    // TrailType type
+    test('to test the property `type`', () async {
+      // TODO
+    });
+
     // String id
     test('to test the property `id`', () async {
       // TODO
@@ -72,6 +77,11 @@ void main() {
       // TODO
     });
 
+    // String adventureDescription
+    test('to test the property `adventureDescription`', () async {
+      // TODO
+    });
+
     // LevelType adventureLevel
     test('to test the property `adventureLevel`', () async {
       // TODO
@@ -84,6 +94,16 @@ void main() {
 
     // String photoUrl
     test('to test the property `photoUrl`', () async {
+      // TODO
+    });
+
+    // BuiltList<ImageUrl> imagesUrl
+    test('to test the property `imagesUrl`', () async {
+      // TODO
+    });
+
+    // BuiltList<Waypoint> waypoints
+    test('to test the property `waypoints`', () async {
       // TODO
     });
 

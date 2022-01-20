@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 Get Address by Lat Long
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -31,7 +31,7 @@ final double lng = 1.2; // double | longitude
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     final response = api.getAddressByLatLong(lat, lng, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
  **lat** | **double**| latitude | 
  **lng** | **double**| longitude | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5ea4070e-2b27-4d08-a4cc-4fc830e2a91c']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ab2b4678-e0f9-4bc4-a545-f7c281a245d3']
 
 ### Return type
 

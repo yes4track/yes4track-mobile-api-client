@@ -58,7 +58,7 @@ void main() {
 
     // Add images in Experience
     //
-    //Future<BuiltList<String>> yes4trackV1ExperiencesIdImagesPost(String id, { String xApiKey, String xCsrfToken }) async
+    //Future<BuiltList<String>> yes4trackV1ExperiencesIdImagesPost(String id, { String xApiKey, String xCsrfToken, BuiltList<MultipartFile> images }) async
     test('test yes4trackV1ExperiencesIdImagesPost', () async {
       // TODO
     });
@@ -81,7 +81,7 @@ void main() {
 
     // Add videos in an Experience
     //
-    //Future<BuiltList<String>> yes4trackV1ExperiencesIdVideosPost(String id, { String xApiKey, String xCsrfToken }) async
+    //Future<BuiltList<String>> yes4trackV1ExperiencesIdVideosPost(String id, { String xApiKey, String xCsrfToken, BuiltList<MultipartFile> videos }) async
     test('test yes4trackV1ExperiencesIdVideosPost', () async {
       // TODO
     });

@@ -178,7 +178,7 @@ class PostAdventureRequestBuilder
   set codeRequired(bool? codeRequired) => _$this._codeRequired = codeRequired;
 
   PostAdventureRequestBuilder() {
-    PostAdventureRequest._initializeBuilder(this);
+    PostAdventureRequest._defaults(this);
   }
 
   PostAdventureRequestBuilder get _$this {

@@ -153,7 +153,7 @@ class PostTrackResponseBuilder
   set id(String? id) => _$this._id = id;
 
   PostTrackResponseBuilder() {
-    PostTrackResponse._initializeBuilder(this);
+    PostTrackResponse._defaults(this);
   }
 
   PostTrackResponseBuilder get _$this {

@@ -46,7 +46,7 @@ class ExperienceApi {
   Future<Response<GetAllExperienceResponse>> getByIdExperience({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '99a905f2-6da3-4587-8afe-351b2138e6f3',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -133,7 +133,7 @@ class ExperienceApi {
   Future<Response<GetByIdExperienceCodeResponse>> getByIdExperienceCode({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'b3605622-84e6-4e02-b1b1-8b211b85dd85',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -232,7 +232,7 @@ class ExperienceApi {
     int? pageSize,
     String? sort,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'a13da910-6d55-422e-8bef-1350b95d85d8',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -330,7 +330,7 @@ class ExperienceApi {
   Future<Response<void>> yes4trackV1ExperiencesIdActivatePost({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '53b015e8-ba9b-44d9-a14e-a87fdbc023a2',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -392,7 +392,7 @@ class ExperienceApi {
     required String id,
     required String code,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'ed2d1467-1c57-4b4a-a894-861a40d9f4d4',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -479,7 +479,7 @@ class ExperienceApi {
   Future<Response<void>> yes4trackV1ExperiencesIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'e937a8da-24e4-4304-8315-b6da7255265f',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -541,7 +541,7 @@ class ExperienceApi {
     required String id,
     required String imageId,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '6403b264-630e-4de3-b02a-6a724935c7f4',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -587,9 +587,9 @@ class ExperienceApi {
   ///
   /// Parameters:
   /// * [id] - Experience Id
+  /// * [images] - Images
   /// * [xApiKey] - Your Api Key
   /// * [xCsrfToken] - CSRF Protection
-  /// * [images] - Images
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -601,9 +601,9 @@ class ExperienceApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<String>>> yes4trackV1ExperiencesIdImagesPost({ 
     required String id,
+    required BuiltList<MultipartFile> images,
     String? xApiKey,
-    String? xCsrfToken,
-    MultipartFile? images,
+    String? xCsrfToken = '5b96f9e1-cb7e-4a41-862d-7f783da166ce',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -638,7 +638,7 @@ class ExperienceApi {
 
     try {
       _bodyData = FormData.fromMap(<String, dynamic>{
-        if (images != null) r'images': images,
+        r'images': images.toList(),
       });
 
     } catch(error, stackTrace) {
@@ -712,7 +712,7 @@ class ExperienceApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '22dca60f-e9cb-43b4-9b86-f8e4c115cdec',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -792,7 +792,7 @@ class ExperienceApi {
   Future<Response<void>> yes4trackV1ExperiencesIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '478df820-c392-4bf8-9d32-f0af7a070073',
     PutExperienceRequest? putExperienceRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -858,9 +858,9 @@ class ExperienceApi {
   ///
   /// Parameters:
   /// * [id] - Experience Id
+  /// * [videos] - Videos
   /// * [xApiKey] - Your Api Key
   /// * [xCsrfToken] - CSRF Protection
-  /// * [videos] - Videos
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -872,9 +872,9 @@ class ExperienceApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<String>>> yes4trackV1ExperiencesIdVideosPost({ 
     required String id,
+    required BuiltList<MultipartFile> videos,
     String? xApiKey,
-    String? xCsrfToken,
-    MultipartFile? videos,
+    String? xCsrfToken = '1dfeb62a-b309-4f15-b1a3-c3f2e7b1f004',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -909,7 +909,7 @@ class ExperienceApi {
 
     try {
       _bodyData = FormData.fromMap(<String, dynamic>{
-        if (videos != null) r'videos': videos,
+        r'videos': videos.toList(),
       });
 
     } catch(error, stackTrace) {
@@ -983,7 +983,7 @@ class ExperienceApi {
     required String id,
     required String videoId,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '02aca5cc-2316-4526-bfc9-c8282e002233',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1042,7 +1042,7 @@ class ExperienceApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostExperienceResponse>> yes4trackV1ExperiencesPost({ 
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'eecb2b66-fb40-4acc-a5b3-154efb763f54',
     PostExperienceRequest? postExperienceRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

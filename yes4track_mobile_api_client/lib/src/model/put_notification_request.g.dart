@@ -158,7 +158,7 @@ class PutNotificationRequestBuilder
   set id(String? id) => _$this._id = id;
 
   PutNotificationRequestBuilder() {
-    PutNotificationRequest._initializeBuilder(this);
+    PutNotificationRequest._defaults(this);
   }
 
   PutNotificationRequestBuilder get _$this {

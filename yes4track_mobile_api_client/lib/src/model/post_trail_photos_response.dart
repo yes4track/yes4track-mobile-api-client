@@ -29,7 +29,8 @@ abstract class PostTrailPhotosResponse implements Built<PostTrailPhotosResponse,
 
     PostTrailPhotosResponse._();
 
-    static void _initializeBuilder(PostTrailPhotosResponseBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(PostTrailPhotosResponseBuilder b) => b;
 
     factory PostTrailPhotosResponse([void updates(PostTrailPhotosResponseBuilder b)]) = _$PostTrailPhotosResponse;
 
@@ -58,13 +59,13 @@ class _$PostTrailPhotosResponseSerializer implements StructuredSerializer<PostTr
             result
                 ..add(r'fileName')
                 ..add(serializers.serialize(object.fileName,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.url != null) {
             result
                 ..add(r'url')
                 ..add(serializers.serialize(object.url,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.sequence != null) {
             result
@@ -85,22 +86,29 @@ class _$PostTrailPhotosResponseSerializer implements StructuredSerializer<PostTr
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'id':
-                    result.id = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    result.id = valueDes;
                     break;
                 case r'fileName':
-                    result.fileName = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.fileName = valueDes;
                     break;
                 case r'url':
-                    result.url = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.url = valueDes;
                     break;
                 case r'sequence':
-                    result.sequence = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
+                    result.sequence = valueDes;
                     break;
             }
         }

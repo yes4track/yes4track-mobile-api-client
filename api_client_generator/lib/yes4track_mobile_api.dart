@@ -5,7 +5,7 @@ import 'package:openapi_generator_annotations/openapi_generator_annotations.dart
     pubName: 'yes4track_mobile_api_client',
     pubAuthor: 'Yes4Track',
     pubAuthorEmail: 'admin@yes4track.com',
-    pubVersion: '1.0.9',
+    pubVersion: '1.0.10',
     pubDescription: 'Caspian.Yes4Track.Service API',
     pubHomepage: 'https://github.com/yes4track/',
   ),

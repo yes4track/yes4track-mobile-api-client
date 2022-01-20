@@ -80,7 +80,7 @@ class PutUserLocationRequestBuilder
   set longitude(double? longitude) => _$this._longitude = longitude;
 
   PutUserLocationRequestBuilder() {
-    PutUserLocationRequest._initializeBuilder(this);
+    PutUserLocationRequest._defaults(this);
   }
 
   PutUserLocationRequestBuilder get _$this {

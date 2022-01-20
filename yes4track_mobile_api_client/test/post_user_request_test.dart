@@ -62,5 +62,10 @@ void main() {
       // TODO
     });
 
+    // bool isExplorer
+    test('to test the property `isExplorer`', () async {
+      // TODO
+    });
+
   });
 }

@@ -191,7 +191,7 @@ class PostCompanyRequestBuilder
       _$this._profilePhoto = profilePhoto;
 
   PostCompanyRequestBuilder() {
-    PostCompanyRequest._initializeBuilder(this);
+    PostCompanyRequest._defaults(this);
   }
 
   PostCompanyRequestBuilder get _$this {

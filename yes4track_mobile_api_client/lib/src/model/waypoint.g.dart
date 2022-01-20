@@ -105,7 +105,7 @@ class WaypointBuilder implements Builder<Waypoint, WaypointBuilder> {
   set time(DateTime? time) => _$this._time = time;
 
   WaypointBuilder() {
-    Waypoint._initializeBuilder(this);
+    Waypoint._defaults(this);
   }
 
   WaypointBuilder get _$this {

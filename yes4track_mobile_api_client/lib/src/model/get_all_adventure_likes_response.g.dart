@@ -132,7 +132,7 @@ class GetAllAdventureLikesResponseBuilder
   set userPhoto(String? userPhoto) => _$this._userPhoto = userPhoto;
 
   GetAllAdventureLikesResponseBuilder() {
-    GetAllAdventureLikesResponse._initializeBuilder(this);
+    GetAllAdventureLikesResponse._defaults(this);
   }
 
   GetAllAdventureLikesResponseBuilder get _$this {

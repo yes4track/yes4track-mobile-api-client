@@ -70,7 +70,8 @@ abstract class PostCompanyRequest implements Built<PostCompanyRequest, PostCompa
 
     PostCompanyRequest._();
 
-    static void _initializeBuilder(PostCompanyRequestBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(PostCompanyRequestBuilder b) => b;
 
     factory PostCompanyRequest([void updates(PostCompanyRequestBuilder b)]) = _$PostCompanyRequest;
 
@@ -93,43 +94,43 @@ class _$PostCompanyRequestSerializer implements StructuredSerializer<PostCompany
             result
                 ..add(r'createdAt')
                 ..add(serializers.serialize(object.createdAt,
-                    specifiedType: const FullType(DateTime)));
+                    specifiedType: const FullType.nullable(DateTime)));
         }
         if (object.updatedAt != null) {
             result
                 ..add(r'updatedAt')
                 ..add(serializers.serialize(object.updatedAt,
-                    specifiedType: const FullType(DateTime)));
+                    specifiedType: const FullType.nullable(DateTime)));
         }
         if (object.userCreated != null) {
             result
                 ..add(r'userCreated')
                 ..add(serializers.serialize(object.userCreated,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.userUpdated != null) {
             result
                 ..add(r'userUpdated')
                 ..add(serializers.serialize(object.userUpdated,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.legalName != null) {
             result
                 ..add(r'legalName')
                 ..add(serializers.serialize(object.legalName,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.fantasyName != null) {
             result
                 ..add(r'fantasyName')
                 ..add(serializers.serialize(object.fantasyName,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.registrationNumber != null) {
             result
                 ..add(r'registrationNumber')
                 ..add(serializers.serialize(object.registrationNumber,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.registrationType != null) {
             result
@@ -141,13 +142,13 @@ class _$PostCompanyRequestSerializer implements StructuredSerializer<PostCompany
             result
                 ..add(r'contactEmail')
                 ..add(serializers.serialize(object.contactEmail,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.contactPhone != null) {
             result
                 ..add(r'contactPhone')
                 ..add(serializers.serialize(object.contactPhone,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.type != null) {
             result
@@ -159,7 +160,7 @@ class _$PostCompanyRequestSerializer implements StructuredSerializer<PostCompany
             result
                 ..add(r'biography')
                 ..add(serializers.serialize(object.biography,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.profilePhoto != null) {
             result
@@ -180,58 +181,82 @@ class _$PostCompanyRequestSerializer implements StructuredSerializer<PostCompany
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'createdAt':
-                    result.createdAt = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
+                    result.createdAt = valueDes;
                     break;
                 case r'updatedAt':
-                    result.updatedAt = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
+                    result.updatedAt = valueDes;
                     break;
                 case r'userCreated':
-                    result.userCreated = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.userCreated = valueDes;
                     break;
                 case r'userUpdated':
-                    result.userUpdated = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.userUpdated = valueDes;
                     break;
                 case r'legalName':
-                    result.legalName = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.legalName = valueDes;
                     break;
                 case r'fantasyName':
-                    result.fantasyName = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.fantasyName = valueDes;
                     break;
                 case r'registrationNumber':
-                    result.registrationNumber = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.registrationNumber = valueDes;
                     break;
                 case r'registrationType':
-                    result.registrationType = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(RegistrationType)) as RegistrationType;
+                    result.registrationType = valueDes;
                     break;
                 case r'contactEmail':
-                    result.contactEmail = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.contactEmail = valueDes;
                     break;
                 case r'contactPhone':
-                    result.contactPhone = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.contactPhone = valueDes;
                     break;
                 case r'type':
-                    result.type = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(CompanyType)) as CompanyType;
+                    result.type = valueDes;
                     break;
                 case r'biography':
-                    result.biography = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.biography = valueDes;
                     break;
                 case r'profilePhoto':
-                    result.profilePhoto.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(ProfilePhotoRequest)) as ProfilePhotoRequest);
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(ProfilePhotoRequest)) as ProfilePhotoRequest;
+                    result.profilePhoto.replace(valueDes);
                     break;
             }
         }

@@ -70,7 +70,7 @@ class GetAllActiveTrailByAngelResponseBuilder
       _$this._mapCoordinate = mapCoordinate;
 
   GetAllActiveTrailByAngelResponseBuilder() {
-    GetAllActiveTrailByAngelResponse._initializeBuilder(this);
+    GetAllActiveTrailByAngelResponse._defaults(this);
   }
 
   GetAllActiveTrailByAngelResponseBuilder get _$this {

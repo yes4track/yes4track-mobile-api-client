@@ -126,7 +126,7 @@ class GetAllPagedAdventureLikesResponseBuilder
       _$this._results = results;
 
   GetAllPagedAdventureLikesResponseBuilder() {
-    GetAllPagedAdventureLikesResponse._initializeBuilder(this);
+    GetAllPagedAdventureLikesResponse._defaults(this);
   }
 
   GetAllPagedAdventureLikesResponseBuilder get _$this {

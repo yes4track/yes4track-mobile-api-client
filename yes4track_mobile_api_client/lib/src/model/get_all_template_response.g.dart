@@ -91,7 +91,7 @@ class GetAllTemplateResponseBuilder
   set updatedAt(DateTime? updatedAt) => _$this._updatedAt = updatedAt;
 
   GetAllTemplateResponseBuilder() {
-    GetAllTemplateResponse._initializeBuilder(this);
+    GetAllTemplateResponse._defaults(this);
   }
 
   GetAllTemplateResponseBuilder get _$this {

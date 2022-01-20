@@ -202,7 +202,7 @@ class PutAdventureRequestBuilder
   set isActive(bool? isActive) => _$this._isActive = isActive;
 
   PutAdventureRequestBuilder() {
-    PutAdventureRequest._initializeBuilder(this);
+    PutAdventureRequest._defaults(this);
   }
 
   PutAdventureRequestBuilder get _$this {

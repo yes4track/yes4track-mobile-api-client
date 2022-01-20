@@ -91,7 +91,7 @@ class PutTemplateRequestBuilder
   set updatedAt(DateTime? updatedAt) => _$this._updatedAt = updatedAt;
 
   PutTemplateRequestBuilder() {
-    PutTemplateRequest._initializeBuilder(this);
+    PutTemplateRequest._defaults(this);
   }
 
   PutTemplateRequestBuilder get _$this {

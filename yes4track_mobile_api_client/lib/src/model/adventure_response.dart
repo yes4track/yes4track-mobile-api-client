@@ -33,7 +33,8 @@ abstract class AdventureResponse implements Built<AdventureResponse, AdventureRe
 
     AdventureResponse._();
 
-    static void _initializeBuilder(AdventureResponseBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(AdventureResponseBuilder b) => b;
 
     factory AdventureResponse([void updates(AdventureResponseBuilder b)]) = _$AdventureResponse;
 
@@ -56,13 +57,13 @@ class _$AdventureResponseSerializer implements StructuredSerializer<AdventureRes
             result
                 ..add(r'name')
                 ..add(serializers.serialize(object.name,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.description != null) {
             result
                 ..add(r'description')
                 ..add(serializers.serialize(object.description,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.level != null) {
             result
@@ -89,22 +90,29 @@ class _$AdventureResponseSerializer implements StructuredSerializer<AdventureRes
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'name':
-                    result.name = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.name = valueDes;
                     break;
                 case r'description':
-                    result.description = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.description = valueDes;
                     break;
                 case r'level':
-                    result.level = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(LevelType)) as LevelType;
+                    result.level = valueDes;
                     break;
                 case r'type':
-                    result.type = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(AdventureType)) as AdventureType;
+                    result.type = valueDes;
                     break;
             }
         }

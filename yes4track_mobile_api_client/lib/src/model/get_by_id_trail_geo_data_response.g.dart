@@ -55,7 +55,7 @@ class GetByIdTrailGeoDataResponseBuilder
   set data(String? data) => _$this._data = data;
 
   GetByIdTrailGeoDataResponseBuilder() {
-    GetByIdTrailGeoDataResponse._initializeBuilder(this);
+    GetByIdTrailGeoDataResponse._defaults(this);
   }
 
   GetByIdTrailGeoDataResponseBuilder get _$this {

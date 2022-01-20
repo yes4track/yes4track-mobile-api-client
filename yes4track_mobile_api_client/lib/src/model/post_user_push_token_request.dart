@@ -21,7 +21,8 @@ abstract class PostUserPushTokenRequest implements Built<PostUserPushTokenReques
 
     PostUserPushTokenRequest._();
 
-    static void _initializeBuilder(PostUserPushTokenRequestBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(PostUserPushTokenRequestBuilder b) => b;
 
     factory PostUserPushTokenRequest([void updates(PostUserPushTokenRequestBuilder b)]) = _$PostUserPushTokenRequest;
 
@@ -61,14 +62,17 @@ class _$PostUserPushTokenRequestSerializer implements StructuredSerializer<PostU
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'token':
-                    result.token = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    result.token = valueDes;
                     break;
                 case r'deviceId':
-                    result.deviceId = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    result.deviceId = valueDes;
                     break;
             }
         }

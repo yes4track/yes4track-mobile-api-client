@@ -159,7 +159,7 @@ class PostNotificationResponseBuilder
   set id(String? id) => _$this._id = id;
 
   PostNotificationResponseBuilder() {
-    PostNotificationResponse._initializeBuilder(this);
+    PostNotificationResponse._defaults(this);
   }
 
   PostNotificationResponseBuilder get _$this {

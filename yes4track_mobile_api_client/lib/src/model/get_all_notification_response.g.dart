@@ -159,7 +159,7 @@ class GetAllNotificationResponseBuilder
   set id(String? id) => _$this._id = id;
 
   GetAllNotificationResponseBuilder() {
-    GetAllNotificationResponse._initializeBuilder(this);
+    GetAllNotificationResponse._defaults(this);
   }
 
   GetAllNotificationResponseBuilder get _$this {

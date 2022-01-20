@@ -17,7 +17,8 @@ abstract class GetByIdAdventureCodeResponse implements Built<GetByIdAdventureCod
 
     GetByIdAdventureCodeResponse._();
 
-    static void _initializeBuilder(GetByIdAdventureCodeResponseBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(GetByIdAdventureCodeResponseBuilder b) => b;
 
     factory GetByIdAdventureCodeResponse([void updates(GetByIdAdventureCodeResponseBuilder b)]) = _$GetByIdAdventureCodeResponse;
 
@@ -40,7 +41,7 @@ class _$GetByIdAdventureCodeResponseSerializer implements StructuredSerializer<G
             result
                 ..add(r'code')
                 ..add(serializers.serialize(object.code,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -55,10 +56,13 @@ class _$GetByIdAdventureCodeResponseSerializer implements StructuredSerializer<G
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'code':
-                    result.code = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.code = valueDes;
                     break;
             }
         }

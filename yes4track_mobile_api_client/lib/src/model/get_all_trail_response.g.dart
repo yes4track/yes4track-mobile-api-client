@@ -275,7 +275,7 @@ class GetAllTrailResponseBuilder
       _$this._waypoints = waypoints;
 
   GetAllTrailResponseBuilder() {
-    GetAllTrailResponse._initializeBuilder(this);
+    GetAllTrailResponse._defaults(this);
   }
 
   GetAllTrailResponseBuilder get _$this {

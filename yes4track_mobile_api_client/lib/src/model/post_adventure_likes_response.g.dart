@@ -131,7 +131,7 @@ class PostAdventureLikesResponseBuilder
   set userPhoto(String? userPhoto) => _$this._userPhoto = userPhoto;
 
   PostAdventureLikesResponseBuilder() {
-    PostAdventureLikesResponse._initializeBuilder(this);
+    PostAdventureLikesResponse._defaults(this);
   }
 
   PostAdventureLikesResponseBuilder get _$this {

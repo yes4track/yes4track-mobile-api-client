@@ -56,7 +56,7 @@ class GetUserLikedAdventureResponseBuilder
   set userLiked(bool? userLiked) => _$this._userLiked = userLiked;
 
   GetUserLikedAdventureResponseBuilder() {
-    GetUserLikedAdventureResponse._initializeBuilder(this);
+    GetUserLikedAdventureResponse._defaults(this);
   }
 
   GetUserLikedAdventureResponseBuilder get _$this {

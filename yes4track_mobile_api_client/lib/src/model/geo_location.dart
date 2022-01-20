@@ -29,7 +29,8 @@ abstract class GeoLocation implements Built<GeoLocation, GeoLocationBuilder> {
 
     GeoLocation._();
 
-    static void _initializeBuilder(GeoLocationBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(GeoLocationBuilder b) => b;
 
     factory GeoLocation([void updates(GeoLocationBuilder b)]) = _$GeoLocation;
 
@@ -70,7 +71,7 @@ class _$GeoLocationSerializer implements StructuredSerializer<GeoLocation> {
             result
                 ..add(r'elevation')
                 ..add(serializers.serialize(object.elevation,
-                    specifiedType: const FullType(double)));
+                    specifiedType: const FullType.nullable(double)));
         }
         return result;
     }
@@ -85,22 +86,28 @@ class _$GeoLocationSerializer implements StructuredSerializer<GeoLocation> {
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'date':
-                    result.date = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(DateTime)) as DateTime;
+                    result.date = valueDes;
                     break;
                 case r'latitude':
-                    result.latitude = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
+                    result.latitude = valueDes;
                     break;
                 case r'longitude':
-                    result.longitude = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
+                    result.longitude = valueDes;
                     break;
                 case r'elevation':
-                    result.elevation = serializers.deserialize(value,
-                        specifiedType: const FullType(double)) as double;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(double)) as double?;
+                    if (valueDes == null) continue;
+                    result.elevation = valueDes;
                     break;
             }
         }

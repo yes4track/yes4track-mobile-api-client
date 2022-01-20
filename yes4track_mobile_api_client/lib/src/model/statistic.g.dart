@@ -144,7 +144,7 @@ class StatisticBuilder implements Builder<Statistic, StatisticBuilder> {
       _$this._elevationMedian = elevationMedian;
 
   StatisticBuilder() {
-    Statistic._initializeBuilder(this);
+    Statistic._defaults(this);
   }
 
   StatisticBuilder get _$this {

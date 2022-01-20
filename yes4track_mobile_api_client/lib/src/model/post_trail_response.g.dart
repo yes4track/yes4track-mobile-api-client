@@ -257,7 +257,7 @@ class PostTrailResponseBuilder
       _$this._waypoints = waypoints;
 
   PostTrailResponseBuilder() {
-    PostTrailResponse._initializeBuilder(this);
+    PostTrailResponse._defaults(this);
   }
 
   PostTrailResponseBuilder get _$this {

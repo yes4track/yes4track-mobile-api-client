@@ -69,7 +69,7 @@ class DeleteUserPushTokenRequestBuilder
   set deviceId(String? deviceId) => _$this._deviceId = deviceId;
 
   DeleteUserPushTokenRequestBuilder() {
-    DeleteUserPushTokenRequest._initializeBuilder(this);
+    DeleteUserPushTokenRequest._defaults(this);
   }
 
   DeleteUserPushTokenRequestBuilder get _$this {

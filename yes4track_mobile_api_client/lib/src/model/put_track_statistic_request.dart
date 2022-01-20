@@ -33,7 +33,8 @@ abstract class PutTrackStatisticRequest implements Built<PutTrackStatisticReques
 
     PutTrackStatisticRequest._();
 
-    static void _initializeBuilder(PutTrackStatisticRequestBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(PutTrackStatisticRequestBuilder b) => b;
 
     factory PutTrackStatisticRequest([void updates(PutTrackStatisticRequestBuilder b)]) = _$PutTrackStatisticRequest;
 
@@ -95,26 +96,32 @@ class _$PutTrackStatisticRequestSerializer implements StructuredSerializer<PutTr
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'totalTime':
-                    result.totalTime = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
+                    result.totalTime = valueDes;
                     break;
                 case r'totalMovingTime':
-                    result.totalMovingTime = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
+                    result.totalMovingTime = valueDes;
                     break;
                 case r'totalDistance':
-                    result.totalDistance = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
+                    result.totalDistance = valueDes;
                     break;
                 case r'elevationGain':
-                    result.elevationGain = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
+                    result.elevationGain = valueDes;
                     break;
                 case r'speed':
-                    result.speed = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
+                    result.speed = valueDes;
                     break;
             }
         }

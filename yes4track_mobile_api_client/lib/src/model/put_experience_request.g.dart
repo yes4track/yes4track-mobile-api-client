@@ -178,7 +178,7 @@ class PutExperienceRequestBuilder
   set codeRequired(bool? codeRequired) => _$this._codeRequired = codeRequired;
 
   PutExperienceRequestBuilder() {
-    PutExperienceRequest._initializeBuilder(this);
+    PutExperienceRequest._defaults(this);
   }
 
   PutExperienceRequestBuilder get _$this {

@@ -125,7 +125,7 @@ class GetAllPagedTemplateResponseBuilder
       _$this._results = results;
 
   GetAllPagedTemplateResponseBuilder() {
-    GetAllPagedTemplateResponse._initializeBuilder(this);
+    GetAllPagedTemplateResponse._defaults(this);
   }
 
   GetAllPagedTemplateResponseBuilder get _$this {

@@ -37,7 +37,8 @@ abstract class PostTrackGeoDataResponse implements Built<PostTrackGeoDataRespons
 
     PostTrackGeoDataResponse._();
 
-    static void _initializeBuilder(PostTrackGeoDataResponseBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(PostTrackGeoDataResponseBuilder b) => b;
 
     factory PostTrackGeoDataResponse([void updates(PostTrackGeoDataResponseBuilder b)]) = _$PostTrackGeoDataResponse;
 
@@ -72,25 +73,25 @@ class _$PostTrackGeoDataResponseSerializer implements StructuredSerializer<PostT
             result
                 ..add(r'fileName')
                 ..add(serializers.serialize(object.fileName,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.extension_ != null) {
             result
                 ..add(r'extension')
                 ..add(serializers.serialize(object.extension_,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.data != null) {
             result
                 ..add(r'data')
                 ..add(serializers.serialize(object.data,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.version != null) {
             result
                 ..add(r'version')
                 ..add(serializers.serialize(object.version,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -105,30 +106,41 @@ class _$PostTrackGeoDataResponseSerializer implements StructuredSerializer<PostT
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'id':
-                    result.id = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    result.id = valueDes;
                     break;
                 case r'trackId':
-                    result.trackId = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    result.trackId = valueDes;
                     break;
                 case r'fileName':
-                    result.fileName = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.fileName = valueDes;
                     break;
                 case r'extension':
-                    result.extension_ = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.extension_ = valueDes;
                     break;
                 case r'data':
-                    result.data = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.data = valueDes;
                     break;
                 case r'version':
-                    result.version = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.version = valueDes;
                     break;
             }
         }

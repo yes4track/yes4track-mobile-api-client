@@ -58,7 +58,8 @@ abstract class PutNotificationRequest implements Built<PutNotificationRequest, P
 
     PutNotificationRequest._();
 
-    static void _initializeBuilder(PutNotificationRequestBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(PutNotificationRequestBuilder b) => b;
 
     factory PutNotificationRequest([void updates(PutNotificationRequestBuilder b)]) = _$PutNotificationRequest;
 
@@ -81,31 +82,31 @@ class _$PutNotificationRequestSerializer implements StructuredSerializer<PutNoti
             result
                 ..add(r'createdAt')
                 ..add(serializers.serialize(object.createdAt,
-                    specifiedType: const FullType(DateTime)));
+                    specifiedType: const FullType.nullable(DateTime)));
         }
         if (object.updatedAt != null) {
             result
                 ..add(r'updatedAt')
                 ..add(serializers.serialize(object.updatedAt,
-                    specifiedType: const FullType(DateTime)));
+                    specifiedType: const FullType.nullable(DateTime)));
         }
         if (object.userCreated != null) {
             result
                 ..add(r'userCreated')
                 ..add(serializers.serialize(object.userCreated,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.userUpdated != null) {
             result
                 ..add(r'userUpdated')
                 ..add(serializers.serialize(object.userUpdated,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.message != null) {
             result
                 ..add(r'message')
                 ..add(serializers.serialize(object.message,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.type != null) {
             result
@@ -117,13 +118,13 @@ class _$PutNotificationRequestSerializer implements StructuredSerializer<PutNoti
             result
                 ..add(r'channels')
                 ..add(serializers.serialize(object.channels,
-                    specifiedType: const FullType(BuiltList, [FullType(NotificationChannel)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(NotificationChannel)])));
         }
         if (object.attributes != null) {
             result
                 ..add(r'attributes')
                 ..add(serializers.serialize(object.attributes,
-                    specifiedType: const FullType(BuiltMap, [FullType(String), FullType(String)])));
+                    specifiedType: const FullType.nullable(BuiltMap, [FullType(String), FullType(String)])));
         }
         if (object.user != null) {
             result
@@ -150,46 +151,64 @@ class _$PutNotificationRequestSerializer implements StructuredSerializer<PutNoti
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'createdAt':
-                    result.createdAt = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
+                    result.createdAt = valueDes;
                     break;
                 case r'updatedAt':
-                    result.updatedAt = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
+                    result.updatedAt = valueDes;
                     break;
                 case r'userCreated':
-                    result.userCreated = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.userCreated = valueDes;
                     break;
                 case r'userUpdated':
-                    result.userUpdated = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.userUpdated = valueDes;
                     break;
                 case r'message':
-                    result.message = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.message = valueDes;
                     break;
                 case r'type':
-                    result.type = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(NotificationType)) as NotificationType;
+                    result.type = valueDes;
                     break;
                 case r'channels':
-                    result.channels.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(NotificationChannel)])) as BuiltList<NotificationChannel>);
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(NotificationChannel)])) as BuiltList<NotificationChannel>?;
+                    if (valueDes == null) continue;
+                    result.channels.replace(valueDes);
                     break;
                 case r'attributes':
-                    result.attributes.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltMap, [FullType(String), FullType(String)])) as BuiltMap<String, String>);
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(BuiltMap, [FullType(String), FullType(String)])) as BuiltMap<String, String>?;
+                    if (valueDes == null) continue;
+                    result.attributes.replace(valueDes);
                     break;
                 case r'user':
-                    result.user.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(User)) as User);
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(User)) as User;
+                    result.user.replace(valueDes);
                     break;
                 case r'id':
-                    result.id = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    result.id = valueDes;
                     break;
             }
         }

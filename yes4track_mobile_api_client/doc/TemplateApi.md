@@ -23,7 +23,7 @@ Method | HTTP request | Description
 
 Get Template by id
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -36,7 +36,7 @@ final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Template id
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     final response = api.getByIdTemplate(id, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
@@ -48,9 +48,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Template id | 
+ **id** | **String**| Template id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1153119e-5bdc-4487-a829-ae497efdbef5']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e0aefd2a-aa2c-46f3-8f5e-9e54fcb273cd']
 
 ### Return type
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 Get All Template by filter with pagination
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -88,7 +88,7 @@ final String sort = sort_example; // String | Sorting atributes, sample: id.desc
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     final response = api.yes4trackV1TemplatesGet(name, page, pageSize, sort, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'bc308a28-bea7-440d-9d37-b4d00ed0944e']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c3121c75-8503-4d2f-ad5d-8d35b3b3b648']
 
 ### Return type
 
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 
 Delete Template by Id
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -140,7 +140,7 @@ final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Template id
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     api.yes4trackV1TemplatesIdDelete(id, xApiKey, xCsrfToken);
 } catch on DioError (e) {
     print('Exception when calling TemplateApi->yes4trackV1TemplatesIdDelete: $e\n');
@@ -151,9 +151,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Template id | 
+ **id** | **String**| Template id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '02fd4133-233f-415e-aeeb-c91210b224bf']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0c8a25d0-51dd-4d50-ac5e-50fc2e9fd6d6']
 
 ### Return type
 
@@ -177,7 +177,7 @@ Update part of Template
 
 Sample request:                    PATCH /yes4track/v1/Template/{id}      [          {              \"op\": \"replace\",              \"path\": \"/atribute_name\",              \"value\": \"new value\"          }      ]
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -191,7 +191,7 @@ final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes val
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     api.yes4trackV1TemplatesIdPatch(id, operation, xApiKey, xCsrfToken);
 } catch on DioError (e) {
     print('Exception when calling TemplateApi->yes4trackV1TemplatesIdPatch: $e\n');
@@ -202,10 +202,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Template id | 
+ **id** | **String**| Template id | 
  **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0d0bab8b-6649-4758-aed4-529340b694df']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '641ba7d0-44d1-44ae-afc3-018032276a37']
 
 ### Return type
 
@@ -223,11 +223,11 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **yes4trackV1TemplatesIdPhotosUploadPost**
-> BuiltList<String> yes4trackV1TemplatesIdPhotosUploadPost(id, xApiKey, xCsrfToken, images)
+> BuiltList<String> yes4trackV1TemplatesIdPhotosUploadPost(id, images, xApiKey, xCsrfToken)
 
 Create Template
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -237,12 +237,12 @@ import 'package:yes4track_mobile_api_client/api.dart';
 
 final api = Yes4trackMobileApiClient().getTemplateApi();
 final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Template Id
+final BuiltList<MultipartFile> images = /path/to/file.txt; // BuiltList<MultipartFile> | Images
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final MultipartFile images = BINARY_DATA_HERE; // MultipartFile | Images
 
-try { 
-    final response = api.yes4trackV1TemplatesIdPhotosUploadPost(id, xApiKey, xCsrfToken, images);
+try {
+    final response = api.yes4trackV1TemplatesIdPhotosUploadPost(id, images, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TemplateApi->yes4trackV1TemplatesIdPhotosUploadPost: $e\n');
@@ -253,10 +253,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Template Id | 
+ **id** | **String**| Template Id | 
+ **images** | [**BuiltList&lt;MultipartFile&gt;**](MultipartFile.md)| Images | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1b4bc005-feb3-4e19-82cd-3d9a4af8f13e']
- **images** | [**MultipartFile**](MultipartFile.md)| Images | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '32e2a395-da72-4075-9387-fedceb17b8b0']
 
 ### Return type
 
@@ -278,7 +278,7 @@ Name | Type | Description  | Notes
 
 Update Template
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -292,7 +292,7 @@ final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 final PutTemplateRequest putTemplateRequest = ; // PutTemplateRequest | Template to update
 
-try { 
+try {
     api.yes4trackV1TemplatesIdPut(id, xApiKey, xCsrfToken, putTemplateRequest);
 } catch on DioError (e) {
     print('Exception when calling TemplateApi->yes4trackV1TemplatesIdPut: $e\n');
@@ -303,9 +303,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Template Id | 
+ **id** | **String**| Template Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd07f1ed9-03b5-41dd-b15d-592ab8a5f750']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ee17d36a-4853-47e0-a9b1-3c1ae0584e22']
  **putTemplateRequest** | [**PutTemplateRequest**](PutTemplateRequest.md)| Template to update | [optional] 
 
 ### Return type
@@ -328,7 +328,7 @@ void (empty response body)
 
 Create Template
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -341,7 +341,7 @@ final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 final PostTemplateRequest postTemplateRequest = ; // PostTemplateRequest | Template to create
 
-try { 
+try {
     final response = api.yes4trackV1TemplatesPost(xApiKey, xCsrfToken, postTemplateRequest);
     print(response);
 } catch on DioError (e) {
@@ -354,7 +354,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6386fe33-9330-4341-ac28-c7a751d49c3c']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd903a099-9739-4775-b2c2-6487f720e8c8']
  **postTemplateRequest** | [**PostTemplateRequest**](PostTemplateRequest.md)| Template to create | [optional] 
 
 ### Return type

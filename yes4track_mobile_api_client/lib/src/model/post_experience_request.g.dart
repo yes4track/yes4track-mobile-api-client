@@ -156,7 +156,7 @@ class PostExperienceRequestBuilder
   set codeRequired(bool? codeRequired) => _$this._codeRequired = codeRequired;
 
   PostExperienceRequestBuilder() {
-    PostExperienceRequest._initializeBuilder(this);
+    PostExperienceRequest._defaults(this);
   }
 
   PostExperienceRequestBuilder get _$this {

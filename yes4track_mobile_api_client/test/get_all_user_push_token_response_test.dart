@@ -7,8 +7,8 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(GetAllUserPushTokenResponse, () {
-    // BuiltList<String> tokens
-    test('to test the property `tokens`', () async {
+    // BuiltList<PushToken> pushTokens
+    test('to test the property `pushTokens`', () async {
       // TODO
     });
 

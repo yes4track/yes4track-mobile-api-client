@@ -33,7 +33,8 @@ abstract class PutTemplateRequest implements Built<PutTemplateRequest, PutTempla
 
     PutTemplateRequest._();
 
-    static void _initializeBuilder(PutTemplateRequestBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(PutTemplateRequestBuilder b) => b;
 
     factory PutTemplateRequest([void updates(PutTemplateRequestBuilder b)]) = _$PutTemplateRequest;
 
@@ -62,7 +63,7 @@ class _$PutTemplateRequestSerializer implements StructuredSerializer<PutTemplate
             result
                 ..add(r'name')
                 ..add(serializers.serialize(object.name,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.businessId != null) {
             result
@@ -74,13 +75,13 @@ class _$PutTemplateRequestSerializer implements StructuredSerializer<PutTemplate
             result
                 ..add(r'createdAt')
                 ..add(serializers.serialize(object.createdAt,
-                    specifiedType: const FullType(DateTime)));
+                    specifiedType: const FullType.nullable(DateTime)));
         }
         if (object.updatedAt != null) {
             result
                 ..add(r'updatedAt')
                 ..add(serializers.serialize(object.updatedAt,
-                    specifiedType: const FullType(DateTime)));
+                    specifiedType: const FullType.nullable(DateTime)));
         }
         return result;
     }
@@ -95,26 +96,35 @@ class _$PutTemplateRequestSerializer implements StructuredSerializer<PutTemplate
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'id':
-                    result.id = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    result.id = valueDes;
                     break;
                 case r'name':
-                    result.name = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.name = valueDes;
                     break;
                 case r'businessId':
-                    result.businessId = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
+                    result.businessId = valueDes;
                     break;
                 case r'createdAt':
-                    result.createdAt = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
+                    result.createdAt = valueDes;
                     break;
                 case r'updatedAt':
-                    result.updatedAt = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
+                    result.updatedAt = valueDes;
                     break;
             }
         }

@@ -78,7 +78,8 @@ abstract class Address implements Built<Address, AddressBuilder> {
 
     Address._();
 
-    static void _initializeBuilder(AddressBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(AddressBuilder b) => b;
 
     factory Address([void updates(AddressBuilder b)]) = _$Address;
 
@@ -107,13 +108,13 @@ class _$AddressSerializer implements StructuredSerializer<Address> {
             result
                 ..add(r'createdAt')
                 ..add(serializers.serialize(object.createdAt,
-                    specifiedType: const FullType(DateTime)));
+                    specifiedType: const FullType.nullable(DateTime)));
         }
         if (object.updatedAt != null) {
             result
                 ..add(r'updatedAt')
                 ..add(serializers.serialize(object.updatedAt,
-                    specifiedType: const FullType(DateTime)));
+                    specifiedType: const FullType.nullable(DateTime)));
         }
         if (object.userCreated != null) {
             result
@@ -137,61 +138,61 @@ class _$AddressSerializer implements StructuredSerializer<Address> {
             result
                 ..add(r'zipCode')
                 ..add(serializers.serialize(object.zipCode,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.street != null) {
             result
                 ..add(r'street')
                 ..add(serializers.serialize(object.street,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.number != null) {
             result
                 ..add(r'number')
                 ..add(serializers.serialize(object.number,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.complement != null) {
             result
                 ..add(r'complement')
                 ..add(serializers.serialize(object.complement,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.neighborhood != null) {
             result
                 ..add(r'neighborhood')
                 ..add(serializers.serialize(object.neighborhood,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.city != null) {
             result
                 ..add(r'city')
                 ..add(serializers.serialize(object.city,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.state != null) {
             result
                 ..add(r'state')
                 ..add(serializers.serialize(object.state,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.country != null) {
             result
                 ..add(r'country')
                 ..add(serializers.serialize(object.country,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.latitude != null) {
             result
                 ..add(r'latitude')
                 ..add(serializers.serialize(object.latitude,
-                    specifiedType: const FullType(double)));
+                    specifiedType: const FullType.nullable(double)));
         }
         if (object.longitude != null) {
             result
                 ..add(r'longitude')
                 ..add(serializers.serialize(object.longitude,
-                    specifiedType: const FullType(double)));
+                    specifiedType: const FullType.nullable(double)));
         }
         return result;
     }
@@ -206,70 +207,99 @@ class _$AddressSerializer implements StructuredSerializer<Address> {
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'id':
-                    result.id = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    result.id = valueDes;
                     break;
                 case r'createdAt':
-                    result.createdAt = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
+                    result.createdAt = valueDes;
                     break;
                 case r'updatedAt':
-                    result.updatedAt = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
+                    result.updatedAt = valueDes;
                     break;
                 case r'userCreated':
-                    result.userCreated = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    result.userCreated = valueDes;
                     break;
                 case r'userUpdated':
-                    result.userUpdated = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    result.userUpdated = valueDes;
                     break;
                 case r'version':
-                    result.version = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(JsonObject)) as JsonObject;
+                    result.version = valueDes;
                     break;
                 case r'zipCode':
-                    result.zipCode = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.zipCode = valueDes;
                     break;
                 case r'street':
-                    result.street = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.street = valueDes;
                     break;
                 case r'number':
-                    result.number = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.number = valueDes;
                     break;
                 case r'complement':
-                    result.complement = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.complement = valueDes;
                     break;
                 case r'neighborhood':
-                    result.neighborhood = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.neighborhood = valueDes;
                     break;
                 case r'city':
-                    result.city = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.city = valueDes;
                     break;
                 case r'state':
-                    result.state = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.state = valueDes;
                     break;
                 case r'country':
-                    result.country = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.country = valueDes;
                     break;
                 case r'latitude':
-                    result.latitude = serializers.deserialize(value,
-                        specifiedType: const FullType(double)) as double;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(double)) as double?;
+                    if (valueDes == null) continue;
+                    result.latitude = valueDes;
                     break;
                 case r'longitude':
-                    result.longitude = serializers.deserialize(value,
-                        specifiedType: const FullType(double)) as double;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(double)) as double?;
+                    if (valueDes == null) continue;
+                    result.longitude = valueDes;
                     break;
             }
         }

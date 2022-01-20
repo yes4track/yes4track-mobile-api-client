@@ -49,7 +49,8 @@ abstract class Statistic implements Built<Statistic, StatisticBuilder> {
 
     Statistic._();
 
-    static void _initializeBuilder(StatisticBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(StatisticBuilder b) => b;
 
     factory Statistic([void updates(StatisticBuilder b)]) = _$Statistic;
 
@@ -135,42 +136,52 @@ class _$StatisticSerializer implements StructuredSerializer<Statistic> {
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'totalTime':
-                    result.totalTime = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
+                    result.totalTime = valueDes;
                     break;
                 case r'totalMovingTime':
-                    result.totalMovingTime = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
+                    result.totalMovingTime = valueDes;
                     break;
                 case r'totalDistance':
-                    result.totalDistance = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
+                    result.totalDistance = valueDes;
                     break;
                 case r'elevationGain':
-                    result.elevationGain = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
+                    result.elevationGain = valueDes;
                     break;
                 case r'speed':
-                    result.speed = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
+                    result.speed = valueDes;
                     break;
                 case r'elevationLoss':
-                    result.elevationLoss = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
+                    result.elevationLoss = valueDes;
                     break;
                 case r'elevationMin':
-                    result.elevationMin = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
+                    result.elevationMin = valueDes;
                     break;
                 case r'elevationMax':
-                    result.elevationMax = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
+                    result.elevationMax = valueDes;
                     break;
                 case r'elevationMedian':
-                    result.elevationMedian = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
+                    result.elevationMedian = valueDes;
                     break;
             }
         }

@@ -124,7 +124,7 @@ class GetAllPagedSponsorResponseBuilder
       _$this._results = results;
 
   GetAllPagedSponsorResponseBuilder() {
-    GetAllPagedSponsorResponse._initializeBuilder(this);
+    GetAllPagedSponsorResponse._defaults(this);
   }
 
   GetAllPagedSponsorResponseBuilder get _$this {

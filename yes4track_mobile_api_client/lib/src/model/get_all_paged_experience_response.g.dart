@@ -125,7 +125,7 @@ class GetAllPagedExperienceResponseBuilder
       _$this._results = results;
 
   GetAllPagedExperienceResponseBuilder() {
-    GetAllPagedExperienceResponse._initializeBuilder(this);
+    GetAllPagedExperienceResponse._defaults(this);
   }
 
   GetAllPagedExperienceResponseBuilder get _$this {

@@ -57,7 +57,7 @@ class PostCheckExperienceCodeResponseBuilder
   set isSuccess(bool? isSuccess) => _$this._isSuccess = isSuccess;
 
   PostCheckExperienceCodeResponseBuilder() {
-    PostCheckExperienceCodeResponse._initializeBuilder(this);
+    PostCheckExperienceCodeResponse._defaults(this);
   }
 
   PostCheckExperienceCodeResponseBuilder get _$this {

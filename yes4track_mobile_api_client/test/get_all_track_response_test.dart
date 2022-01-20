@@ -67,5 +67,10 @@ void main() {
       // TODO
     });
 
+    // BuiltList<Waypoint> waypoints
+    test('to test the property `waypoints`', () async {
+      // TODO
+    });
+
   });
 }

@@ -81,7 +81,8 @@ abstract class PutTrailRequest implements Built<PutTrailRequest, PutTrailRequest
 
     PutTrailRequest._();
 
-    static void _initializeBuilder(PutTrailRequestBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(PutTrailRequestBuilder b) => b;
 
     factory PutTrailRequest([void updates(PutTrailRequestBuilder b)]) = _$PutTrailRequest;
 
@@ -104,49 +105,49 @@ class _$PutTrailRequestSerializer implements StructuredSerializer<PutTrailReques
             result
                 ..add(r'createdAt')
                 ..add(serializers.serialize(object.createdAt,
-                    specifiedType: const FullType(DateTime)));
+                    specifiedType: const FullType.nullable(DateTime)));
         }
         if (object.updatedAt != null) {
             result
                 ..add(r'updatedAt')
                 ..add(serializers.serialize(object.updatedAt,
-                    specifiedType: const FullType(DateTime)));
+                    specifiedType: const FullType.nullable(DateTime)));
         }
         if (object.userCreated != null) {
             result
                 ..add(r'userCreated')
                 ..add(serializers.serialize(object.userCreated,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.userUpdated != null) {
             result
                 ..add(r'userUpdated')
                 ..add(serializers.serialize(object.userUpdated,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.adventureId != null) {
             result
                 ..add(r'adventureId')
                 ..add(serializers.serialize(object.adventureId,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.name != null) {
             result
                 ..add(r'name')
                 ..add(serializers.serialize(object.name,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.startDate != null) {
             result
                 ..add(r'startDate')
                 ..add(serializers.serialize(object.startDate,
-                    specifiedType: const FullType(DateTime)));
+                    specifiedType: const FullType.nullable(DateTime)));
         }
         if (object.endDate != null) {
             result
                 ..add(r'endDate')
                 ..add(serializers.serialize(object.endDate,
-                    specifiedType: const FullType(DateTime)));
+                    specifiedType: const FullType.nullable(DateTime)));
         }
         if (object.type != null) {
             result
@@ -164,13 +165,13 @@ class _$PutTrailRequestSerializer implements StructuredSerializer<PutTrailReques
             result
                 ..add(r'adventureName')
                 ..add(serializers.serialize(object.adventureName,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.adventureDescription != null) {
             result
                 ..add(r'adventureDescription')
                 ..add(serializers.serialize(object.adventureDescription,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.adventureLevel != null) {
             result
@@ -188,7 +189,7 @@ class _$PutTrailRequestSerializer implements StructuredSerializer<PutTrailReques
             result
                 ..add(r'waypoints')
                 ..add(serializers.serialize(object.waypoints,
-                    specifiedType: const FullType(BuiltList, [FullType(Waypoint)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(Waypoint)])));
         }
         return result;
     }
@@ -203,66 +204,93 @@ class _$PutTrailRequestSerializer implements StructuredSerializer<PutTrailReques
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'createdAt':
-                    result.createdAt = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
+                    result.createdAt = valueDes;
                     break;
                 case r'updatedAt':
-                    result.updatedAt = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
+                    result.updatedAt = valueDes;
                     break;
                 case r'userCreated':
-                    result.userCreated = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.userCreated = valueDes;
                     break;
                 case r'userUpdated':
-                    result.userUpdated = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.userUpdated = valueDes;
                     break;
                 case r'adventureId':
-                    result.adventureId = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.adventureId = valueDes;
                     break;
                 case r'name':
-                    result.name = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.name = valueDes;
                     break;
                 case r'startDate':
-                    result.startDate = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
+                    result.startDate = valueDes;
                     break;
                 case r'endDate':
-                    result.endDate = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
+                    result.endDate = valueDes;
                     break;
                 case r'type':
-                    result.type = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(TrailType)) as TrailType;
+                    result.type = valueDes;
                     break;
                 case r'id':
-                    result.id = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    result.id = valueDes;
                     break;
                 case r'adventureName':
-                    result.adventureName = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.adventureName = valueDes;
                     break;
                 case r'adventureDescription':
-                    result.adventureDescription = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.adventureDescription = valueDes;
                     break;
                 case r'adventureLevel':
-                    result.adventureLevel = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(LevelType)) as LevelType;
+                    result.adventureLevel = valueDes;
                     break;
                 case r'adventureType':
-                    result.adventureType = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(AdventureType)) as AdventureType;
+                    result.adventureType = valueDes;
                     break;
                 case r'waypoints':
-                    result.waypoints.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(Waypoint)])) as BuiltList<Waypoint>);
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(Waypoint)])) as BuiltList<Waypoint>?;
+                    if (valueDes == null) continue;
+                    result.waypoints.replace(valueDes);
                     break;
             }
         }

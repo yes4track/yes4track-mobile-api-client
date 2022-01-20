@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 Get Version
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -29,7 +29,7 @@ final api = Yes4trackMobileApiClient().getVersionApi();
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     api.yes4trackV1VersionGet(xApiKey, xCsrfToken);
 } catch on DioError (e) {
     print('Exception when calling VersionApi->yes4trackV1VersionGet: $e\n');
@@ -41,7 +41,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'cdd2bd7a-d806-4667-b942-0756d12ec424']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd5b53a53-9e85-4ee2-aeeb-0c42f0cb42be']
 
 ### Return type
 

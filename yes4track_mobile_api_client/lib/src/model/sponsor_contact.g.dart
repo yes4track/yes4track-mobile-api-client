@@ -68,7 +68,7 @@ class SponsorContactBuilder
   set email(String? email) => _$this._email = email;
 
   SponsorContactBuilder() {
-    SponsorContact._initializeBuilder(this);
+    SponsorContact._defaults(this);
   }
 
   SponsorContactBuilder get _$this {

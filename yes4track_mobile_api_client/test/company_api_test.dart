@@ -16,7 +16,7 @@ void main() {
 
     // Get All Company by filter with pagination
     //
-    //Future<GetAllPagedCompanyResponse> yes4trackV1CompaniesGet({ String legalName, String fantasyName, String registrationNumber, String contactEmail, String contactPhone, String companies, int page, int pageSize, String sort, String xApiKey, String xCsrfToken }) async
+    //Future<GetAllPagedCompanyResponse> yes4trackV1CompaniesGet({ String legalName, String fantasyName, String registrationNumber, String contactEmail, String contactPhone, String companies, CompanyType type, RegistrationType registrationType, int page, int pageSize, String sort, String xApiKey, String xCsrfToken }) async
     test('test yes4trackV1CompaniesGet', () async {
       // TODO
     });

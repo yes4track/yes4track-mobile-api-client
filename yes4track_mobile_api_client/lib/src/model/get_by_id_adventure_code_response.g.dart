@@ -55,7 +55,7 @@ class GetByIdAdventureCodeResponseBuilder
   set code(String? code) => _$this._code = code;
 
   GetByIdAdventureCodeResponseBuilder() {
-    GetByIdAdventureCodeResponse._initializeBuilder(this);
+    GetByIdAdventureCodeResponse._defaults(this);
   }
 
   GetByIdAdventureCodeResponseBuilder get _$this {

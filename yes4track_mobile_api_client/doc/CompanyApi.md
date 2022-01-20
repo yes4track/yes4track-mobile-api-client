@@ -22,7 +22,7 @@ Method | HTTP request | Description
 
 Get Company by id
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -35,7 +35,7 @@ final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Company id
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     final response = api.getByIdCompany(id, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
@@ -47,9 +47,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Company id | 
+ **id** | **String**| Company id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '54bd3303-cb01-4c9f-94df-0301d4352c05']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7ff8ef65-3a9f-4480-9816-d05cdceaa274']
 
 ### Return type
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 
 Get All Company by filter with pagination
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -94,7 +94,7 @@ final String sort = sort_example; // String | Sorting atributes, sample: id.desc
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     final response = api.yes4trackV1CompaniesGet(legalName, fantasyName, registrationNumber, contactEmail, contactPhone, companies, type, registrationType, page, pageSize, sort, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e29d16db-fe65-442b-a742-a6b99f7aa182']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1a943037-bd0f-429e-acbf-014df425226f']
 
 ### Return type
 
@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 
 Delete Company by Id
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -153,7 +153,7 @@ final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Company id
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     api.yes4trackV1CompaniesIdDelete(id, xApiKey, xCsrfToken);
 } catch on DioError (e) {
     print('Exception when calling CompanyApi->yes4trackV1CompaniesIdDelete: $e\n');
@@ -164,9 +164,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Company id | 
+ **id** | **String**| Company id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f8a18eeb-d4a4-4912-9085-41a8c091f3fb']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '05e84bc7-b90a-4515-84f9-c36f63f5cef5']
 
 ### Return type
 
@@ -188,7 +188,7 @@ void (empty response body)
 
 Update part of Company
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -202,7 +202,7 @@ final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes val
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     api.yes4trackV1CompaniesIdPatch(id, operation, xApiKey, xCsrfToken);
 } catch on DioError (e) {
     print('Exception when calling CompanyApi->yes4trackV1CompaniesIdPatch: $e\n');
@@ -213,10 +213,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Company id | 
+ **id** | **String**| Company id | 
  **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c727d94c-2bf2-4c5f-97be-3c852bc79c30']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'edbacbb2-92e7-4b7a-bdcd-6f0bff419fc2']
 
 ### Return type
 
@@ -238,7 +238,7 @@ void (empty response body)
 
 Update Company
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -252,7 +252,7 @@ final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 final PutCompanyRequest putCompanyRequest = ; // PutCompanyRequest | Company to update
 
-try { 
+try {
     api.yes4trackV1CompaniesIdPut(id, xApiKey, xCsrfToken, putCompanyRequest);
 } catch on DioError (e) {
     print('Exception when calling CompanyApi->yes4trackV1CompaniesIdPut: $e\n');
@@ -263,9 +263,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Company Id | 
+ **id** | **String**| Company Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '62b90e9c-d437-403d-b624-59b73203f836']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '818f4e4d-7f1d-476a-b7d4-fa33ec26b01f']
  **putCompanyRequest** | [**PutCompanyRequest**](PutCompanyRequest.md)| Company to update | [optional] 
 
 ### Return type
@@ -288,7 +288,7 @@ void (empty response body)
 
 Create Company
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -301,7 +301,7 @@ final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 final PostCompanyRequest postCompanyRequest = ; // PostCompanyRequest | Company to create
 
-try { 
+try {
     final response = api.yes4trackV1CompaniesPost(xApiKey, xCsrfToken, postCompanyRequest);
     print(response);
 } catch on DioError (e) {
@@ -314,7 +314,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1b7cb731-8f0c-4adc-942f-b8e3236ee33d']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '9b8374a3-c273-46a7-b185-1ab7a245d627']
  **postCompanyRequest** | [**PostCompanyRequest**](PostCompanyRequest.md)| Company to create | [optional] 
 
 ### Return type

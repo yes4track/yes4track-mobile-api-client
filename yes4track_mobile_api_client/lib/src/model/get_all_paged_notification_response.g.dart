@@ -126,7 +126,7 @@ class GetAllPagedNotificationResponseBuilder
       _$this._results = results;
 
   GetAllPagedNotificationResponseBuilder() {
-    GetAllPagedNotificationResponse._initializeBuilder(this);
+    GetAllPagedNotificationResponse._defaults(this);
   }
 
   GetAllPagedNotificationResponseBuilder get _$this {

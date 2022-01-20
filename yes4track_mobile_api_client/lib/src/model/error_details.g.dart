@@ -70,7 +70,7 @@ class ErrorDetailsBuilder
   set messages(ListBuilder<String>? messages) => _$this._messages = messages;
 
   ErrorDetailsBuilder() {
-    ErrorDetails._initializeBuilder(this);
+    ErrorDetails._defaults(this);
   }
 
   ErrorDetailsBuilder get _$this {

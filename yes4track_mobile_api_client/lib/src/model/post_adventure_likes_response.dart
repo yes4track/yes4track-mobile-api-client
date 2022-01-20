@@ -45,7 +45,8 @@ abstract class PostAdventureLikesResponse implements Built<PostAdventureLikesRes
 
     PostAdventureLikesResponse._();
 
-    static void _initializeBuilder(PostAdventureLikesResponseBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(PostAdventureLikesResponseBuilder b) => b;
 
     factory PostAdventureLikesResponse([void updates(PostAdventureLikesResponseBuilder b)]) = _$PostAdventureLikesResponse;
 
@@ -68,25 +69,25 @@ class _$PostAdventureLikesResponseSerializer implements StructuredSerializer<Pos
             result
                 ..add(r'createdAt')
                 ..add(serializers.serialize(object.createdAt,
-                    specifiedType: const FullType(DateTime)));
+                    specifiedType: const FullType.nullable(DateTime)));
         }
         if (object.updatedAt != null) {
             result
                 ..add(r'updatedAt')
                 ..add(serializers.serialize(object.updatedAt,
-                    specifiedType: const FullType(DateTime)));
+                    specifiedType: const FullType.nullable(DateTime)));
         }
         if (object.userCreated != null) {
             result
                 ..add(r'userCreated')
                 ..add(serializers.serialize(object.userCreated,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.userUpdated != null) {
             result
                 ..add(r'userUpdated')
                 ..add(serializers.serialize(object.userUpdated,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.id != null) {
             result
@@ -104,13 +105,13 @@ class _$PostAdventureLikesResponseSerializer implements StructuredSerializer<Pos
             result
                 ..add(r'userName')
                 ..add(serializers.serialize(object.userName,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.userPhoto != null) {
             result
                 ..add(r'userPhoto')
                 ..add(serializers.serialize(object.userPhoto,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -125,38 +126,53 @@ class _$PostAdventureLikesResponseSerializer implements StructuredSerializer<Pos
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'createdAt':
-                    result.createdAt = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
+                    result.createdAt = valueDes;
                     break;
                 case r'updatedAt':
-                    result.updatedAt = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
+                    result.updatedAt = valueDes;
                     break;
                 case r'userCreated':
-                    result.userCreated = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.userCreated = valueDes;
                     break;
                 case r'userUpdated':
-                    result.userUpdated = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.userUpdated = valueDes;
                     break;
                 case r'id':
-                    result.id = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    result.id = valueDes;
                     break;
                 case r'adventureId':
-                    result.adventureId = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    result.adventureId = valueDes;
                     break;
                 case r'userName':
-                    result.userName = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.userName = valueDes;
                     break;
                 case r'userPhoto':
-                    result.userPhoto = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.userPhoto = valueDes;
                     break;
             }
         }

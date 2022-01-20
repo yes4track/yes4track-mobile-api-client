@@ -50,7 +50,8 @@ abstract class ImageUrl implements Built<ImageUrl, ImageUrlBuilder> {
 
     ImageUrl._();
 
-    static void _initializeBuilder(ImageUrlBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(ImageUrlBuilder b) => b;
 
     factory ImageUrl([void updates(ImageUrlBuilder b)]) = _$ImageUrl;
 
@@ -79,13 +80,13 @@ class _$ImageUrlSerializer implements StructuredSerializer<ImageUrl> {
             result
                 ..add(r'createdAt')
                 ..add(serializers.serialize(object.createdAt,
-                    specifiedType: const FullType(DateTime)));
+                    specifiedType: const FullType.nullable(DateTime)));
         }
         if (object.updatedAt != null) {
             result
                 ..add(r'updatedAt')
                 ..add(serializers.serialize(object.updatedAt,
-                    specifiedType: const FullType(DateTime)));
+                    specifiedType: const FullType.nullable(DateTime)));
         }
         if (object.userCreated != null) {
             result
@@ -109,13 +110,13 @@ class _$ImageUrlSerializer implements StructuredSerializer<ImageUrl> {
             result
                 ..add(r'fileName')
                 ..add(serializers.serialize(object.fileName,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.url != null) {
             result
                 ..add(r'url')
                 ..add(serializers.serialize(object.url,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.sequence != null) {
             result
@@ -136,42 +137,56 @@ class _$ImageUrlSerializer implements StructuredSerializer<ImageUrl> {
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'id':
-                    result.id = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    result.id = valueDes;
                     break;
                 case r'createdAt':
-                    result.createdAt = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
+                    result.createdAt = valueDes;
                     break;
                 case r'updatedAt':
-                    result.updatedAt = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
+                    result.updatedAt = valueDes;
                     break;
                 case r'userCreated':
-                    result.userCreated = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    result.userCreated = valueDes;
                     break;
                 case r'userUpdated':
-                    result.userUpdated = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    result.userUpdated = valueDes;
                     break;
                 case r'version':
-                    result.version = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(JsonObject)) as JsonObject;
+                    result.version = valueDes;
                     break;
                 case r'fileName':
-                    result.fileName = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.fileName = valueDes;
                     break;
                 case r'url':
-                    result.url = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.url = valueDes;
                     break;
                 case r'sequence':
-                    result.sequence = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
+                    result.sequence = valueDes;
                     break;
             }
         }

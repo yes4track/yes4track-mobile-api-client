@@ -35,7 +35,8 @@ abstract class TrackGeoLocationDto implements Built<TrackGeoLocationDto, TrackGe
 
     TrackGeoLocationDto._();
 
-    static void _initializeBuilder(TrackGeoLocationDtoBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(TrackGeoLocationDtoBuilder b) => b;
 
     factory TrackGeoLocationDto([void updates(TrackGeoLocationDtoBuilder b)]) = _$TrackGeoLocationDto;
 
@@ -58,7 +59,7 @@ class _$TrackGeoLocationDtoSerializer implements StructuredSerializer<TrackGeoLo
             result
                 ..add(r'experiences')
                 ..add(serializers.serialize(object.experiences,
-                    specifiedType: const FullType(BuiltList, [FullType(String)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(String)])));
         }
         if (object.trackId != null) {
             result
@@ -76,13 +77,13 @@ class _$TrackGeoLocationDtoSerializer implements StructuredSerializer<TrackGeoLo
             result
                 ..add(r'lines')
                 ..add(serializers.serialize(object.lines,
-                    specifiedType: const FullType(BuiltList, [FullType(BuiltList, [FullType(double)])])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(BuiltList, [FullType(double)])])));
         }
         if (object.waypoints != null) {
             result
                 ..add(r'waypoints')
                 ..add(serializers.serialize(object.waypoints,
-                    specifiedType: const FullType(BuiltList, [FullType(Waypoint)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(Waypoint)])));
         }
         return result;
     }
@@ -97,26 +98,35 @@ class _$TrackGeoLocationDtoSerializer implements StructuredSerializer<TrackGeoLo
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'experiences':
-                    result.experiences.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(String)])) as BuiltList<String>);
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(String)])) as BuiltList<String>?;
+                    if (valueDes == null) continue;
+                    result.experiences.replace(valueDes);
                     break;
                 case r'trackId':
-                    result.trackId = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    result.trackId = valueDes;
                     break;
                 case r'adventureId':
-                    result.adventureId = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    result.adventureId = valueDes;
                     break;
                 case r'lines':
-                    result.lines.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(BuiltList, [FullType(double)])])) as BuiltList<BuiltList<double>>);
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(BuiltList, [FullType(double)])])) as BuiltList<BuiltList<double>>?;
+                    if (valueDes == null) continue;
+                    result.lines.replace(valueDes);
                     break;
                 case r'waypoints':
-                    result.waypoints.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(Waypoint)])) as BuiltList<Waypoint>);
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(Waypoint)])) as BuiltList<Waypoint>?;
+                    if (valueDes == null) continue;
+                    result.waypoints.replace(valueDes);
                     break;
             }
         }

@@ -72,6 +72,11 @@ void main() {
       // TODO
     });
 
+    // bool isExplorer
+    test('to test the property `isExplorer`', () async {
+      // TODO
+    });
+
     // String defaultAngel
     test('to test the property `defaultAngel`', () async {
       // TODO

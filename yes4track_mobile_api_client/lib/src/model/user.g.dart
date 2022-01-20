@@ -266,7 +266,7 @@ class UserBuilder implements Builder<User, UserBuilder> {
       _$this._pushTokens = pushTokens;
 
   UserBuilder() {
-    User._initializeBuilder(this);
+    User._defaults(this);
   }
 
   UserBuilder get _$this {

@@ -124,7 +124,7 @@ class GetAllPagedAuditResponseBuilder
       _$this._results = results;
 
   GetAllPagedAuditResponseBuilder() {
-    GetAllPagedAuditResponse._initializeBuilder(this);
+    GetAllPagedAuditResponse._defaults(this);
   }
 
   GetAllPagedAuditResponseBuilder get _$this {

@@ -207,7 +207,7 @@ class GetAllExperienceResponseBuilder
   set isActive(bool? isActive) => _$this._isActive = isActive;
 
   GetAllExperienceResponseBuilder() {
-    GetAllExperienceResponse._initializeBuilder(this);
+    GetAllExperienceResponse._defaults(this);
   }
 
   GetAllExperienceResponseBuilder get _$this {

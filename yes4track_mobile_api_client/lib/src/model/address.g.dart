@@ -221,7 +221,7 @@ class AddressBuilder implements Builder<Address, AddressBuilder> {
   set longitude(double? longitude) => _$this._longitude = longitude;
 
   AddressBuilder() {
-    Address._initializeBuilder(this);
+    Address._defaults(this);
   }
 
   AddressBuilder get _$this {

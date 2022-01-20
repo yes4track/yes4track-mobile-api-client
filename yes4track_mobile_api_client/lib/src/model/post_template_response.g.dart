@@ -91,7 +91,7 @@ class PostTemplateResponseBuilder
   set updatedAt(DateTime? updatedAt) => _$this._updatedAt = updatedAt;
 
   PostTemplateResponseBuilder() {
-    PostTemplateResponse._initializeBuilder(this);
+    PostTemplateResponse._defaults(this);
   }
 
   PostTemplateResponseBuilder get _$this {

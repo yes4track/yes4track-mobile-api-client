@@ -200,7 +200,7 @@ class PutUserRequestBuilder
   set isExplorer(bool? isExplorer) => _$this._isExplorer = isExplorer;
 
   PutUserRequestBuilder() {
-    PutUserRequest._initializeBuilder(this);
+    PutUserRequest._defaults(this);
   }
 
   PutUserRequestBuilder get _$this {

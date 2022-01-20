@@ -43,7 +43,8 @@ abstract class GetAllPagedUserResponse implements Built<GetAllPagedUserResponse,
 
     GetAllPagedUserResponse._();
 
-    static void _initializeBuilder(GetAllPagedUserResponseBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(GetAllPagedUserResponseBuilder b) => b;
 
     factory GetAllPagedUserResponse([void updates(GetAllPagedUserResponseBuilder b)]) = _$GetAllPagedUserResponse;
 
@@ -102,7 +103,7 @@ class _$GetAllPagedUserResponseSerializer implements StructuredSerializer<GetAll
             result
                 ..add(r'results')
                 ..add(serializers.serialize(object.results,
-                    specifiedType: const FullType(BuiltList, [FullType(GetAllUserResponse)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(GetAllUserResponse)])));
         }
         return result;
     }
@@ -117,34 +118,43 @@ class _$GetAllPagedUserResponseSerializer implements StructuredSerializer<GetAll
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'currentPage':
-                    result.currentPage = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
+                    result.currentPage = valueDes;
                     break;
                 case r'pageCount':
-                    result.pageCount = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
+                    result.pageCount = valueDes;
                     break;
                 case r'pageSize':
-                    result.pageSize = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
+                    result.pageSize = valueDes;
                     break;
                 case r'rowCount':
-                    result.rowCount = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
+                    result.rowCount = valueDes;
                     break;
                 case r'firstRowOnPage':
-                    result.firstRowOnPage = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
+                    result.firstRowOnPage = valueDes;
                     break;
                 case r'lastRowOnPage':
-                    result.lastRowOnPage = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
+                    result.lastRowOnPage = valueDes;
                     break;
                 case r'results':
-                    result.results.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(GetAllUserResponse)])) as BuiltList<GetAllUserResponse>);
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(GetAllUserResponse)])) as BuiltList<GetAllUserResponse>?;
+                    if (valueDes == null) continue;
+                    result.results.replace(valueDes);
                     break;
             }
         }

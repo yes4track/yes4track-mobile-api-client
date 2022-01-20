@@ -120,7 +120,7 @@ class PostUserSetupAngelRequestBuilder
   set email(String? email) => _$this._email = email;
 
   PostUserSetupAngelRequestBuilder() {
-    PostUserSetupAngelRequest._initializeBuilder(this);
+    PostUserSetupAngelRequest._defaults(this);
   }
 
   PostUserSetupAngelRequestBuilder get _$this {

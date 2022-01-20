@@ -44,7 +44,7 @@ class TemplateApi {
   Future<Response<GetAllTemplateResponse>> getByIdTemplate({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'e0aefd2a-aa2c-46f3-8f5e-9e54fcb273cd',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -137,7 +137,7 @@ class TemplateApi {
     int? pageSize,
     String? sort,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'c3121c75-8503-4d2f-ad5d-8d35b3b3b648',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -232,7 +232,7 @@ class TemplateApi {
   Future<Response<void>> yes4trackV1TemplatesIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '0c8a25d0-51dd-4d50-ac5e-50fc2e9fd6d6',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -294,7 +294,7 @@ class TemplateApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '641ba7d0-44d1-44ae-afc3-018032276a37',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -359,9 +359,9 @@ class TemplateApi {
   ///
   /// Parameters:
   /// * [id] - Template Id
+  /// * [images] - Images
   /// * [xApiKey] - Your Api Key
   /// * [xCsrfToken] - CSRF Protection
-  /// * [images] - Images
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -373,9 +373,9 @@ class TemplateApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<String>>> yes4trackV1TemplatesIdPhotosUploadPost({ 
     required String id,
+    required BuiltList<MultipartFile> images,
     String? xApiKey,
-    String? xCsrfToken,
-    MultipartFile? images,
+    String? xCsrfToken = '32e2a395-da72-4075-9387-fedceb17b8b0',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -410,7 +410,7 @@ class TemplateApi {
 
     try {
       _bodyData = FormData.fromMap(<String, dynamic>{
-        if (images != null) r'images': images,
+        r'images': images.toList(),
       });
 
     } catch(error, stackTrace) {
@@ -483,7 +483,7 @@ class TemplateApi {
   Future<Response<void>> yes4trackV1TemplatesIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'ee17d36a-4853-47e0-a9b1-3c1ae0584e22',
     PutTemplateRequest? putTemplateRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -562,7 +562,7 @@ class TemplateApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostTemplateResponse>> yes4trackV1TemplatesPost({ 
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'd903a099-9739-4775-b2c2-6487f720e8c8',
     PostTemplateRequest? postTemplateRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

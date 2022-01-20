@@ -26,7 +26,8 @@ abstract class ErrorDetails implements Built<ErrorDetails, ErrorDetailsBuilder> 
 
     ErrorDetails._();
 
-    static void _initializeBuilder(ErrorDetailsBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(ErrorDetailsBuilder b) => b;
 
     factory ErrorDetails([void updates(ErrorDetailsBuilder b)]) = _$ErrorDetails;
 
@@ -55,13 +56,13 @@ class _$ErrorDetailsSerializer implements StructuredSerializer<ErrorDetails> {
             result
                 ..add(r'errorCode')
                 ..add(serializers.serialize(object.errorCode,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.messages != null) {
             result
                 ..add(r'messages')
                 ..add(serializers.serialize(object.messages,
-                    specifiedType: const FullType(BuiltList, [FullType(String)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(String)])));
         }
         return result;
     }
@@ -76,18 +77,24 @@ class _$ErrorDetailsSerializer implements StructuredSerializer<ErrorDetails> {
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'statusCode':
-                    result.statusCode = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
+                    result.statusCode = valueDes;
                     break;
                 case r'errorCode':
-                    result.errorCode = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.errorCode = valueDes;
                     break;
                 case r'messages':
-                    result.messages.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(String)])) as BuiltList<String>);
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(String)])) as BuiltList<String>?;
+                    if (valueDes == null) continue;
+                    result.messages.replace(valueDes);
                     break;
             }
         }

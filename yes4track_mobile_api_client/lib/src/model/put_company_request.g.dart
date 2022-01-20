@@ -203,7 +203,7 @@ class PutCompanyRequestBuilder
       _$this._profilePhoto = profilePhoto;
 
   PutCompanyRequestBuilder() {
-    PutCompanyRequest._initializeBuilder(this);
+    PutCompanyRequest._defaults(this);
   }
 
   PutCompanyRequestBuilder get _$this {

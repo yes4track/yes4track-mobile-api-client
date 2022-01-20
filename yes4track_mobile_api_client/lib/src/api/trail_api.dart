@@ -21,6 +21,7 @@ import 'package:yes4track_mobile_api_client/src/model/post_trail_geo_data_respon
 import 'package:yes4track_mobile_api_client/src/model/post_trail_photos_response.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_trail_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/post_trail_response.dart';
+import 'package:yes4track_mobile_api_client/src/model/post_trail_to_adventure_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/put_trail_request.dart';
 import 'package:yes4track_mobile_api_client/src/model/trail_geo_location_dto.dart';
 
@@ -51,7 +52,7 @@ class TrailApi {
   Future<Response<GetAllTrailResponse>> getByIdTrail({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'f319d121-9b30-4ae3-baa3-dd868319da63',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -138,7 +139,7 @@ class TrailApi {
   Future<Response<GetByIdTrailGeoDataResponse>> getByIdTrailGeoData({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'f67c1db2-f383-4c0c-a368-91ec5138bf9b',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -225,7 +226,7 @@ class TrailApi {
   Future<Response<TrailGeoLocationDto>> getByIdTrailGeoLocation({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'b3d48356-161d-4418-9311-bb1fbbf46f8d',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -310,7 +311,7 @@ class TrailApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<GetAllActiveTrailByAngelResponse>> yes4trackV1TrailsActiveByAngelGet({ 
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '8094568a-0552-43ed-b14a-d29638ed18b4',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -378,6 +379,64 @@ class TrailApi {
     );
   }
 
+  /// End Opens Trails
+  /// 
+  ///
+  /// Parameters:
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future]
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<void>> yes4trackV1TrailsEndopenPut({ 
+    String? xApiKey,
+    String? xCsrfToken = 'd7f244bf-964b-4144-a122-a97486fb19a3',
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/yes4track/v1/trails/endopen';
+    final _options = Options(
+      method: r'PUT',
+      headers: <String, dynamic>{
+        if (xApiKey != null) r'x-api-key': xApiKey,
+        if (xCsrfToken != null) r'x-csrf-token': xCsrfToken,
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'apiKey',
+            'name': 'Bearer',
+            'keyName': 'Authorization',
+            'where': 'header',
+          },
+        ],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    return _response;
+  }
+
   /// Get All Trail by filter with pagination
   /// 
   ///
@@ -413,7 +472,7 @@ class TrailApi {
     int? pageSize,
     String? sort,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'c86b076b-fe22-44f0-8fcd-45992a6c6d9e',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -515,7 +574,7 @@ class TrailApi {
     required String id,
     required String angelId,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'a64b90ee-5c03-4c45-a6f1-87b7bb7e8e0b',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -577,7 +636,7 @@ class TrailApi {
     required String id,
     required String angelId,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '452d3ba0-2d17-4468-88cb-007c73a7285f',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -626,6 +685,7 @@ class TrailApi {
   /// * [companyId] - Company Id
   /// * [xApiKey] - Your Api Key
   /// * [xCsrfToken] - CSRF Protection
+  /// * [postTrailToAdventureRequest] - Adventure to create from trail conversion
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -639,7 +699,8 @@ class TrailApi {
     required String id,
     required String companyId,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '9661eae7-fea4-4b81-a55d-e5067300ea4b',
+    PostTrailToAdventureRequest? postTrailToAdventureRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -666,11 +727,30 @@ class TrailApi {
         ],
         ...?extra,
       },
+      contentType: 'application/json',
       validateStatus: validateStatus,
     );
 
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(PostTrailToAdventureRequest);
+      _bodyData = postTrailToAdventureRequest == null ? null : _serializers.serialize(postTrailToAdventureRequest, specifiedType: _type);
+
+    } catch(error, stackTrace) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
     final _response = await _dio.request<Object>(
       _path,
+      data: _bodyData,
       options: _options,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
@@ -726,7 +806,7 @@ class TrailApi {
   Future<Response<void>> yes4trackV1TrailsIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '3b7a401d-57b9-40b0-906c-2d316a17bcdc',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -788,7 +868,7 @@ class TrailApi {
     required String id,
     required PostTrailChunckGeoDataRequest postTrailChunckGeoDataRequest,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '4a9ba337-507f-420b-9a37-f3265bfbdca7',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -853,9 +933,9 @@ class TrailApi {
   ///
   /// Parameters:
   /// * [id] - Trail Id
+  /// * [files] - Files
   /// * [xApiKey] - Your Api Key
   /// * [xCsrfToken] - CSRF Protection
-  /// * [files] - Files
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -867,9 +947,9 @@ class TrailApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostTrailGeoDataResponse>> yes4trackV1TrailsIdGeodataPost({ 
     required String id,
+    required BuiltList<MultipartFile> files,
     String? xApiKey,
-    String? xCsrfToken,
-    MultipartFile? files,
+    String? xCsrfToken = '69009a5a-ff11-4de3-9a8c-791b138d9ba2',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -904,7 +984,7 @@ class TrailApi {
 
     try {
       _bodyData = FormData.fromMap(<String, dynamic>{
-        if (files != null) r'files': files,
+        r'files': files.toList(),
       });
 
     } catch(error, stackTrace) {
@@ -962,9 +1042,9 @@ class TrailApi {
   ///
   /// Parameters:
   /// * [id] - Trail Id
+  /// * [images] - Images
   /// * [xApiKey] - Your Api Key
   /// * [xCsrfToken] - CSRF Protection
-  /// * [images] - Images
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -976,9 +1056,9 @@ class TrailApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<PostTrailPhotosResponse>>> yes4trackV1TrailsIdImagesPost({ 
     required String id,
+    required BuiltList<MultipartFile> images,
     String? xApiKey,
-    String? xCsrfToken,
-    MultipartFile? images,
+    String? xCsrfToken = '7aee4598-3794-4bfd-924d-ef4661f366fc',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1013,7 +1093,7 @@ class TrailApi {
 
     try {
       _bodyData = FormData.fromMap(<String, dynamic>{
-        if (images != null) r'images': images,
+        r'images': images.toList(),
       });
 
     } catch(error, stackTrace) {
@@ -1085,7 +1165,7 @@ class TrailApi {
   Future<Response<void>> yes4trackV1TrailsIdMapPhotoPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'ff0b2caa-8ed6-45a8-a001-9f98205dddb8',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1147,7 +1227,7 @@ class TrailApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'ddffaf87-6f2f-4f12-b8f1-fa4f29f8241e',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1227,7 +1307,7 @@ class TrailApi {
   Future<Response<void>> yes4trackV1TrailsIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '2bbe2930-d717-4c0a-a91a-13ae98655098',
     PutTrailRequest? putTrailRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -1309,7 +1389,7 @@ class TrailApi {
     required String id,
     required String sponsorId,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = 'd99a431b-4f9f-4f99-8ec7-791436bdac26',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1371,7 +1451,7 @@ class TrailApi {
     required String id,
     required String sponsorId,
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '7d5dffb5-8712-4c99-9e5e-104bbd2fd3f4',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1430,7 +1510,7 @@ class TrailApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostTrailResponse>> yes4trackV1TrailsPost({ 
     String? xApiKey,
-    String? xCsrfToken,
+    String? xCsrfToken = '181be56c-8037-4d68-b6f8-0e8badc8fbff',
     PostTrailRequest? postTrailRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

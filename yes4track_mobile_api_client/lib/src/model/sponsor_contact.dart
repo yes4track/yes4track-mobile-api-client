@@ -25,7 +25,8 @@ abstract class SponsorContact implements Built<SponsorContact, SponsorContactBui
 
     SponsorContact._();
 
-    static void _initializeBuilder(SponsorContactBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(SponsorContactBuilder b) => b;
 
     factory SponsorContact([void updates(SponsorContactBuilder b)]) = _$SponsorContact;
 
@@ -48,19 +49,19 @@ class _$SponsorContactSerializer implements StructuredSerializer<SponsorContact>
             result
                 ..add(r'name')
                 ..add(serializers.serialize(object.name,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.phone != null) {
             result
                 ..add(r'phone')
                 ..add(serializers.serialize(object.phone,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.email != null) {
             result
                 ..add(r'email')
                 ..add(serializers.serialize(object.email,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -75,18 +76,25 @@ class _$SponsorContactSerializer implements StructuredSerializer<SponsorContact>
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'name':
-                    result.name = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.name = valueDes;
                     break;
                 case r'phone':
-                    result.phone = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.phone = valueDes;
                     break;
                 case r'email':
-                    result.email = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.email = valueDes;
                     break;
             }
         }

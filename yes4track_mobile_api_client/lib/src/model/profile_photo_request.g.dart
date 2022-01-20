@@ -62,7 +62,7 @@ class ProfilePhotoRequestBuilder
   set extension_(String? extension_) => _$this._extension_ = extension_;
 
   ProfilePhotoRequestBuilder() {
-    ProfilePhotoRequest._initializeBuilder(this);
+    ProfilePhotoRequest._defaults(this);
   }
 
   ProfilePhotoRequestBuilder get _$this {

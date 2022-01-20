@@ -92,7 +92,7 @@ class PostTrailGeoDataResponseBuilder
   set data(String? data) => _$this._data = data;
 
   PostTrailGeoDataResponseBuilder() {
-    PostTrailGeoDataResponse._initializeBuilder(this);
+    PostTrailGeoDataResponse._defaults(this);
   }
 
   PostTrailGeoDataResponseBuilder get _$this {

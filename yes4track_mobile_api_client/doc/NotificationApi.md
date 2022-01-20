@@ -22,7 +22,7 @@ Method | HTTP request | Description
 
 Get Notification by id
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -35,7 +35,7 @@ final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     final response = api.getByIdNotification(id, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
@@ -47,9 +47,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Notification id | 
+ **id** | **String**| Notification id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8933602b-5bfd-4bda-8683-bed2fbe57fa8']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8c2a2eef-8ae0-4b91-a2b9-09a411e0db42']
 
 ### Return type
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 
 Get All Notification by filter with pagination
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -92,7 +92,7 @@ final String sort = sort_example; // String | Sorting atributes, sample: id.desc
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     final response = api.yes4trackV1NotificationsGet(message, type, userPhone, userName, userEmail, userId, page, pageSize, sort, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
@@ -109,12 +109,12 @@ Name | Type | Description  | Notes
  **userPhone** | **String**|  | [optional] 
  **userName** | **String**|  | [optional] 
  **userEmail** | **String**|  | [optional] 
- **userId** | [**String**](.md)|  | [optional] 
+ **userId** | **String**|  | [optional] 
  **page** | **int**|  | [optional] 
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a93c4530-3694-4fe4-bb6d-29826083784c']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c7044de2-31e1-4a57-9670-c47fdd53f065']
 
 ### Return type
 
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 
 Delete Notification by Id
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -149,7 +149,7 @@ final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     api.yes4trackV1NotificationsIdDelete(id, xApiKey, xCsrfToken);
 } catch on DioError (e) {
     print('Exception when calling NotificationApi->yes4trackV1NotificationsIdDelete: $e\n');
@@ -160,9 +160,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Notification id | 
+ **id** | **String**| Notification id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '96e089c6-07f9-4a95-bbbc-211423159bcc']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3a06b910-042f-4aa4-8299-c7d75ad34976']
 
 ### Return type
 
@@ -186,7 +186,7 @@ Update part of Notification
 
 Sample request:                    PATCH /yes4track/v1/Notification/{id}      [          {              \"op\": \"replace\",              \"path\": \"/atribute_name\",              \"value\": \"new value\"          }      ]
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -200,7 +200,7 @@ final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes val
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
-try { 
+try {
     api.yes4trackV1NotificationsIdPatch(id, operation, xApiKey, xCsrfToken);
 } catch on DioError (e) {
     print('Exception when calling NotificationApi->yes4trackV1NotificationsIdPatch: $e\n');
@@ -211,10 +211,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Notification id | 
+ **id** | **String**| Notification id | 
  **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '96d76d17-3f97-4b4d-852d-ae2b5e0309c0']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '57861f0a-3d07-4d94-977b-f9932dd1156b']
 
 ### Return type
 
@@ -236,7 +236,7 @@ void (empty response body)
 
 Update Notification
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -250,7 +250,7 @@ final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 final PutNotificationRequest putNotificationRequest = ; // PutNotificationRequest | Notification to update
 
-try { 
+try {
     api.yes4trackV1NotificationsIdPut(id, xApiKey, xCsrfToken, putNotificationRequest);
 } catch on DioError (e) {
     print('Exception when calling NotificationApi->yes4trackV1NotificationsIdPut: $e\n');
@@ -261,9 +261,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Notification Id | 
+ **id** | **String**| Notification Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '9f07b70d-6614-4b44-8d4b-e1ef01224048']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8f504576-496d-464c-9a29-debd73dcaa04']
  **putNotificationRequest** | [**PutNotificationRequest**](PutNotificationRequest.md)| Notification to update | [optional] 
 
 ### Return type
@@ -286,7 +286,7 @@ void (empty response body)
 
 Create Notification
 
-### Example 
+### Example
 ```dart
 import 'package:yes4track_mobile_api_client/api.dart';
 // TODO Configure API key authorization: Bearer
@@ -299,7 +299,7 @@ final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 final PostNotificationRequest postNotificationRequest = ; // PostNotificationRequest | Notification to create
 
-try { 
+try {
     final response = api.yes4trackV1NotificationsPost(xApiKey, xCsrfToken, postNotificationRequest);
     print(response);
 } catch on DioError (e) {
@@ -312,7 +312,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5ad80b1c-b6de-4115-b4cd-c8844c89150f']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '26871943-9a75-4b9c-8387-98ce09cbdba5']
  **postNotificationRequest** | [**PostNotificationRequest**](PostNotificationRequest.md)| Notification to create | [optional] 
 
 ### Return type

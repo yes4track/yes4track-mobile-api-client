@@ -84,7 +84,7 @@ class ActiveTrailResponseBuilder
   set status(UserTrailStatusResponse? status) => _$this._status = status;
 
   ActiveTrailResponseBuilder() {
-    ActiveTrailResponse._initializeBuilder(this);
+    ActiveTrailResponse._defaults(this);
   }
 
   ActiveTrailResponseBuilder get _$this {

@@ -226,7 +226,7 @@ class PostUserResponseBuilder
       _$this._defaultSponsor = defaultSponsor;
 
   PostUserResponseBuilder() {
-    PostUserResponse._initializeBuilder(this);
+    PostUserResponse._defaults(this);
   }
 
   PostUserResponseBuilder get _$this {

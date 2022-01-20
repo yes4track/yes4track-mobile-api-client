@@ -17,7 +17,8 @@ abstract class PostCheckExperienceCodeResponse implements Built<PostCheckExperie
 
     PostCheckExperienceCodeResponse._();
 
-    static void _initializeBuilder(PostCheckExperienceCodeResponseBuilder b) => b;
+    @BuiltValueHook(initializeBuilder: true)
+    static void _defaults(PostCheckExperienceCodeResponseBuilder b) => b;
 
     factory PostCheckExperienceCodeResponse([void updates(PostCheckExperienceCodeResponseBuilder b)]) = _$PostCheckExperienceCodeResponse;
 
@@ -55,10 +56,12 @@ class _$PostCheckExperienceCodeResponseSerializer implements StructuredSerialize
             final key = iterator.current as String;
             iterator.moveNext();
             final Object? value = iterator.current;
+            
             switch (key) {
                 case r'isSuccess':
-                    result.isSuccess = serializers.deserialize(value,
+                    final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(bool)) as bool;
+                    result.isSuccess = valueDes;
                     break;
             }
         }

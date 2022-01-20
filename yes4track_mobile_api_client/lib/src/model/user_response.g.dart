@@ -104,7 +104,7 @@ class UserResponseBuilder
   set location(GeoLocationBuilder? location) => _$this._location = location;
 
   UserResponseBuilder() {
-    UserResponse._initializeBuilder(this);
+    UserResponse._defaults(this);
   }
 
   UserResponseBuilder get _$this {
