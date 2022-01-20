@@ -55,7 +55,7 @@ class UserApi {
   Future<Response<GetAllUserResponse>> getByIdUser({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'bbf43048-a91c-4e89-95d0-a16488a39617',
+    String? xCsrfToken = 'e612c5cb-3397-43db-877e-699df9886e2b',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -141,7 +141,7 @@ class UserApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostUserAccessTokenResponse>> yes4trackV1UsersAccesstokenPost({ 
     String? xApiKey,
-    String? xCsrfToken = 'cc7a4537-9263-4379-ad25-3e2d12981f43',
+    String? xCsrfToken = 'a9f9df26-284b-4ad3-9779-bdfa713f5cb3',
     PostUserAccessTokenRequest? postUserAccessTokenRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -264,7 +264,7 @@ class UserApi {
     int? pageSize,
     String? sort,
     String? xApiKey,
-    String? xCsrfToken = '1247a097-269e-4bc3-b43a-f5a16be562ca',
+    String? xCsrfToken = '9de6bd41-2604-46fc-913c-e5f382392107',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -366,7 +366,7 @@ class UserApi {
     required String id,
     required String companyId,
     String? xApiKey,
-    String? xCsrfToken = '6f64fee0-6609-4453-8c17-2e2d082f8c06',
+    String? xCsrfToken = '8963e2f3-861c-4ba1-8b8d-845af0ff97d1',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -428,7 +428,7 @@ class UserApi {
     required String id,
     required String companyId,
     String? xApiKey,
-    String? xCsrfToken = '62e94382-c479-4197-a445-402e25dc253d',
+    String? xCsrfToken = '7594bc86-1df1-4218-a6b0-79fc6b58988c',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -488,7 +488,7 @@ class UserApi {
   Future<Response<void>> yes4trackV1UsersIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '2f454eb2-63ee-484f-a42b-a78ebb5fba9b',
+    String? xCsrfToken = '729dd549-e0be-403f-8aa9-5ce560ba2e16',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -549,7 +549,7 @@ class UserApi {
   Future<Response<void>> yes4trackV1UsersIdLocationPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '8fec1f93-d182-41ee-a267-359563212853',
+    String? xCsrfToken = '019e162e-c819-41f8-b418-0f982b90f820',
     PutUserLocationRequest? putUserLocationRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -631,7 +631,7 @@ class UserApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = '893d3309-c217-4e4c-9966-ce63145527c5',
+    String? xCsrfToken = 'ca186c40-5159-4257-8f99-671fa888ecd0',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -711,7 +711,7 @@ class UserApi {
   Future<Response<void>> yes4trackV1UsersIdPhotoPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'b3d4dd1e-ac7c-4302-9474-291861596c39',
+    String? xCsrfToken = 'e328a4d0-5541-4564-988d-faf8dc0a96ae',
     ProfilePhotoRequest? profilePhotoRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -792,7 +792,7 @@ class UserApi {
   Future<Response<void>> yes4trackV1UsersIdPushtokenDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '92479d88-657d-444c-9622-ff7ba127e26e',
+    String? xCsrfToken = '8c44b6e3-5d90-4df8-b08a-2263e758f635',
     DeleteUserPushTokenRequest? deleteUserPushTokenRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -872,7 +872,7 @@ class UserApi {
   Future<Response<GetAllUserPushTokenResponse>> yes4trackV1UsersIdPushtokenGet({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'c0d01139-6ebb-4c8b-a8c4-043676977108',
+    String? xCsrfToken = '66ef5315-e3ef-4806-9531-0f3c03232899',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -960,7 +960,7 @@ class UserApi {
   Future<Response<void>> yes4trackV1UsersIdPushtokenPost({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'ecf37733-3ac0-47b0-aba4-151a1e26834f',
+    String? xCsrfToken = 'cd9d936c-20bb-4a6b-8528-a81894d8564b',
     PostUserPushTokenRequest? postUserPushTokenRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -1041,7 +1041,7 @@ class UserApi {
   Future<Response<void>> yes4trackV1UsersIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '5e120935-0cff-41ba-b34b-93891395e2b3',
+    String? xCsrfToken = '453e8d0b-a9d4-45d9-bfb9-98637edc6ddb',
     PutUserRequest? putUserRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -1120,7 +1120,7 @@ class UserApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostUserResponse>> yes4trackV1UsersPost({ 
     String? xApiKey,
-    String? xCsrfToken = 'a5ce4442-f44a-4426-9115-a0f1780a5118',
+    String? xCsrfToken = '02bf011c-4059-42ec-a8f8-b2e4fc700c0c',
     PostUserRequest? postUserRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -1226,7 +1226,7 @@ class UserApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<void>> yes4trackV1UsersResendcodePost({ 
     String? xApiKey,
-    String? xCsrfToken = 'a73da903-a9c0-40e4-95f4-7e411ed2146f',
+    String? xCsrfToken = '2661de0c-f8c4-45a2-ba0a-233c768b519a',
     PostPostUserResendCodeRequest? postPostUserResendCodeRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -1305,7 +1305,7 @@ class UserApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<void>> yes4trackV1UsersSetupangelPost({ 
     String? xApiKey,
-    String? xCsrfToken = 'aa4c84fd-33ee-4edf-8ccf-699b7adf3b4d',
+    String? xCsrfToken = '140624b8-0c54-4b1d-ba15-3e3d8500f711',
     PostUserSetupAngelRequest? postUserSetupAngelRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -1385,7 +1385,7 @@ class UserApi {
   Future<Response<void>> yes4trackV1UsersSetupsponsorIdPost({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '7bb81ae1-0fa7-4a2e-82c8-77d3f0c27573',
+    String? xCsrfToken = 'fcec9ded-4736-405c-9b11-f0f194841bb5',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1444,7 +1444,7 @@ class UserApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostUserSignInResponse>> yes4trackV1UsersSigninPost({ 
     String? xApiKey,
-    String? xCsrfToken = '0948957f-73f7-4e77-877a-38f809f3b2b7',
+    String? xCsrfToken = '557d0222-0fcc-4e8b-98c8-165a2560afa8',
     PostUserSignInRequest? postUserSignInRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -1550,7 +1550,7 @@ class UserApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostUserResponse>> yes4trackV1UsersSignupPost({ 
     String? xApiKey,
-    String? xCsrfToken = 'c628d803-7394-4666-983a-46e394aab11f',
+    String? xCsrfToken = '24fe8d4e-9e30-494a-a97b-cbdfcc2ee1c9',
     PostUserRequest? postUserRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
