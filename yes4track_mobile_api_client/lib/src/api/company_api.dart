@@ -46,7 +46,7 @@ class CompanyApi {
   Future<Response<GetAllCompanyResponse>> getByIdCompany({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '7ff8ef65-3a9f-4480-9816-d05cdceaa274',
+    String? xCsrfToken = '2ef79a98-0924-4332-a2ae-8e6ad3398939',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -153,7 +153,7 @@ class CompanyApi {
     int? pageSize,
     String? sort,
     String? xApiKey,
-    String? xCsrfToken = '1a943037-bd0f-429e-acbf-014df425226f',
+    String? xCsrfToken = '9e82b6aa-6933-4962-b2ee-665144d4af79',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -255,7 +255,7 @@ class CompanyApi {
   Future<Response<void>> yes4trackV1CompaniesIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '05e84bc7-b90a-4515-84f9-c36f63f5cef5',
+    String? xCsrfToken = '75d1814b-872c-4380-a037-d7023354f41d',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -317,7 +317,7 @@ class CompanyApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = 'edbacbb2-92e7-4b7a-bdcd-6f0bff419fc2',
+    String? xCsrfToken = '7c1ec399-9063-4f07-9146-4367096a3aa3',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -397,7 +397,7 @@ class CompanyApi {
   Future<Response<void>> yes4trackV1CompaniesIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '818f4e4d-7f1d-476a-b7d4-fa33ec26b01f',
+    String? xCsrfToken = '5f8f31af-0c2a-4176-a223-d83d870e7cf6',
     PutCompanyRequest? putCompanyRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -476,7 +476,7 @@ class CompanyApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostCompanyResponse>> yes4trackV1CompaniesPost({ 
     String? xApiKey,
-    String? xCsrfToken = '9b8374a3-c273-46a7-b185-1ab7a245d627',
+    String? xCsrfToken = 'db21d31f-103d-4728-9918-c116773d7bbe',
     PostCompanyRequest? postCompanyRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

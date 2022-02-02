@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
  **lat** | **double**| latitude | 
  **lng** | **double**| longitude | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ab2b4678-e0f9-4bc4-a545-f7c281a245d3']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a7d4d814-427f-478d-85ec-9cbff68147d1']
 
 ### Return type
 

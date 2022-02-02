@@ -44,7 +44,7 @@ class SponsorApi {
   Future<Response<GetAllSponsorResponse>> getByIdSponsor({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'a04c94d7-7f74-4ada-bdae-2add4b118285',
+    String? xCsrfToken = 'fcc273c4-5034-48e7-bba6-e79bd194d960',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -147,7 +147,7 @@ class SponsorApi {
     int? pageSize,
     String? sort,
     String? xApiKey,
-    String? xCsrfToken = '3ed1a1ff-5ebf-46de-86d4-e8af46aa2c84',
+    String? xCsrfToken = '5ab416ab-e5d4-4a26-b1ed-958f5fa3e84a',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -247,7 +247,7 @@ class SponsorApi {
   Future<Response<void>> yes4trackV1SponsorsIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'd1357053-8154-4b74-810d-5d7f52f0103e',
+    String? xCsrfToken = '1f1bc67e-75ed-421b-96d5-21d84efb59ae',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -309,7 +309,7 @@ class SponsorApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = '7a048652-fc2b-46bb-a56e-94b28a758f06',
+    String? xCsrfToken = '3dcb7b81-24df-4777-aa6f-36a274250517',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -389,7 +389,7 @@ class SponsorApi {
   Future<Response<void>> yes4trackV1SponsorsIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '1047fb60-e2d2-41b6-958c-d1f666ffa752',
+    String? xCsrfToken = '19ebd7b0-5f2e-4df9-9762-af72a2648787',
     PutSponsorRequest? putSponsorRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -468,7 +468,7 @@ class SponsorApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostSponsorResponse>> yes4trackV1SponsorsPost({ 
     String? xApiKey,
-    String? xCsrfToken = '632e4a94-1511-490f-870d-8f493116b8ac',
+    String? xCsrfToken = '97454b61-31e0-4cfe-b7af-3dab62fc1746',
     PostSponsorRequest? postSponsorRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

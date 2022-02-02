@@ -44,7 +44,7 @@ class TemplateApi {
   Future<Response<GetAllTemplateResponse>> getByIdTemplate({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'e0aefd2a-aa2c-46f3-8f5e-9e54fcb273cd',
+    String? xCsrfToken = 'd4c3c2b9-1410-4f08-9aa2-f44849b8708f',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -137,7 +137,7 @@ class TemplateApi {
     int? pageSize,
     String? sort,
     String? xApiKey,
-    String? xCsrfToken = 'c3121c75-8503-4d2f-ad5d-8d35b3b3b648',
+    String? xCsrfToken = '67f827ee-0fba-480a-8927-49cdad0b0d65',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -232,7 +232,7 @@ class TemplateApi {
   Future<Response<void>> yes4trackV1TemplatesIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '0c8a25d0-51dd-4d50-ac5e-50fc2e9fd6d6',
+    String? xCsrfToken = 'e2b102e1-9301-4e82-af2f-0787f1b68f91',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -294,7 +294,7 @@ class TemplateApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = '641ba7d0-44d1-44ae-afc3-018032276a37',
+    String? xCsrfToken = '5af73ab3-a2f9-427b-b0c3-d17db5d092e9',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -375,7 +375,7 @@ class TemplateApi {
     required String id,
     required BuiltList<MultipartFile> images,
     String? xApiKey,
-    String? xCsrfToken = '32e2a395-da72-4075-9387-fedceb17b8b0',
+    String? xCsrfToken = '2c9eac6f-dc74-466d-b654-b6016fd9687e',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -483,7 +483,7 @@ class TemplateApi {
   Future<Response<void>> yes4trackV1TemplatesIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'ee17d36a-4853-47e0-a9b1-3c1ae0584e22',
+    String? xCsrfToken = 'bc99fd3b-7c62-49f1-bc6d-f343fa0be8ed',
     PutTemplateRequest? putTemplateRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -562,7 +562,7 @@ class TemplateApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostTemplateResponse>> yes4trackV1TemplatesPost({ 
     String? xApiKey,
-    String? xCsrfToken = 'd903a099-9739-4775-b2c2-6487f720e8c8',
+    String? xCsrfToken = 'e6c94a1f-724e-4107-b7e0-9593dd919c07',
     PostTemplateRequest? postTemplateRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

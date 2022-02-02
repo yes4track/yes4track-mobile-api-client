@@ -12,6 +12,8 @@ class _$PostTrailToAdventureRequest extends PostTrailToAdventureRequest {
   @override
   final bool? isActive;
   @override
+  final DateTime? startDate;
+  @override
   final DateTime? endDate;
 
   factory _$PostTrailToAdventureRequest(
@@ -19,7 +21,7 @@ class _$PostTrailToAdventureRequest extends PostTrailToAdventureRequest {
       (new PostTrailToAdventureRequestBuilder()..update(updates)).build();
 
   _$PostTrailToAdventureRequest._(
-      {this.codeRequired, this.isActive, this.endDate})
+      {this.codeRequired, this.isActive, this.startDate, this.endDate})
       : super._();
 
   @override
@@ -37,12 +39,15 @@ class _$PostTrailToAdventureRequest extends PostTrailToAdventureRequest {
     return other is PostTrailToAdventureRequest &&
         codeRequired == other.codeRequired &&
         isActive == other.isActive &&
+        startDate == other.startDate &&
         endDate == other.endDate;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, codeRequired.hashCode), isActive.hashCode),
+    return $jf($jc(
+        $jc($jc($jc(0, codeRequired.hashCode), isActive.hashCode),
+            startDate.hashCode),
         endDate.hashCode));
   }
 
@@ -51,6 +56,7 @@ class _$PostTrailToAdventureRequest extends PostTrailToAdventureRequest {
     return (newBuiltValueToStringHelper('PostTrailToAdventureRequest')
           ..add('codeRequired', codeRequired)
           ..add('isActive', isActive)
+          ..add('startDate', startDate)
           ..add('endDate', endDate))
         .toString();
   }
@@ -70,6 +76,10 @@ class PostTrailToAdventureRequestBuilder
   bool? get isActive => _$this._isActive;
   set isActive(bool? isActive) => _$this._isActive = isActive;
 
+  DateTime? _startDate;
+  DateTime? get startDate => _$this._startDate;
+  set startDate(DateTime? startDate) => _$this._startDate = startDate;
+
   DateTime? _endDate;
   DateTime? get endDate => _$this._endDate;
   set endDate(DateTime? endDate) => _$this._endDate = endDate;
@@ -83,6 +93,7 @@ class PostTrailToAdventureRequestBuilder
     if ($v != null) {
       _codeRequired = $v.codeRequired;
       _isActive = $v.isActive;
+      _startDate = $v.startDate;
       _endDate = $v.endDate;
       _$v = null;
     }
@@ -104,7 +115,10 @@ class PostTrailToAdventureRequestBuilder
   _$PostTrailToAdventureRequest build() {
     final _$result = _$v ??
         new _$PostTrailToAdventureRequest._(
-            codeRequired: codeRequired, isActive: isActive, endDate: endDate);
+            codeRequired: codeRequired,
+            isActive: isActive,
+            startDate: startDate,
+            endDate: endDate);
     replace(_$result);
     return _$result;
   }

@@ -12,6 +12,7 @@ part 'post_trail_to_adventure_request.g.dart';
 /// Properties:
 /// * [codeRequired] 
 /// * [isActive] 
+/// * [startDate] 
 /// * [endDate] 
 abstract class PostTrailToAdventureRequest implements Built<PostTrailToAdventureRequest, PostTrailToAdventureRequestBuilder> {
     @BuiltValueField(wireName: r'codeRequired')
@@ -19,6 +20,9 @@ abstract class PostTrailToAdventureRequest implements Built<PostTrailToAdventure
 
     @BuiltValueField(wireName: r'isActive')
     bool? get isActive;
+
+    @BuiltValueField(wireName: r'startDate')
+    DateTime? get startDate;
 
     @BuiltValueField(wireName: r'endDate')
     DateTime? get endDate;
@@ -57,6 +61,12 @@ class _$PostTrailToAdventureRequestSerializer implements StructuredSerializer<Po
                 ..add(serializers.serialize(object.isActive,
                     specifiedType: const FullType(bool)));
         }
+        if (object.startDate != null) {
+            result
+                ..add(r'startDate')
+                ..add(serializers.serialize(object.startDate,
+                    specifiedType: const FullType.nullable(DateTime)));
+        }
         if (object.endDate != null) {
             result
                 ..add(r'endDate')
@@ -87,6 +97,12 @@ class _$PostTrailToAdventureRequestSerializer implements StructuredSerializer<Po
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(bool)) as bool;
                     result.isActive = valueDes;
+                    break;
+                case r'startDate':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
+                    result.startDate = valueDes;
                     break;
                 case r'endDate':
                     final valueDes = serializers.deserialize(value,

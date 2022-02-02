@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Notification id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8c2a2eef-8ae0-4b91-a2b9-09a411e0db42']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0bd54f42-724e-479e-973c-b93015a862b6']
 
 ### Return type
 
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c7044de2-31e1-4a57-9670-c47fdd53f065']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3c71ca64-e11c-4853-aa7d-0857875de1fb']
 
 ### Return type
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Notification id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3a06b910-042f-4aa4-8299-c7d75ad34976']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ba65ad9c-8bd0-44a5-a52f-c4ed0e3c6c91']
 
 ### Return type
 
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
  **id** | **String**| Notification id | 
  **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '57861f0a-3d07-4d94-977b-f9932dd1156b']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '24c6c749-a355-4561-8c80-c6dc7d89f4db']
 
 ### Return type
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Notification Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8f504576-496d-464c-9a29-debd73dcaa04']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'bf4515b7-99f0-473a-a624-ced85e305f45']
  **putNotificationRequest** | [**PutNotificationRequest**](PutNotificationRequest.md)| Notification to update | [optional] 
 
 ### Return type
@@ -312,7 +312,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '26871943-9a75-4b9c-8387-98ce09cbdba5']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '083f7f0f-7a04-4949-9141-3194d0eb188e']
  **postNotificationRequest** | [**PostNotificationRequest**](PostNotificationRequest.md)| Notification to create | [optional] 
 
 ### Return type
